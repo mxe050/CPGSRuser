@@ -1,0 +1,332 @@
+{
+  "version": "1.0",
+  "updated": "2026-04-21",
+  "categories": {
+    "U": "Users' Guides to the Medical Literature シリーズ",
+    "M": "閾値・MID関連",
+    "G": "GRADE方法論拡張",
+    "T": "SR品質ツール",
+    "C": "CPG品質の実例",
+    "V": "価値観・共同意思決定",
+    "L": "LinkedIn（継続更新）"
+  },
+  "references": {
+    "U1": {
+      "authors": "Hayward RS, Wilson MC, Tunis SR, Bass EB, Guyatt G",
+      "year": 1995,
+      "title": "Users' guides to the medical literature. VIII. How to use clinical practice guidelines. A. Are the recommendations valid?",
+      "journal": "JAMA",
+      "vol": "274(7):570-574",
+      "pmid": "7629987",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7629987/",
+      "usedIn": ["Ch16"],
+      "note": "CPGの妥当性評価の歴史的基盤論文"
+    },
+    "U2": {
+      "authors": "Wilson MC, Hayward RS, Tunis SR, Bass EB, Guyatt G",
+      "year": 1995,
+      "title": "Users' guides to the medical literature. VIII. How to use clinical practice guidelines. B. What are the recommendations and will they help you in caring for your patients?",
+      "journal": "JAMA",
+      "vol": "274(20):1630-1632",
+      "usedIn": ["Ch16", "Ch20"]
+    },
+    "U3": {
+      "authors": "Dans AL, Dans LF, Guyatt GH, Richardson S",
+      "year": 1998,
+      "title": "Users' guides to the medical literature: XIV. How to decide on the applicability of clinical trial results to your patient",
+      "journal": "JAMA",
+      "vol": "279(7):545-549",
+      "usedIn": ["Ch20"]
+    },
+    "U4": {
+      "authors": "Barratt A, Irwig L, Glasziou P, et al. (Evidence-Based Medicine Working Group)",
+      "year": 1999,
+      "title": "Users' guides to the medical literature: XVII. How to use guidelines and recommendations about screening",
+      "journal": "JAMA",
+      "vol": "281(21):2029-2034",
+      "usedIn": ["PartIX"]
+    },
+    "U5": {
+      "authors": "Guyatt GH, Sinclair J, Cook DJ, Glasziou P",
+      "year": 1999,
+      "title": "Users' guides to the medical literature: XVI. How to use a treatment recommendation",
+      "journal": "JAMA",
+      "vol": "281(19):1836-1843",
+      "usedIn": ["Ch4", "Ch20"]
+    },
+    "U6": {
+      "authors": "McAlister FA, Straus SE, Guyatt GH, Haynes RB",
+      "year": 2000,
+      "title": "Users' guides to the medical literature: XX. Integrating research evidence with the care of the individual patient",
+      "journal": "JAMA",
+      "vol": "283(21):2829-2836",
+      "usedIn": ["Ch20"]
+    },
+    "U7": {
+      "authors": "Attia J, Ioannidis JP, Thakkinstian A, et al.",
+      "year": 2009,
+      "title": "How to use an article about genetic association: B & C",
+      "journal": "JAMA",
+      "vol": "301(2):191-197 / 301(3):304-308",
+      "usedIn": ["PartIX"]
+    },
+    "U8": {
+      "authors": "Fan E, Laupacis A, Pronovost PJ, Guyatt GH, Needham DM",
+      "year": 2010,
+      "title": "How to use an article about quality improvement",
+      "journal": "JAMA",
+      "vol": "304(20):2279-2287",
+      "usedIn": ["PartIX"]
+    },
+    "U9": {
+      "authors": "Mills EJ, Ioannidis JPA, Thorlund K, Schünemann HJ, Puhan MA, Guyatt GH",
+      "year": 2012,
+      "title": "How to use an article reporting a multiple treatment comparison meta-analysis",
+      "journal": "JAMA",
+      "vol": "308(12):1246-1253",
+      "usedIn": ["PartIX"]
+    },
+    "U10": {
+      "authors": "Mulla SM, Scott IA, Jackevicius CA, You JJ, Guyatt GH",
+      "year": 2012,
+      "title": "How to use a noninferiority trial: users' guide to the medical literature",
+      "journal": "JAMA",
+      "vol": "308(24):2605-2611",
+      "usedIn": ["PartIX"]
+    },
+    "U11": {
+      "authors": "Andrews J, Guyatt G, Oxman AD, et al.",
+      "year": 2013,
+      "title": "GRADE guidelines: 14. Going from evidence to recommendations: the significance and presentation of recommendations",
+      "journal": "J Clin Epidemiol",
+      "vol": "66(7):719-725",
+      "usedIn": ["Ch4"]
+    },
+    "U12": {
+      "authors": "Murad MH, Montori VM, Ioannidis JPA, et al. (incl. Guyatt G)",
+      "year": 2014,
+      "title": "How to read a systematic review and meta-analysis and apply the results to patient care: users' guides to the medical literature",
+      "journal": "JAMA",
+      "vol": "312(2):171-179",
+      "pmid": "25005654",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25005654/",
+      "usedIn": ["Ch1", "Ch5", "Ch6", "Ch7", "Ch8", "Ch9", "Ch10", "Ch11", "Ch12"],
+      "note": "SR/メタ解析を読んで患者ケアに適用するための包括ガイド。本アプリの基盤論文。"
+    },
+    "U13": {
+      "authors": "Neumann I, Santesso N, Akl EA, et al. (incl. Guyatt GH)",
+      "year": 2016,
+      "title": "A guide for health professionals to interpret and use recommendations in guidelines developed with the GRADE approach",
+      "journal": "J Clin Epidemiol",
+      "vol": "72:45-55",
+      "pmid": "26772609",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26772609/",
+      "usedIn": ["Ch2", "Ch3", "Ch4", "Ch16"]
+    },
+    "U14": {
+      "authors": "Agoritsas T, Merglen A, Heen AF, et al. (incl. Guyatt GH)",
+      "year": 2017,
+      "title": "UpToDate adherence to GRADE criteria for strong recommendations: an analytical survey",
+      "journal": "BMJ Open",
+      "vol": "7(11):e018593",
+      "usedIn": ["Ch4"]
+    },
+    "U15": {
+      "authors": "Liu Y, Chen PC, Krause J, Peng L",
+      "year": 2019,
+      "title": "How to read articles that use machine learning: Users' Guides to the Medical Literature",
+      "journal": "JAMA",
+      "vol": "322(18):1806-1816",
+      "usedIn": ["PartIX"]
+    },
+    "U16": {
+      "authors": "Brignardello-Petersen R, Carrasco-Labra A, Guyatt GH",
+      "year": 2021,
+      "title": "How to Interpret and Use a Clinical Practice Guideline or Recommendation: Users' Guides to the Medical Literature",
+      "journal": "JAMA",
+      "vol": "326(15):1516-1523",
+      "pmid": "34665198",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34665198/",
+      "usedIn": ["Ch1", "Ch3", "Ch4", "Ch16", "Ch20", "Ch21"],
+      "note": "CPG推奨の解釈と利用の包括ガイド。本アプリCh16の直接の先行論文。"
+    },
+    "U17": {
+      "authors": "Lima JP, Mirza RD, Guyatt GH",
+      "year": 2023,
+      "title": "How to recognize a trustworthy clinical practice guideline",
+      "journal": "J Anesth Analg Crit Care",
+      "vol": "3:9",
+      "doi": "10.1186/s44158-023-00094-7",
+      "url": "https://doi.org/10.1186/s44158-023-00094-7",
+      "usedIn": ["Ch4", "Ch10", "Ch16", "Ch20", "Ch21"],
+      "note": "信頼できるCPGを見分ける6つの質問。本アプリCh16の中核論文。"
+    },
+    "U18": {
+      "authors": "Guyatt G, Rennie D, Meade MO, Cook DJ (eds.)",
+      "year": 2015,
+      "title": "Users' Guides to the Medical Literature: A Manual for Evidence-Based Clinical Practice, 3rd ed.",
+      "publisher": "McGraw-Hill Education",
+      "usedIn": ["Ch1"],
+      "note": "Users' Guidesシリーズの書籍集大成"
+    },
+    "M1": {
+      "authors": "Jaeschke R, Singer J, Guyatt GH",
+      "year": 1989,
+      "title": "Measurement of health status. Ascertaining the minimal clinically important difference",
+      "journal": "Controlled Clinical Trials",
+      "vol": "10(4):407-415",
+      "usedIn": ["Ch7"],
+      "note": "MCID（Minimal Clinically Important Difference）概念の原典。現在はMID（Minimal Important Difference）と呼称。"
+    },
+    "M2": {
+      "title": "GRADE Guidance 42（閾値）",
+      "journal": "J Clin Epidemiol",
+      "year": 2024,
+      "usedIn": ["Ch7"],
+      "note": "GRADEにおける閾値設定の最新ガイダンス"
+    },
+    "M3": {
+      "authors": "Yao X, et al.",
+      "year": 2025,
+      "title": "GRADE note 6（閾値関連）",
+      "usedIn": ["Ch7"]
+    },
+    "M4": {
+      "title": "2024閾値論文群",
+      "usedIn": ["Ch7"],
+      "note": "J Clin Epidemiolに発表された閾値に関する一連の論文"
+    },
+    "M5": {
+      "title": "絶対リスク差のための論文 2023",
+      "usedIn": ["Ch6", "Ch7"]
+    },
+    "M6": {
+      "title": "些細・中・大の閾値を使っているCPG例 2025",
+      "usedIn": ["Ch7"],
+      "note": "閾値を実際に適用しているCPGの実例集"
+    },
+    "M7": {
+      "title": "Evaluating the credibility of anchor based estimates of minimal important differences for patient reported outcomes",
+      "journal": "BMJ Medicine",
+      "year": 2025,
+      "usedIn": ["Ch7"],
+      "note": "MID推定値の信頼性評価instrumentに関する論文"
+    },
+    "G1": {
+      "authors": "Djulbegovic B, Guyatt GH",
+      "year": 2017,
+      "title": "Progress in evidence-based medicine: a quarter century on",
+      "journal": "Lancet",
+      "vol": "390(10092):415-423",
+      "usedIn": ["Ch1"],
+      "note": "EBMの25年の進化と現状。本アプリCh1の土台。"
+    },
+    "G2": {
+      "authors": "Cuello-Garcia CA, et al.",
+      "year": 2025,
+      "title": "GRADE guidance 44: Strategies to enhance the utilization of randomized and non-randomized studies in evidence syntheses",
+      "journal": "J Clin Epidemiol",
+      "usedIn": ["Ch8", "Ch13"],
+      "note": "RCTと非RCTを統合した4ステップ評価枠組み。Ch13の中核論文。"
+    },
+    "G3": {
+      "authors": "Lewin S, et al.",
+      "year": 2018,
+      "title": "Applying GRADE-CERQual to qualitative evidence synthesis findings: introduction to the series",
+      "journal": "Implementation Science",
+      "vol": "13(Suppl 1):2",
+      "usedIn": ["Ch14"],
+      "note": "定性的研究のSRに対する確実性評価枠組み。Ch14の中核。"
+    },
+    "G4": {
+      "authors": "Guyatt GH, et al.",
+      "year": 2015,
+      "title": "Guideline panels should seldom make good practice statements: guidance from the GRADE Working Group",
+      "journal": "J Clin Epidemiol",
+      "vol": "80:3-7",
+      "usedIn": ["Ch4", "Ch15"],
+      "note": "GPS（Good Practice Statement）の適用条件。"
+    },
+    "G5": {
+      "authors": "Piggott T, et al.",
+      "year": 2022,
+      "title": "Standardized wording to improve efficiency and clarity of GRADE EtD frameworks in health guidelines",
+      "journal": "J Clin Epidemiol",
+      "vol": "146:106-122",
+      "usedIn": ["Ch4", "Ch5"],
+      "note": "GRADE EtDフレームワークの標準化推奨表現。"
+    },
+    "G6": {
+      "authors": "Murad MH, et al.",
+      "year": 2017,
+      "title": "Rating the certainty in evidence in the absence of a single estimate of effect",
+      "journal": "Evid Based Med",
+      "vol": "22(3):85-87",
+      "usedIn": ["Ch15"],
+      "note": "推定値が単一で得られない場合の確実性評価。"
+    },
+    "G7": {
+      "title": "観察研究ROB — ROBINS-E / ROBINS-I / ネットベネフィットの手順 2019 / GRADE Guidance 45 NAM",
+      "usedIn": ["Ch8", "Ch13", "Ch15"],
+      "note": "観察研究のバイアスリスク評価ツールと関連ガイダンス"
+    },
+    "T1": {
+      "authors": "Shea BJ, Reeves BC, Wells G, et al.",
+      "year": 2017,
+      "title": "AMSTAR 2: a critical appraisal tool for systematic reviews that include randomised or non-randomised studies of healthcare interventions, or both",
+      "journal": "BMJ",
+      "vol": "358:j4008",
+      "url": "https://amstar.ca/",
+      "usedIn": ["Ch18"],
+      "note": "SRの方法論的質を評価する16項目の標準ツール。"
+    },
+    "T2": {
+      "authors": "Page MJ, McKenzie JE, Bossuyt PM, et al.",
+      "year": 2021,
+      "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+      "journal": "BMJ",
+      "vol": "372:n71",
+      "url": "http://www.prisma-statement.org/",
+      "usedIn": ["Ch19"],
+      "note": "SR報告の透明性を確保する27項目チェックリスト。"
+    },
+    "C1": {
+      "ref": "U17",
+      "note": "信頼できるCPG（Lima-Mirza-Guyatt 2023）— Ch16の中核"
+    },
+    "C2": {
+      "title": "NCCNガイドラインの批判的吟味",
+      "usedIn": ["Ch17"],
+      "note": "NCCNはGRADEを採用せず独自のEvidence Blocksを用いる。信頼できるCPG基準に対して複数の問題点が指摘されている。"
+    },
+    "C3": {
+      "authors": "Institute of Medicine",
+      "year": 2011,
+      "title": "Clinical Practice Guidelines We Can Trust",
+      "publisher": "National Academies Press",
+      "usedIn": ["Ch17"],
+      "note": "米国IOMが定めた信頼できるCPGの8基準。"
+    },
+    "C4": {
+      "title": "日本のCPG問題",
+      "usedIn": ["Ch17"],
+      "note": "日本で作成されているCPGの方法論的問題点の分析。"
+    },
+    "V1": {
+      "title": "患者の価値観と嗜好を利用（日英両版）",
+      "usedIn": ["Ch21"],
+      "note": "患者の価値観と嗜好をEtDフレームワークに組み込む方法。"
+    },
+    "V2": {
+      "title": "Patient values and preferences in antithrombotic therapy: SR",
+      "journal": "Chest / ACCP Guidelines",
+      "usedIn": ["Ch21"],
+      "note": "患者価値観の体系的レビューの実例。Guyatt LinkedIn投稿#45で紹介。"
+    },
+    "L1": {
+      "url": "https://www.linkedin.com/in/guyattgh/recent-activity/all/",
+      "usedIn": ["Ch23"],
+      "note": "Guyatt先生のLinkedIn投稿。論文紹介とコメントの継続更新ソース。"
+    }
+  }
+}

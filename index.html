@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
+<meta name="description" content="臨床医・研修医・薬剤師・看護師・医学生のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
+<link rel="stylesheet" href="style.css?v=3.0">
+<link rel="stylesheet" href="style-cpgsr.css?v=3.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="app-header">
+  <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="logo">
+    <span>CPGSR</span> Reader <span style="color:rgba(255,255,255,0.5);font-weight:400;font-size:0.85rem;">診療ガイドライン／SRの読み方</span>
+  </div>
+</header>
+
+<!-- 進捗バー -->
+<div class="progress-bar">
+  <div class="progress-fill" id="progressFill" style="width: 4%"></div>
+</div>
+
+<!-- オーバーレイ（モバイル用） -->
+<div class="overlay" id="overlay"></div>
+
+<!-- アプリ本体 -->
+<div class="app-body">
+
+  <!-- サイドバー（目次） -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">目次 / Table of Contents</div>
+    <ul class="toc-list" id="tocList">
+      <li class="toc-item"><button class="toc-btn active" data-idx="0"><span class="toc-num">0</span><span class="toc-text">表紙<span class="en">Cover</span></span></button></li>
+
+      <li class="toc-section">Part I — EBM・GRADEの全体像</li>
+      <li class="toc-item"><button class="toc-btn" data-idx="1"><span class="toc-num">1</span><span class="toc-text">EBMとCPG・SRの読み方<span class="en">EBM & Reading CPGs/SRs</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="2"><span class="toc-num">2</span><span class="toc-text">GRADEアプローチの概要<span class="en">Overview of GRADE</span></span></button></li>
+
+      <li class="toc-section">Part II — 推奨の理解</li>
+      <li class="toc-item"><button class="toc-btn" data-idx="3"><span class="toc-num">3</span><span class="toc-text">エビデンスの確実性4段階<span class="en">Four Levels of Certainty</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="4"><span class="toc-num">4</span><span class="toc-text">強い推奨 vs 条件付き推奨 ＋ GPS<span class="en">Strong vs Conditional + GPS</span></span></button></li>
+
+      <li class="toc-section">Part III — SoF・効果・閾値</li>
+      <li class="toc-item"><button class="toc-btn" data-idx="5"><span class="toc-num">5</span><span class="toc-text">SoF表・Evidence Profileの読み方<span class="en">Reading SoF Tables</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="6"><span class="toc-num">6</span><span class="toc-text">相対効果と絶対効果<span class="en">Relative vs Absolute</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="7"><span class="toc-num">7</span><span class="toc-text">閾値とMID<span class="en">Thresholds & MID</span></span></button></li>
+
+      <li class="toc-section">Part IV — 確実性が下がる5要因</li>
+      <li class="toc-item"><button class="toc-btn" data-idx="8"><span class="toc-num">8</span><span class="toc-text">Risk of Bias（RCT＋観察研究）<span class="en">Risk of Bias</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="9"><span class="toc-num">9</span><span class="toc-text">不一致性<span class="en">Inconsistency</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="10"><span class="toc-num">10</span><span class="toc-text">非直接性<span class="en">Indirectness</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="11"><span class="toc-num">11</span><span class="toc-text">不確実性<span class="en">Imprecision</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="12"><span class="toc-num">12</span><span class="toc-text">Dissemination bias<span class="en">Dissemination bias</span></span></button></li>
+
+      <li class="toc-section">Part V — 多様な研究デザインのSR</li>
+      <li class="toc-item"><button class="toc-btn" data-idx="13"><span class="toc-num">13</span><span class="toc-text">非RCT・観察研究のSR<span class="en">Non-RCT / Observational SR</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="14"><span class="toc-num">14</span><span class="toc-text">定性的研究のSR — CERQual<span class="en">Qualitative SR</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="15"><span class="toc-num">15</span><span class="toc-text">単一推定値なし／GPS／ネットベネフィット<span class="en">Alternative recommendations</span></span></button></li>
+
+      <li class="toc-section">Part VI — CPG信頼性評価</li>
+      <li class="toc-item"><button class="toc-btn" data-idx="16"><span class="toc-num">16</span><span class="toc-text">⭐ 信頼できるCPGの6つの質問<span class="en">6 Questions for Trustworthy CPG</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="17"><span class="toc-num">17</span><span class="toc-text">CPG品質の実例（NCCN/IOM/日本）<span class="en">CPG Quality Examples</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="18"><span class="toc-num">18</span><span class="toc-text">AMSTAR 2（16項目）<span class="en">AMSTAR 2</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="19"><span class="toc-num">19</span><span class="toc-text">PRISMA 2020（27項目）<span class="en">PRISMA 2020</span></span></button></li>
+
+      <li class="toc-section">Part VII — 診療現場で活かす</li>
+      <li class="toc-item"><button class="toc-btn" data-idx="20"><span class="toc-num">20</span><span class="toc-text">患者への適用<span class="en">Applicability</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="21"><span class="toc-num">21</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
+
+      <li class="toc-section">Part VIII — 付録</li>
+      <li class="toc-item"><button class="toc-btn" data-idx="22"><span class="toc-num">22</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary & Q&A</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="23"><span class="toc-num">23</span><span class="toc-text">最新情報＋Guyatt LinkedIn<span class="en">Latest & LinkedIn Picks</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="24"><span class="toc-num">24</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
+    </ul>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ============ Ch0: 表紙 ============ -->
+    <div class="page active" id="page-0">
+      <div class="reader-cover">
+        <h1>診療ガイドライン・システマティックレビュー <br>の<span style="color:#ffcc80;">読み方</span> ガイド</h1>
+        <div class="sub">— 臨床医・研修医・薬剤師・看護師・医学生のための、GRADE準拠の読み手向け解説 —</div>
+        <div class="pitch">
+          日々の診療で <strong>ガイドラインを読み、SRを参照し、推奨を目の前の患者に適用する</strong> ために必要な知識を、Gordon Guyatt先生らのUsers' Guidesシリーズ、GRADE最新方法論、閾値・MID、信頼できるCPGの6つの質問、AMSTAR 2／PRISMA 2020までを1つにまとめた読み手専用のサイトです。<br><br>
+          本サイトは<strong>作成者向け</strong>のGRADEハンドブックとは別に、<strong>読み手の視点</strong>で「どこを見るか・どう判断するか・どう現場に持ち込むか」に特化しています。
+        </div>
+        <div class="reader-links">
+          <a class="reader-link" href="https://minds.jcqhc.or.jp/" target="_blank" rel="noopener">
+            <span class="icn">📘</span><span><span class="ttl">Minds（日本のCPG）</span><br><span class="dsc">公益財団法人日本医療機能評価機構</span></span>
+          </a>
+          <a class="reader-link" href="https://www.cochrane.org/ja/evidence" target="_blank" rel="noopener">
+            <span class="icn">🔬</span><span><span class="ttl">Cochrane Library（日本語）</span><br><span class="dsc">世界標準のSRアーカイブ</span></span>
+          </a>
+          <a class="reader-link" href="https://www.nice.org.uk/guidance" target="_blank" rel="noopener">
+            <span class="icn">🇬🇧</span><span><span class="ttl">NICE Guidance（英国）</span><br><span class="dsc">国際的に参照されるCPG</span></span>
+          </a>
+          <a class="reader-link" href="https://www.gradeworkinggroup.org/" target="_blank" rel="noopener">
+            <span class="icn">📊</span><span><span class="ttl">GRADE Working Group</span><br><span class="dsc">方法論の最新情報</span></span>
+          </a>
+        </div>
+        <div style="margin-top:24px;text-align:center;">
+          <button class="nav-btn" onclick="showPage(1)" style="background:var(--accent);color:white;border:none;padding:14px 36px;border-radius:10px;font-size:1.05rem;font-weight:700;cursor:pointer;">📖 読み始める　→</button>
+        </div>
+      </div>
+
+      <div class="key-message" style="margin-top:30px;">
+        <strong>このサイトで学べること</strong><br>
+        ✅ GRADEの4段階の「エビデンスの確実性」を正しく解釈できる<br>
+        ✅ SoF表（Summary of Findings）を5分で読めるようになる<br>
+        ✅ 「強い推奨」と「条件付き推奨」を患者にどう提示するかが分かる<br>
+        ✅ 目の前のCPGが<strong>信頼できるか</strong>を6つの質問で判定できる（Guyatt 2023）<br>
+        ✅ 臨床的に重要な差（MID／閾値）の意味が分かる<br>
+        ✅ AMSTAR 2／PRISMA 2020でSRの質を評価できる
+      </div>
+    </div>
+
+    <!-- ============ Ch1: EBM・CPG/SR入門 ============ -->
+    <div class="page" id="page-1">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 1 / 24</div>
+        <h1>EBMと診療ガイドライン・SRの読み方</h1>
+        <div class="en-title">EBM and How to Read CPGs/SRs</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>EBM（Evidence-Based Medicine）は25年で「RCTの階層」から「GRADEによる構造化判断」へ進化した [G1]。臨床家は論文を全て読む代わりに、<strong>信頼できるSRとCPGを「読み解く」</strong>ことで、患者の価値観と統合した意思決定を行う。[G1][U12][U16]
+        </div>
+
+        <h2>EBMの25年間の進化</h2>
+        <p>EBMは1990年代初頭、<span class="gloss" data-term="GRADE">RCTをエビデンスピラミッドの頂点に置く階層モデル</span>から出発しました。以降、Djulbegovic & Guyatt [G1] が総括した通り、EBMは以下のような成熟を遂げました：</p>
+        <ul>
+          <li><strong>SRが第一情報源に</strong>：個別RCTよりも系統的レビュー＋メタ解析が臨床判断の基盤となった</li>
+          <li><strong>エビデンスの「確実性」という概念の導入</strong>：単なる研究デザインではなく、バイアスリスク・一貫性・直接性・精度・出版バイアスで総合評価する<span class="gloss" data-term="GRADE">GRADE</span>が普及</li>
+          <li><strong>観察研究の再評価</strong>：RCTが実施困難な場合の観察研究の活用方法が整備された [G2]</li>
+          <li><strong>患者の価値観と嗜好の組込み</strong>：推奨の強さ決定に「価値観」が明示的要素として組み込まれた</li>
+          <li><strong>共同意思決定（SDM）</strong>：特に条件付き推奨では患者との対話が必須との理解が定着</li>
+        </ul>
+
+        <h2>診療ガイドライン（CPG）とシステマティックレビュー（SR）の関係</h2>
+        <p>臨床家が実際に日々参照するのは、生のRCTではなく：</p>
+        <ol>
+          <li><strong>システマティックレビュー（SR）</strong>：特定の臨床疑問について、系統的に文献を検索・選択・評価・統合した二次研究。メタ解析（統計的統合）を含むこともある。[U12]</li>
+          <li><strong>診療ガイドライン（CPG）</strong>：複数のSRの結果をパネル討議で推奨に変換したもの。推奨の方向（賛成／反対）と強さ（強い／条件付き）、根拠となるエビデンスの確実性を提示する。[U16]</li>
+        </ol>
+
+        <h2>読み手としての3つの問い</h2>
+        <div class="reader-tips">
+          <h4>🎯 SRやCPGを読むとき、常に自問する3つ</h4>
+          <ol>
+            <li><strong>このエビデンス（あるいは推奨）は妥当か？</strong>（＝信頼できるか）</li>
+            <li><strong>結果は何か？</strong>（＝効果の方向と大きさ、確実性）</li>
+            <li><strong>自分の患者に適用できるか？</strong>（＝Applicability）</li>
+          </ol>
+        </div>
+        <p>これが Users' Guides to the Medical Literature [U18] の30年来の基本枠組みです。本サイトの各章はこの3つの問いに沿って構成されています。</p>
+
+        <h2>本サイトの読み進め方</h2>
+        <p><strong>初めての方</strong>は Ch2（GRADE概要）→ Ch3（確実性）→ Ch4（推奨強度）→ Ch5（SoF表）→ Ch16（信頼できるCPG）の順がおすすめ。<strong>すぐに判定ツールを使いたい方</strong>は Ch16の6質問チェックリストから始めてください。</p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(0)">← 表紙</button>
+          <button onclick="showPage(2)">Ch2 GRADE概要 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch2: GRADE概要 ============ -->
+    <div class="page" id="page-2">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 2 / 24</div>
+        <h1>GRADEアプローチの概要</h1>
+        <div class="en-title">Overview of the GRADE approach</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>GRADE（Grading of Recommendations, Assessment, Development, and Evaluation）は、<strong>エビデンスの確実性を4段階で評価</strong>し、<strong>推奨の強さを2段階</strong>（強い／条件付き）で提示する国際標準の枠組み。110以上のガイドライン組織が採用している。[U13]
+        </div>
+
+        <h2>GRADEの基本構造</h2>
+        <p>GRADEは2つの独立した判断を分離します：</p>
+        <ol>
+          <li><span class="gloss" data-term="エビデンスの確実性">エビデンスの確実性</span>（高／中／低／非常に低い） — <em>エビデンスそのものの評価</em></li>
+          <li><span class="gloss" data-term="推奨の強さ">推奨の強さ</span>（強い／条件付き） — <em>推奨を行うかどうかの判断</em></li>
+        </ol>
+        <p>これらは必ずしも一致しません。例：高い確実性でも価値観の多様性から条件付き推奨になる、低い確実性でも生命を脅かす状況から強い推奨になる、など。</p>
+
+        <h2>エビデンスの確実性を決める5要因</h2>
+        <p>RCTは「高」から出発し、以下の要因により段階を下げる：</p>
+        <ul>
+          <li><strong>Risk of Bias（バイアスリスク）</strong>（Ch8）</li>
+          <li><strong>不一致性（Inconsistency）</strong>（Ch9）</li>
+          <li><strong>非直接性（Indirectness）</strong>（Ch10）</li>
+          <li><strong>不確実性（Imprecision）</strong>（Ch11）</li>
+          <li><strong>Dissemination bias（発表バイアス）</strong>（Ch12）</li>
+        </ul>
+        <p>観察研究は「低」から出発し、<strong>大きな効果量</strong>、<strong>用量反応関係</strong>、<strong>すべての交絡が逆方向に働く</strong>という条件で段階を上げる。</p>
+
+        <h2>推奨の強さを決める4要因</h2>
+        <ul>
+          <li>利益と害のバランス</li>
+          <li>エビデンスの確実性</li>
+          <li>患者の価値観と嗜好</li>
+          <li>資源・費用（適用可能性）</li>
+        </ul>
+        <p>これらを<span class="gloss" data-term="EtD">Evidence to Decision（EtD）</span>フレームワークで構造化して検討します [U16]。</p>
+
+        <h2>GRADEの成果物</h2>
+        <p>GRADEに基づくCPGは以下を備えます：</p>
+        <ul>
+          <li><strong>Summary of Findings（SoF）表</strong>：アウトカムごとの相対効果・絶対効果・確実性・平易な要約（Ch5で詳述）</li>
+          <li><strong>Evidence Profile</strong>：SoFに確実性を下げた要因の詳細を加えた完全版</li>
+          <li><strong>推奨とその解釈</strong>：強い推奨は「ほぼ全員」、条件付き推奨は「多数派＋SDM」を意味する（Ch4で詳述）</li>
+        </ul>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(1)">← Ch1</button>
+          <button onclick="showPage(3)">Ch3 確実性4段階 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch3: 確実性4段階 ============ -->
+    <div class="page" id="page-3">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 3 / 24</div>
+        <h1>「エビデンスの確実性」4段階の意味</h1>
+        <div class="en-title">Four Levels of Certainty of Evidence</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>GRADEのエビデンスの確実性は「推定値の真値が特定の範囲内（または意思決定の閾値の上／下）にあるという確信度」と定義される [U13]。読み手は「<strong>どの程度この効果推定値を信じられるか</strong>」という問いに答える4段階のラベルとして扱う。
+        </div>
+
+        <h2>4段階の解釈 — 読み手の視点</h2>
+        <table class="mid-table">
+          <thead><tr><th>ラベル</th><th>意味（読み手向け）</th><th>推定値への姿勢</th></tr></thead>
+          <tbody>
+            <tr><td><strong>高（⊕⊕⊕⊕）</strong></td><td>真の効果は推定値に非常に近い</td><td>基本的に信じて行動してよい</td></tr>
+            <tr><td><strong>中（⊕⊕⊕◯）</strong></td><td>真の効果は推定値に近いと思われるが、実質的に異なる可能性もある</td><td>推定値を参考に、患者の状況を加味</td></tr>
+            <tr><td><strong>低（⊕⊕◯◯）</strong></td><td>真の効果は推定値と実質的に異なる可能性がある</td><td>推定値は参考程度、他の情報と総合</td></tr>
+            <tr><td><strong>非常に低い（⊕◯◯◯）</strong></td><td>真の効果は推定値と実質的に異なる可能性が非常に高い</td><td>推定値に依存しない判断を検討</td></tr>
+          </tbody>
+        </table>
+
+        <h2>読み手が最も注意すべきこと</h2>
+        <div class="warning-box">
+          <strong>⚠ 「確実性が高い」＝「効果が大きい」ではない。</strong><br>
+          確実性が高くても効果が小さいこと、確実性が低くても効果が大きいことはあります。確実性は <strong>"効果量をどの程度信じられるか"</strong> の指標であり、<strong>"効果が大きい／小さい"</strong> とは別次元です。
+        </div>
+
+        <h2>確実性は「どこに対して」評価されているか</h2>
+        <p>重要なポイントとして、確実性の評価は<strong>アウトカムごと</strong>に行われます。例えば「死亡：高」「QOL：中」「有害事象：低」のように、1つのCPG推奨の中で複数の確実性レベルが併記されるのが普通です。</p>
+        <p>SoF表（Ch5）を読むときは、各アウトカム行の確実性を個別に確認してください。</p>
+
+        <h2>確実性を上げる・下げる要因</h2>
+        <p>詳細はCh8-12で扱いますが、概観：</p>
+        <ul>
+          <li><strong>下げる要因</strong>（-1 or -2）：バイアスリスク／不一致性／非直接性／不確実性／Dissemination bias</li>
+          <li><strong>上げる要因</strong>（観察研究のみ、+1 or +2）：大きな効果量／用量反応関係／すべての交絡が逆方向</li>
+        </ul>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(2)">← Ch2</button>
+          <button onclick="showPage(4)">Ch4 推奨の強さ →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch4: 強い vs 条件付き推奨 ============ -->
+    <div class="page" id="page-4">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 4 / 24</div>
+        <h1>強い推奨 vs 条件付き推奨 ＋ GPS・推奨表現</h1>
+        <div class="en-title">Strong vs Conditional Recommendations, GPS, Wording</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>GRADEの推奨は「強い」と「条件付き（弱い）」の2種類。それぞれ臨床家と患者への意味が異なる [U5][U11][U13][U16]。加えて、<strong>Good Practice Statement（GPS）</strong>[G4]、<strong>推奨表現の標準化</strong>[G5]、<strong>単一推定値がない場合</strong>[G6] の扱いも知っておく必要がある。
+        </div>
+
+        <h2>強い推奨 vs 条件付き推奨の解釈</h2>
+        <table class="mid-table">
+          <thead><tr><th></th><th><strong>強い推奨</strong></th><th><strong>条件付き推奨</strong></th></tr></thead>
+          <tbody>
+            <tr><td><strong>患者にとって</strong></td><td>ほぼ全員が選ぶ</td><td>多数派は選ぶが、価値観により選ばない人もいる</td></tr>
+            <tr><td><strong>臨床家にとって</strong></td><td>例外なく適用してよい</td><td>価値観を確認し、<span class="gloss" data-term="共同意思決定">共同意思決定（SDM）</span>が必要</td></tr>
+            <tr><td><strong>政策担当者にとって</strong></td><td>標準ケアとして採用可能</td><td>議論を経て採用、アウトカム測定を</td></tr>
+          </tbody>
+        </table>
+
+        <h2>低い確実性で強い推奨は「レッドフラッグ」</h2>
+        <p>Guyatt 2023 [U17] は、<strong>低い確実性のエビデンスで強い推奨を出すことは、原則として疑わしい</strong>と明言しています。例外として許されるのは：</p>
+        <ol>
+          <li>生命を脅かす状況</li>
+          <li>利益不確実・害確実（→推奨しない）</li>
+          <li>利益が等価で片方がより害少／安価</li>
+          <li>壊滅的な害の可能性</li>
+        </ol>
+        <p>これらに該当しないのに低確実性＋強い推奨が出ているCPGは、<strong>信頼性に疑問</strong>があります。</p>
+
+        <h2>Good Practice Statement（GPS）</h2>
+        <p>GPS [G4] は、<strong>形式的なエビデンスレビューなしに</strong>作られる推奨です。例：</p>
+        <ul>
+          <li>「患者に情報を十分に提供する」</li>
+          <li>「手洗いをする」</li>
+          <li>「患者の意向を確認する」</li>
+        </ul>
+        <p>GPSは、利益が明らかで代替案が非倫理的・非合理な場合に限って使われます。<strong>頻繁にGPSを使うガイドラインは要注意</strong>（エビデンスを探す努力が足りない可能性）。</p>
+
+        <h2>推奨表現の標準化（Piggott 2022）</h2>
+        <p>Piggott et al. [G5] は、EtDフレームワークと推奨の表現を標準化しました。確実性レベルと効果の大きさごとに使うべき動詞・副詞が決まっています：</p>
+        <table class="mid-table">
+          <thead><tr><th>確実性</th><th>表現例</th></tr></thead>
+          <tbody>
+            <tr><td>高</td><td>「results in / 〜をもたらす」「reduces / 減らす」（断定）</td></tr>
+            <tr><td>中</td><td>「likely results in / おそらく〜をもたらす」「probably reduces / おそらく減らす」</td></tr>
+            <tr><td>低</td><td>「may result in / 〜をもたらすかもしれない」</td></tr>
+            <tr><td>非常に低い</td><td>「evidence is very uncertain / エビデンスは極めて不確か」</td></tr>
+          </tbody>
+        </table>
+        <p>読み手はこれらの表現の強さから、確実性レベルを逆引きできます。</p>
+
+        <h2>単一推定値がない場合（Murad 2017）</h2>
+        <p>メタ解析で統合できない場合（効果量がばらばら、研究デザインが多様、など）にも、GRADEの5要因は評価できます [G6]。読み手は「なぜ単一推定値がないのか」を見て、その推奨の限界を理解しましょう。</p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(3)">← Ch3</button>
+          <button onclick="showPage(5)">Ch5 SoF表 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch5: SoF表・EP ============ -->
+    <div class="page" id="page-5">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 5 / 24</div>
+        <h1>SoF表・Evidence Profileの読み方</h1>
+        <div class="en-title">Reading SoF Tables / Evidence Profiles</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>Summary of Findings（SoF）表は、GRADEアプローチの中核的な情報提示形式。<strong>アウトカムごとに</strong>①参加者/研究数　②相対効果（RR/OR/HR）　③絶対効果（何/1000人）　④確実性　⑤平易な要約　の5要素を1つの表に集約する [U12]。
+        </div>
+
+        <h2>SoF表の典型的な列構成</h2>
+        <table class="mid-table">
+          <thead>
+            <tr>
+              <th>アウトカム</th>
+              <th>相対効果<br>(95% CI)</th>
+              <th>対照群<br>(per 1000)</th>
+              <th>介入群<br>(per 1000)</th>
+              <th>絶対差<br>(per 1000, 95% CI)</th>
+              <th>確実性</th>
+              <th>平易な要約</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>死亡（30日）</td>
+              <td>RR 0.83<br>(0.75-0.92)</td>
+              <td>130</td>
+              <td>110</td>
+              <td>20 fewer<br>(30-8 fewer)</td>
+              <td>⊕⊕⊕⊕<br>高</td>
+              <td>治療により死亡が減少する</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.85rem;color:var(--text-light);">※ 上記は Guyatt 2023 [U17] Fig.1 のWHO COVID-19バリシチニブ例を参考に簡略化したもの。</p>
+
+        <h2>読み手として必ず見る5ポイント</h2>
+        <div class="reader-tips">
+          <h4>📌 SoF表の読解5ステップ</h4>
+          <ol>
+            <li><strong>アウトカムの重要度を確認</strong>：死亡・主要イベントが含まれているか。サロゲートのみなら要注意</li>
+            <li><strong>絶対効果（Absolute）に注目</strong>：相対効果は印象を誇張しやすい（Ch6で詳述）</li>
+            <li><strong>絶対差の信頼区間が閾値を超えているか</strong>：MID（Ch7）未満なら「実質差なし」</li>
+            <li><strong>確実性ラベル</strong>：高／中なら信じる、低／非常に低いなら他の情報と総合</li>
+            <li><strong>平易な要約の動詞</strong>：「results in」→高、「likely」→中、「may」→低、「very uncertain」→非常に低い（[G5]）</li>
+          </ol>
+        </div>
+
+        <h2>Evidence Profile（EP）との違い</h2>
+        <p>EPはSoF表に<strong>確実性を下げた理由の詳細</strong>（"serious indirectness due to use of surrogate outcome"など）を追加したもの。CPG本文にはSoFのみ、付録にEPが載ることが多い。<strong>理由を詳しく知りたい場合はEPを確認</strong>してください。</p>
+
+        <h2>SoF表がない／貧弱なガイドラインは疑う</h2>
+        <div class="warning-box">
+          Guyatt 2023 [U17] は、SoF表の欠如・不完全さを <strong>信頼性の重要な判断材料</strong> と位置付けています。ESPNIC POCUSガイド（2020）の例：39推奨中28が「中等度確実性」とされたが、参照されるRCTは7件のみで、SoF表がなく評価不能だった。
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(4)">← Ch4</button>
+          <button onclick="showPage(6)">Ch6 相対vs絶対 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch6: 相対効果と絶対効果 ============ -->
+    <div class="page" id="page-6">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 6 / 24</div>
+        <h1>相対効果と絶対効果の違い</h1>
+        <div class="en-title">Relative vs Absolute Effects</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>相対効果（RR, OR, HR）はベースラインリスクに依存せず比較的安定。<strong>絶対効果はベースラインリスクに依存し、患者への意味付けに直結</strong>。読み手は必ず両方を確認し、SoF表の「per 1000」表記に注目する [U12][M5]。
+        </div>
+
+        <h2>違いの数値例</h2>
+        <div class="example-box">
+          <strong>例：</strong>介入のRR = 0.5（リスクを半減）<br><br>
+          <strong>ベースライン100/1000の場合</strong>：<br>
+          100 → 50 人/1000、絶対差 = <strong>50 人/1000</strong> = 20人を治療すれば1人の悪化を防ぐ（NNT=20）<br><br>
+          <strong>ベースライン10/1000の場合</strong>：<br>
+          10 → 5 人/1000、絶対差 = <strong>5 人/1000</strong> = 200人治療で1人改善（NNT=200）<br><br>
+          <strong>同じRR 0.5でも、患者への意味はベースラインリスクで大きく異なる</strong>
+        </div>
+
+        <h2>読み手が陥りやすい罠</h2>
+        <div class="warning-box">
+          <strong>⚠ 「相対リスクが50%減少」という表現に惑わされない</strong><br>
+          ベースラインリスクが低ければ絶対差はわずか。1000人で1人が2人になる（「RR 2、二倍のリスク」）状況と、1000人で100人が200人になる状況は、同じ相対表現でも全く違います。
+        </div>
+
+        <h2>ベースラインリスクをどう推定するか</h2>
+        <p>SoF表では多くの場合、以下のいずれかが用いられます：</p>
+        <ul>
+          <li><strong>対照群イベント率</strong>：メタ解析に含まれた研究の対照群のイベント率</li>
+          <li><strong>低／中／高リスク集団の想定</strong>：ガイドラインが複数のリスク層に対し絶対効果を提示</li>
+          <li><strong>臨床家が自分の患者のリスクを推定して代入</strong>：NNT／NNHが実際の臨床に近づく</li>
+        </ul>
+        <p>最良のCPGは、読み手が自分の患者のベースラインリスクに合わせて絶対効果を計算できる情報を提供します（Guyatt LinkedIn post on baseline risk vs effect modification）。</p>
+
+        <h2>絶対効果差のための方法論（2023）</h2>
+        <p>[M5]（絶対リスク差のための論文2023）は、観察研究メタ解析でオッズ比から絶対効果差を導出する標準的な手順を示しています。観察研究のSR（Ch13）を読む際は、絶対効果への変換が適切に行われているかを確認しましょう。</p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(5)">← Ch5</button>
+          <button onclick="showPage(7)">Ch7 閾値とMID →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch7: 閾値とMID ============ -->
+    <div class="page" id="page-7">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 7 / 24 ⭐</div>
+        <h1>閾値とMID — 臨床的に重要な差とは何か</h1>
+        <div class="en-title">Thresholds & Minimal Important Difference (MID)</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong><span class="gloss" data-term="MID">MID（Minimal Important Difference、最小重要差）</span>は、<strong>患者が「重要」と感じる最小の治療効果</strong>。Jaeschke-Singer-Guyatt (1989) [M1] が提唱した概念で、現在はMIDと統一。SoF表の解釈と<span class="gloss" data-term="不確実性">Imprecision</span>評価に直結する。
+        </div>
+
+        <h2>なぜMIDが必要か</h2>
+        <p>統計的有意差（p&lt;0.05）は、<strong>臨床的に意味のある差</strong>とは限りません。1000人で0.5人が0.6人になる効果はp値が有意でも臨床的に無意味。逆に、p値が有意でなくても信頼区間の上限が十分大きければ臨床的に重要な可能性があります。<strong>MIDはこの臨床的重要性の基準線</strong>です。</p>
+
+        <h2>些細・中・大の3段階閾値</h2>
+        <p>現代GRADEでは、効果量を以下4段階で分類します [M2][M6]：</p>
+
+        <!-- 閾値早見表：mid-explorer.js が描画 -->
+        <div id="mid-explorer"></div>
+
+        <h2>MIDとImprecisionの関係</h2>
+        <p>信頼区間がMIDをどう含むかで、確実性を下げるかが決まります：</p>
+        <ul>
+          <li>信頼区間がMIDを超えていない（"no clinically important difference"）→ 「small」または「trivial」</li>
+          <li>信頼区間がMIDをまたぐ → 精度不足（Imprecision）で確実性を1段下げる</li>
+          <li>信頼区間が完全にMIDを超えている → 精度は十分（Ch11で詳述）</li>
+        </ul>
+
+        <h2>MIDの推定方法</h2>
+        <ol>
+          <li><strong>アンカーベース法</strong>：患者自身が「少し良くなった／変わらない」と評価したスコア差の中央値。最も信頼性が高い。</li>
+          <li><strong>分布ベース法</strong>：0.5 SD、0.5 SEM など。二次的指標。</li>
+          <li><strong>合意ベース法</strong>：パネル議論で決定。多くのGLで用いられる。</li>
+        </ol>
+        <p>[M7]（BMJ 2025）は、アンカーベースMID推定値の信頼性を評価する新instrumentを提供しています。SoF表のMIDがどの方法で設定されたかを確認しましょう。</p>
+
+        <div class="warning-box">
+          <strong>⚠ MIDはアウトカムごと／集団ごとに異なる</strong><br>
+          慢性腰痛のVAS 15mmと、術後痛のVAS 15mmでは臨床的意味が違う。同じ指標でも疾患・状況によりMIDが変わることに注意。
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(6)">← Ch6</button>
+          <button onclick="showPage(8)">Ch8 Risk of Bias →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch8: Risk of Bias ============ -->
+    <div class="page" id="page-8">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 8 / 24</div>
+        <h1>Risk of Bias — RCT ＋ 観察研究（ROBINS-E/I）</h1>
+        <div class="en-title">Risk of Bias (RCT + Observational)</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>研究の方法論的欠陥により結果が歪む可能性を評価する。RCTは <strong>RoB 2</strong>（Cochrane）、観察研究は<strong>ROBINS-I（介入）</strong>または<strong>ROBINS-E（曝露）</strong>を用いる [G7]。読み手は「どのドメインに問題があり、結果がどちらに歪む可能性があるか」を把握する。
+        </div>
+
+        <h2>RCTのRoB 2 — 5ドメイン</h2>
+        <ol>
+          <li><strong>無作為化プロセス</strong>：割付隠蔽・背景バランス</li>
+          <li><strong>介入からの逸脱</strong>：プロトコル違反・アドヒアランス</li>
+          <li><strong>アウトカムデータの欠損</strong>：脱落率・理由の記録</li>
+          <li><strong>アウトカム測定</strong>：盲検化・測定の客観性</li>
+          <li><strong>報告される結果の選択</strong>：事前登録との一致</li>
+        </ol>
+
+        <h2>観察研究のROBINS-E（曝露）／ROBINS-I（介入） — 7ドメイン</h2>
+        <p>観察研究には<strong>交絡</strong>という固有の問題があるため、より厳密な評価が必要です：</p>
+        <ol>
+          <li>交絡（Confounding）</li>
+          <li>参加者選択</li>
+          <li>曝露／介入の測定</li>
+          <li>意図した曝露／介入からの逸脱</li>
+          <li>欠損データ</li>
+          <li>アウトカム測定</li>
+          <li>報告の選択</li>
+        </ol>
+        <p>観察研究は<strong>交絡の管理</strong>（多変量調整、傾向スコア、操作変数など）が十分かが最重要です [G2]。</p>
+
+        <h2>読み手としてのチェック</h2>
+        <div class="reader-tips">
+          <h4>📌 バイアスリスクを読むときのポイント</h4>
+          <ul>
+            <li>SRが「RoB評価を実施したか」を確認（AMSTAR 2 Q9）</li>
+            <li>高リスクの研究が多い → 確実性を1-2段下げる根拠になる</li>
+            <li>感度分析（高リスク研究を除いた解析）で結果が変わるか</li>
+            <li>「どの方向に歪んでいる可能性が高いか」の考察があるか</li>
+          </ul>
+        </div>
+
+        <h2>Guyattの警告：早期中止RCT</h2>
+        <p>LinkedIn投稿（"Stopping trials early for benefit"）で指摘されるように、利益を理由に早期中止されたRCTは<strong>治療効果を過大評価しやすい</strong>。バイアスリスク評価では「早期中止の有無」も確認すべき対象です。</p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(7)">← Ch7</button>
+          <button onclick="showPage(9)">Ch9 不一致性 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch9: 不一致性 ============ -->
+    <div class="page" id="page-9">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 9 / 24</div>
+        <h1>不一致性（Inconsistency）</h1>
+        <div class="en-title">Inconsistency</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>研究間で効果推定値が一致しない程度。<strong>説明できない異質性</strong>（heterogeneity）があれば確実性を下げる。[U12]
+        </div>
+
+        <h2>読み手が確認する4つの異質性指標</h2>
+        <ul>
+          <li><strong>点推定値のばらつき</strong>：研究ごとの効果が正負逆になっていないか（森林プロットで目視）</li>
+          <li><strong>信頼区間の重なり</strong>：各研究の95% CIがどの程度重なっているか</li>
+          <li><strong>I² 統計量</strong>：0-25%低、25-50%中、50-75%高、&gt;75%顕著な異質性</li>
+          <li><strong>p値 for heterogeneity</strong>：&lt;0.10で異質性ありとみなすことが多い</li>
+        </ul>
+
+        <h2>異質性が説明できる場合は下げない</h2>
+        <p>サブグループ解析（疾患重症度・年齢・介入量など）で異質性が説明できれば、<strong>確実性は下げずに別々の推定値を提示</strong>するのが理想。説明できない場合のみ「Inconsistency」で確実性を下げます。</p>
+
+        <h2>森林プロットの読み方</h2>
+        <div class="reader-tips">
+          <h4>📌 森林プロット5秒チェック</h4>
+          <ul>
+            <li>各研究の四角（効果量）が<strong>左右バラバラ</strong>に散らばっていないか</li>
+            <li>統合結果（ダイヤモンド）の幅が広すぎないか</li>
+            <li>外れ値（outlier）があれば、なぜそうなのかの考察があるか</li>
+          </ul>
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(8)">← Ch8</button>
+          <button onclick="showPage(10)">Ch10 非直接性 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch10: 非直接性 ============ -->
+    <div class="page" id="page-10">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 10 / 24</div>
+        <h1>非直接性（Indirectness）</h1>
+        <div class="en-title">Indirectness</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>PICO（対象・介入・比較・アウトカム）が、臨床疑問と研究で一致しない程度。<strong>サロゲートアウトカム</strong>を用いた場合も該当する [U17]。Guyatt LinkedInで紹介されたindirectness algorithmは読者にも有用。
+        </div>
+
+        <h2>4つの非直接性</h2>
+        <ol>
+          <li><strong>対象集団の非直接性</strong>：研究対象が自分の患者と異なる（年齢、疾患重症度、併存疾患）</li>
+          <li><strong>介入の非直接性</strong>：用量・投与方法・デバイスが異なる</li>
+          <li><strong>比較対照の非直接性</strong>：プラセボ比較しかなく、実臨床での代替治療との比較がない</li>
+          <li><strong>アウトカムの非直接性</strong>：<span class="gloss" data-term="サロゲートアウトカム">サロゲートアウトカム</span>（血圧、HbA1c、腫瘍縮小率など）しか測定されていない</li>
+        </ol>
+
+        <h2>Guyatt 2023のサロゲート議論</h2>
+        <p>Guyatt 2023 [U17] は、「患者にとって重要なアウトカム」と「サロゲート」を区別する判定質問を提示：</p>
+        <div class="example-box">
+          <strong>判定質問：</strong>もしこのアウトカムだけが改善して、他のアウトカムは改善しなくても、患者は害と負担を受け入れてこの治療を選ぶか？
+          <br>→ <strong>No</strong>ならサロゲート（酸素化、生理指標、心拍出量など）<br>
+          → <strong>Yes</strong>なら患者重要アウトカム（死亡、QOL、呼吸困難感など）
+        </div>
+
+        <h2>近年の進展：Indirectness Algorithm</h2>
+        <p>2025年にBMJ Core GRADEシリーズの補遺として、非直接性評価のアルゴリズム／フローチャートが発表されました（Guyatt LinkedIn投稿）。読み手としても「どう判定されたか」を追跡可能になりました。</p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(9)">← Ch9</button>
+          <button onclick="showPage(11)">Ch11 不確実性 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch11: 不確実性 ============ -->
+    <div class="page" id="page-11">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 11 / 24</div>
+        <h1>不確実性（Imprecision）</h1>
+        <div class="en-title">Imprecision</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>信頼区間の幅が広く、臨床的決定が変わるかどうか判定できない状態。<strong>MID（Ch7）</strong>との関係で評価される [U12]。
+        </div>
+
+        <h2>判定の基本原則</h2>
+        <ol>
+          <li>点推定値と95% CIを見る</li>
+          <li>CIの<strong>両端</strong>がMIDを超えているか（同じ判断になるか）を確認</li>
+          <li>どちらか一方でもMIDをまたいで反対側に行く → Imprecisionで確実性を下げる</li>
+          <li>サンプルサイズが小さい／イベント数が少ない → 追加要因</li>
+        </ol>
+
+        <h2>パターン別判定</h2>
+        <div class="example-box">
+          <strong>MID閾値</strong>：絶対差 20/1000<br><br>
+          <strong>Pattern A</strong>：絶対差 30/1000 (95% CI 25-40) → CIの下限25&gt;MID → Imprecisionなし<br>
+          <strong>Pattern B</strong>：絶対差 30/1000 (95% CI 10-60) → 下限10&lt;MID → Imprecision（1段下げ）<br>
+          <strong>Pattern C</strong>：絶対差 10/1000 (95% CI -5〜+25) → 不利益側にもまたぐ → 重大なImprecision（2段下げの可能性）
+        </div>
+
+        <h2>サンプルサイズの目安（OIS）</h2>
+        <p>GRADEでは Optimal Information Size（OIS）という概念を用い、メタ解析の総参加者数が十分かを判定します。目安として、臨床試験のパワー計算に必要な数（通常400-2000人、イベント300前後）を下回るとImprecisionで下げることが多い。</p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(10)">← Ch10</button>
+          <button onclick="showPage(12)">Ch12 発表バイアス →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch12: Dissemination bias ============ -->
+    <div class="page" id="page-12">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 12 / 24</div>
+        <h1>Dissemination bias（情報発信バイアス）</h1>
+        <div class="en-title">Dissemination bias</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>肯定的結果は発表されやすく、否定的／中立的結果は埋もれる傾向。従来は「出版バイアス」と呼ばれたが、SNS・プレスリリース・学会発表でも歪みが生じるため「情報発信バイアス」という広い概念に進化している。
+        </div>
+
+        <h2>検出方法</h2>
+        <ul>
+          <li><strong>ファネルプロット</strong>：点対称か（左右非対称なら疑わしい）</li>
+          <li><strong>Egger検定 / Begg検定</strong>：非対称性の統計検定</li>
+          <li><strong>登録試験の未発表チェック</strong>：ClinicalTrials.govで該当研究の未発表を確認</li>
+          <li><strong>研究数が少ない</strong>場合、検定そのものの信頼性が低い点に注意</li>
+        </ul>
+
+        <h2>読み手としての対応</h2>
+        <ul>
+          <li>ファネルプロットが対称 → 一定の安心材料</li>
+          <li>非対称 → 効果は過大評価の可能性、確実性を1段下げる</li>
+          <li>業界資金の試験が多い → Dissemination biasの追加リスク</li>
+        </ul>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(11)">← Ch11</button>
+          <button onclick="showPage(13)">Ch13 観察研究SR →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch13: 非RCT・観察研究のSR ============ -->
+    <div class="page" id="page-13">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 13 / 24</div>
+        <h1>非RCT・観察研究のSR（GRADE Guidance 44）</h1>
+        <div class="en-title">Non-RCT / Observational Study SR</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>RCTが実施できない／ない場合、観察研究（コホート、症例対照）のSRが重要。GRADE Guidance 44（Cuello-Garcia 2025）[G2] は、<strong>RCTと非RCTを統合する4ステップ枠組み</strong>を提唱。読み手は「観察研究でも適切に統合されているか」を判定できる。
+        </div>
+
+        <h2>GRADE Guidance 44の4ステップ</h2>
+        <ol>
+          <li><strong>各研究デザインの確実性を個別評価</strong>（RCT単独、非RCT単独）</li>
+          <li><strong>効果の整合性を評価</strong>：RCTと非RCTの絶対効果差がMID閾値以内か</li>
+          <li><strong>ドメイン別判断</strong>：RoB、交絡、整合性を個別に検討</li>
+          <li><strong>提示方法の決定</strong>：別々に提示／並列行／1つに統合するか</li>
+        </ol>
+
+        <h2>観察研究の典型的な限界</h2>
+        <ul>
+          <li><strong>交絡</strong>：測定／未測定の交絡因子により真の因果効果が歪む</li>
+          <li><strong>選択バイアス</strong>：参加者・曝露群・対照群の選択基準の違い</li>
+          <li><strong>情報バイアス</strong>：曝露・アウトカムの測定誤差</li>
+        </ul>
+
+        <h2>観察研究が格上げされる3条件</h2>
+        <p>通常「低」から出発する観察研究でも、以下の条件を満たせば確実性を1-2段上げる：</p>
+        <ol>
+          <li><strong>大きな効果量</strong>（RR &gt;2 or &lt;0.5）</li>
+          <li><strong>用量反応関係</strong>が明確</li>
+          <li><strong>残存交絡がすべて逆方向</strong>（観察される効果を弱める方向）</li>
+        </ol>
+        <p>例：喫煙と肺がんの関連はRR &gt;10で観察研究ベースでも確実性は高い。</p>
+
+        <h2>読み手としてのチェック</h2>
+        <div class="reader-tips">
+          <h4>📌 観察研究SRを読むとき</h4>
+          <ul>
+            <li>ROBINS-I／ROBINS-Eで評価されているか（AMSTAR 2 Q9相当）</li>
+            <li>傾向スコアマッチング・操作変数など交絡対策の記述があるか</li>
+            <li>感度分析で結果が変わらないか</li>
+            <li>RCTエビデンスが別にあれば、両者の効果量の整合性を議論しているか [G2]</li>
+          </ul>
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(12)">← Ch12</button>
+          <button onclick="showPage(14)">Ch14 CERQual →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch14: 定性的研究のSR CERQual ============ -->
+    <div class="page" id="page-14">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 14 / 24</div>
+        <h1>定性的研究のSR — GRADE-CERQual</h1>
+        <div class="en-title">Qualitative SR — GRADE-CERQual</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>患者の体験・価値観・医療者の視点など、<strong>定性的研究</strong>のSRに対する確実性評価枠組みが<span class="gloss" data-term="CERQual">CERQual</span>（Lewin 2018）[G3]。4要素で評価し、高／中／低／非常に低いの4段階で信頼度を判定する。
+        </div>
+
+        <h2>CERQualの4評価要素</h2>
+        <ol>
+          <li><strong>方法論的限界</strong>（Methodological limitations）：個別研究の質</li>
+          <li><strong>整合性</strong>（Coherence）：データと解釈の整合性</li>
+          <li><strong>データの十分性</strong>（Adequacy of data）：データの豊富さ・深さ</li>
+          <li><strong>関連性</strong>（Relevance）：レビューの文脈への適合</li>
+        </ol>
+
+        <h2>なぜ読み手に重要か</h2>
+        <p>推奨を患者に適用するには、<strong>患者の価値観と嗜好</strong>（Ch21）を理解する必要があります。CERQualで評価された定性的SRは、その基礎情報を提供します。例：「抗凝固療法における患者の価値観のSR」は治療選択肢の提示方法を変えます（Guyatt LinkedIn #45）。</p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(13)">← Ch13</button>
+          <button onclick="showPage(15)">Ch15 GPS/ネットベネフィット →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch15: 単一推定値なし／GPS／ネットベネフィット ============ -->
+    <div class="page" id="page-15">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 15 / 24</div>
+        <h1>単一推定値がない場合・GPS・ネットベネフィット</h1>
+        <div class="en-title">Alternative Recommendation Types</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>推奨は常に「SoF表＋GRADE」の形式とは限らない。<strong>Good Practice Statement（GPS）</strong>[G4]、<strong>単一推定値が統合できない場合</strong>[G6]、<strong>ネットベネフィット分析</strong>などのバリエーションを読み分ける。
+        </div>
+
+        <h2>Good Practice Statement（GPS）</h2>
+        <p>GPS [G4] の適用条件：</p>
+        <ul>
+          <li>利益が明らかで、代替案が非倫理的・非合理</li>
+          <li>正式なエビデンスレビューが不要と判断される</li>
+          <li>例：「手洗い」「患者の同意を得る」「情報提供する」</li>
+        </ul>
+        <p><strong>濫用の兆候</strong>：GPSが推奨の半数以上を占める／SRで容易に評価できる質問にGPSを使っている → GRADE評価の回避の可能性。</p>
+
+        <h2>単一推定値が統合できない場合（Murad 2017）</h2>
+        <p>[G6] はナラティブ統合でも確実性を評価する方法を示しています：</p>
+        <ul>
+          <li>効果の方向が一致するか</li>
+          <li>効果量の範囲がMID以内か</li>
+          <li>各研究のバイアスリスク</li>
+          <li>結果の堅牢性</li>
+        </ul>
+
+        <h2>ネットベネフィット分析</h2>
+        <p>ネットベネフィットの手順 2019 は、複数のアウトカムを統合した意思決定枠組み。利益の加重和と害の加重和を引き算する形式で、<strong>個別化された推奨</strong>を可能にします。Guyatt LinkedInでも推奨（"evidence-based decision-analytical approach"）。</p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(14)">← Ch14</button>
+          <button onclick="showPage(16)">⭐ Ch16 信頼できるCPG →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch16: 信頼できるCPG 6質問 ============ -->
+    <div class="page" id="page-16">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 16 / 24 ⭐ 中核章</div>
+        <h1>信頼できるCPGの6つの質問</h1>
+        <div class="en-title">Six Questions for Recognizing a Trustworthy CPG</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>Lima-Mirza-Guyatt (2023) [U17] は、臨床家がガイドラインを信頼できるかを判定するための<strong>6つの質問</strong>を提示。個別CPGをこの6問で吟味することが、現場での最重要スキル。
+        </div>
+
+        <h2>インタラクティブ・チェックリスト</h2>
+        <p>以下のチェックリストで、目の前のCPGを評価できます。ガイドラインを1つ思い浮かべて各質問に回答してください：</p>
+        <div id="trustworthy-check"></div>
+
+        <h2>6質問の理論的背景</h2>
+        <p>Guyatt 2023 [U17] の6質問は、以下のUsers' Guidesシリーズを統合したものです：</p>
+        <ul>
+          <li>[U1] Hayward 1995「CPGの推奨は妥当か？」 → Q1-Q5に相当</li>
+          <li>[U2] Wilson 1995「推奨はあなたの患者ケアに役立つか？」 → Ch20 Applicabilityに相当</li>
+          <li>[U16] Brignardello-Petersen 2021「CPG推奨の解釈と利用」 → 総合枠組み</li>
+        </ul>
+
+        <h2>判定後の行動</h2>
+        <div class="reader-tips">
+          <h4>🎯 判定後のアクション</h4>
+          <ul>
+            <li><strong>信頼できる</strong> → Ch20で「自分の患者に適用できるか」を検討</li>
+            <li><strong>部分的に信頼</strong> → 該当する弱点を補完する別ソース（別CPG、最新SR）を参照</li>
+            <li><strong>信頼できない</strong> → 別のCPG（GRADE採用・Minds・Cochraneなど）を優先</li>
+          </ul>
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(15)">← Ch15</button>
+          <button onclick="showPage(17)">Ch17 CPG実例 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch17: CPG品質の実例 ============ -->
+    <div class="page" id="page-17">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 17 / 24</div>
+        <h1>CPG品質の実例 — NCCN／IOM／日本のCPG問題</h1>
+        <div class="en-title">CPG Quality Examples</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>Ch16の6質問を、実在のCPGに適用した事例を示す。NCCN（独自Evidence Blocks、GRADE非採用）、IOM 8基準（米国の標準）、日本のCPG課題。
+        </div>
+
+        <h2>NCCN — GRADE非採用の代表例</h2>
+        <p>NCCN Clinical Practice Guidelines in Oncology（米国）は、<strong>GRADEを採用せず独自のEvidence Blocksを用いる</strong>ため、6質問で以下の問題点が指摘されます [C2]：</p>
+        <ul>
+          <li><strong>Q4（最新のSR）</strong>：厳格なシステマティックレビューの実施が明記されず、「GOBSAT（good old boys sitting around a table）」型の可能性</li>
+          <li><strong>Q5（推奨強度と確実性の整合）</strong>：Evidence Blocksは専門家経験に大きく依存し、再現性に限界</li>
+          <li><strong>Q3（患者重要アウトカム）</strong>：コスト考慮と患者中心意思決定の要素が欠落との分析</li>
+          <li><strong>Q6（COI）</strong>：個々のパネリストの評価結果が公開されない</li>
+        </ul>
+        <p>ただし、NCCNは詳細な治療アルゴリズムを提供しており、実臨床で有用な面もあります。<strong>完全に参照しないのではなく、6質問で限界を認識した上で利用</strong>するのが読み手としての対応。</p>
+
+        <h2>IOM（米国医学研究所、現NAM）8基準 — 2011</h2>
+        <p>Institute of Medicine「Clinical Practice Guidelines We Can Trust」[C3]：</p>
+        <ol>
+          <li>透明性の確保</li>
+          <li>COIの管理</li>
+          <li>多職種パネルとステークホルダー参加</li>
+          <li>システマティックレビューに基づく</li>
+          <li>推奨の根拠と強さの明記</li>
+          <li>外部レビュー</li>
+          <li>更新のメカニズム</li>
+          <li>実施支援資源の提供</li>
+        </ol>
+        <p>IOM基準はGuyatt 2023の6質問の土台となった歴史的文書です。</p>
+
+        <h2>日本のCPG問題</h2>
+        <p>日本のCPGは一部で以下の課題が指摘されています [C4]：</p>
+        <ul>
+          <li>GRADE採用が徐々に進んでいるが未採用のCPGも多い</li>
+          <li>COI管理ポリシーは明文化されているが、個別推奨への影響評価が弱いCPGがある</li>
+          <li>更新頻度・Living Guideline化が限定的</li>
+          <li>患者代表のパネル参加が限定的</li>
+        </ul>
+        <p>信頼できる日本のCPG代表例：<strong>Minds掲載CPGの一部（GRADE採用）</strong>。</p>
+
+        <div class="warning-box">
+          <strong>読み手としての結論：</strong>どのCPGも完璧ではない。<strong>6質問でその限界を認識</strong>しつつ、複数ソースを照合して臨床判断を下すのが現実的なアプローチです。
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(16)">← Ch16</button>
+          <button onclick="showPage(18)">Ch18 AMSTAR 2 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch18: AMSTAR 2 ============ -->
+    <div class="page" id="page-18">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 18 / 24</div>
+        <h1>AMSTAR 2 — SRの方法論的質を評価する16項目</h1>
+        <div class="en-title">AMSTAR 2 (16 items)</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>AMSTAR 2（Shea 2017, BMJ）[T1] はSRの方法論的質を16項目で評価。<strong>重要（critical）項目に欠陥があると総合評価が大きく下がる</strong>厳格な設計。PROSPERO登録、文献検索、RoB評価、COI報告が重要項目。
+        </div>
+
+        <h2>インタラクティブ評価ツール</h2>
+        <div id="amstar2-check"></div>
+
+        <h2>重要項目（★）の背景</h2>
+        <ul>
+          <li><strong>Q2 プロトコル事前登録</strong>：結果を見てからの分析変更を防ぐ</li>
+          <li><strong>Q4 包括的文献検索</strong>：少なくとも2つ以上のDB＋灰色文献＋試験登録</li>
+          <li><strong>Q7 除外研究リスト</strong>：選択バイアスの透明化</li>
+          <li><strong>Q9 個別研究のRoB</strong>：RoB 2 / ROBINS-I/E</li>
+          <li><strong>Q11 適切な統計統合</strong>：異質性への対応、適切なモデル</li>
+          <li><strong>Q13 結果解釈でのRoB考慮</strong>：感度分析・バイアス方向の議論</li>
+          <li><strong>Q15 Dissemination bias評価</strong>：ファネルプロット等</li>
+        </ul>
+
+        <h2>評価結果の解釈</h2>
+        <table class="mid-table">
+          <thead><tr><th>評価</th><th>意味</th></tr></thead>
+          <tbody>
+            <tr><td>High</td><td>重要項目の欠陥なし、非重要項目は0-1個 → 信頼できる</td></tr>
+            <tr><td>Moderate</td><td>重要項目の欠陥なし、非重要項目の欠陥が複数 → 概ね信頼</td></tr>
+            <tr><td>Low</td><td>重要項目の欠陥1つ → 限定的に参考</td></tr>
+            <tr><td>Critically Low</td><td>重要項目の欠陥2つ以上 → 信頼不可</td></tr>
+          </tbody>
+        </table>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(17)">← Ch17</button>
+          <button onclick="showPage(19)">Ch19 PRISMA 2020 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch19: PRISMA 2020 ============ -->
+    <div class="page" id="page-19">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 19 / 24</div>
+        <h1>PRISMA 2020 — SR報告の透明性 27項目</h1>
+        <div class="en-title">PRISMA 2020 (27 items)</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>PRISMA 2020（Page 2021, BMJ）[T2] は、SRを<strong>報告</strong>する際に含めるべき27項目のチェックリスト。AMSTAR 2が方法論品質を評価するのに対し、PRISMAは<strong>報告の透明性</strong>を保証する。
+        </div>
+
+        <h2>AMSTAR 2 vs PRISMA 2020</h2>
+        <table class="mid-table">
+          <thead><tr><th></th><th>AMSTAR 2</th><th>PRISMA 2020</th></tr></thead>
+          <tbody>
+            <tr><td>目的</td><td>SRの方法論的<strong>質</strong>評価</td><td>SRの<strong>報告</strong>の透明性</td></tr>
+            <tr><td>項目数</td><td>16</td><td>27</td></tr>
+            <tr><td>使う場面</td><td>SRを<strong>使うとき</strong>の批判的吟味</td><td>SRを<strong>書くとき／査読するとき</strong></td></tr>
+            <tr><td>読み手として</td><td>このSRは信頼できるか？</td><td>このSRは十分に報告されているか？</td></tr>
+          </tbody>
+        </table>
+
+        <h2>27項目の主要セクション</h2>
+        <ul>
+          <li><strong>タイトル・抄録</strong>（2項目）</li>
+          <li><strong>緒言</strong>（2項目：根拠、目的）</li>
+          <li><strong>方法</strong>（12項目：適格基準、情報源、検索、選択、データ抽出、アウトカム、個別研究RoB、効果量、統合、Dissemination bias、確実性）</li>
+          <li><strong>結果</strong>（7項目：選択、研究特性、個別研究RoB、効果、統合、Dissemination bias、確実性）</li>
+          <li><strong>考察</strong>（4項目：結果の解釈、限界、結論、資金源・COI）</li>
+        </ul>
+
+        <h2>読み手としての使い方</h2>
+        <div class="reader-tips">
+          <h4>📌 PRISMA 2020を読み手として活用</h4>
+          <ul>
+            <li>PRISMAチェックリスト付録があるSRは、報告が構造化されている可能性が高い</li>
+            <li>特に重要：方法の4番（情報源）、9番（データ抽出）、13番（統合の方法）、22-24番（確実性・Dissemination bias・限界）</li>
+            <li>フローダイアグラム（研究選択の流れ）が掲載されているか</li>
+          </ul>
+        </div>
+
+        <p>公式サイト：<a href="http://www.prisma-statement.org/" target="_blank" rel="noopener">prisma-statement.org</a></p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(18)">← Ch18</button>
+          <button onclick="showPage(20)">Ch20 患者への適用 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch20: 適用可能性 ============ -->
+    <div class="page" id="page-20">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 20 / 24</div>
+        <h1>推奨を目の前の患者にどう適用するか</h1>
+        <div class="en-title">Applicability</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>信頼できるCPGの推奨でも、<strong>自分の患者・設定に適用できるか</strong>は別途判定が必要 [U3][U6][U17]。患者特性・医療資源・文脈の違いを考慮する。
+        </div>
+
+        <h2>Applicability評価の4次元</h2>
+        <ol>
+          <li><strong>対象患者の類似性</strong>：研究対象と自分の患者の類似度（年齢・重症度・併存症）</li>
+          <li><strong>介入の実行可能性</strong>：自施設で実施できるか、代替手段の有無</li>
+          <li><strong>リスクのベースライン</strong>：自分の患者はCPG想定集団より高／低リスクか</li>
+          <li><strong>価値観の類似性</strong>：患者がアウトカムにどう重み付けするか</li>
+        </ol>
+
+        <h2>Guyatt 2023のApplicability事例</h2>
+        <div class="example-box">
+          <strong>例1</strong>：オーストラリア・ニュージーランド脳卒中GLは「発症4.5時間以内の血栓溶解を強く推奨」。<strong>5時間の患者</strong>で適用できるか？ → Appendixの境界域議論を確認。<br><br>
+          <strong>例2</strong>：同GLは「すべての脳卒中患者をStroke Unitで学際チームで治療」を強く推奨。<strong>低所得国の地方救急室では</strong>チームが存在せず適用不可能。→ 現実的な代替策を検討。
+        </div>
+
+        <h2>ベースラインリスクの重要性</h2>
+        <p>患者のリスクが高い／低いと、同じ相対効果でも絶対ベネフィットが変わります（Ch6）。例：</p>
+        <ul>
+          <li>血栓塞栓症低リスク患者への抗凝固薬 → 出血リスクの方が重大</li>
+          <li>血栓塞栓症高リスク患者への抗凝固薬 → ベネフィットが害を上回る</li>
+        </ul>
+        <p>CPGが複数リスク層での絶対効果を提示していれば、自分の患者のリスク層を選択できます。</p>
+
+        <h2>読み手のチェックリスト</h2>
+        <div class="reader-tips">
+          <h4>📌 Applicability 7チェック</h4>
+          <ol>
+            <li>対象集団が自分の患者と合致するか</li>
+            <li>介入が自施設で実施可能か</li>
+            <li>患者のリスク層が想定内か</li>
+            <li>併存症・薬剤相互作用は考慮されているか</li>
+            <li>医療費・アクセスの障壁は</li>
+            <li>患者の価値観に合うか</li>
+            <li>文化的・社会的要因</li>
+          </ol>
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(19)">← Ch19</button>
+          <button onclick="showPage(21)">Ch21 SDM →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch21: SDM ============ -->
+    <div class="page" id="page-21">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 21 / 24</div>
+        <h1>共同意思決定（SDM）と価値観・嗜好</h1>
+        <div class="en-title">Shared Decision Making & Values</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong><span class="gloss" data-term="共同意思決定">共同意思決定（SDM）</span>は、医療者と患者が<strong>エビデンスと患者の価値観を統合</strong>して意思決定を行うプロセス。特に<strong>条件付き推奨</strong>では必須 [U16][U17]。
+        </div>
+
+        <h2>SDMの3ステップ</h2>
+        <ol>
+          <li><strong>Choice talk</strong>：選択肢があることを患者に伝える</li>
+          <li><strong>Option talk</strong>：各選択肢の利益・害・確実性を具体的に説明</li>
+          <li><strong>Decision talk</strong>：患者の価値観・状況を確認し、共に決定</li>
+        </ol>
+
+        <h2>価値観と嗜好のエビデンス</h2>
+        <p>患者の価値観も研究可能です。例：</p>
+        <ul>
+          <li>抗血栓療法における患者価値観のSR [V2]：48件の研究を系統的に統合。「脳卒中回避 vs 出血リスク」の重み付けに関する集団レベルの傾向を提示。</li>
+          <li>質的SR（CERQual評価、Ch14）：患者体験を系統的に要約。</li>
+        </ul>
+        <p>これらは<strong>集団レベル</strong>の価値観であり、<strong>個別患者の価値観はSDMで確認</strong>する必要があります。</p>
+
+        <h2>条件付き推奨での対話例</h2>
+        <div class="example-box">
+          <strong>条件付き推奨</strong>：「脳卒中予防で心房細動患者に抗凝固薬を提案する（条件付き）」<br><br>
+          <strong>対話例</strong>：<br>
+          「このお薬は年間の脳卒中リスクを5%から2%に下げますが、出血リスクを0.5%から1.5%に上げます。<strong>脳卒中を避けることを強く重視される</strong>方には推奨できます。<strong>出血の懸念が強い</strong>方は別の選択肢もあります。あなたはどのように考えますか？」
+        </div>
+
+        <h2>強い推奨でのSDM</h2>
+        <p>Guyatt 2023 [U17] は、強い推奨でも理論的にはSDMを行うべきだが、時間制約から実践的には限定的と認めています。ただし<strong>患者の強い反対意思があれば聞き入れる</strong>姿勢は必要です。</p>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(20)">← Ch20</button>
+          <button onclick="showPage(22)">Ch22 用語集 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch22: 用語集＋Q&A ============ -->
+    <div class="page" id="page-22">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 22 / 24</div>
+        <h1>用語集 ＋ Q&A</h1>
+        <div class="en-title">Glossary & Q&A</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>本文中の <span class="gloss" data-term="GRADE">用語（点線下線）</span> をクリックすると用語集ポップアップが表示されます。以下は主要用語の一覧。
+        </div>
+
+        <h2>主要用語</h2>
+        <div id="glossary-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;">
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="GRADE">GRADE</strong>：エビデンス評価と推奨決定の国際標準</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="エビデンスの確実性">確実性</strong>：真値が推定範囲にあるという確信度</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="推奨の強さ">推奨の強さ</strong>：強い or 条件付き</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="SoF表">SoF表</strong>：アウトカムごとの効果と確実性の要約</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="MID">MID</strong>：最小重要差（患者が重要と感じる最小の効果）</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="Risk of Bias">Risk of Bias</strong>：バイアスリスク（RoB）</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="ROBINS-E">ROBINS-E</strong>：観察研究（曝露）のRoB評価ツール</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="不一致性">不一致性</strong>：研究間で効果がバラつく度合い</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="非直接性">非直接性</strong>：PICOのずれ</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="サロゲートアウトカム">サロゲート</strong>：患者重要ではない代替指標</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="患者重要アウトカム">患者重要アウトカム</strong>：患者自身が重要と感じる結果</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="不確実性">Imprecision</strong>：信頼区間が広く結論が不安定</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="Dissemination bias">Dissemination bias</strong>：情報発信バイアス</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="AMSTAR 2">AMSTAR 2</strong>：SR方法論質の16項目評価</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="PRISMA 2020">PRISMA 2020</strong>：SR報告の27項目</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="EtD">EtD</strong>：Evidence to Decisionフレームワーク</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="共同意思決定">SDM</strong>：共同意思決定</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="GPS">GPS</strong>：Good Practice Statement</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="CERQual">CERQual</strong>：定性的研究SRの確実性評価</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="PICO">PICO</strong>：臨床疑問の4要素</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="IOM基準">IOM基準</strong>：信頼できるCPGの8基準（2011）</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="NCCN">NCCN</strong>：米国がん診療ネットワーク（GRADE非採用）</div>
+        </div>
+
+        <h2>Q&A（よくある質問）</h2>
+        <details style="margin-bottom:8px;">
+          <summary><strong>Q1. GRADEの「低い確実性」の推奨は無視してよいですか？</strong></summary>
+          <p>A. いいえ。低い確実性でも、<strong>現在利用可能な最良のエビデンス</strong>です。確実性が低い場合は①代替案がより良いか検討②SDMで患者の価値観を重視③フォローアップで効果を確認、などの対応をします。</p>
+        </details>
+        <details style="margin-bottom:8px;">
+          <summary><strong>Q2. CPGが複数あって推奨が食い違う場合は？</strong></summary>
+          <p>A. Ch16の6質問でそれぞれのCPGを評価し、より信頼できる方を優先してください。方法論が同等なら、自国・自施設の文脈に近い方を優先。</p>
+        </details>
+        <details style="margin-bottom:8px;">
+          <summary><strong>Q3. RCTがない領域（希少疾患など）ではどうすれば？</strong></summary>
+          <p>A. 観察研究のSR（Ch13）、定性的研究のSR（Ch14）、単一推定値がない場合（Ch15）の各手法を組み合わせて判断。MAGIC・希少疾患CPGの取り組みが参考になります。</p>
+        </details>
+        <details style="margin-bottom:8px;">
+          <summary><strong>Q4. 英語のCPGを読むのが難しいです</strong></summary>
+          <p>A. まずは SoF表（Ch5）のみに絞って読む → 徐々に推奨本文とEtD → 最後にメタ解析詳細、という段階的アプローチがおすすめ。また、日本語の信頼できるCPG（Minds、Cochrane日本語訳）から始めるのも有効。</p>
+        </details>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(21)">← Ch21</button>
+          <button onclick="showPage(23)">Ch23 最新情報 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch23: 最新情報＋LinkedIn ============ -->
+    <div class="page" id="page-23">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 23 / 24</div>
+        <h1>最新情報 ＋ Guyatt先生 LinkedIn ピックアップ</h1>
+        <div class="en-title">Latest Updates & Guyatt's LinkedIn Picks</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>要点：</strong>GRADE方法論・CPG読み方に関する最新の知見を、Gordon Guyatt先生のLinkedIn投稿から厳選。各投稿は論文へのリンクとコメントを含む、先生による<strong>一次キュレーション</strong>。
+        </div>
+
+        <div id="linkedin-feed"></div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(22)">← Ch22</button>
+          <button onclick="showPage(24)">Ch24 参考文献 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Ch24: 参考文献一覧 ============ -->
+    <div class="page" id="page-24">
+      <div class="page-header">
+        <div class="chapter-badge">Chapter 24 / 24</div>
+        <h1>参考文献一覧</h1>
+        <div class="en-title">References</div>
+      </div>
+      <div class="page-body">
+        <div class="key-message">
+          <strong>参考文献体系：</strong>本アプリは Users' Guides to the Medical Literature シリーズ（U1-U18）、閾値・MID関連（M1-M7）、GRADE方法論拡張（G1-G7）、SRツール（T1-T2）、CPG実例（C1-C4）、価値観関連（V1-V2）、LinkedIn（L1）を正式参照しています。本文中の <span class="ref-cite" style="color:var(--accent);font-weight:600;">[U17]</span> 等をクリックすると詳細が表示されます。
+        </div>
+
+        <div id="references-list">
+          <div class="ref-category">A. Users' Guides to the Medical Literature シリーズ</div>
+          <ul class="ref-list">
+            <li><span class="ref-id">U1</span> Hayward RS, Wilson MC, Tunis SR, Bass EB, Guyatt G. Users' guides VIII. How to use clinical practice guidelines. A. Are the recommendations valid? JAMA 1995;274(7):570-574.</li>
+            <li><span class="ref-id">U2</span> Wilson MC, Hayward RS, Tunis SR, Bass EB, Guyatt G. Users' guides VIII. B. What are the recommendations and will they help you in caring for your patients? JAMA 1995;274(20):1630-1632.</li>
+            <li><span class="ref-id">U3</span> Dans AL, Dans LF, Guyatt GH, Richardson S. Users' guides XIV. How to decide on the applicability of clinical trial results to your patient. JAMA 1998;279(7):545-549.</li>
+            <li><span class="ref-id">U4</span> Barratt A, et al. (EBM Working Group). Users' guides XVII. Screening. JAMA 1999;281(21):2029-2034.</li>
+            <li><span class="ref-id">U5</span> Guyatt GH, Sinclair J, Cook DJ, Glasziou P. Users' guides XVI. How to use a treatment recommendation. JAMA 1999;281(19):1836-1843.</li>
+            <li><span class="ref-id">U6</span> McAlister FA, Straus SE, Guyatt GH, Haynes RB. Users' guides XX. Integrating research evidence with the care of the individual patient. JAMA 2000;283(21):2829-2836.</li>
+            <li><span class="ref-id">U7</span> Attia J, et al. (incl. Guyatt). How to use an article about genetic association: B & C. JAMA 2009;301(2):191-197 / 301(3):304-308.</li>
+            <li><span class="ref-id">U8</span> Fan E, Laupacis A, Pronovost PJ, Guyatt GH, Needham DM. How to use an article about quality improvement. JAMA 2010;304(20):2279-2287.</li>
+            <li><span class="ref-id">U9</span> Mills EJ, et al. (incl. Guyatt). How to use an article reporting a multiple treatment comparison meta-analysis. JAMA 2012;308(12):1246-1253.</li>
+            <li><span class="ref-id">U10</span> Mulla SM, Scott IA, Jackevicius CA, You JJ, Guyatt GH. How to use a noninferiority trial. JAMA 2012;308(24):2605-2611.</li>
+            <li><span class="ref-id">U11</span> Andrews J, Guyatt G, Oxman AD, et al. GRADE guidelines: 14. Going from evidence to recommendations. J Clin Epidemiol 2013;66(7):719-725.</li>
+            <li><span class="ref-id">U12</span> Murad MH, Montori VM, Ioannidis JPA, et al. (incl. Guyatt). How to read a systematic review and meta-analysis and apply the results to patient care: users' guides. JAMA 2014;312(2):171-179. <a href="https://pubmed.ncbi.nlm.nih.gov/25005654/" target="_blank">PMID 25005654</a></li>
+            <li><span class="ref-id">U13</span> Neumann I, Santesso N, Akl EA, et al. (incl. Guyatt). A guide for health professionals to interpret and use recommendations in guidelines developed with the GRADE approach. J Clin Epidemiol 2016;72:45-55. <a href="https://pubmed.ncbi.nlm.nih.gov/26772609/" target="_blank">PMID 26772609</a></li>
+            <li><span class="ref-id">U14</span> Agoritsas T, et al. (incl. Guyatt). UpToDate adherence to GRADE criteria for strong recommendations. BMJ Open 2017;7(11):e018593.</li>
+            <li><span class="ref-id">U15</span> Liu Y, Chen PC, Krause J, Peng L. How to read articles that use machine learning. JAMA 2019;322(18):1806-1816.</li>
+            <li><span class="ref-id">U16</span> Brignardello-Petersen R, Carrasco-Labra A, Guyatt GH. How to Interpret and Use a Clinical Practice Guideline or Recommendation. JAMA 2021;326(15):1516-1523. <a href="https://pubmed.ncbi.nlm.nih.gov/34665198/" target="_blank">PMID 34665198</a></li>
+            <li><span class="ref-id">U17</span> Lima JP, Mirza RD, Guyatt GH. How to recognize a trustworthy clinical practice guideline. J Anesth Analg Crit Care 2023;3:9. <a href="https://doi.org/10.1186/s44158-023-00094-7" target="_blank">DOI</a></li>
+            <li><span class="ref-id">U18</span> Guyatt G, Rennie D, Meade MO, Cook DJ (eds.). Users' Guides to the Medical Literature: A Manual for Evidence-Based Clinical Practice, 3rd ed. McGraw-Hill Education; 2015.</li>
+          </ul>
+
+          <div class="ref-category">B. 閾値・MID関連</div>
+          <ul class="ref-list">
+            <li><span class="ref-id">M1</span> Jaeschke R, Singer J, Guyatt GH. Measurement of health status. Ascertaining the minimal clinically important difference. Control Clin Trials 1989;10(4):407-415. <em>（MCID原典）</em></li>
+            <li><span class="ref-id">M2</span> GRADE Guidance 42（閾値設定）. J Clin Epidemiol 2024.</li>
+            <li><span class="ref-id">M3</span> Yao X, et al. GRADE note 6. 2025.</li>
+            <li><span class="ref-id">M4</span> 2024閾値論文群. J Clin Epidemiol.</li>
+            <li><span class="ref-id">M5</span> 絶対リスク差のための論文. 2023.</li>
+            <li><span class="ref-id">M6</span> 些細・中・大の閾値を使っているCPG例. 2025.</li>
+            <li><span class="ref-id">M7</span> Evaluating the credibility of anchor based estimates of minimal important differences for patient reported outcomes. BMJ Medicine 2025.</li>
+          </ul>
+
+          <div class="ref-category">C. GRADE方法論拡張</div>
+          <ul class="ref-list">
+            <li><span class="ref-id">G1</span> Djulbegovic B, Guyatt GH. Progress in evidence-based medicine: a quarter century on. Lancet 2017;390(10092):415-423.</li>
+            <li><span class="ref-id">G2</span> Cuello-Garcia CA, et al. GRADE guidance 44: Strategies to enhance the utilization of randomized and non-randomized studies in evidence syntheses. J Clin Epidemiol 2025.</li>
+            <li><span class="ref-id">G3</span> Lewin S, et al. Applying GRADE-CERQual to qualitative evidence synthesis findings. Implement Sci 2018;13(Suppl 1):2.</li>
+            <li><span class="ref-id">G4</span> Guyatt GH, et al. Guideline panels should seldom make good practice statements. J Clin Epidemiol 2015.</li>
+            <li><span class="ref-id">G5</span> Piggott T, et al. Standardized wording to improve efficiency and clarity of GRADE EtD frameworks in health guidelines. J Clin Epidemiol 2022;146:106-122.</li>
+            <li><span class="ref-id">G6</span> Murad MH, et al. Rating the certainty in evidence in the absence of a single estimate of effect. Evid Based Med 2017;22(3):85-87.</li>
+            <li><span class="ref-id">G7</span> 観察研究ROB — ROBINS-E / ROBINS-I / ネットベネフィット 2019 / GRADE Guidance 45 NAM. 各種.</li>
+          </ul>
+
+          <div class="ref-category">D. SR品質ツール</div>
+          <ul class="ref-list">
+            <li><span class="ref-id">T1</span> Shea BJ, Reeves BC, Wells G, et al. AMSTAR 2: a critical appraisal tool for systematic reviews. BMJ 2017;358:j4008. <a href="https://amstar.ca/" target="_blank">amstar.ca</a></li>
+            <li><span class="ref-id">T2</span> Page MJ, McKenzie JE, Bossuyt PM, et al. The PRISMA 2020 statement. BMJ 2021;372:n71. <a href="http://www.prisma-statement.org/" target="_blank">prisma-statement.org</a></li>
+          </ul>
+
+          <div class="ref-category">E. CPG品質の実例</div>
+          <ul class="ref-list">
+            <li><span class="ref-id">C1</span> ＝ U17 Lima-Mirza-Guyatt 2023（再掲）</li>
+            <li><span class="ref-id">C2</span> NCCNガイドラインの批判的吟味 — NCCNのEvidence Blocksに関する分析</li>
+            <li><span class="ref-id">C3</span> Institute of Medicine. Clinical Practice Guidelines We Can Trust. National Academies Press; 2011.</li>
+            <li><span class="ref-id">C4</span> 日本のCPG問題 — 日本国内CPGの方法論的課題の分析</li>
+          </ul>
+
+          <div class="ref-category">F. 価値観・共同意思決定</div>
+          <ul class="ref-list">
+            <li><span class="ref-id">V1</span> 患者の価値観と嗜好を利用（日英両版） — EtDへの組込み方法</li>
+            <li><span class="ref-id">V2</span> Patient values and preferences in antithrombotic therapy: SR. ACCP Guidelines（LinkedIn #45で紹介）</li>
+          </ul>
+
+          <div class="ref-category">G. 継続更新ソース</div>
+          <ul class="ref-list">
+            <li><span class="ref-id">L1</span> Gordon Guyatt's LinkedIn activity. <a href="https://www.linkedin.com/in/guyattgh/recent-activity/all/" target="_blank">linkedin.com/in/guyattgh/recent-activity/all/</a></li>
+          </ul>
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(23)">← Ch23</button>
+          <button onclick="showPage(0)">表紙へ戻る 🏠</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</div><!-- /.app-body -->
+
+<!-- スクリプト -->
+<script src="coreGRADE_utils.js?v=3.0"></script>
+<script src="script.js?v=3.0"></script>
+<script src="js/glossary.js?v=3.0"></script>
+<script src="js/references.js?v=3.0"></script>
+<script src="js/mid-explorer.js?v=3.0"></script>
+<script src="js/trustworthy-check.js?v=3.0"></script>
+<script src="js/amstar2.js?v=3.0"></script>
+<script src="js/linkedin-feed.js?v=3.0"></script>
+
+<!-- ページ切替後のインタラクティブ要素リフレッシュ -->
+<script>
+(function(){
+  // ページ切替時にGlossaryとReferencesを再適用
+  function refreshInteractive(){
+    if (window.CPGSR_Glossary && window.CPGSR_Glossary.attach) window.CPGSR_Glossary.attach();
+    if (window.CPGSR_References && window.CPGSR_References.load) window.CPGSR_References.load();
+  }
+  // サイドバーのクリックを監視
+  document.addEventListener('DOMContentLoaded', function(){
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar){
+      sidebar.addEventListener('click', function(e){
+        if (e.target.closest('.toc-btn')) setTimeout(refreshInteractive, 100);
+      });
+    }
+    // 章内ナビボタン（onclick）も監視
+    document.body.addEventListener('click', function(e){
+      if (e.target.closest('.chapter-nav button') || e.target.closest('.nav-btn')) {
+        setTimeout(refreshInteractive, 100);
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

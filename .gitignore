@@ -1,0 +1,10 @@
+_*.txt
+_*.tmp
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+.vscode/
+.idea/
+.claude/
+node_modules/

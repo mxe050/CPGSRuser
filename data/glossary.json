@@ -1,0 +1,185 @@
+{
+  "version": "1.0",
+  "terms": {
+    "GRADE": {
+      "term": "GRADE",
+      "full": "Grading of Recommendations, Assessment, Development, and Evaluation",
+      "definition": "エビデンスの確実性を評価し、推奨の強さを決定するための国際標準の枠組み。110以上のガイドライン組織が採用。",
+      "related": ["エビデンスの確実性", "推奨の強さ"]
+    },
+    "エビデンスの確実性": {
+      "term": "エビデンスの確実性",
+      "full": "Certainty of Evidence / Quality of Evidence",
+      "definition": "推定値の真値が特定の範囲内、または意思決定の閾値の上または下にあるという確信度。GRADEでは「高・中・低・非常に低い」の4段階に分類。",
+      "related": ["GRADE", "Risk of Bias", "不一致性", "非直接性", "不確実性", "Dissemination bias"]
+    },
+    "推奨の強さ": {
+      "term": "推奨の強さ",
+      "full": "Strength of Recommendation",
+      "definition": "「強い推奨」と「条件付き（弱い）推奨」の2種類。強い推奨は、ほぼ全ての十分な情報を持った患者が同じ選択をする場合に用いる。条件付き推奨は、患者の価値観・状況により異なる選択が妥当な場合。",
+      "related": ["強い推奨", "条件付き推奨", "共同意思決定"]
+    },
+    "強い推奨": {
+      "term": "強い推奨",
+      "full": "Strong Recommendation",
+      "definition": "「ほぼ全ての患者が選ぶ」選択肢。臨床家は基本的に適用してよい。",
+      "related": ["推奨の強さ", "条件付き推奨"]
+    },
+    "条件付き推奨": {
+      "term": "条件付き推奨",
+      "full": "Conditional / Weak Recommendation",
+      "definition": "「多くの患者は選ぶが、価値観により選ばない人もいる」選択肢。共同意思決定（SDM）が必要。",
+      "related": ["推奨の強さ", "強い推奨", "共同意思決定"]
+    },
+    "SoF表": {
+      "term": "SoF表",
+      "full": "Summary of Findings Table",
+      "definition": "アウトカムごとに、相対効果・絶対効果・確実性・平易な要約を1つの表にまとめた、GRADE推奨の中核的な情報提示形式。",
+      "related": ["Evidence Profile", "相対効果", "絶対効果"]
+    },
+    "Evidence Profile": {
+      "term": "Evidence Profile",
+      "full": "Evidence Profile / エビデンスプロファイル",
+      "definition": "SoF表に、確実性を下げた要因（RoB, 不一致性等）の詳細情報を追加したGRADEの完全版評価表。",
+      "related": ["SoF表"]
+    },
+    "MID": {
+      "term": "MID",
+      "full": "Minimal Important Difference（最小重要差）",
+      "definition": "患者が「重要」と感じる最小の治療効果。以前はMCID（Minimal Clinically Important Difference）と呼ばれた（Jaeschke-Singer-Guyatt 1989）。SoF表の解釈とImprecision評価に直結する。",
+      "related": ["閾値", "不確実性", "絶対効果"]
+    },
+    "閾値": {
+      "term": "閾値",
+      "full": "Threshold",
+      "definition": "「些細」「中」「大」の効果を区別する境界値。アウトカムの患者重要度が高いほど低い閾値が設定される（小さな効果でも重要になる）。",
+      "related": ["MID", "絶対効果"]
+    },
+    "Risk of Bias": {
+      "term": "Risk of Bias",
+      "full": "Risk of Bias（バイアスリスク）",
+      "definition": "研究の方法論的欠陥により結果が歪む可能性。RCTではRoB 2、観察研究ではROBINS-I／ROBINS-Eで評価。",
+      "related": ["ROBINS-E", "エビデンスの確実性"]
+    },
+    "ROBINS-E": {
+      "term": "ROBINS-E",
+      "full": "Risk Of Bias In Non-randomized Studies - of Exposures",
+      "definition": "曝露要因を扱う観察研究のバイアスリスクを評価する最新ツール（2024年）。ROBINS-I（介入）の姉妹ツール。",
+      "related": ["Risk of Bias", "観察研究"]
+    },
+    "不一致性": {
+      "term": "不一致性",
+      "full": "Inconsistency",
+      "definition": "研究間で効果の推定値が一致しない程度。研究間異質性（heterogeneity）として統計的に評価し、説明できない場合に確実性を下げる。",
+      "related": ["エビデンスの確実性"]
+    },
+    "非直接性": {
+      "term": "非直接性",
+      "full": "Indirectness",
+      "definition": "対象集団・介入・比較・アウトカム（PICO）が、臨床疑問と研究で一致しない程度。サロゲートアウトカムを用いた場合も該当する。",
+      "related": ["エビデンスの確実性", "サロゲートアウトカム"]
+    },
+    "サロゲートアウトカム": {
+      "term": "サロゲートアウトカム",
+      "full": "Surrogate Outcome",
+      "definition": "患者にとって重要ではないが、重要なアウトカムの代替として用いられる指標（例：血圧、HbA1c）。",
+      "related": ["非直接性", "患者重要アウトカム"]
+    },
+    "患者重要アウトカム": {
+      "term": "患者重要アウトカム",
+      "full": "Patient-Important Outcome",
+      "definition": "患者自身が「重要」と感じる結果（死亡、主要な疾患イベント、QOL、機能、痛み等）。サロゲートと対比される概念。",
+      "related": ["サロゲートアウトカム"]
+    },
+    "不確実性": {
+      "term": "不確実性",
+      "full": "Imprecision（不正確性／不確実性）",
+      "definition": "信頼区間が広く、結論が確定的に言えない状態。MIDに対する信頼区間の位置関係で評価する。",
+      "related": ["エビデンスの確実性", "MID"]
+    },
+    "Dissemination bias": {
+      "term": "Dissemination bias",
+      "full": "Dissemination Bias（情報発信バイアス、出版バイアス）",
+      "definition": "肯定的結果が発表されやすく、否定的結果が埋もれる傾向。ファネルプロット等で検出を試みる。",
+      "related": ["エビデンスの確実性"]
+    },
+    "AMSTAR 2": {
+      "term": "AMSTAR 2",
+      "full": "A MeaSurement Tool to Assess systematic Reviews - version 2",
+      "definition": "SRの方法論的質を16項目で評価する標準ツール（Shea 2017）。重要項目の欠陥で総合評価が「Critically low」まで下がる厳格な設計。",
+      "related": ["PRISMA 2020"]
+    },
+    "PRISMA 2020": {
+      "term": "PRISMA 2020",
+      "full": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses 2020",
+      "definition": "SRの報告透明性を確保する27項目チェックリスト（Page 2021）。方法と結果の完全報告を保証する。",
+      "related": ["AMSTAR 2"]
+    },
+    "EtD": {
+      "term": "EtD",
+      "full": "Evidence to Decision Framework",
+      "definition": "エビデンスから推奨を導く構造化された意思決定枠組み。効果・害・価値観・資源・公平性・実現可能性・受容性を系統的に検討。",
+      "related": ["推奨の強さ", "価値観と嗜好"]
+    },
+    "共同意思決定": {
+      "term": "共同意思決定",
+      "full": "Shared Decision Making（SDM）",
+      "definition": "医療者と患者が、エビデンスと患者の価値観を統合して意思決定を行うプロセス。特に条件付き推奨で重要。",
+      "related": ["価値観と嗜好", "条件付き推奨"]
+    },
+    "価値観と嗜好": {
+      "term": "価値観と嗜好",
+      "full": "Values and Preferences",
+      "definition": "患者がアウトカム（利益・害）に置く相対的重要性。推奨の強さを決める4要素の1つ。",
+      "related": ["共同意思決定", "EtD"]
+    },
+    "GPS": {
+      "term": "GPS",
+      "full": "Good Practice Statement（グッドプラクティス声明）",
+      "definition": "形式的なエビデンスレビューなしに作られる推奨（例：「患者に情報を提供する」）。明らかな利益があり、代替案が非倫理的・非合理な場合に限って用いる。",
+      "related": ["推奨の強さ"]
+    },
+    "CERQual": {
+      "term": "CERQual",
+      "full": "Confidence in the Evidence from Reviews of Qualitative research",
+      "definition": "定性的研究のSRに対する確実性評価枠組み。方法論的限界・整合性・データ十分性・関連性の4要素を評価。",
+      "related": ["GRADE", "定性的研究"]
+    },
+    "ADOLOPMENT": {
+      "term": "ADOLOPMENT",
+      "full": "Adoption / Adaptation / De novo development",
+      "definition": "既存のガイドラインを自国・自施設にADOPT（採用）／ADAPT（適応）／あるいは新規開発する枠組み。",
+      "related": ["GRADE"]
+    },
+    "PICO": {
+      "term": "PICO",
+      "full": "Population, Intervention, Comparison, Outcome",
+      "definition": "臨床疑問を構造化する4要素。SRのプロトコル作成とCPGのCQ設定の基本形式。",
+      "related": ["CQ"]
+    },
+    "CQ": {
+      "term": "CQ",
+      "full": "Clinical Question（臨床疑問）",
+      "definition": "ガイドラインで扱う臨床的な問いを、PICO形式に構造化したもの。",
+      "related": ["PICO"]
+    },
+    "IOM基準": {
+      "term": "IOM基準",
+      "full": "Institute of Medicine - Clinical Practice Guidelines We Can Trust (2011)",
+      "definition": "米国医学研究所（現NAM）が2011年に定めた信頼できるCPGの8基準。透明性・COI管理・多職種パネル・SRに基づく等を含む。",
+      "related": ["信頼できるCPG"]
+    },
+    "信頼できるCPG": {
+      "term": "信頼できるCPG",
+      "full": "Trustworthy Clinical Practice Guideline",
+      "definition": "Lima-Mirza-Guyatt (2023) が提唱する、臨床家が確認すべき6つの質問を満たすCPG。",
+      "related": ["IOM基準"]
+    },
+    "NCCN": {
+      "term": "NCCN",
+      "full": "National Comprehensive Cancer Network",
+      "definition": "米国のがん診療ネットワーク。独自の「Evidence Blocks」を用いGRADEを採用していないため、信頼できるCPG基準の観点で複数の問題点が指摘されている。",
+      "related": ["信頼できるCPG"]
+    }
+  }
+}

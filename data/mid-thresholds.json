@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "description": "GRADE閾値の実例集。アウトカム別に「些細／中／大」の目安を示す。実際の閾値はパネル議論で決定されるため、これは参考例。",
+  "thresholdLevels": [
+    {"level": "trivial", "label": "些細", "description": "臨床的に意味のない差", "color": "#95a5a6"},
+    {"level": "small", "label": "小さい（中の下）", "description": "わずかに意味ある差", "color": "#3498db"},
+    {"level": "moderate", "label": "中", "description": "明確に意味ある差", "color": "#e67e22"},
+    {"level": "large", "label": "大", "description": "極めて重要な差", "color": "#c0392b"}
+  ],
+  "examples": [
+    {
+      "outcome": "総死亡",
+      "category": "critical",
+      "importance": "極めて重要（9点）",
+      "thresholds": {"trivial": "1/1000未満", "small": "1-10/1000", "moderate": "10-20/1000", "large": "20/1000以上"},
+      "note": "死亡は最も重要度が高いため、小さな絶対効果でも臨床的に意味を持つ（閾値が低い）。"
+    },
+    {
+      "outcome": "心血管イベント（脳卒中・心筋梗塞）",
+      "category": "critical",
+      "importance": "極めて重要（8-9点）",
+      "thresholds": {"trivial": "2/1000未満", "small": "2-15/1000", "moderate": "15-30/1000", "large": "30/1000以上"}
+    },
+    {
+      "outcome": "重篤な有害事象",
+      "category": "critical",
+      "importance": "極めて重要（8点）",
+      "thresholds": {"trivial": "2/1000未満", "small": "2-10/1000", "moderate": "10-25/1000", "large": "25/1000以上"}
+    },
+    {
+      "outcome": "入院",
+      "category": "important",
+      "importance": "重要（6-7点）",
+      "thresholds": {"trivial": "5/1000未満", "small": "5-20/1000", "moderate": "20-50/1000", "large": "50/1000以上"}
+    },
+    {
+      "outcome": "再発",
+      "category": "important",
+      "importance": "重要（6-7点）",
+      "thresholds": {"trivial": "5/1000未満", "small": "5-20/1000", "moderate": "20-50/1000", "large": "50/1000以上"}
+    },
+    {
+      "outcome": "HRQoL（健康関連QOL・連続量）",
+      "category": "critical",
+      "importance": "極めて重要（8点）",
+      "thresholds": {"trivial": "0.5 SD未満", "small": "0.2-0.5 SD", "moderate": "0.5-0.8 SD", "large": "0.8 SD以上"},
+      "note": "Cohenの効果量に準拠。疾患特異的スコアはアンカーベースでMIDが定義されている例も多い（例：SGRQ 4点、EQ-5D 0.07-0.1）。"
+    },
+    {
+      "outcome": "疼痛スコア（VAS 0-100mm）",
+      "category": "important",
+      "importance": "重要（7点）",
+      "thresholds": {"trivial": "5mm未満", "small": "5-15mm", "moderate": "15-25mm", "large": "25mm以上"},
+      "note": "急性痛vs慢性痛、疾患によりMIDは異なる。"
+    },
+    {
+      "outcome": "機能スコア（ODI, 腰痛指数など）",
+      "category": "important",
+      "importance": "重要（7点）",
+      "thresholds": {"trivial": "5点未満", "small": "5-10点", "moderate": "10-15点", "large": "15点以上"}
+    },
+    {
+      "outcome": "軽微な有害事象（悪心、頭痛など）",
+      "category": "important",
+      "importance": "やや重要（5点）",
+      "thresholds": {"trivial": "20/1000未満", "small": "20-50/1000", "moderate": "50-100/1000", "large": "100/1000以上"},
+      "note": "患者重要度が低いアウトカムは閾値が高く設定される。"
+    },
+    {
+      "outcome": "検査値の変化（例：HbA1c）",
+      "category": "surrogate",
+      "importance": "サロゲート",
+      "thresholds": {"trivial": "0.3%未満", "small": "0.3-0.5%", "moderate": "0.5-1.0%", "large": "1.0%以上"},
+      "note": "サロゲートアウトカムは非直接性で確実性が下がる可能性がある。患者重要アウトカム（合併症発症等）との関連を確認する必要がある。"
+    }
+  ],
+  "references": ["M1", "M2", "M3", "M4", "M5", "M6", "M7"],
+  "keyMessage": "閾値は「パネル議論で決定される」ものであり、このリストは出発点。読み手としては、SoF表に記載された絶対効果が各アウトカムの閾値を超えているかを意識すると、推奨の強さ・確実性の根拠が読み取りやすい。"
+}

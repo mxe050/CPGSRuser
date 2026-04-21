@@ -1,0 +1,152 @@
+{
+  "version": "1.0",
+  "sourceUrl": "https://www.linkedin.com/in/guyattgh/recent-activity/all/",
+  "snapshotDate": "2026-04",
+  "description": "Gordon Guyatt先生のLinkedIn投稿から、CPG/SRの読み手に特に有用な投稿を厳選。",
+  "picks": [
+    {
+      "id": "nma-best-treatments",
+      "daysAgo": 4,
+      "topic": "NMA解釈",
+      "comment": "ネットワークメタ分析（NMA）の解釈は難しい。GRADEが提示する「最良/中間/最悪」を判定する最小文脈化フレームワークが現時点で最善のアプローチ。",
+      "externalTitle": "GRADE approach to drawing conclusions from a network meta-analysis using a minimally contextualised framework",
+      "externalUrl": "https://lnkd.in/eqwBx-H6",
+      "relatedChapter": "Ch10, PartIX"
+    },
+    {
+      "id": "spice-grade",
+      "daysAgo": 7,
+      "topic": "GRADE新方法論",
+      "comment": "SPICE-GRADE：疫学的機序経路からの間接的エビデンスが直接的エビデンスを補完する新方法論。",
+      "externalTitle": "SPICE-GRADE: Simultaneous Processing of Indirect Causal Evidence in Complex Pathways Using GRADE",
+      "externalUrl": "https://lnkd.in/eVA5TQJZ",
+      "relatedChapter": "Ch10"
+    },
+    {
+      "id": "indirectness-algorithm",
+      "daysAgo": 30,
+      "topic": "非直接性アルゴリズム",
+      "comment": "BMJ Core GRADEシリーズの最も有用な革新は、RoB・不確実性・不一致性のアルゴリズム／フローチャート。非直接性については最近ようやくアルゴリズムが発表された。",
+      "externalTitle": "A decision algorithm for assessing indirectness in core GRADE",
+      "externalUrl": "https://lnkd.in/gNxxBznD",
+      "relatedChapter": "Ch10"
+    },
+    {
+      "id": "mid-credibility",
+      "daysAgo": 90,
+      "topic": "MID信頼性",
+      "comment": "BMJに掲載。患者報告アウトカム（PRO）を用いたRCTの解釈における大きな前進。MID（最小重要差）のアンカーベース推定値の信頼性を評価するinstrument。",
+      "externalTitle": "Evaluating the credibility of anchor based estimates of minimal important differences for patient reported outcomes",
+      "externalUrl": "https://lnkd.in/gtUGkN9A",
+      "relatedChapter": "Ch7"
+    },
+    {
+      "id": "patient-values-systematic-review",
+      "daysAgo": 90,
+      "topic": "価値観SR",
+      "comment": "ガイドラインパネルがエビデンスから推奨へ移行する際に重要な、患者の価値観と嗜好に関するエビデンスを体系的に探すモデル。ここでは抗血栓療法について48件の関連研究が見つかった。",
+      "externalTitle": "Patient values and preferences in decision making for antithrombotic therapy: a systematic review",
+      "externalUrl": "https://lnkd.in/gh2kgFe6",
+      "relatedChapter": "Ch21"
+    },
+    {
+      "id": "baseline-risk-vs-effect-mod",
+      "daysAgo": 21,
+      "topic": "EBM教育",
+      "comment": "EBMの重要かつ難しい概念：ベースラインリスク／予後 vs 効果修飾／サブグループ解析／交互作用。何年も教えるのに苦労してきたが、Core GRADE FAQの演習でようやくうまく伝わるようになった。",
+      "externalTitle": "Core GRADE FAQ — baseline risk vs effect modification",
+      "externalUrl": "https://lnkd.in/enKJszUu",
+      "relatedChapter": "Ch6, Ch20"
+    },
+    {
+      "id": "stopping-early-ethics",
+      "daysAgo": 6,
+      "topic": "試験早期中止の倫理",
+      "comment": "Annals of Internal Medicine論文が、有益性を理由とするRCTの早期中止における倫理問題を指摘。治療効果の深刻な過大評価が、科学的妥当性・社会的価値という倫理要件に反し、誤った患者選択を誘導する。",
+      "externalTitle": "Ethical issues in stopping randomized trials early because of apparent benefit",
+      "externalUrl": "https://lnkd.in/eAnSvJNy",
+      "relatedChapter": "Ch8"
+    },
+    {
+      "id": "decision-analytic-vte",
+      "daysAgo": 9,
+      "topic": "意思決定分析",
+      "comment": "ガイドラインはパネルの直感に依存することが多く、外部から見て不透明になりがち。意思決定分析的枠組みは、利益・害に関する最良のエビデンスを明示的・透明に統合する方法を示す。",
+      "externalTitle": "How to determine the optimal duration of anticoagulation for VTE: an evidence-based decision-analytical approach",
+      "externalUrl": "https://lnkd.in/e28aS9Vp",
+      "relatedChapter": "Ch20"
+    },
+    {
+      "id": "reliability-study",
+      "daysAgo": 7,
+      "topic": "信頼性研究",
+      "comment": "身体診察・画像評価・検体評価・測定instrument（RoB・ガイドライン品質など）の一致度（reliability）を測る必要がある場合のステップバイステップガイド。",
+      "externalTitle": "Evaluating agreement: conducting a reliability study",
+      "externalUrl": "https://lnkd.in/eG4DXS3n",
+      "relatedChapter": "Ch18"
+    },
+    {
+      "id": "qol-specific-measures",
+      "daysAgo": 14,
+      "topic": "QOL測定",
+      "comment": "RCTで治療による機能・QOLへの影響を調べる際、包括的測定法（generic measure）のみで、反応性・妥当性のある疾患特異的測定法を含めないと、重要なシグナルを見落とす。",
+      "externalTitle": "Generic and specific measurement of health-related quality of life in a clinical trial of respiratory rehabilitation",
+      "externalUrl": "https://lnkd.in/gBZijJFt",
+      "relatedChapter": "Ch7"
+    },
+    {
+      "id": "surveillance-capitalism-healthcare",
+      "daysAgo": 90,
+      "topic": "医療倫理",
+      "comment": "BMJクリスマス号。Victor Montoriらによる、監視資本主義が医療に侵入するディストピア未来像。患者と臨床医は診察を誰が聞き、データを誰が使っているかを知ることができない。",
+      "externalTitle": "Reclaiming human care from surveillance capitalism",
+      "externalUrl": "https://lnkd.in/gS85EZyx",
+      "relatedChapter": "Ch21"
+    },
+    {
+      "id": "underuse-evidence",
+      "daysAgo": 90,
+      "topic": "医療の過少利用",
+      "comment": "Lancet論文。アクセス不足・医療資源不足・イノベーション取り込みの遅延により、効果的な医療サービスが世界的に過少利用されている。高所得国・低所得国双方で発生。",
+      "externalTitle": "Evidence for underuse of effective medical services around the world",
+      "externalUrl": "https://lnkd.in/giNCqvve",
+      "relatedChapter": "Ch20"
+    },
+    {
+      "id": "incoherence-nma",
+      "daysAgo": 30,
+      "topic": "NMA不整合性",
+      "comment": "NMAにおける不整合性（incoherence）：直接推定値と間接推定値の違いの評価は難しい。GRADEアプローチで明快に解説。",
+      "externalTitle": "GRADE assessment of coherence in network meta-analysis",
+      "externalUrl": "https://lnkd.in/gbDf2TV4",
+      "relatedChapter": "Ch9, PartIX"
+    },
+    {
+      "id": "core-grade-gin-2025",
+      "daysAgo": 90,
+      "topic": "Core GRADE",
+      "comment": "2025年Guidelines International Network（GIN）会議で発表した、Core GRADEの根拠と本質の56秒サマリー動画。",
+      "externalTitle": "Core GRADE @ GIN 2025",
+      "externalUrl": "https://lnkd.in/g46w5uhw",
+      "relatedChapter": "Ch2"
+    },
+    {
+      "id": "drop-the-content",
+      "daysAgo": 1,
+      "topic": "学術生活",
+      "comment": "同僚の論文をレビューし、合わない部分を見つけ、削除しなければならない。相手の返信：理解はしていたが、心を込めて書いた内容を削除するのは気が進まなかった。学術生活でよく経験する、苦しい瞬間：苦労して作り上げたものを削除すること。",
+      "externalTitle": null,
+      "externalUrl": null,
+      "relatedChapter": "Ch23"
+    },
+    {
+      "id": "athens-ehs-guideline",
+      "daysAgo": 21,
+      "topic": "ガイドライン実践",
+      "comment": "最近アテネで、欧州内視鏡外科学会の鼠径ヘルニア外科管理ガイドラインを支援。Alexander TzanisとGRADE SoFを、Stavros Antoniou（EAESガイドライン委員会委員長）と共同議長でパネル運営。",
+      "externalTitle": null,
+      "externalUrl": null,
+      "relatedChapter": "Ch23"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "totalChapters": 25,
+  "parts": [
+    {
+      "part": "I",
+      "title": "EBM・GRADEの全体像",
+      "chapters": [0, 1, 2]
+    },
+    {
+      "part": "II",
+      "title": "推奨の理解",
+      "chapters": [3, 4]
+    },
+    {
+      "part": "III",
+      "title": "SoF・効果・閾値",
+      "chapters": [5, 6, 7]
+    },
+    {
+      "part": "IV",
+      "title": "確実性が下がる5要因",
+      "chapters": [8, 9, 10, 11, 12]
+    },
+    {
+      "part": "V",
+      "title": "多様な研究デザインのSR",
+      "chapters": [13, 14, 15]
+    },
+    {
+      "part": "VI",
+      "title": "CPG信頼性評価",
+      "chapters": [16, 17, 18, 19]
+    },
+    {
+      "part": "VII",
+      "title": "診療現場で活かす",
+      "chapters": [20, 21]
+    },
+    {
+      "part": "VIII",
+      "title": "付録",
+      "chapters": [22, 23, 24]
+    }
+  ],
+  "chapters": [
+    {"idx": 0, "num": "表紙", "title": "表紙", "en": "Cover"},
+    {"idx": 1, "num": "1", "title": "EBMと診療ガイドライン・SRの読み方", "en": "EBM and How to Read CPGs/SRs"},
+    {"idx": 2, "num": "2", "title": "GRADEアプローチの概要", "en": "Overview of the GRADE approach"},
+    {"idx": 3, "num": "3", "title": "エビデンスの確実性4段階の意味", "en": "Four Levels of Certainty of Evidence"},
+    {"idx": 4, "num": "4", "title": "強い推奨 vs 条件付き推奨＋GPS・推奨表現", "en": "Strong vs Conditional Recommendations, GPS, Wording"},
+    {"idx": 5, "num": "5", "title": "SoF表・Evidence Profileの読み方", "en": "Reading SoF Tables / Evidence Profiles"},
+    {"idx": 6, "num": "6", "title": "相対効果と絶対効果の違い", "en": "Relative vs Absolute Effects"},
+    {"idx": 7, "num": "7", "title": "閾値とMID — 臨床的に重要な差", "en": "Thresholds & MID"},
+    {"idx": 8, "num": "8", "title": "Risk of Bias（RCT＋観察研究ROBINS-E）", "en": "Risk of Bias (RCT + Observational)"},
+    {"idx": 9, "num": "9", "title": "不一致性（Inconsistency）", "en": "Inconsistency"},
+    {"idx": 10, "num": "10", "title": "非直接性（Indirectness）", "en": "Indirectness"},
+    {"idx": 11, "num": "11", "title": "不確実性（Imprecision）", "en": "Imprecision"},
+    {"idx": 12, "num": "12", "title": "Dissemination bias", "en": "Dissemination bias"},
+    {"idx": 13, "num": "13", "title": "非RCT・観察研究のSR（GRADE Guidance 44）", "en": "Non-RCT / Observational SR"},
+    {"idx": 14, "num": "14", "title": "定性的研究のSR — GRADE-CERQual", "en": "Qualitative SR - CERQual"},
+    {"idx": 15, "num": "15", "title": "単一推定値がない場合・GPS・ネットベネフィット", "en": "Alternative recommendation types"},
+    {"idx": 16, "num": "16", "title": "信頼できるCPGの6つの質問", "en": "Six Questions for Trustworthy CPG"},
+    {"idx": 17, "num": "17", "title": "CPG品質の実例 — NCCN／IOM／日本のCPG問題", "en": "CPG Quality Examples"},
+    {"idx": 18, "num": "18", "title": "AMSTAR 2（16項目）", "en": "AMSTAR 2"},
+    {"idx": 19, "num": "19", "title": "PRISMA 2020（27項目）", "en": "PRISMA 2020"},
+    {"idx": 20, "num": "20", "title": "推奨を目の前の患者にどう適用するか", "en": "Applicability"},
+    {"idx": 21, "num": "21", "title": "共同意思決定（SDM）と価値観・嗜好", "en": "SDM & Values"},
+    {"idx": 22, "num": "22", "title": "用語集 ＋ Q&A", "en": "Glossary & Q&A"},
+    {"idx": 23, "num": "23", "title": "最新情報＋Guyatt LinkedInピックアップ", "en": "Latest & LinkedIn Picks"},
+    {"idx": 24, "num": "24", "title": "参考文献一覧", "en": "References"}
+  ]
+}
