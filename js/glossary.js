@@ -17,11 +17,13 @@
 
   function attach(){
     document.querySelectorAll('.gloss').forEach(el => {
+      if (el.dataset.glossAttached) return; // 二重バインド回避
       const term = el.getAttribute('data-term') || el.textContent.trim();
       if (glossData.terms[term]){
         el.addEventListener('click', e => onClick(e, term));
         el.style.cursor = 'help';
         el.style.borderBottom = '1px dotted #e67e22';
+        el.dataset.glossAttached = '1';
       }
     });
   }

@@ -5,11 +5,14 @@
   let refsData = null;
   let popover = null;
 
+  let wrapped = false;
   async function loadReferences(){
     try {
-      const res = await fetch('data/references.json');
-      refsData = await res.json();
-      wrapCitationsInText();
+      if (!refsData){
+        const res = await fetch('data/references.json');
+        refsData = await res.json();
+      }
+      if (!wrapped){ wrapCitationsInText(); wrapped = true; }
     } catch(e){
       console.warn('References load failed:', e);
     }
