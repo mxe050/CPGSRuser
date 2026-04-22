@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
-<meta name="description" content="臨床医・研修医・薬剤師・看護師・医学生のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
+<meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
 <link rel="stylesheet" href="style.css?v=3.0">
 <link rel="stylesheet" href="style-cpgsr.css?v=3.0">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -88,7 +88,7 @@
     <div class="page active" id="page-0">
       <div class="reader-cover">
         <h1>診療ガイドライン・システマティックレビュー <br>の<span style="color:#ffcc80;">読み方</span> ガイド</h1>
-        <div class="sub">— 臨床医・研修医・薬剤師・看護師・医学生のための、GRADE準拠の読み手向け解説 —</div>
+        <div class="sub">— すべての医療関係者のための、GRADE準拠の読み手向け解説 —</div>
         <div class="pitch">
           日々の診療で <strong>ガイドラインを読み、SRを参照し、推奨を目の前の患者に適用する</strong> ために必要な知識を、Gordon Guyatt先生らのUsers' Guidesシリーズ、GRADE最新方法論、閾値・MID、信頼できるCPGの6つの質問、AMSTAR 2／PRISMA 2020までを1つにまとめた読み手専用のサイトです。<br><br>
           本サイトは<strong>作成者向け</strong>のGRADEハンドブックとは別に、<strong>読み手の視点</strong>で「どこを見るか・どう判断するか・どう現場に持ち込むか」に特化しています。
@@ -166,6 +166,362 @@
         <h2>本サイトの読み進め方</h2>
         <p><strong>初めての方</strong>は Ch2（GRADE概要）→ Ch3（確実性）→ Ch4（推奨強度）→ Ch5（SoF表）→ Ch16（信頼できるCPG）の順がおすすめ。<strong>すぐに判定ツールを使いたい方</strong>は Ch16の6質問チェックリストから始めてください。</p>
 
+        <!-- ============ 診療ガイドライン／SR 文書構造マップ ============ -->
+        <h2 style="margin-top:30px;">🗺️ 診療ガイドライン／SRの文書構造マップ — 「どこに何が書いてあるか」の全体像</h2>
+        <p>本サイトで学ぶGRADE・MID・RoB・AMSTAR 2などの各トピックは、すべて<strong>実際のCPG／SR文書の「どこかの一節」を読み解くため</strong>のものです。下のマップは、CPGとSRの典型的な章立てを示し、<strong>各セクションに書かれている内容</strong>と<strong>それを読むために必要な本サイトの章</strong>を対応させています。<strong>各章を読んでいる最中に「今どこを読もうとしているか」分からなくなったら、いつでもここに戻ってください。</strong></p>
+
+        <div class="doc-map-wrap" id="doc-structure-map">
+          <h3>📖 文書構造ナビゲーター</h3>
+          <p class="doc-map-intro">タブを切り替えて、<strong>診療ガイドライン（CPG）</strong>と<strong>システマティックレビュー（SR）</strong>それぞれの典型的な構造を確認してください。各セクションの「🎓 学習章」ボタンをクリックすると、そのセクションを読むのに必要な章へ直接ジャンプします。</p>
+
+          <div class="doc-map-tabs">
+            <button class="doc-map-tab active" data-panel="panel-cpg">📘 CPG（診療ガイドライン）の構造</button>
+            <button class="doc-map-tab" data-panel="panel-sr">🔬 SR（システマティックレビュー）の構造</button>
+          </div>
+
+          <!-- ========== CPGパネル ========== -->
+          <div class="doc-map-panel active" id="panel-cpg">
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>1</div>
+              <div class="doc-sec-name">
+                <strong>表紙・作成組織・パネル構成</strong>
+                <span class="ja-sub">Title page / Authorship / Panel composition</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>作成学会・パネル委員名・多職種構成・患者代表の有無・COI（利益相反）情報。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(16)">🎓 Ch16 信頼できるCPG</button>
+                  <button class="doc-sec-chap" onclick="showPage(17)">🎓 Ch17 CPG実例</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>2</div>
+              <div class="doc-sec-name">
+                <strong>目的・スコープ・対象集団</strong>
+                <span class="ja-sub">Objectives / Scope / Target population</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>このCPGが答える臨床疑問（PICO形式）・対象患者・除外集団・想定ユーザー。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(10)">🎓 Ch10 非直接性</button>
+                  <button class="doc-sec-chap" onclick="showPage(20)">🎓 Ch20 適用</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>3</div>
+              <div class="doc-sec-name">
+                <strong>方法論セクション</strong>
+                <span class="ja-sub">Methodology / GRADE approach statement</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>「GRADEアプローチを採用」「SRを実施／既存SRを利用」「エビデンスの確実性を4段階で評価」「推奨の強さを2段階で評価」等の<strong>根幹宣言</strong>。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(2)">🎓 Ch2 GRADE概要</button>
+                  <button class="doc-sec-chap" onclick="showPage(3)">🎓 Ch3 確実性4段階</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>4</div>
+              <div class="doc-sec-name">
+                <strong>推奨文（Recommendation statements）</strong>
+                <span class="ja-sub">"We recommend..." / "We suggest..."</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>「強く推奨する／提案する（条件付き）」の文言・推奨の方向（賛成／反対）・根拠となる確実性レベル・動詞（results in／likely／may）。GPS（Good Practice Statement）が混じることも。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(4)">🎓 Ch4 強い vs 条件付き</button>
+                  <button class="doc-sec-chap" onclick="showPage(15)">🎓 Ch15 GPS</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>5</div>
+              <div class="doc-sec-name">
+                <strong>Summary of Findings（SoF）表</strong>
+                <span class="ja-sub">SoF tables / Evidence Profile</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>アウトカムごとに①参加者数／研究数　②相対効果（RR/OR/HR）　③絶対効果（per 1000）　④確実性（⊕⊕⊕⊕／⊕⊕⊕◯など）　⑤平易な要約。<strong>CPGの中で最も情報密度が高い箇所</strong>。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(5)">🎓 Ch5 SoF表の読み方</button>
+                  <button class="doc-sec-chap" onclick="showPage(6)">🎓 Ch6 相対vs絶対</button>
+                  <button class="doc-sec-chap" onclick="showPage(7)">🎓 Ch7 閾値・MID</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>6</div>
+              <div class="doc-sec-name">
+                <strong>根拠の確実性を下げた理由</strong>
+                <span class="ja-sub">Rationale for downgrading certainty</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>「serious risk of bias」「serious imprecision due to wide CI」「indirectness: surrogate outcome」等の<strong>5要因</strong>の判定根拠。Evidence Profile（付録）に詳細。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(8)">🎓 Ch8 RoB</button>
+                  <button class="doc-sec-chap" onclick="showPage(9)">🎓 Ch9 不一致性</button>
+                  <button class="doc-sec-chap" onclick="showPage(10)">🎓 Ch10 非直接性</button>
+                  <button class="doc-sec-chap" onclick="showPage(11)">🎓 Ch11 不確実性</button>
+                  <button class="doc-sec-chap" onclick="showPage(12)">🎓 Ch12 発表バイアス</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>7</div>
+              <div class="doc-sec-name">
+                <strong>Evidence to Decision（EtD）枠組み</strong>
+                <span class="ja-sub">EtD framework / Justification</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>利益と害のバランス・患者の価値観・資源（費用）・公平性・実施可能性・受容性の6項目の判定。推奨の強さを決めた理由。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(4)">🎓 Ch4 推奨強度</button>
+                  <button class="doc-sec-chap" onclick="showPage(21)">🎓 Ch21 SDM・価値観</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>8</div>
+              <div class="doc-sec-name">
+                <strong>臨床考察・実施上の考慮事項</strong>
+                <span class="ja-sub">Clinical considerations / Implementation</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>サブグループ（高リスク群／低リスク群）での絶対効果・代替治療との比較・モニタリング・特殊集団での注意。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(6)">🎓 Ch6 ベースラインリスク</button>
+                  <button class="doc-sec-chap" onclick="showPage(20)">🎓 Ch20 患者への適用</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>9</div>
+              <div class="doc-sec-name">
+                <strong>付録 — Evidence Profile・検索戦略・COI詳細</strong>
+                <span class="ja-sub">Supplementary materials</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>完全版Evidence Profile（確実性の5要因すべての判定内訳）・文献検索戦略（DB、検索語、期間）・個々のパネリストのCOI申告・外部レビューのコメント。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(5)">🎓 Ch5 EPとSoFの違い</button>
+                  <button class="doc-sec-chap" onclick="showPage(18)">🎓 Ch18 AMSTAR 2</button>
+                  <button class="doc-sec-chap" onclick="showPage(16)">🎓 Ch16 COI評価</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== SRパネル ========== -->
+          <div class="doc-map-panel" id="panel-sr">
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>1</div>
+              <div class="doc-sec-name">
+                <strong>タイトル・抄録（Abstract）</strong>
+                <span class="ja-sub">Title / Structured abstract</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>研究目的、主要結果、確実性の総合評価、結論。<strong>PRISMA 2020の2項目</strong>に該当。忙しいときはここだけ読むことも。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(19)">🎓 Ch19 PRISMA 2020</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>2</div>
+              <div class="doc-sec-name">
+                <strong>緒言（Introduction）</strong>
+                <span class="ja-sub">Rationale / Objectives (PICO)</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>研究の背景・先行SRの状況・PICO形式の臨床疑問・レビューの目的。自分の臨床疑問と一致するか確認。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(1)">🎓 Ch1 PICOと3つの問い</button>
+                  <button class="doc-sec-chap" onclick="showPage(10)">🎓 Ch10 非直接性</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>3</div>
+              <div class="doc-sec-name">
+                <strong>方法 — プロトコル・適格基準</strong>
+                <span class="ja-sub">Methods: Protocol / Eligibility criteria</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>PROSPERO登録番号・プロトコル参照・対象研究デザイン（RCT／観察研究／定性的研究）・包含／除外基準。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(18)">🎓 Ch18 AMSTAR 2 Q2</button>
+                  <button class="doc-sec-chap" onclick="showPage(13)">🎓 Ch13 非RCT/観察</button>
+                  <button class="doc-sec-chap" onclick="showPage(14)">🎓 Ch14 定性SR</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>4</div>
+              <div class="doc-sec-name">
+                <strong>方法 — 情報源・検索戦略</strong>
+                <span class="ja-sub">Information sources / Search strategy</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>検索したDB（MEDLINE, Embase, CENTRALなど）・灰色文献・試験登録・言語制限・検索日。2つ以上のDB＋灰色文献がAMSTAR 2の重要基準。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(18)">🎓 Ch18 AMSTAR 2 Q4</button>
+                  <button class="doc-sec-chap" onclick="showPage(12)">🎓 Ch12 発表バイアス</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>5</div>
+              <div class="doc-sec-name">
+                <strong>方法 — 選択・データ抽出・RoB評価</strong>
+                <span class="ja-sub">Selection / Data extraction / RoB</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>2名独立での選択・データ抽出・RCTはRoB 2、観察研究はROBINS-I／ROBINS-Eでバイアス評価。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(8)">🎓 Ch8 RoB詳細</button>
+                  <button class="doc-sec-chap" onclick="showPage(18)">🎓 Ch18 AMSTAR 2 Q9</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>6</div>
+              <div class="doc-sec-name">
+                <strong>方法 — 統合方法・確実性評価計画</strong>
+                <span class="ja-sub">Synthesis methods / GRADE plan</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>メタ解析モデル（固定／変量効果）・異質性評価（I²）・サブグループ／感度分析・GRADE 5要因での確実性評価計画。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(2)">🎓 Ch2 GRADE 5要因</button>
+                  <button class="doc-sec-chap" onclick="showPage(9)">🎓 Ch9 不一致性</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>7</div>
+              <div class="doc-sec-name">
+                <strong>結果 — 研究選択（フロー図）</strong>
+                <span class="ja-sub">PRISMA flow diagram</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>Identified → Screened → Eligible → Included の件数フロー。除外理由の内訳。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(19)">🎓 Ch19 PRISMA図</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>8</div>
+              <div class="doc-sec-name">
+                <strong>結果 — 研究特性・RoB結果</strong>
+                <span class="ja-sub">Study characteristics / RoB results</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>各研究の集団・介入・対照・アウトカム・バイアスリスクのtraffic light図。高リスク研究が多いほど確実性が下がる。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(8)">🎓 Ch8 RoB読解</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>9</div>
+              <div class="doc-sec-name">
+                <strong>結果 — 森林プロット（Forest plot）</strong>
+                <span class="ja-sub">Forest plot / Meta-analysis results</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>各研究の効果量・95%CIと統合効果（ダイヤモンド）・I²・p for heterogeneity。左右バラバラなら異質性の疑い。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(9)">🎓 Ch9 異質性判定</button>
+                  <button class="doc-sec-chap" onclick="showPage(11)">🎓 Ch11 不確実性</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>10</div>
+              <div class="doc-sec-name">
+                <strong>結果 — SoF表・確実性評価</strong>
+                <span class="ja-sub">Summary of Findings table</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>アウトカムごとの相対効果・絶対効果・確実性（⊕）・平易な要約。<strong>SRの結論セクションで最も参照される一枚</strong>。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(5)">🎓 Ch5 SoF読み方</button>
+                  <button class="doc-sec-chap" onclick="showPage(6)">🎓 Ch6 絶対効果</button>
+                  <button class="doc-sec-chap" onclick="showPage(7)">🎓 Ch7 MID</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>11</div>
+              <div class="doc-sec-name">
+                <strong>結果 — 発表バイアス評価</strong>
+                <span class="ja-sub">Dissemination bias assessment</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>ファネルプロット・Egger検定／Begg検定・未発表試験の検索。研究数10以上で実施されることが多い。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(12)">🎓 Ch12 ファネルプロット</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>12</div>
+              <div class="doc-sec-name">
+                <strong>考察（Discussion）</strong>
+                <span class="ja-sub">Discussion / Limitations</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>結果の解釈・先行研究との比較・SRの限界（研究数不足、異質性、言語制限など）・臨床／政策への示唆。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(20)">🎓 Ch20 適用可能性</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="doc-section">
+              <div class="doc-sec-step">STEP<br>13</div>
+              <div class="doc-sec-name">
+                <strong>資金源・COI・登録</strong>
+                <span class="ja-sub">Funding / COI / Registration</span>
+              </div>
+              <div class="doc-sec-what">
+                <span class="what-label">何が書いてある？</span>資金提供者・著者のCOI・PROSPERO登録番号・プロトコル参照。業界資金はバイアスの追加リスク。
+                <div class="doc-sec-chaps">
+                  <button class="doc-sec-chap" onclick="showPage(18)">🎓 Ch18 AMSTAR 2 Q2,Q16</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="key-message" style="margin-top:18px;">
+          <strong>💡 この文書構造マップの使い方</strong><br>
+          Ch2以降の各章冒頭には「📍あなたが今学んでいる場所」というピンが表示されます。そこに<strong>CPG／SRのどのセクションを読むための知識か</strong>が示され、このマップの対応箇所を思い出しながら学べます。迷ったらいつでもCh1末尾のこのマップに戻ってください。
+        </div>
+
         <div class="chapter-nav">
           <button onclick="showPage(0)">← 表紙</button>
           <button onclick="showPage(2)">Ch2 GRADE概要 →</button>
@@ -177,49 +533,235 @@
     <div class="page" id="page-2">
       <div class="page-header">
         <div class="chapter-badge">Chapter 2 / 24</div>
-        <h1>GRADEアプローチの概要</h1>
-        <div class="en-title">Overview of the GRADE approach</div>
+        <h1>GRADEアプローチの概要 — なぜ最初に学ぶのか</h1>
+        <div class="en-title">Overview of the GRADE approach — Why learn this first?</div>
       </div>
       <div class="page-body">
-        <div class="key-message">
-          <strong>要点：</strong>GRADE（Grading of Recommendations, Assessment, Development, and Evaluation）は、<strong>エビデンスの確実性を4段階で評価</strong>し、<strong>推奨の強さを2段階</strong>（強い／条件付き）で提示する国際標準の枠組み。110以上のガイドライン組織が採用している。[U13]
+
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：方法論セクション（STEP 3）</span>
+            <span class="yah-where">SR：方法の「統合方法・確実性評価計画」（STEP 6）</span>
+            <span class="yah-check">CPG／SRの文書内で「GRADEアプローチを採用」「エビデンスの確実性を評価」と書かれている箇所の<strong>根幹宣言</strong>を読み解くための基礎を学びます。この章の知識は、以降のすべての章の土台になります。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
         </div>
 
-        <h2>GRADEの基本構造</h2>
-        <p>GRADEは2つの独立した判断を分離します：</p>
+        <!-- 🧭 なぜGRADEを最初に学ぶのか -->
+        <div class="why-first">
+          <h4>🧭 なぜCPG／SRの読み方を学ぶ初心者が、まず「GRADE」から学ぶのか？</h4>
+          <p style="margin:6px 0 8px;">"GRADE" という耳慣れない用語が急に出てきて混乱するかもしれません。でも大丈夫。<strong>この用語を避けて通ると、CPG／SRのほぼすべての内容が理解できなくなる</strong>からです。理由は3つあります：</p>
+          <ol>
+            <li><strong>現代のCPG／SRの「共通言語」だから</strong> — 世界110以上のガイドライン組織（WHO、NICE、Cochrane、Minds、米国内科学会…）がGRADEを採用 [U13]。「エビデンスの確実性：中」「条件付き推奨」「⊕⊕⊕◯」などの記号と用語はすべてGRADEの産物です。GRADEを知らずにCPGを読むのは、<strong>文法を知らずに外国語を読む</strong>のと同じです。</li>
+            <li><strong>本サイトの全24章の地図になるから</strong> — Ch3は「確実性4段階」、Ch4は「推奨の強さ」、Ch5-7はGRADEの具体的な表現、Ch8-12はGRADEの「確実性を下げる5要因」の詳細、Ch16-19は「GRADEが正しく適用されたかを評価する」ツール…すべての章が<strong>GRADEの一部分</strong>を掘り下げる形で構成されています。</li>
+            <li><strong>あなたの臨床判断を変えるから</strong> — GRADEは「何をどのくらい信じて、どのくらい患者に勧めるか」を構造化する道具です。<strong>「この治療は強く推奨されている」と「条件付きで推奨されている」で、実臨床でのあなたの行動は明確に変わるべき</strong>で、GRADEはその変え方を教えてくれます。</li>
+          </ol>
+          <p style="margin:10px 0 0;"><strong>この章のゴール</strong>：GRADEという用語の正体を知り、CPG／SRを読んだときに「いま自分はGRADEのどの部分を見ているのか」が分かるようになること。細部の理解はあとで大丈夫です。</p>
+        </div>
+
+        <div class="key-message">
+          <strong>要点：</strong><span class="gloss" data-term="GRADE">GRADE</span>（<strong>G</strong>rading of <strong>R</strong>ecommendations, <strong>A</strong>ssessment, <strong>D</strong>evelopment, and <strong>E</strong>valuation）は、<strong>エビデンスの確実性を4段階で評価</strong>し、<strong>推奨の強さを2段階</strong>（強い／条件付き）で提示する国際標準の枠組みです。2000年頃に国際ワーキンググループが開発し、現在110以上のガイドライン組織が採用しています [U13]。読み手としては「<strong>CPG／SRの結論を信じる度合いと、患者への勧め方を決める共通ルール</strong>」と理解してください。
+        </div>
+
+        <h2>GRADEという単語の意味を分解する</h2>
+        <p>「GRADE」は頭字語（acronym）です。1文字ずつ分解すると、この枠組みが何をする道具なのかが見えてきます：</p>
+
+        <div class="term-decode">
+          <h4>🔤 G・R・A・D・E を分解</h4>
+          <div class="term-decode-letters">
+            <div class="term-letter">
+              <span class="big">G</span>
+              <span class="en">Grading</span>
+              <span class="ja">等級付け</span>
+            </div>
+            <div class="term-letter">
+              <span class="big">R</span>
+              <span class="en">Recommendations</span>
+              <span class="ja">推奨</span>
+            </div>
+            <div class="term-letter">
+              <span class="big">A</span>
+              <span class="en">Assessment</span>
+              <span class="ja">評価</span>
+            </div>
+            <div class="term-letter">
+              <span class="big">D</span>
+              <span class="en">Development</span>
+              <span class="ja">開発</span>
+            </div>
+            <div class="term-letter">
+              <span class="big">E</span>
+              <span class="en">Evaluation</span>
+              <span class="ja">判定</span>
+            </div>
+          </div>
+          <p style="margin-top:12px;font-size:0.9rem;">つまり直訳すると「<strong>推奨を等級付けし、その評価・開発・判定を行う枠組み</strong>」。短く言えば「<strong>エビデンスと推奨に『格付け』を与える標準ルール</strong>」です。GRADEの中核は「格付けを客観的・透明・再現可能に行う」ことにあります。</p>
+        </div>
+
+        <h2>GRADE以前の世界 — なぜ新しい枠組みが必要だったか</h2>
+        <p>2000年以前、多くの学会は独自のエビデンス分類（Level I, II, III…やA, B, C…）を使っていました。しかし問題がありました：</p>
+        <ul>
+          <li><strong>学会ごとに定義がバラバラ</strong> — ある学会の「Level B」が別の学会では「Grade II」。読み手は毎回定義表を確認する必要がありました。</li>
+          <li><strong>研究デザインに過度に依存</strong> — 「RCTなら高、観察研究なら低」という単純な階層。しかし質の低いRCTと優れた観察研究ではどちらが信頼できるかは単純に決まりません。</li>
+          <li><strong>エビデンスと推奨の混同</strong> — 「エビデンスの質」と「推奨の強さ」が区別されておらず、「強い推奨＝質の高いエビデンス」と誤解されがちでした。</li>
+        </ul>
+        <p>GRADEはこれらの問題を解決するために誕生し、<strong>エビデンスの確実性</strong>と<strong>推奨の強さ</strong>を完全に分離し、5要因による透明な評価を導入しました。これは25年間のEBM進化の中核成果です [G1]。</p>
+
+        <h2>GRADEの基本構造 — 2つの独立した判断</h2>
+        <p>GRADEの最も重要な考え方は、以下の<strong>2つの判断を絶対に混同しない</strong>ことです：</p>
         <ol>
-          <li><span class="gloss" data-term="エビデンスの確実性">エビデンスの確実性</span>（高／中／低／非常に低い） — <em>エビデンスそのものの評価</em></li>
-          <li><span class="gloss" data-term="推奨の強さ">推奨の強さ</span>（強い／条件付き） — <em>推奨を行うかどうかの判断</em></li>
+          <li><span class="gloss" data-term="エビデンスの確実性">エビデンスの確実性（Certainty of Evidence）</span>（高／中／低／非常に低い、4段階） — <em>エビデンスそのものがどのくらい信頼できるかの評価</em>（Ch3で詳述）</li>
+          <li><span class="gloss" data-term="推奨の強さ">推奨の強さ（Strength of Recommendation）</span>（強い／条件付き、2段階） — <em>推奨を出すかどうか・どの程度強く出すかの判断</em>（Ch4で詳述）</li>
         </ol>
-        <p>これらは必ずしも一致しません。例：高い確実性でも価値観の多様性から条件付き推奨になる、低い確実性でも生命を脅かす状況から強い推奨になる、など。</p>
+        <p>これらは<strong>必ずしも一致しません</strong>。具体例で見ましょう：</p>
+        <div class="example-box">
+          <strong>例1：高い確実性だが条件付き推奨</strong>：スクリーニング検査の有効性がRCTで確認され確実性は「高」。しかし「早期発見による延命」に対する患者の価値観は人により大きく異なり（偽陽性の負担を嫌う人、早期発見を最優先する人）、全員に推奨できない → <strong>条件付き推奨</strong>。<br><br>
+          <strong>例2：低い確実性だが強い推奨</strong>：重篤な感染症の抗菌薬使用について観察研究のエビデンスしかなく確実性は「低」。しかし未治療で死亡率が高く、代替策もない → <strong>強い推奨</strong>（Ch4で詳述する例外条件に該当）。
+        </div>
+        <p>この「エビデンスの確実性と推奨の強さが独立している」という点は、GRADE以前のシステムとの最大の違いであり、<strong>読み手として最も誤解しやすい</strong>部分です。</p>
 
-        <h2>エビデンスの確実性を決める5要因</h2>
-        <p>RCTは「高」から出発し、以下の要因により段階を下げる：</p>
-        <ul>
-          <li><strong>Risk of Bias（バイアスリスク）</strong>（Ch8）</li>
-          <li><strong>不一致性（Inconsistency）</strong>（Ch9）</li>
-          <li><strong>非直接性（Indirectness）</strong>（Ch10）</li>
-          <li><strong>不確実性（Imprecision）</strong>（Ch11）</li>
-          <li><strong>Dissemination bias（発表バイアス）</strong>（Ch12）</li>
-        </ul>
-        <p>観察研究は「低」から出発し、<strong>大きな効果量</strong>、<strong>用量反応関係</strong>、<strong>すべての交絡が逆方向に働く</strong>という条件で段階を上げる。</p>
+        <h2>エビデンスの確実性を決める5要因（下げる要因）</h2>
+        <p>RCT（ランダム化比較試験）のエビデンスはGRADEでは「高（⊕⊕⊕⊕）」から出発します。そこから以下の5要因のそれぞれについて「深刻な問題がある」と判定されれば確実性を1段下げ、「非常に深刻」なら2段下げます：</p>
+        <table class="mid-table">
+          <thead><tr><th>要因</th><th>何を見るか</th><th>詳細章</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>① Risk of Bias</strong><br>バイアスリスク</td>
+              <td>個別研究の方法論的欠陥（無作為化、盲検化、脱落、選択的報告）</td>
+              <td>Ch8</td>
+            </tr>
+            <tr>
+              <td><strong>② Inconsistency</strong><br>不一致性</td>
+              <td>研究間で結果がバラバラか（説明できない異質性）</td>
+              <td>Ch9</td>
+            </tr>
+            <tr>
+              <td><strong>③ Indirectness</strong><br>非直接性</td>
+              <td>PICO（対象・介入・比較・アウトカム）のズレ、サロゲート使用</td>
+              <td>Ch10</td>
+            </tr>
+            <tr>
+              <td><strong>④ Imprecision</strong><br>不確実性（精度不足）</td>
+              <td>信頼区間が広く、臨床判断がぶれるか</td>
+              <td>Ch11</td>
+            </tr>
+            <tr>
+              <td><strong>⑤ Dissemination bias</strong><br>発表バイアス</td>
+              <td>肯定的結果が選択的に発表されている疑い</td>
+              <td>Ch12</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>この5要因は、<strong>CPGのEvidence Profile付録やSRの「Certainty Assessment」の列</strong>に必ず記載されています。例えば "serious imprecision due to wide CI"（CIが広く精度不足があるため1段下げ）といった文言。この章から先の Ch8-12 では、各要因について「どういう状況で下げるのか」「読み手として何をチェックすべきか」を個別に掘り下げます。</p>
 
-        <h2>推奨の強さを決める4要因</h2>
+        <h2>観察研究を格上げする3条件（上げる要因）</h2>
+        <p>観察研究（コホート、症例対照）は交絡の問題があるため、GRADEでは「低（⊕⊕◯◯）」から出発します。しかし以下の条件を満たせば確実性を上げることができます：</p>
         <ul>
-          <li>利益と害のバランス</li>
-          <li>エビデンスの確実性</li>
-          <li>患者の価値観と嗜好</li>
-          <li>資源・費用（適用可能性）</li>
+          <li><strong>大きな効果量</strong>（例：RR&gt;2 または &lt;0.5）→ +1段</li>
+          <li><strong>非常に大きな効果量</strong>（RR&gt;5 または &lt;0.2）→ +2段</li>
+          <li><strong>用量反応関係</strong>が明確 → +1段</li>
+          <li><strong>すべての残存交絡が観察効果を弱める方向</strong>（つまり真の効果はより大きいはず）→ +1段</li>
         </ul>
-        <p>これらを<span class="gloss" data-term="EtD">Evidence to Decision（EtD）</span>フレームワークで構造化して検討します [U16]。</p>
+        <p>古典例：<strong>喫煙と肺がん</strong>の関連はRR&gt;10で観察研究ベースでも確実性は「高」と評価されます。</p>
 
-        <h2>GRADEの成果物</h2>
-        <p>GRADEに基づくCPGは以下を備えます：</p>
+        <h2>推奨の強さを決める判断要素</h2>
+        <p>推奨の強さは、エビデンスの確実性だけでは決まりません。以下の要素を総合的に検討します（EtDフレームワークで構造化）[U16]：</p>
         <ul>
-          <li><strong>Summary of Findings（SoF）表</strong>：アウトカムごとの相対効果・絶対効果・確実性・平易な要約（Ch5で詳述）</li>
-          <li><strong>Evidence Profile</strong>：SoFに確実性を下げた要因の詳細を加えた完全版</li>
-          <li><strong>推奨とその解釈</strong>：強い推奨は「ほぼ全員」、条件付き推奨は「多数派＋SDM」を意味する（Ch4で詳述）</li>
+          <li><strong>望ましい効果と望ましくない効果のバランス</strong>（benefit vs harm）</li>
+          <li><strong>エビデンスの確実性</strong>（高いほど強い推奨を出しやすい）</li>
+          <li><strong>患者の価値観と嗜好の多様性</strong>（多様なら条件付き寄りに）</li>
+          <li><strong>資源・費用</strong>（費用対効果）</li>
+          <li><strong>公平性（Equity）</strong>への影響</li>
+          <li><strong>実施可能性（Feasibility）</strong>と<strong>受容性（Acceptability）</strong></li>
         </ul>
+        <p>これらを<span class="gloss" data-term="EtD">Evidence to Decision（EtD）</span>フレームワークで構造化して検討します [U16]。CPGの付録に EtD テーブルが掲載されていれば、<strong>パネルが推奨の強さをどう決めたか</strong>を読み手も追跡できます。</p>
+
+        <h2>GRADEの「成果物」 — CPG／SRにはこう現れる</h2>
+        <p>GRADEに基づくCPGやSRには、以下の3つの「成果物」が必ず含まれます。これらは <strong>Ch1 の文書構造マップの STEP 4-7（CPG）／STEP 10（SR）</strong> に該当します：</p>
+        <table class="mid-table">
+          <thead><tr><th>成果物</th><th>内容</th><th>詳細章</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Summary of Findings（SoF）表</strong></td>
+              <td>アウトカムごとの相対効果・絶対効果（per 1000）・確実性（⊕⊕⊕⊕等）・平易な要約</td>
+              <td>Ch5</td>
+            </tr>
+            <tr>
+              <td><strong>Evidence Profile（EP）</strong></td>
+              <td>SoF表に5要因の判定詳細を加えた完全版。通常は付録に掲載</td>
+              <td>Ch5</td>
+            </tr>
+            <tr>
+              <td><strong>推奨とその解釈</strong></td>
+              <td>「強く推奨する（We recommend）」「提案する（We suggest）」の文言と、強さの実務的意味</td>
+              <td>Ch4</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>CPG／SRを開いたとき、この3つを探す癖をつけてください。「SoF表がない／Evidence Profileが見当たらない／推奨の強さが明示されていない」CPGは、<strong>信頼性に疑問がある</strong>サインです（Ch5, Ch16で詳述）。</p>
+
+        <h2>GRADEを採用しているCPGかを判別する方法</h2>
+        <p>CPG本文を読むとき、以下のキーワードが出てくれば「GRADEベース」と判断できます：</p>
+        <div class="reader-tips">
+          <h4>🔍 GRADE採用CPGの見分けサイン</h4>
+          <ul>
+            <li>方法論セクションに「<strong>GRADE approach</strong>」「<strong>GRADEpro GDT</strong>」「<strong>Evidence Profile</strong>」「<strong>EtD framework</strong>」の言及</li>
+            <li>確実性表記に <strong>⊕⊕⊕⊕／⊕⊕⊕◯／⊕⊕◯◯／⊕◯◯◯</strong>（または High / Moderate / Low / Very Low）</li>
+            <li>推奨文が「<strong>We recommend</strong>（強い）」「<strong>We suggest</strong>（条件付き）」の二択</li>
+            <li>推奨の動詞が <strong>results in / likely / may / very uncertain</strong> に対応して確実性と連動 [G5]</li>
+          </ul>
+        </div>
+        <p>逆に、Level I/II/III や Grade A/B/C などの古い分類しか使っていないCPGは、GRADE非採用の可能性が高いです。この場合は Ch16 の「信頼できるCPGの6質問」で慎重に評価する必要があります。</p>
+
+        <!-- 📗 この先の学習ロードマップ -->
+        <div class="roadmap">
+          <h4>🛤 この章の先に学ぶこと（学習ロードマップ）</h4>
+          <p style="margin:6px 0 10px;font-size:0.92rem;">本章で登場した各要素を、以降の章でひとつずつ深く掘り下げます。<strong>カードをクリックで各章へジャンプ</strong>：</p>
+          <div class="roadmap-steps">
+            <div class="roadmap-step" onclick="showPage(3)">
+              <span class="rs-ch">Ch3</span><span class="rs-title">エビデンスの確実性4段階</span>
+              <div class="rs-dsc">高・中・低・非常に低いの実務的な意味と、読み手の姿勢</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(4)">
+              <span class="rs-ch">Ch4</span><span class="rs-title">強い vs 条件付き推奨</span>
+              <div class="rs-dsc">推奨の強さが臨床・患者・政策にとって何を意味するか</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(5)">
+              <span class="rs-ch">Ch5</span><span class="rs-title">SoF表の読み方</span>
+              <div class="rs-dsc">GRADEの「成果物」を5分で読み解く実践</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(6)">
+              <span class="rs-ch">Ch6</span><span class="rs-title">相対効果と絶対効果</span>
+              <div class="rs-dsc">SoF表の「per 1000」をどう患者に翻訳するか</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(7)">
+              <span class="rs-ch">Ch7 ⭐</span><span class="rs-title">閾値とMID</span>
+              <div class="rs-dsc">「臨床的に重要な差」の基準を理解する</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(8)">
+              <span class="rs-ch">Ch8-12</span><span class="rs-title">確実性を下げる5要因</span>
+              <div class="rs-dsc">RoB／不一致性／非直接性／不確実性／発表バイアスの個別詳細</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(16)">
+              <span class="rs-ch">Ch16 ⭐⭐</span><span class="rs-title">信頼できるCPG 6質問</span>
+              <div class="rs-dsc">本サイトの核心 — GRADEが正しく適用されたCPGかを判定</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(18)">
+              <span class="rs-ch">Ch18</span><span class="rs-title">AMSTAR 2（SR評価）</span>
+              <div class="rs-dsc">参照しているSR自体の質を16項目でチェック</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="key-message" style="margin-top:20px;">
+          <strong>この章で覚えておくべき3つ：</strong><br>
+          ① GRADE = CPG／SRの世界共通の「格付け」ルール（110+組織採用）<br>
+          ② <strong>エビデンスの確実性（4段階）</strong>と<strong>推奨の強さ（2段階）</strong>は独立した判断<br>
+          ③ 確実性は5要因で下げる／3条件で上げる — 以降の章でそれぞれ詳細に学ぶ
+        </div>
 
         <div class="chapter-nav">
           <button onclick="showPage(1)">← Ch1</button>
@@ -236,6 +778,18 @@
         <div class="en-title">Four Levels of Certainty of Evidence</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：SoF表・推奨文の「確実性」列（STEP 5）</span>
+            <span class="yah-where">SR：SoF表「Certainty of evidence」列（STEP 10）</span>
+            <span class="yah-check">SoF表に並ぶ <strong>⊕⊕⊕⊕（高）／⊕⊕⊕◯（中）／⊕⊕◯◯（低）／⊕◯◯◯（非常に低い）</strong> という記号が、アウトカムごとに何を意味するか解釈できるようになるための章です。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>GRADEのエビデンスの確実性は「推定値の真値が特定の範囲内（または意思決定の閾値の上／下）にあるという確信度」と定義される [U13]。読み手は「<strong>どの程度この効果推定値を信じられるか</strong>」という問いに答える4段階のラベルとして扱う。
         </div>
@@ -283,6 +837,18 @@
         <div class="en-title">Strong vs Conditional Recommendations, GPS, Wording</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：推奨文（STEP 4）／EtDフレームワーク（STEP 7）</span>
+            <span class="yah-where">SR：（該当少、考察で推奨の示唆がある場合）</span>
+            <span class="yah-check">CPG本文に並ぶ「<strong>We recommend（強く推奨する）</strong>」「<strong>We suggest（提案する＝条件付き）</strong>」の違い、および <strong>Good Practice Statement（GPS）</strong>の見分け方、低確実性＋強い推奨の<strong>レッドフラッグ</strong>判定を学びます。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>GRADEの推奨は「強い」と「条件付き（弱い）」の2種類。それぞれ臨床家と患者への意味が異なる [U5][U11][U13][U16]。加えて、<strong>Good Practice Statement（GPS）</strong>[G4]、<strong>推奨表現の標準化</strong>[G5]、<strong>単一推定値がない場合</strong>[G6] の扱いも知っておく必要がある。
         </div>
@@ -347,6 +913,18 @@
         <div class="en-title">Reading SoF Tables / Evidence Profiles</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：Summary of Findings表（STEP 5）／付録のEvidence Profile（STEP 9）</span>
+            <span class="yah-where">SR：結果セクションのSoF表（STEP 10）</span>
+            <span class="yah-check">CPG／SRで<strong>最も情報密度が高い一枚</strong>がSoF表です。アウトカム行を縦に、相対効果・絶対効果・確実性・平易な要約の列を横に読み解き、<strong>5分で結論を把握できる</strong>技術を学びます。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>Summary of Findings（SoF）表は、GRADEアプローチの中核的な情報提示形式。<strong>アウトカムごとに</strong>①参加者/研究数　②相対効果（RR/OR/HR）　③絶対効果（何/1000人）　④確実性　⑤平易な要約　の5要素を1つの表に集約する [U12]。
         </div>
@@ -413,6 +991,18 @@
         <div class="en-title">Relative vs Absolute Effects</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：SoF表の「Relative effect」「Anticipated absolute effects」列（STEP 5）／臨床考察（STEP 8）</span>
+            <span class="yah-where">SR：結果セクションの森林プロットとSoF表（STEP 9, 10）</span>
+            <span class="yah-check">SoF表で「RR 0.5」と「1000人中20人減」が並んで書かれているのはなぜ？ — <strong>ベースラインリスクによって同じ相対効果でも患者へのインパクトは桁違い</strong>という事実を、実際の診療判断に使える形で理解します。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>相対効果（RR, OR, HR）はベースラインリスクに依存せず比較的安定。<strong>絶対効果はベースラインリスクに依存し、患者への意味付けに直結</strong>。読み手は必ず両方を確認し、SoF表の「per 1000」表記に注目する [U12][M5]。
         </div>
@@ -460,6 +1050,18 @@
         <div class="en-title">Thresholds & Minimal Important Difference (MID)</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：SoF表の「絶対効果（per 1000）」列と注釈（STEP 5）／推奨根拠（STEP 6 不確実性判定）</span>
+            <span class="yah-where">SR：SoF表・考察での「臨床的に意味のある差」議論（STEP 10, 12）</span>
+            <span class="yah-check">SoF表の絶対効果が「<strong>20 fewer per 1000</strong>」と書かれていても、それが<strong>臨床的に意味のある差かどうか</strong>の基準線（MID）を知らないと解釈できません。この章では些細・中・大の閾値を学び、<strong>Ch11の不確実性（Imprecision）</strong>判定に直結させます。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong><span class="gloss" data-term="MID">MID（Minimal Important Difference、最小重要差）</span>は、<strong>患者が「重要」と感じる最小の治療効果</strong>。Jaeschke-Singer-Guyatt (1989) [M1] が提唱した概念で、現在はMIDと統一。SoF表の解釈と<span class="gloss" data-term="不確実性">Imprecision</span>評価に直結する。
         </div>
@@ -509,6 +1111,18 @@
         <div class="en-title">Risk of Bias (RCT + Observational)</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：Evidence Profile「Risk of bias」判定（STEP 6, 9）</span>
+            <span class="yah-where">SR：方法の「Risk of bias評価」・結果の<strong>RoB 2 traffic light図</strong>（STEP 5, 8）</span>
+            <span class="yah-check">GRADEで確実性を下げる5要因のうちの<strong>第1要因</strong>。SR本文やEvidence Profileで「<strong>serious risk of bias</strong>」「<strong>very serious risk of bias</strong>」と書かれている箇所の根拠を追跡できるようになります。RCTのRoB 2 の5ドメイン、観察研究のROBINS-I/E の7ドメインを理解します。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>研究の方法論的欠陥により結果が歪む可能性を評価する。RCTは <strong>RoB 2</strong>（Cochrane）、観察研究は<strong>ROBINS-I（介入）</strong>または<strong>ROBINS-E（曝露）</strong>を用いる [G7]。読み手は「どのドメインに問題があり、結果がどちらに歪む可能性があるか」を把握する。
         </div>
@@ -564,6 +1178,18 @@
         <div class="en-title">Inconsistency</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：Evidence Profile「Inconsistency」判定（STEP 6）</span>
+            <span class="yah-where">SR：結果の<strong>森林プロット</strong>・I²・異質性p値（STEP 9）</span>
+            <span class="yah-check">GRADE 5要因の<strong>第2要因</strong>。森林プロットで各研究の四角が左右にバラバラに並んでいる、I² が75%を超えている、サブグループ間で効果方向が逆転…こうした「研究間で話が食い違う」状況を読み解き、<strong>「serious inconsistency」</strong>の根拠を確認する章です。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>研究間で効果推定値が一致しない程度。<strong>説明できない異質性</strong>（heterogeneity）があれば確実性を下げる。[U12]
         </div>
@@ -604,6 +1230,18 @@
         <div class="en-title">Indirectness</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：目的・対象集団（STEP 2）／Evidence Profile「Indirectness」（STEP 6）</span>
+            <span class="yah-where">SR：緒言のPICO・方法の適格基準（STEP 2, 3）</span>
+            <span class="yah-check">GRADE 5要因の<strong>第3要因</strong>。「研究は高齢男性で行われた／サロゲートしか測られていない／プラセボ比較のみ」などの理由で<strong>「serious indirectness」</strong>と判定される根拠を読み解きます。自分の目の前の患者にCPG推奨が適用できるか（Ch20）にも直結します。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>PICO（対象・介入・比較・アウトカム）が、臨床疑問と研究で一致しない程度。<strong>サロゲートアウトカム</strong>を用いた場合も該当する [U17]。Guyatt LinkedInで紹介されたindirectness algorithmは読者にも有用。
         </div>
@@ -642,6 +1280,18 @@
         <div class="en-title">Imprecision</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：Evidence Profile「Imprecision」判定（STEP 6）</span>
+            <span class="yah-where">SR：SoF表の<strong>95% CI</strong>・Certainty列・統合結果ダイヤモンドの幅（STEP 10）</span>
+            <span class="yah-check">GRADE 5要因の<strong>第4要因</strong>。SoF表の絶対効果の信頼区間（CI）が <strong>Ch7で学んだMID</strong> をまたいでいるか。両端が同じ臨床判断を支持するか。<strong>「serious imprecision」</strong>判定の根拠を、サンプルサイズ・イベント数・OIS（Optimal Information Size）と合わせて理解します。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>信頼区間の幅が広く、臨床的決定が変わるかどうか判定できない状態。<strong>MID（Ch7）</strong>との関係で評価される [U12]。
         </div>
@@ -680,6 +1330,18 @@
         <div class="en-title">Dissemination bias</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：Evidence Profile「Publication bias」判定（STEP 6）</span>
+            <span class="yah-where">SR：結果の<strong>ファネルプロット</strong>・Egger検定結果・未発表研究の検索（STEP 11）</span>
+            <span class="yah-check">GRADE 5要因の<strong>第5要因（最後）</strong>。SRの結果セクションに載っているファネルプロットの左右非対称性、Egger検定のp値、ClinicalTrials.govでの未発表試験の有無などを読み解き、<strong>「strongly suspected publication bias」</strong>判定の根拠を追跡します。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>肯定的結果は発表されやすく、否定的／中立的結果は埋もれる傾向。従来は「出版バイアス」と呼ばれたが、SNS・プレスリリース・学会発表でも歪みが生じるため「情報発信バイアス」という広い概念に進化している。
         </div>
@@ -714,6 +1376,18 @@
         <div class="en-title">Non-RCT / Observational Study SR</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：方法論セクション（STEP 3）／希少疾患・外科領域・有害事象CPG</span>
+            <span class="yah-where">SR：観察研究のSR／非RCTが混在するSRの方法・結果全体</span>
+            <span class="yah-check">RCTが存在しない／実施困難な領域では観察研究SRが重要な根拠になります。<strong>GRADE Guidance 44</strong>の4ステップ枠組みで、交絡対策（ROBINS-I/E）・RCTとの整合性・格上げ条件を読み解きます。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>RCTが実施できない／ない場合、観察研究（コホート、症例対照）のSRが重要。GRADE Guidance 44（Cuello-Garcia 2025）[G2] は、<strong>RCTと非RCTを統合する4ステップ枠組み</strong>を提唱。読み手は「観察研究でも適切に統合されているか」を判定できる。
         </div>
@@ -768,6 +1442,18 @@
         <div class="en-title">Qualitative SR — GRADE-CERQual</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：EtDフレームワーク「患者の価値観と嗜好」セクション（STEP 7）</span>
+            <span class="yah-where">SR：定性的研究のSR（患者体験・医療者視点のメタ統合）</span>
+            <span class="yah-check">「抗凝固療法で患者は脳卒中予防と出血リスクをどう天秤にかけているか？」といった<strong>定性的SR</strong>は、推奨の<strong>価値観セクション</strong>の重要な根拠になります。CERQualの4要素で信頼度を判定する方法を学びます（Ch21のSDMと直結）。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>患者の体験・価値観・医療者の視点など、<strong>定性的研究</strong>のSRに対する確実性評価枠組みが<span class="gloss" data-term="CERQual">CERQual</span>（Lewin 2018）[G3]。4要素で評価し、高／中／低／非常に低いの4段階で信頼度を判定する。
         </div>
@@ -798,6 +1484,18 @@
         <div class="en-title">Alternative Recommendation Types</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：推奨文のうち SoF表を伴わない<strong>GPS</strong>・ナラティブ推奨（STEP 4）</span>
+            <span class="yah-where">SR：単一効果量が出せないナラティブSR</span>
+            <span class="yah-check">すべての推奨が「SoF表＋⊕記号」形式で出るわけではありません。<strong>GPS（Good Practice Statement）</strong>や<strong>単一推定値なし</strong>の推奨、<strong>ネットベネフィット分析</strong>など、変則的な推奨タイプを見分け、その限界と濫用の兆候を読み取る章です。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>推奨は常に「SoF表＋GRADE」の形式とは限らない。<strong>Good Practice Statement（GPS）</strong>[G4]、<strong>単一推定値が統合できない場合</strong>[G6]、<strong>ネットベネフィット分析</strong>などのバリエーションを読み分ける。
         </div>
@@ -838,6 +1536,18 @@
         <div class="en-title">Six Questions for Recognizing a Trustworthy CPG</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：<strong>CPG全体の総合評価</strong> — 表紙〜推奨〜SoF〜付録を横断チェック</span>
+            <span class="yah-where">SR：引用されているSRの質も含めて判定</span>
+            <span class="yah-check">本サイトの<strong>⭐⭐ 中核章</strong>。Ch2-15で学んだGRADE知識を総動員して、目の前のCPG1つを6つの質問で吟味します。「このCPGを信じて行動すべきか？」の最終判定ツールです。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>Lima-Mirza-Guyatt (2023) [U17] は、臨床家がガイドラインを信頼できるかを判定するための<strong>6つの質問</strong>を提示。個別CPGをこの6問で吟味することが、現場での最重要スキル。
         </div>
@@ -879,6 +1589,18 @@
         <div class="en-title">CPG Quality Examples</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：実在CPGへの6質問適用の<strong>ケーススタディ</strong></span>
+            <span class="yah-where">CPG：NCCN／IOM 8基準／日本のCPG</span>
+            <span class="yah-check">Ch16で学んだ6質問を、NCCN（米国がん）・IOM 8基準・日本のCPGに<strong>実際に当てはめる</strong>ケーススタディ。「完璧なCPGは存在しない」前提で、<strong>限界を理解した上で使う</strong>実務的な姿勢を身につけます。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>Ch16の6質問を、実在のCPGに適用した事例を示す。NCCN（独自Evidence Blocks、GRADE非採用）、IOM 8基準（米国の標準）、日本のCPG課題。
         </div>
@@ -936,6 +1658,18 @@
         <div class="en-title">AMSTAR 2 (16 items)</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">SR：<strong>SR全体の総合評価</strong> — プロトコル〜検索〜RoB〜統合〜COI を横断</span>
+            <span class="yah-where">CPG：CPGが参照しているSRの質評価にも使える</span>
+            <span class="yah-check">Ch16がCPG評価なら、<strong>Ch18はSR評価の中核</strong>。SR本文やその補遺を順にチェックし、重要項目（★）での欠陥が2つ以上なら「Critically Low」と判定します。Ch5-12で学んだGRADE 5要因やRoBの知識がすべて活かされる総合演習です。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>AMSTAR 2（Shea 2017, BMJ）[T1] はSRの方法論的質を16項目で評価。<strong>重要（critical）項目に欠陥があると総合評価が大きく下がる</strong>厳格な設計。PROSPERO登録、文献検索、RoB評価、COI報告が重要項目。
         </div>
@@ -980,6 +1714,18 @@
         <div class="en-title">PRISMA 2020 (27 items)</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">SR：全セクション横断（タイトル・抄録・緒言・方法・結果・考察・COI）</span>
+            <span class="yah-where">SR：補遺のPRISMAチェックリスト・PRISMAフロー図</span>
+            <span class="yah-check">AMSTAR 2が「方法論の質」を評価するのに対し、PRISMA 2020は「報告の透明性」を評価します。<strong>本文に何がどう書かれているべきか</strong>の27項目チェックを理解することで、SR本文を読む際の「見落とし」を防げます。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>PRISMA 2020（Page 2021, BMJ）[T2] は、SRを<strong>報告</strong>する際に含めるべき27項目のチェックリスト。AMSTAR 2が方法論品質を評価するのに対し、PRISMAは<strong>報告の透明性</strong>を保証する。
         </div>
@@ -1031,6 +1777,18 @@
         <div class="en-title">Applicability</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：対象集団（STEP 2）／臨床考察・実施上の考慮（STEP 8）</span>
+            <span class="yah-where">CPG：サブグループ別絶対効果・特殊集団注意</span>
+            <span class="yah-check">Ch16で「このCPGは信頼できる」と判定できたら、次は「<strong>目の前の患者に適用できるか</strong>」を判断する番です。対象集団の類似性・介入の実行可能性・ベースラインリスク・価値観の4次元で吟味します。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong>信頼できるCPGの推奨でも、<strong>自分の患者・設定に適用できるか</strong>は別途判定が必要 [U3][U6][U17]。患者特性・医療資源・文脈の違いを考慮する。
         </div>
@@ -1086,6 +1844,18 @@
         <div class="en-title">Shared Decision Making & Values</div>
       </div>
       <div class="page-body">
+        <!-- 📍 あなたが今学んでいる場所 -->
+        <div class="you-are-here">
+          <div class="yah-pin">📍</div>
+          <div class="yah-body">
+            <span class="yah-title">あなたが今学んでいる場所</span>
+            <span class="yah-where">CPG：EtDフレームワーク「患者の価値観と嗜好」（STEP 7）／条件付き推奨の文脈</span>
+            <span class="yah-where">SR：価値観SR・CERQual評価された定性的SR（Ch14と連動）</span>
+            <span class="yah-check">CPG／SR読解の最終段階。<strong>条件付き推奨</strong>では特にSDMが必須。Ch4で学んだ推奨の強さと、Ch14で学んだ定性的SRの価値観エビデンスを統合して、<strong>診察室で実際に患者とどう対話するか</strong>を学びます。</span>
+            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
+          </div>
+        </div>
+
         <div class="key-message">
           <strong>要点：</strong><span class="gloss" data-term="共同意思決定">共同意思決定（SDM）</span>は、医療者と患者が<strong>エビデンスと患者の価値観を統合</strong>して意思決定を行うプロセス。特に<strong>条件付き推奨</strong>では必須 [U16][U17]。
         </div>
@@ -1310,7 +2080,7 @@
 <script src="js/amstar2.js?v=3.0"></script>
 <script src="js/linkedin-feed.js?v=3.0"></script>
 
-<!-- ページ切替後のインタラクティブ要素リフレッシュ -->
+<!-- ページ切替後のインタラクティブ要素リフレッシュ＋文書構造マップタブ -->
 <script>
 (function(){
   // ページ切替時にGlossaryとReferencesを再適用
@@ -1318,6 +2088,21 @@
     if (window.CPGSR_Glossary && window.CPGSR_Glossary.attach) window.CPGSR_Glossary.attach();
     if (window.CPGSR_References && window.CPGSR_References.load) window.CPGSR_References.load();
   }
+
+  // 文書構造マップのタブ切替
+  document.addEventListener('click', function(e){
+    const tab = e.target.closest('.doc-map-tab');
+    if (!tab) return;
+    const panel = tab.dataset.panel;
+    if (!panel) return;
+    const wrap = tab.closest('.doc-map-wrap');
+    if (!wrap) return;
+    wrap.querySelectorAll('.doc-map-tab').forEach(t => t.classList.remove('active'));
+    wrap.querySelectorAll('.doc-map-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const target = wrap.querySelector('#' + panel);
+    if (target) target.classList.add('active');
+  });
   // サイドバーのクリックを監視
   document.addEventListener('DOMContentLoaded', function(){
     const sidebar = document.getElementById('sidebar');

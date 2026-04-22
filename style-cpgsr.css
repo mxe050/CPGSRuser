@@ -368,6 +368,272 @@
   padding-bottom: 4px;
 }
 
+/* ====== ドキュメント構造マップ（CPG/SRナビゲーション学習システム） ====== */
+.doc-map-wrap {
+  margin: 24px 0 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f4f8fb 0%, #fff8f0 100%);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(26,82,118,0.08);
+}
+.doc-map-wrap h3 {
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+.doc-map-intro {
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+.doc-map-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.doc-map-tab {
+  background: white;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.92rem;
+  transition: all 0.2s;
+}
+.doc-map-tab:hover { background: #ebf4fa; }
+.doc-map-tab.active {
+  background: var(--primary);
+  color: white;
+}
+.doc-map-panel { display: none; }
+.doc-map-panel.active { display: block; }
+.doc-section {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr;
+  gap: 12px;
+  align-items: stretch;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  transition: all 0.15s;
+  font-size: 0.88rem;
+}
+.doc-section:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateX(2px);
+}
+.doc-sec-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.3;
+}
+.doc-sec-name { line-height: 1.5; }
+.doc-sec-name strong { color: var(--primary-dark); display: block; margin-bottom: 4px; font-size: 0.96rem; }
+.doc-sec-name .ja-sub { color: var(--text-light); font-size: 0.85rem; }
+.doc-sec-what { line-height: 1.6; color: var(--text); }
+.doc-sec-what .what-label {
+  display: inline-block;
+  background: #eafbe7;
+  color: #1e8449;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+.doc-sec-chaps { margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
+.doc-sec-chap {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.doc-sec-chap:hover { background: #d35400; }
+
+@media (max-width: 760px) {
+  .doc-section { grid-template-columns: 60px 1fr; }
+  .doc-sec-what { grid-column: 1 / -1; padding-top: 6px; border-top: 1px dashed var(--border); }
+}
+
+/* ====== 「あなたが今学んでいる場所」ナビゲーター（各章冒頭） ====== */
+.you-are-here {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  background: #fff4e6;
+  border: 1px solid #e67e22;
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.you-are-here .yah-pin {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.you-are-here .yah-body { flex: 1; min-width: 220px; }
+.you-are-here .yah-title {
+  font-weight: 700;
+  color: #a04000;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.92rem;
+}
+.you-are-here .yah-where {
+  display: inline-block;
+  background: white;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin: 2px 4px 2px 0;
+  font-weight: 600;
+  color: var(--primary-dark);
+  border: 1px solid #f0c090;
+  font-size: 0.85rem;
+}
+.you-are-here .yah-check {
+  display: block;
+  margin-top: 6px;
+  color: var(--text);
+}
+.you-are-here .yah-check::before {
+  content: "🔎 ";
+}
+.you-are-here .yah-map-link {
+  color: var(--primary);
+  font-size: 0.82rem;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ====== GRADE用語分解ボックス ====== */
+.term-decode {
+  margin: 18px 0;
+  padding: 16px 20px;
+  background: #ebf4fa;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+}
+.term-decode h4 {
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+.term-decode-letters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+.term-letter {
+  background: white;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.term-letter .big {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+.term-letter .en { display: block; font-size: 0.82rem; color: var(--text-light); margin: 4px 0 2px; }
+.term-letter .ja { font-weight: 600; color: var(--primary-dark); }
+
+/* ====== 「なぜこれを最初に学ぶか」導入ボックス ====== */
+.why-first {
+  margin: 20px 0;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, #fff8f0 0%, #ebf4fa 100%);
+  border: 2px dashed var(--accent);
+  border-radius: 10px;
+}
+.why-first h4 {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.why-first ol {
+  margin: 8px 0 0 18px;
+  line-height: 1.8;
+}
+.why-first ol li { margin-bottom: 4px; }
+
+/* ====== 章学習ロードマップ（Ch2末尾に配置） ====== */
+.roadmap {
+  margin: 20px 0;
+  padding: 16px 18px;
+  background: #f4f8fb;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.roadmap h4 { color: var(--primary-dark); margin-bottom: 10px; }
+.roadmap-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+.roadmap-step {
+  background: white;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.roadmap-step:hover {
+  background: #ebf4fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(26,82,118,0.1);
+}
+.roadmap-step .rs-ch {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-right: 6px;
+}
+.roadmap-step .rs-title { font-weight: 700; color: var(--primary-dark); }
+.roadmap-step .rs-dsc { color: var(--text); font-size: 0.85rem; margin-top: 4px; }
+
 /* 章間ナビ */
 .chapter-nav {
   display: flex;
