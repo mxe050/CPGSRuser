@@ -1,0 +1,4 @@
+# オリジナルのPPT書き出しJPGはgitに含めない
+# （beginner-XX.jpg にコピー済み）
+aスライド*.JPG
+スライド*.JPG

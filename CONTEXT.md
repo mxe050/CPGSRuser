@@ -14,21 +14,32 @@
 
 ---
 
-## 現在の状態 — v1.1（2026-04-22）
+## 現在の状態 — v1.2（2026-04-22）
 
-ナビゲーション学習システム導入版。コミット `97c9879` でpush済、GitHub Pages配信中。
+**初学者向け徹底解説ページ導入版**。本体 Ch1–Ch24 の前段として、EBM・SR・CPG の「なぜ学ぶか」を解説する Primer ページを追加。
 
-### v1.1の追加内容
-1. 表紙文言：「すべての医療関係者のための」に変更
-2. **Ch1末尾に文書構造マップ新設** — CPG 9ステップ／SR 13ステップのタブ切替、各セクションに学習章リンク
-3. **Ch2 全面リストラ** — GRADEを最初に学ぶ動機・G/R/A/D/E分解・以前 vs 以後の対比・学習ロードマップを追加
-4. **Ch3-Ch21 全19章に「📍あなたが今学んでいる場所」ナビ** — CPG/SRのどのセクションを読むための知識かを章冒頭に明示
+### v1.2の追加内容（v1.1からの差分）
+1. **Ch0表紙**に初学者向け導入ブロック追加：
+   - YouTube動画ボタン①（解説編）: https://www.youtube.com/watch?v=7UJZLG49ba8&t=1s
+   - YouTube動画ボタン②（会話編54分）: https://www.youtube.com/watch?v=pAr7upG01YA
+   - 「初学者向け徹底解説」ボタン → `page-25` へ遷移
+2. **新ページ `page-25` — 初学者向け徹底解説（Primer）**：
+   - 先生作成の **キースライド16枚**（`images/beginner-01.jpg` 〜 `beginner-16.jpg`）を埋め込み
+   - 12セクション構成：医学情報の信頼性 / EBMの定義・5ステップ・3原則 / CPGの定義 / SRの定義 / エビデンスの確実性 / GRADE 5要因 / SRの質 vs 確実性 / 解説文の批判的吟味 / まとめ / ロードマップ
+   - TOC に「📚 初学者向け（Primer）」セクション新設
+3. **script.js 修正**：TOC 照合を `data-idx` ベースに変更（配列順非依存）
+4. **キャッシュバスター**：`?v=3.0` → `?v=4.0`
 
-### 追加CSSクラス（`style-cpgsr.css`）
-`.doc-map-wrap` `.doc-map-tab` `.doc-map-panel` `.doc-section` `.you-are-here` `.yah-*` `.term-decode` `.why-first` `.roadmap`
+### v1.1の内容（継続）
+- 文書構造マップ（Ch1）／Ch2 リストラ／Ch3-21「📍あなたが今学んでいる場所」ナビ
 
-### 追加JS
-文書構造マップのタブ切替は `index.html` 末尾の inline script に実装済。
+### 画像の扱い
+- `images/` 直下に元スライド（`aスライド*.JPG` `スライド*.JPG`）と、本サイト用にリネームした `beginner-01.jpg` 〜 `beginner-16.jpg` が共存
+- `images/.gitignore` で元 JPG を除外、`beginner-*.jpg`（16枚）のみ git 追跡対象
+- 他スライド（106枚）は将来の別用途のためローカル保管
+
+### 追加CSSクラス（v1.2）
+`.beginner-intro-block` `.beginner-btn` `.yt-btn` `.primer-btn` `.primer-header` `.primer-badge` `.primer-why` `.misunderstand-list` `.primer-h2` `.primer-fig` `.primer-5a` `.a-step` `.principle-list` `.principle` `.sr-steps` `.compare-box` `.low-tag` `.high-tag` `.grade-5factors` `.g5-item` `.four-pattern` `.fp-*` `.primer-final` `.primer-punchline` `.primer-footer-note` `.toc-btn.primer-toc`
 
 ---
 
@@ -36,23 +47,15 @@
 
 ```
 CPGSRuser/
-├── index.html                     # 全24章＋文書構造マップ＋ナビ
+├── index.html                     # 全24章＋Primer（page-25）＋ナビ
 ├── style.css                      # 既存テーマ（紺+オレンジ）
-├── style-cpgsr.css                # 追加スタイル（v1.1でナビ系追加）
-├── script.js                      # showPage, switchTab, menuToggle
-├── data/
-│   ├── references.json            # U/M/G/T/C/V/L 書誌
-│   ├── glossary.json              # 22用語
-│   ├── mid-thresholds.json        # MID閾値
-│   ├── linkedin-picks.json        # Guyatt LinkedIn
-│   └── chapters.json              # TOC
-└── js/
-    ├── glossary.js                # ツールチップ
-    ├── references.js              # 参考文献ポップオーバー
-    ├── mid-explorer.js            # Ch7早見表
-    ├── trustworthy-check.js       # Ch16 6質問
-    ├── amstar2.js                 # Ch18 16項目
-    └── linkedin-feed.js           # Ch23
+├── style-cpgsr.css                # 追加スタイル（v1.1ナビ系＋v1.2 Primer系）
+├── script.js                      # showPage（data-idx照合に修正）
+├── images/
+│   ├── .gitignore                 # 元スライドJPGを除外
+│   └── beginner-01〜16.jpg        # Primerページ用キースライド（git追跡）
+├── data/ ...（v1.1と同じ）
+└── js/ ...（v1.1と同じ）
 ```
 
 ---
@@ -77,6 +80,8 @@ CPGSRuser/
 - `afe97d0` fix: glossary/reference 二重バインド防止
 - `f6eb86c` docs: CONTEXT.md 追加
 - `97c9879` v1.1 ナビゲーション学習システム導入（2026-04-22）
+- `4d3050f` docs: CONTEXT.md v1.1 簡潔化（2026-04-22）
+- v1.2 初学者向け Primer ページ導入（2026-04-22）
 
 ---
 

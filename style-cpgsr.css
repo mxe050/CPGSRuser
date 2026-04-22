@@ -654,3 +654,454 @@
 }
 .chapter-nav button:hover { background: var(--primary-dark); }
 .chapter-nav button:disabled { background: var(--text-light); cursor: not-allowed; opacity: 0.5; }
+
+/* ========================================================================
+   v1.2: 初学者向け導入ブロック（Ch0表紙内）＋ Primer特別ページ（page-25）
+   ======================================================================== */
+
+/* ===== Ch0表紙の初学者向け導入ブロック ===== */
+.beginner-intro-block {
+  margin-top: 26px;
+  padding: 22px 24px;
+  background: rgba(255,255,255,0.14);
+  border: 2px solid rgba(255, 204, 128, 0.75);
+  border-radius: 14px;
+  backdrop-filter: blur(2px);
+}
+.beginner-intro-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffd89a;
+  margin-bottom: 8px;
+}
+.beginner-intro-icon { font-size: 1.5rem; }
+.beginner-intro-sub {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.beginner-intro-sub strong { color: #ffd89a; }
+.beginner-intro-btns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.beginner-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: left;
+  transition: all 0.2s;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100%;
+}
+.beginner-btn:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+.beginner-btn .btn-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1.45;
+}
+.beginner-btn .btn-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #ffcc80;
+  letter-spacing: 0.04em;
+}
+.beginner-btn .btn-title {
+  font-size: 1.0rem;
+  font-weight: 700;
+}
+.beginner-btn .btn-dsc {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+.yt-btn .yt-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ff3b30;
+  color: white;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(255,59,48,0.45);
+}
+.primer-btn {
+  background: linear-gradient(135deg, rgba(230,126,34,0.28) 0%, rgba(255,204,128,0.18) 100%);
+  border-color: rgba(255,204,128,0.55);
+}
+.primer-btn .primer-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e67e22;
+  color: white;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(230,126,34,0.45);
+}
+
+/* ===== Primer特別ページ（page-25）===== */
+.primer-header {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%) !important;
+}
+.primer-badge {
+  background: white !important;
+  color: #d35400 !important;
+}
+
+.primer-why {
+  margin: 16px 0 24px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #fff8f0 0%, #fff4e6 100%);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+}
+.primer-why h3 {
+  color: #d35400;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+.primer-why p {
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+.primer-why .misunderstand-list {
+  margin: 10px 0;
+  padding: 12px 14px 12px 30px;
+  background: #fbeae7;
+  border-left: 4px solid #c0392b;
+  border-radius: 6px;
+}
+.primer-why .misunderstand-list li {
+  margin-bottom: 4px;
+  color: #922b21;
+  font-weight: 500;
+}
+.primer-video-hint {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #ebf4fa;
+  border-left: 4px solid var(--primary);
+  border-radius: 6px;
+  font-size: 0.92rem;
+}
+
+.primer-h2 {
+  color: var(--primary-dark);
+  font-size: 1.35rem;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  background: linear-gradient(90deg, #ebf4fa 0%, transparent 100%);
+  border-left: 5px solid var(--primary);
+  border-radius: 0 6px 6px 0;
+}
+
+.primer-fig {
+  margin: 18px 0;
+  text-align: center;
+}
+.primer-fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+.primer-fig figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* EBMの5A表示 */
+.primer-5a {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+.a-step {
+  background: white;
+  padding: 12px 14px 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.a-step .a-num {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 26px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.a-step .a-en {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+/* EBM 3原則表示 */
+.principle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+.principle {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 14px;
+  align-items: center;
+  background: white;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+}
+.principle .p-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.principle .p-body {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* SR 6ステップ */
+.sr-steps {
+  margin: 14px 0 20px 24px;
+  line-height: 1.9;
+}
+.sr-steps li { margin-bottom: 6px; }
+.sr-steps .accent { color: var(--accent); }
+
+/* 確実性比較ボックス */
+.compare-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 18px 0;
+}
+.compare-left, .compare-right {
+  padding: 14px 16px;
+  border-radius: 10px;
+  line-height: 1.7;
+  font-size: 0.93rem;
+}
+.compare-left {
+  background: #fbeae7;
+  border: 1px solid #c0392b;
+  border-left: 5px solid #c0392b;
+}
+.compare-right {
+  background: #eafbe7;
+  border: 1px solid #27ae60;
+  border-left: 5px solid #27ae60;
+}
+.low-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  background: #c0392b;
+  color: white;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+.high-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  background: #27ae60;
+  color: white;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+@media (max-width: 700px) {
+  .compare-box { grid-template-columns: 1fr; }
+}
+
+/* GRADE 5要因 */
+.grade-5factors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+.g5-item {
+  background: white;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.g5-item .g5-num {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  margin-right: 6px;
+}
+.g5-item .g5-desc {
+  display: block;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* 4パターン表 */
+.four-pattern {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 14px 0 20px;
+}
+.fp-row {
+  display: grid;
+  grid-template-columns: 80px 1.3fr 1.3fr 1.2fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.fp-red { background: #fbeae7; border-left: 5px solid #c0392b; }
+.fp-orange { background: #fff4e6; border-left: 5px solid #e67e22; }
+.fp-green { background: #eafbe7; border-left: 5px solid #27ae60; }
+.fp-case { font-size: 0.9rem; color: var(--text-light); }
+.fp-judge { text-align: center; }
+.fp-red .fp-judge { color: #922b21; }
+.fp-orange .fp-judge { color: #a04000; }
+.fp-green .fp-judge { color: #1e8449; }
+@media (max-width: 760px) {
+  .fp-row { grid-template-columns: 1fr; gap: 4px; padding: 10px 12px; }
+  .fp-row > div { padding: 2px 0; }
+}
+
+/* Primer最終まとめボックス */
+.primer-final {
+  margin: 18px 0;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #ebf4fa 0%, #fff8f0 100%);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+}
+.primer-final h3 {
+  color: var(--primary-dark);
+  margin: 10px 0 6px;
+  font-size: 1.05rem;
+}
+.primer-final ul {
+  margin: 4px 0 10px 22px;
+  line-height: 1.8;
+}
+.primer-punchline {
+  margin-top: 18px;
+  padding: 16px 20px;
+  background: var(--accent);
+  color: white;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
+}
+.primer-punchline .sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.88rem;
+  opacity: 0.92;
+  font-weight: 400;
+}
+
+.primer-footer-note {
+  margin-top: 26px;
+  padding: 12px 16px;
+  background: #f9fbfd;
+  border-left: 4px solid var(--primary);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+@media (max-width: 620px) {
+  .primer-5a { grid-template-columns: 1fr; }
+  .principle { grid-template-columns: 50px 1fr; }
+  .principle .p-num { width: 38px; height: 38px; font-size: 1.1rem; }
+  .primer-h2 { font-size: 1.15rem; }
+}
+
+/* TOCのPrimerボタン（初学者向け強調） */
+.toc-btn.primer-toc {
+  background: linear-gradient(135deg, #fff4e6 0%, #ffe8d6 100%);
+  border-left: 4px solid var(--accent);
+}
+.toc-btn.primer-toc:hover {
+  background: linear-gradient(135deg, #ffe8d6 0%, #ffd9b3 100%);
+}
+.toc-btn.primer-toc.active {
+  background: var(--accent);
+  color: white;
+}
+.toc-btn.primer-toc.active .toc-num {
+  background: white;
+  color: var(--accent);
+}
+.toc-btn.primer-toc .toc-num {
+  background: var(--accent);
+  color: white;
+  font-size: 0.9rem;
+}

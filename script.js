@@ -31,11 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function showPage(index) {
     pages.forEach((p, i) => {
       p.classList.toggle('active', i === index);
-      if (tocBtns[i]) tocBtns[i].classList.toggle('active', i === index);
+    });
+    // TOCボタンはdata-idxで照合（配列順序に依存しない）
+    tocBtns.forEach(btn => {
+      const btnIdx = parseInt(btn.getAttribute('data-idx'));
+      btn.classList.toggle('active', btnIdx === index);
     });
 
-    // プログレスバー更新
-    const progress = ((index + 1) / pages.length) * 100;
+    // プログレスバー更新（Primer=25は表紙進捗とみなす）
+    const visibleIdx = (index === 25) ? 0 : index;
+    const progress = ((visibleIdx + 1) / 25) * 100;
     if (progressFill) progressFill.style.width = `${progress}%`;
 
     // スクロールをトップへ

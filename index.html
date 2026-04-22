@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
-<link rel="stylesheet" href="style.css?v=3.0">
-<link rel="stylesheet" href="style-cpgsr.css?v=3.0">
+<link rel="stylesheet" href="style.css?v=4.0">
+<link rel="stylesheet" href="style-cpgsr.css?v=4.0">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -38,6 +38,9 @@
     <div class="sidebar-header">目次 / Table of Contents</div>
     <ul class="toc-list" id="tocList">
       <li class="toc-item"><button class="toc-btn active" data-idx="0"><span class="toc-num">0</span><span class="toc-text">表紙<span class="en">Cover</span></span></button></li>
+
+      <li class="toc-section">📚 初学者向け（Primer）</li>
+      <li class="toc-item"><button class="toc-btn primer-toc" data-idx="25"><span class="toc-num">📚</span><span class="toc-text">EBM・SR・CPG 徹底解説<span class="en">Beginner's Primer</span></span></button></li>
 
       <li class="toc-section">Part I — EBM・GRADEの全体像</li>
       <li class="toc-item"><button class="toc-btn" data-idx="1"><span class="toc-num">1</span><span class="toc-text">EBMとCPG・SRの読み方<span class="en">EBM & Reading CPGs/SRs</span></span></button></li>
@@ -93,6 +96,43 @@
           日々の診療で <strong>ガイドラインを読み、SRを参照し、推奨を目の前の患者に適用する</strong> ために必要な知識を、Gordon Guyatt先生らのUsers' Guidesシリーズ、GRADE最新方法論、閾値・MID、信頼できるCPGの6つの質問、AMSTAR 2／PRISMA 2020までを1つにまとめた読み手専用のサイトです。<br><br>
           本サイトは<strong>作成者向け</strong>のGRADEハンドブックとは別に、<strong>読み手の視点</strong>で「どこを見るか・どう判断するか・どう現場に持ち込むか」に特化しています。
         </div>
+        <!-- ===== 初学者向け導入ブロック（v1.2追加） ===== -->
+        <div class="beginner-intro-block">
+          <div class="beginner-intro-title">
+            <span class="beginner-intro-icon">🎓</span>
+            <span>初学者の方は、まず次の動画と解説を学んでください</span>
+          </div>
+          <div class="beginner-intro-sub">
+            本サイトの各章に入る前に、<strong>EBM・システマティックレビュー（SR）・診療ガイドライン（CPG）の関係</strong>を正しく理解しておくことが、<strong>信頼できる医療情報を見極める目</strong>を養うための第一歩です。
+          </div>
+          <div class="beginner-intro-btns">
+            <a class="beginner-btn yt-btn" href="https://www.youtube.com/watch?v=7UJZLG49ba8&t=1s" target="_blank" rel="noopener">
+              <span class="yt-mark">▶</span>
+              <span class="btn-body">
+                <span class="btn-label">動画①（解説編）</span>
+                <span class="btn-title">EBM・システマティックレビュー・診療ガイドラインとは</span>
+                <span class="btn-dsc">エビデンスの確実性の評価方法まで一気通貫で解説</span>
+              </span>
+            </a>
+            <a class="beginner-btn yt-btn" href="https://www.youtube.com/watch?v=pAr7upG01YA" target="_blank" rel="noopener">
+              <span class="yt-mark">▶</span>
+              <span class="btn-body">
+                <span class="btn-label">動画②（会話編 54分）</span>
+                <span class="btn-title">診療ガイドライン作成方法を通じて詳しく学ぶ</span>
+                <span class="btn-dsc">定義の"なぜ？"から作成・パネリストの役割まで</span>
+              </span>
+            </a>
+            <button class="beginner-btn primer-btn" onclick="showPage(25)">
+              <span class="primer-mark">📚</span>
+              <span class="btn-body">
+                <span class="btn-label">解説ページ（本サイト内）</span>
+                <span class="btn-title">初学者向け：EBM・SR・診療ガイドラインの関係について徹底解説</span>
+                <span class="btn-dsc">なぜ学ぶ必要があるのか — 信頼できる医療情報を見極める目の養い方</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
         <div class="reader-links">
           <a class="reader-link" href="https://minds.jcqhc.or.jp/" target="_blank" rel="noopener">
             <span class="icn">📘</span><span><span class="ttl">Minds（日本のCPG）</span><br><span class="dsc">公益財団法人日本医療機能評価機構</span></span>
@@ -2066,19 +2106,411 @@
       </div>
     </div>
 
+    <!-- ============ 初学者向け徹底解説（特別ページ / v1.2追加） ============ -->
+    <div class="page" id="page-25">
+      <div class="page-header primer-header">
+        <div class="chapter-badge primer-badge">📚 Primer / 初学者向け徹底解説</div>
+        <h1>EBM・システマティックレビュー・診療ガイドラインの関係</h1>
+        <div class="en-title">Why Every Clinician Must Understand EBM, SR, and CPG — Before Reading Any Guideline</div>
+      </div>
+      <div class="page-body">
+
+        <div class="primer-why">
+          <h3>🎯 なぜ、この解説を最初に読むのか？</h3>
+          <p>
+            本サイトの本体（Ch1〜Ch24）は、<strong>「すでにEBM・SR・CPGの定義を理解している人」</strong>が、診療ガイドラインやシステマティックレビューを<strong>「読みこなす」</strong>ために書かれています。しかし、実際には多くの医療者が以下のような誤解を抱えたまま診療情報を利用しています：
+          </p>
+          <ul class="misunderstand-list">
+            <li>❌ 「システマティックレビューならエビデンスレベルが高い」</li>
+            <li>❌ 「ランチョンセミナーで有名な先生が"EBMに基づく"と言ったから信頼できる」</li>
+            <li>❌ 「診療ガイドラインなのだから、どれを選んでも大差ない」</li>
+            <li>❌ 「AIがPubMedを検索してまとめてくれるから、それで十分」</li>
+          </ul>
+          <p>
+            こうした誤解が放置されると、<strong>患者に不利益を与える判断</strong>が日常的に起こり得ます。本ページでは、先生ご自身が作成されたキースライド（16枚）に沿って、EBM・SR・CPG の<strong>定義とその"なぜ"</strong>、そして<strong>信頼できる医療情報を見極める目</strong>の養い方を解説します。
+          </p>
+          <p class="primer-video-hint">
+            👉 まず動画（<a href="https://www.youtube.com/watch?v=7UJZLG49ba8&t=1s" target="_blank" rel="noopener">解説編</a>・<a href="https://www.youtube.com/watch?v=pAr7upG01YA" target="_blank" rel="noopener">会話編</a>）を視聴し、その後で本ページをじっくり読むと、理解が定着します。
+          </p>
+        </div>
+
+        <!-- ============ セクション1：医学情報の信頼性 ============ -->
+        <h2 class="primer-h2">1. 医学情報の信頼性 — あなたはどちらを信頼する？</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-01.jpg" alt="医学情報の信頼性：AIとPubMedどちらを信頼するか">
+          <figcaption>スライド① 医学情報の信頼性：AIとPubMedの比較</figcaption>
+        </figure>
+
+        <div class="key-message">
+          <strong>問い：</strong>(1) AIで調べた「（ほぼ）ハルシネーションがない情報」と、(2) 専門医がPubMedで調べた「反対する論文がないか確認済みの情報」— <strong>あなたはどちらを信頼して患者に適用しますか？</strong>
+        </div>
+
+        <p>
+          ポイントは「<strong>ほぼ</strong>」という言葉です。医療において、1000人に1人でも誤った情報で不利益を被る患者が出れば、それは許容できません。AIは補助ツールとして有用ですが、<strong>最終的な信頼性の判断は、方法論を理解した人間にしかできない</strong>ことを、まず認識してください。
+        </p>
+
+        <!-- ============ セクション2：基本知識の必要性 ============ -->
+        <h2 class="primer-h2">2. 「知っている」「使っている」ではダメな理由</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-02.jpg" alt="EBM・SR・CPGの定義を理解していますか？">
+          <figcaption>スライド② 基本知識：定義を理解しているか？</figcaption>
+        </figure>
+
+        <div class="warning-box">
+          <strong>⚠️ 耳が痛い質問：</strong>
+          <ul style="margin-top:6px;">
+            <li>「EBM？ 知っているよ」 → 5ステップは言える。でも<strong>3つの基本原則</strong>は？</li>
+            <li>「システマティックレビュー？ 読んだことあるよ」 → では、<strong>なぜ系統的検索が必要か</strong>、説明できますか？</li>
+            <li>「診療ガイドライン？ 使っているよ」 → その CPG の<strong>推奨の強さの根拠</strong>、把握していますか？</li>
+          </ul>
+        </div>
+
+        <p>
+          これらの「<strong>なぜ</strong>」が答えられないまま臨床情報を使うと、都合の良い情報だけを無意識に選んでしまい、結果として患者に最適でない医療を提供することになります。以下、1つずつ紐解いていきましょう。
+        </p>
+
+        <!-- ============ セクション3：EBMとは ============ -->
+        <h2 class="primer-h2">3. EBMの定義 — Sackett 1996</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-03.jpg" alt="EBMの定義：Sackett 1996">
+          <figcaption>スライド③ EBMの定義（Sackett et al. BMJ 1996）</figcaption>
+        </figure>
+
+        <div class="example-box">
+          <strong>EBMの定義（Sackett 1996）</strong><br>
+          「根拠に基づく医療（EBM）とは、個々の患者のケアに関する意思決定において、現在得られる最良の根拠を、<strong>良心的に・明示的に・思慮深く</strong>用いることである。」
+        </div>
+
+        <p>
+          この定義のキーワードは3つ：「<strong>良心的</strong>（conscientious）」「<strong>明示的</strong>（explicit）」「<strong>思慮深く</strong>（judicious）」。これらは後で学ぶ<strong>透明性</strong>・<strong>再現性</strong>・<strong>価値観の統合</strong>に直結します。
+        </p>
+
+        <!-- ============ セクション4：EBMの5ステップ ============ -->
+        <h2 class="primer-h2">4. EBMの5ステップ（Evidence cycle: 5つのA）</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-04.jpg" alt="EBMの5Steps (5A cycle)">
+          <figcaption>スライド④ EBMの5ステップ（5つのA）</figcaption>
+        </figure>
+
+        <div class="primer-5a">
+          <div class="a-step"><span class="a-num">1</span><span class="a-en">Ask</span>疑問の定式化（PICO）</div>
+          <div class="a-step"><span class="a-num">2</span><span class="a-en">Acquire</span>エビデンスの入手</div>
+          <div class="a-step"><span class="a-num">3</span><span class="a-en">Appraise</span>批判的吟味（妥当性の評価）</div>
+          <div class="a-step"><span class="a-num">4</span><span class="a-en">Apply</span>患者への適用</div>
+          <div class="a-step"><span class="a-num">5</span><span class="a-en">Assess</span>プロセスの自己評価</div>
+        </div>
+
+        <p>
+          <strong>5ステップは多くの医療者が知っています。</strong>しかし、「5ステップさえ回していれば EBM」と誤解している人が大半です。本当に重要なのは、次に説明する<strong>3つの基本原則</strong>です。
+        </p>
+
+        <!-- ============ セクション5：EBMの3つの基本原則 ============ -->
+        <h2 class="primer-h2">5. ⭐ EBMの3つの基本原則（意外に知られていない）</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-05.jpg" alt="EBMの3つの基本原則">
+          <figcaption>スライド⑤ EBMの3つの基本原則（Users' Guides 3rd ed. 2015）</figcaption>
+        </figure>
+
+        <div class="principle-list">
+          <div class="principle">
+            <div class="p-num">1</div>
+            <div class="p-body"><strong>最適な臨床決断には、入手可能な最適のエビデンス、理想的にはシステマティックレビューのエビデンスを必要とする。</strong></div>
+          </div>
+          <div class="principle">
+            <div class="p-num">2</div>
+            <div class="p-body"><strong>EBMは、エビデンスが信頼できるかどうか（診断検査・患者の予後・治療選択肢についてどれほど確信を置けるか）を提供する。</strong></div>
+          </div>
+          <div class="principle">
+            <div class="p-num">3</div>
+            <div class="p-body"><strong>エビデンスだけでは、臨床決断をするのに決して十分ではない。</strong>（患者の価値観・意向・コストが必要）</div>
+          </div>
+        </div>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-06.jpg" alt="EBMの3つの基本原則 追加情報">
+          <figcaption>スライド⑥ EBMの3つの基本原則：追加情報（検索の実践）</figcaption>
+        </figure>
+
+        <div class="reader-tips">
+          <h4>🎓 この原則から導かれる、実践上の重要ポイント</h4>
+          <ul>
+            <li>EBMにおける検索は<strong>効率重視</strong>。まずSR、なければ非RCT・症例報告も活用。</li>
+            <li>信頼性の評価は<strong>チェックシート</strong>で迅速に行えばよい（全てを精読する必要はない）。</li>
+            <li>SRを検索するなら<strong>PubMedで直接</strong>。AIよりハルシネーションがなく確実。</li>
+            <li>近年は信頼できる CPG が増えたため、<strong>SRの前に CPG を参照する</strong>ことも多い（ただし信頼できない CPG にも注意）。</li>
+          </ul>
+        </div>
+
+        <!-- ============ セクション6：CPGの定義 ============ -->
+        <h2 class="primer-h2">6. 診療ガイドライン（CPG）の世界的定義</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-07.jpg" alt="診療ガイドラインの定義 NAM">
+          <figcaption>スライド⑦ 診療ガイドラインの定義（Health and Medicine Division, National Academies / 旧IOM）</figcaption>
+        </figure>
+
+        <div class="example-box">
+          <strong>CPGの定義</strong><br>
+          「診療ガイドラインとは、<strong>システマティックレビューによって得られたエビデンス</strong>と、<strong>代替的なケア選択肢の利益と害の評価</strong>に基づいて、<strong>患者ケアを最適化することを意図した推奨</strong>を含む記述である。」
+        </div>
+
+        <p>
+          この定義には3つの必須要素が含まれます：<br>
+          (a) <strong>システマティックレビュー</strong>、(b) <strong>利益と害の評価</strong>、(c) <strong>推奨</strong>。<br>
+          この3要素のいずれかが欠落している文書は、<strong>世界標準の「診療ガイドライン」ではありません</strong>。残念ながら日本国内の学会作成CPGには、定義を満たしていないものも少なくありません [U17][C4]。
+        </p>
+
+        <!-- ============ セクション7：SRの定義 ============ -->
+        <h2 class="primer-h2">7. システマティックレビュー（SR）の定義</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-08.jpg" alt="システマティックレビューの定義">
+          <figcaption>スライド⑧ SRの定義（Cochrane Handbook 2023）</figcaption>
+        </figure>
+
+        <div class="example-box">
+          <strong>SRの定義（Cochrane Handbook）</strong><br>
+          「システマティックレビューとは、<strong>特定の臨床的な問い（リサーチ・クエスチョン）</strong>に答えるため、<strong>あらかじめ定められた適格基準</strong>を満たすすべての実証的エビデンス（研究）を、<strong>同定・評価・統合</strong>しようとするものである。」…<strong>再現性がある！</strong>
+        </div>
+
+        <h4>SRが従うべき6ステップ</h4>
+        <ol class="sr-steps">
+          <li><strong>明確に設定された問い</strong>：PICO/PECO形式</li>
+          <li><strong>事前に定めた計画（プロトコル）</strong>：透明性</li>
+          <li><strong>網羅的・系統的な文献検索</strong></li>
+          <li><strong>客観的な研究の選択</strong></li>
+          <li><strong>エビデンスの確実性の評価</strong> ⇒ <strong class="accent">GRADEアプローチ</strong></li>
+          <li><strong>結果の統合（メタ分析）と要約</strong></li>
+        </ol>
+
+        <!-- ============ セクション8：エビデンスの確実性の本質 ============ -->
+        <h2 class="primer-h2">8. ⭐⭐ エビデンスの確実性とは — 同じ"1.62"でも確実性は違う</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-09.jpg" alt="同じ1.62でも確実性が違う">
+          <figcaption>スライド⑨ 2つのメタ分析：どちらの1.62が確実性が高い？</figcaption>
+        </figure>
+
+        <p>
+          左右の図は、いずれも4つの研究を統合したメタ分析の結果 <strong>1.62</strong> を示しています。しかし、<strong>研究結果のバラツキ</strong>が全く違います。
+        </p>
+
+        <div class="compare-box">
+          <div class="compare-left">
+            <strong>左：研究結果のバラツキ大</strong><br>
+            4つの研究結果が大きく分散 → メタ分析の 1.62 は<strong>偶然の産物かもしれない</strong> → <span class="low-tag">確実性 低</span>
+          </div>
+          <div class="compare-right">
+            <strong>右：研究結果が揃っている</strong><br>
+            4つの研究結果がほぼ一致 → メタ分析の 1.62 は<strong>本当に 1.62 に近い</strong> → <span class="high-tag">確実性 高</span>
+          </div>
+        </div>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-10.jpg" alt="エビデンスの確実性とは">
+          <figcaption>スライド⑩ エビデンスの確実性（certainty of the evidence）の定義</figcaption>
+        </figure>
+
+        <div class="key-message">
+          <strong>エビデンスの確実性の定義：</strong>「データから計算した<strong>効果推定値</strong>が、いろいろな要因を考えても、<strong>本当に意味のある範囲に入っているか</strong>？ そして、<strong>臨床的意味がある閾値（MIDと言います）</strong>を、自信を持ってクリアしていると言えるか？」
+        </div>
+
+        <!-- ============ セクション9：確実性を下げる5要因 ============ -->
+        <h2 class="primer-h2">9. エビデンスの確実性を下げる5要因（GRADEアプローチ）</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-11.jpg" alt="確実性を下げる5要因">
+          <figcaption>スライド⑪ 確実性を下げる5要因がまとめられた（GRADEアプローチ）</figcaption>
+        </figure>
+
+        <div class="grade-5factors">
+          <div class="g5-item"><span class="g5-num">1</span><strong>研究の限界</strong> (limitation, risk of bias)<br><span class="g5-desc">そのアウトカムの結果を構成する論文にバイアスが多く存在していたら…</span></div>
+          <div class="g5-item"><span class="g5-num">2</span><strong>非一貫性</strong> (inconsistency)<br><span class="g5-desc">論文間で結果が異なっていれば…</span></div>
+          <div class="g5-item"><span class="g5-num">3</span><strong>非直接性</strong> (indirectness)<br><span class="g5-desc">最初に想定した臨床の疑問の患者層と、選択した論文の患者層が異なっていれば…</span></div>
+          <div class="g5-item"><span class="g5-num">4</span><strong>不精確さ</strong> (imprecision)<br><span class="g5-desc">症例数の小さな、あまり精確でないデータばかりなら…</span></div>
+          <div class="g5-item"><span class="g5-num">5</span><strong>出版バイアス</strong> (publication bias)<br><span class="g5-desc">有意差がなかったからと報告されなかった論文が、たくさんありそうな状況だったら…</span></div>
+        </div>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-12.jpg" alt="確実性の用語変遷">
+          <figcaption>スライド⑫ エビデンスの確実性の用語の変遷</figcaption>
+        </figure>
+
+        <div class="warning-box">
+          <strong>⚠️ 用語の変遷に注意：</strong>かつては「エビデンスレベル」「エビデンスの質」「エビデンスの強さ」と様々に呼ばれていましたが、現在は「<strong>エビデンスの確実性（certainty of the evidence）</strong>」が世界標準です。<strong>「エビデンスレベル」という用語を使う人は、概念を理解していない可能性</strong>が高いので要注意。2025年現在、日本のMindsが「エビデンスの強さ」を併用しているのが混乱の原因となっています。
+        </div>
+
+        <!-- ============ セクション10：SRの質 vs エビデンスの確実性 ============ -->
+        <h2 class="primer-h2">10. ⭐⭐⭐ 最重要：SRの質と、エビデンスの確実性は別物</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-13.jpg" alt="従来のSRと最新のSRの違い">
+          <figcaption>スライド⑬ 従来のSR vs 最新のSR（エビデンスの確実性が必須）</figcaption>
+        </figure>
+
+        <p>
+          従来のSRは「系統的・網羅的に検索」＋「メタ分析」の2輪だけでした。しかし<strong>最新のSR</strong>は、そこに必ず「<strong>エビデンスの確実性の評価</strong>」が加わります（図の★印）。メタ分析ができない定性的SRでも、確実性の評価は必須です。
+        </p>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-14.jpg" alt="SRの質 vs エビデンスの確実性">
+          <figcaption>スライド⑭ ⭐必ず理解して欲しいこと — 4パターンの分岐</figcaption>
+        </figure>
+
+        <div class="four-pattern">
+          <div class="fp-row fp-red">
+            <div class="fp-case"><strong>Case A</strong></div>
+            <div class="fp-sr">SR自体がしっかり作られていない</div>
+            <div class="fp-ev">—</div>
+            <div class="fp-judge"><strong>❌ 使ってはいけない</strong></div>
+          </div>
+          <div class="fp-row fp-orange">
+            <div class="fp-case"><strong>Case B</strong></div>
+            <div class="fp-sr">SRはしっかり作られている</div>
+            <div class="fp-ev">中のエビデンスの確実性が<strong>低い</strong></div>
+            <div class="fp-judge"><strong>⚠️ 使うが注意が必要</strong></div>
+          </div>
+          <div class="fp-row fp-green">
+            <div class="fp-case"><strong>Case C</strong></div>
+            <div class="fp-sr">SRはしっかり作られている</div>
+            <div class="fp-ev">中のエビデンスの確実性も<strong>高い</strong></div>
+            <div class="fp-judge"><strong>✅ 十分使える</strong></div>
+          </div>
+        </div>
+
+        <div class="warning-box" style="margin-top:14px;">
+          <strong>⚠️ 講演会の要注意フレーズ：</strong>「システマティックレビューなのでエビデンスレベルが高い」— これは<strong>概念が分かっていない発言</strong>です。SR の質が高くても、中のエビデンスの確実性は高い場合も低い場合もあります。<strong>SRの作り方の質</strong>と<strong>中の効果推定値の確実性</strong>は完全に別物として評価する必要があります。
+        </div>
+
+        <!-- ============ セクション11：解説文の批判的吟味 ============ -->
+        <h2 class="primer-h2">11. 診療ガイドラインの解説文 — 批判的吟味の実例</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-15.jpg" alt="ガイドライン解説文の批判的吟味例">
+          <figcaption>スライド⑮ よくあるCPGの解説文の問題点</figcaption>
+        </figure>
+
+        <div class="example-box">
+          <strong>例1（NG）：</strong>「SR1では生存率が延長され、RCT1でも生存率が延長され、RCT2では再発率が低かった…」<br>
+          <strong>問題：</strong>SR1はRCT1・RCT2を含んでいるはず。なのに並列で並べるのは<strong>重複カウント</strong>。どのRCTが含まれているか不明、SRの質・エビデンスの確実性も不明。
+        </div>
+        <div class="example-box">
+          <strong>例2（NG）：</strong>「SR1では生存率延長、SR2では再発率低下、SR3では生存率同等…」<br>
+          <strong>問題：</strong>各SRで使われているRCTが異なるのか同一なのか、SRが丁寧に作られているのか、メタ分析結果のエビデンスの確実性も何も分からない。
+        </div>
+
+        <p>
+          <strong>このような解説文は、CPG としての信頼性を大きく損ないます。</strong>本サイトの Ch16（信頼できる CPG の6つの質問）・Ch18（AMSTAR 2）で、こうした CPG・SR を系統的に判定する方法を学びます。
+        </p>
+
+        <!-- ============ セクション12：まとめ ============ -->
+        <h2 class="primer-h2">12. まとめ — 信頼できる医療情報を見極める目を養うために</h2>
+
+        <figure class="primer-fig">
+          <img src="images/beginner-16.jpg" alt="医学情報の信頼性まとめ">
+          <figcaption>スライド⑯ 医学情報の信頼性：まとめ（Lima-Mirza-Guyatt 2023）</figcaption>
+        </figure>
+
+        <div class="primer-final">
+          <h3>🎯 患者にとって望ましい情報を考えると…</h3>
+          <ul>
+            <li>最新の情報が欲しい</li>
+            <li>偏ってない情報が欲しい</li>
+            <li>信頼性が高い情報が欲しい</li>
+            <li>研究段階でなく、臨床で使える情報が欲しい</li>
+          </ul>
+
+          <h3>→ 信頼できる診療ガイドライン、なければ、自分で信頼できる情報を探す</h3>
+
+          <h3>信頼できる情報を探すために：</h3>
+          <ul>
+            <li>患者も AI で調べる時代で、同じレベルではプロではない</li>
+            <li>ハルシネーションは「ゼロ」でなければならない</li>
+            <li>エビデンスの確実性の評価が自分でできなければならない（AI では不可能）</li>
+            <li>もっとも、AI は有用であり、利用すべきである</li>
+            <li>医学以外の分野では、AI、特に Deep Research が有用</li>
+          </ul>
+
+          <div class="primer-punchline">
+            ⇒ <strong>EBM・システマティックレビュー・診療ガイドラインの意味を理解していなければならない。</strong><br>
+            <span class="sub">本サイトの Ch1〜Ch24 は、このための最短ルートです。</span>
+          </div>
+        </div>
+
+        <!-- ============ ロードマップ ============ -->
+        <h2 class="primer-h2">📍 次のステップ：本サイトのどこから読むか</h2>
+
+        <div class="roadmap">
+          <h4>🗺️ 本サイトの学習ロードマップ（Primer読了後）</h4>
+          <div class="roadmap-steps">
+            <div class="roadmap-step" onclick="showPage(1)">
+              <span class="rs-ch">Ch1</span>
+              <span class="rs-title">EBMとCPG/SRの読み方</span>
+              <div class="rs-dsc">本Primerの内容を、臨床的視点で再構成＋文書構造マップ</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(2)">
+              <span class="rs-ch">Ch2</span>
+              <span class="rs-title">GRADE概要</span>
+              <div class="rs-dsc">G-R-A-D-E を1文字ずつ分解して学ぶ</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(3)">
+              <span class="rs-ch">Ch3</span>
+              <span class="rs-title">確実性の4段階</span>
+              <div class="rs-dsc">高・中・低・非常に低いの判定基準と動詞（results in / likely / may）</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(16)">
+              <span class="rs-ch">Ch16</span>
+              <span class="rs-title">⭐ 信頼できるCPGの6つの質問</span>
+              <div class="rs-dsc">Guyatt 2023 — 目の前の CPG を6問で判定</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(18)">
+              <span class="rs-ch">Ch18</span>
+              <span class="rs-title">AMSTAR 2（16項目）</span>
+              <div class="rs-dsc">SR の質を系統的に評価するチェックリスト</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(7)">
+              <span class="rs-ch">Ch7</span>
+              <span class="rs-title">⭐ 閾値と MID</span>
+              <div class="rs-dsc">効果推定値が「臨床的に意味があるか」を判定</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="primer-footer-note">
+          <strong>📖 参考文献：</strong>
+          [U12] Murad et al. JAMA 2014（SRの読み方）／
+          [U16] Brignardello-Petersen et al. JAMA 2021（CPGの解釈）／
+          [U17] Lima-Mirza-Guyatt 2023（信頼できるCPG 6質問）／
+          [G1] Djulbegovic & Guyatt Lancet 2017（EBM 25年総括）<br>
+          Sackett DL, et al. BMJ 1996;312:71-72（EBM原典）／
+          Cochrane Handbook v6.4（2023）
+        </div>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(0)">← 表紙へ戻る</button>
+          <button onclick="showPage(1)">Ch1 へ進む →</button>
+        </div>
+      </div>
+    </div>
+
   </main>
 
 </div><!-- /.app-body -->
 
 <!-- スクリプト -->
-<script src="coreGRADE_utils.js?v=3.0"></script>
-<script src="script.js?v=3.0"></script>
-<script src="js/glossary.js?v=3.0"></script>
-<script src="js/references.js?v=3.0"></script>
-<script src="js/mid-explorer.js?v=3.0"></script>
-<script src="js/trustworthy-check.js?v=3.0"></script>
-<script src="js/amstar2.js?v=3.0"></script>
-<script src="js/linkedin-feed.js?v=3.0"></script>
+<script src="coreGRADE_utils.js?v=4.0"></script>
+<script src="script.js?v=4.0"></script>
+<script src="js/glossary.js?v=4.0"></script>
+<script src="js/references.js?v=4.0"></script>
+<script src="js/mid-explorer.js?v=4.0"></script>
+<script src="js/trustworthy-check.js?v=4.0"></script>
+<script src="js/amstar2.js?v=4.0"></script>
+<script src="js/linkedin-feed.js?v=4.0"></script>
 
 <!-- ページ切替後のインタラクティブ要素リフレッシュ＋文書構造マップタブ -->
 <script>
