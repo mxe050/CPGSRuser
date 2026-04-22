@@ -14,6 +14,34 @@
 
 ---
 
+## 現在の状態 — v1.3（2026-04-22）
+
+**Guyatt先生のCore GRADE統合＋スマホファーストUX版**。Primer ページ（page-25）を大幅拡充。
+
+### v1.3の追加内容（v1.2からの差分）
+1. **新セクション7本を追加**（既存12セクションの後・まとめの前）：
+   - 13. Core GRADE — Guyatt 2025「GRADE が複雑になりすぎた」という反省
+   - 14. 確実性評価のターゲット選択（Null vs MID 閾値）
+   - 15. 最適情報サイズ（OIS）— 少数症例で大きな効果への警戒
+   - 16. 「Risk of Bias」は「Bias」ではない — 教育的ゲシュタルトの原則
+   - 17. サブグループと背景リスク — 「誰に推奨するか」の科学
+   - 18. エビデンスから推奨へ — 4つの推奨タイプと「強さ」の決定
+   - 19. Guyatt先生Q&A — 実践現場の難問と回答（7問アコーディオン）
+2. **ソース**：Guyatt Q&A（Clarity Research FAQ）／ Guyatt 講演 2025-12 ／ Core GRADE 0-7（BMJ 2025）／ null 近傍時の扱い（Zeng et al. BMJEBM 2025）
+3. **スマホファーストUX改修**：
+   - スティッキーセクションチップナビ（横スクロール・21チップ）で任意セクションにジャンプ
+   - 各セクション末尾に「次 → n. ◯◯」ラウンドボタン（最低高48px）
+   - 右下フローティングFAB（目次へ戻る📍／トップへ戻る↑）Primer active 時のみ表示
+   - Q&A はアコーディオン形式（`<details>`ベース、タップで展開）
+   - タップターゲットは全て最低44×44px 確保
+   - 余白を詰め、フォントは大きく、表・グリッドは1列に折返し
+4. **キャッシュバスター**：`?v=4.0` → `?v=5.0`
+
+### v1.3の追加CSSクラス
+`.primer-sticky-nav` `.primer-nav-chips` `.pn-chip` `.pn-new` `.sec-nav-foot` `.sec-next` `.sec-next-new` `.primer-h2-new` `.guyatt-quote` `.gq-*` `.cg-papers` `.cg-paper` `.target-box` `.target-null` `.target-mid` `.ti-*` `.target-steps` `.ois-calc` `.ois-judgment` `.oj-*` `.rob-example` `.re-*` `.rob-2step` `.r2-*` `.rob-flow` `.rf-step` `.subgroup-box` `.sb-*` `.rec-grid` `.rg-*` `.rec-factors` `.rf-card` `.qa-list` `.qa-item` `.qa-q` `.qa-a` `.qa-icon` `.qa-title` `.primer-fab-wrap` `.primer-fab`
+
+---
+
 ## 現在の状態 — v1.2（2026-04-22）
 
 **初学者向け徹底解説ページ導入版**。本体 Ch1–Ch24 の前段として、EBM・SR・CPG の「なぜ学ぶか」を解説する Primer ページを追加。
@@ -81,7 +109,8 @@ CPGSRuser/
 - `f6eb86c` docs: CONTEXT.md 追加
 - `97c9879` v1.1 ナビゲーション学習システム導入（2026-04-22）
 - `4d3050f` docs: CONTEXT.md v1.1 簡潔化（2026-04-22）
-- v1.2 初学者向け Primer ページ導入（2026-04-22）
+- `cb55f72` v1.2 初学者向け Primer ページ導入（2026-04-22）
+- v1.3 Guyatt Core GRADE統合＋スマホファーストUX（2026-04-22）
 
 ---
 
