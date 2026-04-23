@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
-<link rel="stylesheet" href="style.css?v=5.0">
-<link rel="stylesheet" href="style-cpgsr.css?v=5.0">
+<link rel="stylesheet" href="style.css?v=6.0">
+<link rel="stylesheet" href="style-cpgsr.css?v=6.0">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -41,6 +41,11 @@
 
       <li class="toc-section">📚 初学者向け（Primer）</li>
       <li class="toc-item"><button class="toc-btn primer-toc" data-idx="25"><span class="toc-num">📚</span><span class="toc-text">EBM・SR・CPG 徹底解説<span class="en">Beginner's Primer</span></span></button></li>
+
+      <li class="toc-section">📘 JAMA ユーザーズガイド（要約）</li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26"><span class="toc-num">📘</span><span class="toc-text">Ch22 SR／MAプロセスの信頼性<span class="en">JAMA UG Ch22: SR/MA Process</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="27"><span class="toc-num">📘</span><span class="toc-text">Ch23 SR／MA 結果の理解と適用<span class="en">JAMA UG Ch23: Understanding Results</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="28"><span class="toc-num">📘</span><span class="toc-text">Ch24 ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
 
       <li class="toc-section">Part I — EBM・GRADEの全体像</li>
       <li class="toc-item"><button class="toc-btn" data-idx="1"><span class="toc-num">1</span><span class="toc-text">EBMとCPG・SRの読み方<span class="en">EBM & Reading CPGs/SRs</span></span></button></li>
@@ -133,6 +138,43 @@
           </div>
         </div>
 
+        <!-- ===== JAMA UG 誘導ブロック（v1.4追加） ===== -->
+        <div class="beginner-intro-block" style="background:linear-gradient(135deg,#eaf3f8 0%,#f4f9fc 100%);border-color:#c5dde8;margin-top:20px;">
+          <div class="beginner-intro-title" style="color:#0b3d5c;">
+            <span class="beginner-intro-icon">📘</span>
+            <span>世界標準の読み方フレームワーク — JAMA ユーザーズガイド</span>
+          </div>
+          <div class="beginner-intro-sub" style="color:#2c3e50;">
+            本サイトの中核は、Gordon Guyatt 先生らが編集する <em>JAMA Users' Guides to the Medical Literature</em>（第3版）のフレームワークです。本編の各章はこのガイドの質問を土台に、日本の読者向けに独自に再構成・解説しています。<strong>3つの要約章（Ch22 SR／MAプロセス、Ch23 結果の理解と適用、Ch24 NMA）</strong>は独立ページとして読めます。
+          </div>
+          <div class="beginner-intro-btns">
+            <button class="beginner-btn primer-btn" onclick="showPage(26)" style="border-color:#1a5276;">
+              <span class="primer-mark" style="background:#1a5276;color:white;">📘</span>
+              <span class="btn-body">
+                <span class="btn-label" style="color:#1a5276;">JAMA UG Ch22</span>
+                <span class="btn-title">システマティックレビュー／メタアナリシスのプロセス</span>
+                <span class="btn-dsc">信頼できる SR／MA を見抜く 8 つの質問</span>
+              </span>
+            </button>
+            <button class="beginner-btn primer-btn" onclick="showPage(27)" style="border-color:#1a5276;">
+              <span class="primer-mark" style="background:#1a5276;color:white;">📘</span>
+              <span class="btn-body">
+                <span class="btn-label" style="color:#1a5276;">JAMA UG Ch23</span>
+                <span class="btn-title">SR／MA 結果の理解と適用</span>
+                <span class="btn-dsc">効果量・確実性・ベースラインリスク・NNT への翻訳</span>
+              </span>
+            </button>
+            <button class="beginner-btn primer-btn" onclick="showPage(28)" style="border-color:#1a5276;">
+              <span class="primer-mark" style="background:#1a5276;color:white;">📘</span>
+              <span class="btn-body">
+                <span class="btn-label" style="color:#1a5276;">JAMA UG Ch24</span>
+                <span class="btn-title">ネットワークメタアナリシス</span>
+                <span class="btn-dsc">直接比較がない選択肢どうしを比べるための枠組み</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
         <div class="reader-links">
           <a class="reader-link" href="https://minds.jcqhc.or.jp/" target="_blank" rel="noopener">
             <span class="icn">📘</span><span><span class="ttl">Minds（日本のCPG）</span><br><span class="dsc">公益財団法人日本医療機能評価機構</span></span>
@@ -173,6 +215,19 @@
       <div class="page-body">
         <div class="key-message">
           <strong>要点：</strong>EBM（Evidence-Based Medicine）は25年で「RCTの階層」から「GRADEによる構造化判断」へ進化した [G1]。臨床家は論文を全て読む代わりに、<strong>信頼できるSRとCPGを「読み解く」</strong>ことで、患者の価値観と統合した意思決定を行う。[G1][U12][U16]
+        </div>
+
+        <div class="jama-note">
+          <span class="jn-label">📘 JAMA UG</span>
+          <div class="jn-title">本章と JAMA ユーザーズガイドの関係</div>
+          <p>
+            Gordon Guyatt 先生らが編集する <em>JAMA Users' Guides to the Medical Literature</em> は、個別の論文タイプ（RCT、SR、診断研究、CPG など）ごとに「臨床家が読むときに自問すべき質問」を体系化した標準テキストです。本章で扱う SR／CPG の読み方は、同書 Ch22〜Ch26 に対応します。
+          </p>
+          <ul>
+            <li><strong>SR／MA プロセスの見抜き方</strong> → <a href="#" onclick="showPage(26);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch22 要約ページ</a></li>
+            <li><strong>結果の理解と患者への適用</strong> → <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch23 要約ページ</a></li>
+            <li><strong>直接比較がない選択肢の比較（NMA）</strong> → <a href="#" onclick="showPage(28);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch24 要約ページ</a></li>
+          </ul>
         </div>
 
         <h2>EBMの25年間の進化</h2>
@@ -1167,6 +1222,15 @@
           <strong>要点：</strong>研究の方法論的欠陥により結果が歪む可能性を評価する。RCTは <strong>RoB 2</strong>（Cochrane）、観察研究は<strong>ROBINS-I（介入）</strong>または<strong>ROBINS-E（曝露）</strong>を用いる [G7]。読み手は「どのドメインに問題があり、結果がどちらに歪む可能性があるか」を把握する。
         </div>
 
+        <div class="jama-note">
+          <span class="jn-label">📘 JAMA UG の視点</span>
+          <div class="jn-title">RoB はアウトカムごとに判定する</div>
+          <p>
+            同じ研究でも、<strong>客観的アウトカム</strong>（死亡・画像所見）は盲検化の破綻に比較的頑健、<strong>主観的アウトカム</strong>（疼痛・QOL・患者報告）はバイアスを受けやすい。したがって<strong>アウトカム行ごとに</strong>確実性を下げるかを判断します。JAMA UG Ch22 の「バイアスリスクが低い結果をもたらす可能性が最も高い論文を選ぶためのガイド」と同趣旨。
+          </p>
+          <p>詳細要約は <a href="#" onclick="showPage(26);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch22 ページ</a>。</p>
+        </div>
+
         <h2>RCTのRoB 2 — 5ドメイン</h2>
         <ol>
           <li><strong>無作為化プロセス</strong>：割付隠蔽・背景バランス</li>
@@ -1234,6 +1298,17 @@
           <strong>要点：</strong>研究間で効果推定値が一致しない程度。<strong>説明できない異質性</strong>（heterogeneity）があれば確実性を下げる。[U12]
         </div>
 
+        <div class="jama-note">
+          <span class="jn-label">📘 JAMA UG の視点</span>
+          <div class="jn-title">異質性評価の 3 ステップ</div>
+          <ol>
+            <li><strong>視覚的評価</strong>：フォレストプロット上で点推定値と CI の重なりを目視。「一見して似ているか」が出発点。</li>
+            <li><strong>統計的検定</strong>：Q 検定（p 値）、I² 統計量（%）。I² 50% 以上は実質的異質性の候補。</li>
+            <li><strong>事前仮説に基づくサブグループ解析</strong>：ばらつきの原因を「患者・介入量・追跡期間・研究の質」で説明。事後の探索は仮説生成に留める。</li>
+          </ol>
+          <p>詳細要約は <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch23 ページ</a>。</p>
+        </div>
+
         <h2>読み手が確認する4つの異質性指標</h2>
         <ul>
           <li><strong>点推定値のばらつき</strong>：研究ごとの効果が正負逆になっていないか（森林プロットで目視）</li>
@@ -1286,6 +1361,18 @@
           <strong>要点：</strong>PICO（対象・介入・比較・アウトカム）が、臨床疑問と研究で一致しない程度。<strong>サロゲートアウトカム</strong>を用いた場合も該当する [U17]。Guyatt LinkedInで紹介されたindirectness algorithmは読者にも有用。
         </div>
 
+        <div class="jama-note">
+          <span class="jn-label">📘 JAMA UG の視点</span>
+          <div class="jn-title">非直接性は「4 つの側面」で点検する</div>
+          <ul>
+            <li><strong>患者</strong>：目の前の患者が研究対象からかけ離れていないか</li>
+            <li><strong>介入</strong>：用量・投与経路・実施環境の差</li>
+            <li><strong>対照</strong>：プラセボ対照か、通常診療対照か — 解釈が変わる</li>
+            <li><strong>アウトカム</strong>：真のアウトカムか、代理アウトカム（サロゲート）か</li>
+          </ul>
+          <p>JAMA UG Ch23 の「結果を自分の患者に直接適用できるか」節を参照 → <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">Ch23 要約ページ</a></p>
+        </div>
+
         <h2>4つの非直接性</h2>
         <ol>
           <li><strong>対象集団の非直接性</strong>：研究対象が自分の患者と異なる（年齢、疾患重症度、併存疾患）</li>
@@ -1334,6 +1421,15 @@
 
         <div class="key-message">
           <strong>要点：</strong>信頼区間の幅が広く、臨床的決定が変わるかどうか判定できない状態。<strong>MID（Ch7）</strong>との関係で評価される [U12]。
+        </div>
+
+        <div class="jama-note">
+          <span class="jn-label">📘 JAMA UG の視点</span>
+          <div class="jn-title">精度評価は「CI 両端の臨床判断」で決まる</div>
+          <p>
+            CI の上限と下限の<strong>両方が同じ臨床判断</strong>を支持するなら精度は十分。どちらかが「効果ありなし」の閾値をまたぐなら確実性を 1 段下げ、<strong>両端ともまたぐ</strong>なら 2 段下げる候補になります。加えて、<strong>最適情報サイズ（OIS）</strong>に達していないメタアナリシスは、統計的有意でもランダム誤差の影響が残ります。
+          </p>
+          <p>詳細は <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch23 ページ</a>（2 節「結果の精度を評価する」）。</p>
         </div>
 
         <h2>判定の基本原則</h2>
@@ -1770,6 +1866,17 @@
           <strong>要点：</strong>PRISMA 2020（Page 2021, BMJ）[T2] は、SRを<strong>報告</strong>する際に含めるべき27項目のチェックリスト。AMSTAR 2が方法論品質を評価するのに対し、PRISMAは<strong>報告の透明性</strong>を保証する。
         </div>
 
+        <div class="jama-note">
+          <span class="jn-label">📘 JAMA UG との対応</span>
+          <div class="jn-title">3 つのツールを読者がどう使い分けるか</div>
+          <ul>
+            <li><strong>AMSTAR 2</strong>（16項目）：この SR の「方法論的な質」は信頼できるか？</li>
+            <li><strong>PRISMA 2020</strong>（27項目）：この SR は「十分に報告されている」か？</li>
+            <li><strong>JAMA UG Ch22 チェックリスト</strong>（8 質問）：<strong>結果を信じてよい水準か</strong>を、臨床家の視点で短時間に判定する</li>
+          </ul>
+          <p>JAMA UG は「質問を自分に投げかけながら論文を読む」使い方を想定しており、AMSTAR 2／PRISMA と補完関係にあります。要約は <a href="#" onclick="showPage(26);return false;" style="color:#1a5276;font-weight:700;">Ch22 ページ</a> を参照。</p>
+        </div>
+
         <h2>AMSTAR 2 vs PRISMA 2020</h2>
         <table class="mid-table">
           <thead><tr><th></th><th>AMSTAR 2</th><th>PRISMA 2020</th></tr></thead>
@@ -1831,6 +1938,15 @@
 
         <div class="key-message">
           <strong>要点：</strong>信頼できるCPGの推奨でも、<strong>自分の患者・設定に適用できるか</strong>は別途判定が必要 [U3][U6][U17]。患者特性・医療資源・文脈の違いを考慮する。
+        </div>
+
+        <div class="jama-note">
+          <span class="jn-label">📘 JAMA UG の視点</span>
+          <div class="jn-title">適用可能性の検討は「相対効果 → 絶対効果 → NNT」の翻訳から</div>
+          <p>
+            JAMA UG Ch23 は、SR の結果を自分の患者に使うとき、<strong>ベースラインリスクに応じて絶対効果を計算し直す</strong>ことを強調しています。同じ RR でも、高リスク患者と低リスク患者では NNT が大きく変わり、ベネフィット／ハームのバランスが逆転することもあります。
+          </p>
+          <p>計算の流れ・例示は <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">Ch23 要約ページ</a> の「ベースラインリスク」節を参照。</p>
         </div>
 
         <h2>Applicability評価の4次元</h2>
@@ -1898,6 +2014,35 @@
 
         <div class="key-message">
           <strong>要点：</strong><span class="gloss" data-term="共同意思決定">共同意思決定（SDM）</span>は、医療者と患者が<strong>エビデンスと患者の価値観を統合</strong>して意思決定を行うプロセス。特に<strong>条件付き推奨</strong>では必須 [U16][U17]。
+        </div>
+
+        <div class="jama-note">
+          <span class="jn-label">📘 JAMA UG Ch26 の枠組み</span>
+          <div class="jn-title">推奨のタイプと意思決定の使い分け</div>
+          <p>JAMA UG は推奨の強さを 4 パターンに整理しています。強／条件付き × 推奨／反対 の組み合わせで、患者との対話の密度が変わります。</p>
+          <div class="jama-rec-grid">
+            <div class="jama-rec-card jrc-strong-for">
+              <span class="jrc-tag">強い推奨</span>
+              <div class="jrc-title">ほぼ全員に推奨</div>
+              <p>「just do it」レベル。SDM はエビデンスの要約を簡潔に伝える。</p>
+            </div>
+            <div class="jama-rec-card jrc-weak-for">
+              <span class="jrc-tag">条件付き推奨</span>
+              <div class="jrc-title">多くの患者で推奨だが、価値観次第</div>
+              <p><strong>SDM が必須</strong>。ベネフィット／ハーム／価値観を一緒に検討。</p>
+            </div>
+            <div class="jama-rec-card jrc-weak-against">
+              <span class="jrc-tag">条件付き反対</span>
+              <div class="jrc-title">多くの患者で反対だが、価値観次第</div>
+              <p>SDM で、患者が重視するアウトカム次第では実施を検討。</p>
+            </div>
+            <div class="jama-rec-card jrc-strong-against">
+              <span class="jrc-tag">強い反対</span>
+              <div class="jrc-title">ほぼ全員に反対</div>
+              <p>ハームが明らかで、実施しない旨を伝える。</p>
+            </div>
+          </div>
+          <p style="margin-top:10px;">条件付き推奨（中央の 2 パターン）は、<strong>「推奨をどう使うか」よりも「どう患者に説明するか」</strong>が焦点になります。</p>
         </div>
 
         <h2>SDMの3ステップ</h2>
@@ -2995,6 +3140,21 @@
               <span class="rs-title">⭐ 閾値と MID</span>
               <div class="rs-dsc">効果推定値が「臨床的に意味があるか」を判定</div>
             </div>
+            <div class="roadmap-step" onclick="showPage(26)" style="border-color:#1a5276;background:linear-gradient(135deg,#eaf3f8,#f4f9fc);">
+              <span class="rs-ch" style="background:#1a5276;">📘22</span>
+              <span class="rs-title">JAMA UG Ch22</span>
+              <div class="rs-dsc">SR／MA プロセスを信用できるかを見抜く 8 質問</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(27)" style="border-color:#1a5276;background:linear-gradient(135deg,#eaf3f8,#f4f9fc);">
+              <span class="rs-ch" style="background:#1a5276;">📘23</span>
+              <span class="rs-title">JAMA UG Ch23</span>
+              <div class="rs-dsc">結果の理解と、目の前の患者への適用</div>
+            </div>
+            <div class="roadmap-step" onclick="showPage(28)" style="border-color:#1a5276;background:linear-gradient(135deg,#eaf3f8,#f4f9fc);">
+              <span class="rs-ch" style="background:#1a5276;">📘24</span>
+              <span class="rs-title">JAMA UG Ch24</span>
+              <div class="rs-dsc">ネットワークメタアナリシス（NMA）</div>
+            </div>
           </div>
         </div>
 
@@ -3022,19 +3182,711 @@
       </div>
     </div>
 
+    <!-- ==================================================== -->
+    <!-- ========  page-26: JAMA UG Ch22 SR/MA プロセス  ==== -->
+    <!-- ==================================================== -->
+    <div class="page" id="page-26">
+
+      <div class="jama-page-head">
+        <span class="jph-badge">📘 JAMA UG</span>
+        <div class="jph-title">Ch22 システマティックレビュー／メタアナリシスのプロセス</div>
+        <span class="jph-meta">⏱ 約 12 分</span>
+      </div>
+
+      <p style="font-size:1rem;line-height:1.85;color:#2c3e50;margin:0 0 14px;">
+        JAMA <em>Users' Guides to the Medical Literature</em>（第3版）第22章の枠組みを、独立の解説として整理しました。<strong>この章の目的は「SR／MAというプロセスが、私たちが結論を信じてよい水準で実施されたか」を見抜く視点を持つこと</strong>です。本編の各章（Ch1, Ch8〜12, Ch18, Ch20）と補完的に読むと理解が深まります。
+      </p>
+
+      <!-- 臨床シナリオ -->
+      <div class="jama-scenario">
+        <div class="js-head">🩺 臨床シナリオ</div>
+        <p>
+          心臓手術以外の大手術を控えた<strong>高リスク患者</strong>について、周術期の<span class="jterm">β遮断薬<span class="jterm-en">perioperative β-blocker</span></span>を投与すべきか迷っています。過去のガイドラインは「投与を推奨」としていた時期がありましたが、大規模RCT（POISE）以降、推奨は揺れ動いてきました。<strong>最新のSR／MAを探し、本当に信じてよいのか自分で判断したい</strong> — これが出発点です。
+        </p>
+      </div>
+
+      <h2 class="jama-h2">1. なぜ SR／MA を探すのか — ナラティブレビューとの違い</h2>
+
+      <p style="line-height:1.85;">
+        臨床上の疑問に答えるには、1本のRCTだけでなく、関連するすべての研究を<strong>系統的・再現可能な手順</strong>で集めて統合する必要があります。JAMA UG は SR と従来の「総説（ナラティブレビュー）」の違いを次のように整理しています。
+      </p>
+
+      <div class="jama-compare">
+        <div class="jcmp-box jcmp-bad">
+          <span class="jcmp-title">❌ ナラティブレビュー</span>
+          病気・診断・治療・予後など<strong>広範な主題</strong>を扱うことが多く、著者の視点で文献が取捨選択されがち。1次研究のバイアス評価や統合の手順が<strong>再現可能な形で明示されない</strong>。
+        </div>
+        <div class="jcmp-box jcmp-good">
+          <span class="jcmp-title">✅ システマティックレビュー</span>
+          通常は<strong>焦点を絞った臨床疑問</strong>に答える。検索戦略・適格基準・バイアス評価・統合方法をすべてプロトコルとして事前に定め、<strong>他者が追試できる</strong>形で報告される。
+        </div>
+      </div>
+
+      <h3 class="jama-h3">用語整理</h3>
+      <ul style="line-height:1.9;">
+        <li><span class="jterm">システマティックレビュー <span class="jt-en">SR</span></span>：焦点を絞った臨床疑問を、再現可能な方法で統合する研究のタイプ。</li>
+        <li><span class="jterm">メタアナリシス <span class="jt-en">MA</span></span>：SR のなかで、個別研究の結果を<strong>統計的に統合</strong>して単一の推定値（point estimate）と信頼区間（CI）を算出する工程。統計的統合を<strong>行わない SR も正当</strong>（統合不可能な場合、ナラティブ統合に留める）。</li>
+      </ul>
+
+      <h2 class="jama-h2">2. SR／MA の標準プロセス — 9 ステップの俯瞰</h2>
+
+      <p style="line-height:1.85;">JAMA UG が示す標準的な実施プロセスは以下の流れです。読者としては、論文本文および PRISMA 図でこの流れが追えるかを確認します。</p>
+
+      <div class="jama-checklist">
+        <div class="jc-head"><span class="jc-icon">🛠️</span>SR／MA の実施プロセス</div>
+        <ol>
+          <li><strong>疑問を定式化する</strong>（PICO／PECO）<span class="jc-sub-item">患者・介入・対照・アウトカムを明示的に定義</span></li>
+          <li><strong>適格基準を決める</strong><span class="jc-sub-item">研究デザイン・対象集団・介入の範囲・アウトカム</span></li>
+          <li><strong>異質性を説明する事前仮説</strong><span class="jc-sub-item">サブグループ解析の方向性を事前に明文化</span></li>
+          <li><strong>系統的な文献検索</strong><span class="jc-sub-item">MEDLINE / EMBASE / Cochrane Central を最低限カバーし、検索語・期間・言語制限を明記</span></li>
+          <li><strong>タイトル・抄録・全文のスクリーニング</strong><span class="jc-sub-item">独立した 2 名以上で行い、κ統計量で一致度を評価</span></li>
+          <li><strong>バイアスのリスク評価とデータ抽出</strong><span class="jc-sub-item">これも独立した 2 名以上で実施</span></li>
+          <li><strong>効果推定値の統合</strong>（MA を行う場合）<span class="jc-sub-item">固定効果／変量効果モデルを適切に選択</span></li>
+          <li><strong>異質性の評価</strong><span class="jc-sub-item">I²・Q 検定・事前仮説に基づくサブグループ解析</span></li>
+          <li><strong>確実性（エビデンスの質）の評価と報告</strong><span class="jc-sub-item">GRADE による格付けと Summary of Findings の提示</span></li>
+        </ol>
+      </div>
+
+      <h2 class="jama-h2">3. SR／MA の信頼性を見抜く 8 つの質問</h2>
+
+      <p style="line-height:1.85;">JAMA UG は、臨床家が SR／MA を<strong>批判的に読むためのチェックリスト</strong>として、次の質問を提示します。本書では各質問の要点を解説付きで示します。</p>
+
+      <div class="jama-checklist">
+        <div class="jc-head"><span class="jc-icon">🔍</span>ユーザーズガイド：SR／MAプロセスの信頼性を判定する</div>
+        <div class="jc-sub">見ているのは「結果」ではなく「どう作られたか」です</div>
+        <ol>
+          <li><strong>臨床的に意味のある疑問が明確に設定されているか</strong><span class="jc-sub-item">P・I・C・O が絞られていて、臨床現場で遭遇する問いと一致するか</span></li>
+          <li><strong>検索は徹底かつ系統的か</strong><span class="jc-sub-item">複数データベース（MEDLINE / EMBASE / Cochrane Central）に加え、未公表データ・試験登録・引用追跡・専門家照会まで確認したか</span></li>
+          <li><strong>研究の選択と評価は再現可能か</strong><span class="jc-sub-item">独立した 2 名によるスクリーニング、κ統計量による一致度の報告</span></li>
+          <li><strong>1 次研究のバイアスリスクが適切に評価されたか</strong><span class="jc-sub-item">ランダム化・隠蔽化・盲検化・追跡・ITT などの主要ドメインを、個別研究ごとに判定しているか</span></li>
+          <li><strong>研究間の結果のばらつき（異質性）の理由が探られているか</strong><span class="jc-sub-item">I²・視覚的評価・事前仮説に基づくサブグループ解析／メタ回帰</span></li>
+          <li><strong>効果推定値の確実性（エビデンスの質）が等級付けされているか</strong><span class="jc-sub-item">GRADE に沿った評価が提示され、アウトカムごとに理由が明記されているか</span></li>
+          <li><strong>報告バイアスが検討されているか</strong><span class="jc-sub-item">ファンネルプロット、trim-and-fill、未公表研究の統合など</span></li>
+          <li><strong>自分の患者に適用できる結果が提示されているか</strong><span class="jc-sub-item">ベースラインリスク別の絶対効果、NNT、重要なサブグループでの効果</span></li>
+        </ol>
+      </div>
+
+      <!-- 個別質問の掘り下げ -->
+      <h2 class="jama-h2">4. 各質問の要点 — 読むときの着眼点</h2>
+
+      <details class="jama-apply" open>
+        <summary>Q1 — 疑問は明確か（PICO の定式化）</summary>
+        <div class="ja-body">
+          <p>レビューの冒頭で、対象患者の範囲（年齢・病期・重症度・併存症）、比較される介入、対照、臨床的に重要なアウトカムが<strong>具体的に列挙</strong>されていることを確認します。</p>
+          <p>⚠️ <strong>注意</strong>：「良いSRほど焦点は絞られ、適格基準は厳格」だが、その反面 <strong>一般化可能性は狭くなる</strong> というトレードオフがあります。あなたの目の前の患者がその範囲に入るかを必ず照合します。</p>
+        </div>
+      </details>
+
+      <details class="jama-apply">
+        <summary>Q2 — 検索は徹底的か</summary>
+        <div class="ja-body">
+          <p>単一データベースだけの検索は不十分。<strong>最低 3 つの国際データベース</strong>（MEDLINE / EMBASE / Cochrane Central）に加え、以下をチェック：</p>
+          <ul>
+            <li>学会抄録・会議録</li>
+            <li>試験登録（ClinicalTrials.gov, WHO ICTRP）</li>
+            <li>引用追跡（参考文献リストのチェック）</li>
+            <li>専門家への照会・灰色文献</li>
+            <li>FDA／EMA の申請資料（薬剤の場合）</li>
+          </ul>
+          <p>FDA 資料と公表論文を比べると、未公表試験や結果の歪んだ報告が見つかる例があります（<strong>報告バイアス／選択的アウトカム報告</strong>）。</p>
+        </div>
+      </details>
+
+      <details class="jama-apply">
+        <summary>Q3 — 選択と評価は再現可能か（κ統計量）</summary>
+        <div class="ja-body">
+          <p>スクリーニングとバイアスリスク評価は、<strong>独立した 2 名以上</strong>で行う必要があります。食い違いが出るのは当たり前で、それをどう解決したか（3 人目の裁定、議論）まで報告されるのが望ましい形です。</p>
+          <p>一致度は<span class="jterm">κ統計量<span class="jt-en">kappa</span></span>で定量化され、0.6 以上（実質的一致）が目安。κの報告がない SR は、選択バイアスの懸念が残ります。</p>
+        </div>
+      </details>
+
+      <details class="jama-apply">
+        <summary>Q4 — 1次研究のバイアスリスク評価</summary>
+        <div class="ja-body">
+          <p>RCT では以下のドメインを個別研究ごとに判定：</p>
+          <ul>
+            <li>ランダム化の方法（配列生成）</li>
+            <li><strong>割り付けの隠蔽化</strong>（concealment）</li>
+            <li>盲検化（患者・医療者・評価者・解析者）</li>
+            <li>脱落／追跡不能の影響</li>
+            <li>ITT 原則の適用</li>
+            <li>早期中止（stopped early for benefit）</li>
+          </ul>
+          <p>⚠️ 客観的アウトカム（死亡）では盲検化の影響は小さいが、<strong>主観的アウトカム（疼痛・QOL）</strong>では盲検化の破綻がバイアスを大きく増やすため、アウトカムごとに影響を考えます。</p>
+          <p>詳細は <a href="#" onclick="showPage(8);return false;" style="color:#1a5276;font-weight:700;">Ch8 Risk of Bias</a> を参照。</p>
+        </div>
+      </details>
+
+      <details class="jama-apply">
+        <summary>Q5 — 異質性の理由は探られているか</summary>
+        <div class="ja-body">
+          <p>統合する前に、個別研究の結果が互いに近いか（一貫しているか）を必ず確認します。評価方法は：</p>
+          <ol style="padding-left:1.3em;">
+            <li><strong>視覚的評価</strong>：フォレストプロット上の点推定値のばらつきと CI の重なり</li>
+            <li><strong>Q 検定</strong>（yes／no 式の帰無仮説検定）</li>
+            <li><strong>I²統計量</strong>：ばらつきのうち研究間差が占める割合を % で示す（0–100%）</li>
+          </ol>
+          <p>ばらつきが大きい場合は、事前に計画された<strong>サブグループ解析／メタ回帰</strong>でその源を説明すべきです（患者特性・介入量・追跡期間・研究の質など）。事後的に無理やり説明するのは「仮説を生み出す」程度の信頼性しかありません。</p>
+          <p>詳細は <a href="#" onclick="showPage(9);return false;" style="color:#1a5276;font-weight:700;">Ch9 不一致性</a> を参照。</p>
+        </div>
+      </details>
+
+      <details class="jama-apply">
+        <summary>Q6 — エビデンスの確実性（質）の等級付け</summary>
+        <div class="ja-body">
+          <p>JAMA UG の標準は <span class="jterm">GRADE</span>。RCT は「高」、観察研究は「低」を出発点とし、以下の要因で上下します：</p>
+          <div class="jama-rec-grid">
+            <div class="jama-rec-card jrc-weak-against">
+              <span class="jrc-tag">下げる 5 要因</span>
+              <div class="jrc-title">確実性を下げる</div>
+              <p>バイアスのリスク／非一貫性（inconsistency）／非直接性（indirectness）／不精確性（imprecision）／出版バイアス</p>
+            </div>
+            <div class="jama-rec-card jrc-strong-for">
+              <span class="jrc-tag">上げる 3 要因</span>
+              <div class="jrc-title">確実性を上げる（観察研究）</div>
+              <p>大きな効果量／用量反応性／交絡要因が効果を減弱させる方向に働く</p>
+            </div>
+          </div>
+          <p>結果は <strong>高・中・低・非常に低</strong> の 4 段階で示されます（<a href="#" onclick="showPage(3);return false;" style="color:#1a5276;font-weight:700;">Ch3</a>）。</p>
+        </div>
+      </details>
+
+      <details class="jama-apply">
+        <summary>Q7 — 報告バイアスは検討されているか</summary>
+        <div class="ja-body">
+          <p>JAMA UG は報告バイアスへの対処として 4 つの手法を挙げます：</p>
+          <ol style="padding-left:1.3em;">
+            <li>小規模研究と大規模研究で結果が異なるかを比べる</li>
+            <li><strong>ファンネルプロットの視覚的検討</strong>（対称性）</li>
+            <li>点推定値のばらつきの非対称性を定式化した統計検定（Egger など）</li>
+            <li>統計的有意差の欠落した研究の過多を検出する方法</li>
+          </ol>
+          <p>⚠️ いずれの手法も完璧ではなく、<strong>研究数が少ない SR では検出力が低い</strong>ことに注意。最善の対処は「最初からすべての研究が登録・報告される仕組み」を社会として作ることです。</p>
+        </div>
+      </details>
+
+      <details class="jama-apply">
+        <summary>Q8 — 自分の患者に適用できる結果か</summary>
+        <div class="ja-body">
+          <p>レビューが「相対リスク（RR）」だけを示しているなら半分の仕事です。臨床家には<strong>絶対効果</strong>が要ります。ベースラインリスク別に絶対リスク差・NNT を提示してこそ、目の前の患者に使える情報です。</p>
+          <p>例：相対リスク 25% 減 (RR 0.75) は</p>
+          <ul>
+            <li>高リスク患者（年間イベント率 8%）→ 絶対差 2%／NNT = 50</li>
+            <li>低リスク患者（年間イベント率 0.5%）→ 絶対差 0.125%／NNT = 800</li>
+          </ul>
+          <p>同じ RR でも臨床的意味は全く違う。この視点は <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6 相対 vs 絶対</a> と <a href="#" onclick="showPage(20);return false;" style="color:#1a5276;font-weight:700;">Ch20 患者への適用</a> が詳しい。</p>
+        </div>
+      </details>
+
+      <h2 class="jama-h2">5. フォレストプロットの読み方 — 模式図</h2>
+
+      <p style="line-height:1.85;">JAMA UG は SR／MA のフォレストプロットを「結果を要約する言語」と位置づけます。次のような読み方をします。</p>
+
+      <div class="jama-forest">
+        <div class="jf-title">模式例：介入 A vs 対照 のメタアナリシス（相対リスク）</div>
+        <div class="jf-row">
+          <div class="jf-study">研究 1（n=400）</div>
+          <div class="jf-plot">
+            <div class="jf-ci" style="left:40%;width:20%;"></div>
+            <div class="jf-point" style="left:50%;"></div>
+          </div>
+          <div class="jf-est">0.85 (0.72–1.00)</div>
+        </div>
+        <div class="jf-row">
+          <div class="jf-study">研究 2（n=1200）</div>
+          <div class="jf-plot">
+            <div class="jf-ci" style="left:35%;width:25%;"></div>
+            <div class="jf-point" style="left:47%;width:14px;height:14px;"></div>
+          </div>
+          <div class="jf-est">0.78 (0.68–0.90)</div>
+        </div>
+        <div class="jf-row">
+          <div class="jf-study">研究 3（n=260）</div>
+          <div class="jf-plot">
+            <div class="jf-ci" style="left:48%;width:22%;"></div>
+            <div class="jf-point" style="left:59%;"></div>
+          </div>
+          <div class="jf-est">1.02 (0.80–1.30)</div>
+        </div>
+        <div class="jf-row" style="background:#f4f9fc;">
+          <div class="jf-study"><strong>統合（MA）</strong></div>
+          <div class="jf-plot">
+            <div class="jf-diamond" style="left:49%;"></div>
+          </div>
+          <div class="jf-est"><strong>0.83 (0.75–0.92)</strong></div>
+        </div>
+        <div class="jf-axis">
+          <div></div>
+          <div class="jf-axis-labels"><span>← 介入が有利</span><span>RR = 1.0</span><span>対照が有利 →</span></div>
+          <div></div>
+        </div>
+      </div>
+
+      <ul style="line-height:1.85;">
+        <li><strong>四角の大きさ</strong> = 研究の重み（精度 = サンプルサイズと情報量）</li>
+        <li><strong>横線</strong> = 95% 信頼区間（CI）</li>
+        <li><strong>ダイヤモンド</strong> = 統合推定値と CI</li>
+        <li>縦線（無効線 RR = 1 または RD = 0）を CI がまたぐと「統計的有意差なし」</li>
+        <li>結果のばらつきを目で見て、<strong>どれくらい似ているか</strong>を第一印象で判断するのが異質性評価の出発点</li>
+      </ul>
+
+      <!-- ユーザーズガイドの適用（シナリオの解決） -->
+      <div class="jama-resolution">
+        <div class="jr-head">🎯 臨床シナリオの解決</div>
+        <p>
+          β遮断薬のSR を読んで、上記 8 項目に照合します。<br>
+          <strong>Q1–Q3</strong>：検索範囲・独立レビューが明記されていれば合格。<br>
+          <strong>Q4</strong>：POISE 試験のような<strong>大規模・低バイアス試験</strong>が含まれているか。少数の古い試験のみなら信頼度は低い。<br>
+          <strong>Q5</strong>：心血管アウトカム（ベネフィット）と脳卒中・死亡（ハーム）の両方でサブグループ解析がされているか。<br>
+          <strong>Q6</strong>：GRADE による確実性が、<strong>主要アウトカムごと</strong>に示されているか。<br>
+          <strong>Q8</strong>：あなたの目の前の患者のベースラインリスクに当てはめた NNT／NNH が提示されているか。
+        </p>
+        <p>
+          この 8 項目をクリアして初めて、「SR／MAの結果を信じてよい」水準に達します。信じられる SR が得られたら、次は <a href="#" onclick="showPage(27);return false;" style="color:#1b5d35;font-weight:700;">Ch23（結果の理解と適用）</a> へ進み、効果の大きさ・精度・患者への適用可能性を評価します。
+        </p>
+      </div>
+
+      <div class="jama-source">
+        <strong>出典：</strong>JAMA <em>Users' Guides to the Medical Literature</em>（第3版）第22章「Systematic Reviews and Meta-analysis: The Process」を基に、章構成と質問フレームを参照して独自に再構成・解説。章内の臨床シナリオ、フォレストプロット、数値例は本アプリ編集者の作成。関連1次資料：Bougie 2014, Dalen 2014, Cochrane Handbook (Higgins 2011)。
+      </div>
+
+      <div class="chapter-nav">
+        <button onclick="showPage(25)">← Primerへ戻る</button>
+        <button onclick="showPage(27)">Ch23（結果の理解と適用）へ →</button>
+      </div>
+
+    </div>
+
+    <!-- ==================================================== -->
+    <!-- ========  page-27: JAMA UG Ch23 結果の理解と適用  === -->
+    <!-- ==================================================== -->
+    <div class="page" id="page-27">
+
+      <div class="jama-page-head">
+        <span class="jph-badge">📘 JAMA UG</span>
+        <div class="jph-title">Ch23 SR／メタアナリシス 結果の理解と適用</div>
+        <span class="jph-meta">⏱ 約 15 分</span>
+      </div>
+
+      <p style="font-size:1rem;line-height:1.85;color:#2c3e50;margin:0 0 14px;">
+        Ch22 で「信じてよい SR／MA」を見分けました。<strong>次は、その結果を目の前の患者にどう当てはめるか</strong>です。JAMA UG 第23章は、効果の大きさ・精度・確実性・適用可能性を段階的に評価する枠組みを提示します。
+      </p>
+
+      <!-- 臨床シナリオ -->
+      <div class="jama-scenario">
+        <div class="js-head">🩺 臨床シナリオ</div>
+        <p>
+          非心臓手術を受ける <strong>66 歳男性、2 型糖尿病・高血圧</strong> を担当します。最新の SR／MA（周術期 β 遮断薬の影響）を読み、この患者に投与すべきかを判断したい — 効果推定値の数値から、NNT・NNH まで自分で計算できるようになるのが目標です。
+        </p>
+      </div>
+
+      <h2 class="jama-h2">1. 効果の大きさ — どう表現されるか</h2>
+
+      <p style="line-height:1.85;">SR／MA の要約推定値は、アウトカムのタイプに応じて異なる指標で示されます。</p>
+
+      <div class="jama-map">
+        <table>
+          <thead>
+            <tr><th>アウトカムのタイプ</th><th>よく使われる指標</th><th>解釈の要点</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2 値（発生／非発生）<br><small>死亡・心筋梗塞など</small></td>
+              <td>相対リスク RR／オッズ比 OR／リスク差 RD／相対リスク減少 RRR</td>
+              <td>RR=0.75 → 介入でイベントが 25% 相対的に減少。絶対効果に変換すると臨床的意味が見える。</td>
+            </tr>
+            <tr>
+              <td>発生までの時間<br><small>生存解析</small></td>
+              <td>ハザード比 HR</td>
+              <td>HR=0.80 → 単位時間あたりのイベント発生率が 20% 低い。</td>
+            </tr>
+            <tr>
+              <td>診断検査の精度</td>
+              <td>尤度比 LR（正・負）</td>
+              <td>LR+ が 10 以上 / LR− が 0.1 以下で、事後確率を大きく動かす。</td>
+            </tr>
+            <tr>
+              <td>連続変数<br><small>BP・QOLスコア</small></td>
+              <td>加重平均差 WMD／標準化平均差 SMD</td>
+              <td>異なるスケールを統合する場合は SMD。解釈には MID（最小重要差）を参照。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="jama-note">
+        <span class="jn-label">📘 JAMA UG の要点</span>
+        <div class="jn-title">SMD の解釈は「戻し翻訳」で</div>
+        <p>
+          SMD（効果量）は「何 SD 分だけ改善したか」という抽象的な単位です。臨床家に伝わる形にするには、代表的な尺度（例：6 分間歩行距離、Chronic Respiratory Questionnaire）の実単位に<strong>戻し翻訳（back-translation）</strong>します。
+        </p>
+      </div>
+
+      <h2 class="jama-h2">2. 結果の精度を評価する — 信頼区間と不精確性</h2>
+
+      <p style="line-height:1.85;">効果推定値（点推定値）の<strong>まわりの不確かさ</strong>を示すのが<span class="jterm">信頼区間<span class="jt-en">CI</span></span>です。JAMA UG は精度の評価を次のように説明しています。</p>
+
+      <ul style="line-height:1.85;">
+        <li>CI の<strong>上限と下限の両方</strong>で臨床判断が変わらないなら、精度は十分</li>
+        <li>CI のどちらかの端が「重要な効果あり／なし」の境界（閾値）をまたぐなら、不精確性で確実性を 1 段下げる候補</li>
+        <li><strong>CI 上下限の両方が閾値をまたぐ</strong>なら、2 段下げることもある</li>
+        <li>統計的有意 (p&lt;0.05) があっても、CI が広ければ臨床判断は不安定</li>
+      </ul>
+
+      <div class="jama-note">
+        <span class="jn-label">📘 JAMA UG の要点</span>
+        <div class="jn-title">最適情報サイズ（OIS）の考え方</div>
+        <p>
+          適切な精度を得るためには、メタアナリシス全体で所定のサンプルサイズ（<span class="jterm">OIS<span class="jt-en">Optimal Information Size</span></span>）に達している必要があります。症例数が少なく CI が広い場合、統計的有意でも「ランダム誤差で生じた可能性」が残り、確実性を下げる根拠になります。
+        </p>
+        <p>詳細は <a href="#" onclick="showPage(11);return false;" style="color:#1a5276;font-weight:700;">Ch11 不確実性</a> と、Primer（page-25）のセクション15（OIS）も併読。</p>
+      </div>
+
+      <h2 class="jama-h2">3. 研究間の結果のばらつき（異質性）を理解する</h2>
+
+      <p style="line-height:1.85;">同じ介入でも、研究によって結果が違うのは普通のことです。JAMA UG は、<strong>ばらつきの評価と説明</strong>を 3 段階で行います。</p>
+
+      <div class="jama-checklist">
+        <div class="jc-head"><span class="jc-icon">📊</span>異質性評価の 3 ステップ</div>
+        <ol>
+          <li><strong>視覚的評価</strong><span class="jc-sub-item">フォレストプロット上で、点推定値のばらつきと CI の重なりを目視</span></li>
+          <li><strong>統計的検定</strong><span class="jc-sub-item">Q検定（p 値）、I²統計量（% で表現）</span></li>
+          <li><strong>臨床的・方法論的な説明</strong><span class="jc-sub-item">事前に計画されたサブグループ解析で、ばらつきの原因を探る</span></li>
+        </ol>
+      </div>
+
+      <h3 class="jama-h3">I² の解釈の目安</h3>
+      <ul style="line-height:1.85;">
+        <li><strong>0–40%</strong>：重要でない異質性の可能性</li>
+        <li><strong>30–60%</strong>：中等度の異質性の可能性</li>
+        <li><strong>50–90%</strong>：実質的な異質性の可能性</li>
+        <li><strong>75–100%</strong>：かなりの異質性 — 統合の妥当性を慎重に考える</li>
+      </ul>
+
+      <h3 class="jama-h3">サブグループ解析の信用性 — 5 つの基準</h3>
+
+      <p style="line-height:1.85;">ばらつきを「年齢・重症度・介入量」などのサブグループで説明できたと主張するとき、<strong>その主張を信じてよいか</strong>は次の 5 点で評価します。</p>
+
+      <ol style="line-height:1.85;">
+        <li>サブグループ効果の方向は、<strong>生物学的・臨床的に妥当</strong>か</li>
+        <li>その効果は、研究内（within-study）の比較か、それとも研究間（between-study）の比較か → <strong>研究内比較のほうが信頼できる</strong></li>
+        <li>事前に計画された仮説か、<strong>事後の探索</strong>か → 事前計画のほうが信頼できる</li>
+        <li>検定される仮説の数は少ないか（多重比較の問題）</li>
+        <li>他の独立した研究で再現されているか</li>
+      </ol>
+
+      <h2 class="jama-h2">4. エビデンスの確実性（質）を等級付けする — GRADE</h2>
+
+      <p style="line-height:1.85;">JAMA UG は、要約推定値の確実性を評価するスタンダードとして GRADE を採用します。本アプリの <a href="#" onclick="showPage(2);return false;" style="color:#1a5276;font-weight:700;">Ch2</a>〜<a href="#" onclick="showPage(12);return false;" style="color:#1a5276;font-weight:700;">Ch12</a> が詳しいので、ここでは JAMA UG 独自の視点をハイライトします。</p>
+
+      <div class="jama-note">
+        <span class="jn-label">📘 JAMA UG の独自視点</span>
+        <div class="jn-title">確実性の格付けは「アウトカムごと」に行う</div>
+        <p>
+          <strong>単一の「GRADE 評価」はない</strong>。同じ SR でも「死亡」「脳卒中」「QOL」でそれぞれ確実性は異なり得ます。バイアスのリスク、異質性、不精確性は<strong>アウトカムによって異なる影響</strong>を受けるためです。
+        </p>
+        <p>
+          Summary of Findings（SoF）表は、アウトカム行ごとに確実性（高・中・低・非常に低）と理由を示します。詳細は <a href="#" onclick="showPage(5);return false;" style="color:#1a5276;font-weight:700;">Ch5 SoF 表の読み方</a> を参照。
+        </p>
+      </div>
+
+      <h2 class="jama-h2">5. 結果を自分の患者に直接適用できるか</h2>
+
+      <p style="line-height:1.85;">信頼できる効果推定値が得られても、それを<strong>目の前の患者</strong>に使ってよいかは別の問題です。JAMA UG は 4 つのチェックポイントを提示します。</p>
+
+      <div class="jama-checklist">
+        <div class="jc-head"><span class="jc-icon">🧭</span>患者への適用可能性チェック</div>
+        <ol>
+          <li><strong>患者の特性</strong>は、研究対象と十分似ているか<span class="jc-sub-item">年齢・性別・併存症・病期・重症度</span></li>
+          <li><strong>介入の内容</strong>は、あなたの環境で実施可能か<span class="jc-sub-item">用量・投与経路・期間・実施チームの技能</span></li>
+          <li><strong>対照</strong>は、あなたの通常診療と比較できるか<span class="jc-sub-item">プラセボ対照 vs 標準治療対照 で解釈が大きく変わる</span></li>
+          <li><strong>結果</strong>は、患者にとって重要か<span class="jc-sub-item">代理アウトカムではなく患者重要アウトカム（death・disability・QOL）か</span></li>
+        </ol>
+      </div>
+
+      <div class="jama-note">
+        <span class="jn-label">📘 JAMA UG の要点</span>
+        <div class="jn-title">非直接性（indirectness）の 3 側面</div>
+        <ul>
+          <li><strong>患者</strong>：目の前の患者が研究対象からかけ離れていないか</li>
+          <li><strong>介入／対照</strong>：実施可能性、用量、通常診療との差</li>
+          <li><strong>アウトカム</strong>：真のアウトカムか、代理アウトカムか</li>
+        </ul>
+        <p>詳細は <a href="#" onclick="showPage(10);return false;" style="color:#1a5276;font-weight:700;">Ch10 非直接性</a> を参照。</p>
+      </div>
+
+      <h2 class="jama-h2">6. 絶対効果とベースラインリスク — 臨床で活かす算数</h2>
+
+      <p style="line-height:1.85;">SR／MA は多くの場合<strong>相対効果（RR、OR、HR）</strong>を主要結果として示します。臨床判断には<strong>ベースラインリスク × 相対効果 = 絶対効果</strong>への変換が必須です。</p>
+
+      <h3 class="jama-h3">計算例 — 周術期 β遮断薬</h3>
+
+      <div class="jama-compare">
+        <div class="jcmp-box jcmp-good">
+          <span class="jcmp-title">✅ ベネフィット側：心筋梗塞</span>
+          <p>介入なし群の MI リスク = 5.1%（ベースライン）<br>
+          RR = 0.73 → 介入群 MI リスク = 5.1 × 0.73 = 3.7%<br>
+          <strong>絶対差 ≈ 1.4% → NNT ≈ 70</strong><br>
+          （1000 人に 14 人少ない心筋梗塞）</p>
+        </div>
+        <div class="jcmp-box jcmp-bad">
+          <span class="jcmp-title">❌ ハーム側：脳卒中</span>
+          <p>介入なし群の脳卒中リスク = 0.5%<br>
+          RR = 2.17 → 介入群 = 0.5 × 2.17 = 1.09%<br>
+          <strong>絶対差 ≈ 0.6% → NNH ≈ 170</strong><br>
+          （1000 人に 6 人多い脳卒中）</p>
+        </div>
+      </div>
+
+      <p style="line-height:1.85;">
+        <strong>ベネフィットとハームのバランス</strong>は、絶対効果でみて初めて適切に評価できます。相対効果は「効果の生物学的な大きさ」を示しますが、臨床的な<strong>差引き</strong>は絶対効果でしか計算できません。
+      </p>
+
+      <div class="jama-note">
+        <span class="jn-label">📘 JAMA UG の要点</span>
+        <div class="jn-title">ベースラインリスクの取得方法</div>
+        <p>JAMA UG が推奨する優先順位：</p>
+        <ol style="padding-left:1.3em;">
+          <li>SR 内の対照群（介入なし）の平均リスク</li>
+          <li>SR がレビューした観察研究のコホート</li>
+          <li>外部の大規模観察研究／レジストリ</li>
+          <li>リスク層別化ツール／予測モデル（Framingham、CHA₂DS₂-VAScなど）</li>
+        </ol>
+        <p>目の前の患者のリスクが平均と違うなら、そのリスクを入れて絶対効果を計算し直すのが正しい使い方です。</p>
+      </div>
+
+      <h2 class="jama-h2">7. エビデンスプロファイル — 結果の一覧表</h2>
+
+      <p style="line-height:1.85;">GRADE ワーキンググループが推奨する要約形式が<strong>エビデンスプロファイル</strong>と<strong>Summary of Findings（SoF）表</strong>です。患者にとって最も重要なアウトカムを<strong>行</strong>として、各アウトカムの確実性・絶対効果・相対効果を一望できます。</p>
+
+      <div class="jama-map">
+        <table>
+          <thead>
+            <tr>
+              <th>アウトカム</th>
+              <th>相対効果</th>
+              <th>ベースラインリスク</th>
+              <th>介入群のリスク</th>
+              <th>確実性</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>心筋梗塞</td>
+              <td>RR 0.73 (0.61–0.88)</td>
+              <td>51/1000</td>
+              <td>37/1000<br><small>（14 人少ない）</small></td>
+              <td>🟢 高</td>
+            </tr>
+            <tr>
+              <td>脳卒中</td>
+              <td>RR 2.17 (1.26–3.74)</td>
+              <td>5/1000</td>
+              <td>11/1000<br><small>（6 人多い）</small></td>
+              <td>🟢 高</td>
+            </tr>
+            <tr>
+              <td>総死亡</td>
+              <td>RR 1.27 (1.01–1.60)</td>
+              <td>25/1000</td>
+              <td>32/1000<br><small>（7 人多い）</small></td>
+              <td>🟢 高</td>
+            </tr>
+            <tr>
+              <td>低血圧</td>
+              <td>RR 1.51 (1.39–1.65)</td>
+              <td>100/1000</td>
+              <td>151/1000<br><small>（51 人多い）</small></td>
+              <td>🟢 高</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:0.88rem;color:#5d7a8a;margin-top:6px;">
+        例示の数値は POISE 試験（Lancet 2008）の再解析およびそのメタアナリシスから報告された値を参考に、教育目的で簡略化して示したもの。
+      </p>
+
+      <!-- 臨床シナリオの解決 -->
+      <div class="jama-resolution">
+        <div class="jr-head">🎯 臨床シナリオの解決</div>
+        <p>
+          66 歳、糖尿病・高血圧を持つこの患者について、上の SoF 表を適用します。<br>
+          <strong>ベネフィット</strong>：MI リスクが年間 5.1% ほどあると仮定 → 1000 人に 14 人少ない MI。<br>
+          <strong>ハーム</strong>：脳卒中 +6人、総死亡 +7人、低血圧 +51人／1000人。<br>
+          <strong>確実性</strong>：いずれも GRADE「高」。<br>
+          <strong>判断</strong>：MI の絶対利益よりも、脳卒中と死亡の絶対害が大きいと判断され、<strong>ルーチンの周術期高用量 β 遮断薬はこの患者には推奨しない</strong>。もともと β 遮断薬を服用中の患者は継続、という個別判断に落ち着く。
+        </p>
+        <p>
+          この「ベネフィット − ハーム」を、患者の価値観も含めて一緒に決めるプロセスが <a href="#" onclick="showPage(21);return false;" style="color:#1b5d35;font-weight:700;">Ch21 共同意思決定</a> です。
+        </p>
+      </div>
+
+      <div class="jama-source">
+        <strong>出典：</strong>JAMA <em>Users' Guides to the Medical Literature</em>（第3版）第23章「Understanding and Applying the Results of a Systematic Review and Meta-analysis」を基に、章構成・質問フレーム・SoF フォーマットを参照して独自に再構成・解説。数値例は POISE 試験（Devereaux PJ et al. Lancet 2008）および GRADE 関連ガイダンス（Guyatt et al. J Clin Epidemiol 2011）を参照。
+      </div>
+
+      <div class="chapter-nav">
+        <button onclick="showPage(26)">← Ch22 へ戻る</button>
+        <button onclick="showPage(28)">Ch24（NMA）へ →</button>
+      </div>
+
+    </div>
+
+    <!-- ==================================================== -->
+    <!-- ========  page-28: JAMA UG Ch24 NMA               === -->
+    <!-- ==================================================== -->
+    <div class="page" id="page-28">
+
+      <div class="jama-page-head">
+        <span class="jph-badge">📘 JAMA UG</span>
+        <div class="jph-title">Ch24 ネットワークメタアナリシス（NMA）</div>
+        <span class="jph-meta">⏱ 約 13 分</span>
+      </div>
+
+      <p style="font-size:1rem;line-height:1.85;color:#2c3e50;margin:0 0 14px;">
+        <strong>直接比較する RCT がない選択肢</strong>のあいだで優劣を知りたいとき、<span class="jterm">ネットワークメタアナリシス<span class="jt-en">NMA / network meta-analysis</span></span>が使えます。JAMA UG 第24章は、NMA の仕組みと、読者が信頼性を判定するためのチェックポイントを示します。
+      </p>
+
+      <!-- 臨床シナリオ -->
+      <div class="jama-scenario">
+        <div class="js-head">🩺 臨床シナリオ</div>
+        <p>
+          45 歳女性、片頭痛。これまで市販鎮痛薬では効かず、トリプタン系薬剤のなかで<strong>どれが最も効果的か</strong>を比較したい。しかし、多くのトリプタンは<strong>プラセボ対照の RCT はあるが、薬剤どうしの直接比較 RCT は限定的</strong>。NMA で横断的に比較したい。
+        </p>
+      </div>
+
+      <h2 class="jama-h2">1. NMA は何が違うか — 従来 MA との対比</h2>
+
+      <div class="jama-compare">
+        <div class="jcmp-box jcmp-bad">
+          <span class="jcmp-title">従来のメタアナリシス（pairwise MA）</span>
+          <p>「介入 A vs プラセボ」「介入 B vs プラセボ」を<strong>別々に</strong>統合。A と B を直接比べる RCT がなければ比較できない。</p>
+        </div>
+        <div class="jcmp-box jcmp-good">
+          <span class="jcmp-title">ネットワーク MA（NMA）</span>
+          <p>プラセボを共通の比較対象として、<strong>A vs プラセボ</strong>と<strong>B vs プラセボ</strong>の情報を用いて <strong>A vs B の間接比較</strong>を計算。直接比較があればそれと統合して<strong>総合推定値</strong>を作る。</p>
+        </div>
+      </div>
+
+      <h2 class="jama-h2">2. ネットワークの形 — 典型パターン</h2>
+
+      <p style="line-height:1.85;">JAMA UG は NMA で扱う典型的なネットワーク形状を 4 つのパターンで整理しています。</p>
+
+      <div class="jama-network">
+        <div class="jn-node">
+          <div class="jn-node-label">(A) 星形</div>
+          <div class="jn-node-sub">すべての介入がプラセボ（または標準治療）と結ばれる</div>
+        </div>
+        <div class="jn-node">
+          <div class="jn-node-label">(B) 閉ループ</div>
+          <div class="jn-node-sub">一部の介入間に直接比較 RCT が存在（三角形など）</div>
+        </div>
+        <div class="jn-node">
+          <div class="jn-node-label">(C) 梯子型</div>
+          <div class="jn-node-sub">直鎖状に比較が連なる</div>
+        </div>
+        <div class="jn-node">
+          <div class="jn-node-label">(D) 完全連結</div>
+          <div class="jn-node-sub">すべての介入どうしに直接比較あり</div>
+        </div>
+      </div>
+
+      <p style="line-height:1.85;">閉ループ（B）や完全連結（D）のネットワークは、<strong>直接比較 vs 間接比較の一貫性</strong>をチェックできる点で信頼性が高くなります。</p>
+
+      <h2 class="jama-h2">3. NMA の信頼性を判定する — ユーザーズガイド</h2>
+
+      <div class="jama-checklist">
+        <div class="jc-head"><span class="jc-icon">🔍</span>NMA を批判的に読むためのチェックリスト</div>
+        <ol>
+          <li><strong>適格基準に明白で適切な臨床疑問が含まれているか</strong><span class="jc-sub-item">PICO が一貫しており、ネットワーク全体の「被験者同士が交換可能」と言える範囲か</span></li>
+          <li><strong>研究の選択と報告のバイアスリスクが低いか</strong><span class="jc-sub-item">検索の徹底性、出版バイアス、選択的アウトカム報告</span></li>
+          <li><strong>研究間の違い（異質性）への説明があるか</strong><span class="jc-sub-item">患者集団・介入量・アウトカム測定法の違い</span></li>
+          <li><strong>直接比較と間接比較の結果が一貫しているか</strong>（<span class="jterm">整合性<span class="jt-en">coherence</span></span>）<span class="jc-sub-item">閉ループでの一貫性検定、ノード分割（node-splitting）など</span></li>
+          <li><strong>著者は対比較ごとに確実性を等級付けしているか</strong><span class="jc-sub-item">GRADE は「A vs B」ごとに「高・中・低・非常に低」を付けるべき</span></li>
+          <li><strong>結果は感度推定や潜在的バイアスに頑健か</strong><span class="jc-sub-item">感度分析、バイアスリスクの低い試験のみでの再解析</span></li>
+          <li><strong>ランク付け（例：SUCRA）の限界が明示されているか</strong><span class="jc-sub-item">「最も有効」の見かけのランクは信頼性が低いことが多い</span></li>
+          <li><strong>患者にとって重要なアウトカム全てが検討されているか</strong><span class="jc-sub-item">有効性だけでなく、有害事象・QOL も NMA に含まれているか</span></li>
+        </ol>
+      </div>
+
+      <h2 class="jama-h2">4. 整合性（coherence）— NMA 特有の概念</h2>
+
+      <p style="line-height:1.85;">
+        同じ比較（A vs B）について、<strong>直接比較</strong>（A 対 B の RCT）と<strong>間接比較</strong>（プラセボを経由した計算値）が得られる場合、両者が一致するかを必ず検討します。
+      </p>
+
+      <div class="jama-note">
+        <span class="jn-label">📘 JAMA UG の要点</span>
+        <div class="jn-title">非整合性（incoherence）が生じる主な原因</div>
+        <ul>
+          <li>研究に組み込まれた患者集団の違い（年齢・重症度・疾患の範囲）</li>
+          <li>ベースラインリスク・以前の治療歴の違い</li>
+          <li>介入の用量・投与期間・併用療法の違い</li>
+          <li>アウトカムの定義や測定時点の違い</li>
+          <li>研究の実施年代による通常診療の進化</li>
+        </ul>
+      </div>
+
+      <h2 class="jama-h2">5. ランク付けの落とし穴</h2>
+
+      <p style="line-height:1.85;">
+        NMA の結果として<strong>介入のランキング</strong>（1 位、2 位…）や<span class="jterm">SUCRA</span>値が提示されることがあります。魅力的に見えますが、JAMA UG は<strong>深い落とし穴</strong>を指摘しています。
+      </p>
+
+      <ul style="line-height:1.85;">
+        <li>データが少ない介入は<strong>偶然に</strong>上位に来ることがある</li>
+        <li>順位は「差が臨床的に意味がある」ことを保証しない</li>
+        <li>確実性の低いエビデンスに基づくランクは、新しい試験で順位が変わる可能性が高い</li>
+        <li>「最も有効」のランクだけを見て、<strong>対比較ごとの確実性</strong>を見ないのは誤り</li>
+      </ul>
+
+      <h2 class="jama-h2">6. NMA の結果の適用 — 4 つのチェック</h2>
+
+      <div class="jama-checklist">
+        <div class="jc-head"><span class="jc-icon">🧭</span>NMA 結果をあなたの患者に適用できるか</div>
+        <ol>
+          <li><strong>患者重要アウトカム全てが検討されているか</strong>（有効性＋有害事象＋QOL）</li>
+          <li><strong>考えうる治療選択肢が全て含まれているか</strong>（臨床現場で選びうるすべての介入）</li>
+          <li><strong>想定されているサブグループ効果のうち、信用性の高いものがあるか</strong></li>
+          <li><strong>結果は感度推定や潜在的バイアスに頑健か</strong>（非一貫性の有無含む）</li>
+        </ol>
+      </div>
+
+      <!-- 臨床シナリオの解決 -->
+      <div class="jama-resolution">
+        <div class="jr-head">🎯 臨床シナリオの解決</div>
+        <p>
+          片頭痛に対するトリプタン NMA（たとえば Thorlund 2014）は、プラセボ対照・直接比較を含む多数の RCT を統合し、頭痛消失率・2 時間持続効果率・副作用を比較しています。<br>
+          <strong>結果の読み取り</strong>：エレトリプタン 40 mg、スマトリプタン 100 mg、リザトリプタン 10 mg が頭痛消失率で上位にランクされますが、<strong>対比較ごとの確実性</strong>を見ると、上位 3 者間の差は小さく、確実性も「中」程度のことが多い。<br>
+          <strong>臨床判断</strong>：ランキング 1 位に飛びつかず、利用可能性・副作用プロファイル・患者の既往歴（冠動脈疾患の有無など）・コスト・過去の反応を総合して選択する。
+        </p>
+      </div>
+
+      <div class="jama-source">
+        <strong>出典：</strong>JAMA <em>Users' Guides to the Medical Literature</em>（第3版）第24章「Network Meta-analysis」を基に、章構成・質問フレームを参照して独自に再構成・解説。NMA の信頼性評価枠組みは Puhan et al. BMJ 2014、Salanti et al. J Clin Epidemiol 2014 の GRADE-NMA 拡張を参照。
+      </div>
+
+      <div class="chapter-nav">
+        <button onclick="showPage(27)">← Ch23 へ戻る</button>
+        <button onclick="showPage(1)">本編 Ch1 へ →</button>
+      </div>
+
+    </div>
+
   </main>
 
 </div><!-- /.app-body -->
 
 <!-- スクリプト -->
-<script src="coreGRADE_utils.js?v=5.0"></script>
-<script src="script.js?v=5.0"></script>
-<script src="js/glossary.js?v=5.0"></script>
-<script src="js/references.js?v=5.0"></script>
-<script src="js/mid-explorer.js?v=5.0"></script>
-<script src="js/trustworthy-check.js?v=5.0"></script>
-<script src="js/amstar2.js?v=5.0"></script>
-<script src="js/linkedin-feed.js?v=5.0"></script>
+<script src="coreGRADE_utils.js?v=6.0"></script>
+<script src="script.js?v=6.0"></script>
+<script src="js/glossary.js?v=6.0"></script>
+<script src="js/references.js?v=6.0"></script>
+<script src="js/mid-explorer.js?v=6.0"></script>
+<script src="js/trustworthy-check.js?v=6.0"></script>
+<script src="js/amstar2.js?v=6.0"></script>
+<script src="js/linkedin-feed.js?v=6.0"></script>
 
 <!-- ページ切替後のインタラクティブ要素リフレッシュ＋文書構造マップタブ -->
 <script>

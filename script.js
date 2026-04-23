@@ -38,9 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.toggle('active', btnIdx === index);
     });
 
-    // プログレスバー更新（Primer=25は表紙進捗とみなす）
-    const visibleIdx = (index === 25) ? 0 : index;
-    const progress = ((visibleIdx + 1) / 25) * 100;
+    // プログレスバー更新
+    // Primer (25) = 表紙相当、JAMA UG (26-28) = 本編の後に続く扱い
+    let visibleIdx;
+    if (index === 25) visibleIdx = 0;
+    else if (index >= 26) visibleIdx = index - 1; // 26→25, 27→26, 28→27
+    else visibleIdx = index;
+    const totalPages = 28; // Ch0-24 (25) + JAMA UG 3章 = 28
+    const progress = ((visibleIdx + 1) / totalPages) * 100;
     if (progressFill) progressFill.style.width = `${progress}%`;
 
     // スクロールをトップへ

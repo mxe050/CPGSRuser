@@ -1734,3 +1734,548 @@ html { scroll-behavior: smooth; }
 }
 .primer-fab-top { background: var(--primary); box-shadow: 0 4px 14px rgba(26,82,118,0.35); }
 .primer-fab-top:hover, .primer-fab-top:active { background: var(--primary-dark); }
+
+/* ============================================== */
+/*  v1.4 JAMAユーザーズガイド (JAMA Users' Guides) */
+/* ============================================== */
+
+/* --- ページヘッダ共通：読了時間バッジ --- */
+.jama-page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px 0;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #0b3d5c 0%, #1a5276 100%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(26,82,118,0.25);
+}
+.jama-page-head .jph-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.16);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.jama-page-head .jph-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-right: auto;
+  line-height: 1.4;
+}
+.jama-page-head .jph-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* --- JAMA UG コールアウト（既存章への横断挿入用） --- */
+.jama-note {
+  position: relative;
+  margin: 18px 0;
+  padding: 14px 16px 14px 52px;
+  background: #f4f9fc;
+  border: 1px solid #c5dde8;
+  border-left: 5px solid #1a5276;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(26,82,118,0.06);
+}
+.jama-note::before {
+  content: "📘";
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.jama-note .jn-label {
+  display: inline-block;
+  background: #1a5276;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+.jama-note .jn-title {
+  font-weight: 700;
+  color: #0b3d5c;
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+}
+.jama-note p { margin: 6px 0; line-height: 1.75; }
+.jama-note ul { margin: 6px 0 0 0; padding-left: 1.2em; }
+.jama-note ul li { margin: 4px 0; line-height: 1.7; }
+.jama-note .jn-cite {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: #5d7a8a;
+  font-style: italic;
+}
+
+/* --- 臨床シナリオボックス --- */
+.jama-scenario {
+  margin: 16px 0;
+  padding: 14px 16px;
+  background: #fff8e6;
+  border: 1px solid #f0d685;
+  border-left: 5px solid #d4941e;
+  border-radius: 10px;
+}
+.jama-scenario .js-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  color: #7a5510;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed #d4941e80;
+}
+.jama-scenario p { margin: 6px 0; line-height: 1.8; }
+
+.jama-resolution {
+  margin: 18px 0;
+  padding: 14px 16px;
+  background: #eaf7ef;
+  border: 1px solid #a8d8b9;
+  border-left: 5px solid #2d8a4e;
+  border-radius: 10px;
+}
+.jama-resolution .jr-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  color: #1b5d35;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed #2d8a4e80;
+}
+.jama-resolution p { margin: 6px 0; line-height: 1.8; }
+
+/* --- 質問チェックリストカード --- */
+.jama-checklist {
+  margin: 16px 0;
+  padding: 0;
+  border: 1px solid #c5dde8;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.jama-checklist .jc-head {
+  background: linear-gradient(135deg, #1a5276, #2874a6);
+  color: white;
+  padding: 12px 16px;
+  font-weight: 800;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.jama-checklist .jc-head .jc-icon { font-size: 1.2rem; }
+.jama-checklist .jc-sub {
+  background: #eaf3f8;
+  color: #1a5276;
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  border-bottom: 1px solid #c5dde8;
+  font-weight: 600;
+}
+.jama-checklist ol {
+  list-style: none;
+  counter-reset: jc-counter;
+  margin: 0;
+  padding: 0;
+}
+.jama-checklist ol > li {
+  counter-increment: jc-counter;
+  position: relative;
+  padding: 12px 16px 12px 52px;
+  border-bottom: 1px solid #eaeff2;
+  line-height: 1.7;
+}
+.jama-checklist ol > li:last-child { border-bottom: none; }
+.jama-checklist ol > li::before {
+  content: counter(jc-counter);
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  width: 28px;
+  height: 28px;
+  background: #1a5276;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+.jama-checklist .jc-sub-item {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.88rem;
+  color: #5d7a8a;
+  padding-left: 0;
+}
+
+/* --- 展開式QAアコーディオン（ユーザーズガイドの適用） --- */
+.jama-apply {
+  margin: 16px 0;
+  border: 1px solid #c5dde8;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fafdff;
+}
+.jama-apply summary {
+  padding: 12px 16px;
+  background: #eaf3f8;
+  cursor: pointer;
+  font-weight: 700;
+  color: #1a5276;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  user-select: none;
+}
+.jama-apply summary::-webkit-details-marker { display: none; }
+.jama-apply summary::before {
+  content: "▸";
+  display: inline-block;
+  transition: transform 0.2s;
+  color: #1a5276;
+}
+.jama-apply[open] summary::before { transform: rotate(90deg); }
+.jama-apply .ja-body {
+  padding: 14px 16px;
+  line-height: 1.8;
+}
+.jama-apply .ja-body p { margin: 6px 0; }
+
+/* --- キーコンセプト用語カード --- */
+.jama-term {
+  display: inline-block;
+  background: #eaf3f8;
+  border: 1px solid #c5dde8;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #1a5276;
+  font-size: 0.92em;
+  white-space: nowrap;
+}
+.jama-term .jt-en {
+  color: #5d7a8a;
+  font-style: italic;
+  font-weight: 400;
+  margin-left: 4px;
+  font-size: 0.88em;
+}
+
+/* --- JAMA用フォレストプロット風の模式図（CSSのみ） --- */
+.jama-forest {
+  margin: 16px 0;
+  padding: 16px;
+  background: #fafdff;
+  border: 1px solid #c5dde8;
+  border-radius: 10px;
+}
+.jama-forest .jf-title {
+  font-weight: 700;
+  color: #0b3d5c;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.jama-forest .jf-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 90px;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 0.88rem;
+  border-bottom: 1px dashed #dce6ea;
+}
+.jama-forest .jf-row:last-child { border-bottom: none; }
+.jama-forest .jf-row .jf-study { font-weight: 600; color: #2c3e50; }
+.jama-forest .jf-row .jf-plot {
+  position: relative;
+  height: 18px;
+  background: linear-gradient(to right, transparent 49.5%, #5d7a8a 49.5%, #5d7a8a 50.5%, transparent 50.5%);
+}
+.jama-forest .jf-ci {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  background: #1a5276;
+}
+.jama-forest .jf-point {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #1a5276;
+  border-radius: 2px;
+}
+.jama-forest .jf-diamond {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #d4941e;
+}
+.jama-forest .jf-est { font-family: ui-monospace, monospace; font-size: 0.82rem; text-align: right; color: #2c3e50; }
+.jama-forest .jf-axis {
+  display: grid;
+  grid-template-columns: 140px 1fr 90px;
+  gap: 10px;
+  font-size: 0.76rem;
+  color: #5d7a8a;
+  padding-top: 6px;
+  border-top: 1.5px solid #1a5276;
+  margin-top: 4px;
+}
+.jama-forest .jf-axis .jf-axis-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --- 4つの推奨パターン用グリッド（JAMA UG Ch26的） --- */
+.jama-rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.jama-rec-card {
+  background: white;
+  border: 1px solid #c5dde8;
+  border-left: 5px solid #1a5276;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.jama-rec-card.jrc-strong-for { border-left-color: #2d8a4e; }
+.jama-rec-card.jrc-weak-for { border-left-color: #7ebf8e; }
+.jama-rec-card.jrc-weak-against { border-left-color: #e89a3e; }
+.jama-rec-card.jrc-strong-against { border-left-color: #c0392b; }
+.jama-rec-card .jrc-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #eaf3f8;
+  color: #1a5276;
+  margin-bottom: 6px;
+}
+.jama-rec-card.jrc-strong-for .jrc-tag { background: #eaf7ef; color: #1b5d35; }
+.jama-rec-card.jrc-weak-for .jrc-tag { background: #f1f8ed; color: #4a7a2e; }
+.jama-rec-card.jrc-weak-against .jrc-tag { background: #fff2e0; color: #8a5510; }
+.jama-rec-card.jrc-strong-against .jrc-tag { background: #fdeae7; color: #7a2317; }
+.jama-rec-card .jrc-title { font-weight: 700; color: #2c3e50; font-size: 0.95rem; margin: 4px 0; }
+.jama-rec-card p { font-size: 0.88rem; line-height: 1.65; margin: 4px 0; }
+
+/* --- ユーザーズガイド対応表 --- */
+.jama-map {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+.jama-map table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.jama-map th, .jama-map td {
+  padding: 8px 10px;
+  border: 1px solid #c5dde8;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+}
+.jama-map thead th {
+  background: #1a5276;
+  color: white;
+  font-weight: 700;
+}
+.jama-map tbody tr:nth-child(even) { background: #f4f9fc; }
+
+/* --- NMA用ネットワーク図（CSSのみ） --- */
+.jama-network {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.jama-network .jn-node {
+  background: white;
+  border: 2px solid #1a5276;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+.jama-network .jn-node-label {
+  font-weight: 700;
+  color: #1a5276;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+.jama-network .jn-node-sub {
+  font-size: 0.78rem;
+  color: #5d7a8a;
+}
+
+/* --- 次セクションへ（JAMA章専用）--- */
+.jama-next {
+  margin: 24px 0 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #eaf3f8, #d5e7f1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 700;
+  color: #0b3d5c;
+  cursor: pointer;
+  min-height: 48px;
+  transition: all 0.2s;
+}
+.jama-next:hover { background: linear-gradient(135deg, #d5e7f1, #bfd8e6); transform: translateY(-1px); }
+
+/* --- H2 見出しをよりスキャンしやすく --- */
+.jama-h2 {
+  position: relative;
+  font-size: 1.18rem;
+  color: #0b3d5c;
+  margin: 28px 0 12px;
+  padding: 8px 12px 8px 16px;
+  background: linear-gradient(to right, #eaf3f8, transparent);
+  border-left: 5px solid #1a5276;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+.jama-h3 {
+  font-size: 1.02rem;
+  color: #1a5276;
+  margin: 20px 0 8px;
+  padding-left: 8px;
+  border-left: 3px solid #7ab5d0;
+  line-height: 1.5;
+}
+
+/* --- 出典明記行 --- */
+.jama-source {
+  margin-top: 24px;
+  padding: 10px 12px;
+  background: #f4f9fc;
+  border-top: 2px solid #1a5276;
+  font-size: 0.82rem;
+  color: #5d7a8a;
+  line-height: 1.65;
+  border-radius: 0 0 8px 8px;
+}
+.jama-source strong { color: #1a5276; }
+
+/* --- TOC の JAMA セクション装飾 --- */
+.toc-btn.jama-toc .toc-num {
+  background: #1a5276;
+  color: white;
+  font-size: 1rem;
+}
+.toc-btn.jama-toc {
+  border-left: 3px solid #1a5276;
+}
+
+/* --- 比較並列ボックス --- */
+.jama-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 14px 0;
+}
+.jama-compare .jcmp-box {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.jama-compare .jcmp-bad {
+  background: #fdeae7;
+  border: 1px solid #e89585;
+  border-left: 4px solid #c0392b;
+}
+.jama-compare .jcmp-good {
+  background: #eaf7ef;
+  border: 1px solid #9ecaad;
+  border-left: 4px solid #2d8a4e;
+}
+.jama-compare .jcmp-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+}
+.jama-compare .jcmp-bad .jcmp-title { color: #7a2317; }
+.jama-compare .jcmp-good .jcmp-title { color: #1b5d35; }
+
+@media (max-width: 720px) {
+  .jama-page-head { flex-direction: column; align-items: flex-start; }
+  .jama-page-head .jph-title { font-size: 1.05rem; }
+  .jama-compare { grid-template-columns: 1fr; }
+  .jama-forest .jf-row, .jama-forest .jf-axis {
+    grid-template-columns: 90px 1fr 70px;
+    font-size: 0.78rem;
+  }
+  .jama-checklist ol > li { padding-left: 48px; }
+  .jama-h2 { font-size: 1.05rem; }
+}
+
+/* --- 用語ハイライト（本文中） --- */
+.jterm {
+  background: linear-gradient(transparent 60%, #fdf2cf 60%);
+  font-weight: 700;
+  padding: 0 2px;
+}
+.jterm-en {
+  font-size: 0.82em;
+  color: #5d7a8a;
+  font-style: italic;
+  margin-left: 2px;
+  font-weight: 500;
+}
+
+/* --- 既存章用 JAMAバッジ --- */
+.jama-badge-inline {
+  display: inline-block;
+  background: #1a5276;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  margin-right: 4px;
+  vertical-align: middle;
+}

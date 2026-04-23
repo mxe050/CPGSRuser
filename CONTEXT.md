@@ -14,7 +14,37 @@
 
 ---
 
-## 現在の状態 — v1.3（2026-04-22）
+## 現在の状態 — v1.4（2026-04-23）
+
+**JAMA ユーザーズガイド中心版**。Gordon Guyatt 先生らの *Users' Guides to the Medical Literature*（第3版）Ch22・Ch23・Ch24 を独立 3 章として新規追加し、既存章に横断的なコールアウトを挿入。
+
+### v1.4の追加内容（v1.3からの差分）
+1. **新規ページ 3 章**：
+   - `page-26` 📘 JAMA UG Ch22 — SR／MA プロセスの信頼性（8 質問チェックリスト／フォレストプロット模式図／β 遮断薬シナリオ）
+   - `page-27` 📘 JAMA UG Ch23 — 結果の理解と適用（効果指標比較表／異質性 3 ステップ／サブグループ 5 基準／SoF 表／POISE 計算例）
+   - `page-28` 📘 JAMA UG Ch24 — ネットワークメタアナリシス（4 つのネットワーク形状／8 項目 NMA チェックリスト／片頭痛トリプタン NMA）
+2. **TOC 新セクション**「📘 JAMA ユーザーズガイド（要約）」を Primer セクションの直後に追加
+3. **表紙（Ch0）** に JAMA UG 誘導ブロックを追加（青系グラデーション、3 章への直接リンク）
+4. **Primer（page-25）** ロードマップに JAMA UG 3 章カードを追加
+5. **既存 7 章に「📘 JAMA UG」コールアウト**を挿入：
+   - Ch1（本章と JAMA UG の関係）
+   - Ch8（RoB はアウトカムごとに判定）
+   - Ch9（異質性評価の 3 ステップ）
+   - Ch10（非直接性の 4 側面）
+   - Ch11（CI 両端の臨床判断と OIS）
+   - Ch18（AMSTAR 2／PRISMA／JAMA UG の使い分け）
+   - Ch20（相対→絶対→NNT の翻訳）
+   - Ch21（推奨の 4 パターンと SDM）
+6. **著作権配慮**：逐語引用せず、章構成・質問フレームを参照して独自に再構成・解説。各 JAMA 章末に出典明記。
+7. **script.js**：プログレスバー計算を全 28 ページ対応に更新（Primer=25, JAMA=26-28）
+8. **キャッシュバスター**：`?v=5.0` → `?v=6.0`
+
+### v1.4の追加 CSS クラス
+`.jama-page-head` `.jph-*` `.jama-note` `.jn-*` `.jama-scenario` `.js-*` `.jama-resolution` `.jr-*` `.jama-checklist` `.jc-*` `.jama-apply` `.ja-*` `.jama-term` `.jt-en` `.jama-forest` `.jf-*` `.jama-rec-grid` `.jama-rec-card` `.jrc-*` `.jama-map` `.jama-network` `.jn-node*` `.jama-next` `.jama-h2` `.jama-h3` `.jama-source` `.toc-btn.jama-toc` `.jama-compare` `.jcmp-*` `.jterm` `.jterm-en` `.jama-badge-inline`
+
+---
+
+## 旧版履歴 — v1.3（2026-04-22）
 
 **Guyatt先生のCore GRADE統合＋スマホファーストUX版**。Primer ページ（page-25）を大幅拡充。
 
