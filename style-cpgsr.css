@@ -2279,3 +2279,146 @@ html { scroll-behavior: smooth; }
   margin-right: 4px;
   vertical-align: middle;
 }
+
+/* ===== Core GRADE全体像 サムネイル＋モーダル（v1.5追加） ===== */
+.cpg-overview-block {
+  margin: 16px 0 18px;
+  padding: 14px 12px;
+  background: linear-gradient(135deg, #fff8eb 0%, #fffbf2 100%);
+  border: 2px solid #d3a55a;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+.cpg-overview-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a5276;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+}
+.cpg-overview-thumb-btn {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e0d5b8;
+  border-radius: 10px;
+  padding: 6px;
+  margin: 0;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  font-family: inherit;
+}
+.cpg-overview-thumb-btn:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  border-color: #d3a55a;
+}
+.cpg-overview-thumb-btn:active { transform: scale(0.985); }
+.cpg-overview-thumb-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.cpg-overview-thumb-hint {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6a4a1a;
+  padding: 8px 0 4px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* モーダル（全画面表示） */
+.cpg-overview-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0,0,0,0.94);
+  display: none;
+  flex-direction: column;
+}
+.cpg-overview-modal.open {
+  display: flex;
+  animation: cpgFadeIn .18s ease;
+}
+@keyframes cpgFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.cpg-overview-modal-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  flex-shrink: 0;
+  gap: 8px;
+}
+.cpg-overview-modal-title {
+  font-size: 13px;
+  font-weight: 700;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cpg-overview-modal-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.cpg-overview-modal-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 14px;
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s;
+  font-family: inherit;
+}
+.cpg-overview-modal-btn:hover { background: rgba(255,255,255,0.32); }
+.cpg-overview-modal-btn:active { background: rgba(255,255,255,0.45); }
+.cpg-overview-modal-body {
+  flex: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  touch-action: pinch-zoom;
+}
+.cpg-overview-modal-img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+  margin: auto;
+  cursor: zoom-in;
+  transition: width .25s ease, max-width .25s ease;
+}
+.cpg-overview-modal-img.zoomed {
+  max-width: none;
+  max-height: none;
+  width: 220%;
+  cursor: zoom-out;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .cpg-overview-modal-img.zoomed { width: 150%; }
+}
+@media (min-width: 1200px) {
+  .cpg-overview-modal-img.zoomed { width: 110%; }
+}
+body.cpg-overview-open { overflow: hidden; }

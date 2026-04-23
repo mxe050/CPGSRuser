@@ -14,7 +14,33 @@
 
 ---
 
-## 現在の状態 — v1.4（2026-04-23）
+## 現在の状態 — v1.5（2026-04-23）
+
+**Core GRADE全体像サムネイル追加版**。Ch0表紙の初学者向け導入ブロック内（動画①の直上）に、Core GRADEアプローチ全体像（1枚絵）のサムネイル＋全画面ライトボックスを追加。
+
+### v1.5の追加内容（v1.4からの差分）
+1. **新規画像**：`images/core-grade-overview.png`（Core GRADEアプローチ — 6ステップ＋4推奨パターン＋全体俯瞰の1枚絵）
+   - 元ファイル `ChatGPT Image 2026年4月23日 21_35_16.png` をクリーンASCII名でコピー（GitHub Pages URL の安定性のため）
+2. **Ch0表紙に「📊 診療ガイドライン（システマティックレビューに基づく）全体像」ブロック追加**
+   - 配置：「🎓 初学者の方は…」サブテキスト直下、動画①ボタンの直上
+   - サムネイル：オレンジ縁ブロック内に等幅表示
+3. **全画面モーダル（ライトボックス）実装**
+   - タップ → ダーク背景の全画面オーバーレイ表示
+   - 上部バー：タイトル＋「🔍 拡大／縮小」「✕」ボタン
+   - 「拡大」モバイル220% ／タブレット150% ／PC110%（メディアクエリ）
+   - 画像本体タップでも拡大トグル、背景タップ／ESC／✕ で閉じる
+   - `touch-action: pinch-zoom` でネイティブ2本指ピンチも有効
+4. **キャッシュバスター**：`?v=6.0` → `?v=6.1`（全12箇所）
+
+### v1.5の追加 CSS クラス
+`.cpg-overview-block` `.cpg-overview-title` `.cpg-overview-thumb-btn` `.cpg-overview-thumb-img` `.cpg-overview-thumb-hint` `.cpg-overview-modal` `.cpg-overview-modal-bar` `.cpg-overview-modal-title` `.cpg-overview-modal-actions` `.cpg-overview-modal-btn` `.cpg-overview-modal-body` `.cpg-overview-modal-img` `.cpg-overview-modal-img.zoomed` `body.cpg-overview-open`
+
+### v1.5の追加 JS 関数
+`openCPGOverview()` `closeCPGOverview()` `toggleCPGOverviewZoom()` ＋ ESC キーリスナー
+
+---
+
+## 旧版履歴 — v1.4（2026-04-23）
 
 **JAMA ユーザーズガイド中心版**。Gordon Guyatt 先生らの *Users' Guides to the Medical Literature*（第3版）Ch22・Ch23・Ch24 を独立 3 章として新規追加し、既存章に横断的なコールアウトを挿入。
 
@@ -140,7 +166,9 @@ CPGSRuser/
 - `97c9879` v1.1 ナビゲーション学習システム導入（2026-04-22）
 - `4d3050f` docs: CONTEXT.md v1.1 簡潔化（2026-04-22）
 - `cb55f72` v1.2 初学者向け Primer ページ導入（2026-04-22）
-- v1.3 Guyatt Core GRADE統合＋スマホファーストUX（2026-04-22）
+- `f37809d` v1.3 Guyatt Core GRADE統合＋スマホファーストUX（2026-04-22）
+- `2e0c5d1` v1.4 JAMA ユーザーズガイド中心版（Ch22-24を独立3章として追加）（2026-04-23）
+- v1.5 Core GRADE全体像サムネイル＋全画面ライトボックス追加（2026-04-23）
 
 ---
 
