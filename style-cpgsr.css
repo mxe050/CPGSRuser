@@ -2422,3 +2422,210 @@ html { scroll-behavior: smooth; }
   .cpg-overview-modal-img.zoomed { width: 110%; }
 }
 body.cpg-overview-open { overflow: hidden; }
+
+/* ==================================================== */
+/*  v1.4.1 ページ内メニューボタン & Primerフォント調整   */
+/* ==================================================== */
+
+/* --- 各ページ先頭に置く「目次を開く」バー --- */
+.in-page-menu-bar {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 14px 0;
+  padding: 0;
+}
+.in-page-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 2px 6px rgba(26,82,118,0.08);
+  min-height: 40px;
+}
+.in-page-menu-btn .ipm-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+.in-page-menu-btn:hover,
+.in-page-menu-btn:focus {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(26,82,118,0.25);
+  transform: translateY(-1px);
+}
+.in-page-menu-btn:active { transform: translateY(0); }
+
+/* JAMA UG ページでは青系の強調トーンに */
+#page-26 .in-page-menu-btn,
+#page-27 .in-page-menu-btn,
+#page-28 .in-page-menu-btn {
+  border-color: #1a5276;
+  color: #1a5276;
+}
+#page-26 .in-page-menu-btn:hover,
+#page-27 .in-page-menu-btn:hover,
+#page-28 .in-page-menu-btn:hover {
+  background: #1a5276;
+  color: white;
+}
+
+/* 表紙（page-0）ではやや控えめに上に浮かせる */
+#page-0 .in-page-menu-bar { margin-bottom: 10px; }
+
+/* --- chapter-nav の真ん中の目次ボタン --- */
+.chapter-nav-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: white;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-height: 44px;
+  margin: 0 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.chapter-nav-menu:hover,
+.chapter-nav-menu:focus {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(26,82,118,0.25);
+}
+.chapter-nav-menu:active { transform: translateY(0); }
+
+/* chapter-nav を flex にして中央ボタンを中央配置 */
+.chapter-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* --- Primer のフォントをスマホで読みやすく --- */
+@media (max-width: 760px) {
+  /* 本文段落全般 */
+  #page-25 .page-body p,
+  #page-25 .page-body li,
+  #page-25 .primer-why p,
+  #page-25 .primer-why li {
+    font-size: 1rem !important;
+    line-height: 1.85 !important;
+  }
+
+  /* 図キャプションを読みやすく */
+  #page-25 .primer-fig figcaption {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    padding: 8px 10px;
+    color: #2c3e50;
+  }
+
+  /* 見出しも少し上げる */
+  #page-25 .primer-h2 {
+    font-size: 1.15rem !important;
+  }
+  #page-25 .primer-h2-new {
+    font-size: 1.15rem !important;
+  }
+
+  /* 小見出し（h3, h4）のスマホサイズ */
+  #page-25 h3,
+  #page-25 .primer-final h3 {
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+  }
+  #page-25 h4 { font-size: 1rem !important; line-height: 1.55 !important; }
+
+  /* 箇条書き内の文字 */
+  #page-25 .misunderstand-list li,
+  #page-25 .principle-list li,
+  #page-25 .sr-steps li,
+  #page-25 .primer-5a .a-step,
+  #page-25 .compare-box {
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+  }
+
+  /* Q&A セクションも大きめに */
+  #page-25 .qa-q .qa-title { font-size: 1rem !important; }
+  #page-25 .qa-a { font-size: 1rem !important; line-height: 1.85 !important; }
+
+  /* ピクトグラム / バッジの可読性 */
+  #page-25 .primer-badge { font-size: 0.88rem; }
+
+  /* サブセクション間の区切り空間を少し広く（読み疲れ軽減） */
+  #page-25 .primer-fig { margin: 14px 0 20px; }
+  #page-25 .primer-fig img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* ガイア先生の引用吹き出し */
+  #page-25 .guyatt-quote .gq-body { font-size: 1rem !important; line-height: 1.8 !important; }
+  #page-25 .guyatt-quote .gq-cite { font-size: 0.88rem !important; }
+
+  /* ターゲットボックス・OIS判定などの説明文 */
+  #page-25 .target-box p,
+  #page-25 .ois-judgment p,
+  #page-25 .rob-example p,
+  #page-25 .subgroup-box p,
+  #page-25 .rec-factors p {
+    font-size: 0.98rem !important;
+    line-height: 1.75 !important;
+  }
+
+  /* パンチライン */
+  #page-25 .primer-punchline { font-size: 1.02rem !important; line-height: 1.8 !important; }
+  #page-25 .primer-punchline .sub { font-size: 0.9rem !important; }
+
+  /* ボタンとチップ */
+  #page-25 .sec-next { font-size: 0.98rem !important; }
+
+  /* chapter-nav のレイアウトを縦積みで大きめに */
+  .chapter-nav {
+    gap: 10px;
+  }
+  .chapter-nav button {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+  .chapter-nav-menu {
+    flex: 1 1 100%;
+    order: 3;
+    min-height: 44px;
+  }
+  /* 左右のボタンは 1 行に並べる */
+  .chapter-nav > button:not(.chapter-nav-menu) { flex: 1 1 45%; }
+
+  /* in-page-menu-btn もタップしやすく */
+  .in-page-menu-btn {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    min-height: 44px;
+  }
+}
+
+/* さらに小さい画面 */
+@media (max-width: 420px) {
+  #page-25 .page-body p,
+  #page-25 .page-body li { font-size: 0.98rem !important; }
+  #page-25 .primer-fig figcaption { font-size: 0.88rem !important; }
+  #page-25 .primer-h2 { font-size: 1.08rem !important; }
+}
