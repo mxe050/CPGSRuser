@@ -2397,7 +2397,10 @@ html { scroll-behavior: smooth; }
   align-items: safe center; /* v1.8 オーバーフロー時に左/上が切れない */
   justify-content: safe center;
   padding: 8px;
-  touch-action: pinch-zoom;
+  /* v1.9 fix: pinch-zoom 単独指定だと1本指スワイプが無効になるため、
+     manipulation（pan-x pan-y pinch-zoom 同等）に変更してパン操作を有効化 */
+  touch-action: manipulation;
+  overscroll-behavior: contain;
 }
 .cpg-overview-modal-img {
   display: block;
