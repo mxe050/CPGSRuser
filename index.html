@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
-<link rel="stylesheet" href="style.css?v=6.3">
-<link rel="stylesheet" href="style-cpgsr.css?v=6.3">
+<link rel="stylesheet" href="style.css?v=6.4">
+<link rel="stylesheet" href="style-cpgsr.css?v=6.4">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -111,13 +111,13 @@
             本サイトの各章に入る前に、<strong>EBM・システマティックレビュー（SR）・診療ガイドライン（CPG）の関係</strong>を正しく理解しておくことが、<strong>信頼できる医療情報を見極める目</strong>を養うための第一歩です。
           </div>
 
-          <!-- ===== Core GRADE全体像サムネイル（v1.5追加） ===== -->
+          <!-- ===== Core GRADE全体像サムネイル（v1.5追加・v1.8で小型化＋モバイルパン対応） ===== -->
           <div class="cpg-overview-block">
             <div class="cpg-overview-title">📊 診療ガイドライン（システマティックレビューに基づく）全体像</div>
             <button type="button" class="cpg-overview-thumb-btn" onclick="openCPGOverview()" aria-label="全体像を拡大表示">
-              <img class="cpg-overview-thumb-img" src="images/core-grade-overview.png?v=6.3" alt="Core GRADEアプローチ — 診療ガイドライン：エビデンスから推奨へ1枚で理解" loading="lazy" />
-              <span class="cpg-overview-thumb-hint">🔍 タップで全画面表示・さらに拡大可</span>
+              <img class="cpg-overview-thumb-img" src="images/core-grade-overview.png?v=6.4" alt="Core GRADEアプローチ — 診療ガイドライン：エビデンスから推奨へ1枚で理解" loading="lazy" />
             </button>
+            <div class="cpg-overview-thumb-hint">🔍 タップで拡大 — スマホはスワイプで移動</div>
           </div>
 
           <div class="beginner-intro-btns">
@@ -135,6 +135,14 @@
                 <span class="btn-label">動画②（会話編 54分）</span>
                 <span class="btn-title">診療ガイドライン作成方法を通じて詳しく学ぶ</span>
                 <span class="btn-dsc">定義の"なぜ？"から作成・パネリストの役割まで</span>
+              </span>
+            </a>
+            <a class="beginner-btn slide-btn" href="https://grad-eslide.vercel.app/slide/N3" target="_blank" rel="noopener">
+              <span class="slide-mark">📱</span>
+              <span class="btn-body">
+                <span class="btn-label">スマホ学習版（スライド）</span>
+                <span class="btn-title">EBMを理解して、システマティックレビューから診療ガイドライン作成までを、スマホで読んでみよう</span>
+                <span class="btn-dsc">「動画②診療ガイドライン作成方法を通じて詳しく学ぶ」のスマホ学習版</span>
               </span>
             </a>
             <button class="beginner-btn primer-btn" onclick="showPage(25)">
@@ -3910,14 +3918,14 @@
 </div><!-- /.app-body -->
 
 <!-- スクリプト -->
-<script src="coreGRADE_utils.js?v=6.3"></script>
-<script src="script.js?v=6.3"></script>
-<script src="js/glossary.js?v=6.3"></script>
-<script src="js/references.js?v=6.3"></script>
-<script src="js/mid-explorer.js?v=6.3"></script>
-<script src="js/trustworthy-check.js?v=6.3"></script>
-<script src="js/amstar2.js?v=6.3"></script>
-<script src="js/linkedin-feed.js?v=6.3"></script>
+<script src="coreGRADE_utils.js?v=6.4"></script>
+<script src="script.js?v=6.4"></script>
+<script src="js/glossary.js?v=6.4"></script>
+<script src="js/references.js?v=6.4"></script>
+<script src="js/mid-explorer.js?v=6.4"></script>
+<script src="js/trustworthy-check.js?v=6.4"></script>
+<script src="js/amstar2.js?v=6.4"></script>
+<script src="js/linkedin-feed.js?v=6.4"></script>
 
 <!-- ページ切替後のインタラクティブ要素リフレッシュ＋文書構造マップタブ -->
 <script>
@@ -3959,10 +3967,19 @@
   });
 })();
 
-// ===== Core GRADE全体像モーダル制御（v1.5追加） =====
+// ===== Core GRADE全体像モーダル制御（v1.5追加・v1.6で初期スクロール位置調整） =====
 function openCPGOverview() {
   document.getElementById('cpgOverviewModal').classList.add('open');
   document.body.classList.add('cpg-overview-open');
+  // モバイルで横スクロール領域の中央を初期表示（縦は上端から）
+  setTimeout(function(){
+    var body = document.querySelector('.cpg-overview-modal-body');
+    var img = document.getElementById('cpgOverviewImg');
+    if (body && img && img.offsetWidth > body.clientWidth) {
+      body.scrollLeft = (img.offsetWidth - body.clientWidth) / 2;
+    }
+    if (body) body.scrollTop = 0;
+  }, 60);
 }
 function closeCPGOverview() {
   document.getElementById('cpgOverviewModal').classList.remove('open');
@@ -3988,14 +4005,14 @@ document.addEventListener('keydown', function(e){
 <!-- ===== Core GRADE全体像 モーダル（v1.5追加） ===== -->
 <div id="cpgOverviewModal" class="cpg-overview-modal" role="dialog" aria-modal="true" aria-labelledby="cpgOverviewModalTitle">
   <div class="cpg-overview-modal-bar">
-    <span id="cpgOverviewModalTitle" class="cpg-overview-modal-title">📊 診療ガイドライン（SRに基づく）全体像</span>
+    <span id="cpgOverviewModalTitle" class="cpg-overview-modal-title">📊 全体像 <span class="cpg-overview-modal-hint">— スワイプで移動・ピンチで拡大</span></span>
     <div class="cpg-overview-modal-actions">
       <button id="cpgOverviewZoomBtn" type="button" class="cpg-overview-modal-btn" onclick="toggleCPGOverviewZoom()" aria-label="拡大／縮小">🔍 拡大</button>
       <button type="button" class="cpg-overview-modal-btn" onclick="closeCPGOverview()" aria-label="閉じる">✕</button>
     </div>
   </div>
   <div class="cpg-overview-modal-body" onclick="closeCPGOverview()">
-    <img id="cpgOverviewImg" class="cpg-overview-modal-img" src="images/core-grade-overview.png?v=6.3" alt="Core GRADEアプローチ全体像（クリックで拡大／縮小）" onclick="event.stopPropagation();toggleCPGOverviewZoom()" />
+    <img id="cpgOverviewImg" class="cpg-overview-modal-img" src="images/core-grade-overview.png?v=6.4" alt="Core GRADEアプローチ全体像（クリックで拡大／縮小）" onclick="event.stopPropagation();toggleCPGOverviewZoom()" />
   </div>
 </div>
 

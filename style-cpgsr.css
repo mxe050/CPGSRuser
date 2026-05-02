@@ -2301,11 +2301,12 @@ html { scroll-behavior: smooth; }
 .cpg-overview-thumb-btn {
   display: block;
   width: 100%;
+  max-width: 260px; /* v1.8 小型サムネイル化 */
   background: #fff;
   border: 1px solid #e0d5b8;
   border-radius: 10px;
   padding: 6px;
-  margin: 0;
+  margin: 0 auto;
   cursor: pointer;
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
   font-family: inherit;
@@ -2326,7 +2327,7 @@ html { scroll-behavior: smooth; }
   text-align: center;
   font-size: 12px;
   color: #6a4a1a;
-  padding: 8px 0 4px;
+  padding: 10px 0 2px;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -2393,35 +2394,60 @@ html { scroll-behavior: smooth; }
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: safe center; /* v1.8 オーバーフロー時に左/上が切れない */
+  justify-content: safe center;
   padding: 8px;
   touch-action: pinch-zoom;
 }
 .cpg-overview-modal-img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  width: auto;
   display: block;
-  margin: auto;
+  height: auto;
+  /* v1.8 デフォルトで読める大きさ：モバイルでは画像が画面より広くなりパン操作が必要 */
+  width: max(100%, 900px);
+  max-width: none;
+  margin: 0 auto;
   cursor: zoom-in;
-  transition: width .25s ease, max-width .25s ease;
+  transition: width .25s ease;
 }
 .cpg-overview-modal-img.zoomed {
-  max-width: none;
-  max-height: none;
-  width: 220%;
+  width: max(180%, 1500px);
   cursor: zoom-out;
-  margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .cpg-overview-modal-img.zoomed { width: 150%; }
+  .cpg-overview-modal-img { width: min(100%, 1200px); }
+  .cpg-overview-modal-img.zoomed { width: min(160%, 1800px); }
 }
-@media (min-width: 1200px) {
-  .cpg-overview-modal-img.zoomed { width: 110%; }
+@media (min-width: 1400px) {
+  .cpg-overview-modal-img { width: min(100%, 1400px); }
+  .cpg-overview-modal-img.zoomed { width: min(120%, 2000px); }
+}
+.cpg-overview-modal-hint {
+  font-size: 11px;
+  font-weight: normal;
+  opacity: .7;
+  margin-left: 4px;
 }
 body.cpg-overview-open { overflow: hidden; }
+
+/* ===== スライド学習版ボタン（v1.8追加） ===== */
+.slide-btn {
+  background: linear-gradient(135deg, rgba(20,148,138,0.30) 0%, rgba(72,200,170,0.18) 100%);
+  border-color: rgba(72,200,170,0.55);
+}
+.slide-btn .slide-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #14948a;
+  color: white;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(20,148,138,0.45);
+}
+.slide-btn .btn-label { color: #a3e9dd; }
 
 /* ==================================================== */
 /*  v1.4.1 ページ内メニューボタン & Primerフォント調整   */
