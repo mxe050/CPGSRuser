@@ -2658,3 +2658,164 @@ body.cpg-overview-open { overflow: hidden; }
   #page-25 .primer-fig figcaption { font-size: 0.88rem !important; }
   #page-25 .primer-h2 { font-size: 1.08rem !important; }
 }
+
+/* ===== 診療ガイドラインあら探しシリーズ（Ch17・v1.10追加） ===== */
+.aratan-block {
+  margin: 18px 0 22px;
+  border: 2px solid #d4561a;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffeadb 100%);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+.aratan-summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background 0.15s;
+  min-height: 56px;
+}
+.aratan-summary::-webkit-details-marker { display: none; }
+.aratan-summary::marker { display: none; content: ''; }
+.aratan-summary:hover { background: rgba(255,255,255,0.5); }
+.aratan-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: #d4561a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 3px 10px rgba(212,86,26,0.4);
+}
+.aratan-summary-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.aratan-summary-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #7a2e08;
+  line-height: 1.4;
+}
+.aratan-summary-sub {
+  font-size: 0.82rem;
+  color: #8a4a20;
+  opacity: 0.92;
+}
+.aratan-summary-toggle {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(212,86,26,0.18);
+  color: #d4561a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 0.25s ease;
+}
+.aratan-block[open] .aratan-summary-toggle { transform: rotate(180deg); }
+.aratan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 6px 12px 14px;
+  background: rgba(255,255,255,0.5);
+}
+.aratan-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid #efd9c4;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s;
+  min-height: 56px;
+}
+.aratan-item:hover {
+  background: #fff8f0;
+  border-color: #d4561a;
+  transform: translateX(2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.aratan-mark {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.aratan-yt .aratan-mark { background: #ff3b30; }
+.aratan-note .aratan-mark { background: #41c9b4; font-size: 1rem; }
+.aratan-paper .aratan-mark { background: #2980b9; font-size: 1rem; }
+.aratan-docswell .aratan-mark { background: #e8a93b; color: #5a3c00; font-size: 1rem; }
+.aratan-x .aratan-mark { background: #1a1a1a; font-size: 1.05rem; }
+.aratan-item-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.aratan-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #f5e6d6;
+  color: #7a4a20;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+.aratan-tag-special { background: #d4561a; color: #fff; }
+.aratan-tag-paper { background: #2980b9; color: #fff; }
+.aratan-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+.aratan-dsc {
+  font-size: 0.8rem;
+  color: #5a6878;
+  line-height: 1.55;
+}
+
+/* スマホ調整 */
+@media (max-width: 480px) {
+  .aratan-summary { padding: 14px 12px; gap: 10px; }
+  .aratan-summary-title { font-size: 0.98rem; }
+  .aratan-summary-sub { font-size: 0.74rem; }
+  .aratan-icon { width: 40px; height: 40px; font-size: 1.2rem; }
+  .aratan-summary-toggle { width: 28px; height: 28px; font-size: 0.8rem; }
+  .aratan-list { padding: 6px 8px 12px; }
+  .aratan-item { padding: 10px 12px; gap: 10px; }
+  .aratan-mark { width: 34px; height: 34px; font-size: 0.95rem; }
+  .aratan-name { font-size: 0.88rem; }
+  .aratan-dsc { font-size: 0.76rem; }
+  .aratan-tag { font-size: 0.66rem; padding: 1px 6px; }
+}

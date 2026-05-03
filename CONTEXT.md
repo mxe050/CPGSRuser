@@ -14,7 +14,26 @@
 
 ---
 
-## 現在の状態 — v1.8（2026-05-03）
+## 現在の状態 — v1.10（2026-05-03）
+
+**Ch17にあら探しシリーズ・リンク集追加**。
+- Chapter 17（CPG品質の実例）の「要点：」box の上に、`<details>` ベースのアコーディオン「素晴らしい診療ガイドラインあら探しシリーズ」を追加
+- 18件のリンク：特別編・論文（J Clin Epidemiol 2025）・No.1〜No.16
+- ソース別アイコン色分け：YouTube ▶ 赤 ／ note 📝 ティール ／ 論文 📄 青 ／ docswell 📊 黄 ／ X 𝕏 黒
+- タップで折りたたみ／展開、各カードは新タブで開く（`target="_blank" rel="noopener"`）
+- スマホ専用フォント縮小メディアクエリ（〜480px）
+- キャッシュバスター `?v=6.5` → `?v=6.6`（全12箇所）
+
+### v1.10の追加 CSS クラス
+`.aratan-block` `.aratan-summary` `.aratan-icon` `.aratan-summary-body` `.aratan-summary-title` `.aratan-summary-sub` `.aratan-summary-toggle` `.aratan-list` `.aratan-item` `.aratan-mark` `.aratan-yt` `.aratan-note` `.aratan-paper` `.aratan-docswell` `.aratan-x` `.aratan-item-body` `.aratan-tag` `.aratan-tag-special` `.aratan-tag-paper` `.aratan-name` `.aratan-dsc`
+
+---
+
+## 旧版履歴 — v1.9（2026-05-03）
+
+**モーダル内パンバグ修正**。`touch-action: pinch-zoom` を `manipulation` に変更し、1本指スワイプ（パン操作）を有効化。`overscroll-behavior: contain` も追加。`?v=6.4` → `?v=6.5`
+
+## 旧版履歴 — v1.8（2026-05-03）
 
 **全体像サムネイル小型化＋スライド学習版ボタン追加**。
 - v1.5で追加したCore GRADE全体像サムネイルを小型化（max-width 260px）
@@ -199,7 +218,9 @@ CPGSRuser/
 - `8352b64` v1.5 Core GRADE全体像サムネイル＋全画面ライトボックス追加（2026-04-23）
 - `6df7f4c` v1.6 戻るボタン修正・各ページに目次ボタン・Primerスマホフォント拡大（2026-05-03）
 - `4e2829b` v1.7 姉妹サイト「GRADE 探検」への導線ボタン追加（2026-05-03）
-- v1.8 全体像サムネイル小型化＋モバイル拡大パン対応＋スライド学習版ボタン追加（2026-05-03）
+- `b93f881` v1.8 全体像サムネ小型化＋モバイル拡大パン対応＋スライド学習版ボタン追加（2026-05-03）
+- `98ef333` v1.9 モーダル内スワイプ移動バグ修正（touch-action: manipulation）（2026-05-03）
+- v1.10 Ch17にあら探しシリーズ・リンク集（特別編＋論文＋No.1〜16）追加（2026-05-03）
 
 ---
 
