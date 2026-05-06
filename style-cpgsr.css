@@ -885,6 +885,58 @@
   .primer-vbtn-mark { width: 24px; height: 24px; font-size: 0.85rem; }
 }
 
+/* ===== JAMA UG 章内図版（forest plot 等）（v1.15追加） ===== */
+.jama-fig {
+  margin: 22px 0;
+  text-align: center;
+}
+.jama-fig-link {
+  display: inline-block;
+  max-width: 100%;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #c5dde8;
+  border-radius: 10px;
+  padding: 6px;
+  background: white;
+  transition: transform 0.15s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.jama-fig-link:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  border-color: #1a5276;
+  transform: translateY(-1px);
+}
+.jama-fig-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.jama-fig-hint {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #1a5276;
+  padding: 8px 0 2px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.jama-fig figcaption {
+  margin: 10px 4px 0;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: #4a5868;
+  text-align: left;
+  padding: 8px 12px;
+  background: #f4f8fb;
+  border-left: 3px solid #1a5276;
+  border-radius: 4px;
+}
+@media (max-width: 600px) {
+  .jama-fig figcaption { font-size: 0.82rem; padding: 8px 10px; }
+}
+
 .primer-h2 {
   color: var(--primary-dark);
   font-size: 1.35rem;
