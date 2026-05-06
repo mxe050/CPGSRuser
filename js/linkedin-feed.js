@@ -44,15 +44,12 @@
   }
 
   function renderCard(p){
-    const when = p.daysAgo < 7 ? `${p.daysAgo}日前` : p.daysAgo < 30 ? `${Math.floor(p.daysAgo/7)}週間前` : `${Math.floor(p.daysAgo/30)}ヶ月前`;
-    const chap = p.relatedChapter ? `<span class="lnk-chap">関連：${p.relatedChapter}</span>` : '';
+    // v1.13: 日付（X日前）と「関連：ChY」表示は廃止 — トピックタグのみ表示
     const link = p.externalUrl ? `<a href="${p.externalUrl}" target="_blank" rel="noopener" class="lnk-ext">🔗 ${p.externalTitle || 'リンク'}</a>` : '';
     return `
       <div class="lnk-card" data-topic="${p.topic}">
         <div class="lnk-card-head">
           <span class="lnk-topic">${p.topic}</span>
-          <span class="lnk-when">${when}</span>
-          ${chap}
         </div>
         <div class="lnk-comment">${p.comment}</div>
         ${link}

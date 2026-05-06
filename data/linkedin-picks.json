@@ -1,9 +1,66 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "sourceUrl": "https://www.linkedin.com/in/guyattgh/recent-activity/all/",
-  "snapshotDate": "2026-04",
+  "snapshotDate": "2026-05",
   "description": "Gordon Guyatt先生のLinkedIn投稿から、CPG/SRの読み手に特に有用な投稿を厳選。",
   "picks": [
+    {
+      "id": "pfs-surrogate-hrql",
+      "daysAgo": 1,
+      "topic": "サロゲートアウトカム",
+      "comment": "腫瘍学では Progression-free-survival (PFS) が #死亡率（信頼できない）と 健康関連 #QualityofLife の代用としてよく使われる。今回の実証研究は PFS と HRQL の関連が極めて低いことを示した。残念！",
+      "externalTitle": "Evaluating Progression-Free Survival as a Surrogate Outcome for Health-Related Quality of Life in Oncology: A Systematic Review and Quantitative Analysis",
+      "externalUrl": "https://lnkd.in/eFRAgznG",
+      "relatedChapter": "Ch7"
+    },
+    {
+      "id": "ai-clinical-reasoning-2026",
+      "topic": "AIと臨床推論",
+      "comment": "#AI を臨床ケアの指針に使う限界の更なる証拠。臨床推論への利用を探索した研究では、最終診断とマネジメントは悪くないが、鑑別診断のエラー率が80%だった。",
+      "externalTitle": "Large Language Model Performance and Clinical Reasoning Tasks",
+      "externalUrl": "https://lnkd.in/eF3GFkiA",
+      "relatedChapter": "Ch1"
+    },
+    {
+      "id": "grade-common-pitfalls",
+      "topic": "GRADE誤用の注意点",
+      "comment": "#GRADE 利用におけるごく一般的な落とし穴を発表：I² の限界を理解しない／効果が大きいときに OIS（最適情報サイズ）チェックを怠る／確実性が連続体であることを忘れて評価を誤る。査読者から「とても有用」との高評価。",
+      "externalTitle": "Misusing I² for inconsistency, overlooking OIS for imprecision, and ignoring the continuum of certainty ratings: common pitfalls in GRADE assessments",
+      "externalUrl": "https://lnkd.in/ecFUNdtf",
+      "relatedChapter": "Ch9, Ch11"
+    },
+    {
+      "id": "ug-screening-xvii",
+      "topic": "スクリーニングCPG",
+      "comment": "古典的な JAMA Users' Guide。スクリーニング介入に関するガイドラインと推奨を理解・適用するために必要なことを明快に解説。",
+      "externalTitle": "Users' guides to the medical literature: XVII. How to use guidelines and recommendations about screening (Evidence-Based Medicine Working Group)",
+      "externalUrl": "https://lnkd.in/eVcVB-FC",
+      "relatedChapter": "Ch16, Ch20"
+    },
+    {
+      "id": "pubbias-clinician-guide",
+      "topic": "出版バイアス",
+      "comment": "出版バイアスと関連問題に関する明快で簡潔なガイド。臨床医を読者に想定して書かれている。",
+      "externalTitle": "Publication bias: a brief review for clinicians",
+      "externalUrl": "https://lnkd.in/evszybgw",
+      "relatedChapter": "Ch12"
+    },
+    {
+      "id": "singapore-ebm-19th",
+      "topic": "EBM教育",
+      "comment": "先週、シンガポールに19回目の訪問。アジア太平洋EBMワークショップで講師を務めた。同僚 Harris Lam と #EBM 教育のスーパースター・親友 Craig Mellis と一緒に。3人の年齢は62、72、（もうすぐ）82。Craig は82歳でも続ける私のロールモデル。",
+      "externalTitle": null,
+      "externalUrl": null,
+      "relatedChapter": null
+    },
+    {
+      "id": "delivery-mode-incontinence",
+      "topic": "産科・尿失禁",
+      "comment": "#vaginal 分娩 vs #caesarian 分娩のトレードオフ：#SystematicReview で、経腟分娩は努力性尿失禁（#StressIncontinence）リスクのほぼ2倍増加、切迫性尿失禁（#UrgencyIncontinence）の小幅増加と関連。Kari Tikkinen, Riikka Tähtinen 著。",
+      "externalTitle": "Long-term Impact of Mode of Delivery on Stress Urinary Incontinence and Urgency Urinary Incontinence: A Systematic Review and Meta-analysis",
+      "externalUrl": "https://lnkd.in/g9VgnpUn",
+      "relatedChapter": "Ch20"
+    },
     {
       "id": "nma-best-treatments",
       "daysAgo": 4,

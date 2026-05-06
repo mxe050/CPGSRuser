@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
-<link rel="stylesheet" href="style.css?v=6.8">
-<link rel="stylesheet" href="style-cpgsr.css?v=6.8">
+<link rel="stylesheet" href="style.css?v=6.9">
+<link rel="stylesheet" href="style-cpgsr.css?v=6.9">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -41,11 +41,6 @@
 
       <li class="toc-section">📚 初学者向け（Primer）</li>
       <li class="toc-item"><button class="toc-btn primer-toc" data-idx="25"><span class="toc-num">📚</span><span class="toc-text">EBM・SR・CPG 徹底解説<span class="en">Beginner's Primer</span></span></button></li>
-
-      <li class="toc-section">📘 JAMA ユーザーズガイド（要約）</li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26"><span class="toc-num">📘</span><span class="toc-text">Ch22 SR／MAプロセスの信頼性<span class="en">JAMA UG Ch22: SR/MA Process</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="27"><span class="toc-num">📘</span><span class="toc-text">Ch23 SR／MA 結果の理解と適用<span class="en">JAMA UG Ch23: Understanding Results</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="28"><span class="toc-num">📘</span><span class="toc-text">Ch24 ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
 
       <li class="toc-section">Part I — EBM・GRADEの全体像</li>
       <li class="toc-item"><button class="toc-btn" data-idx="1"><span class="toc-num">1</span><span class="toc-text">EBMとCPG・SRの読み方<span class="en">EBM & Reading CPGs/SRs</span></span></button></li>
@@ -82,10 +77,15 @@
       <li class="toc-item"><button class="toc-btn" data-idx="20"><span class="toc-num">20</span><span class="toc-text">患者への適用<span class="en">Applicability</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="21"><span class="toc-num">21</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
 
-      <li class="toc-section">Part VIII — 付録</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="22"><span class="toc-num">22</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary & Q&A</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="23"><span class="toc-num">23</span><span class="toc-text">最新情報＋Guyatt LinkedIn<span class="en">Latest & LinkedIn Picks</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="24"><span class="toc-num">24</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
+      <li class="toc-section">Part VIII — 📘 JAMA ユーザーズガイド（要約）</li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26"><span class="toc-num">㉒</span><span class="toc-text">Ch22 SR／MAプロセスの信頼性<span class="en">JAMA UG Ch22: SR/MA Process</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="27"><span class="toc-num">㉓</span><span class="toc-text">Ch23 SR／MA 結果の理解と適用<span class="en">JAMA UG Ch23: Understanding Results</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="28"><span class="toc-num">㉔</span><span class="toc-text">Ch24 ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
+
+      <li class="toc-section">Part IX — 付録</li>
+      <li class="toc-item"><button class="toc-btn" data-idx="22"><span class="toc-num">25</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary & Q&A</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="23"><span class="toc-num">26</span><span class="toc-text">最新情報＋Guyatt LinkedIn<span class="en">Latest & LinkedIn Picks</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="24"><span class="toc-num">27</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
     </ul>
   </nav>
 
@@ -115,7 +115,7 @@
           <div class="cpg-overview-block">
             <div class="cpg-overview-title">📊 診療ガイドライン（システマティックレビューに基づく）全体像</div>
             <button type="button" class="cpg-overview-thumb-btn" onclick="openCPGOverview()" aria-label="全体像を拡大表示">
-              <img class="cpg-overview-thumb-img" src="images/core-grade-overview.png?v=6.8" alt="Core GRADEアプローチ — 診療ガイドライン：エビデンスから推奨へ1枚で理解" loading="lazy" />
+              <img class="cpg-overview-thumb-img" src="images/core-grade-overview.png?v=6.9" alt="Core GRADEアプローチ — 診療ガイドライン：エビデンスから推奨へ1枚で理解" loading="lazy" />
             </button>
             <div class="cpg-overview-thumb-hint">🔍 タップで拡大 — スマホはスワイプで移動</div>
           </div>
@@ -247,7 +247,7 @@
     <!-- ============ Ch1: EBM・CPG/SR入門 ============ -->
     <div class="page" id="page-1">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 1 / 24</div>
+        <div class="chapter-badge">Chapter 1 / 27</div>
         <h1>EBMと診療ガイドライン・SRの読み方</h1>
         <div class="en-title">EBM and How to Read CPGs/SRs</div>
       </div>
@@ -666,7 +666,7 @@
     <!-- ============ Ch2: GRADE概要 ============ -->
     <div class="page" id="page-2">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 2 / 24</div>
+        <div class="chapter-badge">Chapter 2 / 27</div>
         <h1>GRADEアプローチの概要 — なぜ最初に学ぶのか</h1>
         <div class="en-title">Overview of the GRADE approach — Why learn this first?</div>
       </div>
@@ -907,7 +907,7 @@
     <!-- ============ Ch3: 確実性4段階 ============ -->
     <div class="page" id="page-3">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 3 / 24</div>
+        <div class="chapter-badge">Chapter 3 / 27</div>
         <h1>「エビデンスの確実性」4段階の意味</h1>
         <div class="en-title">Four Levels of Certainty of Evidence</div>
       </div>
@@ -966,7 +966,7 @@
     <!-- ============ Ch4: 強い vs 条件付き推奨 ============ -->
     <div class="page" id="page-4">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 4 / 24</div>
+        <div class="chapter-badge">Chapter 4 / 27</div>
         <h1>強い推奨 vs 条件付き推奨 ＋ GPS・推奨表現</h1>
         <div class="en-title">Strong vs Conditional Recommendations, GPS, Wording</div>
       </div>
@@ -1042,7 +1042,7 @@
     <!-- ============ Ch5: SoF表・EP ============ -->
     <div class="page" id="page-5">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 5 / 24</div>
+        <div class="chapter-badge">Chapter 5 / 27</div>
         <h1>SoF表・Evidence Profileの読み方</h1>
         <div class="en-title">Reading SoF Tables / Evidence Profiles</div>
       </div>
@@ -1120,7 +1120,7 @@
     <!-- ============ Ch6: 相対効果と絶対効果 ============ -->
     <div class="page" id="page-6">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 6 / 24</div>
+        <div class="chapter-badge">Chapter 6 / 27</div>
         <h1>相対効果と絶対効果の違い</h1>
         <div class="en-title">Relative vs Absolute Effects</div>
       </div>
@@ -1179,7 +1179,7 @@
     <!-- ============ Ch7: 閾値とMID ============ -->
     <div class="page" id="page-7">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 7 / 24 ⭐</div>
+        <div class="chapter-badge">Chapter 7 / 27 ⭐</div>
         <h1>閾値とMID — 臨床的に重要な差とは何か</h1>
         <div class="en-title">Thresholds & Minimal Important Difference (MID)</div>
       </div>
@@ -1251,7 +1251,7 @@
     <!-- ============ Ch8: Risk of Bias ============ -->
     <div class="page" id="page-8">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 8 / 24</div>
+        <div class="chapter-badge">Chapter 8 / 27</div>
         <h1>Risk of Bias — RCT ＋ 観察研究（ROBINS-E/I）</h1>
         <div class="en-title">Risk of Bias (RCT + Observational)</div>
       </div>
@@ -1327,7 +1327,7 @@
     <!-- ============ Ch9: 不一致性 ============ -->
     <div class="page" id="page-9">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 9 / 24</div>
+        <div class="chapter-badge">Chapter 9 / 27</div>
         <h1>不一致性（Inconsistency）</h1>
         <div class="en-title">Inconsistency</div>
       </div>
@@ -1390,7 +1390,7 @@
     <!-- ============ Ch10: 非直接性 ============ -->
     <div class="page" id="page-10">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 10 / 24</div>
+        <div class="chapter-badge">Chapter 10 / 27</div>
         <h1>非直接性（Indirectness）</h1>
         <div class="en-title">Indirectness</div>
       </div>
@@ -1452,7 +1452,7 @@
     <!-- ============ Ch11: 不確実性 ============ -->
     <div class="page" id="page-11">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 11 / 24</div>
+        <div class="chapter-badge">Chapter 11 / 27</div>
         <h1>不確実性（Imprecision）</h1>
         <div class="en-title">Imprecision</div>
       </div>
@@ -1511,7 +1511,7 @@
     <!-- ============ Ch12: Dissemination bias ============ -->
     <div class="page" id="page-12">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 12 / 24</div>
+        <div class="chapter-badge">Chapter 12 / 27</div>
         <h1>Dissemination bias（情報発信バイアス）</h1>
         <div class="en-title">Dissemination bias</div>
       </div>
@@ -1557,7 +1557,7 @@
     <!-- ============ Ch13: 非RCT・観察研究のSR ============ -->
     <div class="page" id="page-13">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 13 / 24</div>
+        <div class="chapter-badge">Chapter 13 / 27</div>
         <h1>非RCT・観察研究のSR（GRADE Guidance 44）</h1>
         <div class="en-title">Non-RCT / Observational Study SR</div>
       </div>
@@ -1623,7 +1623,7 @@
     <!-- ============ Ch14: 定性的研究のSR CERQual ============ -->
     <div class="page" id="page-14">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 14 / 24</div>
+        <div class="chapter-badge">Chapter 14 / 27</div>
         <h1>定性的研究のSR — GRADE-CERQual</h1>
         <div class="en-title">Qualitative SR — GRADE-CERQual</div>
       </div>
@@ -1665,7 +1665,7 @@
     <!-- ============ Ch15: 単一推定値なし／GPS／ネットベネフィット ============ -->
     <div class="page" id="page-15">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 15 / 24</div>
+        <div class="chapter-badge">Chapter 15 / 27</div>
         <h1>単一推定値がない場合・GPS・ネットベネフィット</h1>
         <div class="en-title">Alternative Recommendation Types</div>
       </div>
@@ -1717,7 +1717,7 @@
     <!-- ============ Ch16: 信頼できるCPG 6質問 ============ -->
     <div class="page" id="page-16">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 16 / 24 ⭐ 中核章</div>
+        <div class="chapter-badge">Chapter 16 / 27 ⭐ 中核章</div>
         <h1>信頼できるCPGの6つの質問</h1>
         <div class="en-title">Six Questions for Recognizing a Trustworthy CPG</div>
       </div>
@@ -1770,7 +1770,7 @@
     <!-- ============ Ch17: CPG品質の実例 ============ -->
     <div class="page" id="page-17">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 17 / 24</div>
+        <div class="chapter-badge">Chapter 17 / 27</div>
         <h1>CPG品質の実例 — NCCN／IOM／日本のCPG問題</h1>
         <div class="en-title">CPG Quality Examples</div>
       </div>
@@ -1995,7 +1995,7 @@
     <!-- ============ Ch18: AMSTAR 2 ============ -->
     <div class="page" id="page-18">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 18 / 24</div>
+        <div class="chapter-badge">Chapter 18 / 27</div>
         <h1>AMSTAR 2 — SRの方法論的質を評価する16項目</h1>
         <div class="en-title">AMSTAR 2 (16 items)</div>
       </div>
@@ -2051,7 +2051,7 @@
     <!-- ============ Ch19: PRISMA 2020 ============ -->
     <div class="page" id="page-19">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 19 / 24</div>
+        <div class="chapter-badge">Chapter 19 / 27</div>
         <h1>PRISMA 2020 — SR報告の透明性 27項目</h1>
         <div class="en-title">PRISMA 2020 (27 items)</div>
       </div>
@@ -2125,7 +2125,7 @@
     <!-- ============ Ch20: 適用可能性 ============ -->
     <div class="page" id="page-20">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 20 / 24</div>
+        <div class="chapter-badge">Chapter 20 / 27</div>
         <h1>推奨を目の前の患者にどう適用するか</h1>
         <div class="en-title">Applicability</div>
       </div>
@@ -2201,7 +2201,7 @@
     <!-- ============ Ch21: SDM ============ -->
     <div class="page" id="page-21">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 21 / 24</div>
+        <div class="chapter-badge">Chapter 21 / 27</div>
         <h1>共同意思決定（SDM）と価値観・嗜好</h1>
         <div class="en-title">Shared Decision Making & Values</div>
       </div>
@@ -2278,15 +2278,15 @@
 
         <div class="chapter-nav">
           <button onclick="showPage(20)">← Ch20</button>
-          <button onclick="showPage(22)">Ch22 用語集 →</button>
+          <button onclick="showPage(26)">Ch22 JAMA UG SR/MA →</button>
         </div>
       </div>
     </div>
 
-    <!-- ============ Ch22: 用語集＋Q&A ============ -->
+    <!-- ============ Ch25 (page-22): 用語集＋Q&A ============ -->
     <div class="page" id="page-22">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 22 / 24</div>
+        <div class="chapter-badge">Chapter 25 / 27</div>
         <h1>用語集 ＋ Q&A</h1>
         <div class="en-title">Glossary & Q&A</div>
       </div>
@@ -2340,16 +2340,16 @@
         </details>
 
         <div class="chapter-nav">
-          <button onclick="showPage(21)">← Ch21</button>
-          <button onclick="showPage(23)">Ch23 最新情報 →</button>
+          <button onclick="showPage(28)">← Ch24 JAMA UG NMA</button>
+          <button onclick="showPage(23)">Ch26 最新情報 →</button>
         </div>
       </div>
     </div>
 
-    <!-- ============ Ch23: 最新情報＋LinkedIn ============ -->
+    <!-- ============ Ch26 (page-23): 最新情報＋LinkedIn ============ -->
     <div class="page" id="page-23">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 23 / 24</div>
+        <div class="chapter-badge">Chapter 26 / 27</div>
         <h1>最新情報 ＋ Guyatt先生 LinkedIn ピックアップ</h1>
         <div class="en-title">Latest Updates & Guyatt's LinkedIn Picks</div>
       </div>
@@ -2361,16 +2361,16 @@
         <div id="linkedin-feed"></div>
 
         <div class="chapter-nav">
-          <button onclick="showPage(22)">← Ch22</button>
-          <button onclick="showPage(24)">Ch24 参考文献 →</button>
+          <button onclick="showPage(22)">← Ch25 用語集</button>
+          <button onclick="showPage(24)">Ch27 参考文献 →</button>
         </div>
       </div>
     </div>
 
-    <!-- ============ Ch24: 参考文献一覧 ============ -->
+    <!-- ============ Ch27 (page-24): 参考文献一覧 ============ -->
     <div class="page" id="page-24">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 24 / 24</div>
+        <div class="chapter-badge">Chapter 27 / 27</div>
         <h1>参考文献一覧</h1>
         <div class="en-title">References</div>
       </div>
@@ -2451,7 +2451,7 @@
         </div>
 
         <div class="chapter-nav">
-          <button onclick="showPage(23)">← Ch23</button>
+          <button onclick="showPage(23)">← Ch26 LinkedIn</button>
           <button onclick="showPage(0)">表紙へ戻る 🏠</button>
         </div>
       </div>
@@ -3394,7 +3394,7 @@
     <div class="page" id="page-26">
 
       <div class="jama-page-head">
-        <span class="jph-badge">📘 JAMA UG</span>
+        <span class="jph-badge">📘 Chapter 22 / 27 ｜ JAMA UG</span>
         <div class="jph-title">Ch22 システマティックレビュー／メタアナリシスのプロセス</div>
         <span class="jph-meta">⏱ 約 12 分</span>
       </div>
@@ -3657,7 +3657,7 @@
       </div>
 
       <div class="chapter-nav">
-        <button onclick="showPage(25)">← Primerへ戻る</button>
+        <button onclick="showPage(21)">← Ch21 SDM・価値観</button>
         <button onclick="showPage(27)">Ch23（結果の理解と適用）へ →</button>
       </div>
 
@@ -3669,7 +3669,7 @@
     <div class="page" id="page-27">
 
       <div class="jama-page-head">
-        <span class="jph-badge">📘 JAMA UG</span>
+        <span class="jph-badge">📘 Chapter 23 / 27 ｜ JAMA UG</span>
         <div class="jph-title">Ch23 SR／メタアナリシス 結果の理解と適用</div>
         <span class="jph-meta">⏱ 約 15 分</span>
       </div>
@@ -3945,7 +3945,7 @@
     <div class="page" id="page-28">
 
       <div class="jama-page-head">
-        <span class="jph-badge">📘 JAMA UG</span>
+        <span class="jph-badge">📘 Chapter 24 / 27 ｜ JAMA UG</span>
         <div class="jph-title">Ch24 ネットワークメタアナリシス（NMA）</div>
         <span class="jph-meta">⏱ 約 13 分</span>
       </div>
@@ -4075,7 +4075,7 @@
 
       <div class="chapter-nav">
         <button onclick="showPage(27)">← Ch23 へ戻る</button>
-        <button onclick="showPage(1)">本編 Ch1 へ →</button>
+        <button onclick="showPage(22)">Ch25 用語集 →</button>
       </div>
 
     </div>
@@ -4085,14 +4085,14 @@
 </div><!-- /.app-body -->
 
 <!-- スクリプト -->
-<script src="coreGRADE_utils.js?v=6.8"></script>
-<script src="script.js?v=6.8"></script>
-<script src="js/glossary.js?v=6.8"></script>
-<script src="js/references.js?v=6.8"></script>
-<script src="js/mid-explorer.js?v=6.8"></script>
-<script src="js/trustworthy-check.js?v=6.8"></script>
-<script src="js/amstar2.js?v=6.8"></script>
-<script src="js/linkedin-feed.js?v=6.8"></script>
+<script src="coreGRADE_utils.js?v=6.9"></script>
+<script src="script.js?v=6.9"></script>
+<script src="js/glossary.js?v=6.9"></script>
+<script src="js/references.js?v=6.9"></script>
+<script src="js/mid-explorer.js?v=6.9"></script>
+<script src="js/trustworthy-check.js?v=6.9"></script>
+<script src="js/amstar2.js?v=6.9"></script>
+<script src="js/linkedin-feed.js?v=6.9"></script>
 
 <!-- ページ切替後のインタラクティブ要素リフレッシュ＋文書構造マップタブ -->
 <script>
@@ -4179,7 +4179,7 @@ document.addEventListener('keydown', function(e){
     </div>
   </div>
   <div class="cpg-overview-modal-body" onclick="closeCPGOverview()">
-    <img id="cpgOverviewImg" class="cpg-overview-modal-img" src="images/core-grade-overview.png?v=6.8" alt="Core GRADEアプローチ全体像（クリックで拡大／縮小）" onclick="event.stopPropagation();toggleCPGOverviewZoom()" />
+    <img id="cpgOverviewImg" class="cpg-overview-modal-img" src="images/core-grade-overview.png?v=6.9" alt="Core GRADEアプローチ全体像（クリックで拡大／縮小）" onclick="event.stopPropagation();toggleCPGOverviewZoom()" />
   </div>
 </div>
 
