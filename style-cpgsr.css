@@ -1223,6 +1223,7 @@ html { scroll-behavior: smooth; }
 /* ===== Guyatt先生引用ボックス ===== */
 .guyatt-quote {
   display: flex;
+  flex-wrap: wrap; /* v1.12 fix: gq-src が同じflex行で本文を圧迫し縦書きになる現象を解消 */
   gap: 14px;
   margin: 18px 0;
   padding: 18px 20px;
@@ -1240,6 +1241,7 @@ html { scroll-behavior: smooth; }
 }
 .guyatt-quote .gq-body {
   flex: 1;
+  min-width: 0; /* v1.12 fix: flex item は min-width: auto がデフォルトで縮まない → 0で解除 */
   line-height: 1.8;
   font-size: 0.95rem;
 }
@@ -1248,6 +1250,7 @@ html { scroll-behavior: smooth; }
   font-size: 0.78rem;
   color: var(--text-light);
   font-style: italic;
+  flex-basis: 100%; /* v1.12 fix: flex-wrap と併用して必ず次行へ送る */
   width: 100%;
   padding-top: 8px;
   border-top: 1px dashed var(--border);
