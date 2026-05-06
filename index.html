@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
-<link rel="stylesheet" href="style.css?v=7.1">
-<link rel="stylesheet" href="style-cpgsr.css?v=7.1">
+<link rel="stylesheet" href="style.css?v=7.2">
+<link rel="stylesheet" href="style-cpgsr.css?v=7.2">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -115,7 +115,7 @@
           <div class="cpg-overview-block">
             <div class="cpg-overview-title">📊 診療ガイドライン（システマティックレビューに基づく）全体像</div>
             <button type="button" class="cpg-overview-thumb-btn" onclick="openCPGOverview()" aria-label="全体像を拡大表示">
-              <img class="cpg-overview-thumb-img" src="images/core-grade-overview.png?v=7.1" alt="Core GRADEアプローチ — 診療ガイドライン：エビデンスから推奨へ1枚で理解" loading="lazy" />
+              <img class="cpg-overview-thumb-img" src="images/core-grade-overview.png?v=7.2" alt="Core GRADEアプローチ — 診療ガイドライン：エビデンスから推奨へ1枚で理解" loading="lazy" />
             </button>
             <div class="cpg-overview-thumb-hint">🔍 タップで拡大 — スマホはスワイプで移動</div>
           </div>
@@ -3712,12 +3712,23 @@
 
       <!-- ===== 森林図（フォレストプロット）解説図（v1.15追加） ===== -->
       <figure class="jama-fig">
-        <a class="jama-fig-link" href="images/forest.png?v=7.1" target="_blank" rel="noopener" aria-label="森林図解説を原寸で開く">
-          <img class="jama-fig-img" src="images/forest.png?v=7.1" alt="森林図（フォレストプロット）の各要素を示す解説図 — ①研究, ②介入群と対照群, ③森林図, ④効果指標RR, ⑤95%信頼区間, ⑥重み, ⑦ランダム効果モデル, ⑧ヘテロジーニティ, ⑨予測区間, ⑩横軸, ⑪サブグループ間の比較" loading="lazy" />
+        <a class="jama-fig-link" href="images/forest.png?v=7.2" target="_blank" rel="noopener" aria-label="森林図解説を原寸で開く">
+          <img class="jama-fig-img" src="images/forest.png?v=7.2" alt="森林図（フォレストプロット）の各要素を示す解説図 — ①研究, ②介入群と対照群, ③森林図, ④効果指標RR, ⑤95%信頼区間, ⑥重み, ⑦ランダム効果モデル, ⑧ヘテロジーニティ, ⑨予測区間, ⑩横軸, ⑪サブグループ間の比較" loading="lazy" />
           <span class="jama-fig-hint">🔍 タップで原寸表示・スマホはピンチで拡大</span>
         </a>
         <figcaption>図：<strong>森林図（フォレストプロット）の見方</strong>。SR／MA の要約推定値は、各研究の効果と統合結果を ①〜⑪ の要素として可視化します（個別研究の効果と CI／統合推定値のひし形／重み％／I²・τ²・予測区間／サブグループ比較の χ² など）。本章ではこれらの読み方を順に確認します。</figcaption>
       </figure>
+
+      <!-- ===== フォレストプロット再解析シミュレータ（v1.16追加） ===== -->
+      <a class="forest-sim-btn" href="https://forest-ebm-sim-v2-n7wn-git-main-mxe050s-projects.vercel.app/" target="_blank" rel="noopener">
+        <span class="forest-sim-mark">🌲</span>
+        <span class="forest-sim-body">
+          <span class="forest-sim-tag">インタラクティブツール（別タブ）</span>
+          <span class="forest-sim-title">フォレストプロットを再解析する（例：サブグループ追加、RoB の深刻な論文削除）場合</span>
+          <span class="forest-sim-dsc">ブラウザ上でフォレストプロットを編集してメタアナリシスを再計算できます</span>
+        </span>
+        <span class="forest-sim-arrow" aria-hidden="true">↗</span>
+      </a>
 
       <div class="jama-map">
         <table>
@@ -4114,14 +4125,14 @@
 </div><!-- /.app-body -->
 
 <!-- スクリプト -->
-<script src="coreGRADE_utils.js?v=7.1"></script>
-<script src="script.js?v=7.1"></script>
-<script src="js/glossary.js?v=7.1"></script>
-<script src="js/references.js?v=7.1"></script>
-<script src="js/mid-explorer.js?v=7.1"></script>
-<script src="js/trustworthy-check.js?v=7.1"></script>
-<script src="js/amstar2.js?v=7.1"></script>
-<script src="js/linkedin-feed.js?v=7.1"></script>
+<script src="coreGRADE_utils.js?v=7.2"></script>
+<script src="script.js?v=7.2"></script>
+<script src="js/glossary.js?v=7.2"></script>
+<script src="js/references.js?v=7.2"></script>
+<script src="js/mid-explorer.js?v=7.2"></script>
+<script src="js/trustworthy-check.js?v=7.2"></script>
+<script src="js/amstar2.js?v=7.2"></script>
+<script src="js/linkedin-feed.js?v=7.2"></script>
 
 <!-- ページ切替後のインタラクティブ要素リフレッシュ＋文書構造マップタブ -->
 <script>
@@ -4208,7 +4219,7 @@ document.addEventListener('keydown', function(e){
     </div>
   </div>
   <div class="cpg-overview-modal-body" onclick="closeCPGOverview()">
-    <img id="cpgOverviewImg" class="cpg-overview-modal-img" src="images/core-grade-overview.png?v=7.1" alt="Core GRADEアプローチ全体像（クリックで拡大／縮小）" onclick="event.stopPropagation();toggleCPGOverviewZoom()" />
+    <img id="cpgOverviewImg" class="cpg-overview-modal-img" src="images/core-grade-overview.png?v=7.2" alt="Core GRADEアプローチ全体像（クリックで拡大／縮小）" onclick="event.stopPropagation();toggleCPGOverviewZoom()" />
   </div>
 </div>
 

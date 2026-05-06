@@ -937,6 +937,79 @@
   .jama-fig figcaption { font-size: 0.82rem; padding: 8px 10px; }
 }
 
+/* ===== フォレストプロット再解析シミュレータ・ボタン（v1.16追加） ===== */
+.forest-sim-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  margin: 16px 0 22px;
+  background: linear-gradient(135deg, #f0f7ed 0%, #e8f3e1 100%);
+  border: 2px solid #4a7c2a;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  box-shadow: 0 3px 10px rgba(74,124,42,0.15);
+  min-height: 64px;
+}
+.forest-sim-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(74,124,42,0.3);
+  border-color: #2d5e15;
+}
+.forest-sim-mark {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #4a7c2a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 3px 10px rgba(74,124,42,0.45);
+}
+.forest-sim-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.forest-sim-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #2d5e15;
+  letter-spacing: 0.05em;
+}
+.forest-sim-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1.45;
+}
+.forest-sim-dsc {
+  font-size: 0.82rem;
+  color: #5a6878;
+  line-height: 1.5;
+}
+.forest-sim-arrow {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  color: #4a7c2a;
+  font-weight: 700;
+  margin-left: 4px;
+}
+@media (max-width: 480px) {
+  .forest-sim-btn { padding: 12px 14px; gap: 10px; }
+  .forest-sim-mark { width: 42px; height: 42px; font-size: 1.3rem; }
+  .forest-sim-title { font-size: 0.93rem; }
+  .forest-sim-dsc { font-size: 0.78rem; }
+  .forest-sim-tag { font-size: 0.66rem; }
+}
+
 .primer-h2 {
   color: var(--primary-dark);
   font-size: 1.35rem;
