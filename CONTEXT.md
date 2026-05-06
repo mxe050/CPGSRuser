@@ -14,7 +14,24 @@
 
 ---
 
-## 現在の状態 — v1.13（2026-05-06）
+## 現在の状態 — v1.14（2026-05-06）
+
+**Primer ページの動画/スライドボタン群リニューアル**。
+- Primer ページ（page-25）の冒頭にあった `.primer-video-hint`（解説編・会話編へのインラインリンク）を、視認性の高い 2 行ボタン群に置き換え
+- 1行目：「📺 まず動画で学習してから以下を復習するとよいでしょう」＋ 赤▶「動画」ボタン → https://www.youtube.com/watch?v=7UJZLG49ba8&t=1s
+- 2行目（点線下）：「📚 もう少し詳しい全体像を、まず勉強したい方へ →」＋
+  - 赤▶「動画編」 → https://www.youtube.com/watch?v=pAr7upG01YA
+  - ティール📱「スマホで読もう編」 → https://grad-eslide.vercel.app/slide/N3
+- ボタンは min-height 44px でモバイルタップ対応、ホバー浮き上がり効果
+- スマホ用メディアクエリ（〜600px）でテキスト幅100%・ボタン段組み
+- キャッシュバスター `?v=6.9` → `?v=7.0`（全12箇所）
+
+### v1.14の追加 CSS クラス
+`.primer-vstudy-block` `.primer-vstudy-row` `.primer-vstudy-row-sub` `.primer-vstudy-text` `.primer-vstudy-btns` `.primer-vbtn` `.primer-vbtn-mark` `.primer-vbtn-yt` `.primer-vbtn-slide`
+
+---
+
+## 旧版履歴 — v1.13（2026-05-06）
 
 **JAMA UG セクション再配置＋章番号27章化＋LinkedIn ページ更新**。
 
@@ -283,7 +300,8 @@ CPGSRuser/
 - `068fe1f` v1.10 Ch17にあら探しシリーズ・リンク集（特別編＋論文＋No.1〜16）追加（2026-05-03）
 - `b7e4420` v1.11 Ch7に学習動画プレリュードボタン追加（YouTube：閾値・信頼区間とMIDの基本）（2026-05-03）
 - `f83499d` v1.12 Primer引用ボックス縦書き化バグ修正（flex-wrap で gq-src を次行送り）（2026-05-06）
-- v1.13 JAMA UG を Part VIII に昇格＋付録 Part IX 番号繰り下げ＋LinkedIn 7件追加・日付/関連章表示廃止（2026-05-06）
+- `3b7a473` v1.13 JAMA UG を Part VIII に昇格＋付録 Part IX 番号繰り下げ＋LinkedIn 7件追加・日付/関連章表示廃止（2026-05-06）
+- v1.14 Primer ページ冒頭の動画/スライドボタン群リニューアル（動画／動画編／スマホで読もう編）（2026-05-06）
 
 ---
 
