@@ -6,7 +6,7 @@
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
 <link rel="stylesheet" href="style.css?v=7.2">
-<link rel="stylesheet" href="style-cpgsr.css?v=7.3">
+<link rel="stylesheet" href="style-cpgsr.css?v=7.4">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -935,6 +935,13 @@
             ここでは架空の「癌治療が成功する」というアウトカムを使って、Evidence Profile を作る順番で考えます。
             まず研究の一覧と効果推定値を置き、次に5つのグレードダウン要因を横に並べ、最後に「高・中・低・非常に低い」のどこに落ち着くかを判断します。
           </p>
+          <div class="explain-panel">
+            <strong>この例で一番大事な読み方</strong>
+            <p>
+              「メタ分析の効果が 1.62 だから信頼できる」とは読みません。まず、その 1.62 がどの研究から来たのか、研究に偏りはないか、研究間で結果がばらついていないか、対象者や治療内容が自分の臨床疑問とずれていないか、信頼区間が広すぎないかを確認します。
+              つまり、効果推定値は<strong>出発点</strong>であり、確実性評価は「その数字をどのくらい信じてよいか」を点検する工程です。
+            </p>
+          </div>
 
           <div class="evidence-flow">
             <div class="ef-step">
@@ -959,6 +966,29 @@
             </div>
           </div>
 
+          <div class="explain-grid">
+            <div class="explain-card">
+              <strong>Risk of bias</strong>
+              <p>ランダム化、割付隠蔽、盲検化、脱落などに問題があると、効果が実際より大きく見えることがあります。</p>
+            </div>
+            <div class="explain-card">
+              <strong>不一致性</strong>
+              <p>研究ごとの結果が同じ方向を向かない場合、「どの患者にどの結果が当てはまるのか」が不安定になります。</p>
+            </div>
+            <div class="explain-card">
+              <strong>非直接性</strong>
+              <p>PICOがずれている状態です。対象者、介入、比較、アウトカムのどれかが臨床疑問から離れていると下げます。</p>
+            </div>
+            <div class="explain-card">
+              <strong>不確実性</strong>
+              <p>サンプルサイズやイベント数が少ない、または95% CIが重要な判断閾値をまたぐ場合に問題になります。</p>
+            </div>
+            <div class="explain-card">
+              <strong>出版/発信バイアス</strong>
+              <p>良い結果だけが公表されている可能性です。小規模研究ばかり、企業スポンサーの偏りなども手がかりになります。</p>
+            </div>
+          </div>
+
           <div class="grade-mini-profile" role="img" aria-label="Evidence Profile の読み順">
             <div class="gmp-head">Evidence Profile の読み順</div>
             <div class="gmp-grid">
@@ -974,6 +1004,10 @@
               <div class="gmp-cell gmp-final">総合<br><strong>低</strong></div>
             </div>
           </div>
+          <p>
+            上の例では、RCTなので最初は「高」から始まります。しかし、Risk of bias、不一致性、不確実性に問題があるため、最終的な確実性は下がります。
+            ここで重要なのは、<strong>「何段階下げるか」は単純な足し算ではない</strong>ことです。3つの問題があっても、すべてが同じ原因から来ている場合もあれば、結論を大きく変える問題が1つだけ非常に深刻な場合もあります。だから Evidence Profile では、判定だけでなく脚注や説明文を必ず読みます。
+          </p>
 
           <div class="certainty-ladder">
             <div class="cl-level cl-high"><strong>高</strong><span>重大な問題なし</span></div>
@@ -993,6 +1027,13 @@
               <li><strong>アウトカムごとに別判定</strong>：同じ推奨内でも、死亡は高、QOLは中、有害事象は低になり得ます。</li>
               <li><strong>最後はSoF表へ接続</strong>：ここで決めた確実性が、Ch5のSoF表の「Certainty」列に入ります。</li>
             </ol>
+          </div>
+          <div class="explain-panel">
+            <strong>読み手としての最終確認</strong>
+            <p>
+              確実性のラベルを見たら、必ず「何が原因で下がったのか」を確認してください。Risk of biasが原因なら研究方法の弱さ、不一致性が原因なら効果のばらつき、非直接性が原因ならPICOのずれ、不確実性が原因ならデータ量やCIの幅、発信バイアスが原因なら公開された研究の偏りが問題です。
+              原因がわかると、「追加研究で解決しそうな不確実性」なのか、「自分の患者にはそもそも当てはまりにくい非直接性」なのかを分けて考えられます。
+            </p>
           </div>
 
           <details class="source-slides">
@@ -1165,6 +1206,13 @@
           <p>
             Ch3で作った Evidence Profile を読者向けに短くしたものが SoF表です。SoF表では、各アウトカムについて「どれくらい効くか」「何人に影響するか」「どれくらい信じてよいか」を一列で読みます。理由を深掘りしたいときは、脚注や Evidence Profile、さらに推奨の背景なら EtD 表を見ます。
           </p>
+          <div class="explain-panel">
+            <strong>最初に見るべき順番</strong>
+            <p>
+              SoF表は左から順に読むより、まず<strong>アウトカム</strong>と<strong>絶対効果</strong>を見ます。患者に重要なアウトカムか、1000人あたり何人の差かを確認してから、相対効果と確実性を見ます。
+              そのあと脚注を読み、「なぜこの確実性なのか」を確認します。相対効果だけを先に見ると、臨床的な大きさを過大評価しやすくなります。
+            </p>
+          </div>
 
           <div class="sof-map">
             <div class="sof-node">
@@ -1183,6 +1231,13 @@
             </div>
           </div>
 
+          <div class="mini-read-table">
+            <div class="mrt-row mrt-head"><span>表</span><span>主な役割</span><span>読者が確認すること</span></div>
+            <div class="mrt-row"><span>SoF表</span><span>効果と確実性の要約</span><span>アウトカム、絶対効果、確実性、脚注</span></div>
+            <div class="mrt-row"><span>Evidence Profile</span><span>確実性を下げた理由の詳細</span><span>5要因それぞれの判定根拠</span></div>
+            <div class="mrt-row"><span>EtD表</span><span>推奨を作る判断過程</span><span>利益と害、価値観、資源、実行可能性</span></div>
+          </div>
+
           <div class="sof-reading-grid">
             <div class="srg-item"><span>1</span><strong>アウトカム</strong><p>患者に重要な結果か。サロゲートだけなら注意。</p></div>
             <div class="srg-item"><span>2</span><strong>相対効果</strong><p>RR/OR/HR。方向と95% CIを確認。</p></div>
@@ -1191,10 +1246,21 @@
             <div class="srg-item"><span>5</span><strong>脚注</strong><p>なぜ下げたか。ここを読まないと確実性の理由が見えません。</p></div>
             <div class="srg-item"><span>6</span><strong>EtDとの接続</strong><p>推奨の強さは、効果だけでなく価値観・害・コストも含めて決まります。</p></div>
           </div>
+          <p>
+            たとえば「死亡が20 fewer per 1000」と書かれていれば、1000人治療したとき死亡が20人少ない、という患者に近い表現です。一方で RR 0.83 は相対的な比率なので、ベースラインリスクが変わると絶対差は変わります。
+            SoF表を読む目的は、数字を暗記することではなく、<strong>患者に説明できる形へ翻訳すること</strong>です。
+          </p>
 
           <div class="warning-box">
             <strong>Mindsの表は見た目で迷いやすい。</strong>
             SoF表、Evidence Profile、EtD表が似た形式で示されることがあります。まず「確実性を下げた5要因の列があるか」「推奨判断の価値観・資源・実行可能性まで載っているか」を見て、どの表を読んでいるのかを切り分けてください。
+          </div>
+          <div class="explain-panel">
+            <strong>SoF表で止まらない場面</strong>
+            <p>
+              SoF表だけで結論の大枠はつかめます。ただし、「低い確実性なのに強い推奨になっている」「重要なアウトカムが抜けている」「脚注の理由が曖昧」「絶対効果の前提となるベースラインリスクが自分の患者と違う」と感じたら、Evidence Profile や EtD 表まで戻って確認します。
+              SoF表は入口、Evidence Profile は根拠の内訳、EtD表は推奨への変換過程、と役割を分けて読むと迷いにくくなります。
+            </p>
           </div>
 
           <details class="source-slides">
@@ -2693,6 +2759,13 @@
           <p>
             診療ガイドラインは便利ですが、すべてを同じ重さで信頼できるわけではありません。新しい薬について教科書に一文がある、専門家が説明している、ガイドラインに書いてある。どれも出発点にはなりますが、最終的には「どの方法で根拠を集め、どう評価し、どう推奨に変換したか」を見なければ、患者に適用できる情報か判断できません。
           </p>
+          <div class="explain-panel">
+            <strong>このイントロで扱う問い</strong>
+            <p>
+              スライド2〜4の場面は、「教科書に書いてあるから正しいのか」「診療ガイドラインなら常に信頼できるのか」「専門家の説明をどこまで信じてよいのか」という、日常診療でとても起こりやすい迷いです。
+              答えは、情報源の肩書きだけでは決まりません。根拠の探し方、選び方、評価の透明性を確認して初めて、信頼できるかどうかを判断できます。
+            </p>
+          </div>
           <div class="trust-question-grid">
             <figure class="trust-slide">
               <img src="images/5youin/スライド2.JPG" alt="教科書の記載だけでよいかを疑う場面">
@@ -2707,6 +2780,16 @@
               <figcaption>スライド4：教科書と診療ガイドラインの違いを見極める</figcaption>
             </figure>
           </div>
+          <div class="contrast-lanes">
+            <div class="lane lane-risk">
+              <strong>よくある読み方</strong>
+              <p>「教科書にある」「有名な先生が言った」「ガイドラインに載っている」で止まる。</p>
+            </div>
+            <div class="lane lane-safe">
+              <strong>本ページで身につける読み方</strong>
+              <p>どのSRに基づくか、エビデンスの確実性はどう評価されたか、推奨に変換した理由は何かまで確認する。</p>
+            </div>
+          </div>
           <div class="trust-path">
             <div><strong>教科書</strong><span>背景知識を得る</span></div>
             <div><strong>SR</strong><span>根拠を系統的に集める</span></div>
@@ -2716,6 +2799,24 @@
           </div>
           <p>
             このページでは、まず「信頼できる医学情報とは何か」を押さえます。そのうえで、EBM、システマティックレビュー、診療ガイドラインがどの順番でつながるのかを、初学者向けにひとつずつ確認していきます。
+          </p>
+          <div class="explain-grid">
+            <div class="explain-card">
+              <strong>EBM</strong>
+              <p>最良のエビデンス、臨床経験、患者の価値観を統合して判断する考え方です。論文を読む技術だけではありません。</p>
+            </div>
+            <div class="explain-card">
+              <strong>SR</strong>
+              <p>特定の臨床疑問に対して、研究を系統的に探し、選び、統合する方法です。ただしSRの中のエビデンスが常に高確実性とは限りません。</p>
+            </div>
+            <div class="explain-card">
+              <strong>CPG</strong>
+              <p>SRなどの根拠を使い、利益と害、価値観、コスト、実行可能性を考えて推奨に変換した文書です。</p>
+            </div>
+          </div>
+          <p>
+            この順番を理解しておくと、ガイドラインを読んだときに「どのSRを使ったのか」「SoF表はあるか」「確実性が低いのに推奨が強すぎないか」といった確認ポイントが自然に見えるようになります。
+            ここから先のセクション1では、その第一歩として「医学情報を信頼するとは何を確認することなのか」を考えます。
           </p>
         </section>
 

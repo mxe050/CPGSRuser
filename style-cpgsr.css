@@ -3127,6 +3127,98 @@ body.cpg-overview-open { overflow: hidden; }
   font-weight: 700;
   letter-spacing: 0.03em;
 }
+.explain-panel {
+  margin: 16px 0;
+  padding: 14px 16px;
+  background: white;
+  border: 1px solid #d7e0e8;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+}
+.explain-panel strong {
+  display: block;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+}
+.explain-panel p {
+  margin: 0;
+  color: #3e4f5f;
+  line-height: 1.75;
+}
+.explain-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0;
+}
+.explain-card {
+  min-width: 0;
+  padding: 13px 12px;
+  background: white;
+  border: 1px solid #d7e0e8;
+  border-radius: 8px;
+}
+.explain-card strong {
+  display: block;
+  color: var(--primary-dark);
+  line-height: 1.45;
+}
+.explain-card p {
+  margin: 6px 0 0;
+  color: #4f6072;
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+.contrast-lanes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+.lane {
+  min-width: 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #d7e0e8;
+  background: white;
+}
+.lane strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #1f2d3a;
+}
+.lane p {
+  margin: 0;
+  color: #4f6072;
+  line-height: 1.65;
+}
+.lane-risk { border-left: 5px solid #c0392b; }
+.lane-safe { border-left: 5px solid #2e7d32; }
+.mini-read-table {
+  display: grid;
+  margin: 18px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+.mrt-row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 2fr;
+}
+.mrt-row span {
+  padding: 10px 12px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  line-height: 1.55;
+}
+.mrt-row span:last-child { border-right: 0; }
+.mrt-row:last-child span { border-bottom: 0; }
+.mrt-head span {
+  background: var(--primary-dark);
+  color: white;
+  font-weight: 700;
+}
 .trust-question-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3344,10 +3436,21 @@ body.cpg-overview-open { overflow: hidden; }
     font-size: 1.1rem;
   }
   .trust-question-grid,
+  .explain-grid,
+  .contrast-lanes,
   .evidence-flow,
   .sof-reading-grid,
   .source-slide-grid {
     grid-template-columns: 1fr;
+  }
+  .mrt-row {
+    grid-template-columns: 1fr;
+  }
+  .mrt-row span {
+    border-right: 0;
+  }
+  .mrt-head span:not(:first-child) {
+    display: none;
   }
   .trust-path,
   .certainty-ladder,
