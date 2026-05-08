@@ -6,7 +6,7 @@
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
 <link rel="stylesheet" href="style.css?v=7.2">
-<link rel="stylesheet" href="style-cpgsr.css?v=7.2">
+<link rel="stylesheet" href="style-cpgsr.css?v=7.3">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -928,6 +928,102 @@
           <strong>要点：</strong>GRADEのエビデンスの確実性は「推定値の真値が特定の範囲内（または意思決定の閾値の上／下）にあるという確信度」と定義される [U13]。読み手は「<strong>どの程度この効果推定値を信じられるか</strong>」という問いに答える4段階のラベルとして扱う。
         </div>
 
+        <section class="learning-bridge" aria-labelledby="coe-walk-title">
+          <div class="lb-kicker">スライド55-76から学ぶ</div>
+          <h2 id="coe-walk-title">確実性は「1つずつ下げる」のではなく、5要因を並べて総合判断する</h2>
+          <p>
+            ここでは架空の「癌治療が成功する」というアウトカムを使って、Evidence Profile を作る順番で考えます。
+            まず研究の一覧と効果推定値を置き、次に5つのグレードダウン要因を横に並べ、最後に「高・中・低・非常に低い」のどこに落ち着くかを判断します。
+          </p>
+
+          <div class="evidence-flow">
+            <div class="ef-step">
+              <span class="ef-num">1</span>
+              <strong>アウトカムを1つ決める</strong>
+              <p>例：癌治療が成功する。死亡、QOL、有害事象などは別アウトカムとして個別に評価します。</p>
+            </div>
+            <div class="ef-step">
+              <span class="ef-num">2</span>
+              <strong>研究デザインと効果を置く</strong>
+              <p>RCTから開始なら原則「高」スタート。研究数、患者数、メタ分析の結果を確認します。</p>
+            </div>
+            <div class="ef-step">
+              <span class="ef-num">3</span>
+              <strong>5要因を横に見る</strong>
+              <p>Risk of bias、不一致性、非直接性、不確実性、出版/発信バイアスを順に判定します。</p>
+            </div>
+            <div class="ef-step">
+              <span class="ef-num">4</span>
+              <strong>最後に総合ラベルへ</strong>
+              <p>深刻な問題がいくつあるか、どれが結論を動かすかを見て、4段階の確実性に変換します。</p>
+            </div>
+          </div>
+
+          <div class="grade-mini-profile" role="img" aria-label="Evidence Profile の読み順">
+            <div class="gmp-head">Evidence Profile の読み順</div>
+            <div class="gmp-grid">
+              <div class="gmp-cell gmp-outcome">アウトカム<br><strong>癌治療が成功</strong></div>
+              <div class="gmp-cell">研究デザイン<br><strong>RCT</strong></div>
+              <div class="gmp-cell">研究数/患者数<br><strong>4 / 330</strong></div>
+              <div class="gmp-cell">効果推定値<br><strong>1.62</strong></div>
+              <div class="gmp-cell gmp-risk">RoB<br><strong>あり</strong></div>
+              <div class="gmp-cell gmp-risk">不一致性<br><strong>あり</strong></div>
+              <div class="gmp-cell gmp-ok">非直接性<br><strong>なし</strong></div>
+              <div class="gmp-cell gmp-risk">不確実性<br><strong>あり</strong></div>
+              <div class="gmp-cell gmp-ok">発信バイアス<br><strong>なし</strong></div>
+              <div class="gmp-cell gmp-final">総合<br><strong>低</strong></div>
+            </div>
+          </div>
+
+          <div class="certainty-ladder">
+            <div class="cl-level cl-high"><strong>高</strong><span>重大な問題なし</span></div>
+            <div class="cl-arrow">→</div>
+            <div class="cl-level cl-moderate"><strong>中</strong><span>1段階下げる</span></div>
+            <div class="cl-arrow">→</div>
+            <div class="cl-level cl-low"><strong>低</strong><span>2段階下げる</span></div>
+            <div class="cl-arrow">→</div>
+            <div class="cl-level cl-vlow"><strong>非常に低い</strong><span>3段階以上下げる</span></div>
+          </div>
+
+          <div class="reader-tips">
+            <h4>読むときのコツ</h4>
+            <ol>
+              <li><strong>「RCTだから高い」と止まらない</strong>：RCTは開始点であり、5要因で下がります。</li>
+              <li><strong>問題の数だけで機械的に決めない</strong>：結論を動かすほど深刻かを考えます。</li>
+              <li><strong>アウトカムごとに別判定</strong>：同じ推奨内でも、死亡は高、QOLは中、有害事象は低になり得ます。</li>
+              <li><strong>最後はSoF表へ接続</strong>：ここで決めた確実性が、Ch5のSoF表の「Certainty」列に入ります。</li>
+            </ol>
+          </div>
+
+          <details class="source-slides">
+            <summary>元スライド55-76を大きく確認する</summary>
+            <div class="source-slide-grid">
+              <figure><img src="images/5youin/スライド55.JPG" alt="Evidence Profile作成と5要因の全体像"><figcaption>55</figcaption></figure>
+              <figure><img src="images/5youin/スライド56.JPG" alt="Evidence Profileの列構成"><figcaption>56</figcaption></figure>
+              <figure><img src="images/5youin/スライド57.JPG" alt="架空例の空欄表"><figcaption>57</figcaption></figure>
+              <figure><img src="images/5youin/スライド58.JPG" alt="研究一覧とバイアスリスク"><figcaption>58</figcaption></figure>
+              <figure><img src="images/5youin/スライド59.JPG" alt="アウトカムの重要性"><figcaption>59</figcaption></figure>
+              <figure><img src="images/5youin/スライド60.JPG" alt="論文数の記入"><figcaption>60</figcaption></figure>
+              <figure><img src="images/5youin/スライド61.JPG" alt="研究デザインの記入"><figcaption>61</figcaption></figure>
+              <figure><img src="images/5youin/スライド62.JPG" alt="患者数の記入"><figcaption>62</figcaption></figure>
+              <figure><img src="images/5youin/スライド63.JPG" alt="メタ分析結果の記入"><figcaption>63</figcaption></figure>
+              <figure><img src="images/5youin/スライド64.JPG" alt="5要因の判定へ進む"><figcaption>64</figcaption></figure>
+              <figure><img src="images/5youin/スライド65.JPG" alt="バイアスリスクの判定"><figcaption>65</figcaption></figure>
+              <figure><img src="images/5youin/スライド66.JPG" alt="不一致性の判定"><figcaption>66</figcaption></figure>
+              <figure><img src="images/5youin/スライド67.JPG" alt="非直接性の判定"><figcaption>67</figcaption></figure>
+              <figure><img src="images/5youin/スライド68.JPG" alt="不確実性の判定"><figcaption>68</figcaption></figure>
+              <figure><img src="images/5youin/スライド69.JPG" alt="出版バイアスの判定"><figcaption>69</figcaption></figure>
+              <figure><img src="images/5youin/スライド70.JPG" alt="5要因から確実性へ"><figcaption>70</figcaption></figure>
+              <figure><img src="images/5youin/スライド71.JPG" alt="初期確実性の確認"><figcaption>71</figcaption></figure>
+              <figure><img src="images/5youin/スライド72.JPG" alt="深刻な問題の数を確認"><figcaption>72</figcaption></figure>
+              <figure><img src="images/5youin/スライド73.JPG" alt="低い確実性の総合判断"><figcaption>73</figcaption></figure>
+              <figure><img src="images/5youin/スライド74.JPG" alt="学習者向けの理解ポイント"><figcaption>74</figcaption></figure>
+              <figure><img src="images/5youin/スライド75.JPG" alt="別アウトカムへの展開"><figcaption>75</figcaption></figure>
+              <figure><img src="images/5youin/スライド76.JPG" alt="Evidence Profileを読めるようになる意義"><figcaption>76</figcaption></figure>
+            </div>
+          </details>
+        </section>
+
         <h2>4段階の解釈 — 読み手の視点</h2>
         <table class="mid-table">
           <thead><tr><th>ラベル</th><th>意味（読み手向け）</th><th>推定値への姿勢</th></tr></thead>
@@ -1062,6 +1158,65 @@
         <div class="key-message">
           <strong>要点：</strong>Summary of Findings（SoF）表は、GRADEアプローチの中核的な情報提示形式。<strong>アウトカムごとに</strong>①参加者/研究数　②相対効果（RR/OR/HR）　③絶対効果（何/1000人）　④確実性　⑤平易な要約　の5要素を1つの表に集約する [U12]。
         </div>
+
+        <section class="learning-bridge" aria-labelledby="sof-intro-title">
+          <div class="lb-kicker">スライド55・77-83・85-90から学ぶ</div>
+          <h2 id="sof-intro-title">SoF表は「結論の要約」、Evidence Profileは「その理由の詳細」</h2>
+          <p>
+            Ch3で作った Evidence Profile を読者向けに短くしたものが SoF表です。SoF表では、各アウトカムについて「どれくらい効くか」「何人に影響するか」「どれくらい信じてよいか」を一列で読みます。理由を深掘りしたいときは、脚注や Evidence Profile、さらに推奨の背景なら EtD 表を見ます。
+          </p>
+
+          <div class="sof-map">
+            <div class="sof-node">
+              <strong>Evidence Profile</strong>
+              <span>5要因の判定理由を記録する作業表</span>
+            </div>
+            <div class="sof-map-arrow">→</div>
+            <div class="sof-node sof-node-main">
+              <strong>SoF表</strong>
+              <span>読者がまず見る、アウトカムごとの結論表</span>
+            </div>
+            <div class="sof-map-arrow">→</div>
+            <div class="sof-node">
+              <strong>EtD表</strong>
+              <span>推奨へ変換するための価値観・資源・実行可能性の判断</span>
+            </div>
+          </div>
+
+          <div class="sof-reading-grid">
+            <div class="srg-item"><span>1</span><strong>アウトカム</strong><p>患者に重要な結果か。サロゲートだけなら注意。</p></div>
+            <div class="srg-item"><span>2</span><strong>相対効果</strong><p>RR/OR/HR。方向と95% CIを確認。</p></div>
+            <div class="srg-item"><span>3</span><strong>絶対効果</strong><p>1000人あたり何人増減するか。患者への意味はここで決まります。</p></div>
+            <div class="srg-item"><span>4</span><strong>確実性</strong><p>Ch3の5要因評価の結果。高・中・低・非常に低い。</p></div>
+            <div class="srg-item"><span>5</span><strong>脚注</strong><p>なぜ下げたか。ここを読まないと確実性の理由が見えません。</p></div>
+            <div class="srg-item"><span>6</span><strong>EtDとの接続</strong><p>推奨の強さは、効果だけでなく価値観・害・コストも含めて決まります。</p></div>
+          </div>
+
+          <div class="warning-box">
+            <strong>Mindsの表は見た目で迷いやすい。</strong>
+            SoF表、Evidence Profile、EtD表が似た形式で示されることがあります。まず「確実性を下げた5要因の列があるか」「推奨判断の価値観・資源・実行可能性まで載っているか」を見て、どの表を読んでいるのかを切り分けてください。
+          </div>
+
+          <details class="source-slides">
+            <summary>元スライド55・77-83・85-90を大きく確認する</summary>
+            <div class="source-slide-grid">
+              <figure><img src="images/5youin/スライド55.JPG" alt="Evidence Profileの5要因"><figcaption>55</figcaption></figure>
+              <figure><img src="images/5youin/スライド77.JPG" alt="SoF表はEvidence Profileを簡略化したもの"><figcaption>77</figcaption></figure>
+              <figure><img src="images/5youin/スライド78.JPG" alt="SoF表の構造例"><figcaption>78</figcaption></figure>
+              <figure><img src="images/5youin/スライド79.JPG" alt="SoF表の読み取りポイント"><figcaption>79</figcaption></figure>
+              <figure><img src="images/5youin/スライド80.JPG" alt="EtD表の解説"><figcaption>80</figcaption></figure>
+              <figure><img src="images/5youin/スライド81.JPG" alt="価値観、益と害、リソースの判断"><figcaption>81</figcaption></figure>
+              <figure><img src="images/5youin/スライド82.JPG" alt="判定一覧表"><figcaption>82</figcaption></figure>
+              <figure><img src="images/5youin/スライド83.JPG" alt="SoF、GRADE Evidence Profile、EtD表の関係"><figcaption>83</figcaption></figure>
+              <figure><img src="images/5youin/スライド85.JPG" alt="Mindsシートの見分け方"><figcaption>85</figcaption></figure>
+              <figure><img src="images/5youin/スライド86.JPG" alt="MindsのEvidence Profileに似た表"><figcaption>86</figcaption></figure>
+              <figure><img src="images/5youin/スライド87.JPG" alt="評価シート記載例の問題"><figcaption>87</figcaption></figure>
+              <figure><img src="images/5youin/スライド88.JPG" alt="Minds評価シートの注意点"><figcaption>88</figcaption></figure>
+              <figure><img src="images/5youin/スライド89.JPG" alt="Minds EtD表の項目"><figcaption>89</figcaption></figure>
+              <figure><img src="images/5youin/スライド90.JPG" alt="GRADEpro GDTとMinds表の対応"><figcaption>90</figcaption></figure>
+            </div>
+          </details>
+        </section>
 
         <h2>SoF表の典型的な列構成</h2>
         <table class="mid-table">
@@ -2531,6 +2686,38 @@
             </div>
           </div>
         </div>
+
+        <section class="primer-bridge" aria-labelledby="primer-bridge-title">
+          <div class="pb-label">新しいイントロ</div>
+          <h2 id="primer-bridge-title">なぜ「ガイドラインを読む前」に、EBM・SR・CPGの関係を確認するのか</h2>
+          <p>
+            診療ガイドラインは便利ですが、すべてを同じ重さで信頼できるわけではありません。新しい薬について教科書に一文がある、専門家が説明している、ガイドラインに書いてある。どれも出発点にはなりますが、最終的には「どの方法で根拠を集め、どう評価し、どう推奨に変換したか」を見なければ、患者に適用できる情報か判断できません。
+          </p>
+          <div class="trust-question-grid">
+            <figure class="trust-slide">
+              <img src="images/5youin/スライド2.JPG" alt="教科書の記載だけでよいかを疑う場面">
+              <figcaption>スライド2：教科書の記載だけで最新ガイドラインを判断できるか</figcaption>
+            </figure>
+            <figure class="trust-slide">
+              <img src="images/5youin/スライド3.JPG" alt="診療ガイドラインそのものへの疑問">
+              <figcaption>スライド3：診療ガイドラインそのものをどう疑うか</figcaption>
+            </figure>
+            <figure class="trust-slide">
+              <img src="images/5youin/スライド4.JPG" alt="教科書と診療ガイドラインの違いを見極める">
+              <figcaption>スライド4：教科書と診療ガイドラインの違いを見極める</figcaption>
+            </figure>
+          </div>
+          <div class="trust-path">
+            <div><strong>教科書</strong><span>背景知識を得る</span></div>
+            <div><strong>SR</strong><span>根拠を系統的に集める</span></div>
+            <div><strong>GRADE</strong><span>確実性を評価する</span></div>
+            <div><strong>CPG</strong><span>推奨へ変換する</span></div>
+            <div><strong>診療</strong><span>患者に合わせて適用する</span></div>
+          </div>
+          <p>
+            このページでは、まず「信頼できる医学情報とは何か」を押さえます。そのうえで、EBM、システマティックレビュー、診療ガイドラインがどの順番でつながるのかを、初学者向けにひとつずつ確認していきます。
+          </p>
+        </section>
 
         <!-- ============ セクション1：医学情報の信頼性 ============ -->
         <h2 class="primer-h2" id="psec-1">1. 医学情報の信頼性 — あなたはどちらを信頼する？</h2>
