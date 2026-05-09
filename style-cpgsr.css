@@ -3476,3 +3476,111 @@ body.cpg-overview-open { overflow: hidden; }
     font-size: 0.86rem;
   }
 }
+
+/* ===== v1.19: Ch3 スマホ可読性強化 ===== */
+@media (max-width: 760px) {
+  #page-3 .page-body {
+    padding: 18px 12px;
+    font-size: 17px;
+    line-height: 1.9;
+  }
+  #page-3 .page-header h1 {
+    font-size: 1.38rem;
+    line-height: 1.45;
+  }
+  #page-3 h2 {
+    font-size: 1.18rem;
+    line-height: 1.55;
+  }
+  #page-3 .key-message,
+  #page-3 .you-are-here,
+  #page-3 .warning-box,
+  #page-3 .reader-tips,
+  #page-3 .learning-bridge,
+  #page-3 .explain-panel,
+  #page-3 .explain-card,
+  #page-3 .ef-step,
+  #page-3 .cl-level {
+    font-size: 1rem;
+  }
+  #page-3 .learning-bridge {
+    padding: 16px 12px;
+  }
+  #page-3 .learning-bridge h2 {
+    font-size: 1.16rem;
+    line-height: 1.6;
+  }
+  #page-3 .explain-panel p,
+  #page-3 .explain-card p,
+  #page-3 .ef-step p,
+  #page-3 .reader-tips li,
+  #page-3 .cl-level span {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  #page-3 .explain-card strong,
+  #page-3 .ef-step strong,
+  #page-3 .cl-level strong {
+    font-size: 1.05rem;
+  }
+  #page-3 .grade-mini-profile {
+    overflow: visible;
+  }
+  #page-3 .gmp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 0;
+  }
+  #page-3 .gmp-cell {
+    padding: 12px 14px;
+    border-right: 0;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+  #page-3 .gmp-cell strong {
+    font-size: 1.08rem;
+  }
+  #page-3 .mid-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  #page-3 .mid-table th,
+  #page-3 .mid-table td {
+    min-width: 160px;
+    padding: 12px 14px;
+  }
+  #page-3 .source-slides summary {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  #page-3 .source-slide-grid figure {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #page-3 .source-slide-grid img {
+    width: auto;
+    max-width: none;
+    min-width: 680px;
+  }
+  #page-3 .source-slide-grid figcaption {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 420px) {
+  #page-3 .page-body {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16.5px;
+  }
+  #page-3 .page-header h1 {
+    font-size: 1.26rem;
+  }
+  #page-3 .learning-bridge {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
