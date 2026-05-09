@@ -2752,38 +2752,50 @@ body.cpg-overview-open { overflow: hidden; }
 
 /* --- Primer のフォントをスマホで読みやすく --- */
 @media (max-width: 760px) {
+  #page-25 .page-body {
+    font-size: 17px;
+    line-height: 1.9;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  #page-25 .page-header h1 {
+    font-size: 1.42rem;
+    line-height: 1.45;
+  }
   /* 本文段落全般 */
   #page-25 .page-body p,
   #page-25 .page-body li,
   #page-25 .primer-why p,
   #page-25 .primer-why li {
-    font-size: 1rem !important;
-    line-height: 1.85 !important;
+    font-size: 1.08rem !important;
+    line-height: 1.9 !important;
   }
 
   /* 図キャプションを読みやすく */
   #page-25 .primer-fig figcaption {
-    font-size: 0.92rem !important;
-    line-height: 1.6 !important;
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
     padding: 8px 10px;
     color: #2c3e50;
   }
 
   /* 見出しも少し上げる */
   #page-25 .primer-h2 {
-    font-size: 1.15rem !important;
+    font-size: 1.24rem !important;
+    line-height: 1.58 !important;
   }
   #page-25 .primer-h2-new {
-    font-size: 1.15rem !important;
+    font-size: 1.24rem !important;
+    line-height: 1.58 !important;
   }
 
   /* 小見出し（h3, h4）のスマホサイズ */
   #page-25 h3,
   #page-25 .primer-final h3 {
-    font-size: 1.05rem !important;
-    line-height: 1.6 !important;
+    font-size: 1.14rem !important;
+    line-height: 1.65 !important;
   }
-  #page-25 h4 { font-size: 1rem !important; line-height: 1.55 !important; }
+  #page-25 h4 { font-size: 1.08rem !important; line-height: 1.6 !important; }
 
   /* 箇条書き内の文字 */
   #page-25 .misunderstand-list li,
@@ -2791,28 +2803,40 @@ body.cpg-overview-open { overflow: hidden; }
   #page-25 .sr-steps li,
   #page-25 .primer-5a .a-step,
   #page-25 .compare-box {
-    font-size: 1rem !important;
-    line-height: 1.8 !important;
+    font-size: 1.08rem !important;
+    line-height: 1.9 !important;
   }
 
   /* Q&A セクションも大きめに */
-  #page-25 .qa-q .qa-title { font-size: 1rem !important; }
-  #page-25 .qa-a { font-size: 1rem !important; line-height: 1.85 !important; }
+  #page-25 .qa-q .qa-title { font-size: 1.08rem !important; }
+  #page-25 .qa-a { font-size: 1.08rem !important; line-height: 1.9 !important; }
 
   /* ピクトグラム / バッジの可読性 */
-  #page-25 .primer-badge { font-size: 0.88rem; }
+  #page-25 .primer-badge { font-size: 0.95rem; line-height: 1.45; }
+  #page-25 .primer-nav-title { font-size: 0.9rem; }
+  #page-25 .pn-chip { font-size: 0.88rem; }
 
   /* サブセクション間の区切り空間を少し広く（読み疲れ軽減） */
-  #page-25 .primer-fig { margin: 14px 0 20px; }
+  #page-25 .primer-fig {
+    width: 94%;
+    max-width: 420px;
+    margin: 16px auto 24px;
+  }
   #page-25 .primer-fig img {
     width: 100%;
     height: auto;
     max-width: 100%;
   }
+  #page-25 .trust-slide {
+    width: 94%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   /* ガイア先生の引用吹き出し */
-  #page-25 .guyatt-quote .gq-body { font-size: 1rem !important; line-height: 1.8 !important; }
-  #page-25 .guyatt-quote .gq-cite { font-size: 0.88rem !important; }
+  #page-25 .guyatt-quote .gq-body { font-size: 1.08rem !important; line-height: 1.9 !important; }
+  #page-25 .guyatt-quote .gq-cite { font-size: 0.95rem !important; }
 
   /* ターゲットボックス・OIS判定などの説明文 */
   #page-25 .target-box p,
@@ -2820,16 +2844,16 @@ body.cpg-overview-open { overflow: hidden; }
   #page-25 .rob-example p,
   #page-25 .subgroup-box p,
   #page-25 .rec-factors p {
-    font-size: 0.98rem !important;
-    line-height: 1.75 !important;
+    font-size: 1.06rem !important;
+    line-height: 1.85 !important;
   }
 
   /* パンチライン */
-  #page-25 .primer-punchline { font-size: 1.02rem !important; line-height: 1.8 !important; }
-  #page-25 .primer-punchline .sub { font-size: 0.9rem !important; }
+  #page-25 .primer-punchline { font-size: 1.1rem !important; line-height: 1.9 !important; }
+  #page-25 .primer-punchline .sub { font-size: 0.98rem !important; }
 
   /* ボタンとチップ */
-  #page-25 .sec-next { font-size: 0.98rem !important; }
+  #page-25 .sec-next { font-size: 1.05rem !important; }
 
   /* chapter-nav のレイアウトを縦積みで大きめに */
   .chapter-nav {
@@ -2858,10 +2882,12 @@ body.cpg-overview-open { overflow: hidden; }
 /* さらに小さい画面 */
 @media (max-width: 420px) {
   #page-25 .page-body p,
-  #page-25 .page-body li { font-size: 1.05rem !important; line-height: 1.9 !important; }
-  #page-25 .primer-fig figcaption { font-size: 0.98rem !important; line-height: 1.7 !important; }
-  #page-25 .primer-h2 { font-size: 1.18rem !important; line-height: 1.55 !important; }
-  #page-25 .primer-h2-new { font-size: 1.18rem !important; line-height: 1.55 !important; }
+  #page-25 .page-body li { font-size: 1.1rem !important; line-height: 1.95 !important; }
+  #page-25 .primer-fig { width: 92%; max-width: 360px; }
+  #page-25 .primer-fig figcaption { font-size: 1rem !important; line-height: 1.75 !important; }
+  #page-25 .trust-slide { width: 92%; max-width: 360px; }
+  #page-25 .primer-h2 { font-size: 1.24rem !important; line-height: 1.6 !important; }
+  #page-25 .primer-h2-new { font-size: 1.24rem !important; line-height: 1.6 !important; }
   #page-25 .primer-why p,
   #page-25 .primer-why li,
   #page-25 .misunderstand-list li,
@@ -2870,8 +2896,8 @@ body.cpg-overview-open { overflow: hidden; }
   #page-25 .primer-5a .a-step,
   #page-25 .compare-box,
   #page-25 .qa-a {
-    font-size: 1.05rem !important;
-    line-height: 1.9 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.95 !important;
   }
 }
 
@@ -3508,6 +3534,10 @@ body.cpg-overview-open { overflow: hidden; }
   }
   .source-slide-grid figure {
     overflow: hidden;
+    width: 94%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .source-slide-grid img {
     width: 100%;
@@ -3597,6 +3627,10 @@ body.cpg-overview-open { overflow: hidden; }
   }
   #page-3 .source-slide-grid figure {
     overflow: hidden;
+    width: 94%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
   #page-3 .source-slide-grid img {
     width: 100%;
