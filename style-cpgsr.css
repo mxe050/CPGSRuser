@@ -2858,9 +2858,21 @@ body.cpg-overview-open { overflow: hidden; }
 /* さらに小さい画面 */
 @media (max-width: 420px) {
   #page-25 .page-body p,
-  #page-25 .page-body li { font-size: 0.98rem !important; }
-  #page-25 .primer-fig figcaption { font-size: 0.88rem !important; }
-  #page-25 .primer-h2 { font-size: 1.08rem !important; }
+  #page-25 .page-body li { font-size: 1.05rem !important; line-height: 1.9 !important; }
+  #page-25 .primer-fig figcaption { font-size: 0.98rem !important; line-height: 1.7 !important; }
+  #page-25 .primer-h2 { font-size: 1.18rem !important; line-height: 1.55 !important; }
+  #page-25 .primer-h2-new { font-size: 1.18rem !important; line-height: 1.55 !important; }
+  #page-25 .primer-why p,
+  #page-25 .primer-why li,
+  #page-25 .misunderstand-list li,
+  #page-25 .principle-list li,
+  #page-25 .sr-steps li,
+  #page-25 .primer-5a .a-step,
+  #page-25 .compare-box,
+  #page-25 .qa-a {
+    font-size: 1.05rem !important;
+    line-height: 1.9 !important;
+  }
 }
 
 /* ===== 診療ガイドラインあら探しシリーズ（Ch17・v1.10追加） ===== */
