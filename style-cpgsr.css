@@ -3495,13 +3495,12 @@ body.cpg-overview-open { overflow: hidden; }
     font-size: 1.02rem;
   }
   .source-slide-grid figure {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
   }
   .source-slide-grid img {
-    width: auto;
-    max-width: none;
-    min-width: 680px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 }
 
@@ -3585,13 +3584,12 @@ body.cpg-overview-open { overflow: hidden; }
     line-height: 1.55;
   }
   #page-3 .source-slide-grid figure {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
   }
   #page-3 .source-slide-grid img {
-    width: auto;
-    max-width: none;
-    min-width: 680px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
   #page-3 .source-slide-grid figcaption {
     font-size: 0.95rem;
