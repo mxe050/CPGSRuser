@@ -3246,6 +3246,20 @@ body.cpg-overview-open { overflow: hidden; }
   font-size: 0.82rem;
   line-height: 1.5;
 }
+.trust-slide figcaption strong,
+.source-slide-grid figcaption strong {
+  display: block;
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+.trust-slide figcaption span,
+.source-slide-grid figcaption span {
+  display: block;
+  color: #4f6072;
+  line-height: 1.7;
+}
 .trust-path {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -3473,7 +3487,21 @@ body.cpg-overview-open { overflow: hidden; }
   }
   .trust-slide figcaption,
   .source-slide-grid figcaption {
-    font-size: 0.86rem;
+    font-size: 0.98rem;
+    padding: 10px 12px 12px;
+  }
+  .trust-slide figcaption strong,
+  .source-slide-grid figcaption strong {
+    font-size: 1.02rem;
+  }
+  .source-slide-grid figure {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .source-slide-grid img {
+    width: auto;
+    max-width: none;
+    min-width: 680px;
   }
 }
 
