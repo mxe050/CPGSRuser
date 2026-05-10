@@ -879,10 +879,24 @@
   background: #14948a;
   color: white;
 }
+.primer-vbtn-note {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px dashed #1a5276;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #154360;
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
 @media (max-width: 600px) {
   .primer-vstudy-text { min-width: 100%; }
   .primer-vbtn { font-size: 0.88rem; padding: 9px 13px; gap: 6px; }
   .primer-vbtn-mark { width: 24px; height: 24px; font-size: 0.85rem; }
+  .primer-vbtn-note { width: 100%; justify-content: center; }
 }
 
 /* ===== JAMA UG 章内図版（forest plot 等）（v1.15追加） ===== */
