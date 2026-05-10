@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -39,9 +39,10 @@
     <ul class="toc-list" id="tocList">
       <li class="toc-item"><button class="toc-btn active" data-idx="0"><span class="toc-num">0</span><span class="toc-text">表紙<span class="en">Cover</span></span></button></li>
 
-      <li class="toc-section">📚 初学者向け（Primer）</li>
-      <li class="toc-item"><button class="toc-btn primer-toc" data-idx="25"><span class="toc-num">📚</span><span class="toc-text">EBM・SR・CPG 徹底解説<span class="en">Beginner's Primer</span></span></button></li>
+      <li class="toc-section toc-section-major">まずここから勉強しよう</li>
+      <li class="toc-item"><button class="toc-btn primer-toc" data-idx="24"><span class="toc-num">📚</span><span class="toc-text">EBM・SR・CPG 徹底解説<span class="en">Beginner's Primer</span></span></button></li>
 
+      <li class="toc-section toc-section-major">CPG・SRポイント解説集</li>
       <li class="toc-section">Part I — EBM・GRADEの全体像</li>
       <li class="toc-item"><button class="toc-btn" data-idx="1"><span class="toc-num">1</span><span class="toc-text">EBMとCPG・SRの読み方<span class="en">EBM & Reading CPGs/SRs</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="2"><span class="toc-num">2</span><span class="toc-text">GRADEアプローチの概要<span class="en">Overview of GRADE</span></span></button></li>
@@ -52,7 +53,7 @@
 
       <li class="toc-section">Part III — SoF・効果・閾値</li>
       <li class="toc-item"><button class="toc-btn" data-idx="5"><span class="toc-num">5</span><span class="toc-text">SoF表・Evidence Profileの読み方<span class="en">Reading SoF Tables</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="6"><span class="toc-num">6</span><span class="toc-text">相対効果と絶対効果<span class="en">Relative vs Absolute</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="6"><span class="toc-num">6</span><span class="toc-text">メタ分析・相対効果と絶対効果<span class="en">Meta-analysis / Relative vs Absolute</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="7"><span class="toc-num">7</span><span class="toc-text">閾値とMID<span class="en">Thresholds & MID</span></span></button></li>
 
       <li class="toc-section">Part IV — 確実性が下がる5要因</li>
@@ -70,22 +71,21 @@
       <li class="toc-section">Part VI — CPG信頼性評価</li>
       <li class="toc-item"><button class="toc-btn" data-idx="16"><span class="toc-num">16</span><span class="toc-text">⭐ 信頼できるCPGの6つの質問<span class="en">6 Questions for Trustworthy CPG</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="17"><span class="toc-num">17</span><span class="toc-text">CPG品質の実例（NCCN/IOM/日本）<span class="en">CPG Quality Examples</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="18"><span class="toc-num">18</span><span class="toc-text">AMSTAR 2（16項目）<span class="en">AMSTAR 2</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="19"><span class="toc-num">19</span><span class="toc-text">PRISMA 2020（27項目）<span class="en">PRISMA 2020</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="18"><span class="toc-num">18</span><span class="toc-text">AMSTAR 2（16項目）・PRISMA 2020（27項目）<span class="en">AMSTAR 2 / PRISMA 2020</span></span></button></li>
 
       <li class="toc-section">Part VII — 診療現場で活かす</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="20"><span class="toc-num">20</span><span class="toc-text">患者への適用<span class="en">Applicability</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="21"><span class="toc-num">21</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="19"><span class="toc-num">19</span><span class="toc-text">患者への適用<span class="en">Applicability</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="20"><span class="toc-num">20</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
 
+      <li class="toc-section toc-section-major">さらに深く勉強するために</li>
       <li class="toc-section">Part VIII — 📘 JAMA ユーザーズガイド（要約）</li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26"><span class="toc-num">㉒</span><span class="toc-text">Ch22 SR／MAプロセスの信頼性<span class="en">JAMA UG Ch22: SR/MA Process</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="27"><span class="toc-num">㉓</span><span class="toc-text">Ch23 SR／MA 結果の理解と適用<span class="en">JAMA UG Ch23: Understanding Results</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="28"><span class="toc-num">㉔</span><span class="toc-text">Ch24 ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="25"><span class="toc-num">21</span><span class="toc-text">JAMAでのSR/MA記載内容（重複）<span class="en">JAMA UG Ch22: SR/MA Process</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26"><span class="toc-num">22</span><span class="toc-text">ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
 
       <li class="toc-section">Part IX — 付録</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="22"><span class="toc-num">25</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary & Q&A</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="23"><span class="toc-num">26</span><span class="toc-text">最新情報＋Guyatt LinkedIn<span class="en">Latest & LinkedIn Picks</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="24"><span class="toc-num">27</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="21"><span class="toc-num">23</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary & Q&A</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="22"><span class="toc-num">24</span><span class="toc-text">最新情報＋Guyatt LinkedIn<span class="en">Latest & LinkedIn Picks</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="23"><span class="toc-num">25</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
     </ul>
   </nav>
 
@@ -99,7 +99,12 @@
         <div class="sub">— すべての医療関係者のための、GRADE準拠の読み手向け解説 —</div>
         <div class="pitch">
           日々の診療で <strong>ガイドラインを読み、SRを参照し、推奨を目の前の患者に適用する</strong> ために必要な知識を、Gordon Guyatt先生らのUsers' Guidesシリーズ、GRADE最新方法論、閾値・MID、信頼できるCPGの6つの質問、AMSTAR 2／PRISMA 2020までを1つにまとめた読み手専用のサイトです。<br><br>
-          <span class="cover-primer-read-note">次のページの「初学者向け（Primer）・EBM・SR・CPG 徹底解説」を学習した後は、実際のSR・CPGを読みながら、興味があるところ、わからないところをお読みください。</span>
+          <span class="cover-primer-read-note">次のページの「まずここから勉強しよう：EBM・SR・CPG 徹底解説」を学習した後は、実際のSR・CPGを読みながら、興味があるところ、わからないところをお読みください。</span>
+        </div>
+        <div class="site-structure">
+          <div class="ss-step"><span>1</span><strong>まずここから勉強しよう</strong><small>EBM・SR・CPG 徹底解説</small></div>
+          <div class="ss-step"><span>2</span><strong>CPG・SRポイント解説集</strong><small>Part I〜VII</small></div>
+          <div class="ss-step"><span>3</span><strong>さらに深く勉強するために</strong><small>JAMA ユーザーズガイド要約・付録</small></div>
         </div>
         <!-- ===== 初学者向け導入ブロック（v1.2追加） ===== -->
         <div class="beginner-intro-block">
@@ -153,7 +158,7 @@
           </a>
         </div>
         <div style="margin-top:24px;text-align:center;">
-          <button class="nav-btn" onclick="showPage(25)" style="background:var(--accent);color:white;border:none;padding:14px 36px;border-radius:10px;font-size:1.05rem;font-weight:700;cursor:pointer;">📖 読み始める　→</button>
+          <button class="nav-btn" onclick="showPage(24)" style="background:var(--accent);color:white;border:none;padding:14px 36px;border-radius:10px;font-size:1.05rem;font-weight:700;cursor:pointer;">📖 読み始める　→</button>
         </div>
       </div>
 
@@ -171,7 +176,7 @@
     <!-- ============ Ch1: EBM・CPG/SR入門 ============ -->
     <div class="page" id="page-1">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 1 / 27</div>
+        <div class="chapter-badge">Chapter 1 / 25</div>
         <h1>EBMと診療ガイドライン・SRの読み方</h1>
         <div class="en-title">EBM and How to Read CPGs/SRs</div>
       </div>
@@ -187,9 +192,9 @@
             Gordon Guyatt 先生らが編集する <em>JAMA Users' Guides to the Medical Literature</em> は、個別の論文タイプ（RCT、SR、診断研究、CPG など）ごとに「臨床家が読むときに自問すべき質問」を体系化した標準テキストです。本章で扱う SR／CPG の読み方は、同書 Ch22〜Ch26 に対応します。
           </p>
           <ul>
-            <li><strong>SR／MA プロセスの見抜き方</strong> → <a href="#" onclick="showPage(26);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch22 要約ページ</a></li>
-            <li><strong>結果の理解と患者への適用</strong> → <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch23 要約ページ</a></li>
-            <li><strong>直接比較がない選択肢の比較（NMA）</strong> → <a href="#" onclick="showPage(28);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch24 要約ページ</a></li>
+            <li><strong>SR／MA プロセスの見抜き方</strong> → <a href="#" onclick="showPage(25);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch22 要約ページ</a></li>
+            <li><strong>結果の理解と患者への適用</strong> → <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6（JAMA UG Ch23統合）</a></li>
+            <li><strong>直接比較がない選択肢の比較（NMA）</strong> → <a href="#" onclick="showPage(26);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch24 要約ページ</a></li>
           </ul>
         </div>
 
@@ -264,7 +269,7 @@
                 <span class="what-label">何が書いてある？</span>このCPGが答える臨床疑問（PICO形式）・対象患者・除外集団・想定ユーザー。
                 <div class="doc-sec-chaps">
                   <button class="doc-sec-chap" onclick="showPage(10)">🎓 Ch10 非直接性</button>
-                  <button class="doc-sec-chap" onclick="showPage(20)">🎓 Ch20 適用</button>
+                  <button class="doc-sec-chap" onclick="showPage(19)">🎓 Ch19 適用</button>
                 </div>
               </div>
             </div>
@@ -309,7 +314,7 @@
                 <span class="what-label">何が書いてある？</span>アウトカムごとに①参加者数／研究数　②相対効果（RR/OR/HR）　③絶対効果（per 1000）　④確実性（⊕⊕⊕⊕／⊕⊕⊕◯など）　⑤平易な要約。<strong>CPGの中で最も情報密度が高い箇所</strong>。
                 <div class="doc-sec-chaps">
                   <button class="doc-sec-chap" onclick="showPage(5)">🎓 Ch5 SoF表の読み方</button>
-                  <button class="doc-sec-chap" onclick="showPage(6)">🎓 Ch6 相対vs絶対</button>
+                  <button class="doc-sec-chap" onclick="showPage(6)">🎓 Ch6 メタ分析・相対vs絶対</button>
                   <button class="doc-sec-chap" onclick="showPage(7)">🎓 Ch7 閾値・MID</button>
                 </div>
               </div>
@@ -343,7 +348,7 @@
                 <span class="what-label">何が書いてある？</span>利益と害のバランス・患者の価値観・資源（費用）・公平性・実施可能性・受容性の6項目の判定。推奨の強さを決めた理由。
                 <div class="doc-sec-chaps">
                   <button class="doc-sec-chap" onclick="showPage(4)">🎓 Ch4 推奨強度</button>
-                  <button class="doc-sec-chap" onclick="showPage(21)">🎓 Ch21 SDM・価値観</button>
+                  <button class="doc-sec-chap" onclick="showPage(20)">🎓 Ch20 SDM・価値観</button>
                 </div>
               </div>
             </div>
@@ -358,7 +363,7 @@
                 <span class="what-label">何が書いてある？</span>サブグループ（高リスク群／低リスク群）での絶対効果・代替治療との比較・モニタリング・特殊集団での注意。
                 <div class="doc-sec-chaps">
                   <button class="doc-sec-chap" onclick="showPage(6)">🎓 Ch6 ベースラインリスク</button>
-                  <button class="doc-sec-chap" onclick="showPage(20)">🎓 Ch20 患者への適用</button>
+                  <button class="doc-sec-chap" onclick="showPage(19)">🎓 Ch19 患者への適用</button>
                 </div>
               </div>
             </div>
@@ -373,7 +378,7 @@
                 <span class="what-label">何が書いてある？</span>完全版Evidence Profile（確実性の5要因すべての判定内訳）・文献検索戦略（DB、検索語、期間）・個々のパネリストのCOI申告・外部レビューのコメント。
                 <div class="doc-sec-chaps">
                   <button class="doc-sec-chap" onclick="showPage(5)">🎓 Ch5 EPとSoFの違い</button>
-                  <button class="doc-sec-chap" onclick="showPage(18)">🎓 Ch18 AMSTAR 2</button>
+                  <button class="doc-sec-chap" onclick="showPage(18)">🎓 Ch18 AMSTAR 2／PRISMA</button>
                   <button class="doc-sec-chap" onclick="showPage(16)">🎓 Ch16 COI評価</button>
                 </div>
               </div>
@@ -391,7 +396,7 @@
               <div class="doc-sec-what">
                 <span class="what-label">何が書いてある？</span>研究目的、主要結果、確実性の総合評価、結論。<strong>PRISMA 2020の2項目</strong>に該当。忙しいときはここだけ読むことも。
                 <div class="doc-sec-chaps">
-                  <button class="doc-sec-chap" onclick="showPage(19)">🎓 Ch19 PRISMA 2020</button>
+                  <button class="doc-sec-chap" onclick="showPage(18)">🎓 Ch18 PRISMA 2020</button>
                 </div>
               </div>
             </div>
@@ -481,7 +486,7 @@
               <div class="doc-sec-what">
                 <span class="what-label">何が書いてある？</span>Identified → Screened → Eligible → Included の件数フロー。除外理由の内訳。
                 <div class="doc-sec-chaps">
-                  <button class="doc-sec-chap" onclick="showPage(19)">🎓 Ch19 PRISMA図</button>
+                  <button class="doc-sec-chap" onclick="showPage(18)">🎓 Ch18 PRISMA図</button>
                 </div>
               </div>
             </div>
@@ -554,7 +559,7 @@
               <div class="doc-sec-what">
                 <span class="what-label">何が書いてある？</span>結果の解釈・先行研究との比較・SRの限界（研究数不足、異質性、言語制限など）・臨床／政策への示唆。
                 <div class="doc-sec-chaps">
-                  <button class="doc-sec-chap" onclick="showPage(20)">🎓 Ch20 適用可能性</button>
+                  <button class="doc-sec-chap" onclick="showPage(19)">🎓 Ch19 適用可能性</button>
                 </div>
               </div>
             </div>
@@ -590,7 +595,7 @@
     <!-- ============ Ch2: GRADE概要 ============ -->
     <div class="page" id="page-2">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 2 / 27</div>
+        <div class="chapter-badge">Chapter 2 / 25</div>
         <h1>GRADEアプローチの概要 — なぜ最初に学ぶのか</h1>
         <div class="en-title">Overview of the GRADE approach — Why learn this first?</div>
       </div>
@@ -831,7 +836,7 @@
     <!-- ============ Ch3: 確実性4段階 ============ -->
     <div class="page" id="page-3">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 3 / 27</div>
+        <div class="chapter-badge">Chapter 3 / 25</div>
         <h1>「エビデンスの確実性」4段階の意味</h1>
         <div class="en-title">Four Levels of Certainty of Evidence</div>
       </div>
@@ -1027,7 +1032,7 @@
     <!-- ============ Ch4: 強い vs 条件付き推奨 ============ -->
     <div class="page" id="page-4">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 4 / 27</div>
+        <div class="chapter-badge">Chapter 4 / 25</div>
         <h1>強い推奨 vs 条件付き推奨 ＋ GPS・推奨表現</h1>
         <div class="en-title">Strong vs Conditional Recommendations, GPS, Wording</div>
       </div>
@@ -1103,7 +1108,7 @@
     <!-- ============ Ch5: SoF表・EP ============ -->
     <div class="page" id="page-5">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 5 / 27</div>
+        <div class="chapter-badge">Chapter 5 / 25</div>
         <h1>SoF表・Evidence Profileの読み方</h1>
         <div class="en-title">Reading SoF Tables / Evidence Profiles</div>
       </div>
@@ -1257,7 +1262,7 @@
 
         <div class="chapter-nav">
           <button onclick="showPage(4)">← Ch4</button>
-          <button onclick="showPage(6)">Ch6 相対vs絶対 →</button>
+          <button onclick="showPage(6)">Ch6 メタ分析・相対vs絶対 →</button>
         </div>
       </div>
     </div>
@@ -1265,9 +1270,9 @@
     <!-- ============ Ch6: 相対効果と絶対効果 ============ -->
     <div class="page" id="page-6">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 6 / 27</div>
-        <h1>相対効果と絶対効果の違い</h1>
-        <div class="en-title">Relative vs Absolute Effects</div>
+        <div class="chapter-badge">Chapter 6 / 25</div>
+        <h1>メタ分析・相対効果と絶対効果の違い</h1>
+        <div class="en-title">Meta-analysis, Relative Effects, and Absolute Effects</div>
       </div>
       <div class="page-body">
         <!-- 📍 あなたが今学んでいる場所 -->
@@ -1281,6 +1286,89 @@
             <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
           </div>
         </div>
+
+        <div class="jama-note">
+          <span class="jn-label">📘 JAMA UG Ch23 の内容をここに統合</span>
+          <div class="jn-title">SR／メタアナリシスの結果は「数字を読む」だけでは終わらない</div>
+          <p>
+            以前の独立ページ「Ch23 SR／メタアナリシス 結果の理解と適用」は、この章の前半に移しました。ここでは、信頼できるSR／MAを見分けたあとに、<strong>効果の大きさ、精度、ばらつき、確実性、適用可能性、絶対効果</strong>を順番に読む方法を扱います。
+          </p>
+        </div>
+
+        <h2>1. メタ分析の結果はどう表現されるか</h2>
+        <p>SR／MA の要約推定値は、アウトカムのタイプに応じて異なる指標で示されます。まず「どの指標で統合されているか」を確認し、その指標を患者に説明できる形へ翻訳します。</p>
+
+        <figure class="jama-fig">
+          <a class="jama-fig-link" href="images/forest.png?v=7.2" target="_blank" rel="noopener" aria-label="森林図解説を原寸で開く">
+            <img class="jama-fig-img" src="images/forest.png?v=7.2" alt="森林図（フォレストプロット）の各要素を示す解説図" loading="lazy" />
+            <span class="jama-fig-hint">🔍 タップで原寸表示・スマホはピンチで拡大</span>
+          </a>
+          <figcaption>図：森林図（フォレストプロット）の見方。各研究の効果、95%信頼区間、重み、統合推定値、異質性をまとめて確認します。</figcaption>
+        </figure>
+
+        <div class="jama-map">
+          <table>
+            <thead>
+              <tr><th>アウトカムのタイプ</th><th>よく使われる指標</th><th>解釈の要点</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2値（発生／非発生）</td><td>RR／OR／RD／RRR</td><td>RR=0.75なら相対的に25%減少。臨床判断には絶対効果への変換が必要。</td></tr>
+              <tr><td>発生までの時間</td><td>HR</td><td>HR=0.80なら、単位時間あたりのイベント発生率が20%低い。</td></tr>
+              <tr><td>連続変数</td><td>WMD／SMD</td><td>SMDは抽象的なので、代表的な尺度へ戻し翻訳して読む。</td></tr>
+              <tr><td>診断検査</td><td>尤度比 LR</td><td>検査前確率を検査後確率へどれだけ動かすかを見る。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>2. 結果の精度を評価する — 信頼区間と不精確性</h2>
+        <p>効果推定値のまわりの不確かさを示すのが信頼区間です。JAMA UG Ch23 は、信頼区間の上限と下限を見て、臨床判断が変わるかを確認することを強調します。</p>
+        <ul>
+          <li>信頼区間の上限・下限のどちらでも判断が変わらないなら、精度は十分と考えやすい。</li>
+          <li>信頼区間が「重要な効果あり／なし」の境界をまたぐなら、不精確性で確実性を下げる候補になる。</li>
+          <li>統計的有意差があっても、信頼区間が広ければ臨床判断は不安定である。</li>
+          <li>必要な情報量に達していない場合は、最適情報サイズ（OIS）の観点からも慎重に読む。</li>
+        </ul>
+
+        <h2>3. 研究間のばらつき（異質性）を読む</h2>
+        <p>同じ介入でも、研究によって結果が違うことは珍しくありません。フォレストプロットで点推定値の散らばりを見て、Q検定やI²だけでなく、患者層・介入量・比較対照・アウトカム測定の違いで説明できるかを考えます。</p>
+        <div class="reader-tips">
+          <h4>サブグループ解析を信じる前に見ること</h4>
+          <ul>
+            <li>そのサブグループ効果は、事前に計画された仮説か。</li>
+            <li>生物学的・臨床的に説明できる方向か。</li>
+            <li>研究内の比較か、研究間の見かけの違いか。</li>
+            <li>多重比較の中で偶然見つかったものではないか。</li>
+            <li>別の研究でも再現されているか。</li>
+          </ul>
+        </div>
+
+        <h2>4. 確実性と適用可能性をつないで読む</h2>
+        <p>JAMA UG Ch23 は、要約推定値の確実性を評価する標準としてGRADEを採用します。ただし、確実性はSR全体に1つではなく、<strong>死亡、脳卒中、QOLなどアウトカムごと</strong>に判断します。SoF表では、各アウトカムについて相対効果・絶対効果・確実性を横に並べて読みます。</p>
+        <div class="jama-checklist">
+          <div class="jc-head"><span class="jc-icon">🧭</span>患者への適用可能性チェック</div>
+          <ol>
+            <li><strong>患者の特性</strong>は研究対象と似ているか<span class="jc-sub-item">年齢、病期、重症度、併存症</span></li>
+            <li><strong>介入の内容</strong>は自施設・自分の患者で実施可能か<span class="jc-sub-item">用量、期間、実施体制</span></li>
+            <li><strong>対照</strong>は通常診療と比較できるか<span class="jc-sub-item">プラセボ対照か、標準治療対照か</span></li>
+            <li><strong>アウトカム</strong>は患者にとって重要か<span class="jc-sub-item">代理アウトカムではなく、死亡・障害・QOLなどか</span></li>
+          </ol>
+        </div>
+
+        <h2>5. 絶対効果とベースラインリスク — 臨床で活かす算数</h2>
+        <p>SR／MA は多くの場合、相対効果（RR、OR、HR）を主要結果として示します。しかし臨床判断には、<strong>ベースラインリスク × 相対効果 = 絶対効果</strong>への変換が必須です。</p>
+        <div class="jama-compare">
+          <div class="jcmp-box jcmp-good">
+            <span class="jcmp-title">✅ ベネフィット側：心筋梗塞</span>
+            <p>介入なし群のMIリスク = 5.1%<br>RR = 0.73 → 介入群 = 3.7%<br><strong>絶対差 ≈ 1.4% → NNT ≈ 70</strong></p>
+          </div>
+          <div class="jcmp-box jcmp-bad">
+            <span class="jcmp-title">❌ ハーム側：脳卒中</span>
+            <p>介入なし群の脳卒中リスク = 0.5%<br>RR = 2.17 → 介入群 = 1.09%<br><strong>絶対差 ≈ 0.6% → NNH ≈ 170</strong></p>
+          </div>
+        </div>
+        <p>ベネフィットとハームのバランスは、絶対効果で見て初めて評価できます。相対効果は効果の比を示しますが、患者にとっての差し引きは絶対効果で考えます。</p>
+
+        <h2>6. ここから従来のCh6本文：相対効果と絶対効果</h2>
 
         <div class="key-message">
           <strong>要点：</strong>相対効果（RR, OR, HR）はベースラインリスクに依存せず比較的安定。<strong>絶対効果はベースラインリスクに依存し、患者への意味付けに直結</strong>。読み手は必ず両方を確認し、SoF表の「per 1000」表記に注目する [U12][M5]。
@@ -1324,7 +1412,7 @@
     <!-- ============ Ch7: 閾値とMID ============ -->
     <div class="page" id="page-7">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 7 / 27 ⭐</div>
+        <div class="chapter-badge">Chapter 7 / 25 ⭐</div>
         <h1>閾値とMID — 臨床的に重要な差とは何か</h1>
         <div class="en-title">Thresholds & Minimal Important Difference (MID)</div>
       </div>
@@ -1396,7 +1484,7 @@
     <!-- ============ Ch8: Risk of Bias ============ -->
     <div class="page" id="page-8">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 8 / 27</div>
+        <div class="chapter-badge">Chapter 8 / 25</div>
         <h1>Risk of Bias — RCT ＋ 観察研究（ROBINS-E/I）</h1>
         <div class="en-title">Risk of Bias (RCT + Observational)</div>
       </div>
@@ -1423,7 +1511,7 @@
           <p>
             同じ研究でも、<strong>客観的アウトカム</strong>（死亡・画像所見）は盲検化の破綻に比較的頑健、<strong>主観的アウトカム</strong>（疼痛・QOL・患者報告）はバイアスを受けやすい。したがって<strong>アウトカム行ごとに</strong>確実性を下げるかを判断します。JAMA UG Ch22 の「バイアスリスクが低い結果をもたらす可能性が最も高い論文を選ぶためのガイド」と同趣旨。
           </p>
-          <p>詳細要約は <a href="#" onclick="showPage(26);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch22 ページ</a>。</p>
+          <p>詳細要約は <a href="#" onclick="showPage(25);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch22 ページ</a>。</p>
         </div>
 
         <h2>RCTのRoB 2 — 5ドメイン</h2>
@@ -1472,7 +1560,7 @@
     <!-- ============ Ch9: 不一致性 ============ -->
     <div class="page" id="page-9">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 9 / 27</div>
+        <div class="chapter-badge">Chapter 9 / 25</div>
         <h1>不一致性（Inconsistency）</h1>
         <div class="en-title">Inconsistency</div>
       </div>
@@ -1501,7 +1589,7 @@
             <li><strong>統計的検定</strong>：Q 検定（p 値）、I² 統計量（%）。I² 50% 以上は実質的異質性の候補。</li>
             <li><strong>事前仮説に基づくサブグループ解析</strong>：ばらつきの原因を「患者・介入量・追跡期間・研究の質」で説明。事後の探索は仮説生成に留める。</li>
           </ol>
-          <p>詳細要約は <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch23 ページ</a>。</p>
+          <p>詳細要約は <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6（JAMA UG Ch23統合）</a>。</p>
         </div>
 
         <h2>読み手が確認する4つの異質性指標</h2>
@@ -1535,7 +1623,7 @@
     <!-- ============ Ch10: 非直接性 ============ -->
     <div class="page" id="page-10">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 10 / 27</div>
+        <div class="chapter-badge">Chapter 10 / 25</div>
         <h1>非直接性（Indirectness）</h1>
         <div class="en-title">Indirectness</div>
       </div>
@@ -1565,7 +1653,7 @@
             <li><strong>対照</strong>：プラセボ対照か、通常診療対照か — 解釈が変わる</li>
             <li><strong>アウトカム</strong>：真のアウトカムか、代理アウトカム（サロゲート）か</li>
           </ul>
-          <p>JAMA UG Ch23 の「結果を自分の患者に直接適用できるか」節を参照 → <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">Ch23 要約ページ</a></p>
+          <p>JAMA UG Ch23 の「結果を自分の患者に直接適用できるか」節を参照 → <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6（JAMA UG Ch23統合）</a></p>
         </div>
 
         <h2>4つの非直接性</h2>
@@ -1597,7 +1685,7 @@
     <!-- ============ Ch11: 不確実性 ============ -->
     <div class="page" id="page-11">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 11 / 27</div>
+        <div class="chapter-badge">Chapter 11 / 25</div>
         <h1>不確実性（Imprecision）</h1>
         <div class="en-title">Imprecision</div>
       </div>
@@ -1624,7 +1712,7 @@
           <p>
             CI の上限と下限の<strong>両方が同じ臨床判断</strong>を支持するなら精度は十分。どちらかが「効果ありなし」の閾値をまたぐなら確実性を 1 段下げ、<strong>両端ともまたぐ</strong>なら 2 段下げる候補になります。加えて、<strong>最適情報サイズ（OIS）</strong>に達していないメタアナリシスは、統計的有意でもランダム誤差の影響が残ります。
           </p>
-          <p>詳細は <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">JAMA UG Ch23 ページ</a>（2 節「結果の精度を評価する」）。</p>
+          <p>詳細は <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6（JAMA UG Ch23統合）</a>（2 節「結果の精度を評価する」）。</p>
         </div>
 
         <h2>判定の基本原則</h2>
@@ -1656,7 +1744,7 @@
     <!-- ============ Ch12: Dissemination bias ============ -->
     <div class="page" id="page-12">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 12 / 27</div>
+        <div class="chapter-badge">Chapter 12 / 25</div>
         <h1>Dissemination bias（情報発信バイアス）</h1>
         <div class="en-title">Dissemination bias</div>
       </div>
@@ -1702,7 +1790,7 @@
     <!-- ============ Ch13: 非RCT・観察研究のSR ============ -->
     <div class="page" id="page-13">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 13 / 27</div>
+        <div class="chapter-badge">Chapter 13 / 25</div>
         <h1>非RCT・観察研究のSR（GRADE Guidance 44）</h1>
         <div class="en-title">Non-RCT / Observational Study SR</div>
       </div>
@@ -1768,7 +1856,7 @@
     <!-- ============ Ch14: 定性的研究のSR CERQual ============ -->
     <div class="page" id="page-14">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 14 / 27</div>
+        <div class="chapter-badge">Chapter 14 / 25</div>
         <h1>定性的研究のSR — GRADE-CERQual</h1>
         <div class="en-title">Qualitative SR — GRADE-CERQual</div>
       </div>
@@ -1780,7 +1868,7 @@
             <span class="yah-title">あなたが今学んでいる場所</span>
             <span class="yah-where">CPG：EtDフレームワーク「患者の価値観と嗜好」セクション（STEP 7）</span>
             <span class="yah-where">SR：定性的研究のSR（患者体験・医療者視点のメタ統合）</span>
-            <span class="yah-check">「抗凝固療法で患者は脳卒中予防と出血リスクをどう天秤にかけているか？」といった<strong>定性的SR</strong>は、推奨の<strong>価値観セクション</strong>の重要な根拠になります。CERQualの4要素で信頼度を判定する方法を学びます（Ch21のSDMと直結）。</span>
+            <span class="yah-check">「抗凝固療法で患者は脳卒中予防と出血リスクをどう天秤にかけているか？」といった<strong>定性的SR</strong>は、推奨の<strong>価値観セクション</strong>の重要な根拠になります。CERQualの4要素で信頼度を判定する方法を学びます（Ch20のSDMと直結）。</span>
             <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
           </div>
         </div>
@@ -1810,7 +1898,7 @@
     <!-- ============ Ch15: 単一推定値なし／GPS／ネットベネフィット ============ -->
     <div class="page" id="page-15">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 15 / 27</div>
+        <div class="chapter-badge">Chapter 15 / 25</div>
         <h1>単一推定値がない場合・GPS・ネットベネフィット</h1>
         <div class="en-title">Alternative Recommendation Types</div>
       </div>
@@ -1862,7 +1950,7 @@
     <!-- ============ Ch16: 信頼できるCPG 6質問 ============ -->
     <div class="page" id="page-16">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 16 / 27 ⭐ 中核章</div>
+        <div class="chapter-badge">Chapter 16 / 25 ⭐ 中核章</div>
         <h1>信頼できるCPGの6つの質問</h1>
         <div class="en-title">Six Questions for Recognizing a Trustworthy CPG</div>
       </div>
@@ -1891,7 +1979,7 @@
         <p>Guyatt 2023 [U17] の6質問は、以下のUsers' Guidesシリーズを統合したものです：</p>
         <ul>
           <li>[U1] Hayward 1995「CPGの推奨は妥当か？」 → Q1-Q5に相当</li>
-          <li>[U2] Wilson 1995「推奨はあなたの患者ケアに役立つか？」 → Ch20 Applicabilityに相当</li>
+          <li>[U2] Wilson 1995「推奨はあなたの患者ケアに役立つか？」 → Ch19 Applicabilityに相当</li>
           <li>[U16] Brignardello-Petersen 2021「CPG推奨の解釈と利用」 → 総合枠組み</li>
         </ul>
 
@@ -1899,7 +1987,7 @@
         <div class="reader-tips">
           <h4>🎯 判定後のアクション</h4>
           <ul>
-            <li><strong>信頼できる</strong> → Ch20で「自分の患者に適用できるか」を検討</li>
+            <li><strong>信頼できる</strong> → Ch19で「自分の患者に適用できるか」を検討</li>
             <li><strong>部分的に信頼</strong> → 該当する弱点を補完する別ソース（別CPG、最新SR）を参照</li>
             <li><strong>信頼できない</strong> → 別のCPG（GRADE採用・Minds・Cochraneなど）を優先</li>
           </ul>
@@ -1915,7 +2003,7 @@
     <!-- ============ Ch17: CPG品質の実例 ============ -->
     <div class="page" id="page-17">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 17 / 27</div>
+        <div class="chapter-badge">Chapter 17 / 25</div>
         <h1>CPG品質の実例 — NCCN／IOM／日本のCPG問題</h1>
         <div class="en-title">CPG Quality Examples</div>
       </div>
@@ -2132,7 +2220,7 @@
 
         <div class="chapter-nav">
           <button onclick="showPage(16)">← Ch16</button>
-          <button onclick="showPage(18)">Ch18 AMSTAR 2 →</button>
+          <button onclick="showPage(18)">Ch18 AMSTAR 2／PRISMA →</button>
         </div>
       </div>
     </div>
@@ -2140,9 +2228,9 @@
     <!-- ============ Ch18: AMSTAR 2 ============ -->
     <div class="page" id="page-18">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 18 / 27</div>
-        <h1>AMSTAR 2 — SRの方法論的質を評価する16項目</h1>
-        <div class="en-title">AMSTAR 2 (16 items)</div>
+        <div class="chapter-badge">Chapter 18 / 25</div>
+        <h1>AMSTAR 2（16項目）・PRISMA 2020（27項目）</h1>
+        <div class="en-title">AMSTAR 2 / PRISMA 2020</div>
       </div>
       <div class="page-body">
         <!-- 📍 あなたが今学んでいる場所 -->
@@ -2152,13 +2240,13 @@
             <span class="yah-title">あなたが今学んでいる場所</span>
             <span class="yah-where">SR：<strong>SR全体の総合評価</strong> — プロトコル〜検索〜RoB〜統合〜COI を横断</span>
             <span class="yah-where">CPG：CPGが参照しているSRの質評価にも使える</span>
-            <span class="yah-check">Ch16がCPG評価なら、<strong>Ch18はSR評価の中核</strong>。SR本文やその補遺を順にチェックし、重要項目（★）での欠陥が2つ以上なら「Critically Low」と判定します。Ch5-12で学んだGRADE 5要因やRoBの知識がすべて活かされる総合演習です。</span>
+            <span class="yah-check">Ch16がCPG評価なら、<strong>Ch18はSR評価の中核</strong>。AMSTAR 2で方法論的な質を、PRISMA 2020で報告の透明性を確認します。Ch5-12で学んだGRADE 5要因やRoBの知識がすべて活かされる総合演習です。</span>
             <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
           </div>
         </div>
 
         <div class="key-message">
-          <strong>要点：</strong>AMSTAR 2（Shea 2017, BMJ）[T1] はSRの方法論的質を16項目で評価。<strong>重要（critical）項目に欠陥があると総合評価が大きく下がる</strong>厳格な設計。PROSPERO登録、文献検索、RoB評価、COI報告が重要項目。
+          <strong>要点：</strong>AMSTAR 2（Shea 2017, BMJ）[T1] はSRの方法論的質を16項目で評価し、PRISMA 2020（Page 2021, BMJ）[T2] はSR報告の透明性を27項目で確認します。<strong>AMSTAR 2は「信頼できる方法で作られたか」、PRISMAは「読むために必要な情報が十分に報告されているか」</strong>を見る道具です。
         </div>
 
         <h2>インタラクティブ評価ツール</h2>
@@ -2186,46 +2274,16 @@
           </tbody>
         </table>
 
-        <div class="chapter-nav">
-          <button onclick="showPage(17)">← Ch17</button>
-          <button onclick="showPage(19)">Ch19 PRISMA 2020 →</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============ Ch19: PRISMA 2020 ============ -->
-    <div class="page" id="page-19">
-      <div class="page-header">
-        <div class="chapter-badge">Chapter 19 / 27</div>
-        <h1>PRISMA 2020 — SR報告の透明性 27項目</h1>
-        <div class="en-title">PRISMA 2020 (27 items)</div>
-      </div>
-      <div class="page-body">
-        <!-- 📍 あなたが今学んでいる場所 -->
-        <div class="you-are-here">
-          <div class="yah-pin">📍</div>
-          <div class="yah-body">
-            <span class="yah-title">あなたが今学んでいる場所</span>
-            <span class="yah-where">SR：全セクション横断（タイトル・抄録・緒言・方法・結果・考察・COI）</span>
-            <span class="yah-where">SR：補遺のPRISMAチェックリスト・PRISMAフロー図</span>
-            <span class="yah-check">AMSTAR 2が「方法論の質」を評価するのに対し、PRISMA 2020は「報告の透明性」を評価します。<strong>本文に何がどう書かれているべきか</strong>の27項目チェックを理解することで、SR本文を読む際の「見落とし」を防げます。</span>
-            <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
-          </div>
-        </div>
-
-        <div class="key-message">
-          <strong>要点：</strong>PRISMA 2020（Page 2021, BMJ）[T2] は、SRを<strong>報告</strong>する際に含めるべき27項目のチェックリスト。AMSTAR 2が方法論品質を評価するのに対し、PRISMAは<strong>報告の透明性</strong>を保証する。
-        </div>
-
+        <h2>PRISMA 2020 — SR報告の透明性 27項目</h2>
         <div class="jama-note">
           <span class="jn-label">📘 JAMA UG との対応</span>
-          <div class="jn-title">3 つのツールを読者がどう使い分けるか</div>
+          <div class="jn-title">3つのツールを読者がどう使い分けるか</div>
           <ul>
-            <li><strong>AMSTAR 2</strong>（16項目）：この SR の「方法論的な質」は信頼できるか？</li>
-            <li><strong>PRISMA 2020</strong>（27項目）：この SR は「十分に報告されている」か？</li>
-            <li><strong>JAMA UG Ch22 チェックリスト</strong>（8 質問）：<strong>結果を信じてよい水準か</strong>を、臨床家の視点で短時間に判定する</li>
+            <li><strong>AMSTAR 2</strong>（16項目）：このSRの「方法論的な質」は信頼できるか？</li>
+            <li><strong>PRISMA 2020</strong>（27項目）：このSRは「十分に報告されている」か？</li>
+            <li><strong>JAMA UG Ch22チェックリスト</strong>：結果を信じてよい水準かを、臨床家の視点で短時間に判定する</li>
           </ul>
-          <p>JAMA UG は「質問を自分に投げかけながら論文を読む」使い方を想定しており、AMSTAR 2／PRISMA と補完関係にあります。要約は <a href="#" onclick="showPage(26);return false;" style="color:#1a5276;font-weight:700;">Ch22 ページ</a> を参照。</p>
+          <p>JAMA UG は「質問を自分に投げかけながら論文を読む」使い方を想定しており、AMSTAR 2／PRISMA と補完関係にあります。要約は <a href="#" onclick="showPage(25);return false;" style="color:#1a5276;font-weight:700;">JAMAでのSR/MA記載内容（重複）</a> を参照。</p>
         </div>
 
         <h2>AMSTAR 2 vs PRISMA 2020</h2>
@@ -2234,12 +2292,12 @@
           <tbody>
             <tr><td>目的</td><td>SRの方法論的<strong>質</strong>評価</td><td>SRの<strong>報告</strong>の透明性</td></tr>
             <tr><td>項目数</td><td>16</td><td>27</td></tr>
-            <tr><td>使う場面</td><td>SRを<strong>使うとき</strong>の批判的吟味</td><td>SRを<strong>書くとき／査読するとき</strong></td></tr>
+            <tr><td>使う場面</td><td>SRを<strong>使うとき</strong>の批判的吟味</td><td>SRを<strong>読む／書く／査読する</strong>とき</td></tr>
             <tr><td>読み手として</td><td>このSRは信頼できるか？</td><td>このSRは十分に報告されているか？</td></tr>
           </tbody>
         </table>
 
-        <h2>27項目の主要セクション</h2>
+        <h2>PRISMA 2020の主要セクション</h2>
         <ul>
           <li><strong>タイトル・抄録</strong>（2項目）</li>
           <li><strong>緒言</strong>（2項目：根拠、目的）</li>
@@ -2248,21 +2306,18 @@
           <li><strong>考察</strong>（4項目：結果の解釈、限界、結論、資金源・COI）</li>
         </ul>
 
-        <h2>読み手としての使い方</h2>
         <div class="reader-tips">
           <h4>📌 PRISMA 2020を読み手として活用</h4>
           <ul>
-            <li>PRISMAチェックリスト付録があるSRは、報告が構造化されている可能性が高い</li>
-            <li>特に重要：方法の4番（情報源）、9番（データ抽出）、13番（統合の方法）、22-24番（確実性・Dissemination bias・限界）</li>
-            <li>フローダイアグラム（研究選択の流れ）が掲載されているか</li>
+            <li>PRISMAチェックリスト付録があるSRは、報告が構造化されている可能性が高い。</li>
+            <li>特に重要：情報源、データ抽出、統合方法、確実性、Dissemination bias、限界。</li>
+            <li>フローダイアグラム（研究選択の流れ）が掲載され、除外理由が追えるか確認する。</li>
           </ul>
         </div>
 
-        <p>公式サイト：<a href="http://www.prisma-statement.org/" target="_blank" rel="noopener">prisma-statement.org</a></p>
-
         <div class="chapter-nav">
-          <button onclick="showPage(18)">← Ch18</button>
-          <button onclick="showPage(20)">Ch20 患者への適用 →</button>
+          <button onclick="showPage(17)">← Ch17</button>
+          <button onclick="showPage(19)">Ch19 患者への適用 →</button>
         </div>
       </div>
     </div>
@@ -2270,7 +2325,7 @@
     <!-- ============ Ch20: 適用可能性 ============ -->
     <div class="page" id="page-20">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 20 / 27</div>
+        <div class="chapter-badge">Chapter 19 / 25</div>
         <h1>推奨を目の前の患者にどう適用するか</h1>
         <div class="en-title">Applicability</div>
       </div>
@@ -2295,9 +2350,9 @@
           <span class="jn-label">📘 JAMA UG の視点</span>
           <div class="jn-title">適用可能性の検討は「相対効果 → 絶対効果 → NNT」の翻訳から</div>
           <p>
-            JAMA UG Ch23 は、SR の結果を自分の患者に使うとき、<strong>ベースラインリスクに応じて絶対効果を計算し直す</strong>ことを強調しています。同じ RR でも、高リスク患者と低リスク患者では NNT が大きく変わり、ベネフィット／ハームのバランスが逆転することもあります。
+            JAMA UG Ch23（本サイトではCh6へ統合）は、SR の結果を自分の患者に使うとき、<strong>ベースラインリスクに応じて絶対効果を計算し直す</strong>ことを強調しています。同じ RR でも、高リスク患者と低リスク患者では NNT が大きく変わり、ベネフィット／ハームのバランスが逆転することもあります。
           </p>
-          <p>計算の流れ・例示は <a href="#" onclick="showPage(27);return false;" style="color:#1a5276;font-weight:700;">Ch23 要約ページ</a> の「ベースラインリスク」節を参照。</p>
+          <p>計算の流れ・例示は <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6 メタ分析・相対効果と絶対効果</a> の前半を参照。</p>
         </div>
 
         <h2>Applicability評価の4次元</h2>
@@ -2337,8 +2392,8 @@
         </div>
 
         <div class="chapter-nav">
-          <button onclick="showPage(19)">← Ch19</button>
-          <button onclick="showPage(21)">Ch21 SDM →</button>
+          <button onclick="showPage(18)">← Ch18 AMSTAR 2／PRISMA</button>
+          <button onclick="showPage(20)">Ch20 SDM →</button>
         </div>
       </div>
     </div>
@@ -2346,7 +2401,7 @@
     <!-- ============ Ch21: SDM ============ -->
     <div class="page" id="page-21">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 21 / 27</div>
+        <div class="chapter-badge">Chapter 20 / 25</div>
         <h1>共同意思決定（SDM）と価値観・嗜好</h1>
         <div class="en-title">Shared Decision Making & Values</div>
       </div>
@@ -2422,8 +2477,8 @@
         <p>Guyatt 2023 [U17] は、強い推奨でも理論的にはSDMを行うべきだが、時間制約から実践的には限定的と認めています。ただし<strong>患者の強い反対意思があれば聞き入れる</strong>姿勢は必要です。</p>
 
         <div class="chapter-nav">
-          <button onclick="showPage(20)">← Ch20</button>
-          <button onclick="showPage(26)">Ch22 JAMA UG SR/MA →</button>
+          <button onclick="showPage(19)">← Ch19 患者への適用</button>
+          <button onclick="showPage(25)">Ch21 JAMAでのSR/MA記載内容 →</button>
         </div>
       </div>
     </div>
@@ -2431,7 +2486,7 @@
     <!-- ============ Ch25 (page-22): 用語集＋Q&A ============ -->
     <div class="page" id="page-22">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 25 / 27</div>
+        <div class="chapter-badge">Chapter 23 / 25</div>
         <h1>用語集 ＋ Q&A</h1>
         <div class="en-title">Glossary & Q&A</div>
       </div>
@@ -2485,8 +2540,8 @@
         </details>
 
         <div class="chapter-nav">
-          <button onclick="showPage(28)">← Ch24 JAMA UG NMA</button>
-          <button onclick="showPage(23)">Ch26 最新情報 →</button>
+          <button onclick="showPage(26)">← Ch22 JAMA UG NMA</button>
+          <button onclick="showPage(22)">Ch24 最新情報 →</button>
         </div>
       </div>
     </div>
@@ -2494,7 +2549,7 @@
     <!-- ============ Ch26 (page-23): 最新情報＋LinkedIn ============ -->
     <div class="page" id="page-23">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 26 / 27</div>
+        <div class="chapter-badge">Chapter 24 / 25</div>
         <h1>最新情報 ＋ Guyatt先生 LinkedIn ピックアップ</h1>
         <div class="en-title">Latest Updates & Guyatt's LinkedIn Picks</div>
       </div>
@@ -2506,8 +2561,8 @@
         <div id="linkedin-feed"></div>
 
         <div class="chapter-nav">
-          <button onclick="showPage(22)">← Ch25 用語集</button>
-          <button onclick="showPage(24)">Ch27 参考文献 →</button>
+          <button onclick="showPage(21)">← Ch23 用語集</button>
+          <button onclick="showPage(23)">Ch25 参考文献 →</button>
         </div>
       </div>
     </div>
@@ -2515,7 +2570,7 @@
     <!-- ============ Ch27 (page-24): 参考文献一覧 ============ -->
     <div class="page" id="page-24">
       <div class="page-header">
-        <div class="chapter-badge">Chapter 27 / 27</div>
+        <div class="chapter-badge">Chapter 25 / 25</div>
         <h1>参考文献一覧</h1>
         <div class="en-title">References</div>
       </div>
@@ -2596,7 +2651,7 @@
         </div>
 
         <div class="chapter-nav">
-          <button onclick="showPage(23)">← Ch26 LinkedIn</button>
+          <button onclick="showPage(22)">← Ch24 LinkedIn</button>
           <button onclick="showPage(0)">表紙へ戻る 🏠</button>
         </div>
       </div>
@@ -2605,7 +2660,7 @@
     <!-- ============ 初学者向け徹底解説（特別ページ / v1.2追加） ============ -->
     <div class="page" id="page-25">
       <div class="page-header primer-header">
-        <div class="chapter-badge primer-badge">📚 Primer / 初学者向け徹底解説</div>
+        <div class="chapter-badge primer-badge">📚 まずここから勉強しよう</div>
         <h1>EBM・システマティックレビュー・診療ガイドラインの関係</h1>
         <div class="en-title">Why Every Clinician Must Understand EBM, SR, and CPG — Before Reading Any Guideline</div>
       </div>
@@ -2641,7 +2696,7 @@
         <div class="primer-why" id="psec-intro">
           <h3>🎯 なぜ、この解説を最初に読むのか？</h3>
           <p>
-            本サイトの本体（Ch1〜Ch24）は、<strong>「すでにEBM・SR・CPGの定義を理解している人」</strong>が、診療ガイドラインやシステマティックレビューを<strong>「読みこなす」</strong>ために書かれています。しかし、実際には多くの医療者が以下のような誤解を抱えたまま診療情報を利用しています：
+            本サイトの本体（Ch1〜Ch25）は、<strong>「すでにEBM・SR・CPGの定義を理解している人」</strong>が、診療ガイドラインやシステマティックレビューを<strong>「読みこなす」</strong>ために書かれています。しかし、実際には多くの医療者が以下のような誤解を抱えたまま診療情報を利用しています：
           </p>
           <ul class="misunderstand-list">
             <li>❌ 「システマティックレビューならエビデンスレベルが高い」</li>
@@ -2723,7 +2778,7 @@
             <div><strong>診療</strong><span>患者に合わせて適用する</span></div>
           </div>
           <p>
-            このページでは、まず「信頼できる医学情報とは何か」を押さえます。そのうえで、EBM、システマティックレビュー、診療ガイドラインがどの順番でつながるのかを、初学者向けにひとつずつ確認していきます。
+            このページでは、まず「信頼できる医学情報とは何か」を押さえます。そのうえで、EBM、システマティックレビュー、診療ガイドラインがどの順番でつながるのかを、最初に学ぶ内容としてひとつずつ確認していきます。
           </p>
           <div class="explain-grid">
             <div class="explain-card">
@@ -3598,7 +3653,7 @@
 
           <div class="primer-punchline">
             ⇒ <strong>EBM・システマティックレビュー・診療ガイドラインの意味を理解していなければならない。</strong><br>
-            <span class="sub">本サイトの Ch1〜Ch24 は、このための最短ルートです。</span>
+            <span class="sub">本サイトの Ch1〜Ch25 は、このための最短ルートです。</span>
           </div>
         </div>
 
@@ -3632,27 +3687,27 @@
             </div>
             <div class="roadmap-step" onclick="showPage(18)">
               <span class="rs-ch">Ch18</span>
-              <span class="rs-title">AMSTAR 2（16項目）</span>
-              <div class="rs-dsc">SR の質を系統的に評価するチェックリスト</div>
+              <span class="rs-title">AMSTAR 2／PRISMA 2020</span>
+              <div class="rs-dsc">SR の方法論的質と報告の透明性を評価</div>
             </div>
             <div class="roadmap-step" onclick="showPage(7)">
               <span class="rs-ch">Ch7</span>
               <span class="rs-title">⭐ 閾値と MID</span>
               <div class="rs-dsc">効果推定値が「臨床的に意味があるか」を判定</div>
             </div>
-            <div class="roadmap-step" onclick="showPage(26)" style="border-color:#1a5276;background:linear-gradient(135deg,#eaf3f8,#f4f9fc);">
-              <span class="rs-ch" style="background:#1a5276;">📘22</span>
-              <span class="rs-title">JAMA UG Ch22</span>
+            <div class="roadmap-step" onclick="showPage(25)" style="border-color:#1a5276;background:linear-gradient(135deg,#eaf3f8,#f4f9fc);">
+              <span class="rs-ch" style="background:#1a5276;">Ch21</span>
+              <span class="rs-title">JAMAでのSR/MA記載内容（重複）</span>
               <div class="rs-dsc">SR／MA プロセスを信用できるかを見抜く 8 質問</div>
             </div>
-            <div class="roadmap-step" onclick="showPage(27)" style="border-color:#1a5276;background:linear-gradient(135deg,#eaf3f8,#f4f9fc);">
-              <span class="rs-ch" style="background:#1a5276;">📘23</span>
-              <span class="rs-title">JAMA UG Ch23</span>
-              <div class="rs-dsc">結果の理解と、目の前の患者への適用</div>
+            <div class="roadmap-step" onclick="showPage(6)" style="border-color:#1a5276;background:linear-gradient(135deg,#eaf3f8,#f4f9fc);">
+              <span class="rs-ch" style="background:#1a5276;">Ch6</span>
+              <span class="rs-title">JAMA UG Ch23統合</span>
+              <div class="rs-dsc">メタ分析結果の理解と、目の前の患者への適用</div>
             </div>
-            <div class="roadmap-step" onclick="showPage(28)" style="border-color:#1a5276;background:linear-gradient(135deg,#eaf3f8,#f4f9fc);">
-              <span class="rs-ch" style="background:#1a5276;">📘24</span>
-              <span class="rs-title">JAMA UG Ch24</span>
+            <div class="roadmap-step" onclick="showPage(26)" style="border-color:#1a5276;background:linear-gradient(135deg,#eaf3f8,#f4f9fc);">
+              <span class="rs-ch" style="background:#1a5276;">Ch22</span>
+              <span class="rs-title">JAMA UG Ch24 NMA</span>
               <div class="rs-dsc">ネットワークメタアナリシス（NMA）</div>
             </div>
           </div>
@@ -3682,13 +3737,13 @@
     <div class="page" id="page-26">
 
       <div class="jama-page-head">
-        <span class="jph-badge">📘 Chapter 22 / 27 ｜ JAMA UG</span>
-        <div class="jph-title">Ch22 システマティックレビュー／メタアナリシスのプロセス</div>
+        <span class="jph-badge">📘 Chapter 21 / 25 ｜ JAMA UG Ch22</span>
+        <div class="jph-title">JAMAでのSR/MA記載内容（重複）</div>
         <span class="jph-meta">⏱ 約 12 分</span>
       </div>
 
       <p style="font-size:1rem;line-height:1.85;color:#2c3e50;margin:0 0 14px;">
-        JAMA <em>Users' Guides to the Medical Literature</em>（第3版）第22章の枠組みを、独立の解説として整理しました。<strong>この章の目的は「SR／MAというプロセスが、私たちが結論を信じてよい水準で実施されたか」を見抜く視点を持つこと</strong>です。本編の各章（Ch1, Ch8〜12, Ch18, Ch20）と補完的に読むと理解が深まります。
+        JAMA <em>Users' Guides to the Medical Literature</em>（第3版）第22章の枠組みを、独立の解説として整理しました。内容は本サイトの各章と一部重複しますが、<strong>「SR／MAというプロセスが、私たちが結論を信じてよい水準で実施されたか」をJAMA流の質問として読み直す章</strong>です。本編の各章（Ch1, Ch8〜12, Ch18, Ch19）と補完的に読むと理解が深まります。
       </p>
 
       <!-- 臨床シナリオ -->
@@ -3868,7 +3923,7 @@
             <li>高リスク患者（年間イベント率 8%）→ 絶対差 2%／NNT = 50</li>
             <li>低リスク患者（年間イベント率 0.5%）→ 絶対差 0.125%／NNT = 800</li>
           </ul>
-          <p>同じ RR でも臨床的意味は全く違う。この視点は <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6 相対 vs 絶対</a> と <a href="#" onclick="showPage(20);return false;" style="color:#1a5276;font-weight:700;">Ch20 患者への適用</a> が詳しい。</p>
+          <p>同じ RR でも臨床的意味は全く違う。この視点は <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6 相対 vs 絶対</a> と <a href="#" onclick="showPage(19);return false;" style="color:#1a5276;font-weight:700;">Ch19 患者への適用</a> が詳しい。</p>
         </div>
       </details>
 
@@ -3936,7 +3991,7 @@
           <strong>Q8</strong>：あなたの目の前の患者のベースラインリスクに当てはめた NNT／NNH が提示されているか。
         </p>
         <p>
-          この 8 項目をクリアして初めて、「SR／MAの結果を信じてよい」水準に達します。信じられる SR が得られたら、次は <a href="#" onclick="showPage(27);return false;" style="color:#1b5d35;font-weight:700;">Ch23（結果の理解と適用）</a> へ進み、効果の大きさ・精度・患者への適用可能性を評価します。
+          この 8 項目をクリアして初めて、「SR／MAの結果を信じてよい」水準に達します。信じられる SR が得られたら、結果の大きさ・精度・患者への適用可能性は <a href="#" onclick="showPage(6);return false;" style="color:#1b5d35;font-weight:700;">Ch6（JAMA UG Ch23統合）</a> で評価します。
         </p>
       </div>
 
@@ -3945,304 +4000,8 @@
       </div>
 
       <div class="chapter-nav">
-        <button onclick="showPage(21)">← Ch21 SDM・価値観</button>
-        <button onclick="showPage(27)">Ch23（結果の理解と適用）へ →</button>
-      </div>
-
-    </div>
-
-    <!-- ==================================================== -->
-    <!-- ========  page-27: JAMA UG Ch23 結果の理解と適用  === -->
-    <!-- ==================================================== -->
-    <div class="page" id="page-27">
-
-      <div class="jama-page-head">
-        <span class="jph-badge">📘 Chapter 23 / 27 ｜ JAMA UG</span>
-        <div class="jph-title">Ch23 SR／メタアナリシス 結果の理解と適用</div>
-        <span class="jph-meta">⏱ 約 15 分</span>
-      </div>
-
-      <p style="font-size:1rem;line-height:1.85;color:#2c3e50;margin:0 0 14px;">
-        Ch22 で「信じてよい SR／MA」を見分けました。<strong>次は、その結果を目の前の患者にどう当てはめるか</strong>です。JAMA UG 第23章は、効果の大きさ・精度・確実性・適用可能性を段階的に評価する枠組みを提示します。
-      </p>
-
-      <!-- 臨床シナリオ -->
-      <div class="jama-scenario">
-        <div class="js-head">🩺 臨床シナリオ</div>
-        <p>
-          非心臓手術を受ける <strong>66 歳男性、2 型糖尿病・高血圧</strong> を担当します。最新の SR／MA（周術期 β 遮断薬の影響）を読み、この患者に投与すべきかを判断したい — 効果推定値の数値から、NNT・NNH まで自分で計算できるようになるのが目標です。
-        </p>
-      </div>
-
-      <h2 class="jama-h2">1. 効果の大きさ — どう表現されるか</h2>
-
-      <p style="line-height:1.85;">SR／MA の要約推定値は、アウトカムのタイプに応じて異なる指標で示されます。</p>
-
-      <!-- ===== 森林図（フォレストプロット）解説図（v1.15追加） ===== -->
-      <figure class="jama-fig">
-        <a class="jama-fig-link" href="images/forest.png?v=7.2" target="_blank" rel="noopener" aria-label="森林図解説を原寸で開く">
-          <img class="jama-fig-img" src="images/forest.png?v=7.2" alt="森林図（フォレストプロット）の各要素を示す解説図 — ①研究, ②介入群と対照群, ③森林図, ④効果指標RR, ⑤95%信頼区間, ⑥重み, ⑦ランダム効果モデル, ⑧ヘテロジーニティ, ⑨予測区間, ⑩横軸, ⑪サブグループ間の比較" loading="lazy" />
-          <span class="jama-fig-hint">🔍 タップで原寸表示・スマホはピンチで拡大</span>
-        </a>
-        <figcaption>図：<strong>森林図（フォレストプロット）の見方</strong>。SR／MA の要約推定値は、各研究の効果と統合結果を ①〜⑪ の要素として可視化します（個別研究の効果と CI／統合推定値のひし形／重み％／I²・τ²・予測区間／サブグループ比較の χ² など）。本章ではこれらの読み方を順に確認します。</figcaption>
-      </figure>
-
-      <!-- ===== フォレストプロット再解析シミュレータ（v1.16追加） ===== -->
-      <a class="forest-sim-btn" href="https://forest-ebm-sim-v2-n7wn-git-main-mxe050s-projects.vercel.app/" target="_blank" rel="noopener">
-        <span class="forest-sim-mark">🌲</span>
-        <span class="forest-sim-body">
-          <span class="forest-sim-tag">インタラクティブツール（別タブ）</span>
-          <span class="forest-sim-title">フォレストプロットを再解析する（例：サブグループ追加、RoB の深刻な論文削除）場合</span>
-          <span class="forest-sim-dsc">ブラウザ上でフォレストプロットを編集してメタアナリシスを再計算できます</span>
-        </span>
-        <span class="forest-sim-arrow" aria-hidden="true">↗</span>
-      </a>
-
-      <div class="jama-map">
-        <table>
-          <thead>
-            <tr><th>アウトカムのタイプ</th><th>よく使われる指標</th><th>解釈の要点</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2 値（発生／非発生）<br><small>死亡・心筋梗塞など</small></td>
-              <td>相対リスク RR／オッズ比 OR／リスク差 RD／相対リスク減少 RRR</td>
-              <td>RR=0.75 → 介入でイベントが 25% 相対的に減少。絶対効果に変換すると臨床的意味が見える。</td>
-            </tr>
-            <tr>
-              <td>発生までの時間<br><small>生存解析</small></td>
-              <td>ハザード比 HR</td>
-              <td>HR=0.80 → 単位時間あたりのイベント発生率が 20% 低い。</td>
-            </tr>
-            <tr>
-              <td>診断検査の精度</td>
-              <td>尤度比 LR（正・負）</td>
-              <td>LR+ が 10 以上 / LR− が 0.1 以下で、事後確率を大きく動かす。</td>
-            </tr>
-            <tr>
-              <td>連続変数<br><small>BP・QOLスコア</small></td>
-              <td>加重平均差 WMD／標準化平均差 SMD</td>
-              <td>異なるスケールを統合する場合は SMD。解釈には MID（最小重要差）を参照。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="jama-note">
-        <span class="jn-label">📘 JAMA UG の要点</span>
-        <div class="jn-title">SMD の解釈は「戻し翻訳」で</div>
-        <p>
-          SMD（効果量）は「何 SD 分だけ改善したか」という抽象的な単位です。臨床家に伝わる形にするには、代表的な尺度（例：6 分間歩行距離、Chronic Respiratory Questionnaire）の実単位に<strong>戻し翻訳（back-translation）</strong>します。
-        </p>
-      </div>
-
-      <h2 class="jama-h2">2. 結果の精度を評価する — 信頼区間と不精確性</h2>
-
-      <p style="line-height:1.85;">効果推定値（点推定値）の<strong>まわりの不確かさ</strong>を示すのが<span class="jterm">信頼区間<span class="jt-en">CI</span></span>です。JAMA UG は精度の評価を次のように説明しています。</p>
-
-      <ul style="line-height:1.85;">
-        <li>CI の<strong>上限と下限の両方</strong>で臨床判断が変わらないなら、精度は十分</li>
-        <li>CI のどちらかの端が「重要な効果あり／なし」の境界（閾値）をまたぐなら、不精確性で確実性を 1 段下げる候補</li>
-        <li><strong>CI 上下限の両方が閾値をまたぐ</strong>なら、2 段下げることもある</li>
-        <li>統計的有意 (p&lt;0.05) があっても、CI が広ければ臨床判断は不安定</li>
-      </ul>
-
-      <div class="jama-note">
-        <span class="jn-label">📘 JAMA UG の要点</span>
-        <div class="jn-title">最適情報サイズ（OIS）の考え方</div>
-        <p>
-          適切な精度を得るためには、メタアナリシス全体で所定のサンプルサイズ（<span class="jterm">OIS<span class="jt-en">Optimal Information Size</span></span>）に達している必要があります。症例数が少なく CI が広い場合、統計的有意でも「ランダム誤差で生じた可能性」が残り、確実性を下げる根拠になります。
-        </p>
-        <p>詳細は <a href="#" onclick="showPage(11);return false;" style="color:#1a5276;font-weight:700;">Ch11 不確実性</a> と、Primer（page-25）のセクション15（OIS）も併読。</p>
-      </div>
-
-      <h2 class="jama-h2">3. 研究間の結果のばらつき（異質性）を理解する</h2>
-
-      <p style="line-height:1.85;">同じ介入でも、研究によって結果が違うのは普通のことです。JAMA UG は、<strong>ばらつきの評価と説明</strong>を 3 段階で行います。</p>
-
-      <div class="jama-checklist">
-        <div class="jc-head"><span class="jc-icon">📊</span>異質性評価の 3 ステップ</div>
-        <ol>
-          <li><strong>視覚的評価</strong><span class="jc-sub-item">フォレストプロット上で、点推定値のばらつきと CI の重なりを目視</span></li>
-          <li><strong>統計的検定</strong><span class="jc-sub-item">Q検定（p 値）、I²統計量（% で表現）</span></li>
-          <li><strong>臨床的・方法論的な説明</strong><span class="jc-sub-item">事前に計画されたサブグループ解析で、ばらつきの原因を探る</span></li>
-        </ol>
-      </div>
-
-      <h3 class="jama-h3">I² の解釈の目安</h3>
-      <ul style="line-height:1.85;">
-        <li><strong>0–40%</strong>：重要でない異質性の可能性</li>
-        <li><strong>30–60%</strong>：中等度の異質性の可能性</li>
-        <li><strong>50–90%</strong>：実質的な異質性の可能性</li>
-        <li><strong>75–100%</strong>：かなりの異質性 — 統合の妥当性を慎重に考える</li>
-      </ul>
-
-      <h3 class="jama-h3">サブグループ解析の信用性 — 5 つの基準</h3>
-
-      <p style="line-height:1.85;">ばらつきを「年齢・重症度・介入量」などのサブグループで説明できたと主張するとき、<strong>その主張を信じてよいか</strong>は次の 5 点で評価します。</p>
-
-      <ol style="line-height:1.85;">
-        <li>サブグループ効果の方向は、<strong>生物学的・臨床的に妥当</strong>か</li>
-        <li>その効果は、研究内（within-study）の比較か、それとも研究間（between-study）の比較か → <strong>研究内比較のほうが信頼できる</strong></li>
-        <li>事前に計画された仮説か、<strong>事後の探索</strong>か → 事前計画のほうが信頼できる</li>
-        <li>検定される仮説の数は少ないか（多重比較の問題）</li>
-        <li>他の独立した研究で再現されているか</li>
-      </ol>
-
-      <h2 class="jama-h2">4. エビデンスの確実性（質）を等級付けする — GRADE</h2>
-
-      <p style="line-height:1.85;">JAMA UG は、要約推定値の確実性を評価するスタンダードとして GRADE を採用します。本アプリの <a href="#" onclick="showPage(2);return false;" style="color:#1a5276;font-weight:700;">Ch2</a>〜<a href="#" onclick="showPage(12);return false;" style="color:#1a5276;font-weight:700;">Ch12</a> が詳しいので、ここでは JAMA UG 独自の視点をハイライトします。</p>
-
-      <div class="jama-note">
-        <span class="jn-label">📘 JAMA UG の独自視点</span>
-        <div class="jn-title">確実性の格付けは「アウトカムごと」に行う</div>
-        <p>
-          <strong>単一の「GRADE 評価」はない</strong>。同じ SR でも「死亡」「脳卒中」「QOL」でそれぞれ確実性は異なり得ます。バイアスのリスク、異質性、不精確性は<strong>アウトカムによって異なる影響</strong>を受けるためです。
-        </p>
-        <p>
-          Summary of Findings（SoF）表は、アウトカム行ごとに確実性（高・中・低・非常に低）と理由を示します。詳細は <a href="#" onclick="showPage(5);return false;" style="color:#1a5276;font-weight:700;">Ch5 SoF 表の読み方</a> を参照。
-        </p>
-      </div>
-
-      <h2 class="jama-h2">5. 結果を自分の患者に直接適用できるか</h2>
-
-      <p style="line-height:1.85;">信頼できる効果推定値が得られても、それを<strong>目の前の患者</strong>に使ってよいかは別の問題です。JAMA UG は 4 つのチェックポイントを提示します。</p>
-
-      <div class="jama-checklist">
-        <div class="jc-head"><span class="jc-icon">🧭</span>患者への適用可能性チェック</div>
-        <ol>
-          <li><strong>患者の特性</strong>は、研究対象と十分似ているか<span class="jc-sub-item">年齢・性別・併存症・病期・重症度</span></li>
-          <li><strong>介入の内容</strong>は、あなたの環境で実施可能か<span class="jc-sub-item">用量・投与経路・期間・実施チームの技能</span></li>
-          <li><strong>対照</strong>は、あなたの通常診療と比較できるか<span class="jc-sub-item">プラセボ対照 vs 標準治療対照 で解釈が大きく変わる</span></li>
-          <li><strong>結果</strong>は、患者にとって重要か<span class="jc-sub-item">代理アウトカムではなく患者重要アウトカム（death・disability・QOL）か</span></li>
-        </ol>
-      </div>
-
-      <div class="jama-note">
-        <span class="jn-label">📘 JAMA UG の要点</span>
-        <div class="jn-title">非直接性（indirectness）の 3 側面</div>
-        <ul>
-          <li><strong>患者</strong>：目の前の患者が研究対象からかけ離れていないか</li>
-          <li><strong>介入／対照</strong>：実施可能性、用量、通常診療との差</li>
-          <li><strong>アウトカム</strong>：真のアウトカムか、代理アウトカムか</li>
-        </ul>
-        <p>詳細は <a href="#" onclick="showPage(10);return false;" style="color:#1a5276;font-weight:700;">Ch10 非直接性</a> を参照。</p>
-      </div>
-
-      <h2 class="jama-h2">6. 絶対効果とベースラインリスク — 臨床で活かす算数</h2>
-
-      <p style="line-height:1.85;">SR／MA は多くの場合<strong>相対効果（RR、OR、HR）</strong>を主要結果として示します。臨床判断には<strong>ベースラインリスク × 相対効果 = 絶対効果</strong>への変換が必須です。</p>
-
-      <h3 class="jama-h3">計算例 — 周術期 β遮断薬</h3>
-
-      <div class="jama-compare">
-        <div class="jcmp-box jcmp-good">
-          <span class="jcmp-title">✅ ベネフィット側：心筋梗塞</span>
-          <p>介入なし群の MI リスク = 5.1%（ベースライン）<br>
-          RR = 0.73 → 介入群 MI リスク = 5.1 × 0.73 = 3.7%<br>
-          <strong>絶対差 ≈ 1.4% → NNT ≈ 70</strong><br>
-          （1000 人に 14 人少ない心筋梗塞）</p>
-        </div>
-        <div class="jcmp-box jcmp-bad">
-          <span class="jcmp-title">❌ ハーム側：脳卒中</span>
-          <p>介入なし群の脳卒中リスク = 0.5%<br>
-          RR = 2.17 → 介入群 = 0.5 × 2.17 = 1.09%<br>
-          <strong>絶対差 ≈ 0.6% → NNH ≈ 170</strong><br>
-          （1000 人に 6 人多い脳卒中）</p>
-        </div>
-      </div>
-
-      <p style="line-height:1.85;">
-        <strong>ベネフィットとハームのバランス</strong>は、絶対効果でみて初めて適切に評価できます。相対効果は「効果の生物学的な大きさ」を示しますが、臨床的な<strong>差引き</strong>は絶対効果でしか計算できません。
-      </p>
-
-      <div class="jama-note">
-        <span class="jn-label">📘 JAMA UG の要点</span>
-        <div class="jn-title">ベースラインリスクの取得方法</div>
-        <p>JAMA UG が推奨する優先順位：</p>
-        <ol style="padding-left:1.3em;">
-          <li>SR 内の対照群（介入なし）の平均リスク</li>
-          <li>SR がレビューした観察研究のコホート</li>
-          <li>外部の大規模観察研究／レジストリ</li>
-          <li>リスク層別化ツール／予測モデル（Framingham、CHA₂DS₂-VAScなど）</li>
-        </ol>
-        <p>目の前の患者のリスクが平均と違うなら、そのリスクを入れて絶対効果を計算し直すのが正しい使い方です。</p>
-      </div>
-
-      <h2 class="jama-h2">7. エビデンスプロファイル — 結果の一覧表</h2>
-
-      <p style="line-height:1.85;">GRADE ワーキンググループが推奨する要約形式が<strong>エビデンスプロファイル</strong>と<strong>Summary of Findings（SoF）表</strong>です。患者にとって最も重要なアウトカムを<strong>行</strong>として、各アウトカムの確実性・絶対効果・相対効果を一望できます。</p>
-
-      <div class="jama-map">
-        <table>
-          <thead>
-            <tr>
-              <th>アウトカム</th>
-              <th>相対効果</th>
-              <th>ベースラインリスク</th>
-              <th>介入群のリスク</th>
-              <th>確実性</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>心筋梗塞</td>
-              <td>RR 0.73 (0.61–0.88)</td>
-              <td>51/1000</td>
-              <td>37/1000<br><small>（14 人少ない）</small></td>
-              <td>🟢 高</td>
-            </tr>
-            <tr>
-              <td>脳卒中</td>
-              <td>RR 2.17 (1.26–3.74)</td>
-              <td>5/1000</td>
-              <td>11/1000<br><small>（6 人多い）</small></td>
-              <td>🟢 高</td>
-            </tr>
-            <tr>
-              <td>総死亡</td>
-              <td>RR 1.27 (1.01–1.60)</td>
-              <td>25/1000</td>
-              <td>32/1000<br><small>（7 人多い）</small></td>
-              <td>🟢 高</td>
-            </tr>
-            <tr>
-              <td>低血圧</td>
-              <td>RR 1.51 (1.39–1.65)</td>
-              <td>100/1000</td>
-              <td>151/1000<br><small>（51 人多い）</small></td>
-              <td>🟢 高</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p style="font-size:0.88rem;color:#5d7a8a;margin-top:6px;">
-        例示の数値は POISE 試験（Lancet 2008）の再解析およびそのメタアナリシスから報告された値を参考に、教育目的で簡略化して示したもの。
-      </p>
-
-      <!-- 臨床シナリオの解決 -->
-      <div class="jama-resolution">
-        <div class="jr-head">🎯 臨床シナリオの解決</div>
-        <p>
-          66 歳、糖尿病・高血圧を持つこの患者について、上の SoF 表を適用します。<br>
-          <strong>ベネフィット</strong>：MI リスクが年間 5.1% ほどあると仮定 → 1000 人に 14 人少ない MI。<br>
-          <strong>ハーム</strong>：脳卒中 +6人、総死亡 +7人、低血圧 +51人／1000人。<br>
-          <strong>確実性</strong>：いずれも GRADE「高」。<br>
-          <strong>判断</strong>：MI の絶対利益よりも、脳卒中と死亡の絶対害が大きいと判断され、<strong>ルーチンの周術期高用量 β 遮断薬はこの患者には推奨しない</strong>。もともと β 遮断薬を服用中の患者は継続、という個別判断に落ち着く。
-        </p>
-        <p>
-          この「ベネフィット − ハーム」を、患者の価値観も含めて一緒に決めるプロセスが <a href="#" onclick="showPage(21);return false;" style="color:#1b5d35;font-weight:700;">Ch21 共同意思決定</a> です。
-        </p>
-      </div>
-
-      <div class="jama-source">
-        <strong>出典：</strong>JAMA <em>Users' Guides to the Medical Literature</em>（第3版）第23章「Understanding and Applying the Results of a Systematic Review and Meta-analysis」を基に、章構成・質問フレーム・SoF フォーマットを参照して独自に再構成・解説。数値例は POISE 試験（Devereaux PJ et al. Lancet 2008）および GRADE 関連ガイダンス（Guyatt et al. J Clin Epidemiol 2011）を参照。
-      </div>
-
-      <div class="chapter-nav">
-        <button onclick="showPage(26)">← Ch22 へ戻る</button>
-        <button onclick="showPage(28)">Ch24（NMA）へ →</button>
+        <button onclick="showPage(20)">← Ch20 SDM・価値観</button>
+        <button onclick="showPage(26)">Ch22 NMAへ →</button>
       </div>
 
     </div>
@@ -4253,7 +4012,7 @@
     <div class="page" id="page-28">
 
       <div class="jama-page-head">
-        <span class="jph-badge">📘 Chapter 24 / 27 ｜ JAMA UG</span>
+        <span class="jph-badge">📘 Chapter 22 / 25 ｜ JAMA UG Ch24</span>
         <div class="jph-title">Ch24 ネットワークメタアナリシス（NMA）</div>
         <span class="jph-meta">⏱ 約 13 分</span>
       </div>
@@ -4382,8 +4141,8 @@
       </div>
 
       <div class="chapter-nav">
-        <button onclick="showPage(27)">← Ch23 へ戻る</button>
-        <button onclick="showPage(22)">Ch25 用語集 →</button>
+        <button onclick="showPage(25)">← Ch21 JAMAでのSR/MA記載内容</button>
+        <button onclick="showPage(21)">Ch23 用語集 →</button>
       </div>
 
     </div>

@@ -188,6 +188,22 @@ body {
 .toc-text { flex: 1; }
 .toc-text .en { font-size: 0.72rem; color: rgba(255,255,255,0.4); display: block; margin-top: 2px; }
 
+.toc-section {
+  padding: 14px 20px 6px;
+  color: rgba(255,255,255,0.62);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.toc-section-major {
+  margin-top: 8px;
+  padding-top: 16px;
+  color: #ffcc80;
+  font-size: 0.84rem;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
 /* ===== メインコンテンツ ===== */
 .main-content {
   margin-left: var(--sidebar-width);
