@@ -3683,8 +3683,8 @@ body.cpg-overview-open { overflow: hidden; }
 /* ===== v1.25: Primer スマホ本文サイズを他ページ相当に固定 ===== */
 @media (max-width: 760px) {
   #page-25 .page-body {
-    font-size: 20px !important;
-    line-height: 2 !important;
+    font-size: 17px !important;
+    line-height: 1.85 !important;
   }
   #page-25 .page-body p,
   #page-25 .page-body li,
@@ -3704,42 +3704,42 @@ body.cpg-overview-open { overflow: hidden; }
   #page-25 .rec-factors p,
   #page-25 .primer-punchline,
   #page-25 .sec-next {
-    font-size: 20px !important;
-    line-height: 2 !important;
+    font-size: 1rem !important;
+    line-height: 1.85 !important;
   }
   #page-25 .primer-fig figcaption,
   #page-25 .trust-slide figcaption {
-    font-size: 18px !important;
-    line-height: 1.85 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
   }
   #page-25 .primer-h2,
   #page-25 .primer-h2-new {
-    font-size: 1.48rem !important;
-    line-height: 1.65 !important;
+    font-size: 1.22rem !important;
+    line-height: 1.6 !important;
   }
   #page-25 h3,
   #page-25 .primer-final h3 {
-    font-size: 1.3rem !important;
-    line-height: 1.7 !important;
+    font-size: 1.12rem !important;
+    line-height: 1.65 !important;
   }
   #page-25 h4,
   #page-25 .qa-q .qa-title {
-    font-size: 1.2rem !important;
-    line-height: 1.7 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
   }
   #page-25 .primer-badge,
   #page-25 .primer-nav-title,
   #page-25 .pn-chip,
   #page-25 .guyatt-quote .gq-cite,
   #page-25 .primer-punchline .sub {
-    font-size: 17px !important;
-    line-height: 1.65 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
   }
 }
 
 @media (max-width: 420px) {
   #page-25 .page-body {
-    font-size: 20.5px !important;
+    font-size: 16.5px !important;
   }
   #page-25 .page-body p,
   #page-25 .page-body li,
@@ -3759,8 +3759,8 @@ body.cpg-overview-open { overflow: hidden; }
   #page-25 .rec-factors p,
   #page-25 .primer-punchline,
   #page-25 .sec-next {
-    font-size: 20.5px !important;
-    line-height: 2.05 !important;
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
   }
 }
 
