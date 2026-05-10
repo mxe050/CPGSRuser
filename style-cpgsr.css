@@ -1929,39 +1929,6 @@ html { scroll-behavior: smooth; }
   .r2-step { min-width: 100%; }
 }
 
-/* フローティング「目次/トップへ」ボタン（Primerページがactiveのときのみ表示） */
-.primer-fab-wrap {
-  position: fixed;
-  right: 12px;
-  bottom: 80px;
-  display: none;
-  flex-direction: column;
-  gap: 8px;
-  z-index: 90;
-}
-.page.active .primer-fab-wrap { display: flex; }
-.primer-fab {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: white;
-  border: none;
-  box-shadow: 0 4px 14px rgba(230,126,34,0.4);
-  font-size: 1.3rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s;
-}
-.primer-fab:hover, .primer-fab:active {
-  background: #d35400;
-  transform: translateY(-2px);
-}
-.primer-fab-top { background: var(--primary); box-shadow: 0 4px 14px rgba(26,82,118,0.35); }
-.primer-fab-top:hover, .primer-fab-top:active { background: var(--primary-dark); }
-
 /* ============================================== */
 /*  v1.4 JAMAユーザーズガイド (JAMA Users' Guides) */
 /* ============================================== */
