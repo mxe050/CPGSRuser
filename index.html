@@ -6,7 +6,7 @@
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
 <link rel="stylesheet" href="style.css?v=7.2">
-<link rel="stylesheet" href="style-cpgsr.css?v=8.3">
+<link rel="stylesheet" href="style-cpgsr.css?v=8.4">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -99,16 +99,13 @@
         <div class="sub">— すべての医療関係者のための、GRADE準拠の読み手向け解説 —</div>
         <div class="pitch">
           日々の診療で <strong>ガイドラインを読み、SRを参照し、推奨を目の前の患者に適用する</strong> ために必要な知識を、Gordon Guyatt先生らのUsers' Guidesシリーズ、GRADE最新方法論、閾値・MID、信頼できるCPGの6つの質問、AMSTAR 2／PRISMA 2020までを1つにまとめた読み手専用のサイトです。<br><br>
-          本サイトは<strong>作成者向け</strong>のGRADEハンドブックとは別に、<strong>読み手の視点</strong>で「どこを見るか・どう判断するか・どう現場に持ち込むか」に特化しています。
+          <span class="cover-primer-read-note">次のページの「初学者向け（Primer）・EBM・SR・CPG 徹底解説」を学習した後は、実際のSR・CPGを読みながら、興味があるところ、わからないところをお読みください。</span>
         </div>
         <!-- ===== 初学者向け導入ブロック（v1.2追加） ===== -->
         <div class="beginner-intro-block">
           <div class="beginner-intro-title">
             <span class="beginner-intro-icon">🎓</span>
-            <span>初学者の方は、まず次の動画と解説を学んでください</span>
-          </div>
-          <div class="beginner-intro-sub">
-            本サイトの各章に入る前に、<strong>EBM・システマティックレビュー（SR）・診療ガイドライン（CPG）の関係</strong>を正しく理解しておくことが、<strong>信頼できる医療情報を見極める目</strong>を養うための第一歩です。
+            <span>この図が理解できるようになるまで、繰り返し勉強しましょう。</span>
           </div>
 
           <!-- ===== Core GRADE全体像サムネイル（v1.5追加・v1.8で小型化＋モバイルパン対応） ===== -->
@@ -118,42 +115,6 @@
               <img class="cpg-overview-thumb-img" src="images/core-grade-overview.png?v=7.2" alt="Core GRADEアプローチ — 診療ガイドライン：エビデンスから推奨へ1枚で理解" loading="lazy" />
             </button>
             <div class="cpg-overview-thumb-hint">🔍 タップで拡大 — スマホはスワイプで移動</div>
-          </div>
-
-          <div class="beginner-intro-btns">
-            <a class="beginner-btn yt-btn" href="https://www.youtube.com/watch?v=7UJZLG49ba8&t=1s" target="_blank" rel="noopener">
-              <span class="yt-mark">▶</span>
-              <span class="btn-body">
-                <span class="btn-label">動画①（解説編）</span>
-                <span class="btn-title">EBM・システマティックレビュー・診療ガイドラインとは</span>
-                <span class="btn-dsc">エビデンスの確実性の評価方法まで一気通貫で解説</span>
-                <span class="btn-dsc btn-dsc-note">スマホで読む場合は、次のページの「初学者向け（Primer）: EBM・SR・CPG 徹底解説」へ。</span>
-              </span>
-            </a>
-            <a class="beginner-btn yt-btn" href="https://www.youtube.com/watch?v=pAr7upG01YA" target="_blank" rel="noopener">
-              <span class="yt-mark">▶</span>
-              <span class="btn-body">
-                <span class="btn-label">動画②（会話編 54分）</span>
-                <span class="btn-title">診療ガイドライン作成方法を通じて詳しく学ぶ</span>
-                <span class="btn-dsc">定義の"なぜ？"から作成・パネリストの役割まで</span>
-              </span>
-            </a>
-            <a class="beginner-btn slide-btn" href="https://grad-eslide.vercel.app/slide/N3" target="_blank" rel="noopener">
-              <span class="slide-mark">📱</span>
-              <span class="btn-body">
-                <span class="btn-label">スマホ学習版（G先生の説明編）</span>
-                <span class="btn-title">EBMを理解して、システマティックレビューから診療ガイドライン作成までを、スマホで読んでみよう</span>
-                <span class="btn-dsc">「動画②診療ガイドライン作成方法を通じて詳しく学ぶ」をG先生が語る形式で読めます。</span>
-              </span>
-            </a>
-            <button class="beginner-btn primer-btn" onclick="showPage(25)">
-              <span class="primer-mark">📚</span>
-              <span class="btn-body">
-                <span class="btn-label">解説ページ（本サイト内）</span>
-                <span class="btn-title">初学者向け：EBM・SR・診療ガイドラインの関係について徹底解説</span>
-                <span class="btn-dsc">なぜ学ぶ必要があるのか — 信頼できる医療情報を見極める目の養い方</span>
-              </span>
-            </button>
           </div>
         </div>
 
@@ -177,44 +138,6 @@
             </a>
           </div>
         </div>
-
-        <!-- ===== JAMA UG 誘導ブロック（v1.4追加） ===== -->
-        <div class="beginner-intro-block" style="background:linear-gradient(135deg,#eaf3f8 0%,#f4f9fc 100%);border-color:#c5dde8;margin-top:20px;">
-          <div class="beginner-intro-title" style="color:#0b3d5c;">
-            <span class="beginner-intro-icon">📘</span>
-            <span>世界標準の読み方フレームワーク — JAMA ユーザーズガイド</span>
-          </div>
-          <div class="beginner-intro-sub" style="color:#2c3e50;">
-            本サイトの中核は、Gordon Guyatt 先生らが編集する <em>JAMA Users' Guides to the Medical Literature</em>（第3版）のフレームワークです。本編の各章はこのガイドの質問を土台に、日本の読者向けに独自に再構成・解説しています。<strong>3つの要約章（Ch22 SR／MAプロセス、Ch23 結果の理解と適用、Ch24 NMA）</strong>は独立ページとして読めます。
-          </div>
-          <div class="beginner-intro-btns">
-            <button class="beginner-btn primer-btn" onclick="showPage(26)" style="border-color:#1a5276;">
-              <span class="primer-mark" style="background:#1a5276;color:white;">📘</span>
-              <span class="btn-body">
-                <span class="btn-label" style="color:#1a5276;">JAMA UG Ch22</span>
-                <span class="btn-title">システマティックレビュー／メタアナリシスのプロセス</span>
-                <span class="btn-dsc">信頼できる SR／MA を見抜く 8 つの質問</span>
-              </span>
-            </button>
-            <button class="beginner-btn primer-btn" onclick="showPage(27)" style="border-color:#1a5276;">
-              <span class="primer-mark" style="background:#1a5276;color:white;">📘</span>
-              <span class="btn-body">
-                <span class="btn-label" style="color:#1a5276;">JAMA UG Ch23</span>
-                <span class="btn-title">SR／MA 結果の理解と適用</span>
-                <span class="btn-dsc">効果量・確実性・ベースラインリスク・NNT への翻訳</span>
-              </span>
-            </button>
-            <button class="beginner-btn primer-btn" onclick="showPage(28)" style="border-color:#1a5276;">
-              <span class="primer-mark" style="background:#1a5276;color:white;">📘</span>
-              <span class="btn-body">
-                <span class="btn-label" style="color:#1a5276;">JAMA UG Ch24</span>
-                <span class="btn-title">ネットワークメタアナリシス</span>
-                <span class="btn-dsc">直接比較がない選択肢どうしを比べるための枠組み</span>
-              </span>
-            </button>
-          </div>
-        </div>
-
         <div class="reader-links">
           <a class="reader-link" href="https://minds.jcqhc.or.jp/" target="_blank" rel="noopener">
             <span class="icn">📘</span><span><span class="ttl">Minds（日本のCPG）</span><br><span class="dsc">公益財団法人日本医療機能評価機構</span></span>
@@ -2740,7 +2663,7 @@
               <span class="primer-vbtn-note">スマホで読もう：このページ</span>
             </div>
             <div class="primer-vstudy-row primer-vstudy-row-sub">
-              <span class="primer-vstudy-text">📚 もう少し詳しい全体像を、まず勉強したい方へ →</span>
+              <span class="primer-vstudy-text primer-vstudy-required">本解説を読んだ後に、次を必ず学習してください。</span>
               <div class="primer-vstudy-btns">
                 <a class="primer-vbtn primer-vbtn-yt" href="https://www.youtube.com/watch?v=pAr7upG01YA" target="_blank" rel="noopener">
                   <span class="primer-vbtn-mark">▶</span>

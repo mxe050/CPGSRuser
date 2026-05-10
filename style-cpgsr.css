@@ -685,6 +685,11 @@
   margin-bottom: 16px;
 }
 .beginner-intro-sub strong { color: #ffd89a; }
+.cover-primer-read-note {
+  display: block;
+  color: #ff4d4d;
+  font-weight: 800;
+}
 .beginner-intro-btns {
   display: grid;
   grid-template-columns: 1fr;
@@ -837,6 +842,10 @@
   font-weight: 700;
   color: #1a4f6e;
   line-height: 1.5;
+}
+.primer-vstudy-required {
+  color: #c0392b !important;
+  font-weight: 900;
 }
 .primer-vstudy-btns {
   display: flex;
