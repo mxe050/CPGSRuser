@@ -3801,3 +3801,106 @@ body.cpg-overview-open { overflow: hidden; }
     overflow-x: auto !important;
   }
 }
+
+/* ===== v1.27: Guyatt 2024講演 詳細解説 ===== */
+.chapter-top-action {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.lecture-jump-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #185a7d, #0f7f8c);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.98rem;
+  box-shadow: 0 10px 22px rgba(24, 90, 125, 0.22);
+  cursor: pointer;
+}
+
+.lecture-deep-dive {
+  margin: 28px 0 34px;
+  padding: 22px;
+  border: 2px solid rgba(24, 90, 125, 0.18);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.lecture-deep-dive h2 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+
+.lecture-source {
+  margin: -4px 0 18px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.lecture-deep-dive details {
+  margin: 12px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.lecture-deep-dive summary {
+  cursor: pointer;
+  color: var(--primary-dark);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.lecture-deep-dive details p {
+  margin: 12px 0 0;
+  line-height: 1.85;
+}
+
+.lecture-deep-dive h3 {
+  margin-top: 28px;
+  color: var(--primary-dark);
+}
+
+.qa-deep {
+  border-left: 4px solid var(--accent) !important;
+}
+
+@media (max-width: 760px) {
+  .chapter-top-action {
+    justify-content: flex-start;
+    margin-bottom: 12px;
+  }
+  .lecture-jump-btn {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+  .lecture-deep-dive {
+    margin: 22px 0 28px;
+    padding: 14px 12px;
+  }
+  .lecture-deep-dive h2 {
+    font-size: 1.22rem;
+    line-height: 1.55;
+  }
+  .lecture-deep-dive h3 {
+    font-size: 1.12rem;
+    line-height: 1.6;
+  }
+  .lecture-deep-dive details {
+    padding: 12px 12px;
+  }
+  .lecture-deep-dive summary {
+    font-size: 1rem;
+  }
+  .lecture-deep-dive details p,
+  .lecture-source {
+    font-size: 1rem;
+  }
+}
