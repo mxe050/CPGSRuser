@@ -6,7 +6,7 @@
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
 <link rel="stylesheet" href="style.css?v=7.2">
-<link rel="stylesheet" href="style-cpgsr.css?v=8.4">
+<link rel="stylesheet" href="style-cpgsr.css?v=8.5">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -84,7 +84,7 @@
 
       <li class="toc-section">Part IX — 付録</li>
       <li class="toc-item"><button class="toc-btn" data-idx="21"><span class="toc-num">23</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary & Q&A</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="22"><span class="toc-num">24</span><span class="toc-text">最新情報＋Guyatt LinkedIn<span class="en">Latest & LinkedIn Picks</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="22"><span class="toc-num">24</span><span class="toc-text">Guyatt先生講演<span class="en">Guyatt Lectures</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="23"><span class="toc-num">25</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
     </ul>
   </nav>
@@ -2541,7 +2541,7 @@
 
         <div class="chapter-nav">
           <button onclick="showPage(26)">← Ch22 JAMA UG NMA</button>
-          <button onclick="showPage(22)">Ch24 最新情報 →</button>
+          <button onclick="showPage(22)">Ch24 Guyatt先生講演 →</button>
         </div>
       </div>
     </div>
@@ -2549,20 +2549,142 @@
     <!-- ============ Ch26 (page-23): 最新情報＋LinkedIn ============ -->
     <div class="page" id="page-23">
       <div class="page-header">
-        <div class="chapter-top-action">
-          <button class="lecture-jump-btn" onclick="document.getElementById('guyatt-2024-lecture').scrollIntoView({behavior:'smooth', block:'start'});">
-            🎓 Guyatt先生2024年講演を詳しく読む
-          </button>
-        </div>
         <div class="chapter-badge">Chapter 24 / 25</div>
-        <h1>最新情報 ＋ Guyatt先生 LinkedIn ピックアップ</h1>
-        <div class="en-title">Latest Updates & Guyatt's LinkedIn Picks</div>
+        <h1>Guyatt先生講演（EBMからGRADEへ）</h1>
+        <div class="en-title">Guyatt Lectures: From EBM to GRADE</div>
       </div>
       <div class="page-body">
         <div class="key-message">
-          <strong>要点：</strong>GRADE方法論・CPG読み方に関する最新の知見を、Gordon Guyatt先生のLinkedIn投稿から厳選。各投稿は論文へのリンクとコメントを含む、先生による<strong>一次キュレーション</strong>。
+          <strong>要点：</strong>Guyatt先生の講演とLinkedIn記事を、EBMからGRADEへ学習を進めるための3つの入口に整理しました。2025年講演、2024年講演、LinkedIn記事を順に確認できます。
         </div>
 
+        <div class="lecture-topic-nav" aria-label="Guyatt先生講演と記事">
+          <a class="lecture-topic-btn" href="#guyatt-2025-lecture">Guyatt先生2025年講演</a>
+          <a class="lecture-topic-btn" href="#guyatt-2024-lecture">Guyatt先生2024年講演</a>
+          <a class="lecture-topic-btn" href="#guyatt-linkedin-picks">Guyatt先生LinkedIn記事</a>
+        </div>
+
+        <section id="guyatt-2025-lecture" class="lecture-deep-dive">
+          <h2>🎓 Guyatt先生2025年講演：Core GRADE実践Q&A</h2>
+        <p>以下は、Guyatt 先生の <a href="https://www.clarityresearch.ca/frequently-asked-questions" target="_blank" rel="noopener">Clarity Research FAQ</a> と 2025年12月講演から、日本の臨床家に特に有用な Q&A を抜粋・要約したものです。各質問はタップで展開されます。</p>
+
+        <div class="qa-list">
+
+          <details class="qa-item">
+            <summary class="qa-q">
+              <span class="qa-icon">Q1</span>
+              <span class="qa-title">単一RCTしかない場合、Cochraneは必ずGRADE評価を要求する。過剰評価になるのでは？</span>
+            </summary>
+            <div class="qa-a">
+              <strong>Guyatt先生の回答：</strong>
+              <p>レビューを計画した以上、誰かがその介入を使おうとしているということです。そうなら、最良の効果推定値とその確実性が提供されるべきです。それは研究数に関わらず当てはまります。</p>
+              <p><strong>重要なのは、確実性評価を正しくすること。</strong>あなたの直感が「これは <em>low</em> か <em>very low</em> だ」と告げるなら、GRADE 機械的判定で過剰評価している場合はそれを修正すべき。</p>
+              <ul>
+                <li>点推定値が大きく、OISを満たさない → <strong>不精確性で2段階ダウン</strong>が可能</li>
+                <li>OISからさらに大きく不足 → <strong>3段階ダウン</strong>も妥当</li>
+                <li>出版バイアスの懸念（単一研究でも理論的にあり得る） → 追加ダウン可</li>
+                <li>RoB 懸念があれば追加ダウン可</li>
+              </ul>
+              <p>結果として <strong>very low certainty</strong> の評価に至れば、それが正しい評価。</p>
+            </div>
+          </details>
+
+          <details class="qa-item">
+            <summary class="qa-q">
+              <span class="qa-icon">Q2</span>
+              <span class="qa-title">背景リスクとサブグループ効果、同じ因子（例：未ワクチン）は両方に該当するか？</span>
+            </summary>
+            <div class="qa-a">
+              <strong>Guyatt先生の回答：</strong>
+              <p>はい、同じ因子が両方に該当することはあります。プロセスとしては別々に検討すべきです：</p>
+              <ul>
+                <li><strong>背景リスク：</strong>その特性で "悪いアウトカムのリスク" が違うなら含める。これは <em>よくある</em>（年齢・重症度・併存疾患など）。</li>
+                <li><strong>サブグループ効果：</strong>その特性で "相対効果" が違う <em>明確な生物学的理由</em> があるなら含める。これは <em>まれ</em>。</li>
+                <li>COVIDの未ワクチンは両方に該当し得る：ベースライン死亡率が高く、かつ治療の相対効果も大きい可能性。</li>
+              </ul>
+              <p><strong>鉄則：</strong>「どちらに行くか分からない」仮説は棄却する。事前に方向を言えない仮説はpost-hoc になる。</p>
+            </div>
+          </details>
+
+          <details class="qa-item">
+            <summary class="qa-q">
+              <span class="qa-icon">Q3</span>
+              <span class="qa-title">2つの大規模RCTでメタ分析、RR=0.88（95%CI 0.75-1.13、N=2950）。不精確性でダウングレードは何段階？</span>
+            </summary>
+            <div class="qa-a">
+              <strong>Guyatt先生の回答：</strong>
+              <p>まず、<strong>ターゲットを決める</strong>ことが第一ステップ。</p>
+              <p><strong>Nullをターゲットにした場合：</strong></p>
+              <ul>
+                <li>点推定値=0.88は利益側 → 「非ゼロの利益」が評価のターゲット</li>
+                <li>信頼区間が1を跨ぐ → <strong>最低1段階ダウン</strong></li>
+                <li>1段階か2段階かは「probably effective」と伝えるか「possibly effective」と伝えるかの判断</li>
+                <li>13%のRR増加（害の可能性）もある → "probably"と言うのは躊躇する → 他にダウン要因がなければ <strong>2段階ダウン</strong>が妥当</li>
+              </ul>
+              <p><strong>ただし、最終的にはゲシュタルトで総合判断：</strong>他ドメインでダウン済みなら、ここで2段階ダウンするとvery lowになってしまう。その場合は1段階ダウンに留めて low とする方が適切。</p>
+            </div>
+          </details>
+
+          <details class="qa-item">
+            <summary class="qa-q">
+              <span class="qa-icon">Q4</span>
+              <span class="qa-title">MIDはどう決めるのか？プロトコル段階で決めるべきか？</span>
+            </summary>
+            <div class="qa-a">
+              <strong>Guyatt先生の回答：</strong>
+              <p><strong>理想的にはプロトコル段階で決定</strong>する。しかし実際には柔軟性がある：</p>
+              <ul>
+                <li>ガイドラインパネルが組成されてから、パネルが自分たちのMIDを指定する場合がある → その後SRの確実性評価を修正</li>
+                <li>SRチームが最初はNullでだけ評価し、パネルがMIDを決めた後で追加のMID評価を行う</li>
+              </ul>
+              <p><strong>患者報告アウトカム（PRO）</strong>はMIDのエビデンスが豊富だが、有害事象などは研究が少ないため、<strong>パネル内の患者・臨床専門家のコンセンサス</strong>に依存することが多い。</p>
+            </div>
+          </details>
+
+          <details class="qa-item">
+            <summary class="qa-q">
+              <span class="qa-icon">Q5</span>
+              <span class="qa-title">Core GRADEと公式GRADE（Full GRADE）で、最終的な確実性評価は変わるか？</span>
+            </summary>
+            <div class="qa-a">
+              <strong>Guyatt先生の回答：</strong>
+              <p>正式な比較研究はまだ行っていませんが、<strong>Core GRADE を設計する際の前提</strong>は「高度な方法論を加えても、最終的な確実性評価や推奨の方向・強さに<em>重要な</em>差を生じさせない」ということ。</p>
+              <p>細かい方法論的工夫（境界線上の判断への高度な対処など）は、"methodologically sophisticated" で面白いが、<strong>incremental benefit is not crucial</strong>。Core GRADE は「本質」を定義することに特化している。</p>
+              <p>MAGIC Foundation・BMJ Rapid Recommendations・WHOのCOVIDガイドラインは、<strong>何年も Core GRADE で運用されている</strong>。</p>
+            </div>
+          </details>
+
+          <details class="qa-item">
+            <summary class="qa-q">
+              <span class="qa-icon">Q6</span>
+              <span class="qa-title">高RoBの研究は、感度分析で除外すべきか、本解析から完全に除外すべきか？</span>
+            </summary>
+            <div class="qa-a">
+              <strong>Guyatt先生の回答：</strong>
+              <p><strong>完全に除外</strong>すべき。理由：</p>
+              <ul>
+                <li>低RoB研究だけで解析 → 高い確実性が得られる</li>
+                <li>高RoBを混ぜる → 結果をぼかし、バイアスを導入する可能性 → なぜ混ぜるのか？</li>
+                <li>高RoBと低RoBで結果が<strong>異なる</strong> → RoBが実際に影響している証拠 → 高RoBは除外</li>
+                <li>高RoBと低RoBで結果が<strong>似ている</strong> → RoBは実害なかったと推定 → 全て使って確実性をダウングレードしない</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="qa-item">
+            <summary class="qa-q">
+              <span class="qa-icon">Q7</span>
+              <span class="qa-title">GRADEproとMAGICapp、どちらを推奨？</span>
+            </summary>
+            <div class="qa-a">
+              <strong>Guyatt先生の回答：</strong>
+              <p>先生ご自身は「ソフトウェア懐疑派」で、手作業でGRADE評価を行う。ただし、<strong>MAGIC Evidence Ecosystem Foundation の MAGICapp</strong> のボードメンバーであり、特にガイドライン作成には GRADEpro より MAGICapp を推奨している（バイアスあり、と自己申告）。</p>
+              <p>ただし、<strong>ソフトウェアは方法論の本質的判断にはあまり役立たない</strong>。方法論の議論をする際に、ソフトウェアの挙動に頼るべきではない。</p>
+            </div>
+          </details>
+
+        </div>
+        </section>
         <section id="guyatt-2024-lecture" class="lecture-deep-dive">
           <h2>🎓 Guyatt先生2024年講演：EBMは世界をどう変え、まだ何を変えられていないか</h2>
           <p class="lecture-source">
@@ -2715,7 +2837,10 @@
           </details>
         </section>
 
-        <div id="linkedin-feed"></div>
+        <section id="guyatt-linkedin-picks" class="lecture-deep-dive linkedin-article-section">
+          <h2>Guyatt先生LinkedIn記事</h2>
+          <div id="linkedin-feed"></div>
+        </section>
 
         <div class="chapter-nav">
           <button onclick="showPage(21)">← Ch23 用語集</button>
@@ -2808,7 +2933,7 @@
         </div>
 
         <div class="chapter-nav">
-          <button onclick="showPage(22)">← Ch24 LinkedIn</button>
+          <button onclick="showPage(22)">← Ch24 Guyatt先生講演</button>
           <button onclick="showPage(0)">表紙へ戻る 🏠</button>
         </div>
       </div>
@@ -2838,13 +2963,12 @@
             <a href="#psec-9" class="pn-chip">9. GRADE 5要因</a>
             <a href="#psec-10" class="pn-chip">10. ⭐⭐⭐ 質 vs 確実性</a>
             <a href="#psec-11" class="pn-chip">11. 解説文の吟味</a>
-            <a href="#psec-13" class="pn-chip pn-new">🆕 13. Core GRADE</a>
+            <a href="#psec-13" class="pn-chip pn-new">🆕 13. EBMはGRADEへ</a>
             <a href="#psec-14" class="pn-chip pn-new">🆕 14. ターゲット選択</a>
             <a href="#psec-15" class="pn-chip pn-new">🆕 15. OIS</a>
             <a href="#psec-16" class="pn-chip pn-new">🆕 16. RoB ≠ バイアス</a>
             <a href="#psec-17" class="pn-chip pn-new">🆕 17. サブグループ</a>
             <a href="#psec-18" class="pn-chip pn-new">🆕 18. 推奨の強さ</a>
-            <a href="#psec-19" class="pn-chip pn-new">🆕 19. Q&A</a>
             <a href="#psec-12" class="pn-chip">12. まとめ</a>
             <a href="#psec-road" class="pn-chip">📍 ロードマップ</a>
           </div>
@@ -2867,7 +2991,7 @@
           <!-- ===== Primer動画/スライド学習ボタン群（v1.14更新） ===== -->
           <div class="primer-vstudy-block">
             <div class="primer-vstudy-row">
-              <span class="primer-vstudy-text">📺 まず動画で学習してから以下を復習するとよいでしょう</span>
+              <span class="primer-vstudy-text">ここから学習（動画は、本ページの一部ですので、動画を見た方は、このページの後半を学習してください）</span>
               <a class="primer-vbtn primer-vbtn-yt" href="https://www.youtube.com/watch?v=7UJZLG49ba8&t=1s" target="_blank" rel="noopener">
                 <span class="primer-vbtn-mark">▶</span>
                 <span class="primer-vbtn-label">動画</span>
@@ -2987,8 +3111,6 @@
           ここから先は、その道筋を読むための基本語である <strong>EBM</strong>、<strong>システマティックレビュー（SR）</strong>、<strong>診療ガイドライン（CPG）</strong>を、スライドの順番に沿って確認します。
         </p>
 
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-2">次 → 2. 「知っている」はダメな理由</a></div>
-
         <!-- ============ セクション2：基本知識の必要性 ============ -->
         <h2 class="primer-h2" id="psec-2">2. 「知っている」「使っている」ではダメな理由</h2>
 
@@ -3013,8 +3135,6 @@
           特に重要なのが<strong>標準治療</strong>です。標準治療とは「なんとなく多くの医師が行っている治療」ではなく、現時点のエビデンス、利益と害、患者にとっての価値を考えたとき、通常まず検討される治療です。新しい治療を採用する場合も、既存の標準治療から外れる場合も、なぜそう判断するのかを説明できなければなりません。
         </p>
 
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-3">次 → 3. EBMの定義</a></div>
-
         <!-- ============ セクション3：EBMとは ============ -->
         <h2 class="primer-h2" id="psec-3">3. EBMの定義 — Sackett 1996</h2>
 
@@ -3034,8 +3154,6 @@
         <p>
           「良心的」とは、都合の良い研究だけを拾わないことです。「明示的」とは、なぜその情報を採用したのかを他者に説明できることです。「思慮深く」とは、研究結果をそのまま機械的に当てはめず、患者の病状、価値観、害、負担、標準治療との関係まで考えることです。
         </p>
-
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-4">次 → 4. EBMの5ステップ</a></div>
 
         <!-- ============ セクション4：EBMの5ステップ ============ -->
         <h2 class="primer-h2" id="psec-4">4. EBMの5ステップ（Evidence cycle: 5つのA）</h2>
@@ -3059,8 +3177,6 @@
         <p>
           ただし、5ステップは「作業の順番」であって、EBMの本質そのものではありません。どの情報を最良の根拠とみなすか、効果推定値をどれくらい信じるか、エビデンスだけで決めてよいのか。この3点を理解していないと、5ステップをなぞっても信頼できる判断にはなりません。
         </p>
-
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-5">次 → 5. ⭐ EBMの3つの基本原則</a></div>
 
         <!-- ============ セクション5：EBMの3つの基本原則 ============ -->
         <h2 class="primer-h2" id="psec-5">5. ⭐ EBMの3つの基本原則（意外に知られていない）</h2>
@@ -3109,8 +3225,6 @@
           したがって、がん領域のように第III相試験の結果が標準治療を変えることがある分野でも、「有意差がある」「承認された」だけで判断を終えてはいけません。<strong>比較対照が現在の標準治療だったのか、患者層が自分の患者に合うのか、効果の大きさは臨床的に意味があるのか、害やQOL低下はどれくらいか</strong>を確認してから、患者に適用できるかを考えます。
         </p>
 
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-6">次 → 6. CPGの世界的定義</a></div>
-
         <!-- ============ セクション6：CPGの定義 ============ -->
         <h2 class="primer-h2" id="psec-6">6. 診療ガイドライン（CPG）の世界的定義</h2>
 
@@ -3130,8 +3244,6 @@
         <p>
           つまりCPGは、専門家の意見集でも、論文紹介集でもありません。標準治療を確認したり、新しい治療が標準治療を置き換えるかを考えたりするとき、読者は「この推奨は、どのSRに基づき、利益と害をどう比べ、どの程度の確実性で作られたのか」を追う必要があります。この3要素のいずれかが欠落している文書は、世界標準の意味では信頼できる診療ガイドラインとは言えません。
         </p>
-
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-7">次 → 7. SRの定義</a></div>
 
         <!-- ============ セクション7：SRの定義 ============ -->
         <h2 class="primer-h2" id="psec-7">7. システマティックレビュー（SR）の定義</h2>
@@ -3161,8 +3273,6 @@
         <p>
           この6番目まで来て、ようやく「結果をどう読むか」に入ります。SRの結論を見るときは、効果推定値だけではなく、5番目の<strong>エビデンスの確実性</strong>が評価されているかを必ず確認します。
         </p>
-
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-8">次 → 8. ⭐⭐ エビデンスの確実性とは</a></div>
 
         <!-- ============ セクション8：エビデンスの確実性の本質 ============ -->
         <h2 class="primer-h2" id="psec-8">8. ⭐⭐ エビデンスの確実性とは — 同じ"1.62"でも確実性は違う</h2>
@@ -3199,8 +3309,6 @@
           ここで初めて、「効果がありそう」という言い方から一歩進みます。エビデンスの確実性とは、点推定値がきれいに見えるかではなく、<strong>真の効果が、患者にとって意味のある判断を変える範囲にあると、どれくらい自信を持てるか</strong>です。効果推定値が同じでも、研究の質、結果のばらつき、患者層、症例数が違えば、臨床での信頼度は変わります。
         </p>
 
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-9">次 → 9. 確実性を下げる5要因</a></div>
-
         <!-- ============ セクション9：確実性を下げる5要因 ============ -->
         <h2 class="primer-h2" id="psec-9">9. エビデンスの確実性を下げる5要因（GRADEアプローチ）</h2>
 
@@ -3228,8 +3336,6 @@
         <p>
           スライド⑪の5要因は、効果推定値を疑うためのチェックポイントです。研究にバイアスが多い、研究間で結果が食い違う、対象患者や比較対照が自分の疑問とずれている、症例数が少なく信頼区間が広い、都合の悪い研究が出版されていない可能性がある。このどれかが大きければ、メタ分析の結果が出ていても確実性は下がります。
         </p>
-
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-10">次 → 10. ⭐⭐⭐ SRの質 vs 確実性</a></div>
 
         <!-- ============ セクション10：SRの質 vs エビデンスの確実性 ============ -->
         <h2 class="primer-h2" id="psec-10">10. ⭐⭐⭐ 最重要：SRの質と、エビデンスの確実性は別物</h2>
@@ -3276,8 +3382,6 @@
           <strong>⚠️ 講演会の要注意フレーズ：</strong>「システマティックレビューなのでエビデンスレベルが高い」— これは危険な省略です。SR の質が高くても、中のエビデンスの確実性は高い場合も低い場合もあります。<strong>SRの作り方の質</strong>と<strong>中の効果推定値の確実性</strong>は別々に評価します。
         </div>
 
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-11">次 → 11. 解説文の批判的吟味</a></div>
-
         <!-- ============ セクション11：解説文の批判的吟味 ============ -->
         <h2 class="primer-h2" id="psec-11">11. 診療ガイドラインの解説文 — 批判的吟味の実例</h2>
 
@@ -3305,14 +3409,12 @@
           <strong>このようなつながりが見えない解説文は、CPG としての信頼性を大きく損ないます。</strong>本サイトの Ch16（信頼できる CPG の6つの質問）・Ch18（AMSTAR 2）で、こうした CPG・SR を系統的に判定する方法を学びます。
         </p>
 
-        <div class="sec-nav-foot"><a class="sec-next sec-next-new" href="#psec-13">🆕 次 → 13. Guyatt先生のCore GRADE</a></div>
-
         <!-- ============================================================================ -->
         <!-- ================= ここから新セクション（Guyatt先生Core GRADE関連）================== -->
         <!-- ============================================================================ -->
 
         <!-- ============ セクション13：Core GRADE ============ -->
-        <h2 class="primer-h2 primer-h2-new" id="psec-13">13. 🆕 Guyatt先生のCore GRADE — 「GRADEが複雑になりすぎた」という反省</h2>
+        <h2 class="primer-h2 primer-h2-new" id="psec-13">13. 🆕 EBMは、GRADEに発展しました（理由は、Guyatt先生講演（EBMからGRADEへ）を参照）</h2>
 
         <div class="warning-box">
           <strong>ここから少し寄り道します：</strong>ここまでのスライド①〜⑯は、EBM・SR・CPGの基本を順に学ぶ流れでした。13章以降は、その流れから少し外れて、GRADE、とくに <strong>Core GRADE</strong> の話に入ります。ただし、EBMから離れるためではありません。EBMの5 stepsでいう <strong>Appraise（吟味）</strong> と <strong>Apply（患者への適用）</strong> を、読者が実際に行うための道具としてGRADEを理解してください。
@@ -3357,8 +3459,6 @@
         <div class="warning-box">
           <strong>⚠️ Risk of Bias 2 と Core GRADE の対立：</strong>Guyatt先生は「Cochrane Risk of Bias 2 は複雑すぎて信頼性も低い」と批判し、代わりに <strong>ROBUST-RCT</strong>（より簡潔なRoBツール）を BMJ 2025 で提案しています。これは「方法論の単純さ」を重視する Core GRADE の思想そのものです。
         </div>
-
-        <div class="sec-nav-foot"><a class="sec-next sec-next-new" href="#psec-14">🆕 次 → 14. ターゲット選択（Null vs MID）</a></div>
 
         <!-- ============ セクション14：ターゲット選択 ============ -->
         <h2 class="primer-h2 primer-h2-new" id="psec-14">14. 🆕 確実性評価の「ターゲット」選択 — Null vs MID</h2>
@@ -3418,8 +3518,6 @@
           </ul>
         </div>
 
-        <div class="sec-nav-foot"><a class="sec-next sec-next-new" href="#psec-15">🆕 次 → 15. 最適情報サイズ（OIS）</a></div>
-
         <!-- ============ セクション15：OIS ============ -->
         <h2 class="primer-h2 primer-h2-new" id="psec-15">15. 🆕 最適情報サイズ（OIS） — 少数症例で大きな効果は要注意</h2>
 
@@ -3466,8 +3564,6 @@
         <div class="warning-box">
           <strong>⚠️ OIS の適用範囲：</strong>OIS は<strong>"大きな効果+少数症例"の場合のみ</strong>検討する。効果が小さい場合は、信頼区間が必然的に広くなり閾値を跨ぐため、通常の閾値ルールで十分判定できる。
         </div>
-
-        <div class="sec-nav-foot"><a class="sec-next sec-next-new" href="#psec-16">🆕 次 → 16. 「RoB」は「Bias」ではない</a></div>
 
         <!-- ============ セクション16：RoB ≠ Bias ============ -->
         <h2 class="primer-h2 primer-h2-new" id="psec-16">16. 🆕 「Risk of Bias」は「Bias」ではない — 教育的ゲシュタルトの原則</h2>
@@ -3523,8 +3619,6 @@
           </ul>
         </div>
 
-        <div class="sec-nav-foot"><a class="sec-next sec-next-new" href="#psec-17">🆕 次 → 17. サブグループと背景リスク</a></div>
-
         <!-- ============ セクション17：サブグループと背景リスク ============ -->
         <h2 class="primer-h2 primer-h2-new" id="psec-17">17. 🆕 サブグループと背景リスク — 「誰に推奨するか」の科学</h2>
 
@@ -3568,8 +3662,6 @@
             <li>→ WHO ガイドラインでは「非重症COVIDの高リスク患者にはパクスロビドを<strong>条件付きで推奨</strong>、低リスク患者には<strong>推奨しない</strong>」という集団別の推奨へ</li>
           </ul>
         </div>
-
-        <div class="sec-nav-foot"><a class="sec-next sec-next-new" href="#psec-18">🆕 次 → 18. 推奨の強さ</a></div>
 
         <!-- ============ セクション18：推奨の強さ ============ -->
         <h2 class="primer-h2 primer-h2-new" id="psec-18">18. 🆕 エビデンスから推奨へ — 4つの推奨タイプと「強さ」の決定</h2>
@@ -3650,132 +3742,6 @@
           「<strong>確実性の低いエビデンスで強い推奨</strong>」を出すには、正当な例外理由（生命を脅かす状況、代替手段なし、害が極小等）を明示する必要がある。
         </div>
 
-        <div class="sec-nav-foot"><a class="sec-next sec-next-new" href="#psec-19">🆕 次 → 19. Guyatt先生Q&A</a></div>
-
-        <!-- ============ セクション19：Q&A ============ -->
-        <h2 class="primer-h2 primer-h2-new" id="psec-19">19. 🆕 Guyatt先生Q&A — 実践現場の難問と回答</h2>
-
-        <p>以下は、Guyatt 先生の <a href="https://www.clarityresearch.ca/frequently-asked-questions" target="_blank" rel="noopener">Clarity Research FAQ</a> と 2025年12月講演から、日本の臨床家に特に有用な Q&A を抜粋・要約したものです。各質問はタップで展開されます。</p>
-
-        <div class="qa-list">
-
-          <details class="qa-item">
-            <summary class="qa-q">
-              <span class="qa-icon">Q1</span>
-              <span class="qa-title">単一RCTしかない場合、Cochraneは必ずGRADE評価を要求する。過剰評価になるのでは？</span>
-            </summary>
-            <div class="qa-a">
-              <strong>Guyatt先生の回答：</strong>
-              <p>レビューを計画した以上、誰かがその介入を使おうとしているということです。そうなら、最良の効果推定値とその確実性が提供されるべきです。それは研究数に関わらず当てはまります。</p>
-              <p><strong>重要なのは、確実性評価を正しくすること。</strong>あなたの直感が「これは <em>low</em> か <em>very low</em> だ」と告げるなら、GRADE 機械的判定で過剰評価している場合はそれを修正すべき。</p>
-              <ul>
-                <li>点推定値が大きく、OISを満たさない → <strong>不精確性で2段階ダウン</strong>が可能</li>
-                <li>OISからさらに大きく不足 → <strong>3段階ダウン</strong>も妥当</li>
-                <li>出版バイアスの懸念（単一研究でも理論的にあり得る） → 追加ダウン可</li>
-                <li>RoB 懸念があれば追加ダウン可</li>
-              </ul>
-              <p>結果として <strong>very low certainty</strong> の評価に至れば、それが正しい評価。</p>
-            </div>
-          </details>
-
-          <details class="qa-item">
-            <summary class="qa-q">
-              <span class="qa-icon">Q2</span>
-              <span class="qa-title">背景リスクとサブグループ効果、同じ因子（例：未ワクチン）は両方に該当するか？</span>
-            </summary>
-            <div class="qa-a">
-              <strong>Guyatt先生の回答：</strong>
-              <p>はい、同じ因子が両方に該当することはあります。プロセスとしては別々に検討すべきです：</p>
-              <ul>
-                <li><strong>背景リスク：</strong>その特性で "悪いアウトカムのリスク" が違うなら含める。これは <em>よくある</em>（年齢・重症度・併存疾患など）。</li>
-                <li><strong>サブグループ効果：</strong>その特性で "相対効果" が違う <em>明確な生物学的理由</em> があるなら含める。これは <em>まれ</em>。</li>
-                <li>COVIDの未ワクチンは両方に該当し得る：ベースライン死亡率が高く、かつ治療の相対効果も大きい可能性。</li>
-              </ul>
-              <p><strong>鉄則：</strong>「どちらに行くか分からない」仮説は棄却する。事前に方向を言えない仮説はpost-hoc になる。</p>
-            </div>
-          </details>
-
-          <details class="qa-item">
-            <summary class="qa-q">
-              <span class="qa-icon">Q3</span>
-              <span class="qa-title">2つの大規模RCTでメタ分析、RR=0.88（95%CI 0.75-1.13、N=2950）。不精確性でダウングレードは何段階？</span>
-            </summary>
-            <div class="qa-a">
-              <strong>Guyatt先生の回答：</strong>
-              <p>まず、<strong>ターゲットを決める</strong>ことが第一ステップ。</p>
-              <p><strong>Nullをターゲットにした場合：</strong></p>
-              <ul>
-                <li>点推定値=0.88は利益側 → 「非ゼロの利益」が評価のターゲット</li>
-                <li>信頼区間が1を跨ぐ → <strong>最低1段階ダウン</strong></li>
-                <li>1段階か2段階かは「probably effective」と伝えるか「possibly effective」と伝えるかの判断</li>
-                <li>13%のRR増加（害の可能性）もある → "probably"と言うのは躊躇する → 他にダウン要因がなければ <strong>2段階ダウン</strong>が妥当</li>
-              </ul>
-              <p><strong>ただし、最終的にはゲシュタルトで総合判断：</strong>他ドメインでダウン済みなら、ここで2段階ダウンするとvery lowになってしまう。その場合は1段階ダウンに留めて low とする方が適切。</p>
-            </div>
-          </details>
-
-          <details class="qa-item">
-            <summary class="qa-q">
-              <span class="qa-icon">Q4</span>
-              <span class="qa-title">MIDはどう決めるのか？プロトコル段階で決めるべきか？</span>
-            </summary>
-            <div class="qa-a">
-              <strong>Guyatt先生の回答：</strong>
-              <p><strong>理想的にはプロトコル段階で決定</strong>する。しかし実際には柔軟性がある：</p>
-              <ul>
-                <li>ガイドラインパネルが組成されてから、パネルが自分たちのMIDを指定する場合がある → その後SRの確実性評価を修正</li>
-                <li>SRチームが最初はNullでだけ評価し、パネルがMIDを決めた後で追加のMID評価を行う</li>
-              </ul>
-              <p><strong>患者報告アウトカム（PRO）</strong>はMIDのエビデンスが豊富だが、有害事象などは研究が少ないため、<strong>パネル内の患者・臨床専門家のコンセンサス</strong>に依存することが多い。</p>
-            </div>
-          </details>
-
-          <details class="qa-item">
-            <summary class="qa-q">
-              <span class="qa-icon">Q5</span>
-              <span class="qa-title">Core GRADEと公式GRADE（Full GRADE）で、最終的な確実性評価は変わるか？</span>
-            </summary>
-            <div class="qa-a">
-              <strong>Guyatt先生の回答：</strong>
-              <p>正式な比較研究はまだ行っていませんが、<strong>Core GRADE を設計する際の前提</strong>は「高度な方法論を加えても、最終的な確実性評価や推奨の方向・強さに<em>重要な</em>差を生じさせない」ということ。</p>
-              <p>細かい方法論的工夫（境界線上の判断への高度な対処など）は、"methodologically sophisticated" で面白いが、<strong>incremental benefit is not crucial</strong>。Core GRADE は「本質」を定義することに特化している。</p>
-              <p>MAGIC Foundation・BMJ Rapid Recommendations・WHOのCOVIDガイドラインは、<strong>何年も Core GRADE で運用されている</strong>。</p>
-            </div>
-          </details>
-
-          <details class="qa-item">
-            <summary class="qa-q">
-              <span class="qa-icon">Q6</span>
-              <span class="qa-title">高RoBの研究は、感度分析で除外すべきか、本解析から完全に除外すべきか？</span>
-            </summary>
-            <div class="qa-a">
-              <strong>Guyatt先生の回答：</strong>
-              <p><strong>完全に除外</strong>すべき。理由：</p>
-              <ul>
-                <li>低RoB研究だけで解析 → 高い確実性が得られる</li>
-                <li>高RoBを混ぜる → 結果をぼかし、バイアスを導入する可能性 → なぜ混ぜるのか？</li>
-                <li>高RoBと低RoBで結果が<strong>異なる</strong> → RoBが実際に影響している証拠 → 高RoBは除外</li>
-                <li>高RoBと低RoBで結果が<strong>似ている</strong> → RoBは実害なかったと推定 → 全て使って確実性をダウングレードしない</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="qa-item">
-            <summary class="qa-q">
-              <span class="qa-icon">Q7</span>
-              <span class="qa-title">GRADEproとMAGICapp、どちらを推奨？</span>
-            </summary>
-            <div class="qa-a">
-              <strong>Guyatt先生の回答：</strong>
-              <p>先生ご自身は「ソフトウェア懐疑派」で、手作業でGRADE評価を行う。ただし、<strong>MAGIC Evidence Ecosystem Foundation の MAGICapp</strong> のボードメンバーであり、特にガイドライン作成には GRADEpro より MAGICapp を推奨している（バイアスあり、と自己申告）。</p>
-              <p>ただし、<strong>ソフトウェアは方法論の本質的判断にはあまり役立たない</strong>。方法論の議論をする際に、ソフトウェアの挙動に頼るべきではない。</p>
-            </div>
-          </details>
-
-        </div>
-
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-12">次 → 12. まとめ</a></div>
-
         <!-- ============================================================================ -->
         <!-- ================= 新セクション終了・既存セクション12（まとめ）へ戻る ================== -->
         <!-- ============================================================================ -->
@@ -3813,8 +3779,6 @@
             <span class="sub">本サイトの Ch1〜Ch25 は、このための最短ルートです。</span>
           </div>
         </div>
-
-        <div class="sec-nav-foot"><a class="sec-next" href="#psec-road">次 → ロードマップ</a></div>
 
         <!-- ============ ロードマップ ============ -->
         <h2 class="primer-h2" id="psec-road">📍 次のステップ：本サイトのどこから読むか</h2>
