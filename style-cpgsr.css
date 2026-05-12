@@ -3967,3 +3967,135 @@ body.cpg-overview-open { overflow: hidden; }
     font-size: 1rem;
   }
 }
+
+/* ===== v1.28: ChatGPT Images 2.0 学習図 ===== */
+.ai-learning-figure {
+  margin: 22px 0 26px;
+  padding: 14px;
+  border: 1px solid rgba(24, 90, 125, 0.18);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.ai-learning-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.ai-learning-figure figcaption {
+  margin-top: 10px;
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.ai-flow-labels {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ai-flow-labels span,
+.ai-rec-labels span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #eef7f8;
+  color: #174a63;
+  font-weight: 800;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.ai-legend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.ai-legend-grid div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-items: start;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.ai-legend-grid strong {
+  color: var(--accent);
+}
+
+.ai-rec-labels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.ai-rec-labels .strong-for {
+  background: #e9f7ee;
+  color: #1f6b3a;
+}
+
+.ai-rec-labels .conditional-for {
+  background: #fff6df;
+  color: #7a5200;
+}
+
+.ai-rec-labels .conditional-against {
+  background: #fff0e8;
+  color: #8a3b1e;
+}
+
+.ai-rec-labels .strong-against {
+  background: #fdecec;
+  color: #8a1f1f;
+}
+
+@media (max-width: 760px) {
+  .ai-learning-figure {
+    margin: 18px 0 24px;
+    padding: 10px;
+  }
+  .ai-learning-figure figcaption {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .ai-flow-labels,
+  .ai-legend-grid,
+  .ai-rec-labels {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ai-flow-labels span,
+  .ai-rec-labels span {
+    min-height: 46px;
+    font-size: 0.95rem;
+  }
+  .ai-legend-grid div {
+    grid-template-columns: 1fr;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .ai-flow-labels,
+  .ai-legend-grid,
+  .ai-rec-labels {
+    grid-template-columns: 1fr;
+  }
+}
