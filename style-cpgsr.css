@@ -4001,6 +4001,7 @@ body.cpg-overview-open { overflow: hidden; }
 }
 
 .ai-flow-labels span,
+.ai-paper-labels span,
 .ai-rec-labels span {
   display: flex;
   align-items: center;
@@ -4014,6 +4015,18 @@ body.cpg-overview-open { overflow: hidden; }
   font-size: 0.88rem;
   line-height: 1.35;
   text-align: center;
+}
+
+.ai-paper-labels {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ai-paper-labels span {
+  background: #fff4f5;
+  color: #7a3a46;
 }
 
 .ai-legend-grid {
@@ -4077,11 +4090,13 @@ body.cpg-overview-open { overflow: hidden; }
     line-height: 1.7;
   }
   .ai-flow-labels,
+  .ai-paper-labels,
   .ai-legend-grid,
   .ai-rec-labels {
     grid-template-columns: 1fr 1fr;
   }
   .ai-flow-labels span,
+  .ai-paper-labels span,
   .ai-rec-labels span {
     min-height: 46px;
     font-size: 0.95rem;
@@ -4094,6 +4109,7 @@ body.cpg-overview-open { overflow: hidden; }
 
 @media (max-width: 420px) {
   .ai-flow-labels,
+  .ai-paper-labels,
   .ai-legend-grid,
   .ai-rec-labels {
     grid-template-columns: 1fr;
