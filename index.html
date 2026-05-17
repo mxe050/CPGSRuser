@@ -6,7 +6,7 @@
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
 <link rel="stylesheet" href="style.css?v=7.2">
-<link rel="stylesheet" href="style-cpgsr.css?v=8.6">
+<link rel="stylesheet" href="style-cpgsr.css?v=8.7">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -71,6 +71,7 @@
       <li class="toc-section">Part VI — CPG信頼性評価</li>
       <li class="toc-item"><button class="toc-btn" data-idx="16"><span class="toc-num">16</span><span class="toc-text">⭐ 信頼できるCPGの6つの質問<span class="en">6 Questions for Trustworthy CPG</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="17"><span class="toc-num">17</span><span class="toc-text">CPG品質の実例（NCCN/IOM/日本）<span class="en">CPG Quality Examples</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="27"><span class="toc-num">特</span><span class="toc-text">本邦CPGトホホ集<span class="en">Anonymized Japanese CPG Pitfalls</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="18"><span class="toc-num">18</span><span class="toc-text">AMSTAR 2（16項目）・PRISMA 2020（27項目）<span class="en">AMSTAR 2 / PRISMA 2020</span></span></button></li>
 
       <li class="toc-section">Part VII — 診療現場で活かす</li>
@@ -4185,6 +4186,197 @@
         <button onclick="showPage(21)">Ch23 用語集 →</button>
       </div>
 
+    </div>
+
+    <!-- ==================================================== -->
+    <!-- ========  page-29: 本邦CPGトホホ集（匿名化教育版） === -->
+    <!-- ==================================================== -->
+    <div class="page" id="page-29">
+      <div class="page-header">
+        <div class="chapter-badge">Special / 26</div>
+        <h1>本邦CPGトホホ集</h1>
+        <div class="en-title">Anonymized Japanese CPG Pitfalls for Readers</div>
+      </div>
+
+      <div class="page-body">
+        <section class="tohoho-hero">
+          <h1>形式的GRADE/Mindsと実質的運用のズレを読む</h1>
+          <p>
+            このページは、特定の学会や個別CPGを名指しで批判するためのページではありません。国内CPGを読むときに起こりがちな「方法論の名前はあるが、推奨の根拠が追跡しにくい」パターンを、匿名化した教育用の模式図とともに整理したものです。
+          </p>
+        </section>
+
+        <div class="tohoho-note">
+          <strong>重要：</strong>以下の17項目は、CPGを採点するrating基準ではありません。PICO、文献検索と選択、risk of bias評価、アウトカム別certainty、SoF/Evidence Profile、EtD、推奨方向・推奨強度までの判断の鎖が、読み手に追跡可能かを確認するための読み方リストです。Mindsの公開テンプレート例を除き、図はChatGPT Images 2.0で作成した匿名化イメージ図であり、実在のCPG・学会資料の転載ではありません。
+        </div>
+
+        <div class="table-container">
+          <table class="tohoho-summary-table">
+            <thead>
+              <tr>
+                <th>論点</th>
+                <th>読者が確認すべきこと</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>名称だけのGRADE/SR</td><td>PICOから推奨までの判断の鎖が実際に追えるか。</td></tr>
+              <tr><td>効果推定値が見えないcertainty</td><td>forest plotや各研究の効果推定値、95%信頼区間が提示されているか。</td></tr>
+              <tr><td>文献集化したSR</td><td>事前の適格基準、検索、選択、RoB、統合、推奨への接続があるか。</td></tr>
+              <tr><td>エビデンス階層の混線</td><td>既存SR/NMA、RCT、観察研究、症例集積を同列に扱っていないか。</td></tr>
+              <tr><td>観察研究のraw dataメタ分析</td><td>交絡を無視した単純なイベント数比較を治療効果として扱っていないか。</td></tr>
+              <tr><td>不自然な観察研究certainty</td><td>症例数やp値だけでcertaintyを上げていないか。ROBINS-Iの開始点を理解しているか。</td></tr>
+              <tr><td>overall certaintyの都合よい選択</td><td>decision-driving outcomeとそのcertaintyが明示されているか。</td></tr>
+              <tr><td>サロゲートの過大評価</td><td>患者重要アウトカムとのつながりと非直接性が説明されているか。</td></tr>
+              <tr><td>p値依存</td><td>臨床的重要性、信頼区間、同等性・非劣性の条件が評価されているか。</td></tr>
+              <tr><td>相対効果依存</td><td>絶対効果、ベースラインリスク、NNT/NNH、MIDが示されているか。</td></tr>
+              <tr><td>EtDの形骸化</td><td>利益害、価値観、負担などが推奨判断へどう接続したか。</td></tr>
+              <tr><td>突然の推奨</td><td>エビデンス要約から推奨方向・強度への論理が説明されているか。</td></tr>
+              <tr><td>用語・分類の混線</td><td>GRADEのcertaintyと、独自の「エビデンスレベル」「エビデンスの強さ」を混同していないか。</td></tr>
+              <tr><td>根拠へ辿れない問題</td><td>SR、EtD、CoSTR、付録、リンク先が読者に追跡可能か。</td></tr>
+              <tr><td>Good Practice/consensusの誤用</td><td>「エビデンスがないからGPS」や「合意したから強い推奨」になっていないか。</td></tr>
+              <tr><td>対象者・介入・比較のズレ</td><td>PICOが臨床現場の対象者・介入の実態とずれていないか。</td></tr>
+              <tr><td>複数選択肢の序列が不透明</td><td>複数介入の関係を脚注、線、並び順だけで示していないか。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section class="tohoho-list" aria-label="本邦CPGトホホ集の詳細">
+          <article class="tohoho-item">
+            <h2>1. Minds/GRADE/SRと書いてあるが、中身が伴っていない問題</h2>
+            <p>「Mindsに準拠した」「GRADEを用いた」「システマティックレビューを行った」と書かれていても、それだけで信頼できる推奨とは言えません。重要なのは、PICO、文献選択、RoB評価、アウトカム別certainty、SoF/Evidence Profile、EtD、推奨方向・推奨強度までの流れが実際に追えるかです。</p>
+            <p>これが追えない場合、方法論の名称だけが使われ、実際の判断は専門家の主観や慣習に依存している可能性があります。AGREE IIなどの形式的評価が整って見えても、GRADEに基づく科学的に妥当な推奨であることは別問題です。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>2. メタ分析やforest plotが見えないままcertaintyを決めている問題</h2>
+            <p>メタ分析がないこと自体は欠陥ではありません。研究数が少ない、アウトカム定義が異なる、異質性が大きい、希少疾患であるなど、メタ分析を行わないことが妥当な場合はあります。</p>
+            <p>問題は、メタ分析もforest plotもなく、各研究の効果推定値や95%信頼区間も十分に示されないまま、非一貫性・不精確性・overall certaintyが決められている場合です。付録に詳細な解析結果があると記載されていても、読者が付録にアクセスできなければ判断を再現できません。</p>
+            <figure class="tohoho-figure">
+              <img src="images/cpg-tohoho/evidence-without-forestplot.png" alt="匿名化されたエビデンス表と欠落したforest plot領域の模式図" loading="lazy">
+              <figcaption>匿名化イメージ図：効果推定値やforest plotが見えないままcertaintyだけが示される状況。</figcaption>
+            </figure>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>3. SRではなく、文献集になっている問題</h2>
+            <p>システマティックレビューとは、単に検索して見つかった論文を並べる作業ではありません。事前にPICOと適格基準を決め、研究を選択し、RoBを評価し、アウトカムごとにエビデンスを統合し、その結果を推奨判断に接続する作業です。</p>
+            <p>ところが実際には、「検索した結果、いくつかの論文が見つかったので、それぞれを解説した」というだけのものがSRと呼ばれていることがあります。これはSRではなく文献集です。信じられないことですが、SRの作成方法を知らないと思えるCPGも存在します。</p>
+            <figure class="tohoho-figure">
+              <img src="images/cpg-tohoho/literature-list-not-sr.png" alt="匿名化された論文カードの山と未完成のフロー図の模式図" loading="lazy">
+              <figcaption>匿名化イメージ図：論文リストはあるが、検索・選択・除外理由・統合方法が追えない状況。</figcaption>
+            </figure>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>4. SR/NMA、RCT、観察研究、症例集積を同列に扱う問題</h2>
+            <p>既存SRやNMA、RCT、観察研究、症例集積、レビュー論文は、同じ種類のエビデンスではありません。既存SRやNMAは二次研究であり、RCTや観察研究は一次研究です。症例集積は比較効果の推定にはさらに大きな限界があります。</p>
+            <p>これらを階層化せずに横並びに比較すると、エビデンスの単位が混乱します。既存SRに含まれるRCTを、別の一次研究として再び数えてしまう重複カウントにも注意が必要です。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>5. 観察研究をraw dataでメタ分析する問題</h2>
+            <p>観察研究では、治療を受けた群と受けなかった群の背景が最初から違います。重症度、年齢、併存疾患、施設、治療選択の理由などが異なるため、単純なイベント数の比較は治療効果ではなく、患者背景の違いを反映している可能性があります。</p>
+            <p>観察研究から症例数とイベント数だけを抜き出し、RCTと同じようにORやRRを計算してメタ分析することは、統計ソフトでは可能でも疫学的には危険です。調整済み推定値や交絡評価を確認する必要があります。</p>
+            <figure class="tohoho-figure">
+              <img src="images/cpg-tohoho/observational-raw-meta.png" alt="匿名化された観察研究メタ分析と交絡警告の模式図" loading="lazy">
+              <figcaption>匿名化イメージ図：観察研究の未調整イベント数をそのまま統合してしまう危うさ。</figcaption>
+            </figure>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>6. 観察研究のcertaintyを不自然に高く、または不自然に処理する問題</h2>
+            <p>観察研究は、たとえ症例数が多くても、交絡や選択バイアスの問題を避けられません。p値が小さい、症例数が多い、有意差がある、という理由だけでcertaintyを「中」以上にするのは誤りです。</p>
+            <p>基本的に観察研究（非ランダム化試験）の場合は低から始めますが、ROBINS-Iの場合のみ高から始めます。下のMindsテンプレート例は、高からでも低からでも「-2、-1、-2」と評価されているのに、最終的に「低」とされている不思議な例として読むことができます。</p>
+            <figure class="tohoho-figure">
+              <img src="images/cpg-tohoho/minds-observation-certainty-90.jpg" alt="Mindsテンプレートの観察研究評価シート例を90度回転した図" loading="lazy">
+              <figcaption>資料：Minds公開テンプレートの観察研究評価例。出典：<a href="https://minds.jcqhc.or.jp/docs/methods/cpg-development/minds-manual/template/chap4_SR_7_obs.pdf" target="_blank" rel="noopener">Minds 診療ガイドライン作成マニュアル テンプレート（観察研究 記入例）</a></figcaption>
+            </figure>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>7. アウトカムが同じ方向だから最高certaintyを採る問題</h2>
+            <p>複数の重大アウトカムがあり、それぞれcertaintyが異なる場合、「同じ方向だから一番高いcertaintyをoverall certaintyにする」という処理は危険です。検査値は高certaintyで改善していても、死亡、QOL、重大有害事象は低certaintyかもしれません。</p>
+            <p>推奨にとって重要なのは、どのアウトカムが意思決定を主導しているかです。decision-driving outcomeを明示し、そのcertaintyと推奨判断の関係を説明する必要があります。</p>
+            <figure class="tohoho-figure">
+              <img src="images/cpg-tohoho/same-direction-different-certainty.png" alt="匿名化されたアウトカム表で方向は同じだがcertaintyが異なる模式図" loading="lazy">
+              <figcaption>匿名化イメージ図：同じ方向の効果でも、アウトカムごとの重要性とcertaintyは別に読む。</figcaption>
+            </figure>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>8. サロゲートアウトカムを都合よく使う問題</h2>
+            <p>サロゲートアウトカムを使うこと自体は悪くありません。疾患領域によっては、死亡、発症、QOL、機能などの患者重要アウトカムを直接評価することが難しい場合があります。</p>
+            <p>問題は、サロゲートが患者にとって本当に重要なアウトカムにつながるのかを説明せず、都合のよいサロゲートだけを推奨根拠にすることです。必要なら非直接性としてcertaintyに反映する必要があります。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>9. 有意差あり／なしだけで判断する問題</h2>
+            <p>「有意差あり」は「臨床的に重要」という意味ではありません。大規模研究では、患者にとってほとんど意味のない小さな差でもp値が有意になることがあります。一方で、「有意差なし」は「効果がない」「同等」「非劣性」を意味しません。</p>
+            <p>信頼区間が大きな利益と大きな害の両方を含んでいれば、結論は「分からない」です。同等性や非劣性を主張するには、事前に決めたマージンと信頼区間に基づく評価が必要です。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>10. 相対効果だけで推奨する問題</h2>
+            <p>RR 0.50やOR 0.35のような相対効果は、効果を大きく見せることがあります。しかし、患者にとって重要なのは、多くの場合、絶対効果です。もともとのリスクが非常に低ければ、相対リスクが半分になっても、実際に利益を受ける患者はごく少数かもしれません。</p>
+            <p>推奨を決めるには、ベースラインリスク、絶対リスク差、NNT/NNH、MID、患者にとって意味のある差を考える必要があります。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>11. EtDを使ったと書くが、判断過程が見えない問題</h2>
+            <p>EtDは、単に「考慮した」と書くための飾りではありません。エビデンスの確実性、利益と害のバランス、患者の価値観・意向、負担、必要に応じて費用、資源、公平性、実行可能性などを整理し、なぜその推奨方向・推奨強度になったのかを説明するための枠組みです。</p>
+            <p>患者の価値観・意向、害の受け止め方、費用や負担をどう扱ったかが見えないまま「総合的に判断した」とだけ書かれている場合、推奨の強さは読者には検証できません。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>12. エビデンス要約の直後に推奨が突然出る問題</h2>
+            <p>信頼できるCPGでは、「エビデンスがこうだった」だけでなく、「だからなぜその推奨になったのか」が説明されます。推奨は、効果の大きさ、害、certainty、患者価値観、負担、臨床的文脈を踏まえた判断だからです。</p>
+            <p>「パネルで合意した」「投票で決めた」という記載も、理由の説明にはなりません。合意形成は重要ですが、合意に至った論理が見えなければ、実質的には専門家意見の追認に近くなります。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>13. エビデンスレベル、エビデンスの強さ、certaintyを混同する問題</h2>
+            <p>GRADEにおけるcertainty of evidenceは、独自分類で用いられるLevel of Evidenceや、一部CPGで使われる「エビデンスの強さ」と同じではありません。分類名が似ていても、評価対象、開始点、格下げ・格上げの考え方、推奨の強さとの関係は異なります。</p>
+            <p>CPGを読む側は、その文書がGRADEそのものを使っているのか、GRADE風の表現を使っているだけなのか、あるいは独自分類なのかを最初に確認する必要があります。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>14. SR、EtD、CoSTR、付録へのリンクが辿れない問題</h2>
+            <p>推奨本文に「SRを参照」「EtDはウェブサイト」「付録を参照」と書かれていても、読者が実際に該当資料へたどり着けなければ透明性は不十分です。リンクがない、リンク先が総合ページで該当箇所が分からない、別階層に置かれている、といった状態では、推奨の検証可能性が大きく落ちます。</p>
+            <p>国内版CPGが国際組織のSRや推奨を採用・翻案している場合は、元資料、翻案した判断、日本の文脈で変更した点を一続きに示す必要があります。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>15. Good Practice Statementやconsensusを強い推奨の代用品にする問題</h2>
+            <p>Good Practice Statement（GPS）やbest practice statementは、「エビデンスがないから推奨より弱い声明に落とす」ための箱ではありません。直接的な比較研究は乏しくても、間接的エビデンスと臨床的自明性が非常に強い場合に慎重に使うものです。</p>
+            <p>consensus-based recommendationと明記しながら、Evidence-based recommendationと同じ表記や同じ強い推奨として扱うと、読者はエビデンスに基づく強い推奨なのか、専門家合意なのかを区別できません。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>16. 対象者・介入・比較が現場の問いとずれている問題</h2>
+            <p>PICOが形式的に書かれていても、実際の対象者や介入の中身が現場の問いとずれていることがあります。同じ介入名でも、実施者、ケアの質、使える薬剤・器具、施設環境が異なれば、直接性は大きく揺らぎます。</p>
+            <p>CPGを使う側は、「この推奨の対象者は、自分の患者・施設・国の文脈と同じか」を確認しなければなりません。</p>
+          </article>
+
+          <article class="tohoho-item">
+            <h2>17. 複数の選択肢の序列を、線・脚注・並び順だけで示す問題</h2>
+            <p>複数の治療選択肢を同じCQ内に並べる場合、比較対象が異なる推奨を同列に見せてしまうと、読者はどれを第一選択と考えるべきか分からなくなります。表中の横線、脚注、並び順だけで「実は比較が違う」「実は上位群と下位群がある」と読ませるのは危険です。</p>
+            <p>必要なのは、各選択肢がどの比較に基づくのか、直接比較か間接比較か、利益と害のバランスがどう違うのかを、推奨文またはEtDで説明することです。</p>
+          </article>
+        </section>
+
+        <section class="tohoho-soft-box">
+          <h3>参考資料</h3>
+          <ul class="tohoho-source-list">
+            <li><a href="https://minds.jcqhc.or.jp/docs/methods/cpg-development/minds-manual/template/chap4_SR_7_obs.pdf" target="_blank" rel="noopener">Minds 診療ガイドライン作成マニュアル テンプレート（観察研究 記入例）</a></li>
+            <li><a href="https://www.jclinepi.com/article/S0895-4356(25)00295-1/fulltext" target="_blank" rel="noopener">Trustworthiness of treatment clinical practice guidelines has modestly improved since the introduction of Institute of Medicine standards</a></li>
+          </ul>
+        </section>
+
+        <div class="chapter-nav">
+          <button onclick="showPage(17)">← Ch17 CPG品質の実例</button>
+          <button onclick="showPage(18)">Ch18 AMSTAR 2へ →</button>
+        </div>
+      </div>
     </div>
 
   </main>

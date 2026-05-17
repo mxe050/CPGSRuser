@@ -4182,3 +4182,150 @@ body.cpg-overview-open { overflow: hidden; }
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== v1.29: 本邦CPGトホホ集（匿名化教育版） ===== */
+#page-29 .tohoho-hero {
+  margin-bottom: 22px;
+  padding: 26px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #183c52 0%, #9a4b16 100%);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(24, 60, 82, 0.18);
+}
+
+#page-29 .tohoho-hero h1 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 1.85rem;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+#page-29 .tohoho-hero p {
+  margin: 0;
+  color: #fff7ed;
+  line-height: 1.9;
+}
+
+#page-29 .tohoho-note {
+  margin: 16px 0 22px;
+  padding: 16px 18px;
+  border: 1px solid #fed7aa;
+  border-left: 5px solid #ea580c;
+  border-radius: 8px;
+  background: #fff7ed;
+  color: #4a2c11;
+  line-height: 1.85;
+}
+
+#page-29 .tohoho-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+#page-29 .tohoho-summary-table th,
+#page-29 .tohoho-summary-table td {
+  border: 1px solid #e2e8f0;
+  padding: 10px 12px;
+  vertical-align: top;
+  line-height: 1.65;
+}
+
+#page-29 .tohoho-summary-table th {
+  background: #1f4e63;
+  color: #fff;
+}
+
+#page-29 .tohoho-summary-table td:first-child {
+  width: 28%;
+  font-weight: 800;
+  color: #174a63;
+  background: #f8fafc;
+}
+
+#page-29 .tohoho-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+#page-29 .tohoho-item {
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+#page-29 .tohoho-item h2 {
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2e8f0;
+  color: #174a63;
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+#page-29 .tohoho-item p {
+  line-height: 1.9;
+}
+
+#page-29 .tohoho-figure {
+  margin: 16px 0 4px;
+  padding: 12px;
+  border: 1px solid rgba(24, 90, 125, 0.18);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+#page-29 .tohoho-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #fff;
+}
+
+#page-29 .tohoho-figure figcaption {
+  margin-top: 9px;
+  color: #475569;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+#page-29 .tohoho-soft-box {
+  margin: 18px 0;
+  padding: 15px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+#page-29 .tohoho-soft-box h3 {
+  margin-top: 0;
+  color: #334155;
+}
+
+#page-29 .tohoho-source-list {
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+
+@media (max-width: 760px) {
+  #page-29 .tohoho-hero {
+    padding: 18px;
+  }
+  #page-29 .tohoho-hero h1 {
+    font-size: 1.45rem;
+  }
+  #page-29 .tohoho-summary-table {
+    font-size: 0.95rem;
+  }
+  #page-29 .tohoho-summary-table td:first-child {
+    width: auto;
+  }
+  #page-29 .tohoho-item {
+    padding: 14px;
+  }
+}
