@@ -44,7 +44,7 @@
     }
   ],
   "chapters": [
-    {"idx": 0, "num": "表紙", "title": "表紙", "en": "Cover"},
+    {"idx": 0, "num": "まずここからお読みください", "title": "まずここからお読みください", "en": "Start here"},
     {"idx": 1, "num": "1", "title": "EBMと診療ガイドライン・SRの読み方", "en": "EBM and How to Read CPGs/SRs"},
     {"idx": 2, "num": "2", "title": "GRADEアプローチの概要", "en": "Overview of the GRADE approach"},
     {"idx": 3, "num": "3", "title": "エビデンスの確実性4段階の意味", "en": "Four Levels of Certainty of Evidence"},
