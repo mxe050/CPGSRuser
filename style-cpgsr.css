@@ -840,8 +840,19 @@
   box-shadow: 0 3px 10px rgba(255,59,48,0.45);
 }
 .primer-btn {
-  background: linear-gradient(135deg, rgba(230,126,34,0.28) 0%, rgba(255,204,128,0.18) 100%);
-  border-color: rgba(255,204,128,0.55);
+  background: linear-gradient(135deg, #fff7ea 0%, #ffe4bd 100%);
+  border-color: #d4941e;
+  color: #4b2a05;
+}
+.primer-btn:hover {
+  background: linear-gradient(135deg, #fff1d8 0%, #ffd99e 100%);
+}
+.primer-btn .btn-title {
+  color: #4b2a05;
+}
+.primer-btn .btn-dsc {
+  color: #5f3a09;
+  opacity: 1;
 }
 .primer-btn .primer-mark {
   display: flex;
