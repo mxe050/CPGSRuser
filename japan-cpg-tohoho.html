@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本邦CPGトホホ集</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-cpgsr.css">
+  <style>
+    body {
+      display: block;
+      background: #f4f6f9;
+    }
+
+    .tohoho-page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 18px 64px;
+    }
+
+    .tohoho-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .tohoho-btn {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 8px;
+      border: 1px solid #fdba74;
+      background: #fff7ed;
+      color: #9a3412;
+      padding: 9px 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .tohoho-btn.primary {
+      border-color: #ea580c;
+      background: #ea580c;
+      color: #fff;
+    }
+
+    .tohoho-hero {
+      border-radius: 12px;
+      background: linear-gradient(135deg, #7c2d12, #ea580c);
+      color: #fff;
+      padding: 28px;
+      margin-bottom: 18px;
+      box-shadow: 0 12px 28px rgba(124, 45, 18, 0.18);
+    }
+
+    .tohoho-hero h1 {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: 2rem;
+      letter-spacing: 0;
+    }
+
+    .tohoho-hero p {
+      color: #ffedd5;
+      margin-bottom: 0;
+    }
+
+    .tohoho-section {
+      background: #fff;
+      border: 1px solid #fed7aa;
+      border-radius: 10px;
+      padding: 22px;
+      margin-top: 16px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .tohoho-section h2 {
+      color: #9a3412;
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .tohoho-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tohoho-card {
+      border: 1px solid #fed7aa;
+      border-radius: 8px;
+      background: #fff7ed;
+      padding: 12px;
+    }
+
+    .tohoho-card strong {
+      color: #9a3412;
+    }
+
+    .upload-box {
+      border: 1px dashed #fb923c;
+      border-radius: 10px;
+      background: #fffbeb;
+      padding: 16px;
+    }
+
+    .small-note {
+      color: #64748b;
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="tohoho-page">
+    <div class="tohoho-top">
+      <a class="tohoho-btn" href="index.html">← CPG/SR Primerへ戻る</a>
+      <a class="tohoho-btn primary" href="index.html#page-16">Chapter 16へ</a>
+    </div>
+
+    <section class="tohoho-hero">
+      <h1>本邦CPGトホホ集</h1>
+      <p>
+        国内CPGを読むときに、形式的には「Mindsに従った」「GRADEを用いた」「SRを行った」と書かれていても、
+        推奨の根拠が十分に追跡できないことがあります。このページは、そのような形式と実質のズレを集約するための置き場です。
+      </p>
+    </section>
+
+    <section class="tohoho-section">
+      <h2>このページの役割</h2>
+      <p>
+        ここでの目的は、特定のCPGを単純に採点することではありません。PICO、文献検索と選択、risk of bias評価、
+        アウトカム別certainty、SoF/Evidence Profile、EtD、推奨方向・推奨強度までの判断の鎖が読者に見えるかを確認するための資料置き場です。
+      </p>
+      <div class="tohoho-grid">
+        <div class="tohoho-card"><strong>形式だけのGRADE/SR</strong><br>名称ではなく、推奨までの判断が追えるかを見る。</div>
+        <div class="tohoho-card"><strong>効果推定値が見えないcertainty</strong><br>forest plot、95%CI、アウトカム別評価が示されているかを見る。</div>
+        <div class="tohoho-card"><strong>EtDの形骸化</strong><br>利益・害・価値観・負担が推奨にどう接続したかを見る。</div>
+        <div class="tohoho-card"><strong>突然の推奨</strong><br>エビデンス要約から推奨方向・強度への論理が説明されているかを見る。</div>
+      </div>
+    </section>
+
+    <section class="tohoho-section">
+      <h2>追加資料エリア</h2>
+      <div class="upload-box">
+        <p>
+          今後、他の場所で作成した資料、画像、外部リンク、具体例をここに追加します。
+          追加するときは、可能なら「対象CPG名」「CQ番号」「問題の種類」「読者が確認すべきポイント」「根拠資料へのリンク」をセットで置くと追跡しやすくなります。
+        </p>
+        <p class="small-note">現時点では、Chapter 16の「信頼できるCPGの6つの質問」から参照するための受け皿ページとして作成しています。</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
