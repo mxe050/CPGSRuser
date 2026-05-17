@@ -4218,30 +4218,29 @@ body.cpg-overview-open { overflow: hidden; }
   line-height: 1.85;
 }
 
-#page-29 .tohoho-summary-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
+#page-29 .tohoho-back-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin: 14px 0 18px;
 }
 
-#page-29 .tohoho-summary-table th,
-#page-29 .tohoho-summary-table td {
-  border: 1px solid #e2e8f0;
-  padding: 10px 12px;
-  vertical-align: top;
-  line-height: 1.65;
+#page-29 .tohoho-back-nav.bottom {
+  margin: 20px 0 6px;
 }
 
-#page-29 .tohoho-summary-table th {
-  background: #1f4e63;
+#page-29 .tohoho-back-nav button {
+  border: none;
+  border-radius: 8px;
+  background: #174a63;
   color: #fff;
+  padding: 10px 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  box-shadow: 0 8px 18px rgba(23, 74, 99, 0.16);
 }
 
-#page-29 .tohoho-summary-table td:first-child {
-  width: 28%;
-  font-weight: 800;
-  color: #174a63;
-  background: #f8fafc;
+#page-29 .tohoho-back-nav button:hover {
+  background: #0f3a4f;
 }
 
 #page-29 .tohoho-list {
@@ -4272,9 +4271,9 @@ body.cpg-overview-open { overflow: hidden; }
 }
 
 #page-29 .tohoho-figure {
-  max-width: 760px;
+  max-width: 620px;
   margin: 16px auto 4px;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid rgba(24, 90, 125, 0.18);
   border-radius: 8px;
   background: #fbfdff;
@@ -4283,7 +4282,7 @@ body.cpg-overview-open { overflow: hidden; }
 #page-29 .tohoho-figure img {
   display: block;
   width: 100%;
-  max-width: 620px;
+  max-width: 480px;
   height: auto;
   margin: 0 auto;
   border-radius: 6px;
@@ -4321,12 +4320,6 @@ body.cpg-overview-open { overflow: hidden; }
   }
   #page-29 .tohoho-hero h1 {
     font-size: 1.45rem;
-  }
-  #page-29 .tohoho-summary-table {
-    font-size: 0.95rem;
-  }
-  #page-29 .tohoho-summary-table td:first-child {
-    width: auto;
   }
   #page-29 .tohoho-item {
     padding: 14px;
