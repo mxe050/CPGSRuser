@@ -826,6 +826,18 @@
   font-size: 0.82rem;
   opacity: 0.85;
 }
+.home-resource-link-wrap {
+  margin-top: 24px;
+}
+.home-resource-link {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,204,128,0.72);
+}
+.home-resource-link .btn-title {
+  color: #fff4df;
+}
 .yt-btn .yt-mark {
   display: flex;
   align-items: center;

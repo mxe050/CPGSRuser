@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
-<link rel="stylesheet" href="style.css?v=7.2">
-<link rel="stylesheet" href="style-cpgsr.css?v=8.7">
+<link rel="stylesheet" href="style.css?v=7.3">
+<link rel="stylesheet" href="style-cpgsr.css?v=8.8">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -17,9 +17,9 @@
   <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
     <span></span><span></span><span></span>
   </button>
-  <div class="logo">
+  <button type="button" class="logo logo-home" onclick="showPage(0)" aria-label="ホーム：まずここからお読みくださいへ戻る">
     <span>CPGSR</span> Reader <span style="color:rgba(255,255,255,0.5);font-weight:400;font-size:0.85rem;">診療ガイドライン／SRの読み方</span>
-  </div>
+  </button>
 </header>
 
 <!-- 進捗バー -->
@@ -147,7 +147,15 @@
             </a>
           </div>
         </div>
-        <div style="margin-top:24px;text-align:center;">
+        <div class="home-resource-link-wrap">
+          <a class="beginner-btn home-resource-link" href="y-sensei-ebm-practice-links.html">
+            <span class="primer-mark">🔗</span>
+            <span class="btn-body">
+              <span class="btn-title">Y先生のEBM・診療ガイドライン講座リンク先一覧：EBM実践編</span>
+            </span>
+          </a>
+        </div>
+        <div style="margin-top:16px;text-align:center;">
           <button class="nav-btn" onclick="showPage(24)" style="background:var(--accent);color:white;border:none;padding:14px 36px;border-radius:10px;font-size:1.05rem;font-weight:700;cursor:pointer;">📖 読み始める　→</button>
         </div>
       </div>

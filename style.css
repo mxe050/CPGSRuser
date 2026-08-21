@@ -53,11 +53,18 @@ body {
 }
 
 .app-header .logo {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   color: white;
   flex: 1;
+  padding: 8px 0;
+  text-align: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -66,6 +73,9 @@ body {
 .app-header .logo span {
   color: var(--accent-light);
 }
+
+.app-header .logo:hover { color: #fff4df; }
+.app-header .logo:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
 
 .menu-toggle {
   background: none;

@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Y先生のEBM・診療ガイドライン講座：EBM実践編の全リンクを、スマホ対応・検索可能な1ページに再構成した学習アプリです。">
+  <meta name="theme-color" content="#123a5a">
+  <title>Y先生のEBM・診療ガイドライン講座リンク集：EBM実践編</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --surface-2: #f0f5f8;
+      --ink: #17212b;
+      --muted: #536372;
+      --line: #d8e0e7;
+      --brand: #123a5a;
+      --brand-2: #1d5f84;
+      --accent: #a94c10;
+      --good: #1e6b4c;
+      --warning: #8a5a00;
+      --danger: #a32626;
+      --opinion: #6d3a82;
+      --source: #215c70;
+      --focus: #f0b429;
+      --shadow: 0 10px 30px rgba(18, 58, 90, 0.08);
+      --radius: 18px;
+      --font-scale: 1;
+      --content-width: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 132px; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
+      font-size: calc(17px * var(--font-scale));
+      line-height: 1.78;
+      letter-spacing: 0.01em;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    a { color: var(--brand-2); text-underline-offset: 0.16em; }
+    button, input, select, textarea { font: inherit; }
+    button, .button-link { min-height: 44px; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    [hidden] { display: none !important; }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 9999;
+      transform: translateY(-160%);
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .hero {
+      background: linear-gradient(135deg, #0d304c 0%, #174f70 60%, #276f8f 100%);
+      color: #fff;
+      padding: 40px max(20px, env(safe-area-inset-right)) 28px max(20px, env(safe-area-inset-left));
+    }
+    .hero-inner { max-width: var(--content-width); margin: 0 auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 12px;
+      padding: 5px 11px;
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      font-size: .82rem;
+      font-weight: 700;
+    }
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw, 3.2rem);
+      line-height: 1.22;
+      letter-spacing: .015em;
+    }
+    .hero-lead {
+      max-width: 850px;
+      margin: 16px 0 0;
+      color: rgba(255,255,255,.9);
+      font-size: 1.05rem;
+    }
+    .source-banner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 14px;
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,.32);
+      border-radius: 14px;
+      background: rgba(0,0,0,.12);
+    }
+    .source-banner strong { font-size: .95rem; }
+    .source-banner .status {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #fff1cf;
+      color: #5d4100;
+      font-size: .8rem;
+      font-weight: 800;
+    }
+    .source-banner a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 42px;
+      padding: 8px 13px;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--brand);
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .stat {
+      min-width: 140px;
+      padding: 10px 13px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+    }
+    .stat b { display: block; font-size: 1.3rem; line-height: 1.2; }
+    .stat span { color: rgba(255,255,255,.78); font-size: .78rem; }
+
+    .toolbar-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--line);
+      background: rgba(245,247,250,.96);
+      backdrop-filter: blur(12px);
+    }
+    .toolbar {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 10px 18px;
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) minmax(165px, .34fr) auto;
+      gap: 9px;
+      align-items: center;
+    }
+    .search-box { position: relative; }
+    .search-box input {
+      width: 100%;
+      min-height: 48px;
+      padding: 10px 44px 10px 15px;
+      border: 1px solid #b9c6d0;
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--ink);
+    }
+    .search-box .icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: var(--muted);
+    }
+    .toolbar select {
+      min-height: 48px;
+      width: 100%;
+      padding: 9px 34px 9px 12px;
+      border: 1px solid #b9c6d0;
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--ink);
+    }
+    .tool-actions { display: flex; gap: 7px; }
+    .tool-button {
+      border: 1px solid #b9c6d0;
+      border-radius: 10px;
+      background: var(--surface);
+      color: var(--brand);
+      padding: 8px 11px;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .tool-button:hover { background: #eaf2f7; }
+    .result-bar {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 0 18px 9px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+    .clear-button {
+      border: 0;
+      background: transparent;
+      color: var(--brand-2);
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .layout {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 24px 18px 80px;
+      display: grid;
+      grid-template-columns: 245px minmax(0, 1fr);
+      gap: 22px;
+    }
+    .sidebar { position: relative; }
+    .toc {
+      position: sticky;
+      top: 126px;
+      max-height: calc(100vh - 150px);
+      overflow: auto;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .toc h2 { margin: 0 0 9px; font-size: 1rem; }
+    .toc-group {
+      margin: 13px 0 5px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .toc a {
+      display: block;
+      margin: 1px 0;
+      padding: 7px 8px;
+      border-radius: 8px;
+      color: var(--ink);
+      font-size: .82rem;
+      line-height: 1.35;
+      text-decoration: none;
+    }
+    .toc a:hover, .toc a[aria-current="true"] { background: #e8f1f6; color: var(--brand); }
+    .toc small { color: var(--muted); }
+
+    .intro-note {
+      margin: 0 0 20px;
+      padding: 18px 20px;
+      border: 1px solid #c7d6df;
+      border-left: 6px solid var(--brand-2);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .intro-note h2 { margin: 0 0 7px; font-size: 1.08rem; }
+    .intro-note p { margin: 5px 0; color: var(--muted); }
+
+    .section {
+      scroll-margin-top: 138px;
+      margin: 0 0 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: clip;
+    }
+    .section > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: auto minmax(0,1fr) auto;
+      align-items: center;
+      gap: 13px;
+      background: linear-gradient(180deg, #fff, #f9fbfc);
+    }
+    .section > summary::-webkit-details-marker { display: none; }
+    .section > summary:hover { background: #f3f8fb; }
+    .section-no {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 52px;
+      min-height: 34px;
+      padding: 4px 8px;
+      border-radius: 9px;
+      background: var(--brand);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+    .section-title-wrap { min-width: 0; }
+    .section-group { color: var(--muted); font-size: .72rem; font-weight: 700; }
+    .section-title { margin: 2px 0 0; font-size: clamp(1.05rem, 2vw, 1.32rem); line-height: 1.35; }
+    .section-count { color: var(--muted); font-size: .78rem; white-space: nowrap; }
+    .chevron { font-size: 1.2rem; transition: transform .2s ease; }
+    .section[open] .chevron { transform: rotate(180deg); }
+    .section-body { padding: 0 20px 22px; }
+    .section-guide {
+      margin: 0 -1px 16px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: var(--surface-2);
+      color: #31414f;
+      font-size: .92rem;
+    }
+
+    .cards { display: grid; gap: 14px; }
+    .card {
+      scroll-margin-top: 140px;
+      border: 1px solid #d9e1e7;
+      border-radius: 15px;
+      background: #fff;
+      padding: 17px;
+    }
+    .card:hover { border-color: #b6c8d4; }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .card h3 { margin: 0; font-size: 1.05rem; line-height: 1.48; }
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 25px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eaf1f5;
+      color: #334956;
+      font-size: .7rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+    .badge.level { background: #e7f1f7; color: #174e6d; }
+    .badge.notice-danger { background: #fde7e7; color: var(--danger); }
+    .badge.notice-caution { background: #fff1d2; color: var(--warning); }
+    .badge.notice-opinion { background: #f1e7f5; color: var(--opinion); }
+    .badge.notice-source { background: #e5f2f5; color: var(--source); }
+    .card-copy { margin-top: 13px; }
+    .copy-block {
+      padding: 13px 15px;
+      border-radius: 11px;
+      background: #f5f9f7;
+      border: 1px solid #d9e5df;
+    }
+    .copy-block p {
+      margin: 0;
+      color: #33454f;
+      font-size: .93rem;
+      line-height: 1.82;
+    }
+
+    .resources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 13px;
+    }
+    .resource-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 44px;
+      max-width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #aebfca;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--brand);
+      font-weight: 800;
+      font-size: .86rem;
+      line-height: 1.35;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+    .resource-link:hover { background: #eaf3f8; border-color: #7ea0b4; }
+    .resource-kind {
+      flex: 0 0 auto;
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: var(--brand);
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 900;
+    }
+    .image-preview {
+      margin-top: 13px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f2f4f6;
+    }
+    .image-preview img { display: block; width: 100%; height: auto; }
+    .image-preview figcaption { padding: 8px 11px; color: var(--muted); font-size: .75rem; }
+    mark { background: #ffe79a; color: inherit; padding: 0 .08em; }
+
+    .no-results {
+      padding: 28px 20px;
+      border: 1px dashed #aabac5;
+      border-radius: 14px;
+      background: var(--surface);
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .additional-section {
+      scroll-margin-top: 138px;
+      margin-top: 28px;
+      border: 2px solid #8cb2c7;
+      border-radius: var(--radius);
+      background: #f7fbfd;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .additional-header { padding: 20px; background: #e8f3f8; }
+    .additional-header h2 { margin: 0; font-size: 1.28rem; }
+    .additional-header p { margin: 7px 0 0; color: #425663; }
+    .local-note {
+      margin: 15px 20px 0;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #fff8e7;
+      border: 1px solid #ead39a;
+      color: #5f4a16;
+      font-size: .85rem;
+    }
+    .additional-body { padding: 18px 20px 22px; }
+    .additional-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .action-button {
+      min-height: 44px;
+      border: 1px solid #9fb4c0;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--brand);
+      padding: 8px 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .action-button.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
+    .action-button.danger { color: var(--danger); border-color: #d7a9a9; }
+    .add-form {
+      margin: 0 0 16px;
+      padding: 16px;
+      border: 1px solid #cbd9e1;
+      border-radius: 14px;
+      background: #fff;
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { display: block; margin-bottom: 5px; font-size: .78rem; font-weight: 900; color: #3b4d59; }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      min-height: 44px;
+      border: 1px solid #b7c6cf;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--ink);
+      padding: 9px 10px;
+    }
+    .field textarea { min-height: 90px; resize: vertical; }
+    .form-help { margin: 9px 0 0; color: var(--muted); font-size: .78rem; }
+    .form-status { min-height: 1.4em; margin: 9px 0 0; color: var(--good); font-size: .82rem; font-weight: 800; }
+    .added-card .added-meta { color: var(--muted); font-size: .75rem; }
+    .added-controls { display: flex; gap: 7px; margin-top: 10px; }
+    .mini-button { border: 1px solid #b8c5cd; background: #fff; border-radius: 8px; padding: 6px 9px; cursor: pointer; font-size: .76rem; font-weight: 800; }
+    .mini-button.delete { color: var(--danger); }
+    .empty-additions { color: var(--muted); padding: 15px; border: 1px dashed #b9c9d2; border-radius: 12px; background: #fff; }
+
+    footer {
+      padding: 28px 18px calc(35px + env(safe-area-inset-bottom));
+      background: #102d43;
+      color: rgba(255,255,255,.82);
+    }
+    .footer-inner { max-width: var(--content-width); margin: 0 auto; }
+    footer p { margin: 6px 0; font-size: .82rem; }
+    footer a { color: #fff; }
+
+    .mobile-nav { display: none; }
+
+    @media (max-width: 900px) {
+      html { scroll-padding-top: 184px; }
+      .toolbar { grid-template-columns: 1fr 160px; }
+      .tool-actions { grid-column: 1 / -1; justify-content: flex-start; overflow-x: auto; padding-bottom: 1px; }
+      .result-bar { padding-bottom: 8px; }
+      .layout { grid-template-columns: 1fr; padding-top: 16px; }
+      .sidebar { display: none; }
+      .mobile-nav {
+        display: block;
+        margin: 0 0 15px;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        background: var(--surface);
+      }
+      .mobile-nav summary { cursor: pointer; padding: 12px 14px; font-weight: 900; }
+      .mobile-nav-list { max-height: 55vh; overflow: auto; padding: 0 10px 12px; }
+      .mobile-nav-list a { display: block; padding: 9px 8px; border-top: 1px solid #edf0f2; color: var(--ink); text-decoration: none; font-size: .88rem; }
+      .section { scroll-margin-top: 188px; }
+      .card { scroll-margin-top: 190px; }
+      .additional-section { scroll-margin-top: 188px; }
+    }
+
+    @media (max-width: 620px) {
+      html { scroll-padding-top: 16px; }
+      body { font-size: calc(16.5px * var(--font-scale)); }
+      .toolbar-wrap { position: relative; }
+      .tool-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; }
+      .tool-button { width: 100%; }
+      .result-bar { flex-wrap: wrap; }
+      .section, .card, .additional-section { scroll-margin-top: 16px; }
+      .hero { padding-top: 28px; }
+      .hero-lead { font-size: .98rem; }
+      .source-banner { align-items: stretch; }
+      .source-banner a { width: 100%; justify-content: center; }
+      .hero-stats { display: grid; grid-template-columns: 1fr 1fr; }
+      .stat { min-width: 0; }
+      .toolbar { grid-template-columns: 1fr; padding: 8px 12px; }
+      .toolbar select { min-height: 44px; }
+      .search-box input { min-height: 46px; }
+      .tool-actions { grid-column: auto; }
+      .result-bar { padding: 0 12px 7px; font-size: .76rem; }
+      .layout { padding-left: 12px; padding-right: 12px; }
+      .intro-note { padding: 15px; }
+      .section > summary { padding: 15px; grid-template-columns: auto minmax(0,1fr); }
+      .section-count { grid-column: 2; }
+      .chevron { position: absolute; right: 13px; }
+      .section > summary { position: relative; padding-right: 38px; }
+      .section-no { min-width: 46px; }
+      .section-body { padding: 0 12px 14px; }
+      .section-guide { font-size: .86rem; }
+      .card { padding: 14px; }
+      .card-top { display: block; }
+      .resources { display: grid; grid-template-columns: 1fr; }
+      .resource-link { width: 100%; justify-content: flex-start; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .additional-header, .additional-body { padding-left: 14px; padding-right: 14px; }
+      .local-note { margin-left: 14px; margin-right: 14px; }
+    }
+
+    @media print {
+      .toolbar-wrap, .sidebar, .mobile-nav, .additional-actions, .add-form, .added-controls, .skip-link { display: none !important; }
+      body { background: #fff; font-size: 11pt; }
+      .hero { background: #fff; color: #000; padding: 0 0 20px; }
+      .hero-lead, .stat span { color: #333; }
+      .source-banner, .stat { color: #000; background: #fff; border-color: #888; }
+      .source-banner a { color: #000; border: 1px solid #888; }
+      .layout { display: block; max-width: none; padding: 0; }
+      .section, .intro-note, .additional-section { box-shadow: none; break-inside: avoid; }
+      .section { display: block; }
+      .section > summary { border-bottom: 1px solid #ccc; }
+      .section-body { display: block !important; }
+      .card { break-inside: avoid; }
+      .resource-link { color: #000; }
+      footer { background: #fff; color: #000; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">EBM実践編・全リンク収録版</p>
+      <h1>Y先生のEBM・診療ガイドライン講座リンク集</h1>
+      <p class="hero-lead">元noteのリンクを削らず、重複掲載も元の文脈ごと残し、説明文を一つにまとめて読みやすくした1ページ型の学習アプリです。</p>
+      <div class="source-banner">
+        <strong>元note</strong>
+        <span class="status">今後は更新不明</span>
+        <a id="sourceNoteLink" href="#" target="_blank" rel="noopener noreferrer">元noteを開く ↗</a>
+      </div>
+      <div class="hero-stats" aria-label="収録内容の監査結果">
+        <div class="stat"><b id="statItems">–</b><span>学習項目</span></div>
+        <div class="stat"><b id="statOccurrences">–</b><span>元note内のリンク掲載数</span></div>
+        <div class="stat"><b id="statUnique">–</b><span>異なるリンク先</span></div>
+        <div class="stat"><b id="statAdded">0</b><span>追加リンク</span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar-wrap" role="search">
+    <div class="toolbar">
+      <div class="search-box">
+        <label class="sr-only" for="searchInput" hidden>キーワード検索</label>
+        <input id="searchInput" type="search" inputmode="search" autocomplete="off" placeholder="例：MID、NMA、顎関節症、動画、初心者">
+        <span class="icon" aria-hidden="true">⌕</span>
+      </div>
+      <select id="kindFilter" aria-label="資料形式で絞り込む">
+        <option value="all">すべての資料形式</option>
+        <option value="動画">動画</option>
+        <option value="スライド">スライド</option>
+        <option value="note">note</option>
+        <option value="アプリ">アプリ</option>
+        <option value="論文">論文</option>
+        <option value="画像">画像</option>
+      </select>
+      <div class="tool-actions" aria-label="表示操作">
+        <button class="tool-button" id="openAll" type="button">すべて開く</button>
+        <button class="tool-button" id="closeAll" type="button">すべて閉じる</button>
+        <button class="tool-button" id="fontDown" type="button" aria-label="文字を小さく">文字 −</button>
+        <button class="tool-button" id="fontUp" type="button" aria-label="文字を大きく">文字 ＋</button>
+      </div>
+    </div>
+    <div class="result-bar">
+      <span id="resultCount" aria-live="polite">読み込み中…</span>
+      <button id="clearSearch" class="clear-button" type="button">検索をリセット</button>
+    </div>
+  </div>
+
+  <main id="main" class="layout">
+    <aside class="sidebar" aria-label="目次">
+      <nav class="toc" id="toc"><h2>目次</h2></nav>
+    </aside>
+
+    <div class="content">
+      <details class="mobile-nav">
+        <summary>目次を開く</summary>
+        <nav class="mobile-nav-list" id="mobileToc" aria-label="モバイル目次"></nav>
+      </details>
+
+      <section class="intro-note" aria-labelledby="howto-title">
+        <h2 id="howto-title">使い方</h2>
+        <p><strong>初めての方：</strong>「最初に見る3本」→「RCT」→「システマティックレビュー」→「診療ガイドライン」の順が無理のない流れです。</p>
+        <p><strong>目的が決まっている方：</strong>上の検索欄に疾患名、方法論、資料形式を入れてください。複数の章に同じリンクがある場合も、元noteの掲載文脈を維持して残しています。</p>
+        <p>各項目では、元noteの説明内容と理解を助ける説明を一つの文章にまとめています。説明種別の見出しを付けず、本文から直接読める構成です。明らかな表記ゆれや誤記は読みやすく整えています。</p>
+      </section>
+
+      <div id="sections"></div>
+      <div id="noResults" class="no-results" hidden>該当する項目がありません。表記を短くするか、資料形式の絞り込みを解除してください。</div>
+
+      <section id="additional-links" class="additional-section" aria-labelledby="additional-title">
+        <header class="additional-header">
+          <h2 id="additional-title">2026年8月以降追加リンク</h2>
+          <p>今後の新しい資料は、元の分類を崩さず、この欄へ追加できます。</p>
+        </header>
+        <p class="local-note"><strong>保存範囲：</strong>この単一HTMLでは、追加内容は現在の端末・ブラウザ内に保存されます。公開サイト全体へ恒久反映する際は、CodexでデータJSONまたはバックエンドへ移してください。エクスポート機能で追加分を持ち出せます。</p>
+        <div class="additional-body">
+          <div class="additional-actions">
+            <button class="action-button primary" id="toggleAddForm" type="button">＋ 新しいリンクを追加</button>
+            <button class="action-button" id="exportAdded" type="button">追加分をJSONで書き出す</button>
+            <label class="action-button" for="importAdded" role="button">JSONを読み込む</label>
+            <input id="importAdded" type="file" accept="application/json,.json" hidden>
+            <button class="action-button danger" id="clearAdded" type="button">追加分をすべて削除</button>
+          </div>
+
+          <form id="addForm" class="add-form" hidden>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="addTitle">タイトル *</label>
+                <input id="addTitle" name="title" required maxlength="180" placeholder="例：Core GRADE 8の解説">
+              </div>
+              <div class="field full">
+                <label for="addUrl">URL *</label>
+                <input id="addUrl" name="url" type="url" required placeholder="https://...">
+              </div>
+              <div class="field">
+                <label for="addKind">資料形式</label>
+                <select id="addKind" name="kind">
+                  <option>動画</option>
+                  <option>スライド</option>
+                  <option>note</option>
+                  <option>アプリ</option>
+                  <option>論文</option>
+                  <option>画像</option>
+                  <option>その他</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="addDate">追加日</label>
+                <input id="addDate" name="date" type="date">
+              </div>
+              <div class="field full">
+                <label for="addExplanation">説明</label>
+                <textarea id="addExplanation" name="explanation" maxlength="1200" placeholder="何が学べるか、使用上の注意など"></textarea>
+              </div>
+              <div class="field full">
+                <label for="addTags">検索用タグ</label>
+                <input id="addTags" name="tags" maxlength="300" placeholder="例：GRADE, MID, がん">
+              </div>
+            </div>
+            <div class="additional-actions" style="margin-top:14px;margin-bottom:0">
+              <button class="action-button primary" type="submit">保存する</button>
+              <button class="action-button" id="cancelAdd" type="button">閉じる</button>
+            </div>
+            <p class="form-help">URLは http:// または https:// で始まるものだけ登録できます。入力した文章はHTMLとして実行されません。</p>
+            <p id="formStatus" class="form-status" role="status"></p>
+          </form>
+
+          <div id="addedList" class="cards"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p><strong>リンク監査：</strong><span id="footerAudit"></span></p>
+      <p>元noteで同じ資料が複数の章に掲載されている場合は、各掲載箇所を削除せず残しています。外部リンクは新しいタブで開きます。</p>
+      <p>最終確認日：2026-08-21</p>
+    </div>
+  </footer>
+
+  <noscript><p style="padding:20px">このファイルは検索・分類表示にJavaScriptを使用します。ブラウザのJavaScriptを有効にしてください。</p></noscript>
+
+  <script id="app-data" type="application/json">{"title":"Y先生のEBM・診療ガイドライン講座リンク集：EBM実践編","sourceNote":"https://note.com/mxe05064/n/n901dd476a444","sourceNoteStatus":"今後は更新不明","sourceChecked":"2026-08-21","audit":{"itemCount":84,"linkOccurrences":105,"uniqueSourceLinks":97,"sourceIdRange":"3–99","duplicateSourceIds":{"12":2,"14":2,"29":2,"30":2,"31":2,"33":2,"34":2,"45":2}},"sections":[{"id":"start","group":"はじめに","number":"START","title":"最初に見る3本","guide":"EBMや診療ガイドラインを初めて学ぶ方は、まず3分動画から入り、次にCore GRADEの解説編・会話編へ進むと全体像をつかみやすくなります。","items":[{"id":"start-3min","title":"診療ガイドライン・EBMの最重要点を3分でつかむ","description":"元noteでは「基礎の基礎」として、初心者向けに最重要ポイントを短時間でつかむ動画として紹介されています。最初に用語を暗記するのではなく、EBMと診療ガイドラインが何のためにあるのかを先に把握する入口です。","level":"入門","tags":["EBM","診療ガイドライン","初心者","3分"],"notice":null,"resources":[{"sourceId":3,"label":"3分動画を開く","url":"https://www.youtube.com/watch?v=43keGWckTLc","kind":"動画","originalUrl":"https://www.youtube.com/embed/43keGWckTLc?rel=0"}]},{"id":"start-core-grade-explain","title":"冒険者と学ぶCore GRADE：解説編","description":"診療ガイドラインのためのCore GRADEを、冒険の比喩を用いて学ぶ解説編です。GRADEの細かな手順に入る前に、エビデンスの確実性と推奨判断がどうつながるのかを物語形式で確認できます。","level":"入門","tags":["Core GRADE","GRADE","診療ガイドライン"],"notice":null,"resources":[{"sourceId":4,"label":"解説編を開く","url":"https://www.youtube.com/watch?v=bwiop3dnVZ4","kind":"動画"}]},{"id":"start-core-grade-dialogue","title":"Core GRADEという魔法を習得しよう：会話編","description":"Core GRADEの内容を会話形式で学ぶ動画です。一方向の講義より会話形式の方が理解しやすい方に向きます。解説編と同じ論点を別の角度から反復できます。","level":"入門","tags":["Core GRADE","GRADE","会話"],"notice":null,"resources":[{"sourceId":5,"label":"会話編を開く","url":"https://www.youtube.com/watch?v=0fE03WiwTis","kind":"動画"}]}]},{"id":"rct","group":"1．EBM基礎から高度な読み方まで","number":"1-1","title":"ランダム化比較試験（RCT）の入口","guide":"RCTを聞いたことがない方を対象に、動画とスライドを同じ場所にまとめています。","items":[{"id":"rct-first","title":"ランダム化比較試験を聞いたこともない方へ","description":"同じ内容を、スライド解説、講師が登場する解説、閲覧用スライドの3形式で収録しています。RCTは、介入の効果を比較する際に、背景因子の偏りをできるだけ小さくするための研究デザインです。まずは「なぜランダム化するのか」を理解してください。","level":"入門","tags":["RCT","ランダム化比較試験","研究デザイン"],"notice":null,"resources":[{"sourceId":6,"label":"動画：スライド解説","url":"https://youtu.be/PeHGAIl5Ipk","kind":"動画"},{"sourceId":7,"label":"動画：登場して解説","url":"https://youtu.be/s0-jI4x4K2w","kind":"動画"},{"sourceId":8,"label":"スライド","url":"https://www.slideshare.net/preventivedentistry/20151027-1","kind":"スライド"}]}]},{"id":"sr-basics","group":"1．EBM基礎から高度な読み方まで","number":"1-2","title":"システマティックレビューの基礎","guide":"システマティックレビューの基本概念と、結果を要約するSoF表を分けて学べます。","items":[{"id":"sr-what","title":"システマティックレビューとは","description":"2015年作成の基本解説を、スライドと動画で紹介しています。単なる文献紹介ではなく、事前に決めた方法で検索・選択・評価・統合するのがシステマティックレビューです。","level":"入門","tags":["システマティックレビュー","SR","基礎"],"notice":null,"resources":[{"sourceId":9,"label":"スライド：システマティックレビューとは2015","url":"https://www.slideshare.net/preventivedentistry/2015-56504672","kind":"スライド"},{"sourceId":10,"label":"動画","url":"https://youtu.be/FohYEHxefD8","kind":"動画"}]},{"id":"sr-sof","title":"SoF表（Summary of Findings table）の読み方","description":"『EBMシステマティックレビューの読み方1』として、SoF表を解説する動画です。SoF表は、重要なアウトカムごとに相対効果・絶対効果・研究数・参加者数・エビデンスの確実性をまとめる表です。","level":"初級","tags":["SoF","Summary of Findings","GRADE","SR"],"notice":null,"resources":[{"sourceId":11,"label":"SoF表の解説動画","url":"https://youtu.be/XX40odfHSgc","kind":"動画"}]}]},{"id":"cpg-basics","group":"1．EBM基礎から高度な読み方まで","number":"1-3","title":"診療ガイドラインの基礎","guide":"診療ガイドラインの概念、短時間版、作成の本質、間違いやすい点を順番に配置しています。","items":[{"id":"cpg-trust","title":"EBMの本質と、信頼できる診療ガイドラインの見分け方","description":"EBMと診療ガイドライン作成の基礎を理解し、信頼できる診療ガイドラインか判断する力を養う資料です。推奨文だけを見るのではなく、問い、利益と害、価値観、資源、COI、作成方法が透明かを確認するための土台です。","level":"初級","tags":["診療ガイドライン","EBM","信頼性","批判的吟味"],"notice":null,"resources":[{"sourceId":12,"label":"スライドを開く","url":"https://www.docswell.com/s/MXE05064/ZRXP11-2024-02-10-215100","kind":"スライド"}]},{"id":"cpg-three-principles","title":"EBMの3原則から診療ガイドラインを理解する","description":"初級の医療者向けに、診療ガイドラインがどのようなものかを説明する資料です。Docswell、SlideShare、約30分の動画があります。研究結果だけでなく、臨床経験と患者の価値観・状況を統合するというEBMの考え方から、ガイドラインの役割を理解します。","level":"入門","tags":["診療ガイドライン","EBMの3原則","初心者"],"notice":null,"resources":[{"sourceId":13,"label":"スライド：Docswell","url":"https://www.docswell.com/s/MXE05064/56YX38-2024-04-24-225112","kind":"スライド"},{"sourceId":14,"label":"スライド：SlideShare","url":"https://www.slideshare.net/preventivedentistry/ebm3","kind":"スライド"},{"sourceId":15,"label":"動画：約30分","url":"https://www.youtube.com/watch?v=WJUDKCTwL9A","kind":"動画"}]},{"id":"cpg-three-minutes","title":"診療ガイドラインを3分で説明する","description":"『診療GL 3分 20151027』として、短時間で説明するためのスライドが2か所で公開されています。会議冒頭や新人研修など、診療ガイドラインの概略だけを短く共有したい場面に向く資料です。","level":"入門","tags":["診療ガイドライン","3分","概要"],"notice":null,"resources":[{"sourceId":16,"label":"スライド：Docswell","url":"https://www.docswell.com/s/MXE05064/KNRYEQ-2024-04-24-224205","kind":"スライド"},{"sourceId":17,"label":"スライド：SlideShare","url":"https://www.slideshare.net/preventivedentistry/gl20151027","kind":"スライド"}]},{"id":"cpg-endodontics","title":"診療ガイドライン作成の本質：歯内療法学編","description":"歯科医師向けに作成した、歯内療法を題材とする資料です。具体的な臨床分野を通じて、CQ、エビデンス評価、推奨作成がどうつながるかを確認する応用例です。","level":"中級","tags":["診療ガイドライン作成","歯内療法","歯科"],"notice":null,"resources":[{"sourceId":18,"label":"スライドを開く","url":"https://www.slideshare.net/secret/2wvE2cIFtqPqL7","kind":"スライド"}]},{"id":"cpg-mistakes","title":"診療ガイドラインで間違いやすい点：Q&A","description":"診療ガイドラインで誤解しやすい点を、簡単なQ&A形式で説明する資料です。用語を覚えるだけでなく、実際の判断で起きやすい混同を確認する復習用資料です。","level":"初級","tags":["診療ガイドライン","Q&A","誤解"],"notice":null,"resources":[{"sourceId":19,"label":"Q&Aスライドを開く","url":"https://www.slideshare.net/preventivedentistry/ss-65448531","kind":"スライド"}]}]},{"id":"key-terms","group":"1．EBM基礎から高度な読み方まで","number":"1-4","title":"重要用語と効果の読み方","guide":"MID、SMD、人年、Prevented Fraction、研究デザインなど、論文を読む際につまずきやすい概念をまとめています。","items":[{"id":"term-mid","title":"MID／MCID：臨床的に意味のある最小差","description":"『EBMシステマティックレビューの読み方3』の動画と、MCIDのスライドが紹介されています。統計学的有意差だけでなく、その差が患者にとって意味のある大きさかを判断するための基準です。尺度、集団、状況により値は変わります。","level":"初級","tags":["MID","MCID","臨床的重要性","閾値"],"notice":null,"resources":[{"sourceId":20,"label":"動画：MCID／臨床的に意味がある差","url":"https://youtu.be/rTIPekfKyV4","kind":"動画"},{"sourceId":21,"label":"スライド：MCID 2020","url":"https://www.docswell.com/s/MXE05064/K4QVR1-2023-04-28-124558","kind":"スライド"}]},{"id":"term-mid-list","title":"MID・閾値一覧","description":"疾患、アウトカム、測定尺度などに応じたMID・閾値を探すための別noteです。値だけを流用せず、対象集団、測定法、群間差か患者内変化か、意思決定に用いた値かを確認してください。","level":"中級","tags":["MID","閾値","一覧","GRADE"],"notice":null,"resources":[{"sourceId":22,"label":"MID・閾値一覧を開く","url":"https://note.com/mxe05064/n/n4368e86d09cf","kind":"note"}]},{"id":"term-smd","title":"同じアウトカムを複数の尺度で測る場合：SMD","description":"『EBMシステマティックレビューの読み方2』として、同じアウトカムを複数指標で測定した場合とSMDを解説します。SMDは異なる尺度を標準偏差単位にそろえて統合しますが、元の単位を失うため、臨床的な意味づけが別途必要です。","level":"中級","tags":["SMD","標準化平均差","連続アウトカム","メタ分析"],"notice":null,"resources":[{"sourceId":23,"label":"SMDの解説動画","url":"https://youtu.be/8i0jq-IT5X4","kind":"動画"}]},{"id":"term-person-years","title":"「人年」という単位を理解する","description":"がん検診のメタ分析の表2を題材に、人年を学ぶ資料です。人年は人数ではなく、観察人数と観察期間を合わせた分母です。発生率を比較するとき、単純な発生割合と混同しないことが重要です。","level":"中級","tags":["人年","発生率","がん検診","疫学"],"notice":null,"resources":[{"sourceId":24,"label":"人年の解説スライド","url":"https://www.docswell.com/s/MXE05064/KJLEJ1-2023-10-03-163926","kind":"スライド"}]},{"id":"term-prevented-fraction","title":"歯科予防論文のPrevented Fraction","description":"歯科の予防論文で用いられるPrevented Fractionを解説する動画です。対照群で起きた事象のうち、介入によってどの程度防げたかを割合で表す指標です。計算式と分母を確認してください。","level":"中級","tags":["Prevented Fraction","予防","歯科","効果指標"],"notice":null,"resources":[{"sourceId":25,"label":"Prevented Fractionの動画","url":"https://youtu.be/Ld5_r1i708U","kind":"動画"}]},{"id":"term-study-design","title":"研究デザインの複雑性を理解する","description":"前向き、後ろ向き、横断など、研究デザインの多様性を理解するための講義抜粋スライドです。名称だけで研究の質は決まりません。対象者の選び方、時間の向き、比較群、測定時点、交絡への対応を分けて確認します。","level":"初級","tags":["研究デザイン","前向き","後ろ向き","横断研究"],"notice":null,"resources":[{"sourceId":26,"label":"研究デザイン講義スライド","url":"https://www.slideshare.net/secret/owI4WywvwEH6MU","kind":"スライド"}]}]},{"id":"advanced-reading","group":"1．EBM基礎から高度な読み方まで","number":"1-5","title":"さらに高度な読み方","guide":"ネットワークメタ分析、診療ガイドラインの批判的吟味、複雑な臨床試験をまとめています。ランキングだけで結論を出さないことが共通して重要です。","items":[{"id":"nma-first","title":"ネットワークメタ分析の基礎の基礎","description":"確実性の評価が重要であることを強調した、ネットワークメタ分析の入門動画です。複数介入を同時に比較できますが、直接比較と間接比較のつながり、推移性、非一貫性、確実性を確認する必要があります。","level":"中級","tags":["NMA","ネットワークメタ分析","確実性"],"notice":null,"resources":[{"sourceId":27,"label":"NMA入門動画","url":"https://youtu.be/S8FuCj2wzDo","kind":"動画"}]},{"id":"nma-certainty-choice","title":"NMAの確実性を評価し、介入効果の程度から推奨を考える","description":"ネットワークメタ分析のエビデンスの確実性と、介入効果の程度を評価して推奨介入を考える動画です。順位やSUCRAだけで選ばず、効果量、絶対効果、害、確実性、患者の価値観を合わせて判断します。","level":"上級","tags":["NMA","GRADE","推奨","ランキング"],"notice":null,"resources":[{"sourceId":28,"label":"NMAの確実性と推奨の動画","url":"https://youtu.be/wYLL2SByeYo","kind":"動画"}]},{"id":"nma-retrograde","title":"逆根充材料のNMAで確実性を学ぶ","description":"歯科の逆根充材料の論文を題材に、ネットワークメタ分析の確実性の考え方を学ぶ動画です。具体例を通じて、比較ごとの情報源と確実性を追う練習に向きます。","level":"上級","tags":["NMA","歯内療法","逆根充","確実性"],"notice":null,"resources":[{"sourceId":29,"label":"逆根充材料NMAの動画","url":"https://youtu.be/MK0kIP9whI0","kind":"動画"}]},{"id":"nma-sarcopenia","title":"NMAの図表を読む：サルコペニアと運動","description":"ネットワークメタ分析の図表を理解する第1弾として、サルコペニアと運動を扱います。ネットワーク図、比較結果、ランキングなどを、臨床的な問いと対応づけて読む練習用です。","level":"中級","tags":["NMA","サルコペニア","運動","図表"],"notice":null,"resources":[{"sourceId":30,"label":"サルコペニアと運動のNMAスライド","url":"https://www.docswell.com/s/MXE05064/Z242NR-2023-04-21-162508","kind":"スライド"}]},{"id":"nma-diabetes","title":"NMAの図表を読む：2型糖尿病の薬物療法","description":"第2弾として2型糖尿病の薬物療法を扱います。元noteでは、スライド47の見やすい表、ランキングの代替となる色分け、メタ回帰分析にも触れると説明されています。表の色や順位だけでなく、各比較の効果量と確実性、ベースラインリスク、サブグループ仮説を確認してください。","level":"上級","tags":["NMA","2型糖尿病","メタ回帰","ランキング"],"notice":null,"resources":[{"sourceId":31,"label":"2型糖尿病薬物療法NMAスライド","url":"https://www.docswell.com/s/MXE05064/5DEJ96-2023-05-12-222233","kind":"スライド"}]},{"id":"cpg-trust-repeat","title":"診療ガイドラインの読み方と信頼性判断","description":"前の章にも掲載されている資料ですが、『さらに読み方を勉強したい』という文脈でも再掲されています。同じリンクを削除せず、基礎学習と批判的吟味の両方から到達できるように残しています。","level":"中級","tags":["診療ガイドライン","信頼性","再掲"],"notice":null,"resources":[{"sourceId":12,"label":"信頼できる診療ガイドラインの見分け方","url":"https://www.docswell.com/s/MXE05064/ZRXP11-2024-02-10-215100","kind":"スライド"}]},{"id":"cpg-2024","title":"診療ガイドラインの説明：2024年8月","description":"エビデンスレベル、エビデンスプロファイルの作成、NCCNの問題点を扱う資料です。元noteには『Mindsの間違いあり』との記載があります。『Mindsの間違いあり』は元note著者の評価です。何がどの基準に照らして問題なのかを、リンク先の具体的な記述と一次資料で確認してください。","level":"上級","tags":["診療ガイドライン","エビデンスプロファイル","NCCN","Minds"],"notice":{"tone":"opinion","label":"著者の評価を含む"},"resources":[{"sourceId":32,"label":"2024年8月のスライド","url":"https://www.docswell.com/s/MXE05064/52224M-2024-08-31-172030","kind":"スライド"}]},{"id":"advanced-root-caries","title":"SR結果を科学的に解釈する：高齢者の根面カリエスへのサホライド塗布","description":"JAMA Users' GuidesとAlperらのアプローチを用いる『EBMシステマティックレビューの読み方4』で、読み方上級編として紹介されています。メタ分析の数値をそのまま結論にせず、バイアス、異質性、絶対効果、臨床的重要性、適用可能性を順に検討します。","level":"上級","tags":["SR","根面う蝕","サホライド","批判的吟味"],"notice":null,"resources":[{"sourceId":33,"label":"上級編の動画","url":"https://youtu.be/2CsdmPZeS3k","kind":"動画"}]},{"id":"advanced-keynote048","title":"研究デザイン難解編：KEYNOTE-048","description":"頭頸部癌の第III相試験KEYNOTE-048のsummaryを題材にした資料です。多群比較、複数の解析集団、逐次検定など、通常の2群RCTより複雑な設計を読む練習に向きます。","level":"上級","tags":["KEYNOTE-048","頭頸部癌","RCT","研究デザイン"],"notice":null,"resources":[{"sourceId":34,"label":"KEYNOTE-048スライド","url":"https://www.docswell.com/s/MXE05064/KQ8RN7-2023-04-26-153820","kind":"スライド"}]}]},{"id":"ai-ebm","group":"1．EBM基礎から高度な読み方まで","number":"1-6","title":"対話型AIとEBM","guide":"AIは検索・整理・説明の補助になりますが、引用、数値、研究デザイン、結論は原文で照合する必要があります。","items":[{"id":"ai-medical-links","title":"対話式AIを医療分野で利用するためのリンク集","description":"医療分野で対話式AIを使う際の関連リンクをまとめた別noteです。AIの用途を検索、要約、データ抽出、文章作成などに分け、どこで人の検証が必要かを意識して利用してください。","level":"初級","tags":["AI","医療","リンク集"],"notice":null,"resources":[{"sourceId":35,"label":"AI医療リンク集を開く","url":"https://note.com/mxe05064/n/ne6e12eac54da","kind":"note"}]},{"id":"ai-ebm-workshop","title":"対話型AIをEBMワークショップで使うための覚え書き","description":"元noteでは『まだまだ未完成』と明記された覚え書きです。完成した標準手順ではありません。試行案として読み、ワークショップで用いる前に目的、入力情報、検証方法を明確にしてください。","level":"中級","tags":["AI","EBM","ワークショップ"],"notice":{"tone":"caution","label":"未完成の覚え書き"},"resources":[{"sourceId":36,"label":"覚え書きを開く","url":"https://note.com/mxe05064/n/n1858e6376378","kind":"note"}]}]},{"id":"unused-slides","group":"1．EBM基礎から高度な読み方まで","number":"1-7","title":"その他・短縮版・旧資料","guide":"元noteで『使わないスライドなど』に置かれていた資料です。リンクを減らさないため、独立した保管欄として残しています。","items":[{"id":"cpg-six-slides","title":"診療ガイドラインとEBMの関係：6枚版","description":"診療ガイドラインとEBMの関係を学ぶスライドを、6枚のPDF相当としてまとめた資料です。短い説明用として便利ですが、詳細な方法論を学ぶ資料ではありません。","level":"入門","tags":["診療ガイドライン","EBM","短縮版"],"notice":null,"resources":[{"sourceId":37,"label":"6枚版スライド","url":"https://www.slideshare.net/preventivedentistry/ebm3-6","kind":"スライド"}]},{"id":"cpg-principles-repeat","title":"診療ガイドラインとは：EBMの3原則から理解する（再掲）","description":"初級医療者向けのスライドを、元noteの『その他』にも再掲しています。重複リンクも掲載文脈を維持するため残しています。","level":"入門","tags":["診療ガイドライン","EBM","再掲"],"notice":null,"resources":[{"sourceId":14,"label":"SlideShareを開く","url":"https://www.slideshare.net/preventivedentistry/ebm3","kind":"スライド"}]}]},{"id":"cariology","group":"2．実際の論文を読んでみる：歯科・口腔外科","number":"2-1-1","title":"カリオロジー","guide":"う蝕予防、根面う蝕、乳歯、修復治療、無糖ガムを題材に、RCT・SR・NMA・診療ガイドラインを読みます。","items":[{"id":"caries-toothpaste","title":"フッ化物濃度と歯磨剤：コクランNMA","description":"『EBMう蝕予防の論文を読んでみよう1』として、歯磨剤のフッ化物濃度を扱うコクランのネットワークメタ分析を紹介しています。用量の違う複数介入を比較するNMAの具体例として、効果量と確実性を読む練習に向きます。","level":"中級","tags":["う蝕","フッ化物","歯磨剤","NMA"],"notice":null,"resources":[{"sourceId":38,"label":"解説動画","url":"https://youtu.be/FPkUCOoRizs","kind":"動画"}]},{"id":"caries-root-sdf-repeat","title":"高齢者の根面カリエスへのサホライド塗布（上級編・再掲）","description":"上級のSR読解資料として前章にも掲載された動画を、カリオロジーの題材として再掲しています。同じ資料を方法論からも疾患領域からも探せるよう、元noteの重複掲載を残しています。","level":"上級","tags":["根面う蝕","サホライド","SR","再掲"],"notice":null,"resources":[{"sourceId":33,"label":"上級編の動画","url":"https://youtu.be/2CsdmPZeS3k","kind":"動画"}]},{"id":"caries-primary-nma","title":"乳歯のう蝕予防：NMAの図表を読む","description":"ネットワークメタ分析の図表を理解する第3弾として、乳歯のう蝕予防を扱います。介入ネットワーク、直接・間接比較、順位、確実性を小児歯科のテーマで確認します。","level":"中級","tags":["乳歯","う蝕予防","NMA","小児歯科"],"notice":null,"resources":[{"sourceId":39,"label":"乳歯う蝕予防NMAスライド","url":"https://www.docswell.com/s/MXE05064/K4QY86-2023-05-23-232904","kind":"スライド"}]},{"id":"caries-ada-guideline","title":"ADAう蝕修復治療ガイドラインとコクランレビュー","description":"ADAの修復治療ガイドラインと、その根拠となったコクランレビューの作成方法を学び、質問2のステップワイズエクスカベーションと選択的エクスカベーションの比較を扱います。詳細版と短縮版があります。診療ガイドラインの推奨が、CQ、SR、効果の評価、価値判断を経て作られる流れを具体例で追えます。","level":"中級","tags":["ADA","う蝕","修復治療","診療ガイドライン","コクラン"],"notice":null,"resources":[{"sourceId":40,"label":"詳細版スライド","url":"https://www.docswell.com/s/MXE05064/54QP28-2024-03-08-144452","kind":"スライド"},{"sourceId":41,"label":"内容を減らした読みやすい版","url":"https://www.docswell.com/s/MXE05064/5RXD7G-2024-03-21-232923","kind":"スライド"}]},{"id":"caries-gum","title":"無糖ガムの虫歯予防","description":"『EBMシステマティックレビューざっくり読み4』として無糖ガムの虫歯予防を扱う動画です。短時間でSRの主結果と限界を確認する題材です。介入、対照、アウトカム、追跡期間を最初に整理してください。","level":"初級","tags":["無糖ガム","う蝕予防","SR"],"notice":null,"resources":[{"sourceId":42,"label":"ざっくり読み動画","url":"https://youtu.be/zMU6mDgR1P8","kind":"動画"}]}]},{"id":"periodontology","group":"2．実際の論文を読んでみる：歯科・口腔外科","number":"2-1-2","title":"歯周病","guide":"古典的研究、定期的スケーリング、歯周病診療ガイドライン、糖尿病、心血管疾患までを扱います。","items":[{"id":"perio-loe","title":"Löe先生の歯肉炎研究","description":"有名なLöe先生の歯肉炎の論文を読む動画です。古典的研究は現在の報告基準と異なるため、歴史的意義と方法上の限界を分けて読みます。","level":"初級","tags":["歯周病","歯肉炎","Löe","古典論文"],"notice":null,"resources":[{"sourceId":43,"label":"論文解説動画","url":"https://youtu.be/RRwQ8n_8g4U","kind":"動画"}]},{"id":"perio-nyman","title":"Nyman先生の歯肉炎研究","description":"有名なNyman先生の歯肉炎の論文を読む動画です。研究目的、比較群、評価指標、追跡期間を整理し、結論がデータの範囲を超えていないか確認します。","level":"初級","tags":["歯周病","歯肉炎","Nyman","論文読解"],"notice":null,"resources":[{"sourceId":44,"label":"論文解説動画","url":"https://youtu.be/qawuhgs-JDw","kind":"動画"}]},{"id":"perio-scaling","title":"定期的スケーリングのSR","description":"『EBMシステマティックレビューざっくり読み2』として、歯科の定期的スケーリングを扱います。日常診療で当然視されやすい介入ほど、対象集団、比較条件、頻度、アウトカムを具体的に確認する必要があります。","level":"初級","tags":["スケーリング","歯周病","SR"],"notice":null,"resources":[{"sourceId":45,"label":"定期的スケーリングの動画","url":"https://youtu.be/I5ILywvNoJU","kind":"動画"}]},{"id":"perio-efp","title":"EFP歯周病診療ガイドラインへの批判的コメント","description":"元noteでは『EPFの歯周病診療ガイドラインは、ちょっと……』と紹介されています。組織名は一般にEFP（European Federation of Periodontology）です。曖昧な否定だけでは批判になりません。対象、推奨作成法、エビデンス評価、利益と害、COIのどこが問題かを具体化して読む必要があります。","level":"上級","tags":["EFP","歯周病","診療ガイドライン","批判的吟味"],"notice":{"tone":"opinion","label":"著者の批判的見解"},"resources":[{"sourceId":46,"label":"関連noteを開く","url":"https://note.com/mxe05064/n/n4bed31d0a904","kind":"note"}]},{"id":"perio-diabetes","title":"糖尿病と歯科","description":"スライドに加え、2025年にNotebookLMの音声概要を用いて分かりやすく改変した動画が追加されています。関連があることと、歯科介入で糖尿病アウトカムが改善することは別の問いです。因果、効果量、確実性を分けて確認します。","level":"中級","tags":["糖尿病","歯科","歯周病","NotebookLM"],"notice":null,"resources":[{"sourceId":47,"label":"スライド","url":"https://www.docswell.com/s/MXE05064/K8GP2L-2024-02-18-175454","kind":"スライド"},{"sourceId":48,"label":"2025年の解説動画","url":"https://www.youtube.com/watch?v=pYtJT3jrJ7k","kind":"動画"}]},{"id":"perio-cvd","title":"歯周病と心血管系疾患","description":"歯周病と心血管系疾患を扱う動画です。観察上の関連、共通リスク因子、因果関係、治療介入の効果を混同しないことが重要です。","level":"中級","tags":["歯周病","心血管疾患","因果","観察研究"],"notice":null,"resources":[{"sourceId":49,"label":"解説動画","url":"https://www.youtube.com/watch?v=obDBP81P8pk","kind":"動画"}]}]},{"id":"endodontics","group":"2．実際の論文を読んでみる：歯科・口腔外科","number":"2-1-3","title":"歯内療法","guide":"回転ファイルと逆根充材料を題材に、SRとNMAの読み方を確認します。","items":[{"id":"endo-rotary","title":"歯内療法の回転ファイル","description":"『EBMシステマティックレビューざっくり読み1』として、歯内療法の回転ファイルを扱います。機器や材料の比較では、術者経験、手技、追跡期間、代理アウトカムの影響に注意します。","level":"初級","tags":["歯内療法","回転ファイル","SR"],"notice":null,"resources":[{"sourceId":50,"label":"ざっくり読み動画","url":"https://youtu.be/UOO3BUzDPQk","kind":"動画"}]},{"id":"endo-retrograde-repeat","title":"逆根充材料のNMA（再掲）","description":"ネットワークメタ分析の確実性を学ぶ動画を、歯内療法の章にも再掲しています。方法論と臨床分野のどちらからも見つけられるよう、元noteの重複掲載を維持しています。","level":"上級","tags":["歯内療法","逆根充","NMA","再掲"],"notice":null,"resources":[{"sourceId":29,"label":"逆根充材料NMAの動画","url":"https://youtu.be/MK0kIP9whI0","kind":"動画"}]}]},{"id":"prevention","group":"2．実際の論文を読んでみる：歯科・口腔外科","number":"2-1-4","title":"予防・歯磨き・フッ化物","guide":"ブラッシング、電動歯ブラシ、フロス、スケーリング、フッ化物、砂糖をまとめています。著者の臨床経験やAI未検証資料は、研究エビデンスと区別して表示します。","items":[{"id":"prevention-oleary","title":"O'Leary先生の歯みがき研究","description":"有名なO'Leary先生の歯みがきの論文を読む動画です。プラーク評価の指標、介入内容、観察期間を確認し、古典的研究の位置づけを考えます。","level":"初級","tags":["歯磨き","O'Leary","古典論文"],"notice":null,"resources":[{"sourceId":51,"label":"論文解説動画","url":"https://youtu.be/ApkWilcVVZ8","kind":"動画"}]},{"id":"prevention-powered-brush","title":"電動歯ブラシと手動歯ブラシの比較","description":"システマティックレビューを更新して読むシリーズの第1編・第2編です。更新前後で検索結果、対象研究、効果推定、結論がどう変わるかを比較すると、リビングなエビデンス更新を理解しやすくなります。","level":"中級","tags":["電動歯ブラシ","手動歯ブラシ","SR更新"],"notice":null,"resources":[{"sourceId":52,"label":"更新して読もう編1","url":"https://youtu.be/t1XR7v3z25k","kind":"動画"},{"sourceId":53,"label":"更新して読もう編2","url":"https://youtu.be/Ds1KT-efe_8","kind":"動画"}]},{"id":"prevention-fdi","title":"FDIの歯磨き推奨論文の一部を解説","description":"FDIの歯磨きに関する推奨論文の一部を説明する別noteです。推奨の対象者、介入の具体性、根拠の確実性、実行可能性を分けて確認します。","level":"中級","tags":["FDI","歯磨き","推奨"],"notice":null,"resources":[{"sourceId":54,"label":"関連noteを開く","url":"https://note.com/mxe05064/n/nf677526ec988","kind":"note"}]},{"id":"prevention-floss-young","title":"若者にフロスは有効か","description":"『EBMシステマティックレビューざっくり読み5』として、若者へのフロスを扱います。年齢、歯周状態、併用するブラッシング指導、アウトカムの測定期間を確認します。","level":"初級","tags":["フロス","若者","予防","SR"],"notice":null,"resources":[{"sourceId":55,"label":"ざっくり読み動画","url":"https://youtu.be/V6Az4MxqK9E","kind":"動画"}]},{"id":"prevention-scaling-repeat","title":"定期的スケーリング（再掲）","description":"歯周病の章にもある定期的スケーリングの動画を、予防の章にも再掲しています。重複掲載を統合せず、元noteと同じ探索経路を残しています。","level":"初級","tags":["スケーリング","予防","再掲"],"notice":null,"resources":[{"sourceId":45,"label":"定期的スケーリングの動画","url":"https://youtu.be/I5ILywvNoJU","kind":"動画"}]},{"id":"prevention-author-experience","title":"歯間ブラシとデンタルフロス：著者の臨床経験","description":"元noteで『論文ではありません』と明記された、著者の臨床経験に基づく歯磨き解説です。研究エビデンスではなく経験的解説です。患者への一般的推奨に用いる場合は、ガイドラインや比較研究と照合してください。","level":"入門","tags":["歯間ブラシ","デンタルフロス","臨床経験"],"notice":{"tone":"opinion","label":"論文ではない"},"resources":[{"sourceId":56,"label":"臨床経験の動画","url":"https://youtu.be/kijB7StYmh0","kind":"動画"}]},{"id":"prevention-water-fluoride","title":"水道水フッ化物の影響：AI作成スライド","description":"元noteでは、知人から知った論文をAIでスライド化し、『一切、目視の確認はしていない』と明記されています。この資料を根拠として使用してはいけません。元論文、数値、引用、結論を人が照合するまでは、AI生成物の試作品としてのみ扱うべきです。","level":"要検証","tags":["水道水フッ化物","AI","未検証"],"notice":{"tone":"danger","label":"目視未確認・根拠利用不可"},"resources":[{"sourceId":57,"label":"AI作成スライド","url":"https://www.docswell.com/s/MXE05064/KN96LR-2025-11-22-083355","kind":"スライド"}]},{"id":"prevention-sugar-childhood","title":"幼児期の虫歯と砂糖の論文を読み解く","description":"NotebookLMで動画を作成し、16回の修正を経たと説明されています。プロンプトを調整して正確性と批判性を高めた一方、AIによる批判的吟味には限界があるとの自己評価も記載されています。完成度が高く見えても、AI動画は原著の代替ではありません。研究デザイン、交絡、測定、効果量、結論の飛躍を原文で確認してください。","level":"中級","tags":["幼児期う蝕","砂糖","NotebookLM","AI","批判的吟味"],"notice":{"tone":"caution","label":"AI解説は原著照合が必要"},"resources":[{"sourceId":58,"label":"解説動画","url":"https://youtu.be/KNWNUB_fY5c","kind":"動画"}]}]},{"id":"oral-care","group":"2．実際の論文を読んでみる：歯科・口腔外科","number":"2-1-5","title":"口腔のケア・食事・嚥下","guide":"総合学習アプリと、口腔ケアによる肺炎予防のエビデンス・ガイドライン上の誤解をまとめています。","items":[{"id":"oralcare-navi","title":"OralCare Navi：総合学習アプリ","description":"2026年4月18日作成の総合的な学習アプリとして紹介されています。疾患や課題ごとに口腔ケア、食事、嚥下の情報を探す入口です。個別の推奨は、対象と根拠を確認して利用してください。","level":"入門","tags":["口腔ケア","食事","嚥下","アプリ"],"notice":null,"resources":[{"sourceId":59,"label":"OralCare Naviを開く","url":"https://mxe050.github.io/Oral-Care-app/","kind":"アプリ"}]},{"id":"oralcare-pneumonia","title":"口腔のケアと肺炎","description":"クイック読み動画と、『口腔のケアと肺炎のエビデンスの真実』を扱うスライドが紹介されています。介入内容、対象者、肺炎の定義、死亡や入院への影響、エビデンスの確実性を分けて読みます。『口腔ケアなら何でも肺炎を防ぐ』という一般化は不適切です。","level":"中級","tags":["口腔ケア","肺炎","SR"],"notice":null,"resources":[{"sourceId":60,"label":"クイック読み動画","url":"https://youtu.be/GNXBBHMRrXY","kind":"動画"},{"sourceId":61,"label":"口腔のケア2：スライド","url":"https://www.slideshare.net/secret/kj82x7WwOpc9b5","kind":"スライド"}]},{"id":"oralcare-guideline-misunderstanding","title":"『口腔のケアと肺炎』と診療ガイドラインでの誤解：2025年版","description":"口腔ケアと肺炎をめぐる診療ガイドライン上の誤解を扱う別noteです。推奨の対象、介入、比較、アウトカム、確実性、推奨の強さを明示し、広すぎる表現になっていないか確認します。","level":"上級","tags":["口腔ケア","肺炎","診療ガイドライン","誤解"],"notice":null,"resources":[{"sourceId":62,"label":"2025年版noteを開く","url":"https://note.com/mxe05064/n/n5db741f43efe?app_launch=false","kind":"note"}]}]},{"id":"oral-surgery","group":"2．実際の論文を読んでみる：歯科・口腔外科","number":"2-1-6","title":"口腔外科・口腔内科","guide":"抜歯、第三大臼歯、味覚障害、舌痛症、口腔がん、白板症、MRONJ、顎関節症、ブラキシズムを横断的に収録しています。","items":[{"id":"surgery-antithrombotic-extraction","title":"抗血栓療法患者の抜歯ガイドライン：2025年版","description":"概要欄も確認するよう注記された解説動画です。薬剤中断の利益と害、出血リスク、血栓塞栓リスク、局所止血、医科との連携を、患者ごとに判断する必要があります。","level":"中級","tags":["抜歯","抗血栓療法","診療ガイドライン"],"notice":null,"resources":[{"sourceId":63,"label":"解説動画","url":"https://youtu.be/qAVsQX1EI8Y","kind":"動画"}]},{"id":"surgery-third-molar-spain","title":"埋伏下顎第三大臼歯：スペインCPG 2023の問題点と内容","description":"元noteでは『使用には注意してください』と明記され、2つのスライドが掲載されています。推奨をそのまま移植せず、対象患者、適用地域、作成法、エビデンスの確実性、利益と害の評価を確認してください。","level":"上級","tags":["第三大臼歯","埋伏智歯","スペイン","CPG"],"notice":{"tone":"caution","label":"使用注意"},"resources":[{"sourceId":64,"label":"スライド1","url":"https://www.docswell.com/s/MXE05064/ZJQMQE-2025-11-24-015022","kind":"スライド"},{"sourceId":65,"label":"スライド2","url":"https://www.docswell.com/s/MXE05064/K6EPE4-2025-11-24-104425","kind":"スライド"}]},{"id":"oralmedicine-taste-zinc","title":"味覚障害と亜鉛","description":"『EBMシステマティックレビューざっくり読み3』として、味覚障害と亜鉛を扱います。亜鉛欠乏の有無、原因別の対象、味覚評価法、有害事象を確認し、全ての味覚障害に一般化しないことが重要です。","level":"初級","tags":["味覚障害","亜鉛","SR"],"notice":null,"resources":[{"sourceId":66,"label":"ざっくり読み動画","url":"https://youtu.be/dEgJe_6OzYs","kind":"動画"}]},{"id":"oralmedicine-bms","title":"BMS・舌痛症","description":"2021年のシステマティックレビュー解説動画と、2026年3月にまとめた学習アプリが掲載されています。BMSは診断の除外過程が重要です。対象定義、併存症、介入の種類、疼痛・QOLアウトカム、追跡期間を確認します。","level":"中級","tags":["BMS","舌痛症","SR","アプリ"],"notice":null,"resources":[{"sourceId":67,"label":"2021年SRの解説動画","url":"https://www.youtube.com/watch?v=tY2Z2mx62Uk","kind":"動画"},{"sourceId":68,"label":"2026年まとめアプリ","url":"https://burning-mouth-2026-v2.vercel.app/","kind":"アプリ"}]},{"id":"cancer-nivolumab","title":"口腔がん化学療法：ニボルマブ第III相試験","description":"『EBMランダム化比較試験ざっくり読み1』として、ニボルマブの第III相試験を扱います。全生存期間、無増悪生存期間、奏効、有害事象、サブグループ、治療ラインを整理して読みます。","level":"中級","tags":["口腔がん","ニボルマブ","第III相試験","RCT"],"notice":null,"resources":[{"sourceId":69,"label":"RCT解説動画","url":"https://youtu.be/s_KkPgLw5yo","kind":"動画"}]},{"id":"cancer-keynote048-repeat","title":"KEYNOTE-048：頭頸部癌第III相試験（再掲）","description":"研究デザイン難解編の資料を、口腔がん化学療法の章にも再掲しています。複雑な試験設計の読み方と、臨床領域の両方から探せるよう重複を残しています。","level":"上級","tags":["KEYNOTE-048","頭頸部癌","再掲"],"notice":null,"resources":[{"sourceId":34,"label":"KEYNOTE-048スライド","url":"https://www.docswell.com/s/MXE05064/KQ8RN7-2023-04-26-153820","kind":"スライド"}]},{"id":"cancer-keynote689","title":"口腔がん：KEYNOTE-689解説","description":"KEYNOTE-689について、スライドと動画が掲載されています。周術期治療、主要評価項目、解析集団、イベント定義、逐次検定、有害事象を分けて確認する必要があります。","level":"上級","tags":["KEYNOTE-689","口腔がん","周術期治療","RCT"],"notice":null,"resources":[{"sourceId":70,"label":"解説スライド","url":"https://www.docswell.com/s/MXE05064/KDMMLD-2026-07-04-211142","kind":"スライド"},{"sourceId":71,"label":"解説動画","url":"https://youtu.be/78mBugwg4Nk","kind":"動画"}]},{"id":"cancer-head-neck-nma","title":"頭頸部癌のNMAで基本を学ぶ","description":"エビデンスの確実性とMID以外のNMAの基本を扱う動画とスライドです。ネットワークの構造、効果推定、ランキング、比較可能性を確認し、疾患固有の治療選択と方法論を結びつけます。","level":"上級","tags":["頭頸部癌","NMA","ネットワークメタ分析"],"notice":null,"resources":[{"sourceId":72,"label":"解説動画","url":"https://youtu.be/Ux08THCUxfw","kind":"動画"},{"sourceId":73,"label":"解説スライド","url":"https://www.docswell.com/s/MXE05064/ZGN6GD-2026-08-10-132546","kind":"スライド"}]},{"id":"leukoplakia-observational","title":"口腔白板症の非ランダム化研究を読む","description":"観察研究を読む資料で、スライドと動画があり、概要欄も確認するよう記載されています。選択バイアス、交絡、病変定義、悪性化の判定、追跡期間、欠測を重点的に確認します。","level":"上級","tags":["口腔白板症","観察研究","非ランダム化研究"],"notice":null,"resources":[{"sourceId":74,"label":"観察研究スライド","url":"https://www.docswell.com/s/MXE05064/KX297P-2026-07-17-034206","kind":"スライド"},{"sourceId":75,"label":"観察研究動画","url":"https://youtu.be/EmLzytLbLZQ","kind":"動画"}]},{"id":"leukoplakia-sr","title":"口腔白板症のSRを読む","description":"口腔白板症のシステマティックレビューを読むためのスライドと動画で、概要欄も確認するよう記載されています。対象病変、介入、悪性化・再発などのアウトカム、研究デザイン混在、追跡期間を確認します。","level":"上級","tags":["口腔白板症","SR","悪性化"],"notice":null,"resources":[{"sourceId":76,"label":"SRスライド","url":"https://www.docswell.com/s/MXE05064/KPRLP2-2026-07-17-034030","kind":"スライド"},{"sourceId":77,"label":"SR動画","url":"https://youtu.be/a9XmgN8f-TU","kind":"動画"}]},{"id":"mronj","title":"薬剤関連顎骨壊死（MRONJ）の最新知識と予防","description":"歯科医師以外の医療従事者向けに作成し、スライドを最小限にして会話に集中できるようにした動画です。薬剤、適応疾患、リスク、歯科処置、予防、医科歯科連携を整理する導入資料です。個別患者の休薬判断は単純化できません。","level":"初級","tags":["MRONJ","顎骨壊死","医科歯科連携"],"notice":null,"resources":[{"sourceId":78,"label":"MRONJ解説動画","url":"https://www.youtube.com/watch?v=G1LH6WW4HVI","kind":"動画"}]},{"id":"meta-regression-tooth-transplant","title":"メタ回帰分析の応用例：歯の移植と根形態","description":"歯の移植と根形態を扱うSRのメタ回帰分析で、概要欄も確認するよう記載されています。メタ回帰は研究レベルの関連を調べる方法で、個人レベルの因果関係を直接示しません。研究数が少ない場合は特に不安定です。","level":"上級","tags":["メタ回帰","歯の移植","根形態","SR"],"notice":null,"resources":[{"sourceId":79,"label":"メタ回帰の解説動画","url":"https://youtu.be/rPiMXjDH7qA","kind":"動画"}]},{"id":"tmd-bmj-rapid","title":"慢性痛としての顎関節症：BMJ Rapid Recommendation","description":"日本のCPGとは対象が異なる、慢性痛としての顎関節症の診療ガイドラインとNMAを読むための解説です。元noteではGordon Guyatt共著と記載されています。対象集団の違いを無視して日本の全TMD患者へ一般化してはいけません。慢性痛の定義、介入比較、利益と害、確実性を確認します。","level":"上級","tags":["顎関節症","慢性痛","BMJ Rapid Recommendation","NMA"],"notice":null,"resources":[{"sourceId":80,"label":"解説スライド","url":"https://www.docswell.com/s/MXE05064/5M187E-2023-12-30-234145","kind":"スライド"}]},{"id":"tmd-inform","title":"INfORM／IADRの報告","description":"元noteで『重要』と位置づけられたINfORM／IADRの報告へのリンクです。解説資料ではなく原著報告です。対象、診断概念、提案内容、合意形成法を原文で確認してください。","level":"上級","tags":["TMD","INfORM","IADR","原著"],"notice":{"tone":"source","label":"原著報告"},"resources":[{"sourceId":81,"label":"原著報告を開く","url":"https://www.tandfonline.com/doi/full/10.1080/08869634.2024.2405298?src=exp-la#abstract","kind":"論文"}]},{"id":"tmd-author-series","title":"著者による顎関節症の基本解説","description":"EBMとは関係なく作成したと明記されたシリーズで、診断編前半・後半、治療編、スライド編があります。教育的な臨床解説として読み、個々の診断・治療推奨の根拠は診療ガイドラインや原著と照合してください。","level":"初級","tags":["顎関節症","診断","治療","著者解説"],"notice":{"tone":"opinion","label":"EBM資料ではない"},"resources":[{"sourceId":82,"label":"診断編前半","url":"https://www.youtube.com/watch?v=nxXqlKRebkw&t=764s","kind":"動画"},{"sourceId":83,"label":"診断編後半","url":"https://youtu.be/qGFylFNR_bw","kind":"動画"},{"sourceId":84,"label":"治療編","url":"https://youtu.be/RpPRxGlshls","kind":"動画"},{"sourceId":85,"label":"スライド編","url":"https://www.docswell.com/s/MXE05064/5W1W3R-2023-04-26-152630","kind":"スライド"}]},{"id":"tmd-guideline-treatment","title":"顎関節症の診療ガイドラインから治療法を学ぶ","description":"顎関節症の診療ガイドラインを通じて治療法を学ぶ動画です。推奨の対象、治療の比較、アウトカム、推奨の強さと確実性を確認し、患者の病型と一致するかを判断します。","level":"中級","tags":["顎関節症","診療ガイドライン","治療"],"notice":null,"resources":[{"sourceId":86,"label":"解説動画","url":"https://youtu.be/BCp2op4qnCY","kind":"動画"}]},{"id":"bruxism-spin","title":"咬筋へのボツリヌス毒素A注射とスピンバイアス","description":"ボトックスの咬筋注射論文におけるスピンバイアスのSRを、動画とスライドにした資料です。元noteではスライドの動きが十分でないとの注記があります。抄録や結論の肯定的表現が、主要結果や統計的不確実性を過大に見せていないかを検討する題材です。","level":"上級","tags":["ブラキシズム","ボツリヌス毒素","スピンバイアス"],"notice":null,"resources":[{"sourceId":87,"label":"スピンバイアス動画","url":"https://www.youtube.com/watch?v=0yqvj7pB5Uc","kind":"動画"},{"sourceId":88,"label":"スライド","url":"https://www.docswell.com/s/MXE05064/ZMV67J-2025-07-21-192509","kind":"スライド"}]},{"id":"bruxism-ai","title":"2025年ブラキシズムSRをAIで批判的吟味する練習","description":"AI練習として、ブラキシズムの2025年システマティックレビューを批判的吟味する動画です。AIが作った批判点をそのまま採用せず、レビューのプロトコル、検索、RoB、統合方法、GRADE、結論と照合してください。","level":"上級","tags":["ブラキシズム","SR","AI","批判的吟味"],"notice":{"tone":"caution","label":"AI出力の検証が必要"},"resources":[{"sourceId":89,"label":"AI練習動画","url":"https://youtu.be/JNDhXMTkb_c","kind":"動画"}]},{"id":"tmd-occlusion-opinion","title":"顎関節症と咬合：下顎頭位置を治療標的にする考えへの問題提起","description":"元noteでは、下顎頭骨折の臨床経験や無症候者にも円板転位がみられることを挙げ、下顎頭の位置や咬合様式を過度に治療標的とする考え方へ疑問を呈しています。研究一覧の画像も掲載されています。これは著者の臨床的見解と問題提起です。結論として一般化するには、画像内の原著、対象集団、診断法、症状との関連、予後研究を個別に確認する必要があります。","level":"上級","tags":["顎関節症","咬合","円板転位","下顎頭","著者見解"],"notice":{"tone":"opinion","label":"著者の臨床的見解"},"resources":[{"sourceId":90,"label":"元note掲載の研究一覧画像","url":"https://assets.st-note.com/img/1757824383-NfeWLMTUbr4zEq18SiZhxstg.jpg?width=1200","kind":"画像"}]},{"id":"tmd-dctmd-opinion","title":"DC/TMDが嫌いな理由：著者の感想","description":"海外では補綴系が主流で筋痛障害が多いようだ、という文脈を含む著者の感想noteです。感想と方法論的批判は別です。DC/TMDの目的、妥当性、再現性、適用範囲のどこを批判しているかを明確にして読む必要があります。","level":"上級","tags":["DC/TMD","顎関節症","著者の感想"],"notice":{"tone":"opinion","label":"感想・意見"},"resources":[{"sourceId":91,"label":"感想noteを開く","url":"https://note.com/mxe05064/n/n58b0a66d98db","kind":"note"}]}]},{"id":"dental-other","group":"2．実際の論文を読んでみる：歯科・口腔外科","number":"2-1-7","title":"歯科・その他","guide":"一見もっともらしい関連を再解析し、相関と因果、解析の妥当性を考える題材です。","items":[{"id":"dental-ovd-finger","title":"咬合高径と指の長さの相関：SRを再解析して読む","description":"歯科の咬合高径と指の長さが相関するというシステマティックレビューを再解析する動画で、概要欄も確認するよう記載されています。相関係数の統合、研究間異質性、測定誤差、選択バイアスを確認し、相関から臨床的な測定法の妥当性へ飛躍しないことが重要です。","level":"上級","tags":["咬合高径","相関","再解析","SR"],"notice":null,"resources":[{"sourceId":92,"label":"再解析動画","url":"https://www.youtube.com/watch?v=outHKzE_1HM","kind":"動画"}]}]},{"id":"medical-sr","group":"2．実際の論文を読んでみる：医科・その他","number":"2-2-1","title":"医科・その他：システマティックレビュー","guide":"人工膝関節術後痛、サルコペニア、糖尿病、慢性痛、減量薬を題材に、観察研究メタ分析とNMAを学びます。","items":[{"id":"medical-tka-pain","title":"観察研究のメタ分析：TKA後の持続痛予測因子","description":"人工膝関節全置換術後の持続的な痛みの予測因子を特定する観察研究のメタ分析を扱います。予測因子研究では、因果効果ではなく予測性能、因子定義、調整変数、欠測、モデルの妥当性を確認します。","level":"上級","tags":["観察研究","メタ分析","TKA","持続痛","予測因子"],"notice":null,"resources":[{"sourceId":93,"label":"解説スライド","url":"https://www.docswell.com/s/MXE05064/ZYWD2P-2023-05-07-093618","kind":"スライド"}]},{"id":"medical-nma-sarcopenia-repeat","title":"NMA：サルコペニアと運動（再掲）","description":"歯科領域外のNMA例として、前章のサルコペニアと運動の資料を再掲しています。同じリンクを方法論章と医科領域章の両方に残しています。","level":"中級","tags":["NMA","サルコペニア","運動","再掲"],"notice":null,"resources":[{"sourceId":30,"label":"サルコペニアNMAスライド","url":"https://www.docswell.com/s/MXE05064/Z242NR-2023-04-21-162508","kind":"スライド"}]},{"id":"medical-nma-diabetes-repeat","title":"NMA：2型糖尿病の薬物療法（再掲）","description":"医科領域のNMA例として、前章の2型糖尿病薬物療法資料を再掲しています。ランキング、確実性、メタ回帰を確認する資料として、元noteの重複を維持しています。","level":"上級","tags":["NMA","2型糖尿病","再掲"],"notice":null,"resources":[{"sourceId":31,"label":"2型糖尿病NMAスライド","url":"https://www.docswell.com/s/MXE05064/5DEJ96-2023-05-12-222233","kind":"スライド"}]},{"id":"medical-nma-antidepressants","title":"NMA：慢性疼痛患者と抗うつ薬","description":"慢性疼痛患者と抗うつ薬のネットワークメタ分析を、スライド34まで読む資料です。疼痛の種類、薬剤クラス、用量、短期・長期アウトカム、有害事象を分けて解釈します。","level":"上級","tags":["NMA","慢性疼痛","抗うつ薬"],"notice":null,"resources":[{"sourceId":94,"label":"解説スライド","url":"https://www.docswell.com/s/MXE05064/Z24MEM-2023-05-16-234842","kind":"スライド"}]},{"id":"medical-weight-loss","title":"2026年時点の減量薬に関する重要なSR","description":"2026年時点で重要と位置づけられた、減量薬のシステマティックレビュー資料です。体重減少の大きさだけでなく、脱落、有害事象、治療中止後、心血管・代謝アウトカム、追跡期間を確認します。","level":"上級","tags":["減量薬","肥満","SR","2026"],"notice":null,"resources":[{"sourceId":95,"label":"減量薬SRスライド","url":"https://www.docswell.com/s/MXE05064/5PRLR8-2026-07-10-155349","kind":"スライド"}]}]},{"id":"medical-cpg","group":"2．実際の論文を読んでみる：医科・その他","number":"2-2-2","title":"医科・その他：診療ガイドライン","guide":"ワクチンと画像診断を題材に、異なる組織の推奨と診療ガイドラインの読み方を考えます。","items":[{"id":"medical-vaccine","title":"12〜15歳のワクチン接種：CDCとWHOの推奨","description":"『EBM診療ガイドラインざっくり読み1』として、CDCとWHOの12〜15歳へのワクチン接種推奨を扱います。同じエビデンスでも、時点、地域、感染状況、価値判断、資源により推奨が異なり得ることを確認する題材です。","level":"中級","tags":["ワクチン","CDC","WHO","診療ガイドライン"],"notice":null,"resources":[{"sourceId":96,"label":"診療ガイドライン解説動画","url":"https://youtu.be/DXEjo2Cyaw4","kind":"動画"}]},{"id":"medical-imaging-guideline","title":"画像診断の臨床ガイドラインを読む","description":"『画像の診断の臨床ガイドラインを読んでみよう：1』へのリンクです。画像検査は診断精度だけでなく、患者重要アウトカム、被ばく、偶発所見、過剰診断、資源利用まで考える必要があります。","level":"中級","tags":["画像診断","診療ガイドライン","診断精度"],"notice":null,"resources":[{"sourceId":97,"label":"関連noteを開く","url":"https://note.com/mxe05064/n/nc17f59104dfa","kind":"note"}]}]},{"id":"author-summary","group":"2．実際の論文を読んでみる：医科・その他","number":"2-2-3","title":"note著者のまとめ","guide":"元noteで著者のまとめとして置かれていた資料を、研究論文やガイドラインと区別して収録しています。","items":[{"id":"author-mask-reuse","title":"マスクの再利用：一般編","description":"マスクの再利用についての一般向け動画です。感染状況、マスクの種類、再利用方法、使用環境で結論は変わります。現行の公的指針と照合して利用してください。","level":"初級","tags":["マスク","再利用","感染対策","著者まとめ"],"notice":{"tone":"caution","label":"公的指針との照合が必要"},"resources":[{"sourceId":98,"label":"一般編動画","url":"https://youtu.be/f5YKEHcxAbA","kind":"動画"}]}]},{"id":"creation","group":"関連リンク","number":"NEXT","title":"作成編","guide":"EBMを読む側ではなく、システマティックレビューや診療ガイドラインを作る側のリンク集へ進みます。","items":[{"id":"creation-note","title":"Y先生のEBM・診療ガイドライン講座リンク先一覧：作成編","description":"元note末尾の『作成編』リンクです。検索、データ抽出、メタ分析、GRADE、推奨作成など、作成者向けの資料を探す入口です。","level":"中級","tags":["作成編","SR作成","診療ガイドライン作成"],"notice":null,"resources":[{"sourceId":99,"label":"作成編noteを開く","url":"https://note.com/mxe05064/n/n4b3ab8020899","kind":"note"}]}]}],"permanentAdditionalLinks":[]}</script>
+  <script>
+  (() => {
+    'use strict';
+
+    const data = JSON.parse(document.getElementById('app-data').textContent);
+    const STORAGE_KEY = 'ysensei-ebm-additional-links-v1';
+    const FONT_KEY = 'ysensei-ebm-font-scale-v1';
+    const memoryStorage = new Map();
+    const storage = (() => {
+      try {
+        const probe = '__ysensei_storage_probe__';
+        window.localStorage.setItem(probe, '1');
+        window.localStorage.removeItem(probe);
+        return window.localStorage;
+      } catch (_) {
+        return {
+          getItem: key => memoryStorage.has(key) ? memoryStorage.get(key) : null,
+          setItem: (key, value) => memoryStorage.set(key, String(value)),
+          removeItem: key => memoryStorage.delete(key),
+          clear: () => memoryStorage.clear(),
+        };
+      }
+    })();
+    const state = {
+      query: '',
+      kind: 'all',
+      added: [],
+      editId: null,
+    };
+
+    const els = {
+      sections: document.getElementById('sections'),
+      toc: document.getElementById('toc'),
+      mobileToc: document.getElementById('mobileToc'),
+      search: document.getElementById('searchInput'),
+      kind: document.getElementById('kindFilter'),
+      result: document.getElementById('resultCount'),
+      noResults: document.getElementById('noResults'),
+      clearSearch: document.getElementById('clearSearch'),
+      sourceNoteLink: document.getElementById('sourceNoteLink'),
+      addedList: document.getElementById('addedList'),
+      statAdded: document.getElementById('statAdded'),
+      addForm: document.getElementById('addForm'),
+      formStatus: document.getElementById('formStatus'),
+    };
+
+    function normalize(value) {
+      return String(value ?? '')
+        .normalize('NFKC')
+        .toLocaleLowerCase('ja')
+        .replace(/[\s　]+/g, ' ')
+        .trim();
+    }
+
+    function iconFor(kind) {
+      return ({
+        '動画': '▶',
+        'スライド': '▤',
+        'note': 'N',
+        'アプリ': '◇',
+        '論文': '文',
+        '画像': '▧',
+        'その他': '↗',
+      })[kind] || '↗';
+    }
+
+    function isSafeHttpUrl(value) {
+      try {
+        const u = new URL(value);
+        return u.protocol === 'https:' || u.protocol === 'http:';
+      } catch (_) {
+        return false;
+      }
+    }
+
+    function create(tag, className, text) {
+      const el = document.createElement(tag);
+      if (className) el.className = className;
+      if (text !== undefined && text !== null) el.textContent = text;
+      return el;
+    }
+
+    function searchableItem(section, item) {
+      return normalize([
+        section.group, section.number, section.title,
+        item.title, item.description, item.level,
+        ...(item.tags || []),
+        ...item.resources.flatMap(r => [r.label, r.kind, r.url]),
+      ].join(' '));
+    }
+
+    function matches(section, item) {
+      const textOk = !state.query || searchableItem(section, item).includes(state.query);
+      const kindOk = state.kind === 'all' || item.resources.some(r => r.kind === state.kind);
+      return textOk && kindOk;
+    }
+
+    function noticeBadge(notice) {
+      if (!notice) return null;
+      return create('span', `badge notice-${notice.tone || 'caution'}`, notice.label || '注意');
+    }
+
+    function resourceLink(resource) {
+      const a = create('a', 'resource-link');
+      a.href = resource.url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.setAttribute('data-kind', resource.kind);
+      const kind = create('span', 'resource-kind', `${iconFor(resource.kind)} ${resource.kind}`);
+      const label = create('span', '', resource.label);
+      a.append(kind, label);
+      return a;
+    }
+
+    function renderCard(section, item) {
+      const article = create('article', 'card');
+      article.id = `item-${item.id}`;
+      article.dataset.search = searchableItem(section, item);
+      article.dataset.kinds = item.resources.map(r => r.kind).join('|');
+
+      const top = create('div', 'card-top');
+      const title = create('h3', '', item.title);
+      top.append(title);
+      article.append(top);
+
+      const badges = create('div', 'badges');
+      badges.append(create('span', 'badge level', item.level));
+      const n = noticeBadge(item.notice);
+      if (n) badges.append(n);
+      (item.tags || []).slice(0, 5).forEach(tag => badges.append(create('span', 'badge', tag)));
+      article.append(badges);
+
+      const copy = create('div', 'card-copy');
+      const description = create('div', 'copy-block');
+      description.append(create('p', '', item.description));
+      copy.append(description);
+      article.append(copy);
+
+      const resources = create('div', 'resources');
+      item.resources.forEach(r => resources.append(resourceLink(r)));
+      article.append(resources);
+
+      const imageResource = item.resources.find(r => r.kind === '画像');
+      if (imageResource) {
+        const figure = create('figure', 'image-preview');
+        const img = document.createElement('img');
+        img.src = imageResource.url;
+        img.alt = `${item.title}に関連する元note掲載画像`;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        const caption = create('figcaption', '', '元note掲載画像。拡大表示は上の画像リンクから開けます。');
+        figure.append(img, caption);
+        article.append(figure);
+      }
+      return article;
+    }
+
+    function renderSections() {
+      els.sections.replaceChildren();
+      let visibleItems = 0;
+      let visibleLinks = 0;
+
+      data.sections.forEach((section, sectionIndex) => {
+        const visible = section.items.filter(item => matches(section, item));
+        if (!visible.length) return;
+        visibleItems += visible.length;
+        visibleLinks += visible.reduce((n, item) => n + item.resources.filter(r => state.kind === 'all' || r.kind === state.kind).length, 0);
+
+        const details = create('details', 'section');
+        details.id = section.id;
+        details.dataset.sectionIndex = String(sectionIndex);
+        if (sectionIndex === 0 || state.query || state.kind !== 'all') details.open = true;
+
+        const summary = document.createElement('summary');
+        const no = create('span', 'section-no', section.number);
+        const titleWrap = create('div', 'section-title-wrap');
+        titleWrap.append(create('div', 'section-group', section.group));
+        titleWrap.append(create('h2', 'section-title', section.title));
+        const count = create('span', 'section-count', `${visible.length}項目`);
+        const chevron = create('span', 'chevron', '⌄');
+        chevron.setAttribute('aria-hidden', 'true');
+        summary.append(no, titleWrap, count, chevron);
+        details.append(summary);
+
+        const body = create('div', 'section-body');
+        body.append(create('p', 'section-guide', section.guide));
+        const cards = create('div', 'cards');
+        visible.forEach(item => cards.append(renderCard(section, item)));
+        body.append(cards);
+        details.append(body);
+        els.sections.append(details);
+
+      });
+
+      els.noResults.hidden = visibleItems > 0;
+      const addedVisible = filterAdded().length;
+      const addedLinks = addedVisible;
+      els.result.textContent = `表示中：${visibleItems}項目・${visibleLinks}リンク ／ 追加 ${addedVisible}件`;
+      updateTocVisibility();
+    }
+
+    function buildToc() {
+      const desktopFrag = document.createDocumentFragment();
+      const mobileFrag = document.createDocumentFragment();
+      let lastGroup = '';
+      data.sections.forEach(section => {
+        if (section.group !== lastGroup) {
+          desktopFrag.append(create('div', 'toc-group', section.group));
+          lastGroup = section.group;
+        }
+        const a = create('a', '', `${section.number} ${section.title}`);
+        a.href = `#${section.id}`;
+        a.dataset.target = section.id;
+        desktopFrag.append(a);
+
+        const ma = create('a', '', `${section.number} ${section.title}`);
+        ma.href = `#${section.id}`;
+        ma.dataset.target = section.id;
+        ma.addEventListener('click', () => {
+          const nav = document.querySelector('.mobile-nav');
+          if (nav) nav.open = false;
+        });
+        mobileFrag.append(ma);
+      });
+
+      const addA = create('a', '', '2026年8月以降追加リンク');
+      addA.href = '#additional-links';
+      addA.dataset.target = 'additional-links';
+      desktopFrag.append(create('div', 'toc-group', '今後の追加'));
+      desktopFrag.append(addA);
+      const addMA = create('a', '', '2026年8月以降追加リンク');
+      addMA.href = '#additional-links';
+      mobileFrag.append(addMA);
+
+      els.toc.append(desktopFrag);
+      els.mobileToc.append(mobileFrag);
+    }
+
+    function updateTocVisibility() {
+      document.querySelectorAll('[data-target]').forEach(a => {
+        const target = document.getElementById(a.dataset.target);
+        a.hidden = !target;
+      });
+    }
+
+    function updateActiveToc() {
+      const targets = [...document.querySelectorAll('.section, .additional-section')];
+      let active = targets[0]?.id || '';
+      for (const target of targets) {
+        if (target.getBoundingClientRect().top <= 180) active = target.id;
+      }
+      document.querySelectorAll('[data-target]').forEach(a => {
+        a.setAttribute('aria-current', a.dataset.target === active ? 'true' : 'false');
+      });
+    }
+
+    function filterAdded() {
+      return state.added.filter(entry => {
+        const text = normalize([entry.title, entry.url, entry.kind, entry.explanation, entry.tags, entry.date].join(' '));
+        const textOk = !state.query || text.includes(state.query);
+        const kindOk = state.kind === 'all' || entry.kind === state.kind;
+        return textOk && kindOk;
+      });
+    }
+
+    function renderAdded() {
+      els.addedList.replaceChildren();
+      const list = filterAdded();
+      els.statAdded.textContent = String(state.added.length);
+      if (!list.length) {
+        const msg = state.added.length
+          ? '現在の検索条件に一致する追加リンクはありません。'
+          : 'まだ追加リンクはありません。「新しいリンクを追加」から登録できます。';
+        els.addedList.append(create('p', 'empty-additions', msg));
+        return;
+      }
+      list
+        .slice()
+        .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+        .forEach(entry => {
+          const card = create('article', 'card added-card');
+          const title = create('h3', '', entry.title);
+          card.append(title);
+          const meta = create('p', 'added-meta', `追加日：${entry.date || '未設定'} ／ 形式：${entry.kind || 'その他'}`);
+          card.append(meta);
+          if (entry.explanation) {
+            const block = create('div', 'copy-block plain');
+            block.append(create('strong', '', '説明'));
+            block.append(create('p', '', entry.explanation));
+            card.append(block);
+          }
+          const resources = create('div', 'resources');
+          resources.append(resourceLink({label: 'リンクを開く', url: entry.url, kind: entry.kind || 'その他'}));
+          card.append(resources);
+          if (entry.tags) {
+            const badges = create('div', 'badges');
+            String(entry.tags).split(/[,、]/).map(t => t.trim()).filter(Boolean).slice(0, 8).forEach(t => badges.append(create('span', 'badge', t)));
+            card.append(badges);
+          }
+          const controls = create('div', 'added-controls');
+          const edit = create('button', 'mini-button', '編集');
+          edit.type = 'button';
+          edit.addEventListener('click', () => beginEdit(entry.id));
+          const del = create('button', 'mini-button delete', '削除');
+          del.type = 'button';
+          del.addEventListener('click', () => deleteAdded(entry.id));
+          controls.append(edit, del);
+          card.append(controls);
+          els.addedList.append(card);
+        });
+    }
+
+    function loadAdded() {
+      let local = [];
+      try {
+        const parsed = JSON.parse(storage.getItem(STORAGE_KEY) || '[]');
+        if (Array.isArray(parsed)) local = parsed.filter(validateAddedEntry);
+      } catch (_) {}
+      const permanent = Array.isArray(data.permanentAdditionalLinks) ? data.permanentAdditionalLinks.filter(validateAddedEntry) : [];
+      const byId = new Map([...permanent, ...local].map(x => [x.id, x]));
+      state.added = [...byId.values()];
+    }
+
+    function validateAddedEntry(entry) {
+      return entry && typeof entry === 'object' && typeof entry.title === 'string' && isSafeHttpUrl(entry.url);
+    }
+
+    function saveAdded() {
+      storage.setItem(STORAGE_KEY, JSON.stringify(state.added));
+      renderAdded();
+      renderSections();
+    }
+
+    function resetForm() {
+      els.addForm.reset();
+      state.editId = null;
+      els.formStatus.textContent = '';
+      document.getElementById('addDate').value = new Date().toISOString().slice(0, 10);
+      els.addForm.querySelector('button[type="submit"]').textContent = '保存する';
+    }
+
+    function beginEdit(id) {
+      const entry = state.added.find(x => x.id === id);
+      if (!entry) return;
+      state.editId = id;
+      document.getElementById('addTitle').value = entry.title || '';
+      document.getElementById('addUrl').value = entry.url || '';
+      document.getElementById('addKind').value = entry.kind || 'その他';
+      document.getElementById('addDate').value = entry.date || '';
+      document.getElementById('addExplanation').value = entry.explanation || '';
+      document.getElementById('addTags').value = entry.tags || '';
+      els.addForm.hidden = false;
+      els.addForm.querySelector('button[type="submit"]').textContent = '更新する';
+      els.addForm.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+
+    function deleteAdded(id) {
+      const entry = state.added.find(x => x.id === id);
+      if (!entry) return;
+      if (!confirm(`「${entry.title}」を削除しますか？`)) return;
+      state.added = state.added.filter(x => x.id !== id);
+      saveAdded();
+    }
+
+    function exportAdded() {
+      const payload = {
+        exportedAt: new Date().toISOString(),
+        section: '2026年8月以降追加リンク',
+        links: state.added,
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], {type: 'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `EBM追加リンク_${new Date().toISOString().slice(0,10)}.json`;
+      document.body.append(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function importAdded(file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(String(reader.result || ''));
+          const list = Array.isArray(parsed) ? parsed : parsed.links;
+          if (!Array.isArray(list)) throw new Error('links配列がありません');
+          const valid = list.filter(validateAddedEntry).map(entry => ({
+            id: entry.id || (crypto.randomUUID ? crypto.randomUUID() : `added-${Date.now()}-${Math.random()}`),
+            title: String(entry.title).slice(0, 180),
+            url: entry.url,
+            kind: entry.kind || 'その他',
+            date: entry.date || '',
+            explanation: String(entry.explanation || '').slice(0, 1200),
+            tags: String(entry.tags || '').slice(0, 300),
+          }));
+          if (!valid.length) throw new Error('有効なリンクがありません');
+          const map = new Map(state.added.map(x => [x.id, x]));
+          valid.forEach(x => map.set(x.id, x));
+          state.added = [...map.values()];
+          saveAdded();
+          alert(`${valid.length}件を読み込みました。`);
+        } catch (error) {
+          alert(`読み込みできませんでした：${error.message}`);
+        }
+      };
+      reader.readAsText(file, 'utf-8');
+    }
+
+    function setFontScale(next) {
+      const clamped = Math.max(.88, Math.min(1.22, next));
+      document.documentElement.style.setProperty('--font-scale', String(clamped));
+      storage.setItem(FONT_KEY, String(clamped));
+    }
+
+    function initStats() {
+      document.getElementById('statItems').textContent = String(data.audit.itemCount);
+      document.getElementById('statOccurrences').textContent = String(data.audit.linkOccurrences);
+      document.getElementById('statUnique').textContent = String(data.audit.uniqueSourceLinks);
+      document.getElementById('footerAudit').textContent = `${data.audit.itemCount}項目、元note内のリンク掲載 ${data.audit.linkOccurrences}件、異なるリンク先 ${data.audit.uniqueSourceLinks}件を収録。元noteのリンクID 3〜99を欠落なく確認。`;
+      els.sourceNoteLink.href = data.sourceNote;
+    }
+
+    els.search.addEventListener('input', () => {
+      state.query = normalize(els.search.value);
+      renderSections();
+      renderAdded();
+    });
+    els.kind.addEventListener('change', () => {
+      state.kind = els.kind.value;
+      renderSections();
+      renderAdded();
+    });
+    els.clearSearch.addEventListener('click', () => {
+      els.search.value = '';
+      els.kind.value = 'all';
+      state.query = '';
+      state.kind = 'all';
+      renderSections();
+      renderAdded();
+      els.search.focus();
+    });
+    document.getElementById('openAll').addEventListener('click', () => document.querySelectorAll('.section').forEach(d => d.open = true));
+    document.getElementById('closeAll').addEventListener('click', () => document.querySelectorAll('.section').forEach(d => d.open = false));
+
+    document.getElementById('fontDown').addEventListener('click', () => {
+      const current = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--font-scale')) || 1;
+      setFontScale(current - .06);
+    });
+    document.getElementById('fontUp').addEventListener('click', () => {
+      const current = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--font-scale')) || 1;
+      setFontScale(current + .06);
+    });
+
+    document.getElementById('toggleAddForm').addEventListener('click', () => {
+      if (els.addForm.hidden) {
+        resetForm();
+        els.addForm.hidden = false;
+        document.getElementById('addTitle').focus();
+      } else {
+        els.addForm.hidden = true;
+      }
+    });
+    document.getElementById('cancelAdd').addEventListener('click', () => {
+      els.addForm.hidden = true;
+      resetForm();
+    });
+    els.addForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const fd = new FormData(els.addForm);
+      const title = String(fd.get('title') || '').trim();
+      const url = String(fd.get('url') || '').trim();
+      if (!title || !isSafeHttpUrl(url)) {
+        els.formStatus.textContent = 'タイトルと、有効な http(s) URLを入力してください。';
+        return;
+      }
+      const entry = {
+        id: state.editId || (crypto.randomUUID ? crypto.randomUUID() : `added-${Date.now()}-${Math.random()}`),
+        title: title.slice(0, 180),
+        url,
+        kind: String(fd.get('kind') || 'その他'),
+        date: String(fd.get('date') || ''),
+        explanation: String(fd.get('explanation') || '').trim().slice(0, 1200),
+        tags: String(fd.get('tags') || '').trim().slice(0, 300),
+      };
+      if (state.editId) {
+        state.added = state.added.map(x => x.id === state.editId ? entry : x);
+      } else {
+        state.added.push(entry);
+      }
+      saveAdded();
+      els.formStatus.textContent = state.editId ? '更新しました。' : '追加しました。';
+      resetForm();
+      els.addForm.hidden = true;
+      document.getElementById('additional-links').scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+    document.getElementById('exportAdded').addEventListener('click', exportAdded);
+    document.getElementById('importAdded').addEventListener('change', event => {
+      const file = event.target.files && event.target.files[0];
+      if (file) importAdded(file);
+      event.target.value = '';
+    });
+    document.getElementById('clearAdded').addEventListener('click', () => {
+      if (!state.added.length) return;
+      if (!confirm('「2026年8月以降追加リンク」の追加分をすべて削除しますか？')) return;
+      state.added = [];
+      saveAdded();
+    });
+
+    window.addEventListener('scroll', () => requestAnimationFrame(updateActiveToc), {passive: true});
+    window.addEventListener('hashchange', () => {
+      const id = location.hash.slice(1);
+      const target = document.getElementById(id);
+      if (target && target.tagName === 'DETAILS') target.open = true;
+    });
+
+    const savedScale = parseFloat(storage.getItem(FONT_KEY) || '1');
+    if (Number.isFinite(savedScale)) setFontScale(savedScale);
+    loadAdded();
+    initStats();
+    buildToc();
+    renderSections();
+    renderAdded();
+    resetForm();
+    updateActiveToc();
+  })();
+  </script>
+</body>
+</html>
