@@ -6,7 +6,7 @@
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
 <link rel="stylesheet" href="style.css?v=7.3">
-<link rel="stylesheet" href="style-cpgsr.css?v=8.9">
+<link rel="stylesheet" href="style-cpgsr.css?v=9.0">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -35,7 +35,10 @@
 
   <!-- サイドバー（目次） -->
   <nav class="sidebar" id="sidebar">
-    <div class="sidebar-header">目次 / Table of Contents</div>
+    <div class="sidebar-header">
+      <span>学習目次 / Study Map</span>
+      <span class="sidebar-learning-note">各章は学習の入口です。章内の詳細解説・関連資料・演習も開いてください。</span>
+    </div>
     <ul class="toc-list" id="tocList">
       <li class="toc-item"><button class="toc-btn active" data-idx="0"><span class="toc-num">0</span><span class="toc-text">まずここからお読みください<span class="en">Start here</span></span></button></li>
 
@@ -60,11 +63,11 @@
       <li class="toc-item"><button class="toc-btn" data-idx="8"><span class="toc-num">8</span><span class="toc-text">Risk of Bias（RCT＋観察研究）<span class="en">Risk of Bias</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="9"><span class="toc-num">9</span><span class="toc-text">不一致性<span class="en">Inconsistency</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="10"><span class="toc-num">10</span><span class="toc-text">非直接性<span class="en">Indirectness</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="11"><span class="toc-num">11</span><span class="toc-text">不確実性<span class="en">Imprecision</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="11"><span class="toc-num">11</span><span class="toc-text">不精確さ<span class="en">Imprecision</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="12"><span class="toc-num">12</span><span class="toc-text">Dissemination bias<span class="en">Dissemination bias</span></span></button></li>
 
       <li class="toc-section">Part V — 多様な研究デザインのSR</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="13"><span class="toc-num">13</span><span class="toc-text">非RCT・観察研究のSR<span class="en">Non-RCT / Observational SR</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="13"><span class="toc-num">13</span><span class="toc-text">非RCT・観察研究のSR＋詳細学習<span class="toc-detail">詳細：観察研究・がんアウトカム</span><span class="en">NRSI / Oncology Deep Dive</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="14"><span class="toc-num">14</span><span class="toc-text">定性的研究のSR — CERQual<span class="en">Qualitative SR</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="15"><span class="toc-num">15</span><span class="toc-text">単一推定値なし／GPS／ネットベネフィット<span class="en">Alternative recommendations</span></span></button></li>
 
@@ -330,7 +333,7 @@
                   <button class="doc-sec-chap" onclick="showPage(8)">🎓 Ch8 RoB</button>
                   <button class="doc-sec-chap" onclick="showPage(9)">🎓 Ch9 不一致性</button>
                   <button class="doc-sec-chap" onclick="showPage(10)">🎓 Ch10 非直接性</button>
-                  <button class="doc-sec-chap" onclick="showPage(11)">🎓 Ch11 不確実性</button>
+                  <button class="doc-sec-chap" onclick="showPage(11)">🎓 Ch11 不精確さ</button>
                   <button class="doc-sec-chap" onclick="showPage(12)">🎓 Ch12 発表バイアス</button>
                 </div>
               </div>
@@ -513,7 +516,7 @@
                 <span class="what-label">何が書いてある？</span>各研究の効果量・95%CIと統合効果（ダイヤモンド）・I²・p for heterogeneity。左右バラバラなら異質性の疑い。
                 <div class="doc-sec-chaps">
                   <button class="doc-sec-chap" onclick="showPage(9)">🎓 Ch9 異質性判定</button>
-                  <button class="doc-sec-chap" onclick="showPage(11)">🎓 Ch11 不確実性</button>
+                  <button class="doc-sec-chap" onclick="showPage(11)">🎓 Ch11 不精確さ</button>
                 </div>
               </div>
             </div>
@@ -705,7 +708,7 @@
               <td>Ch10</td>
             </tr>
             <tr>
-              <td><strong>④ Imprecision</strong><br>不確実性（精度不足）</td>
+              <td><strong>④ Imprecision</strong><br>不精確さ</td>
               <td>信頼区間が広く、臨床判断がぶれるか</td>
               <td>Ch11</td>
             </tr>
@@ -804,7 +807,7 @@
             </div>
             <div class="roadmap-step" onclick="showPage(8)">
               <span class="rs-ch">Ch8-12</span><span class="rs-title">確実性を下げる5要因</span>
-              <div class="rs-dsc">RoB／不一致性／非直接性／不確実性／発表バイアスの個別詳細</div>
+              <div class="rs-dsc">RoB／不一致性／非直接性／不精確さ／発表バイアスの個別詳細</div>
             </div>
             <div class="roadmap-step" onclick="showPage(16)">
               <span class="rs-ch">Ch16 ⭐⭐</span><span class="rs-title">信頼できるCPG 6質問</span>
@@ -884,7 +887,7 @@
             <div class="ef-step">
               <span class="ef-num">3</span>
               <strong>5要因を横に見る</strong>
-              <p>Risk of bias、不一致性、非直接性、不確実性、出版/発信バイアスを順に判定します。</p>
+              <p>Risk of bias、不一致性、非直接性、不精確さ、出版/発信バイアスを順に判定します。</p>
             </div>
             <div class="ef-step">
               <span class="ef-num">4</span>
@@ -926,13 +929,13 @@
               <div class="gmp-cell gmp-risk">RoB<br><strong>あり</strong></div>
               <div class="gmp-cell gmp-risk">不一致性<br><strong>あり</strong></div>
               <div class="gmp-cell gmp-ok">非直接性<br><strong>なし</strong></div>
-              <div class="gmp-cell gmp-risk">不確実性<br><strong>あり</strong></div>
+              <div class="gmp-cell gmp-risk">不精確さ<br><strong>あり</strong></div>
               <div class="gmp-cell gmp-ok">発信バイアス<br><strong>なし</strong></div>
               <div class="gmp-cell gmp-final">総合<br><strong>低</strong></div>
             </div>
           </div>
           <p>
-            上の例では、RCTなので最初は「高」から始まります。しかし、Risk of bias、不一致性、不確実性に問題があるため、最終的な確実性は下がります。
+            上の例では、RCTなので最初は「高」から始まります。しかし、Risk of bias、不一致性、不精確さに問題があるため、最終的な確実性は下がります。
             ここで重要なのは、<strong>「何段階下げるか」は単純な足し算ではない</strong>ことです。3つの問題があっても、すべてが同じ原因から来ている場合もあれば、結論を大きく変える問題が1つだけ非常に深刻な場合もあります。だから Evidence Profile では、判定だけでなく脚注や説明文を必ず読みます。
           </p>
 
@@ -958,8 +961,8 @@
           <div class="explain-panel">
             <strong>読み手としての最終確認</strong>
             <p>
-              確実性のラベルを見たら、必ず「何が原因で下がったのか」を確認してください。Risk of biasが原因なら研究方法の弱さ、不一致性が原因なら効果のばらつき、非直接性が原因ならPICOのずれ、不確実性が原因ならデータ量やCIの幅、発信バイアスが原因なら公開された研究の偏りが問題です。
-              原因がわかると、「追加研究で解決しそうな不確実性」なのか、「自分の患者にはそもそも当てはまりにくい非直接性」なのかを分けて考えられます。
+              確実性のラベルを見たら、必ず「何が原因で下がったのか」を確認してください。Risk of biasが原因なら研究方法の弱さ、不一致性が原因なら効果のばらつき、非直接性が原因ならPICOのずれ、不精確さが原因ならデータ量やCIの幅、発信バイアスが原因なら公開された研究の偏りが問題です。
+              原因がわかると、「追加研究で解決しそうな不精確さ」なのか、「自分の患者にはそもそも当てはまりにくい非直接性」なのかを分けて考えられます。
             </p>
           </div>
 
@@ -971,20 +974,20 @@
               <figure><img src="images/5youin/スライド57.JPG" alt="架空例の空欄表"><figcaption><strong>57. 空欄表から始める</strong><span>この段階ではまだ判断していません。まず「癌治療が成功」という1つのアウトカムを決め、どの列を順番に埋めるかを確認します。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド58.JPG" alt="研究一覧とバイアスリスク"><figcaption><strong>58. 元研究を確認する</strong><span>研究ごとのリスク、症例数、デザイン、バイアスリスクを見ます。Evidence Profileの判断は、メタ分析の数字だけではなく、元研究の特徴から始まります。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド59.JPG" alt="アウトカムの重要性"><figcaption><strong>59. アウトカム重要度</strong><span>まず、このアウトカムが患者にとって重要かを決めます。重要でないアウトカムなら、効果があっても推奨判断の中心にはなりにくい点に注意します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド60.JPG" alt="論文数の記入"><figcaption><strong>60. 論文数を入れる</strong><span>何本の研究に基づく評価なのかを入れます。研究数が少ないほど、あとで不確実性や一貫性の判断に注意が必要になります。</span></figcaption></figure>
+              <figure><img src="images/5youin/スライド60.JPG" alt="論文数の記入"><figcaption><strong>60. 論文数を入れる</strong><span>何本の研究に基づく評価なのかを入れます。研究数が少ないほど、あとで不精確さや一貫性の判断に注意が必要になります。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド61.JPG" alt="研究デザインの記入"><figcaption><strong>61. 研究デザインを見る</strong><span>RCTなら通常は高い確実性から開始します。ただし、これは出発点にすぎず、5要因に問題があれば下がります。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド62.JPG" alt="患者数の記入"><figcaption><strong>62. 患者数を確認する</strong><span>患者数は推定の安定性に関係します。人数が多くてもイベント数が少ない場合は、不確実性が残ることがあります。</span></figcaption></figure>
+              <figure><img src="images/5youin/スライド62.JPG" alt="患者数の記入"><figcaption><strong>62. 患者数を確認する</strong><span>患者数は推定の安定性に関係します。人数が多くてもイベント数が少ない場合は、不精確さが残ることがあります。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド63.JPG" alt="メタ分析結果の記入"><figcaption><strong>63. 効果推定値を入れる</strong><span>ここでメタ分析の結果を入れます。ただし「効果が見えた」だけで終わらず、この推定値をどれくらい信じられるかを次に評価します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド64.JPG" alt="5要因の判定へ進む"><figcaption><strong>64. 5要因の判定に進む</strong><span>ここからがGRADEの中心です。効果推定値を見たあと、Risk of bias、不一致性、非直接性、不確実性、出版バイアスを順番に確認します。</span></figcaption></figure>
+              <figure><img src="images/5youin/スライド64.JPG" alt="5要因の判定へ進む"><figcaption><strong>64. 5要因の判定に進む</strong><span>ここからがGRADEの中心です。効果推定値を見たあと、Risk of bias、不一致性、非直接性、不精確さ、出版バイアスを順番に確認します。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド65.JPG" alt="バイアスリスクの判定"><figcaption><strong>65. Risk of bias</strong><span>研究方法に偏りがあると、効果が過大または過小に見える可能性があります。複数研究で深刻な偏りがあれば、確実性を下げます。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド66.JPG" alt="不一致性の判定"><figcaption><strong>66. 不一致性</strong><span>研究間で結果の方向や大きさがそろっているかを見ます。結果がばらばらなら、「どれを信じればよいか」が不安定になります。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド67.JPG" alt="非直接性の判定"><figcaption><strong>67. 非直接性</strong><span>対象者、介入、比較、アウトカムが臨床疑問とずれていないかを見ます。この例では大きなずれがなければ「なし」と判断します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド68.JPG" alt="不確実性の判定"><figcaption><strong>68. 不確実性</strong><span>信頼区間が広い、イベント数が少ない、閾値をまたぐなどの場合に問題になります。効果がありそうでも、結論が揺れるなら確実性を下げます。</span></figcaption></figure>
+              <figure><img src="images/5youin/スライド68.JPG" alt="不精確さの判定"><figcaption><strong>68. 不精確さ</strong><span>信頼区間が広い、イベント数が少ない、閾値をまたぐなどの場合に問題になります。効果がありそうでも、結論が揺れるなら確実性を下げます。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド69.JPG" alt="出版バイアスの判定"><figcaption><strong>69. 出版/発信バイアス</strong><span>都合のよい研究だけが見えていないかを考えます。小規模研究ばかり、未公表研究がありそう、スポンサーの偏りがある場合は注意します。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド70.JPG" alt="5要因から確実性へ"><figcaption><strong>70. 5要因をまとめる</strong><span>5要因の判定を横並びで確認し、最終的な確実性を決めます。赤枠内の問題が、何段階下げるかの根拠になります。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド71.JPG" alt="初期確実性の確認"><figcaption><strong>71. 出発点は高い確実性</strong><span>RCTなので初期値は「高」です。ただし、この時点ではまだ最終判断ではありません。ここから深刻な問題の数と重さを反映します。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド72.JPG" alt="深刻な問題の数を確認"><figcaption><strong>72. 何段階下げるか</strong><span>深刻な問題が複数あるため、高から中、低へと下がる流れを確認します。機械的な足し算ではなく、結論への影響を見ます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド73.JPG" alt="低い確実性の総合判断"><figcaption><strong>73. 最終判断を置く</strong><span>この例では総合的に「低い」と判断されます。読み手は、低い理由がRisk of bias、不一致性、不確実性にあることまで確認します。</span></figcaption></figure>
+              <figure><img src="images/5youin/スライド73.JPG" alt="低い確実性の総合判断"><figcaption><strong>73. 最終判断を置く</strong><span>この例では総合的に「低い」と判断されます。読み手は、低い理由がRisk of bias、不一致性、不精確さにあることまで確認します。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド74.JPG" alt="学習者向けの理解ポイント"><figcaption><strong>74. 読み手としての感覚</strong><span>この表が読めると、「結果はあるが信じきれない理由」が見えてきます。確実性は結果の大きさではなく、結果を信じる度合いです。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド75.JPG" alt="別アウトカムへの展開"><figcaption><strong>75. 別アウトカムにも同じ作業</strong><span>1つの推奨には複数アウトカムがあります。血圧低下、有害事象、QOLなど、それぞれ別々にEvidence Profileを作ります。</span></figcaption></figure>
               <figure><img src="images/5youin/スライド76.JPG" alt="Evidence Profileを読めるようになる意義"><figcaption><strong>76. ここまで読めれば実践へ</strong><span>Evidence Profileを読めると、SoF表の確実性列や推奨文の根拠を追跡できます。次はCh5で、読者向けに要約されたSoF表へ進みます。</span></figcaption></figure>
@@ -1016,7 +1019,7 @@
         <h2>確実性を上げる・下げる要因</h2>
         <p>詳細はCh8-12で扱いますが、概観：</p>
         <ul>
-          <li><strong>下げる要因</strong>（-1 or -2）：バイアスリスク／不一致性／非直接性／不確実性／Dissemination bias</li>
+          <li><strong>下げる要因</strong>（-1 or -2）：バイアスリスク／不一致性／非直接性／不精確さ／Dissemination bias</li>
           <li><strong>上げる要因</strong>（観察研究のみ、+1 or +2）：大きな効果量／用量反応関係／すべての交絡が逆方向</li>
         </ul>
 
@@ -1431,15 +1434,15 @@
           <div class="yah-pin">📍</div>
           <div class="yah-body">
             <span class="yah-title">あなたが今学んでいる場所</span>
-            <span class="yah-where">CPG：SoF表の「絶対効果（per 1000）」列と注釈（STEP 5）／推奨根拠（STEP 6 不確実性判定）</span>
+            <span class="yah-where">CPG：SoF表の「絶対効果（per 1000）」列と注釈（STEP 5）／推奨根拠（STEP 6 不精確さ判定）</span>
             <span class="yah-where">SR：SoF表・考察での「臨床的に意味のある差」議論（STEP 10, 12）</span>
-            <span class="yah-check">SoF表の絶対効果が「<strong>20 fewer per 1000</strong>」と書かれていても、それが<strong>臨床的に意味のある差かどうか</strong>の基準線（MID）を知らないと解釈できません。この章では些細・中・大の閾値を学び、<strong>Ch11の不確実性（Imprecision）</strong>判定に直結させます。</span>
+            <span class="yah-check">SoF表の絶対効果が「<strong>20 fewer per 1000</strong>」と書かれていても、それが<strong>臨床的に意味のある差かどうか</strong>の基準線（MID）を知らないと解釈できません。この章では些細・中・大の閾値を学び、<strong>Ch11の不精確さ（Imprecision）</strong>判定に直結させます。</span>
             <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
           </div>
         </div>
 
         <div class="key-message">
-          <strong>要点：</strong><span class="gloss" data-term="MID">MID（Minimal Important Difference、最小重要差）</span>は、<strong>患者が「重要」と感じる最小の治療効果</strong>。Jaeschke-Singer-Guyatt (1989) [M1] が提唱した概念で、現在はMIDと統一。SoF表の解釈と<span class="gloss" data-term="不確実性">Imprecision</span>評価に直結する。
+          <strong>要点：</strong><span class="gloss" data-term="MID">MID（Minimal Important Difference、最小重要差）</span>は、<strong>患者が「重要」と感じる最小の治療効果</strong>。Jaeschke-Singer-Guyatt (1989) [M1] が提唱した概念で、現在はMIDと統一。SoF表の解釈と<span class="gloss" data-term="不精確さ">不精確さ（Imprecision）</span>評価に直結する。
         </div>
 
         <h2>なぜMIDが必要か</h2>
@@ -1675,16 +1678,16 @@
 
         <div class="chapter-nav">
           <button onclick="showPage(9)">← Ch9</button>
-          <button onclick="showPage(11)">Ch11 不確実性 →</button>
+          <button onclick="showPage(11)">Ch11 不精確さ →</button>
         </div>
       </div>
     </div>
 
-    <!-- ============ Ch11: 不確実性 ============ -->
+    <!-- ============ Ch11: 不精確さ ============ -->
     <div class="page" id="page-11">
       <div class="page-header">
         <div class="chapter-badge">Chapter 11 / 25</div>
-        <h1>不確実性（Imprecision）</h1>
+        <h1>不精確さ（Imprecision）</h1>
         <div class="en-title">Imprecision</div>
       </div>
       <div class="page-body">
@@ -1789,8 +1792,8 @@
     <div class="page" id="page-13">
       <div class="page-header">
         <div class="chapter-badge">Chapter 13 / 25</div>
-        <h1>非RCT・観察研究のSR（GRADE Guidance 44）</h1>
-        <div class="en-title">Non-RCT / Observational Study SR</div>
+        <h1>非RCT・観察研究のSR＋詳細学習</h1>
+        <div class="en-title">NRSI / Observational SR &amp; Deep Dives</div>
       </div>
       <div class="page-body">
         <!-- 📍 あなたが今学んでいる場所 -->
@@ -2523,7 +2526,7 @@
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="非直接性">非直接性</strong>：PICOのずれ</div>
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="サロゲートアウトカム">サロゲート</strong>：患者重要ではない代替指標</div>
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="患者重要アウトカム">患者重要アウトカム</strong>：患者自身が重要と感じる結果</div>
-          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="不確実性">Imprecision</strong>：信頼区間が広く結論が不安定</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="不精確さ">不精確さ（Imprecision）</strong>：信頼区間が広く結論が不安定</div>
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="Dissemination bias">Dissemination bias</strong>：情報発信バイアス</div>
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="AMSTAR 2">AMSTAR 2</strong>：SR方法論質の16項目評価</div>
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="PRISMA 2020">PRISMA 2020</strong>：SR報告の27項目</div>

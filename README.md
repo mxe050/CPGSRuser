@@ -36,11 +36,11 @@ GRADEの「**作り手向け**」解説は、同じ作者の別アプリ [core-g
 - Ch8: Risk of Bias（RCT＋観察研究ROBINS-E）
 - Ch9: 不一致性
 - Ch10: 非直接性
-- Ch11: 不確実性
+- Ch11: 不精確さ（Imprecision）
 - Ch12: Dissemination bias
 
 ### Part V — 多様な研究デザインのSR
-- Ch13: 非RCT・観察研究のSR（GRADE Guidance 44）
+- Ch13: 非RCT・観察研究のSR＋詳細学習（観察研究・がんアウトカム）
 - Ch14: 定性的研究のSR — GRADE-CERQual
 - Ch15: 単一推定値なし／GPS／ネットベネフィット
 

@@ -11,7 +11,7 @@
       "term": "エビデンスの確実性",
       "full": "Certainty of Evidence / Quality of Evidence",
       "definition": "推定値の真値が特定の範囲内、または意思決定の閾値の上または下にあるという確信度。GRADEでは「高・中・低・非常に低い」の4段階に分類。",
-      "related": ["GRADE", "Risk of Bias", "不一致性", "非直接性", "不確実性", "Dissemination bias"]
+      "related": ["GRADE", "Risk of Bias", "不一致性", "非直接性", "不精確さ", "Dissemination bias"]
     },
     "推奨の強さ": {
       "term": "推奨の強さ",
@@ -47,7 +47,7 @@
       "term": "MID",
       "full": "Minimal Important Difference（最小重要差）",
       "definition": "患者が「重要」と感じる最小の治療効果。以前はMCID（Minimal Clinically Important Difference）と呼ばれた（Jaeschke-Singer-Guyatt 1989）。SoF表の解釈とImprecision評価に直結する。",
-      "related": ["閾値", "不確実性", "絶対効果"]
+      "related": ["閾値", "不精確さ", "絶対効果"]
     },
     "閾値": {
       "term": "閾値",
@@ -91,9 +91,9 @@
       "definition": "患者自身が「重要」と感じる結果（死亡、主要な疾患イベント、QOL、機能、痛み等）。サロゲートと対比される概念。",
       "related": ["サロゲートアウトカム"]
     },
-    "不確実性": {
-      "term": "不確実性",
-      "full": "Imprecision（不正確性／不確実性）",
+    "不精確さ": {
+      "term": "不精確さ",
+      "full": "Imprecision（不精確さ）",
       "definition": "信頼区間が広く、結論が確定的に言えない状態。MIDに対する信頼区間の位置関係で評価する。",
       "related": ["エビデンスの確実性", "MID"]
     },

@@ -4394,3 +4394,29 @@ body.cpg-overview-open { overflow: hidden; }
   .nrsi-path-actions { display: grid; grid-template-columns: 1fr; }
   .nrsi-path-actions a { justify-content: center; text-align: center; }
 }
+
+/* ========================================================================
+   学習目次：各章は詳細解説・関連資料・演習への入口
+   ======================================================================== */
+.sidebar-header {
+  text-transform: none;
+  letter-spacing: 0.08em;
+}
+.sidebar-learning-note {
+  display: block;
+  margin-top: 7px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.55;
+}
+.toc-text .toc-detail {
+  display: block;
+  margin-top: 3px;
+  color: #9fdae2;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.toc-btn.active .toc-detail { color: #d5f4f6; }
