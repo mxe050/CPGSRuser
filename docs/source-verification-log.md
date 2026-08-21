@@ -44,3 +44,24 @@ Last verified: **2026-08-22**. The canonical machine-readable record is `data/st
 4. TARGET is called a reporting guideline, not proof that an observational analysis is causally valid.
 5. PROBAST+AI is called an appraisal tool and is not conflated with reporting completeness.
 6. The reader-facing content avoids p-value-only, I2-only, or sample-size-only inferences.
+## Deep-dive rearchitecture verification
+
+The three linked learning pages were restructured on 2026-08-22 without removing their existing topics. Their roles are now separated as follows:
+
+1. Statistics and causal-inference deep dive: estimand, effect measures, uncertainty, models, and evidence synthesis.
+2. Non-RCT and observational studies: causal question, time zero, confounding, variable roles, adjustment diagnostics, and evidence use.
+3. Oncology outcomes: endpoint definition, time and state, surrogate validity, PRO, harm, and outcome-specific certainty.
+
+| ID | Primary or official URL | Status recorded | New or strengthened claim family |
+|---|---|---|---|
+| HERNAN-ROBINS-2016 | <https://pmc.ncbi.nlm.nih.gov/articles/PMC4832051/> | Peer-reviewed methods | target-trial emulation, aligned eligibility, treatment strategies, and time zero |
+| VANDERWEELE-SHPITSER-2019 | <https://pmc.ncbi.nlm.nih.gov/articles/PMC6447501/> | Peer-reviewed methods | causal confounder selection; statistical significance alone cannot determine causal variable roles |
+| BROOKHART-PS-2006 | <https://doi.org/10.1093/aje/kwj149> | Peer-reviewed methods | propensity-score variable selection; baseline prognostic variables and prediction-only selection are not interchangeable |
+
+### Added reader-facing safeguards
+
+1. A univariable p value, an observed Table 1 imbalance, a stepwise final model, or the phrase "adjusted analysis" is not treated as sufficient evidence of a causal effect.
+2. For total-effect questions, treatment-post variables, mediators, colliders, and instruments must not be silently treated as ordinary adjustment variables.
+3. Propensity-score balance is described as a diagnostic for measured covariates, not proof that unmeasured confounding disappeared.
+4. A surrogate endpoint, response rate, PFS result, within-group PRO change, or a narrow CI is not automatically translated into patient-important benefit.
+5. The target-trial methods paper is displayed separately from TARGET reporting guidance and ICH M14 final guidance, so their roles are not conflated.

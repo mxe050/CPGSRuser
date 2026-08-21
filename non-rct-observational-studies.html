@@ -11,7 +11,7 @@
   <link rel="canonical" href="https://mxe050.github.io/CPGSRuser/non-rct-observational-studies.html">
   <title>非RCT・観察研究を読む | CPGSR Reader</title>
   <link rel="stylesheet" href="site-shell.css?v=1.0">
-  <link rel="stylesheet" href="learning-paths.css?v=1.0">
+  <link rel="stylesheet" href="learning-paths.css?v=1.1">
 </head>
 <body class="cpgsr-with-learning-paths">
   <a class="cpgsr-skip-link" href="#main-content">本文へ移動</a>
@@ -37,7 +37,7 @@
         <span>10の順路</span>
         <span>因果質問からGRADEまで</span>
         <span>一次資料を明示</span>
-        <a class="lp-hero-deep-link" href="advanced-statistics.html#target-trial">統計学・因果推論の横断学習：estimand・target trial・RWE</a>
+        <a class="lp-hero-deep-link" href="advanced-statistics.html#causal-model-choice">統計ページへ：変数選択・因果モデル・RWEの基礎を確認する</a>
       </div>
     </div>
   </header>
@@ -45,27 +45,30 @@
   <nav class="lp-jump" aria-label="このページの主な内容">
     <div class="lp-jump-inner">
       <a href="#overview">最初の60秒</a>
-      <a href="#13a">13A 因果質問</a>
-      <a href="#13c">13C バイアス</a>
-      <a href="#13e">13E PS・重み</a>
-      <a href="#13h">13H RoB</a>
-      <a href="#13j">13J GRADE</a>
+      <a href="#nrsi-question">1. 因果質問と設計</a>
+      <a href="#nrsi-bias">2. 比較を壊すバイアス</a>
+      <a href="#nrsi-analysis">3. 調整・感度分析</a>
+      <a href="#nrsi-evidence">4. SR・GRADEへの接続</a>
       <a href="#sources">出典</a>
     </div>
   </nav>
 
   <div class="lp-layout">
     <aside class="lp-side" aria-label="詳細目次">
-      <h2>この順で確認する</h2>
+      <h2>4つの段階で読む</h2>
       <ol>
         <li><a href="#overview">最初の60秒</a></li>
+        <li><a href="#nrsi-question">1. 因果質問と比較設計</a></li>
         <li><a href="#13a">13A 因果質問とtarget trial</a></li>
         <li><a href="#13b">13B DAGと変数の役割</a></li>
+        <li><a href="#nrsi-bias">2. 比較を壊すバイアス</a></li>
         <li><a href="#13c">13C バイアス・アトラス</a></li>
-        <li><a href="#13d">13D 基本的な調整</a></li>
+        <li><a href="#nrsi-analysis">3. 調整と感度分析</a></li>
+        <li><a href="#13d">13D 調整モデルを監査する</a></li>
         <li><a href="#13e">13E 傾向スコアと重み付け</a></li>
         <li><a href="#13f">13F 発展的因果推論法</a></li>
         <li><a href="#13g">13G 診断・感度分析</a></li>
+        <li><a href="#nrsi-evidence">4. SR・GRADEへの接続</a></li>
         <li><a href="#13h">13H RoBを読む</a></li>
         <li><a href="#13i">13I SR・メタ解析</a></li>
         <li><a href="#13j">13J GRADE Guidance 44</a></li>
@@ -79,6 +82,21 @@
         <p>観察研究の結果を治療効果として読むなら、まず「同じ時点で、その治療を選べた、似た患者同士を比べているか」を問います。研究デザイン名がコホートであることでは足りません。適格基準、治療開始、追跡開始、比較群、アウトカム、交絡への対応が、臨床質問と同じ時間軸で揃っている必要があります。</p>
       </section>
 
+      <section class="lp-page-map" aria-labelledby="nrsi-page-map-title">
+        <h2 id="nrsi-page-map-title">このページの役割：非RCTを「因果効果」として読めるかを確かめる</h2>
+        <p>ここでは、数値の計算そのものより先に、誰を、いつから、何と比べたのかを確認します。調整済みHRや傾向スコアが出てきたら、統計ページの説明に戻りながら、比較の妥当性を監査します。</p>
+        <div class="lp-page-map-grid">
+          <a class="lp-page-map-card" href="advanced-statistics.html#causal-model-choice"><strong>統計・推定・不確かさ</strong><span>変数選択、CI、モデル、推定値の意味を読む。</span></a>
+          <a class="lp-page-map-card" href="#13a" aria-current="page"><strong>非RCT・観察研究</strong><span>因果質問、time zero、交絡、調整、感度分析を読む。ここが現在地です。</span></a>
+          <a class="lp-page-map-card" href="oncology-outcomes.html#onc9"><strong>アウトカムの患者重要性</strong><span>がんRWEでendpointと患者利益がどうつながるかを読む。</span></a>
+        </div>
+      </section>
+      <section class="lp-chapter-band" id="nrsi-question" aria-labelledby="nrsi-question-title">
+        <span class="lp-chapter-band-label">PART 1 / 因果質問と比較設計</span>
+        <h2 id="nrsi-question-title">「比べたい世界」を文章にし、同じ出発点を作れているか</h2>
+        <p>観察研究を読む最初の仕事は、解析結果の大小を比べることではありません。適格基準、治療戦略、time zero、追跡、アウトカム、推定したい効果が、同じ臨床質問に整列しているかを確認します。</p>
+        <div class="lp-chapter-links"><a href="advanced-statistics.html#estimand">estimandを復習する</a><a href="advanced-statistics.html#causal-model-choice">変数選択の統計的な基礎へ</a></div>
+      </section>
       <section class="lp-section" id="13a" aria-labelledby="13a-title">
         <span class="lp-section-kicker">13A</span>
         <h2 id="13a-title">因果質問、estimand、target trial</h2>
@@ -104,8 +122,31 @@
           <article class="lp-item is-outcome"><span class="lp-label">重要な限界</span><h3>未測定交絡</h3><p>DAGや傾向スコアは、測定されていない予後因子を自動で消しません。臨床的に大事な欠測変数がないかを確認します。</p></article>
         </div>
         <div class="lp-note"><strong>DAGは証明ではありません。</strong>仮定を図にして反論可能にする道具です。研究者が何を交絡と考え、何を調整しなかったかを説明しているかが読みどころです。</div>
+        <div class="lp-method-contrast">
+          <h3>従来の「多変量解析」と、因果効果を読むための変数選択を区別する</h3>
+          <p>単変量解析や自動選択は、記述・予測の目的で用いられることがあります。しかし、治療効果の因果推定では、統計的な関連だけで変数の役割を決められません。</p>
+          <div class="lp-table-wrap">
+            <table class="lp-table">
+              <thead><tr><th>避ける判断</th><th>なぜ足りないか</th><th>読み手が求める説明</th></tr></thead>
+              <tbody>
+                <tr><td>単変量でp&lt;0.05の因子だけを入れる</td><td>p値は、変数が治療前の交絡因子か、媒介因子か、colliderかを示さない。</td><td>治療開始前の因果構造、DAG、臨床的根拠に基づく候補化。</td></tr>
+                <tr><td>表1で差が大きい因子だけを調整する</td><td>群間の見かけの差は、予後との関係や未測定交絡を評価しない。</td><td>治療選択とアウトカム双方への関係、測定時点の説明。</td></tr>
+                <tr><td>可能な変数を全て機械的に入れる</td><td>治療後の変数、collider、instrumentを条件づけると、全効果の推定を歪め得る。</td><td>全効果か直接効果かを定めた、最小十分な調整集合の考え方。</td></tr>
+                <tr><td>stepwise後の「最終モデル」を結論にする</td><td>データ依存の選択は推定の不安定さと選択的報告を増やし得る。</td><td>事前指定、連続変数の関数形、欠測、感度分析を含む解析計画。</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="lp-note"><strong>重要：</strong>因果構造を考えることは「どの変数を必ず入れるか」を機械的に決めることではありません。何が治療前に存在し、何を調整するとどの経路を閉じる・開くのかを、臨床知識とともに説明可能にすることです。</div>
+        </div>
+        <details class="lp-details"><summary>変数選択を読むための実務チェック</summary><div><ul><li>候補変数はtime zeroより前に測定されているか。</li><li>各変数が交絡因子、予後因子、媒介因子、collider、instrumentのどれとして扱われたか。</li><li>連続変数を不必要に二値化せず、非線形や交互作用をどう扱ったか。</li><li>欠測した交絡因子、施設差、カレンダー時期、時間依存性をどのように扱ったか。</li><li>最終モデルだけでなく、事前計画と代替的に妥当な解析が示されているか。</li></ul></div></details>
       </section>
 
+      <section class="lp-chapter-band" id="nrsi-bias" aria-labelledby="nrsi-bias-title">
+        <span class="lp-chapter-band-label">PART 2 / 比較を壊すバイアス</span>
+        <h2 id="nrsi-bias-title">交絡・選択・測定のどこで比較可能性が失われるか</h2>
+        <p>「調整済み」という言葉は、バイアスがなくなった証明ではありません。治療が選ばれた理由、解析対象に入った条件、測定の仕方、追跡開始のずれを、因果経路として読みます。</p>
+        <div class="lp-chapter-links"><a href="#13b">DAGと変数の役割</a><a href="#13c">バイアス・アトラス</a></div>
+      </section>
       <section class="lp-section" id="13c" aria-labelledby="13c-title">
         <span class="lp-section-kicker">13C</span>
         <h2 id="13c-title">バイアス・アトラス：結果がもっともらしくても、なぜ歪むか</h2>
@@ -124,6 +165,12 @@
         <div class="lp-alert"><strong>「調整済み」というラベルだけでは不十分です。</strong>何を調整したか、いつ測定したか、因果経路として適切かが見えなければ、調整がむしろ偏りを増やす可能性もあります。</div>
       </section>
 
+      <section class="lp-chapter-band" id="nrsi-analysis" aria-labelledby="nrsi-analysis-title">
+        <span class="lp-chapter-band-label">PART 3 / 調整・重み付け・感度分析</span>
+        <h2 id="nrsi-analysis-title">モデルの名前ではなく、仮定の可視化と診断を読む</h2>
+        <p>回帰、傾向スコア、IPTW、g-methodsは、それぞれ測定済みの仮定に依存します。変数の役割、overlap、欠測、時間依存性、極端な重み、感度分析が追えなければ、推定値の妥当性は判断できません。</p>
+        <div class="lp-chapter-links"><a href="advanced-statistics.html#causal-model-choice">統計ページの変数選択へ</a><a href="advanced-statistics.html#missing-data">欠測データの基礎へ</a></div>
+      </section>
       <section class="lp-section" id="13d" aria-labelledby="13d-title">
         <span class="lp-section-kicker">13D</span>
         <h2 id="13d-title">基本的な調整法：推定値と、その作り方を一緒に読む</h2>
@@ -136,6 +183,18 @@
           <li>効果指標、追跡期間、比較戦略が研究間で本当に比較可能か。</li>
           <li>95%信頼区間が狭くても、残存交絡の可能性は残ると説明しているか。</li>
         </ul>
+        <div class="lp-method-contrast">
+          <h3>調整済み推定値を「信頼できるモデル」と呼ぶ前の監査</h3>
+          <p>モデルの係数、p値、C統計量だけでは、因果比較の妥当性は判断できません。少なくとも、次の設計上・解析上の説明が必要です。</p>
+          <ul class="lp-checklist">
+            <li>因果estimandと比較群が先に定められ、治療開始後の情報を交絡因子に混ぜていないか。</li>
+            <li>連続変数の関数形、非線形・交互作用、測定時点が説明されているか。</li>
+            <li>欠測した交絡因子を完全症例だけで捨てず、仮定と感度分析を示しているか。</li>
+            <li>施設・国・カレンダー時期・診療変更の差を、背景の違いとして検討しているか。</li>
+            <li>time-varying exposureやtime-varying confoundingを、固定ベースラインの回帰で誤って扱っていないか。</li>
+            <li>推定値のCIが狭くても、未測定交絡・誤分類・選択バイアスを別に評価しているか。</li>
+          </ul>
+        </div>
       </section>
 
       <section class="lp-section" id="13e" aria-labelledby="13e-title">
@@ -148,6 +207,7 @@
           <article class="lp-item is-caution"><span class="lp-label">誤解しない</span><h3>doubly robust</h3><p>二つのモデルを使う推定法でも、設計、測定、positivity、未測定交絡の問題を免除しません。</p></article>
           <article class="lp-item is-risk"><span class="lp-label">赤信号</span><h3>PSだけを提示</h3><p>変数選択、balance、overlap、欠測、感度分析がなく「PSで調整した」とだけ書かれているなら、読者は妥当性を判定できません。</p></article>
         </div>
+        <div class="lp-note"><strong>統計ページとの接続：</strong>PSは予測モデルの性能競争ではなく、事前に考えた交絡因子で比較可能性を近づける設計です。変数の因果役割と、連続変数・欠測・overlapの扱いは<a href="advanced-statistics.html#causal-model-choice">統計ページの変数選択</a>で確認します。</div>
       </section>
 
       <section class="lp-section" id="13f" aria-labelledby="13f-title">
@@ -179,6 +239,12 @@
         </div>
       </section>
 
+      <section class="lp-chapter-band" id="nrsi-evidence" aria-labelledby="nrsi-evidence-title">
+        <span class="lp-chapter-band-label">PART 4 / SR・GRADEへの接続</span>
+        <h2 id="nrsi-evidence-title">一つの調整済み結果を、そのまま推奨の根拠にしない</h2>
+        <p>Risk of Bias、研究間の比較可能性、患者重要アウトカム、確実性の対象をたどり、RCTとNRSIを何のために組み合わせるのかを確認します。</p>
+        <div class="lp-chapter-links"><a href="#13h">RoBを読む</a><a href="#13i">観察研究のSR・メタ解析</a><a href="#13j">GRADE Guidance 44</a></div>
+      </section>
       <section class="lp-section" id="13h" aria-labelledby="13h-title">
         <span class="lp-section-kicker">13H</span>
         <h2 id="13h-title">RoBを読む：研究全体の点数ではなく、結果ごとの妥当性</h2>
@@ -235,6 +301,8 @@
           <li><span class="lp-source-kind">Cochrane</span><a href="https://training.cochrane.org/handbook/current/chapter-24" target="_blank" rel="noopener noreferrer">Cochrane Handbook Chapter 24: Including non-randomized studies on intervention effects.</a></li>
           <li><span class="lp-source-kind">Cochrane</span><a href="https://training.cochrane.org/handbook/current/chapter-25" target="_blank" rel="noopener noreferrer">Cochrane Handbook Chapter 25: Assessing risk of bias in a non-randomized study.</a></li>
           <li><span class="lp-source-kind">Target trial</span><a href="https://pubmed.ncbi.nlm.nih.gov/26994063/" target="_blank" rel="noopener noreferrer">Hernán MA, Robins JM. Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available. Am J Epidemiol. 2016.</a></li>
+          <li><span class="lp-source-kind">Causal variable selection</span><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6447501/" target="_blank" rel="noopener noreferrer">VanderWeele TJ, Shpitser I. Principles of confounder selection. Eur J Epidemiol. 2019.</a></li>
+          <li><span class="lp-source-kind">Propensity score</span><a href="https://doi.org/10.1093/aje/kwj149" target="_blank" rel="noopener noreferrer">Brookhart MA, et al. Variable selection for propensity score models. Am J Epidemiol. 2006.</a></li>
           <li><span class="lp-source-kind">Causal diagram</span><a href="https://pubmed.ncbi.nlm.nih.gov/39299403/" target="_blank" rel="noopener noreferrer">McIntyre KJ, et al. Using causal diagrams within the GRADE framework to evaluate confounding adjustment in observational studies. J Clin Epidemiol. 2024.</a></li>
           <li><span class="lp-source-kind">SR methods</span><a href="https://pubmed.ncbi.nlm.nih.gov/40414366/" target="_blank" rel="noopener noreferrer">Paul M, Olchowski J, Leibovici L. Systematic reviews of observational studies frequently conclude based on meta-analyses of biased results. J Clin Epidemiol. 2025.</a></li>
           <li><span class="lp-source-kind">Synthesis</span><a href="https://www.bmj.com/content/368/bmj.l6890" target="_blank" rel="noopener noreferrer">Campbell M, et al. Synthesis without meta-analysis (SWiM) in systematic reviews. BMJ. 2020.</a></li>
@@ -246,7 +314,7 @@
   <footer class="lp-footer">
     <div class="lp-footer-inner">
       <p><strong>CPGSR Reader</strong> | 非RCT・観察研究の詳細学習ページ</p>
-      <p>最終更新: 2026-08-21 | 教育目的の要約。臨床判断では対象資料の原著・付録・プロトコルも確認してください。</p>
+      <p>最終更新: 2026-08-22 | 教育目的の要約。臨床判断では対象資料の原著・付録・プロトコルも確認してください。</p>
       <a class="cpgsr-footer-home" href="index.html#page-0">CPGSR Readerの学習目次へ戻る</a>
     </div>
   </footer>

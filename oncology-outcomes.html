@@ -11,7 +11,7 @@
   <link rel="canonical" href="https://mxe050.github.io/CPGSRuser/oncology-outcomes.html">
   <title>がんアウトカムを読む | CPGSR Reader</title>
   <link rel="stylesheet" href="site-shell.css?v=1.0">
-  <link rel="stylesheet" href="learning-paths.css?v=1.0">
+  <link rel="stylesheet" href="learning-paths.css?v=1.1">
 </head>
 <body class="cpgsr-with-learning-paths">
   <a class="cpgsr-skip-link" href="#main-content">本文へ移動</a>
@@ -37,7 +37,7 @@
         <span>10の順路</span>
         <span>endpointからGRADEまで</span>
         <span>患者重要アウトカムを中心に</span>
-        <a class="lp-hero-deep-link" href="advanced-statistics.html#survival">統計学・因果推論の横断学習：HR・非比例ハザード・RMST</a>
+        <a class="lp-hero-deep-link" href="advanced-statistics.html#survival">統計ページへ：HR・非比例ハザード・RMSTの意味を確認する</a>
       </div>
     </div>
   </header>
@@ -45,28 +45,31 @@
   <nav class="lp-jump" aria-label="このページの主な内容">
     <div class="lp-jump-inner">
       <a href="#overview">最初の60秒</a>
-      <a href="#onc1">Onc1 定義</a>
-      <a href="#onc2">Onc2 OS/PFS</a>
-      <a href="#onc4">Onc4 生存解析</a>
-      <a href="#onc6">Onc6 代替性</a>
-      <a href="#onc10">Onc10 GRADE</a>
+      <a href="#outcome-definition">1. endpointを定義する</a>
+      <a href="#outcome-time">2. 時間と状態を読む</a>
+      <a href="#outcome-patient">3. 患者の利益・害を統合する</a>
+      <a href="#outcome-evidence">4. RWE・GRADEへつなぐ</a>
       <a href="#sources">出典</a>
     </div>
   </nav>
 
   <div class="lp-layout">
     <aside class="lp-side" aria-label="詳細目次">
-      <h2>この順で確認する</h2>
+      <h2>4つの段階で読む</h2>
       <ol>
         <li><a href="#overview">最初の60秒</a></li>
+        <li><a href="#outcome-definition">1. endpointを定義する</a></li>
         <li><a href="#onc1">Onc1 endpointの定義</a></li>
         <li><a href="#onc2">Onc2 OS、PFS、DFSなど</a></li>
         <li><a href="#onc3">Onc3 ORR、DoR、pCR、MRD</a></li>
+        <li><a href="#outcome-time">2. 時間と状態を読む</a></li>
         <li><a href="#onc4">Onc4 生存時間解析</a></li>
         <li><a href="#onc5">Onc5 競合リスク・multi-state</a></li>
+        <li><a href="#outcome-patient">3. 患者の利益・害を統合する</a></li>
         <li><a href="#onc6">Onc6 代替エンドポイント</a></li>
         <li><a href="#onc7">Onc7 PRO、症状、QOL</a></li>
         <li><a href="#onc8">Onc8 毒性・治療負担</a></li>
+        <li><a href="#outcome-evidence">4. RWE・GRADEへつなぐ</a></li>
         <li><a href="#onc9">Onc9 RWE・観察研究</a></li>
         <li><a href="#onc10">Onc10 GRADEで評価する</a></li>
       </ol>
@@ -79,6 +82,21 @@
         <p>腫瘍が画像上で縮小した、進行までの期間が延びた、死亡が少なかった、症状が楽だった、治療を続けられた。これらは別の問いへの答えです。まず患者に重要なアウトカムを定め、その後に各endpointがどこまで患者利益を代弁できるかを評価します。</p>
       </section>
 
+      <section class="lp-page-map" aria-labelledby="outcome-page-map-title">
+        <h2 id="outcome-page-map-title">このページの役割：結果を、患者にとって何が変わるかまで追う</h2>
+        <p>ここでは、endpointの定義、時間の扱い、代替性、症状・QOL・害を一つの患者経験として読みます。統計の計算は統計ページへ、実臨床データでの比較可能性は非RCTページへ戻って確認します。</p>
+        <div class="lp-page-map-grid">
+          <a class="lp-page-map-card" href="advanced-statistics.html#survival"><strong>統計・推定・不確かさ</strong><span>HR、RMST、CI、欠測の数値的な意味を読む。</span></a>
+          <a class="lp-page-map-card" href="non-rct-observational-studies.html#13a"><strong>非RCT・観察研究</strong><span>外部対照やRWEの比較可能性を読む。</span></a>
+          <a class="lp-page-map-card" href="#onc1" aria-current="page"><strong>アウトカムの患者重要性</strong><span>endpointが患者の生存・症状・機能・害に何を意味するかを読む。ここが現在地です。</span></a>
+        </div>
+      </section>
+      <section class="lp-chapter-band" id="outcome-definition" aria-labelledby="outcome-definition-title">
+        <span class="lp-chapter-band-label">PART 1 / endpointを定義する</span>
+        <h2 id="outcome-definition-title">名前ではなく、誰に、いつ、何が起きたかを確認する</h2>
+        <p>OS、PFS、ORRなどの略語を先に「良い結果」と読み替えません。対象集団、time origin、event set、測定、打切り、estimandが揃って初めて、比較する意味が分かります。</p>
+        <div class="lp-chapter-links"><a href="advanced-statistics.html#estimand">estimandを確認する</a><a href="advanced-statistics.html#effect-measures">相対・絶対効果を確認する</a></div>
+      </section>
       <section class="lp-section" id="onc1" aria-labelledby="onc1-title">
         <span class="lp-section-kicker">ONC1</span>
         <h2 id="onc1-title">endpointを定義する：名前の前に、6つの要素をそろえる</h2>
@@ -94,6 +112,7 @@
           <div class="lp-flow-step"><span class="lp-flow-no">6</span><strong>推定量・estimand</strong><span>HR、時点割合、RMST、何の効果を答えるか。</span></div>
         </div>
         <div class="lp-note"><strong>最初に確認する場所：</strong>論文のMethods、supplement、プロトコル、statistical analysis planです。Abstractのendpoint名だけで判断すると、重要な定義の差を見落とします。</div>
+        <div class="lp-note"><strong>統計ページとの接続：</strong>「何を推定するか」と「どう要約するか」は別に決めます。治療中止、救済治療、死亡、欠測をどう扱うかは、<a href="advanced-statistics.html#estimand">estimand</a>と<a href="advanced-statistics.html#missing-data">欠測データ</a>の説明にも戻って確認します。</div>
       </section>
 
       <section class="lp-section" id="onc2" aria-labelledby="onc2-title">
@@ -125,6 +144,12 @@
         <div class="lp-question"><strong>問い直す：</strong>この結果は「腫瘍の状態」を示しているのか、「患者が長く生きる・楽に過ごす・機能を保つ」ことを示しているのか。両者の橋渡しとなる検証は、どこに示されていますか。</div>
       </section>
 
+      <section class="lp-chapter-band" id="outcome-time" aria-labelledby="outcome-time-title">
+        <span class="lp-chapter-band-label">PART 2 / 時間と状態を読む</span>
+        <h2 id="outcome-time-title">一つのHRや中央値では見えない患者経過を追う</h2>
+        <p>生存、進行、再発、次治療、死亡は時間の中で起きます。曲線、競合リスク、追跡人数、後治療を、患者が経験する道筋として確認します。</p>
+        <div class="lp-chapter-links"><a href="advanced-statistics.html#survival">HR・non-PH・RMSTの統計へ</a><a href="advanced-statistics.html#competing-risks">競合リスクの統計へ</a></div>
+      </section>
       <section class="lp-section" id="onc4" aria-labelledby="onc4-title">
         <span class="lp-section-kicker">ONC4</span>
         <h2 id="onc4-title">生存時間解析：HR、中央値、Kaplan-Meier曲線を一緒に読む</h2>
@@ -136,6 +161,7 @@
           <article class="lp-item is-action"><span class="lp-label">補助指標</span><h3>RMST</h3><p>あらかじめ定めた時間地平までの平均生存時間です。時間地平を明示して比較するため、non-PH時の補助的な表現になり得ます。</p></article>
         </div>
         <details class="lp-details"><summary>「HR 0.70」は何を意味しますか？</summary><div><p>追跡期間にわたるhazardの比を、特定のモデルで要約した値です。曲線の形やPH仮定によって解釈が変わります。絶対的な時点生存率、曲線、患者重要アウトカム、95%信頼区間と合わせて読みます。</p></div></details>
+        <div class="lp-note"><strong>ここでは患者経験を読む：</strong>曲線の形やnumber at riskが示すのは、いつ差が現れ、どの患者がどこまで観察されたかです。RMST、non-PH、時間地平の選択という統計的な詳細は<a href="advanced-statistics.html#survival">統計ページ</a>で確認し、ここではそれが患者の時間と利益に何を意味するかを考えます。</div>
       </section>
 
       <section class="lp-section" id="onc5" aria-labelledby="onc5-title">
@@ -151,6 +177,12 @@
         <div class="lp-note"><strong>読み手の確認：</strong>目的が「ある時点までに再発した人の割合」なのか、「再発の瞬間的な率」なのかで、適切な分析と図の意味が異なります。</div>
       </section>
 
+      <section class="lp-chapter-band" id="outcome-patient" aria-labelledby="outcome-patient-title">
+        <span class="lp-chapter-band-label">PART 3 / 患者の利益・害を統合する</span>
+        <h2 id="outcome-patient-title">腫瘍の変化を、延命・症状・機能・負担と混同しない</h2>
+        <p>代替endpoint、PRO、毒性は、別々の表で終わらせずに読みます。何を患者重要アウトカムとして置き、どこに非直接性や欠測が残るかを確認します。</p>
+        <div class="lp-chapter-links"><a href="advanced-statistics.html#ci-thresholds">CIと臨床的な大きさへ</a><a href="advanced-statistics.html#missing-data">欠測データの統計へ</a></div>
+      </section>
       <section class="lp-section" id="onc6" aria-labelledby="onc6-title">
         <span class="lp-section-kicker">ONC6</span>
         <h2 id="onc6-title">代替エンドポイント：承認上の利用と、患者利益の検証を分ける</h2>
@@ -160,6 +192,21 @@
           <article class="lp-item is-action"><span class="lp-label">確認する</span><h3>患者重要アウトカム</h3><p>OS、症状、QOL、機能、重篤な害、治療負担が同じ方向か。PFSの改善が患者経験にどう結びつくかを見ます。</p></article>
           <article class="lp-item is-risk"><span class="lp-label">避ける</span><h3>一律の読み替え</h3><p>「ORRが高いから延命」「PFSが有意だからQOLもよい」という自動変換はしません。</p></article>
           <article class="lp-item is-caution"><span class="lp-label">GRADEとの接続</span><h3>非直接性</h3><p>代替endpointしかない場合、患者重要アウトカムへの非直接性をどう評価したかを確認します。</p></article>
+        </div>
+        <div class="lp-method-contrast">
+          <h3>「統計学的に有意」と「患者にとって重要」を分ける</h3>
+          <div class="lp-table-wrap">
+            <table class="lp-table">
+              <thead><tr><th>示された結果</th><th>そこから言えること</th><th>まだ言えないこと</th></tr></thead>
+              <tbody>
+                <tr><td>ORRまたはMRDが改善</td><td>画像・検査上の反応が増えた可能性。</td><td>延命、症状改善、QOL改善、害との釣り合い。</td></tr>
+                <tr><td>PFSが改善</td><td>定義された進行または死亡までの時間が延びた可能性。</td><td>OS、症状、機能、患者が受け入れる治療負担の改善。</td></tr>
+                <tr><td>PROの群内変化が良い</td><td>その群で経時変化が見えた可能性。</td><td>比較群より患者経験が良いという治療間効果。</td></tr>
+                <tr><td>grade 3以上の害が少ない</td><td>一部の重篤な有害事象が少ない可能性。</td><td>軽中等度症状、持続、通院・支持療法、中止を含む総負担。</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>患者利益へ読み替えるには、絶対効果、95%信頼区間、患者重要アウトカムとの一貫性、比較対照、治療目的、患者の価値観までが必要です。</p>
         </div>
         <div class="lp-quiz">
           <h3>確認問題</h3>
@@ -180,6 +227,7 @@
           <li>欠測、治療中止、死亡をどう扱い、感度分析をしたか。</li>
           <li>改善だけでなく、悪化までの時間、悪化の持続、患者にとっての負担を示しているか。</li>
         </ul>
+        <details class="lp-details"><summary>PROの欠測を、単なる「回収率の問題」で終わらせない</summary><div><p>進行、毒性、入院、死亡、治療中止があると、PROを回答できる人だけが残ることがあります。欠測が両群で同じ理由・同じ程度とは限りません。各時点の分母、欠測理由、死亡後や中止後を含むestimand、主解析と感度分析が示されていなければ、良好に見える平均値をそのまま患者利益とは読めません。</p></div></details>
       </section>
 
       <section class="lp-section" id="onc8" aria-labelledby="onc8-title">
@@ -194,11 +242,18 @@
         </div>
       </section>
 
+      <section class="lp-chapter-band" id="outcome-evidence" aria-labelledby="outcome-evidence-title">
+        <span class="lp-chapter-band-label">PART 4 / RWE・GRADEへつなぐ</span>
+        <h2 id="outcome-evidence-title">患者に使う結論へ進む前に、比較可能性と確実性を分ける</h2>
+        <p>RWEや外部対照の数字は、endpointが患者重要であることや、因果比較が成立することを自動で示しません。非RCTの設計と、アウトカム別のGRADE certaintyをつなげて読みます。</p>
+        <div class="lp-chapter-links"><a href="non-rct-observational-studies.html#13a">非RCTの因果質問へ</a><a href="non-rct-observational-studies.html#13b">変数選択とDAGへ</a><a href="index.html#page-13">Ch13の入口へ</a></div>
+      </section>
       <section class="lp-section" id="onc9" aria-labelledby="onc9-title">
         <span class="lp-section-kicker">ONC9</span>
         <h2 id="onc9-title">がんのRWE・観察研究：実臨床データがあっても、比較可能性は自動ではない</h2>
         <p>レジストリ、電子カルテ、保険請求、外部対照は、まれな害、長期経過、RCTで届きにくい患者を知るために重要です。しかし、治療選択、performance status、腫瘍量、バイオマーカー、時期、施設、検査頻度、次治療の違いが残ります。まず <a href="non-rct-observational-studies.html">非RCT・観察研究の詳細ページ</a> の因果質問とtime zeroに戻ってください。</p>
         <div class="lp-alert"><strong>外部対照との比較で特に確認すること：</strong>同じ適格基準、同じtime zero、同じアウトカム定義、同じ追跡・画像評価、同じ時代の標準治療に近いか。これを示せないなら、精密なHRでも比較効果の確実性は高くありません。</div>
+        <div class="lp-note"><strong>非RCTページとの接続：</strong>外部対照やレジストリ研究では、「測定できる因子を多変量で調整した」だけでは比較可能性を示せません。time zero、治療選択の理由、治療前の交絡因子、変数選択、画像評価頻度、欠測、overlapを<a href="non-rct-observational-studies.html#13a">因果質問</a>と<a href="non-rct-observational-studies.html#13b">DAG・変数選択</a>で確認します。</div>
       </section>
 
       <section class="lp-section" id="onc10" aria-labelledby="onc10-title">
@@ -217,6 +272,7 @@
           </table>
         </div>
         <div class="lp-good"><strong>推奨まで読む：</strong>推奨の方向と強さは、確実性だけで決まりません。絶対的な利益と害、患者の価値観、資源、実行可能性、公平性がEtDでどう扱われたかを確認します。</div>
+        <div class="lp-note"><strong>全体をつなぐ：</strong>CIや閾値の統計的な読み方は<a href="advanced-statistics.html#ci-thresholds">統計ページ</a>、RWEの因果比較は<a href="non-rct-observational-studies.html#nrsi-question">非RCTページ</a>、推奨へ進む全体像は<a href="index.html#page-13">Ch13</a>に戻って確認します。</div>
       </section>
 
       <section class="lp-section" id="sources" aria-labelledby="sources-title">
@@ -246,7 +302,7 @@
   <footer class="lp-footer">
     <div class="lp-footer-inner">
       <p><strong>CPGSR Reader</strong> | がんアウトカムの詳細学習ページ</p>
-      <p>最終更新: 2026-08-21 | 教育目的の要約。臨床判断では対象試験の原著・付録・プロトコルも確認してください。</p>
+      <p>最終更新: 2026-08-22 | 教育目的の要約。臨床判断では対象試験の原著・付録・プロトコルも確認してください。</p>
       <a class="cpgsr-footer-home" href="index.html#page-0">CPGSR Readerの学習目次へ戻る</a>
     </div>
   </footer>

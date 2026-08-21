@@ -7,7 +7,7 @@ Strengthen CPGSR Reader as a site for **reading** trials, systematic reviews, an
 ## Added
 
 - `advanced-statistics.html`, `advanced-statistics.css`, and `advanced-statistics.js`.
-- Sixteen reader-focused modules: estimand; effect measures; p values, CIs, and thresholds; NPH/RMST; competing risks; missing data; multiplicity; adaptive designs; Bayesian trials; target trials/RWE; AI prediction; advanced meta-analysis; cluster RCTs; transportability; reporting; and GRADE connection.
+- Seventeen reader-focused modules: estimand; effect measures; p values, CIs, and thresholds; NPH/RMST; competing risks; missing data; multiplicity; adaptive designs; Bayesian trials; target trials/RWE; AI prediction; advanced meta-analysis; cluster RCTs; transportability; reporting; and GRADE connection.
 - Per-module primary or official source URL, material status, and last-verification date.
 - Search and topic/level filters for the new page.
 - `site-shell.css` for a shared skip link, compact header, breadcrumb, right-side home brand, responsive behavior, and footer return link.
@@ -37,3 +37,14 @@ Strengthen CPGSR Reader as a site for **reading** trials, systematic reviews, an
 - No deployment, dependency, or build configuration changed.
 
 See `docs/qa-statistics-grade-open-ui.md` for completed and blocked validation steps.
+## Reader rearchitecture: three complementary questions
+
+The three deep-dive pages now have separate, explicit jobs rather than overlapping lists of methods.
+
+- Statistics and causal inference: four reader-oriented parts covering the question and estimand, uncertainty, designs and models, then evidence synthesis and GRADE.
+- Non-RCT and observational studies: four parts covering causal design, bias pathways, adjustment and sensitivity analysis, then SR and GRADE use.
+- Oncology outcomes: four parts covering endpoint definition, time and disease states, patient-important benefit and harm, then RWE and outcome-specific GRADE.
+
+A new Module 9A, "関連を説明する回帰と、因果効果を推定するモデルを分ける", makes the variable-selection distinction explicit. It links directly to the detailed non-RCT sections on DAGs, model audit, and propensity scores. The oncology page links statistical time-to-event mechanics and causal comparison assumptions without treating them as substitutes for patient-important outcomes.
+
+The source registry and verification log add the target-trial methods paper, causal confounder-selection methods, and propensity-score variable-selection methods with their source status and verification date.

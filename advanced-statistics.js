@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const count = document.getElementById('statistics-result-count');
   const empty = document.getElementById('statistics-empty');
   const modules = Array.from(document.querySelectorAll('.adv-module[data-topic]'));
+  const chapterBands = Array.from(document.querySelectorAll('.adv-chapter-band'));
 
   const normalize = (value) => value.toLocaleLowerCase('ja-JP').replace(/\s+/g, ' ').trim();
 
@@ -23,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (matches) visible += 1;
     });
 
+    chapterBands.forEach((band) => {
+      band.hidden = !Array.from(band.querySelectorAll('.adv-module')).some((module) => !module.hidden);
+    });
     count.textContent = `${visible}件の学習モジュールを表示しています。`;
     empty.hidden = visible !== 0;
   };

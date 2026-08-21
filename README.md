@@ -67,8 +67,8 @@ GRADEの「**作り手向け**」解説は、同じ作者の別アプリ [core-g
 
 ## 独立した発展学習ページ
 
-- [統計学・因果推論のディープダイブ](advanced-statistics.html): estimand、非比例ハザード、RMST、競合リスク、欠測、多重性、adaptive design、Bayesian、target trial/RWE、AI予測、発展的メタ解析、cluster RCT、transportabilityを、読む側の判断として学ぶページです。各モジュールに資料状態、一次・公式資料URL、最終確認日を表示します。
-- [非RCT・観察研究の読み方](non-rct-observational-studies.html) と [がんアウトカムの読み方](oncology-outcomes.html): Ch13から進む既存の詳細学習ページです。
+- [統計学・因果推論のディープダイブ](advanced-statistics.html): 推定したい効果、効果指標、CI・閾値、時間・欠測、設計・モデル、統合とGRADEを4部構成・17モジュールで学ぶページです。変数選択と因果モデルの独立モジュールを含み、各モジュールに資料状態、一次・公式資料URL、最終確認日を表示します。
+- [非RCT・観察研究の読み方](non-rct-observational-studies.html): 因果質問と比較設計、バイアス、調整・感度分析、SR・GRADEへの接続を4段階で読みます。単変量の有意性だけで変数を選ばない理由、DAG、傾向スコア、time zeroを詳しく扱います。
 
 ---
 
@@ -134,7 +134,7 @@ CPGSRuser/
 ├── coreGRADE_utils.js      # 補助ユーティリティ
 ├── data/
 │   ├── references.json     # 参考文献データ（U/M/G/T/C/V/L）
-│   ├── statistics-sources.json # 統計学ページの出典・状態・最終確認日
+│   ├── statistics-sources.json # 統計・非RCT・アウトカム深掘りの出典・状態・最終確認日
 │   ├── glossary.json       # 用語集
 │   ├── mid-thresholds.json # MID閾値例
 │   ├── linkedin-picks.json # LinkedInピックアップ
@@ -160,7 +160,7 @@ CPGSRuser/
 
 ## 更新履歴
 
-- **v1.1.0 (2026-08)**: 25章構成をREADMEへ反映。統計学・因果推論の独立学習ページ、既存詳細ページとの相互リンク、資料状態と出典検証記録を追加。
+- **v1.1.1 (2026-08)**: 統計、非RCT、がんアウトカムの3ページを役割別に再編。因果変数選択、患者重要アウトカム、相互リンクを強化。
 - **v1.0.0 (2026-04)**: 初回公開。全24章、6つのインタラクティブ機能、30以上の参考文献を搭載。
 
 ---

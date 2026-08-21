@@ -1,7 +1,7 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "updated": "2026-08-22",
-  "purpose": "advanced-statistics.html の重要な医学・統計学上の主張を追跡する一次資料・公式資料の検証台帳",
+  "purpose": "統計学・非RCT・アウトカムの深掘りページにある重要な医学・統計学上の主張を追跡する一次資料・公式資料の検証台帳",
   "sources": [
     {
       "id": "ICH-E9R1",
@@ -118,6 +118,58 @@
       ]
     },
     {
+      "id": "HERNAN-ROBINS-2016",
+      "title": "Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4832051/",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed methods",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "target trialの明示",
+        "time zeroと比較戦略の整列",
+        "観察データで残る因果仮定"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#target-trial",
+        "non-rct-observational-studies.html#13a"
+      ]
+    },
+    {
+      "id": "VANDERWEELE-SHPITSER-2019",
+      "title": "Principles of confounder selection",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6447501/",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed methods",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "DAGと臨床知識に基づく交絡因子の選択",
+        "統計的有意性だけで変数の因果役割は決められない",
+        "媒介因子・collider・instrumentへの注意"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#causal-model-choice",
+        "non-rct-observational-studies.html#13b",
+        "non-rct-observational-studies.html#13d"
+      ]
+    },
+    {
+      "id": "BROOKHART-PS-2006",
+      "title": "Variable selection for propensity score models",
+      "url": "https://doi.org/10.1093/aje/kwj149",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed methods",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "傾向スコアにおける変数選択",
+        "ベースラインの予後因子を考慮する理由",
+        "予測性能だけを変数選択の目的にしない"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#causal-model-choice",
+        "non-rct-observational-studies.html#13b",
+        "non-rct-observational-studies.html#13e"
+      ]
+    },    {
       "id": "NPH-REVIEW",
       "title": "Methods for non-proportional hazards in clinical trials: a systematic review",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11162097/",

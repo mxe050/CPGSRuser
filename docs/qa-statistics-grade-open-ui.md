@@ -10,7 +10,7 @@ Branch: `codex/statistics-grade-open-ui-unification`
 | Root HTML duplicate IDs | Pass | `index.html`, five existing standalone pages, and `advanced-statistics.html`: no duplicate static IDs. |
 | H1 on standalone pages | Pass | Exactly one H1 on `advanced-statistics.html`, `non-rct-observational-studies.html`, `oncology-outcomes.html`, `japan-cpg-tohoho.html`, and `y-sensei-ebm-practice-links.html`. |
 | Metadata and common shell | Pass | Each standalone page has viewport, description, canonical URL, skip route, global header, `CPGSR Reader` home brand, breadcrumb, and `main-content` target. |
-| New advanced learning modules | Pass | 16 modules (Module 0–15); every module has source URL, status label, and last-verified date. |
+| New advanced learning modules | Pass | 17 modules (Modules 0–15 plus Module 9A); every module has source URL, status label, and last-verified date. |
 | Status differentiation | Pass | Final, draft, reporting guideline, appraisal tool, peer-reviewed methods, and emerging method states have distinct classes and colors. |
 | Internal links and anchors | Pass | Static scan of all root HTML links found no missing local file or anchor target. |
 | JSON | Pass | `data/references.json`, `data/statistics-sources.json`, and `docs/grade-open-integration-inventory.json` parse successfully. |
@@ -43,3 +43,13 @@ No fallback browser automation was substituted. These checks should be run in a 
 2. From each independent page, activate the upper-right `CPGSR Reader` brand, the breadcrumb return route, and the footer home route.
 3. On `advanced-statistics.html`, test text search, level/topic selects, Escape while the search field contains text, a module anchor, and browser Back.
 4. Inspect no-overlap behavior at 360, 390, 768, and 1440px and review the console.
+## Deep-dive rearchitecture checks
+
+| Check | Result | Notes |
+|---|---|---|
+| Three-page information architecture | Pass | Statistics is organized as estimation and uncertainty; non-RCT as causal design and adjustment; oncology as patient-important outcome interpretation. Each page begins with a three-page route map and grouped navigation. |
+| Causal variable-selection content | Pass | Module 9A and NRSI section 13B explicitly distinguish causal variable roles from univariable p-value screening, Table 1 screening, stepwise selection, and uncritical all-variable adjustment. |
+| Cross-page routes | Pass | Static local-file and anchor scan passes for the updated index, statistics, non-RCT, and oncology pages. |
+| HTML structure | Pass | Static tag-nesting check passes for the three restructured learning pages. |
+| Updated data registry | Pass | statistics-sources.json parses successfully and records the new methods sources, status, URL, verification date, claim family, and page locations. |
+| Updated filter behavior | Pass | advanced-statistics.js syntax passes; its filter now hides a chapter band when none of its modules match. |
