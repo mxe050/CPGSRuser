@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "lastVerified": "2026-08-22",
+  "policy": "No text, figure, or route-specific material is copied from GRADE Open unless source provenance and reuse permission are separately confirmed. Reader-side explanations use independently verified sources.",
+  "deployment": {
+    "url": "https://core-grade-guide-1-mxe050s-projects.vercel.app/",
+    "titleObserved": "GRADE Open | GRADE 学習教材",
+    "renderAudit": "blocked: configured in-app browser kernel exited during sandbox setup"
+  },
+  "candidateSource": {
+    "repository": "https://github.com/mxe050/GRADEslide",
+    "dataPath": "web/public/data/slides.json",
+    "slideCountObserved": 126,
+    "deploymentLinkage": "unconfirmed"
+  },
+  "items": [
+    {
+      "candidateId": "MAP0",
+      "domain": "EBMからGRADEへ",
+      "cpGsrDestination": "advanced-statistics.html#grade-connection",
+      "integration": "reader-side conceptual navigation only",
+      "copied": false,
+      "sourceBasis": ["CORE-GRADE-1", "CORE-GRADE-2", "CORE-GRADE-3"]
+    },
+    {
+      "candidateId": "N12",
+      "domain": "SR / meta-analysis",
+      "cpGsrDestination": "advanced-statistics.html#meta-analysis",
+      "integration": "reader-side interpretation checklist only",
+      "copied": false,
+      "sourceBasis": ["COCHRANE-10", "COCHRANE-24", "CORE-GRADE-3"]
+    },
+    {
+      "candidateId": "N16",
+      "domain": "CPG",
+      "cpGsrDestination": "index.html#page-16",
+      "integration": "existing CPG reader route retained",
+      "copied": false,
+      "sourceBasis": ["U16", "CORE-GRADE-1"]
+    },
+    {
+      "candidateId": "NRSI-reader-route",
+      "domain": "観察研究 / RWE",
+      "cpGsrDestination": "advanced-statistics.html#target-trial",
+      "integration": "new cross-link to existing NRSI deep dive",
+      "copied": false,
+      "sourceBasis": ["ICH-M14", "TARGET-STATEMENT", "GRADE-GUIDANCE-44"]
+    }
+  ]
+}

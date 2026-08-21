@@ -1,0 +1,406 @@
+{
+  "version": "1.1",
+  "updated": "2026-08-22",
+  "purpose": "統計学・非RCT・アウトカムの深掘りページにある重要な医学・統計学上の主張を追跡する一次資料・公式資料の検証台帳",
+  "sources": [
+    {
+      "id": "ICH-E9R1",
+      "title": "ICH E9(R1): Addendum on Estimands and Sensitivity Analysis in Clinical Trials",
+      "url": "https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf",
+      "status": "final-guidance",
+      "statusLabel": "Final ICH addendum",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "estimandの5属性",
+        "intercurrent eventと欠測の区別",
+        "感度分析"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#estimand",
+        "advanced-statistics.html#missing-data"
+      ]
+    },
+    {
+      "id": "CORE-GRADE-1",
+      "title": "Core GRADE 1: overview of the Core GRADE approach",
+      "url": "https://www.bmj.com/content/389/bmj-2024-081903",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed Core GRADE",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "target of certainty",
+        "臨床判断と効果推定"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#effect-measures",
+        "advanced-statistics.html#grade-connection"
+      ]
+    },
+    {
+      "id": "CORE-GRADE-2",
+      "title": "Core GRADE 2: target of certainty and imprecision",
+      "url": "https://www.bmj.com/content/389/bmj-2024-081904",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed Core GRADE",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "CIと閾値",
+        "不精確さ"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#ci-thresholds",
+        "advanced-statistics.html#grade-connection"
+      ]
+    },
+    {
+      "id": "CORE-GRADE-3",
+      "title": "Core GRADE 3: inconsistency",
+      "url": "https://www.bmj.com/content/389/bmj-2024-081905",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed Core GRADE",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "I2だけに依存しない不一致性評価",
+        "研究ごとの推定値とCI"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#multiplicity",
+        "advanced-statistics.html#meta-analysis",
+        "advanced-statistics.html#grade-connection"
+      ]
+    },
+    {
+      "id": "CORE-GRADE-5",
+      "title": "Core GRADE 5: assessing indirectness",
+      "url": "https://www.bmj.com/content/389/bmj-2024-083865",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed Core GRADE",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "対象集団への一般化",
+        "非直接性"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#transportability"
+      ]
+    },
+    {
+      "id": "CORE-GRADE-6",
+      "title": "Core GRADE 6: presenting the evidence in summary of findings tables",
+      "url": "https://www.bmj.com/content/389/bmj-2024-083866",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed Core GRADE",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "相対効果と絶対効果の提示",
+        "基準リスクとSoF表"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#effect-measures",
+        "index.html#page-5"
+      ]
+    },
+    {
+      "id": "GRADE-GUIDANCE-44",
+      "title": "GRADE Guidance 44: Strategies to enhance the utilization of randomized and non-randomized studies",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41285282/",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed GRADE guidance",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "RCTとNRSIの補完的利用",
+        "確実性の対象"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#grade-connection",
+        "non-rct-observational-studies.html",
+        "index.html#page-13"
+      ]
+    },
+    {
+      "id": "HERNAN-ROBINS-2016",
+      "title": "Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4832051/",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed methods",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "target trialの明示",
+        "time zeroと比較戦略の整列",
+        "観察データで残る因果仮定"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#target-trial",
+        "non-rct-observational-studies.html#13a"
+      ]
+    },
+    {
+      "id": "VANDERWEELE-SHPITSER-2019",
+      "title": "Principles of confounder selection",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6447501/",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed methods",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "DAGと臨床知識に基づく交絡因子の選択",
+        "統計的有意性だけで変数の因果役割は決められない",
+        "媒介因子・collider・instrumentへの注意"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#causal-model-choice",
+        "non-rct-observational-studies.html#13b",
+        "non-rct-observational-studies.html#13d"
+      ]
+    },
+    {
+      "id": "BROOKHART-PS-2006",
+      "title": "Variable selection for propensity score models",
+      "url": "https://doi.org/10.1093/aje/kwj149",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed methods",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "傾向スコアにおける変数選択",
+        "ベースラインの予後因子を考慮する理由",
+        "予測性能だけを変数選択の目的にしない"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#causal-model-choice",
+        "non-rct-observational-studies.html#13b",
+        "non-rct-observational-studies.html#13e"
+      ]
+    },    {
+      "id": "NPH-REVIEW",
+      "title": "Methods for non-proportional hazards in clinical trials: a systematic review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11162097/",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed methods review",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "非比例ハザード",
+        "RMSTと補助的な要約"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#survival"
+      ]
+    },
+    {
+      "id": "FINE-GRAY",
+      "title": "A proportional hazards model for the subdistribution of a competing risk",
+      "url": "https://doi.org/10.1080/01621459.1999.10474144",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed methods",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "競合リスクのsubdistribution hazard"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#competing-risks"
+      ]
+    },
+    {
+      "id": "TORRES-2025",
+      "title": "A Tipping Point Method to Evaluate Sensitivity to Potential Violations in Missing Data Assumptions",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40140629/",
+      "status": "peer-reviewed-methods",
+      "statusLabel": "Peer-reviewed methods",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "欠測仮定への感度分析",
+        "tipping point"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#missing-data"
+      ]
+    },
+    {
+      "id": "CONSORT-2025",
+      "title": "CONSORT 2025 statement",
+      "url": "https://www.bmj.com/content/389/bmj-2024-081123",
+      "status": "reporting-guideline",
+      "statusLabel": "Reporting guideline; not an appraisal tool",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "多重性と報告の透明性"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#multiplicity",
+        "advanced-statistics.html#reporting"
+      ]
+    },
+    {
+      "id": "ICH-E20-DRAFT",
+      "title": "ICH E20 Adaptive Designs for Clinical Trials",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e20-adaptive-designs-clinical-trials",
+      "status": "draft-guidance",
+      "statusLabel": "Draft Level 1; not for implementation",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "adaptive designの事前規定",
+        "型I誤差と運用上のバイアス"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#adaptive"
+      ]
+    },
+    {
+      "id": "FDA-BAYES-DRAFT",
+      "title": "Use of Bayesian Methodology in Clinical Trials of Drug and Biological Products",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/use-bayesian-methodology-clinical-trials-drug-and-biological-products",
+      "status": "draft-guidance",
+      "statusLabel": "Draft; not for implementation",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "事前分布と感度分析",
+        "Bayesian試験の透明性"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#bayesian"
+      ]
+    },
+    {
+      "id": "ICH-M14",
+      "title": "ICH M14: General Principles for Planning, Designing, Analyzing and Reporting Non-Interventional Studies",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m14-general-principles-planning-designing-analyzing-and-reporting-non-interventional-studies-utilize",
+      "status": "final-guidance",
+      "statusLabel": "Final Level 1 guidance",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "非介入研究の計画・解析・報告"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#target-trial"
+      ]
+    },
+    {
+      "id": "TARGET-STATEMENT",
+      "title": "TARGET Statement: reporting guideline for observational studies that emulate a target trial",
+      "url": "https://www.bmj.com/content/390/bmj-2025-087179",
+      "status": "reporting-guideline",
+      "statusLabel": "Reporting guideline; not a causal-validity guarantee",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "target trial emulationの報告"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#target-trial"
+      ]
+    },
+    {
+      "id": "TRIPOD-AI",
+      "title": "TRIPOD+AI statement",
+      "url": "https://www.bmj.com/content/385/bmj-2023-078378",
+      "status": "reporting-guideline",
+      "statusLabel": "Reporting guideline; not an appraisal tool",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "AI予測モデルの報告"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#ai-prediction"
+      ]
+    },
+    {
+      "id": "PROBAST-AI",
+      "title": "PROBAST+AI",
+      "url": "https://www.bmj.com/content/388/bmj-2024-082505",
+      "status": "appraisal-tool",
+      "statusLabel": "Appraisal tool",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "予測モデルのRisk of Biasと適用可能性"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#ai-prediction"
+      ]
+    },
+    {
+      "id": "COCHRANE-10",
+      "title": "Cochrane Handbook Chapter 10: Analysing data and undertaking meta-analyses",
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-10",
+      "status": "current-handbook",
+      "statusLabel": "Current handbook",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "ランダム効果モデルと異質性",
+        "予測区間"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#meta-analysis"
+      ]
+    },
+    {
+      "id": "COCHRANE-24",
+      "title": "Cochrane Handbook Chapter 24: Including non-randomized studies on interventions",
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-24",
+      "status": "current-handbook",
+      "statusLabel": "Current handbook",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "観察研究の調整済み効果",
+        "設計の混在"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#meta-analysis",
+        "non-rct-observational-studies.html"
+      ]
+    },
+    {
+      "id": "CRT-ESTIMANDS",
+      "title": "CRT-Estimands Framework",
+      "url": "https://www.bmj.com/content/393/bmj-2025-089050",
+      "status": "consensus-framework",
+      "statusLabel": "Peer-reviewed consensus framework",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "cluster RCTのestimand"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#cluster-rct"
+      ]
+    },
+    {
+      "id": "TRANSPORT-2025",
+      "title": "Generalizing and Transporting Causal Inferences in the Presence of Trial Engagement Effects",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40266689/",
+      "status": "emerging-method",
+      "statusLabel": "Peer-reviewed methods; emerging",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "transportability",
+        "trial engagement effects"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#transportability"
+      ]
+    },
+    {
+      "id": "SPIRIT-2025",
+      "title": "SPIRIT 2025 statement",
+      "url": "https://www.bmj.com/content/389/bmj-2024-081477",
+      "status": "reporting-guideline",
+      "statusLabel": "Reporting guideline",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "プロトコル報告"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#reporting"
+      ]
+    },
+    {
+      "id": "PRISMA-2020",
+      "title": "PRISMA 2020 statement",
+      "url": "https://www.bmj.com/content/372/bmj.n71",
+      "status": "reporting-guideline",
+      "statusLabel": "Reporting guideline",
+      "lastVerified": "2026-08-22",
+      "supports": [
+        "SR報告の透明性"
+      ],
+      "usedIn": [
+        "advanced-statistics.html#reporting"
+      ]
+    }
+  ]
+}

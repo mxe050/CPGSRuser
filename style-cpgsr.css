@@ -4420,3 +4420,103 @@ body.cpg-overview-open { overflow: hidden; }
   line-height: 1.35;
 }
 .toc-btn.active .toc-detail { color: #d5f4f6; }
+
+/* ========================================================================
+   統計学・因果推論の独立学習ページへの導線
+   ======================================================================== */
+.app-skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 3000;
+  transform: translateY(-180%);
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #0f3853;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+}
+.app-skip-link:focus { transform: translateY(0); }
+
+.toc-external-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 20px;
+  border-left: 3px solid #54bdc7;
+  background: rgba(84, 189, 199, 0.12);
+  color: #f2fcfd;
+  text-align: left;
+  text-decoration: none;
+}
+.toc-external-link:hover,
+.toc-external-link:focus-visible {
+  background: rgba(84, 189, 199, 0.24);
+  color: #ffffff;
+}
+.toc-external-link .toc-num {
+  color: #9fdae2;
+  font-weight: 900;
+}
+.toc-external-link .toc-detail { color: #c7eef1; }
+.toc-external-link .en { color: rgba(255, 255, 255, 0.68); }
+
+.advanced-learning-bridge {
+  margin: 0 0 22px;
+  padding: 16px 18px;
+  border: 1px solid #8ab7c1;
+  border-left: 5px solid #167080;
+  border-radius: 8px;
+  background: #f0f8f9;
+  color: #183f4b;
+}
+.advanced-learning-kicker {
+  display: block;
+  margin-bottom: 5px;
+  color: #146171;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.advanced-learning-bridge strong {
+  display: block;
+  color: #154b5b;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+.advanced-learning-bridge p {
+  margin: 8px 0 12px;
+  line-height: 1.75;
+}
+.advanced-learning-bridge a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 9px 13px;
+  border: 1px solid #146171;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #135264;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-decoration: none;
+}
+.advanced-learning-bridge a:hover,
+.advanced-learning-bridge a:focus-visible {
+  background: #146171;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .toc-external-link { padding: 11px 16px; }
+  .advanced-learning-bridge { padding: 15px; }
+  .advanced-learning-bridge a {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+}

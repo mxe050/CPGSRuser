@@ -1,16 +1,22 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
+<meta name="theme-color" content="#123a5a">
+<link rel="canonical" href="https://mxe050.github.io/CPGSRuser/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CPGSR Reader — 診療ガイドライン・SRの読み方">
+<meta property="og:description" content="GRADEに基づき、診療ガイドラインとシステマティックレビューを読むための学習サイト。">
 <link rel="stylesheet" href="style.css?v=7.3">
 <link rel="stylesheet" href="style-cpgsr.css?v=9.0">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+<a class="app-skip-link" href="#mainContent">本文へ移動</a>
 
 <!-- ヘッダー -->
 <header class="app-header">
@@ -82,6 +88,7 @@
       <li class="toc-item"><button class="toc-btn" data-idx="20"><span class="toc-num">20</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
 
       <li class="toc-section toc-section-major">さらに深く勉強するために</li>
+      <li class="toc-item toc-item-external"><a class="toc-external-link" href="advanced-statistics.html"><span class="toc-num" aria-hidden="true">↗</span><span class="toc-text">統計学・因果推論の詳細学習<span class="toc-detail">推定・CI・モデルを読む。非RCTの因果設計とアウトカムの患者重要性へもつなぐ</span><span class="en">Statistics / Causal Inference Deep Dive</span></span></a></li>
       <li class="toc-section">Part VIII — 📘 JAMA ユーザーズガイド（要約）</li>
       <li class="toc-item"><button class="toc-btn jama-toc" data-idx="25"><span class="toc-num">21</span><span class="toc-text">JAMAでのSR/MA記載内容（重複）<span class="en">JAMA UG Ch22: SR/MA Process</span></span></button></li>
       <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26"><span class="toc-num">22</span><span class="toc-text">ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
@@ -1114,6 +1121,12 @@
         <div class="en-title">Reading SoF Tables / Evidence Profiles</div>
       </div>
       <div class="page-body">
+        <aside class="advanced-learning-bridge" aria-label="統計学の関連学習">
+          <span class="advanced-learning-kicker">詳細学習</span>
+          <strong>SoF表の数字を、効果の問いと尺度から読み直す</strong>
+          <p>相対効果・絶対効果・調整後効果は、同じように見えても別の問いを表すことがあります。表の数値だけで判断しないための統計学的な見取り図を確認します。</p>
+          <a href="advanced-statistics.html#effect-measures">相対・絶対効果と推定対象を詳しく学ぶ</a>
+        </aside>
         <!-- 📍 あなたが今学んでいる場所 -->
         <div class="you-are-here">
           <div class="yah-pin">📍</div>
@@ -1276,6 +1289,12 @@
         <div class="en-title">Meta-analysis, Relative Effects, and Absolute Effects</div>
       </div>
       <div class="page-body">
+        <aside class="advanced-learning-bridge" aria-label="統計学の関連学習">
+          <span class="advanced-learning-kicker">詳細学習</span>
+          <strong>相対効果から患者にとっての差へ翻訳する</strong>
+          <p>RR、OR、HR、回帰係数はそのまま患者の利益・害の大きさではありません。ベースラインリスク、絶対差、調整の有無を分けて読む基礎を確認します。</p>
+          <a href="advanced-statistics.html#effect-measures">効果指標と絶対効果を詳しく学ぶ</a>
+        </aside>
         <!-- 📍 あなたが今学んでいる場所 -->
         <div class="you-are-here">
           <div class="yah-pin">📍</div>
@@ -1418,6 +1437,12 @@
         <div class="en-title">Thresholds & Minimal Important Difference (MID)</div>
       </div>
       <div class="page-body">
+        <aside class="advanced-learning-bridge" aria-label="統計学の関連学習">
+          <span class="advanced-learning-kicker">詳細学習</span>
+          <strong>MID・信頼区間・p値を同じ結論の代用品にしない</strong>
+          <p>nullをまたぐかだけでなく、信頼区間が事前に定めた臨床判断の閾値をどこまでまたぐかを確認します。</p>
+          <a href="advanced-statistics.html#ci-thresholds">p値・信頼区間・臨床閾値を詳しく学ぶ</a>
+        </aside>
         <!-- ===== Ch7プレリュード：MID解説動画（v1.11追加） ===== -->
         <a class="ch-prelude-video" href="https://www.youtube.com/watch?v=4nd4uTrDAKM" target="_blank" rel="noopener">
           <span class="cpv-mark">▶</span>
@@ -1566,6 +1591,12 @@
         <div class="en-title">Inconsistency</div>
       </div>
       <div class="page-body">
+        <aside class="advanced-learning-bridge" aria-label="統計学の関連学習">
+          <span class="advanced-learning-kicker">詳細学習</span>
+          <strong>異質性をI²だけで片付けない</strong>
+          <p>研究ごとの点推定値・信頼区間・効果修飾・予測区間を見て、平均効果を目の前の患者や場面へ使えるか考えます。</p>
+          <a href="advanced-statistics.html#meta-analysis">発展的メタ解析と異質性を詳しく学ぶ</a>
+        </aside>
         <!-- 📍 あなたが今学んでいる場所 -->
         <div class="you-are-here">
           <div class="yah-pin">📍</div>
@@ -1691,6 +1722,12 @@
         <div class="en-title">Imprecision</div>
       </div>
       <div class="page-body">
+        <aside class="advanced-learning-bridge" aria-label="統計学の関連学習">
+          <span class="advanced-learning-kicker">詳細学習</span>
+          <strong>不精確さは、p値ではなく臨床判断が変わるCIかで考える</strong>
+          <p>重要な利益、ほとんど差がない、不利益のどこまでをCIが含むかを、事前の閾値と一緒に確認します。</p>
+          <a href="advanced-statistics.html#ci-thresholds">信頼区間と臨床的重要性を詳しく学ぶ</a>
+        </aside>
         <!-- 📍 あなたが今学んでいる場所 -->
         <div class="you-are-here">
           <div class="yah-pin">📍</div>
@@ -1821,11 +1858,12 @@
         </ol>
         <section class="nrsi-path-launch" aria-labelledby="nrsi-path-title">
           <span class="nrsi-path-kicker">詳細学習ルート</span>
-          <h2 id="nrsi-path-title">結果の数字を、因果の仮定と患者にとっての意味まで追う</h2>
-          <p>この章は入口です。観察研究では「比較可能な患者を同じ時点から追えているか」、がんの結果では「そのendpointが患者の利益をどこまで表すか」をさらに確認します。どちらも、結論を急がないための実践的な読み方です。</p>
+          <h2 id="nrsi-path-title">数字・因果設計・患者重要性を、混ぜずにつなぐ</h2>
+          <p>この章は入口です。結論を急がないために、まず「数値は何を推定したか」、次に「非RCTで比較可能性を作れているか」、最後に「そのendpointが患者の利益・害に何を意味するか」を分けて確認します。3つは互いに必要ですが、同じ問いではありません。</p>
           <div class="nrsi-path-actions">
-            <a href="non-rct-observational-studies.html">非RCT・観察研究を詳しく学ぶ</a>
-            <a href="oncology-outcomes.html">がんアウトカムを詳しく学ぶ</a>
+            <a href="advanced-statistics.html#causal-model-choice">1. 統計・CI・変数選択を詳しく学ぶ</a>
+            <a href="non-rct-observational-studies.html#13a">2. 非RCT・観察研究の因果設計を詳しく学ぶ</a>
+            <a href="oncology-outcomes.html#onc1">3. がんアウトカムを患者の意味まで詳しく学ぶ</a>
           </div>
         </section>
 

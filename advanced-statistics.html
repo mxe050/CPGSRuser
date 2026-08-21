@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="臨床研究、システマティックレビュー、診療ガイドラインを読むための統計学・因果推論ディープダイブ。estimandからGRADEの確実性、臨床判断までをつなげます。">
+  <meta name="theme-color" content="#123a5a">
+  <meta property="og:title" content="統計学・因果推論のディープダイブ | CPGSR Reader">
+  <meta property="og:description" content="数字から臨床意思決定までを読むための、統計学・因果推論の学習ページです。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://mxe050.github.io/CPGSRuser/advanced-statistics.html">
+  <title>統計学・因果推論のディープダイブ | CPGSR Reader</title>
+  <link rel="stylesheet" href="site-shell.css?v=1.0">
+  <link rel="stylesheet" href="advanced-statistics.css?v=1.1">
+  <script src="advanced-statistics.js?v=1.1" defer></script>
+</head>
+<body class="advanced-statistics-page">
+  <a class="cpgsr-skip-link" href="#main-content">本文へ移動</a>
+  <header class="cpgsr-global-header">
+    <div class="cpgsr-header-inner">
+      <div class="cpgsr-header-context">
+        <a class="cpgsr-back-link" href="index.html#page-0">学習目次へ戻る</a>
+        <nav class="cpgsr-breadcrumb" aria-label="パンくず">
+          <a href="index.html#page-0">CPGSR Reader</a>
+          <span class="cpgsr-breadcrumb-separator" aria-hidden="true">›</span>
+          <span class="cpgsr-current-title" aria-current="page">発展学習：統計学・因果推論</span>
+        </nav>
+      </div>
+      <a class="cpgsr-brand" href="index.html#page-0" aria-label="CPGSR Readerのホームへ"><span class="cpgsr-brand-strong">CPGSR</span> Reader</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="adv-page">
+      <header class="adv-hero">
+        <p class="adv-kicker">ADVANCED LEARNING / READER'S GUIDE</p>
+        <h1>統計学・因果推論のディープダイブ<br>数字から臨床意思決定までを読む</h1>
+        <p class="adv-hero-lead">統計手法の名前を覚えるためのページではありません。論文、SR、CPGを読むときに、<strong>何を知りたいのか、何を推定したのか、どの仮定に依存するのか、その不確かさで患者・パネルの判断が変わるのか</strong>を一続きに確認するための学習ページです。</p>
+        <div class="adv-status-row" aria-label="資料の扱い">
+          <span class="adv-chip">最終確認日：2026-08-22</span>
+          <span class="adv-chip">読み手向け再編集</span>
+          <span class="adv-chip">教育用仮想例を含む</span>
+        </div>
+        <div class="adv-path-links" aria-label="関連する詳細学習">
+          <a href="non-rct-observational-studies.html#13a">因果効果として読む：非RCT・観察研究</a>
+          <a href="oncology-outcomes.html#onc1">患者の意味まで読む：がんアウトカム</a>
+          <a href="index.html#page-13">Ch13の要点へ戻る</a>
+        </div>
+      </header>
+
+      <section class="adv-map" aria-labelledby="map-title">
+        <h2 id="map-title">学習地図：数値が意思決定に届くまで</h2>
+        <ol class="adv-map-flow">
+          <li>臨床疑問</li><li>対象・治療戦略</li><li>アウトカムと時間軸</li><li>estimand</li><li>デザインと識別</li><li>モデルと推定値</li><li>不確かさ</li><li>臨床閾値</li><li>GRADEの確実性</li><li>推奨・患者の判断</li>
+        </ol>
+      </section>
+      <section class="adv-domain-map" aria-labelledby="domain-map-title">
+        <h2 id="domain-map-title">3つの深掘りページは、別の問いを読む</h2>
+        <p>同じ「調整」「HR」「95%信頼区間」という語でも、確認する順番は一つではありません。数字の意味、因果効果としての妥当性、患者にとっての意味を混ぜずに読み、必要なところで相互に行き来します。</p>
+        <div class="adv-domain-grid">
+          <a class="adv-domain-card" href="#estimand" aria-current="page"><strong>1. 統計・推定・不確かさ</strong><span>何を推定し、どの効果指標・CI・モデルで示したかを読む。ここが現在地です。</span></a>
+          <a class="adv-domain-card" href="non-rct-observational-studies.html#13a"><strong>2. 非RCT・観察研究の因果設計</strong><span>比較可能な患者を同じ時点から追えたか、交絡・選択・測定の仮定を読む。</span></a>
+          <a class="adv-domain-card" href="oncology-outcomes.html#onc1"><strong>3. アウトカムの患者重要性</strong><span>endpointが何を数え、患者の生存・症状・機能・害に何を意味するかを読む。</span></a>
+        </div>
+      </section>
+      <section class="adv-tools" aria-labelledby="tools-title">
+        <h2 id="tools-title">学習モジュールを絞り込む</h2>
+        <div class="adv-tool-grid">
+          <div class="adv-field">
+            <label for="statistics-search">本文を検索</label>
+            <input id="statistics-search" type="search" placeholder="例：RMST、欠測、AI、閾値" autocomplete="off">
+          </div>
+          <div class="adv-field">
+            <label for="statistics-level">難易度</label>
+            <select id="statistics-level">
+              <option value="all">すべて</option>
+              <option value="basic">基本</option>
+              <option value="advanced">上級</option>
+            </select>
+          </div>
+          <div class="adv-field">
+            <label for="statistics-topic">テーマ</label>
+            <select id="statistics-topic">
+              <option value="all">すべて</option>
+              <option value="trial">臨床試験</option>
+              <option value="survival">生存時間・がん</option>
+              <option value="causal">因果推論・RWE</option>
+              <option value="synthesis">SR・メタ解析</option>
+              <option value="ai">AI・予測</option>
+              <option value="grade">GRADEとの接続</option>
+            </select>
+          </div>
+        </div>
+        <p id="statistics-result-count" class="adv-filter-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <div class="adv-layout">
+        <div class="adv-content">
+          <p id="statistics-empty" class="adv-empty" hidden>条件に合うモジュールがありません。検索語を短くするか、絞り込みを「すべて」に戻してください。</p>
+
+          <section class="adv-chapter-band" id="statistics-foundations" aria-labelledby="statistics-foundations-title">
+            <header class="adv-chapter-header">
+              <span class="adv-chapter-label">PART 1 / 数字を読む前の問い</span>
+              <h2 id="statistics-foundations-title">推定したい効果と、患者にとっての大きさを定める</h2>
+              <p>分析法やp値より先に、臨床質問、estimand、相対効果と絶対効果の区別を確認します。</p>
+              <div class="adv-chapter-links"><a href="oncology-outcomes.html#onc1">アウトカム定義を読む</a><a href="index.html#page-5">SoF表の入口へ戻る</a></div>
+            </header>
+
+          <article class="adv-module" id="estimand" data-level="basic advanced" data-topic="trial causal grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 0</span><span class="adv-level">基本から上級</span><span class="adv-status final">FINAL GUIDANCE / CURRENT</span></div>
+            <h2>まず「何を推定するか」を決める：estimand</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>アウトカム名が同じでも、治療中止・救済治療・死亡をどう扱うかが違えば、答えている臨床質問は違います。分析法を先に選ぶのではなく、知りたい効果（estimand）を先に確認します。</div>
+            <p>読者が最初に探すべきなのは、対象集団、比較する治療戦略、変数・アウトカム、intercurrent eventへの方針、集団レベルの要約です。ICH E9(R1)は、この5属性を明示し、estimand、estimator、estimateを区別します。<strong>intercurrent eventは欠測データと同義ではありません。</strong>治療中止や救済治療は臨床質問の一部になり得ますが、測定が得られないことは解析上の欠測問題です。</p>
+            <div class="adv-grid">
+              <section class="adv-item"><h3>治療方針（treatment policy）</h3><p>中止や救済治療が起きた後も含め、割り付けた方針の効果を問う。ITTという語だけで、この問いが完全に決まるわけではありません。</p></section>
+              <section class="adv-item"><h3>仮想・複合・治療中</h3><p>救済治療がなかった場合、死亡を失敗に含める場合、治療を受けている間だけを問う場合は、それぞれ別の問いです。どの方針を採ったかを探します。</p></section>
+            </div>
+            <div class="adv-warning"><strong>よくある誤読：</strong>「per-protocol解析」は単に中止者を除外する解析ではありません。除外が治療後の状態に依存すれば、ランダム化による比較可能性を失うため、別の因果仮定と方法が必要です。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>プロトコルまたはSAPに、intercurrent eventの扱い、主解析、感度分析が、同じestimandを目指す形で書かれていますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>SRのアウトカム行が、研究ごとに異なるestimandを混ぜていないかを確認します。混ぜるなら、非直接性または不一致性、時にはRisk of Biasの問題になります。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status final">FINAL ICH ADDENDUM</span><span>最終確認：2026-08-22</span></div><p><a href="https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf" target="_blank" rel="noopener">ICH E9(R1): Addendum on Estimands and Sensitivity Analysis</a>（2019）および <a href="https://www.bmj.com/content/384/bmj-2023-076316" target="_blank" rel="noopener">BMJ estimands primer</a>（2024）。</p></div>
+          </article>
+
+          <article class="adv-module" id="effect-measures" data-level="basic advanced" data-topic="trial synthesis grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 1</span><span class="adv-level">基本から上級</span><span class="adv-status methods">PEER-REVIEWED METHODS</span></div>
+            <h2>相対効果・絶対効果・条件付き効果を混同しない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>RR、OR、HR、risk differenceは別の量です。患者の判断には、対象集団のベースラインリスクと時間軸を伴う絶対効果が不可欠です。</div>
+            <p>RRはリスクの比、risk difference（RD）は確率の差、ORはオッズの比、HRは追跡中の瞬間的なevent hazardをモデルで要約した比です。これらを同じ文章に置き換えてはいけません。NNT/NNHは <code>1 / |RD|</code> として近似できますが、<strong>対象集団と追跡時点が変われば値も変わります。</strong></p>
+            <div class="adv-grid">
+              <section class="adv-item"><h3>marginalとconditional</h3><p>回帰モデルの係数は多くの場合、共変量に条件づけたconditional effectです。標準化やg-computationで得る集団平均のabsolute effectとは、同じ質問を表さないことがあります。</p></section>
+              <section class="adv-item"><h3>non-collapsibility</h3><p>ORやHRは、交絡がなくても調整前後で値が変わり得ます。その差を自動的に「交絡を除去した証拠」と解釈しません。</p></section>
+            </div>
+            <div class="adv-warning"><strong>言ってはいけないこと：</strong>OR 0.50を「リスクが半分」、HR 0.70を「死亡が30%減る」「寿命が30%延びる」と読み替えることはできません。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>効果指標、基準リスク、時間軸、絶対効果とその95%CIが同じ表または本文で追えますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>SoF表で相対効果だけを見ず、対象患者の基準リスクに変換した絶対効果と閾値を読みます。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status methods">PEER-REVIEWED CORE GRADE</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.bmj.com/content/389/bmj-2024-081903" target="_blank" rel="noopener">Core GRADE 1</a>、<a href="https://www.bmj.com/content/389/bmj-2024-083866" target="_blank" rel="noopener">Core GRADE 6</a>。</p></div>
+          </article>
+
+          </section>
+
+          <section class="adv-chapter-band" id="statistics-uncertainty" aria-labelledby="statistics-uncertainty-title">
+            <header class="adv-chapter-header">
+              <span class="adv-chapter-label">PART 2 / 推定値と不確かさ</span>
+              <h2 id="statistics-uncertainty-title">CI、時間、欠測、多重性を別々に確認する</h2>
+              <p>統計学的な精度と、臨床判断を変える不確かさは同じではありません。曲線、追跡、欠測、解析の枝分かれまで読みます。</p>
+              <div class="adv-chapter-links"><a href="oncology-outcomes.html#onc4">生存時間の患者向け解釈へ</a><a href="oncology-outcomes.html#onc7">PROと欠測の読み方へ</a></div>
+            </header>
+
+          <article class="adv-module" id="ci-thresholds" data-level="basic" data-topic="trial synthesis grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 2</span><span class="adv-level">基本</span><span class="adv-status methods">PEER-REVIEWED CORE GRADE</span></div>
+            <h2>p値、信頼区間、臨床的重要性：nullだけを見ない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>p値は「帰無仮説が真である確率」ではありません。95%CIも「この研究で真値が95%の確率で入る区間」ではありません。読むべき中心は、推定値とCIが臨床判断の閾値をどこまでまたぐかです。</div>
+            <p><strong>p&lt;0.05なら臨床的に重要、p≥0.05なら効果なし、という二分法は誤りです。</strong>CIが狭くnull付近に収まるなら「重要な効果は乏しい」ことを支持し得ます。一方でCIが重要な利益と害の両方を含むなら、非有意でも結論は不精確です。統計的な標本変動、モデル仮定、バイアス、GRADEの確実性は別々に考えます。</p>
+            <div class="adv-grid">
+              <section class="adv-item"><h3>臨床閾値を置く</h3><p>「効果があるか」のnullと、「患者にとって重要か」のMIDは別の閾値です。閾値を事後的に変えると、結論も都合よく変わります。</p></section>
+              <section class="adv-item"><h3>absenceを分ける</h3><p>「効果の証拠がない」と「重要な効果がない証拠がある」は違います。後者には、重要な効果を排除する十分に狭いCIが必要です。</p></section>
+            </div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>著者はp値ではなく、点推定値、95%CI、absolute effect、MIDまたは意思決定閾値を一緒に示していますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>不精確さは、固定的なイベント数やp値だけでなく、選んだtarget of certaintyとCIの位置関係で判断します。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status methods">PEER-REVIEWED CORE GRADE</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.bmj.com/content/389/bmj-2024-081904" target="_blank" rel="noopener">Core GRADE 2: target of certainty and imprecision</a>（2025）。</p></div>
+          </article>
+
+          <article class="adv-module" id="survival" data-level="basic advanced" data-topic="trial survival grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 3</span><span class="adv-level">基本から上級</span><span class="adv-status methods">PEER-REVIEWED METHODS</span></div>
+            <h2>生存時間解析：HR、比例ハザード、RMSTを並べて読む</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>HRは生存率の比でも、寿命の延長率でもありません。Kaplan-Meier曲線、number at risk、追跡、比例ハザード（PH）仮定、時点別絶対差、RMSTを組み合わせて読みます。</div>
+            <p>PHが成り立たないとき、単一HRは時間とともに変わる効果を平均化し、臨床的な意味が分かりにくくなります。早期害・遅延利益や曲線交差では、Schoenfeld residualの検定だけでPHを保証できません。RMSTは、事前に定めた時間地平 <code>τ</code> までの曲線下面積です。<strong>τを結果を見てから選ぶことは、都合のよい要約を作る危険があります。</strong></p>
+            <div class="adv-grid">
+              <section class="adv-item"><h3>検定と推定を分ける</h3><p>weighted log-rankやMaxComboは検定の選択肢になり得ますが、患者に何がどれほど違うかの効果推定を代替しません。</p></section>
+              <section class="adv-item"><h3>補助指標を置く</h3><p>時点生存率差、RMST差、time-varying effect、中央値を、臨床質問に応じて補助的に並べます。常に最良の1手法はありません。</p></section>
+            </div>
+            <div class="adv-warning"><strong>よくある誤読：</strong>PH検定が非有意でもPH成立の証明ではありません。KM曲線が離れて見えても、後半のrisk setやabsolute effectを見ずに重要性を決めません。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>time origin、event、censoring、number at risk、PHをどう評価したか、選んだτとその理由が追えますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>単一HRが患者に重要な効果を適切に表しているかは、非直接性、Risk of Bias、解釈の問題になり得ます。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status methods">PEER-REVIEWED SYSTEMATIC REVIEW</span><span>最終確認：2026-08-22</span></div><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11162097/" target="_blank" rel="noopener">Methods for non-proportional hazards in clinical trials: a systematic review</a>（2024）。がん固有の読み方は<a href="oncology-outcomes.html#onc4">がんアウトカム詳細ページ</a>へ。</p></div>
+          </article>
+
+          <article class="adv-module" id="competing-risks" data-level="advanced" data-topic="survival trial">
+            <div class="adv-module-header"><span class="adv-number">MODULE 4</span><span class="adv-level">上級</span><span class="adv-status methods">PEER-REVIEWED METHODS</span></div>
+            <h2>競合リスク・反復イベント：起きなかった理由を消さない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>再発前の死亡は、再発を経験できなくする競合イベントです。通常の独立打切りのように扱うと、「ある時点までに再発する確率」という問いを誤って表すことがあります。</div>
+            <p>cause-specific hazardは各イベントの瞬間的な発生率に関する問い、cumulative incidence function（CIF）は特定時点までの絶対的な累積発生に関する問いに向きます。Fine-Gray subdistribution hazardは唯一の正解ではありません。反復する有害事象や再入院は「最初の1回」だけでは情報を捨てるため、mean cumulative function、terminal eventとの関係、multi-stateモデルなどが必要になることがあります。</p>
+            <div class="adv-warning"><strong>よくある誤読：</strong>競合死亡を単なる脱落と呼ぶ、cause-specific HRとCIF差を同じ意味で説明する、Fine-Grayだけを正解とすることは不正確です。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>研究が知りたいのは瞬間的なrate、特定時点までの累積発生、状態遷移、反復負担のどれですか。分析はその問いに対応していますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>異なるイベント定義や競合イベントの扱いを無造作に統合すると、アウトカムの非直接性または不一致性が生じます。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status methods">PEER-REVIEWED METHODS</span><span>最終確認：2026-08-22</span></div><p><a href="https://doi.org/10.1080/01621459.1999.10474144" target="_blank" rel="noopener">Fine &amp; Gray: subdistribution hazards model</a>（1999）。がんの状態遷移の例は<a href="oncology-outcomes.html#onc5">がんアウトカム詳細ページ</a>へ。</p></div>
+          </article>
+
+          <article class="adv-module" id="missing-data" data-level="basic advanced" data-topic="trial survival grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 5</span><span class="adv-level">基本から上級</span><span class="adv-status methods">PEER-REVIEWED METHODS</span></div>
+            <h2>欠測データ：MARと書いてあっても問題は終わらない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>MARは観測データだけで検証できる事実ではなく、解析上の仮定です。multiple imputationやMMRMを使っただけで欠測バイアスが消えるわけではありません。</div>
+            <p>まず、治療中止・救済治療というintercurrent eventと、測定が得られないmissing dataを分けます。次に、群別・時点別の欠測率、理由、アウトカムとの関係、主解析の仮定を確認します。pattern-mixture、reference-based imputation、delta adjustment、tipping-pointなどは、仮定への感度を見せる手段です。<strong>感度分析は、主解析と同じestimandに関する仮定の頑健性を調べるのか、別の臨床質問を調べるのかを明示する必要があります。</strong></p>
+            <div class="adv-grid"><section class="adv-item"><h3>complete case</h3><p>完全症例だけの解析は、欠測が無作為でない限り、比較可能性を失う可能性があります。人数が多いことはその問題を直しません。</p></section><section class="adv-item"><h3>tipping point</h3><p>どの程度の未観測アウトカムの差で結論が変わるかを示します。遠いtipping pointでも、仮定が臨床的に妥当かは別に判断します。</p></section></div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>欠測の理由と群間差、主解析の仮定、感度分析の範囲、結論が変わるシナリオが明示されていますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>欠測は主にRisk of Biasに関係し得ます。CIが狭くても、欠測に由来する系統誤差は不精確さと混同しません。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status methods">PEER-REVIEWED METHODS</span><span>最終確認：2026-08-22</span></div><p><a href="https://pubmed.ncbi.nlm.nih.gov/40140629/" target="_blank" rel="noopener">Torres et al. A Tipping Point Method to Evaluate Sensitivity to Potential Violations in Missing Data Assumptions</a>（2025）および<a href="https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf" target="_blank" rel="noopener">ICH E9(R1)</a>。</p></div>
+          </article>
+
+          <article class="adv-module" id="multiplicity" data-level="basic advanced" data-topic="trial grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 6</span><span class="adv-level">基本から上級</span><span class="adv-status reporting">REPORTING GUIDELINE</span></div>
+            <h2>Multiplicity・サブグループ・中間解析：たまたまを発見と呼ばない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>一方のサブグループで有意、もう一方で非有意、はinteractionの証拠ではありません。多くの検定、アウトカム、途中解析を行うほど偶然の陽性が増えます。</div>
+            <p>co-primary endpoint、hierarchical testing、gatekeeping、alpha spending、group sequential designなどでは、何を確証的に検定するかを事前に決めます。サブグループでは、群内p値を比べるのではなくinteractionを評価し、事前性、方向、少数の仮説、外部根拠、再現性を確認します。データ駆動のcut pointや、20項目から選ばれた1つの陽性結果は探索的に扱います。</p>
+            <div class="adv-warning"><strong>よくある誤読：</strong>forest plotで点推定値が違うだけでは効果修飾を示しません。中間解析も、結果を見たい時に自由に行えるものではありません。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>プロトコル・SAPにfamily、優先順位、停止規則、interaction仮説、調整後CIまたは位置付けが書かれていますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>信用できる効果修飾なら別のSoF表や推奨が必要になります。偶然のサブグループを推奨の差に使うのは避けます。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status reporting">REPORTING GUIDELINE</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.bmj.com/content/389/bmj-2024-081123" target="_blank" rel="noopener">CONSORT 2025 statement</a>（報告ガイドライン。妥当性を保証する評価ツールではありません）と<a href="https://www.bmj.com/content/389/bmj-2024-081905" target="_blank" rel="noopener">Core GRADE 3</a>。</p></div>
+          </article>
+
+          </section>
+
+          <section class="adv-chapter-band" id="statistics-design-causal" aria-labelledby="statistics-design-causal-title">
+            <header class="adv-chapter-header">
+              <span class="adv-chapter-label">PART 3 / 設計・モデル・因果推論</span>
+              <h2 id="statistics-design-causal-title">手法名ではなく、設計と仮定を読む</h2>
+              <p>adaptive design、Bayesian、RWE、予測モデルでは、何を比較し、どの仮定で推定値を作ったのかを確認します。</p>
+              <div class="adv-chapter-links"><a href="non-rct-observational-studies.html#13a">非RCTの因果質問へ</a><a href="non-rct-observational-studies.html#13b">変数選択とDAGへ</a></div>
+            </header>
+
+          <article class="adv-module" id="adaptive" data-level="advanced" data-topic="trial">
+            <div class="adv-module-header"><span class="adv-number">MODULE 7</span><span class="adv-level">上級</span><span class="adv-status draft">DRAFT GUIDANCE — NOT FOR IMPLEMENTATION</span></div>
+            <h2>Adaptive design・platform trial：効率と妥当性を別に問う</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>adaptive designは途中で自由に変える試験ではありません。変更規則、情報遮断、operating characteristics、解析・報告を事前に計画する設計です。</div>
+            <p>sample size re-estimation、群の追加・中止、response-adaptive randomisation、enrichment、platform trialなどは、事前に定めた意思決定規則とシミュレーションを必要とします。非同時対照、time trend、population drift、winner's curse、multiplicity、DMCの独立性を確認します。運用が効率的でも、比較可能性が保たれるとは限りません。</p>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>適応規則、誰が非盲検データを見るか、対照群の同時性、時代効果、推定値の補正、プロトコル変更の履歴が報告されていますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>適応そのものが確実性を上げ下げするのではありません。推定対象、比較の妥当性、選択的報告、CIの解釈をアウトカムごとに評価します。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status draft">DRAFT GUIDANCE — NOT FOR IMPLEMENTATION</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e20-adaptive-designs-clinical-trials" target="_blank" rel="noopener">ICH E20 Adaptive Designs for Clinical Trials</a>（FDA掲載：2025年9月、Draft Level 1、Not for implementation）。</p></div>
+          </article>
+
+          <article class="adv-module" id="bayesian" data-level="advanced" data-topic="trial">
+            <div class="adv-module-header"><span class="adv-number">MODULE 8</span><span class="adv-level">上級</span><span class="adv-status draft">DRAFT GUIDANCE — NOT FOR IMPLEMENTATION</span></div>
+            <h2>Bayesian臨床試験：確率を直接語れても、仮定は消えない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>posterior probabilityは、指定したpriorとlikelihoodの下での確率です。GRADEのcertaintyと同じ量ではありません。</div>
+            <p>prior、likelihood、posterior、credible interval、posterior predictive distributionを区別します。外部データをborrowする場合は、exchangeability、effective historical sample size、prior-data conflict、robust mixture prior、感度分析を確認します。Bayesian designでもfrequentist operating characteristics（type I error、power、estimation biasなど）をシミュレーションで確認することがあります。</p>
+            <div class="adv-warning"><strong>よくある誤読：</strong>Bayesianなら客観的、少標本でも自動的に高精度、posterior probability 95%ならGRADE high certainty、はいずれも誤りです。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>priorの由来、臨床的妥当性、prior-data conflictの確認、複数priorでの結論、決定閾値が示されていますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>Bayesian解析結果も、Risk of Bias、非直接性、不精確さなどを含むエビデンス総体のcertaintyと同一視しません。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status draft">DRAFT GUIDANCE — NOT FOR IMPLEMENTATION</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/use-bayesian-methodology-clinical-trials-drug-and-biological-products" target="_blank" rel="noopener">FDA: Use of Bayesian Methodology in Clinical Trials of Drug and Biological Products</a>（2026年1月Draft、Not for implementation）。</p></div>
+          </article>
+
+          <article class="adv-module" id="target-trial" data-level="basic advanced" data-topic="causal trial grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 9</span><span class="adv-level">基本から上級</span><span class="adv-status reporting">REPORTING GUIDELINE</span><span class="adv-status final">FINAL GUIDANCE / CURRENT</span></div>
+            <h2>Target trial・RWE・外部対照：大規模データを因果効果と誤認しない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>target trial emulationは観察データをRCTに変える魔法ではありません。time zero、適格基準、治療戦略、追跡、交絡、測定、欠測を明示し、残る仮定を可視化する枠組みです。</div>
+            <p>因果推論には、consistency、conditional exchangeability、positivity、適切なモデルと測定という仮定が必要です。new-user active-comparator design、time zeroの整列、immortal time bias、confounding by indication、unmeasured confounding、standard-of-care driftを確認します。外部対照は同時対照またはhistorical対照か、index date・治療時代・データ由来・アウトカム測定が比較可能かを読む必要があります。</p>
+            <div class="adv-warning"><strong>明示して否定します：</strong>傾向スコアは未測定交絡を消しません。target trialと書いてあっても因果妥当性は保証されません。external controlをrandomized controlと呼んではいけません。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>target trial protocol、因果estimand、time zero、交絡因子、overlap、negative controlまたは定量的bias analysis、感度分析が追えますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>観察研究を一律に「最後の手段」とせず、問いと設計を評価します。RCTとNRSIの補完は<a href="index.html#page-13">Ch13</a>と<a href="non-rct-observational-studies.html">詳細ページ</a>で確認します。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status methods">PEER-REVIEWED METHODS</span><span class="adv-status reporting">REPORTING GUIDELINE</span><span class="adv-status final">FINAL ICH GUIDANCE</span><span>最終確認：2026-08-22</span></div><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4832051/" target="_blank" rel="noopener">Hernán &amp; Robins</a>（2016、target trialの方法論）、<a href="https://www.bmj.com/content/390/bmj-2025-087179" target="_blank" rel="noopener">TARGET Statement</a>（2025、21項目の報告ガイドラインであり妥当性保証ではない）、<a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m14-general-principles-planning-designing-analyzing-and-reporting-non-interventional-studies-utilize" target="_blank" rel="noopener">ICH M14</a>（2026年3月、Final Level 1）。</p></div>
+          </article>
+          <article class="adv-module" id="causal-model-choice" data-level="basic advanced" data-topic="causal trial">
+            <div class="adv-module-header"><span class="adv-number">MODULE 9A</span><span class="adv-level">基本から上級</span><span class="adv-status methods">PEER-REVIEWED METHODS</span></div>
+            <h2>関連を説明する回帰と、因果効果を推定するモデルを分ける</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>「単変量解析で有意だった変数だけを多変量解析に入れる」「表1で差が大きい変数だけを調整する」は、因果効果を推定する変数選択の根拠になりません。p値は変数が治療前の交絡因子・媒介因子・colliderのどれかを教えないためです。</div>
+            <p>記述や予測では、簡潔さや予測性能を目的に、データ駆動の変数選択が使われることがあります。しかし治療AとBの<strong>全効果</strong>を知りたいなら、治療開始前の因果構造を先に考えます。臨床知識とDAGで交絡経路を仮定し、治療とアウトカムの共通原因、またはどちらかの原因となるベースライン変数を候補として検討します。治療後の変数、媒介因子、collider、単なる「有意な変数」を混ぜてはいけません。</p>
+            <div class="adv-grid">
+              <section class="adv-item"><h3>従来の誤り</h3><p>単変量p値、群間差、stepwise、変化率だけで共変量を選ぶと、必要な交絡因子を落とし、治療後の変数を入れ、因果効果の意味を変えるおそれがあります。</p></section>
+              <section class="adv-item"><h3>現在の出発点</h3><p>time zeroより前に測定された変数か、治療選択・予後との因果関係は何か、どの効果（全効果か直接効果か）を問うかを先に明示します。</p></section>
+              <section class="adv-item"><h3>PSでの注意</h3><p>傾向スコアも「治療を予測しやすい変数の競争」ではありません。ベースラインの予後因子は、治療との関連が弱くても精度やバイアスの観点で重要になり得ます。未測定交絡は残ります。</p></section>
+              <section class="adv-item"><h3>モデル化の注意</h3><p>連続変数の線形性、非線形・交互作用、欠測、施設・時期、時間依存性、overlapを示さなければ、調整済み推定値の意味を読者は検討できません。</p></section>
+            </div>
+            <div class="adv-warning"><strong>明示して否定します：</strong>「多変量解析をした」「傾向スコアを使った」だけで因果効果と呼ぶことはできません。因果役割を説明せずに有意性で選んだモデル、治療後の変数を全効果の調整因子にしたモデル、overlapのない外挿は、精密に見えても比較の妥当性を保証しません。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>変数一覧、測定時点、DAGまたは臨床的根拠、事前指定、連続変数・欠測の扱い、balance・positivityが追えますか。追えなければ「十分に調整済み」とは判定しません。</div>
+            <div class="adv-grade-link"><strong>次に読む場所：</strong>実際の観察研究では、ここで定めた問いを<a href="non-rct-observational-studies.html#13b">DAGと変数の役割</a>、<a href="non-rct-observational-studies.html#13d">調整モデルの監査</a>、<a href="non-rct-observational-studies.html#13e">PS・重み付け</a>として確認します。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status methods">PEER-REVIEWED METHODS</span><span>最終確認：2026-08-22</span></div><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6447501/" target="_blank" rel="noopener">VanderWeele &amp; Shpitser. Principles of confounder selection</a>（2019）と<a href="https://doi.org/10.1093/aje/kwj149" target="_blank" rel="noopener">Brookhart et al. Variable selection for propensity score models</a>（2006）。</p></div>
+          </article>
+          <article class="adv-module" id="ai-prediction" data-level="basic advanced" data-topic="ai causal grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 10</span><span class="adv-level">基本から上級</span><span class="adv-status reporting">REPORTING GUIDELINE</span><span class="adv-status appraisal">RISK-OF-BIAS / APPRAISAL TOOL</span></div>
+            <h2>AI予測モデル：予測精度・因果効果・臨床価値を別々に問う</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>AUROCが高くても、calibration、外部妥当性、意思決定の利益がよいとは限りません。予測モデルは、治療効果を推定する因果モデルとは別物です。</div>
+            <p>diagnostic/prognostic predictionでは、discrimination（AUROC/C-statistic）、calibration-in-the-large、calibration slope、calibration plot、Brier score、分類閾値、decision curve、臨床影響を分けて読みます。内部検証だけではoptimismを除ききれず、時間的・地理的な外部検証、dataset shift、calibration drift、subgroup performance、data leakageを確認します。</p>
+            <div class="adv-grid"><section class="adv-item"><h3>TRIPOD+AI</h3><p>回帰と機械学習を含む予測モデル研究の報告を透明化するガイドラインです。良い性能や因果妥当性を保証するものではありません。</p></section><section class="adv-item"><h3>PROBAST+AI</h3><p>development quality、performance evaluationのrisk of bias、applicabilityを分けて評価するツールです。報告の完全性とは役割が異なります。</p></section></div>
+            <div class="adv-warning"><strong>よくある誤読：</strong>accuracyが高いからcalibrationもよい、deep learningだから回帰より優れる、説明可能ならbiasがない、は成り立ちません。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>用途、target population、予測時点、外部検証、calibration、臨床的なdecision threshold、実装後の影響が示されていますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>CPGで予測モデルを使うなら、対象集団とのずれは非直接性、性能推定の歪みはRisk of Bias、臨床影響の未確立はcertaintyの問題になります。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status reporting">REPORTING GUIDELINE</span><span class="adv-status appraisal">APPRAISAL TOOL</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.bmj.com/content/385/bmj-2023-078378" target="_blank" rel="noopener">TRIPOD+AI statement</a>（2024）と<a href="https://www.bmj.com/content/388/bmj-2024-082505" target="_blank" rel="noopener">PROBAST+AI</a>（2025）。</p></div>
+          </article>
+
+          </section>
+
+          <section class="adv-chapter-band" id="statistics-synthesis-use" aria-labelledby="statistics-synthesis-use-title">
+            <header class="adv-chapter-header">
+              <span class="adv-chapter-label">PART 4 / 統合して、臨床へ使う</span>
+              <h2 id="statistics-synthesis-use-title">研究をまとめ、適用範囲とGRADEまで追う</h2>
+              <p>メタ解析の平均、cluster RCT、外部妥当性、報告の透明性を、患者に使うための最後の確認としてつなげます。</p>
+              <div class="adv-chapter-links"><a href="oncology-outcomes.html#onc10">アウトカム別GRADEへ</a><a href="index.html#page-13">Ch13の要点へ戻る</a></div>
+            </header>
+
+          <article class="adv-module" id="meta-analysis" data-level="basic advanced" data-topic="synthesis grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 11</span><span class="adv-level">基本から上級</span><span class="adv-status final">CURRENT HANDBOOK</span></div>
+            <h2>発展的メタ解析：平均効果の先を読む</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>random-effectsモデルを使っても異質性は解決しません。I²の固定的な境界だけで統合可否やGRADEの不一致性を決めることもできません。</div>
+            <p>fixed-effectとrandom-effectsは異なる仮定と要約対象を持ちます。τ²やprediction intervalはばらつきを読む補助になりますが、少数研究、分布仮定、small-study effectsに弱いことがあります。meta-regressionはstudy-levelの関連であり、個人レベルのeffect modificationを証明しません。稀なイベント、zero-event studies、時間-to-event、複数効果量、adjusted/unadjusted estimatesは、目的のestimandとRoBをそろえて扱います。</p>
+            <div class="adv-warning"><strong>よくある誤読：</strong>「I²が50%超なら統合不能」「random effectsなら異質性は解決」「prediction intervalがnullを含むなら必ず無効」は、どれも機械的すぎます。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>統合する効果指標・estimand・時間軸・調整集合は臨床的に比較可能ですか。poolしない判断と感度分析の理由も示されていますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>不一致性はI²だけでなく、点推定値、CIの重なり、閾値との位置、事前に立てた説明仮説を合わせて判断します。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status final">CURRENT HANDBOOK</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-10" target="_blank" rel="noopener">Cochrane Handbook Chapter 10</a>、<a href="https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-24" target="_blank" rel="noopener">Chapter 24</a>、<a href="https://www.bmj.com/content/389/bmj-2024-081905" target="_blank" rel="noopener">Core GRADE 3</a>。</p></div>
+          </article>
+
+          <article class="adv-module" id="cluster-rct" data-level="advanced" data-topic="trial grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 12</span><span class="adv-level">上級</span><span class="adv-status consensus">CONSENSUS FRAMEWORK</span></div>
+            <h2>Cluster RCT：割付単位と解析対象をずらさない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>施設、病棟、学校などを割り付けるcluster RCTでは、誰を対象とするか、cluster平均を問うのか個人平均を問うのかでestimandが変わります。</div>
+            <p>ICCとdesign effect（教育用近似では <code>1 + (m - 1)ρ</code>）は重要ですが、cluster sizeの不均衡、informative cluster size、member recruitment bias、post-randomisation identification、contamination、stepped-wedgeのperiod effect、小さいcluster数まで確認します。単純式だけで精度を保証しません。</p>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>randomisation unit、analysis unit、対象者の募集時点、cluster-weighted/participant-weighted estimand、ICCの扱い、時間トレンドが明記されていますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>募集や解析の偏りはRisk of Bias、少数clusterや不均衡は不精確さ、集団の違いは非直接性につながります。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status consensus">CONSENSUS FRAMEWORK</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.bmj.com/content/393/bmj-2025-089050" target="_blank" rel="noopener">CRT-Estimands Framework</a>（BMJ 2026）。</p></div>
+          </article>
+
+          <article class="adv-module" id="transportability" data-level="advanced" data-topic="causal ai grade">
+            <div class="adv-module-header"><span class="adv-number">MODULE 13</span><span class="adv-level">上級</span><span class="adv-status emerging">EMERGING / EXPLORATORY</span></div>
+            <h2>Transportability・個別化効果：外部妥当性を楽観しない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>試験参加者が対象患者を完全に代表しないことと、結果を適用できないことは同義ではありません。しかし、重み付けやAIが未測定の選択要因を自動で直すわけでもありません。</div>
+            <p>target population、trial participation、engagement effects、covariate shift、effect measure modification、positivityを明示します。standardisationやinverse odds of sampling weightsは、測定済みの条件の下での移送を試みる方法です。CATEやcausal forestは探索的な個別化仮説を出すことがありますが、過学習、multiplicity、検証、clinical utilityを要します。</p>
+            <div class="adv-warning"><strong>よくある誤読：</strong>サブグループ平均の差を個人の真の治療効果と呼ぶ、AIが個人効果を自動的に示す、重み付けで未測定の選択バイアスまで補正できる、はいずれも誤りです。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>対象集団、適用先、effect modifier、測定されていない条件、外部検証、意思決定上の利益が示されていますか。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>transportabilityは、PICOのずれと同様に非直接性を考える入口です。対象群ごとにabsolute effectと価値観が変わることもあります。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status emerging">PEER-REVIEWED METHODS / EMERGING</span><span>最終確認：2026-08-22</span></div><p><a href="https://pubmed.ncbi.nlm.nih.gov/40266689/" target="_blank" rel="noopener">Generalizing and Transporting Causal Inferences in the Presence of Trial Engagement Effects</a>（2025）と<a href="https://www.bmj.com/content/389/bmj-2024-083865" target="_blank" rel="noopener">Core GRADE 5</a>。</p></div>
+          </article>
+
+          <article class="adv-module" id="reporting" data-level="basic" data-topic="trial causal ai synthesis">
+            <div class="adv-module-header"><span class="adv-number">MODULE 14</span><span class="adv-level">基本</span><span class="adv-status reporting">REPORTING GUIDELINE</span></div>
+            <h2>透明性・再現性：報告がよいことと妥当であることを分ける</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>CONSORT、SPIRIT、TARGET、TRIPOD+AI、PRISMAは報告を透明にするガイドラインです。項目を満たしていても、研究の因果妥当性やRisk of Biasが自動的に低くなるわけではありません。</div>
+            <p>読む側は、protocol、registry、SAP、論文、補足資料、データ・コード公開、試験開始後の変更を照合します。事前登録があっても変更はあり得ますし、open dataがあっても解析が正しいとは限りません。逆に、報告の不足は読者が妥当性を判断できない重要な理由です。</p>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>主アウトカム、解析集団、分析計画、変更履歴、欠測・脱落、全ての事前指定解析が追えますか。見つからなければ「問題なし」とは判断しません。</div>
+            <div class="adv-grade-link"><strong>GRADEとの接続：</strong>報告不足はRoB判断を困難にしますが、報告ガイドライン準拠をそのまま高いcertaintyの根拠にはしません。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status reporting">REPORTING GUIDELINE</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.bmj.com/content/389/bmj-2024-081123" target="_blank" rel="noopener">CONSORT 2025</a>、<a href="https://www.bmj.com/content/389/bmj-2024-081477" target="_blank" rel="noopener">SPIRIT 2025</a>、<a href="https://www.bmj.com/content/372/bmj.n71" target="_blank" rel="noopener">PRISMA 2020</a>。</p></div>
+          </article>
+
+          <article class="adv-module" id="grade-connection" data-level="basic advanced" data-topic="grade trial causal synthesis">
+            <div class="adv-module-header"><span class="adv-number">MODULE 15</span><span class="adv-level">基本から上級</span><span class="adv-status methods">PEER-REVIEWED CORE GRADE</span></div>
+            <h2>最後にGRADEへつなぐ：統計的な不確かさはcertaintyそのものではない</h2>
+            <div class="adv-summary"><strong>60秒要約：</strong>統計モデルの95%CIは、エビデンス総体のGRADE certaintyと同じではありません。GRADEでは、意思決定に必要な真の効果の位置をどこまで確信できるかを、複数の領域から判断します。</div>
+            <div class="adv-grid">
+              <section class="adv-item"><h3>Risk of Bias</h3><p>欠測、解析集団、model selection、交絡、選択的報告は、主に系統的な歪みとして評価します。</p></section>
+              <section class="adv-item"><h3>不精確さ</h3><p>CIがnullやMIDなど、選んだ判断閾値をどこまでまたぐかを見ます。p値やOISだけで結論しません。</p></section>
+              <section class="adv-item"><h3>不一致性</h3><p>I²だけでなく、研究ごとの点推定値、CI、閾値、説明可能な効果修飾を合わせます。</p></section>
+              <section class="adv-item"><h3>非直接性・発信バイアス</h3><p>estimand、PICO、対象集団、surrogate、選択的な利用可能性が意思決定にどれだけずれるかを考えます。</p></section>
+            </div>
+            <div class="adv-warning"><strong>結論：</strong>「統計的に有意」「Bayesian posteriorが高い」「AIのAUROCが高い」「I²が低い」のどれか一つだけで、GRADEのcertaintyや推奨の強さを決めることはできません。</div>
+            <div class="adv-reader-check"><strong>読み手チェック：</strong>研究の数字から、absolute effect、患者重要アウトカム、値・負担、certainty、推奨までの論理が追跡できますか。途中でラベルだけに飛んでいませんか。</div>
+            <div class="adv-source"><div class="adv-source-meta"><span class="adv-status methods">PEER-REVIEWED CORE GRADE</span><span>最終確認：2026-08-22</span></div><p><a href="https://www.bmj.com/content/389/bmj-2024-081903" target="_blank" rel="noopener">Core GRADE 1</a>、<a href="https://www.bmj.com/content/389/bmj-2024-081904" target="_blank" rel="noopener">Core GRADE 2</a>、<a href="https://www.bmj.com/content/389/bmj-2024-081905" target="_blank" rel="noopener">Core GRADE 3</a>、<a href="https://pubmed.ncbi.nlm.nih.gov/41285282/" target="_blank" rel="noopener">GRADE Guidance 44</a>。</p></div>
+          </article>
+          </section>
+
+          <section class="adv-source-index" id="sources" aria-labelledby="sources-title">
+            <h2 id="sources-title">資料の状態を読む</h2>
+            <p>本ページでは、資料の種類を意図的に分けています。確定ガイダンスは現時点の正式文書、ドラフトは変更され得る文書、報告ガイドラインは透明性のための枠組み、評価ツールは特定の問いの評価手段、査読済み方法論は検討すべき方法の根拠です。どの種類も単独で臨床判断を決めません。</p>
+            <ul>
+              <li><span class="adv-status final">FINAL GUIDANCE / CURRENT</span> 現行の確定ガイダンスまたはハンドブック。</li>
+              <li><span class="adv-status draft">DRAFT GUIDANCE — NOT FOR IMPLEMENTATION</span> 今後変更され得るため、確定規則として使わない文書。</li>
+              <li><span class="adv-status reporting">REPORTING GUIDELINE</span> 報告の透明性を高めるが、妥当性を保証しない文書。</li>
+              <li><span class="adv-status appraisal">RISK-OF-BIAS / APPRAISAL TOOL</span> 目的に沿って質・RoB・適用可能性を評価するツール。</li>
+              <li><span class="adv-status methods">PEER-REVIEWED METHODS</span> 査読済みの方法論・教育的解説。</li>
+              <li><span class="adv-status emerging">EMERGING / EXPLORATORY</span> 発展中で、再現・外部検証・臨床的有用性の確認が必要な方法。</li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="adv-toc" aria-label="統計学ディープダイブ目次">
+          <h2>このページの目次</h2>
+          <section class="adv-toc-group">
+            <h3>1. 問いと効果の量</h3>
+            <ol><li><a href="#estimand">Estimand</a></li><li><a href="#effect-measures">相対・絶対効果</a></li></ol>
+          </section>
+          <section class="adv-toc-group">
+            <h3>2. 推定値と不確かさ</h3>
+            <ol><li><a href="#ci-thresholds">p値・CI・閾値</a></li><li><a href="#survival">HR・NPH・RMST</a></li><li><a href="#competing-risks">競合リスク</a></li><li><a href="#missing-data">欠測データ</a></li><li><a href="#multiplicity">多重性・サブ群</a></li></ol>
+          </section>
+          <section class="adv-toc-group">
+            <h3>3. 設計・モデル・因果</h3>
+            <ol><li><a href="#adaptive">Adaptive design</a></li><li><a href="#bayesian">Bayesian</a></li><li><a href="#target-trial">Target trial / RWE</a></li><li><a href="#causal-model-choice">変数選択と因果モデル</a></li><li><a href="#ai-prediction">AI予測</a></li></ol>
+          </section>
+          <section class="adv-toc-group">
+            <h3>4. 統合と臨床への適用</h3>
+            <ol><li><a href="#meta-analysis">発展的メタ解析</a></li><li><a href="#cluster-rct">Cluster RCT</a></li><li><a href="#transportability">Transportability</a></li><li><a href="#reporting">透明性・報告</a></li><li><a href="#grade-connection">GRADEとの接続</a></li><li><a href="#sources">資料の状態</a></li></ol>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="cpgsr-page-footer"><a href="index.html#page-0">CPGSR Readerの学習目次へ戻る</a></footer>
+</body>
+</html>
