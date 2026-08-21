@@ -17,7 +17,7 @@ GRADEの「**作り手向け**」解説は、同じ作者の別アプリ [core-g
 
 ---
 
-## 全24章の構成
+## 全25章の構成
 
 ### Part I — EBM・GRADEの全体像
 - Ch1: EBMと診療ガイドライン・SRの読み方
@@ -54,10 +54,21 @@ GRADEの「**作り手向け**」解説は、同じ作者の別アプリ [core-g
 - Ch20: 推奨を目の前の患者にどう適用するか
 - Ch21: 共同意思決定（SDM）と価値観・嗜好
 
-### Part VIII — 付録
-- Ch22: 用語集 ＋ Q&A
-- Ch23: 最新情報 ＋ Guyatt先生 LinkedIn ピックアップ
-- Ch24: 参考文献一覧
+### Part VIII — JAMA ユーザーズガイド（要約）
+- Ch21: JAMAでのSR/MA記載内容
+- Ch22: ネットワークメタアナリシス
+
+### Part IX — 付録
+- Ch23: 用語集 ＋ Q&A
+- Ch24: 最新情報 ＋ Guyatt先生 LinkedIn ピックアップ
+- Ch25: 参考文献一覧
+
+---
+
+## 独立した発展学習ページ
+
+- [統計学・因果推論のディープダイブ](advanced-statistics.html): estimand、非比例ハザード、RMST、競合リスク、欠測、多重性、adaptive design、Bayesian、target trial/RWE、AI予測、発展的メタ解析、cluster RCT、transportabilityを、読む側の判断として学ぶページです。各モジュールに資料状態、一次・公式資料URL、最終確認日を表示します。
+- [非RCT・観察研究の読み方](non-rct-observational-studies.html) と [がんアウトカムの読み方](oncology-outcomes.html): Ch13から進む既存の詳細学習ページです。
 
 ---
 
@@ -71,6 +82,7 @@ GRADEの「**作り手向け**」解説は、同じ作者の別アプリ [core-g
 | 信頼できるCPG 6質問チェックリスト | Ch16 | 目の前のCPGを評価 |
 | AMSTAR 2 16項目チェッカー | Ch18 | SRの方法論的質を評価 |
 | LinkedInピックアップ | Ch23 | Guyatt先生の最新投稿 |
+| 統計学・因果推論の絞り込み | 独立ページ | 本文検索、難易度・テーマによる学習モジュール絞り込み |
 
 ---
 
@@ -109,13 +121,20 @@ GRADEの「**作り手向け**」解説は、同じ作者の別アプリ [core-g
 
 ```
 CPGSRuser/
-├── index.html              # 本体
+├── index.html              # 本体（SPA）
+├── advanced-statistics.html # 統計学・因果推論の独立学習ページ
+├── non-rct-observational-studies.html # 非RCT・観察研究の詳細学習
+├── oncology-outcomes.html  # がんアウトカムの詳細学習
+├── site-shell.css          # 独立ページ共通ヘッダー・パンくず・帰還導線
+├── advanced-statistics.css # 統計学ページのスタイル
+├── advanced-statistics.js  # 統計学ページの検索・絞り込み
 ├── style.css               # 既存シェル流用＋テーマ
-├── style-cpgsr.css         # 追加スタイル
-├── script.js               # 既存シェル流用
+├── style-cpgsr.css         # 本体の追加スタイル
+├── script.js               # 本体のSPAナビゲーション
 ├── coreGRADE_utils.js      # 補助ユーティリティ
 ├── data/
 │   ├── references.json     # 参考文献データ（U/M/G/T/C/V/L）
+│   ├── statistics-sources.json # 統計学ページの出典・状態・最終確認日
 │   ├── glossary.json       # 用語集
 │   ├── mid-thresholds.json # MID閾値例
 │   ├── linkedin-picks.json # LinkedInピックアップ
@@ -128,6 +147,12 @@ CPGSRuser/
 │   ├── amstar2.js
 │   └── linkedin-feed.js
 └── docs/
+    ├── audit-statistics-grade-open-ui.md
+    ├── grade-open-integration-inventory.md
+    ├── grade-open-integration-inventory.json
+    ├── source-verification-log.md
+    ├── qa-statistics-grade-open-ui.md
+    ├── change-summary-statistics-grade-open-ui.md
     └── linkedin-update-guide.md
 ```
 
@@ -135,6 +160,7 @@ CPGSRuser/
 
 ## 更新履歴
 
+- **v1.1.0 (2026-08)**: 25章構成をREADMEへ反映。統計学・因果推論の独立学習ページ、既存詳細ページとの相互リンク、資料状態と出典検証記録を追加。
 - **v1.0.0 (2026-04)**: 初回公開。全24章、6つのインタラクティブ機能、30以上の参考文献を搭載。
 
 ---
