@@ -223,11 +223,15 @@
     },
     "G2": {
       "authors": "Cuello-Garcia CA, et al.",
-      "year": 2025,
-      "title": "GRADE guidance 44: Strategies to enhance the utilization of randomized and non-randomized studies in evidence syntheses",
+      "year": 2026,
+      "title": "GRADE Guidance 44: Strategies to enhance the utilization of randomized and non-randomized studies in evidence syntheses of health interventions",
       "journal": "J Clin Epidemiol",
+      "vol": "190:112086",
+      "pmid": "41285282",
+      "doi": "10.1016/j.jclinepi.2025.112086",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41285282/",
       "usedIn": ["Ch8", "Ch13"],
-      "note": "RCTと非RCTを統合した4ステップ評価枠組み。Ch13の中核論文。"
+      "note": "RCTとNRSIを補完的に用いる4段階の判断枠組み。Ch13の中核論文。"
     },
     "G3": {
       "authors": "Lewin S, et al.",

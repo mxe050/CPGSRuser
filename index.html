@@ -6,7 +6,7 @@
 <title>CPGSR Reader — 診療ガイドライン・SRの読み方（GRADE準拠）</title>
 <meta name="description" content="すべての医療関係者のための、診療ガイドライン／システマティックレビューの読み方ガイド（GRADE準拠・Guyatt先生の最新知見）">
 <link rel="stylesheet" href="style.css?v=7.3">
-<link rel="stylesheet" href="style-cpgsr.css?v=8.8">
+<link rel="stylesheet" href="style-cpgsr.css?v=8.9">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -1055,8 +1055,8 @@
         <table class="mid-table">
           <thead><tr><th></th><th><strong>強い推奨</strong></th><th><strong>条件付き推奨</strong></th></tr></thead>
           <tbody>
-            <tr><td><strong>患者にとって</strong></td><td>ほぼ全員が選ぶ</td><td>多数派は選ぶが、価値観により選ばない人もいる</td></tr>
-            <tr><td><strong>臨床家にとって</strong></td><td>例外なく適用してよい</td><td>価値観を確認し、<span class="gloss" data-term="共同意思決定">共同意思決定（SDM）</span>が必要</td></tr>
+            <tr><td><strong>患者にとって</strong></td><td>ほとんどの人が選ぶ可能性が高い。ただし個別の状況や価値観による例外を確認する</td><td>多数派は選ぶが、価値観により選ばない人もいる</td></tr>
+            <tr><td><strong>臨床家にとって</strong></td><td>通常の出発点として勧める。ただし適用不能、患者の明確な選好、併存症などの例外を確認する</td><td>価値観を確認し、<span class="gloss" data-term="共同意思決定">共同意思決定（SDM）</span>が必要</td></tr>
             <tr><td><strong>政策担当者にとって</strong></td><td>標準ケアとして採用可能</td><td>議論を経て採用、アウトカム測定を</td></tr>
           </tbody>
         </table>
@@ -1800,22 +1800,31 @@
             <span class="yah-title">あなたが今学んでいる場所</span>
             <span class="yah-where">CPG：方法論セクション（STEP 3）／希少疾患・外科領域・有害事象CPG</span>
             <span class="yah-where">SR：観察研究のSR／非RCTが混在するSRの方法・結果全体</span>
-            <span class="yah-check">RCTが存在しない／実施困難な領域では観察研究SRが重要な根拠になります。<strong>GRADE Guidance 44</strong>の4ステップ枠組みで、交絡対策（ROBINS-I/E）・RCTとの整合性・格上げ条件を読み解きます。</span>
+            <span class="yah-check">RCTがない・届かない領域でNRSIは重要な情報を補えます。ただし、人数や調整法の名称だけで因果効果と判断しません。<strong>GRADE Guidance 44</strong>の順序に沿い、certaintyの対象と閾値、RCTとの整合性、どの設計が何を補うかを読み解きます。</span>
             <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
           </div>
         </div>
 
         <div class="key-message">
-          <strong>要点：</strong>RCTが実施できない／ない場合、観察研究（コホート、症例対照）のSRが重要。GRADE Guidance 44（Cuello-Garcia 2025）[G2] は、<strong>RCTと非RCTを統合する4ステップ枠組み</strong>を提唱。読み手は「観察研究でも適切に統合されているか」を判定できる。
+          <strong>要点：</strong>観察研究は、長期アウトカム、まれな害、実診療での効果などに重要な情報を与えます。しかし<strong>大規模・調整済み・傾向スコア使用だけでは因果効果は保証されません</strong>。GRADE Guidance 44（Cuello-Garcia 2026）[G2] は、RCTとNRSIをどう補完的に用いるかを、certaintyの対象と判断閾値から順に検討する枠組みです。
         </div>
 
-        <h2>GRADE Guidance 44の4ステップ</h2>
+        <h2>GRADE Guidance 44の4つの判断</h2>
         <ol>
-          <li><strong>各研究デザインの確実性を個別評価</strong>（RCT単独、非RCT単独）</li>
-          <li><strong>効果の整合性を評価</strong>：RCTと非RCTの絶対効果差がMID閾値以内か</li>
-          <li><strong>ドメイン別判断</strong>：RoB、交絡、整合性を個別に検討</li>
-          <li><strong>提示方法の決定</strong>：別々に提示／並列行／1つに統合するか</li>
+          <li><strong>certaintyの対象と判断閾値を先に定める</strong>：何に対する確実性か、決定閾値はいくつあるかを明確にする</li>
+          <li><strong>効果推定の整合性を評価</strong>：RCTとNRSIの違いが臨床判断を変えるか、不一致の理由は何かを検討する</li>
+          <li><strong>補完性をGRADE domainごとに検討</strong>：どの設計がrisk of bias、非直接性、精度などの不確実性を補えるかを明らかにする</li>
+          <li><strong>使い方を決める</strong>：片方を使う、別々に提示する、並列に示す、併用する理由と限界を明示する</li>
         </ol>
+        <section class="nrsi-path-launch" aria-labelledby="nrsi-path-title">
+          <span class="nrsi-path-kicker">詳細学習ルート</span>
+          <h2 id="nrsi-path-title">結果の数字を、因果の仮定と患者にとっての意味まで追う</h2>
+          <p>この章は入口です。観察研究では「比較可能な患者を同じ時点から追えているか」、がんの結果では「そのendpointが患者の利益をどこまで表すか」をさらに確認します。どちらも、結論を急がないための実践的な読み方です。</p>
+          <div class="nrsi-path-actions">
+            <a href="non-rct-observational-studies.html">非RCT・観察研究を詳しく学ぶ</a>
+            <a href="oncology-outcomes.html">がんアウトカムを詳しく学ぶ</a>
+          </div>
+        </section>
 
         <h2>観察研究の典型的な限界</h2>
         <ul>
@@ -1824,14 +1833,14 @@
           <li><strong>情報バイアス</strong>：曝露・アウトカムの測定誤差</li>
         </ul>
 
-        <h2>観察研究が格上げされる3条件</h2>
-        <p>通常「低」から出発する観察研究でも、以下の条件を満たせば確実性を1-2段上げる：</p>
+        <h2>確実性を上げる理由を、暗記表で自動適用しない</h2>
+        <p>Core GRADEでは、NRSIからのエビデンスは通常「低」から始めます。大きな効果や用量反応があっても自動的に格上げるのではなく、risk of bias、精度、効果の大きさと判断閾値を併せて検討します。</p>
         <ol>
-          <li><strong>大きな効果量</strong>（RR &gt;2 or &lt;0.5）</li>
-          <li><strong>用量反応関係</strong>が明確</li>
-          <li><strong>残存交絡がすべて逆方向</strong>（観察される効果を弱める方向）</li>
+          <li><strong>大きな効果量</strong>：RR/OR/HRが2を超える、または0.5未満なら1段階、5を超える、または0.2未満なら2段階の格上げを<strong>検討</strong>する。ただし、信頼区間が選んだ閾値を十分に越えるか、バイアスで説明できないかを確認する</li>
+          <li><strong>用量反応関係</strong>：曝露量・投与量の測定、交絡、選択の説明を含めて、一貫した関係が示されているかを確認する</li>
+          <li><strong>残存交絡の方向</strong>：旧来のGRADE資料には格上げの補助理由として記載されることがあるが、Core GRADEでは稀で適用困難なため、単なる定型句で格上げを正当化しない</li>
         </ol>
-        <p>例：喫煙と肺がんの関連はRR &gt;10で観察研究ベースでも確実性は高い。</p>
+        <p>読み手は「大きい数字だから高い確実性」と結論せず、効果推定の95%信頼区間、未測定交絡のもっともらしさ、研究ごとのrisk of bias、格上げ理由の説明まで追います。</p>
 
         <h2>読み手としてのチェック</h2>
         <div class="reader-tips">
@@ -2435,8 +2444,8 @@
           <div class="jama-rec-grid">
             <div class="jama-rec-card jrc-strong-for">
               <span class="jrc-tag">強い推奨</span>
-              <div class="jrc-title">ほぼ全員に推奨</div>
-              <p>「just do it」レベル。SDM はエビデンスの要約を簡潔に伝える。</p>
+              <div class="jrc-title">ほとんどの人に勧める出発点</div>
+              <p>通常は勧めるが、適用条件、併存症、患者の明確な選好などの例外を確認する。SDMは簡潔でも、患者が知りたい理由と選択肢を伝える。</p>
             </div>
             <div class="jama-rec-card jrc-weak-for">
               <span class="jrc-tag">条件付き推奨</span>
@@ -2904,7 +2913,7 @@
           <div class="ref-category">C. GRADE方法論拡張</div>
           <ul class="ref-list">
             <li><span class="ref-id">G1</span> Djulbegovic B, Guyatt GH. Progress in evidence-based medicine: a quarter century on. Lancet 2017;390(10092):415-423.</li>
-            <li><span class="ref-id">G2</span> Cuello-Garcia CA, et al. GRADE guidance 44: Strategies to enhance the utilization of randomized and non-randomized studies in evidence syntheses. J Clin Epidemiol 2025.</li>
+            <li><span class="ref-id">G2</span> Cuello-Garcia CA, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/41285282/" target="_blank" rel="noopener noreferrer">GRADE Guidance 44: Strategies to enhance the utilization of randomized and non-randomized studies in evidence syntheses of health interventions.</a> J Clin Epidemiol. 2026;190:112086.</li>
             <li><span class="ref-id">G3</span> Lewin S, et al. Applying GRADE-CERQual to qualitative evidence synthesis findings. Implement Sci 2018;13(Suppl 1):2.</li>
             <li><span class="ref-id">G4</span> Guyatt GH, et al. Guideline panels should seldom make good practice statements. J Clin Epidemiol 2015.</li>
             <li><span class="ref-id">G5</span> Piggott T, et al. Standardized wording to improve efficiency and clarity of GRADE EtD frameworks in health guidelines. J Clin Epidemiol 2022;146:106-122.</li>

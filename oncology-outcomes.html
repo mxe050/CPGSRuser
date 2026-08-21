@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="がん臨床試験のアウトカムを、患者にとっての意味と解析上の前提から読むための詳細学習ページ。">
+  <title>がんアウトカムを読む | CPGSR Reader</title>
+  <link rel="stylesheet" href="learning-paths.css?v=1.0">
+</head>
+<body>
+  <a class="lp-skip-link" href="#main">本文へ移動</a>
+
+  <header class="lp-hero">
+    <div class="lp-hero-inner">
+      <a class="lp-back" href="index.html#page-13">CPGSR Readerへ戻る</a>
+      <p class="lp-eyebrow">ONCOLOGY OUTCOMES DEEP DIVE</p>
+      <h1>がんアウトカムを、患者にとっての利益まで追って読む</h1>
+      <p class="lp-hero-lead">
+        OS、PFS、ORR、pCR、MRD、PRO、毒性は、同じ「よい結果」を表す言葉ではありません。どの時点から何をイベントとし、どう測り、患者に何が起きるのかを分けて読むことで、承認上の結果と患者にとって重要な利益を混同しないための経路です。
+      </p>
+      <div class="lp-hero-meta" aria-label="学習ページの特徴">
+        <span>10の順路</span>
+        <span>endpointからGRADEまで</span>
+        <span>患者重要アウトカムを中心に</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="lp-jump" aria-label="このページの主な内容">
+    <div class="lp-jump-inner">
+      <a href="#overview">最初の60秒</a>
+      <a href="#onc1">Onc1 定義</a>
+      <a href="#onc2">Onc2 OS/PFS</a>
+      <a href="#onc4">Onc4 生存解析</a>
+      <a href="#onc6">Onc6 代替性</a>
+      <a href="#onc10">Onc10 GRADE</a>
+      <a href="#sources">出典</a>
+    </div>
+  </nav>
+
+  <div class="lp-layout">
+    <aside class="lp-side" aria-label="詳細目次">
+      <h2>この順で確認する</h2>
+      <ol>
+        <li><a href="#overview">最初の60秒</a></li>
+        <li><a href="#onc1">Onc1 endpointの定義</a></li>
+        <li><a href="#onc2">Onc2 OS、PFS、DFSなど</a></li>
+        <li><a href="#onc3">Onc3 ORR、DoR、pCR、MRD</a></li>
+        <li><a href="#onc4">Onc4 生存時間解析</a></li>
+        <li><a href="#onc5">Onc5 競合リスク・multi-state</a></li>
+        <li><a href="#onc6">Onc6 代替エンドポイント</a></li>
+        <li><a href="#onc7">Onc7 PRO、症状、QOL</a></li>
+        <li><a href="#onc8">Onc8 毒性・治療負担</a></li>
+        <li><a href="#onc9">Onc9 RWE・観察研究</a></li>
+        <li><a href="#onc10">Onc10 GRADEで評価する</a></li>
+      </ol>
+      <p class="lp-side-note">endpointの定義は、がん種、病期、治療目的、試験プロトコルで異なります。名称だけで同じものと扱わず、プロトコルと統計解析計画に戻ります。</p>
+    </aside>
+
+    <main class="lp-main" id="main">
+      <section class="lp-intro" id="overview" aria-labelledby="overview-title">
+        <h2 id="overview-title">最初の60秒：結果の名前ではなく、患者に起きることを確認する</h2>
+        <p>腫瘍が画像上で縮小した、進行までの期間が延びた、死亡が少なかった、症状が楽だった、治療を続けられた。これらは別の問いへの答えです。まず患者に重要なアウトカムを定め、その後に各endpointがどこまで患者利益を代弁できるかを評価します。</p>
+      </section>
+
+      <section class="lp-section" id="onc1" aria-labelledby="onc1-title">
+        <span class="lp-section-kicker">ONC1</span>
+        <h2 id="onc1-title">endpointを定義する：名前の前に、6つの要素をそろえる</h2>
+        <p>「PFS」「DFS」「response」という単語だけでは、比較できません。少なくとも次の要素が揃って初めて、同じendpointかを判断できます。ICH E9(R1)のestimandの考え方は、治療中止、次治療、死亡などのintercurrent eventを含め、何を知りたい効果として定義しているかを明確にする助けになります。</p>
+        <div class="lp-flow" aria-label="endpointを確認する6要素">
+          <div class="lp-flow-step"><span class="lp-flow-no">1</span><strong>対象集団</strong><span>病期、前治療、バイオマーカー、治療目的。</span></div>
+          <div class="lp-flow-step"><span class="lp-flow-no">2</span><strong>time origin</strong><span>無作為化、登録、手術、再発後など。</span></div>
+          <div class="lp-flow-step"><span class="lp-flow-no">3</span><strong>event set</strong><span>進行、死亡、再発、毒性、何を数えるか。</span></div>
+          <div class="lp-flow-step"><span class="lp-flow-no">4</span><strong>測定方法</strong><span>画像間隔、判定者、RECIST、中央判定など。</span></div>
+        </div>
+        <div class="lp-flow" aria-label="endpointを確認する残りの要素">
+          <div class="lp-flow-step"><span class="lp-flow-no">5</span><strong>打切り・欠測</strong><span>いつ、なぜ観察を終えた扱いになるか。</span></div>
+          <div class="lp-flow-step"><span class="lp-flow-no">6</span><strong>推定量・estimand</strong><span>HR、時点割合、RMST、何の効果を答えるか。</span></div>
+        </div>
+        <div class="lp-note"><strong>最初に確認する場所：</strong>論文のMethods、supplement、プロトコル、statistical analysis planです。Abstractのendpoint名だけで判断すると、重要な定義の差を見落とします。</div>
+      </section>
+
+      <section class="lp-section" id="onc2" aria-labelledby="onc2-title">
+        <span class="lp-section-kicker">ONC2</span>
+        <h2 id="onc2-title">OS、PFS、TTP、DFS、RFS、EFS、MFS：似た略語を同義語にしない</h2>
+        <div class="lp-table-wrap">
+          <table class="lp-table">
+            <thead><tr><th>endpoint</th><th>読むときの中心質問</th><th>特に確認する点</th></tr></thead>
+            <tbody>
+              <tr><td>OS</td><td>全死亡までの時間をどう比較したか。</td><td>time origin、追跡の成熟度、後治療、cross-over、死因を問わない定義。</td></tr>
+              <tr><td>PFS</td><td>進行または死亡までの時間をどう定義したか。</td><td>画像評価の間隔、判定者、progression定義、打切り、死亡の扱い。</td></tr>
+              <tr><td>TTP</td><td>進行に焦点を置く設計か。</td><td>死亡をeventに含めるかはプロトコルごとに確認する。PFSと同義とは限らない。</td></tr>
+              <tr><td>DFS / RFS / EFS / MFS</td><td>治癒目的治療後のどの失敗を数えるか。</td><td>再発、第二がん、死亡、遠隔転移などのevent set。名称の標準化は領域ごとに異なる。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lp-alert"><strong>PFS改善だけで、OS改善やQOL改善を結論づけない：</strong>進行の定義、画像評価頻度、治療継続、次治療、患者が感じる症状は別の問題です。PFSは重要な情報になり得ますが、患者重要アウトカムとの関係はがん種・病期・治療機序・状況ごとに評価します。</div>
+      </section>
+
+      <section class="lp-section" id="onc3" aria-labelledby="onc3-title">
+        <span class="lp-section-kicker">ONC3</span>
+        <h2 id="onc3-title">ORR、DoR、pCR、MRD：腫瘍・バイオマーカーの変化を、患者利益と取り違えない</h2>
+        <div class="lp-grid">
+          <article class="lp-item is-outcome"><span class="lp-label">画像上の反応</span><h3>ORR</h3><p>CR/PRの割合です。対象集団、測定時期、RECIST等の基準、確認の要否、独立中央判定かを確認します。</p></article>
+          <article class="lp-item is-caution"><span class="lp-label">反応者だけの値</span><h3>DoR</h3><p>responseを得た人に条件づく期間です。全無作為化患者の利益を直接表す値ではありません。</p></article>
+          <article class="lp-item is-caution"><span class="lp-label">病理学的所見</span><h3>pCR</h3><p>術前治療後の病理学的反応です。患者に重要な長期アウトカムへの代替性は、疾患・設定・治療ごとに検証が必要です。</p></article>
+          <article class="lp-item is-caution"><span class="lp-label">検査結果</span><h3>MRD</h3><p>測定法、閾値、時点、欠測、介入との関係を確認します。陰性化だけで治療利益を一律に断定しません。</p></article>
+        </div>
+        <div class="lp-question"><strong>問い直す：</strong>この結果は「腫瘍の状態」を示しているのか、「患者が長く生きる・楽に過ごす・機能を保つ」ことを示しているのか。両者の橋渡しとなる検証は、どこに示されていますか。</div>
+      </section>
+
+      <section class="lp-section" id="onc4" aria-labelledby="onc4-title">
+        <span class="lp-section-kicker">ONC4</span>
+        <h2 id="onc4-title">生存時間解析：HR、中央値、Kaplan-Meier曲線を一緒に読む</h2>
+        <p>hazard ratio（HR）は、追跡中の瞬間的なevent hazardの比をモデル化した指標です。個人の「死亡リスクが何％減る」「何か月延びる」とそのまま読めません。曲線の形、追跡、event数、比例ハザード（PH）仮定を見ずに、HRだけで臨床的な大きさを判断しないことが大切です。</p>
+        <div class="lp-grid">
+          <article class="lp-item is-action"><span class="lp-label">図で見る</span><h3>Kaplan-Meier曲線</h3><p>早期差、曲線の交差、尾部、追跡人数を確認します。図の下のnumber at riskがなければ、後半の曲線は不安定かもしれません。</p></article>
+          <article class="lp-item is-caution"><span class="lp-label">一つの要約</span><h3>中央値</h3><p>50%到達点の差にすぎません。曲線全体や患者ごとの経過を代表しない場合があり、未到達なら比較も難しくなります。</p></article>
+          <article class="lp-item is-caution"><span class="lp-label">モデルの前提</span><h3>比例ハザード</h3><p>効果が時間により変わるなら、単一HRは直感的な意味を失いやすくなります。time-varying HRや補助解析の提示を確認します。</p></article>
+          <article class="lp-item is-action"><span class="lp-label">補助指標</span><h3>RMST</h3><p>あらかじめ定めた時間地平までの平均生存時間です。時間地平を明示して比較するため、non-PH時の補助的な表現になり得ます。</p></article>
+        </div>
+        <details class="lp-details"><summary>「HR 0.70」は何を意味しますか？</summary><div><p>追跡期間にわたるhazardの比を、特定のモデルで要約した値です。曲線の形やPH仮定によって解釈が変わります。絶対的な時点生存率、曲線、患者重要アウトカム、95%信頼区間と合わせて読みます。</p></div></details>
+      </section>
+
+      <section class="lp-section" id="onc5" aria-labelledby="onc5-title">
+        <span class="lp-section-kicker">ONC5</span>
+        <h2 id="onc5-title">競合リスクとmulti-state：起きなかった理由を消さない</h2>
+        <p>再発の前に死亡した人は、再発を経験できません。死亡が再発の競合イベントになる状況では、単純なKaplan-Meier曲線を無条件に「再発確率」と呼ぶことはできません。何を累積発生として知りたいのか、cause-specific hazardかsubdistribution hazardか、死亡をどう扱うかを区別します。</p>
+        <div class="lp-flow" aria-label="治療後の状態遷移の例">
+          <div class="lp-flow-step"><span class="lp-flow-no">STATE 1</span><strong>治療開始・無再発</strong><span>観察の開始状態。</span></div>
+          <div class="lp-flow-step"><span class="lp-flow-no">STATE 2</span><strong>再発・進行</strong><span>症状、治療、QOLが変わり得る。</span></div>
+          <div class="lp-flow-step"><span class="lp-flow-no">STATE 3</span><strong>次治療</strong><span>後治療はOSと患者経験に影響する。</span></div>
+          <div class="lp-flow-step"><span class="lp-flow-no">STATE 4</span><strong>死亡</strong><span>他の状態への遷移を妨げる競合イベント。</span></div>
+        </div>
+        <div class="lp-note"><strong>読み手の確認：</strong>目的が「ある時点までに再発した人の割合」なのか、「再発の瞬間的な率」なのかで、適切な分析と図の意味が異なります。</div>
+      </section>
+
+      <section class="lp-section" id="onc6" aria-labelledby="onc6-title">
+        <span class="lp-section-kicker">ONC6</span>
+        <h2 id="onc6-title">代替エンドポイント：承認上の利用と、患者利益の検証を分ける</h2>
+        <p>規制当局が特定のendpointを承認判断に利用し得ることと、そのendpointが患者に重要な利益を普遍的に代替できることは別です。代替性は、がん種、病期、治療ライン、薬剤機序、比較対照、後治療、測定法によって変わります。</p>
+        <div class="lp-grid">
+          <article class="lp-item is-action"><span class="lp-label">確認する</span><h3>相関ではなく、trial-levelの検証</h3><p>個人でPFSが長い人がOSも長いという関連だけでは、治療によるPFS差がOS差を予測する根拠にはなりません。</p></article>
+          <article class="lp-item is-action"><span class="lp-label">確認する</span><h3>患者重要アウトカム</h3><p>OS、症状、QOL、機能、重篤な害、治療負担が同じ方向か。PFSの改善が患者経験にどう結びつくかを見ます。</p></article>
+          <article class="lp-item is-risk"><span class="lp-label">避ける</span><h3>一律の読み替え</h3><p>「ORRが高いから延命」「PFSが有意だからQOLもよい」という自動変換はしません。</p></article>
+          <article class="lp-item is-caution"><span class="lp-label">GRADEとの接続</span><h3>非直接性</h3><p>代替endpointしかない場合、患者重要アウトカムへの非直接性をどう評価したかを確認します。</p></article>
+        </div>
+        <div class="lp-quiz">
+          <h3>確認問題</h3>
+          <p>新薬がPFSを統計学的に有意に改善しましたが、OSは未成熟で、PROは欠測が多く、毒性による中止が増えています。患者にとってのnet benefitをどう説明しますか。</p>
+          <details><summary>答えを表示</summary><p>PFS改善は重要な情報ですが、患者重要な利益が確立したとは言えません。OSの不確実性、PRO欠測、毒性と中止、絶対効果、比較対照、患者の価値観を併せて、利益と害のバランスがなお不確かである可能性を説明します。</p></details>
+        </div>
+      </section>
+
+      <section class="lp-section" id="onc7" aria-labelledby="onc7-title">
+        <span class="lp-section-kicker">ONC7</span>
+        <h2 id="onc7-title">PRO、症状、QOL、機能：欠測と比較群との差まで読む</h2>
+        <p>患者報告アウトカム（PRO）は、腫瘍縮小や生存と並んで、症状、身体機能、治療負担を知る重要な情報です。ベースラインからの群内変化だけでは、治療間の効果は分かりません。測定時点ごとの群間差、尺度の意味、欠測、死亡や進行に伴うinformative dropout、事前指定した解析を確認します。</p>
+        <ul class="lp-checklist">
+          <li>患者に重要な症状・機能・全体QOLが、事前に選ばれているか。</li>
+          <li>どの尺度を、いつ、どの程度回収したか。群間で回収率に差がないか。</li>
+          <li>between-group effectと、その95%信頼区間が示されているか。</li>
+          <li>閾値やresponder定義は尺度・文脈に妥当か。普遍的なMIDを当てはめていないか。</li>
+          <li>欠測、治療中止、死亡をどう扱い、感度分析をしたか。</li>
+          <li>改善だけでなく、悪化までの時間、悪化の持続、患者にとっての負担を示しているか。</li>
+        </ul>
+      </section>
+
+      <section class="lp-section" id="onc8" aria-labelledby="onc8-title">
+        <span class="lp-section-kicker">ONC8</span>
+        <h2 id="onc8-title">毒性、害、治療負担：頻度だけでなく、いつまで続いたか</h2>
+        <p>有害事象表のgrade 3以上だけでは、患者の害を十分に表せません。全gradeの症状、重篤な害、治療中止、減量、入院、治療関連死亡、発症時期、持続時間、遅発毒性、支持療法の負担を確認します。治療が「続けられた」ことも、患者にとっての負担が小さいことの証明ではありません。</p>
+        <div class="lp-grid">
+          <article class="lp-item is-action"><span class="lp-label">量</span><h3>頻度と絶対効果</h3><p>何人に起きたか、比較群との差、95%信頼区間を見ます。相対リスクだけで重く見せないことが必要です。</p></article>
+          <article class="lp-item is-action"><span class="lp-label">時間</span><h3>発症・持続・遅発性</h3><p>一過性か、累積するか、治療終了後にも続くか。time-to-first eventだけでは繰り返す害を見落とすことがあります。</p></article>
+          <article class="lp-item is-action"><span class="lp-label">行動</span><h3>中止・減量・入院</h3><p>イベント表と並べて、治療を続けられなかった理由と患者生活への影響を読みます。</p></article>
+          <article class="lp-item is-caution"><span class="lp-label">価値観</span><h3>benefit-harm trade-off</h3><p>同じPFS差でも、毒性や通院負担をどう受け止めるかは患者によって異なります。</p></article>
+        </div>
+      </section>
+
+      <section class="lp-section" id="onc9" aria-labelledby="onc9-title">
+        <span class="lp-section-kicker">ONC9</span>
+        <h2 id="onc9-title">がんのRWE・観察研究：実臨床データがあっても、比較可能性は自動ではない</h2>
+        <p>レジストリ、電子カルテ、保険請求、外部対照は、まれな害、長期経過、RCTで届きにくい患者を知るために重要です。しかし、治療選択、performance status、腫瘍量、バイオマーカー、時期、施設、検査頻度、次治療の違いが残ります。まず <a href="non-rct-observational-studies.html">非RCT・観察研究の詳細ページ</a> の因果質問とtime zeroに戻ってください。</p>
+        <div class="lp-alert"><strong>外部対照との比較で特に確認すること：</strong>同じ適格基準、同じtime zero、同じアウトカム定義、同じ追跡・画像評価、同じ時代の標準治療に近いか。これを示せないなら、精密なHRでも比較効果の確実性は高くありません。</div>
+      </section>
+
+      <section class="lp-section" id="onc10" aria-labelledby="onc10-title">
+        <span class="lp-section-kicker">ONC10</span>
+        <h2 id="onc10-title">がんアウトカムをGRADEで評価する：一つの「総合certainty」に逃げない</h2>
+        <p>GRADEのcertaintyは、原則としてアウトカムごと、そして必要なら異なる決定閾値ごとに判断します。「この新薬のエビデンスは中等度」と一言で終えるのではなく、OS、PFS、症状、QOL、重篤な害、治療負担について、それぞれの効果推定、95%信頼区間、バイアス、非直接性、不確実性を追います。</p>
+        <div class="lp-table-wrap">
+          <table class="lp-table">
+            <thead><tr><th>アウトカム行</th><th>読み手が確認すること</th><th>典型的な注意点</th></tr></thead>
+            <tbody>
+              <tr><td>OS</td><td>成熟度、曲線、後治療、絶対差、CI。</td><td>follow-up不足、cross-over、イベント数不足。</td></tr>
+              <tr><td>PFS / response</td><td>定義、画像評価、患者重要アウトカムとの関係。</td><td>患者利益への非直接性を省略する。</td></tr>
+              <tr><td>PRO / QOL</td><td>群間差、回収率、欠測、尺度の意味。</td><td>群内変化だけで改善と結論する。</td></tr>
+              <tr><td>害・負担</td><td>頻度、持続、重篤性、中止、遅発性。</td><td>grade 3以上だけで害を要約する。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lp-good"><strong>推奨まで読む：</strong>推奨の方向と強さは、確実性だけで決まりません。絶対的な利益と害、患者の価値観、資源、実行可能性、公平性がEtDでどう扱われたかを確認します。</div>
+      </section>
+
+      <section class="lp-section" id="sources" aria-labelledby="sources-title">
+        <span class="lp-section-kicker">SOURCES</span>
+        <h2 id="sources-title">出典の位置づけ</h2>
+        <p>endpointの定義、estimand、患者報告アウトカムについては、公式規制ガイダンス、国際標準、査読済み方法論を優先しています。各がん種の試験解釈では、これらに加えて対象プロトコル・解析計画・疾患別標準を確認してください。</p>
+        <div class="lp-ref-levels">
+          <div class="lp-ref-level"><strong>公式・国際標準</strong><span>FDA oncology guidance、ICH E9(R1)、RECISTなど</span></div>
+          <div class="lp-ref-level"><strong>査読済み方法論</strong><span>代替性、生存時間解析、PRO解析の研究・consensus</span></div>
+          <div class="lp-ref-level"><strong>GRADE</strong><span>患者重要アウトカム、非直接性、アウトカム別certaintyの判断</span></div>
+        </div>
+        <ol class="lp-reference-list">
+          <li><span class="lp-source-kind">FDA</span><a href="https://www.fda.gov/media/71195/download" target="_blank" rel="noopener noreferrer">Clinical Trial Endpoints for the Approval of Cancer Drugs and Biologics. FDA guidance for industry. 2018.</a></li>
+          <li><span class="lp-source-kind">ICH / FDA</span><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical" target="_blank" rel="noopener noreferrer">E9(R1) Statistical Principles for Clinical Trials: Addendum: Estimands and Sensitivity Analysis in Clinical Trials. Final guidance. 2021.</a></li>
+          <li><span class="lp-source-kind">FDA</span><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/approaches-assessment-overall-survival-oncology-clinical-trials" target="_blank" rel="noopener noreferrer">Approaches to Assessment of Overall Survival in Oncology Clinical Trials. FDA draft guidance. 2025.</a></li>
+          <li><span class="lp-source-kind">RECIST</span><a href="https://pubmed.ncbi.nlm.nih.gov/19097774/" target="_blank" rel="noopener noreferrer">Eisenhauer EA, et al. New response evaluation criteria in solid tumours: revised RECIST guideline (version 1.1). Eur J Cancer. 2009.</a></li>
+          <li><span class="lp-source-kind">PRO</span><a href="https://www.fda.gov/about-fda/oncology-center-excellence/patient-focused-drug-development" target="_blank" rel="noopener noreferrer">FDA Oncology Center of Excellence. Patient-Focused Drug Development and Core Patient-Reported Outcomes in Cancer Clinical Trials.</a></li>
+          <li><span class="lp-source-kind">PRO</span><a href="https://pubmed.ncbi.nlm.nih.gov/41308689/" target="_blank" rel="noopener noreferrer">Amdal CD, et al. SISAQOL-IMI consensus-based guidelines to design, analyse, interpret, and present patient-reported outcomes in cancer clinical trials. Lancet Oncol. 2025.</a></li>
+          <li><span class="lp-source-kind">Surrogacy</span><a href="https://pubmed.ncbi.nlm.nih.gov/30285081/" target="_blank" rel="noopener noreferrer">Kovic B, et al. Evaluating progression-free survival as a surrogate outcome for health-related quality of life in oncology. JAMA Intern Med. 2018.</a></li>
+          <li><span class="lp-source-kind">Survival</span><a href="https://pubmed.ncbi.nlm.nih.gov/26884584/" target="_blank" rel="noopener noreferrer">Trinquart L, et al. Comparison of treatment effects measured by the hazard ratio and by the restricted mean survival time in oncology randomized controlled trials. J Clin Oncol. 2016.</a></li>
+          <li><span class="lp-source-kind">GRADE</span><a href="https://www.bmj.com/content/389/bmj-2024-081904" target="_blank" rel="noopener noreferrer">Core GRADE 2: choosing the target of certainty rating and assessing imprecision. BMJ. 2025.</a></li>
+        </ol>
+      </section>
+    </main>
+  </div>
+
+  <footer class="lp-footer">
+    <div class="lp-footer-inner">
+      <p><strong>CPGSR Reader</strong> | がんアウトカムの詳細学習ページ</p>
+      <p>最終更新: 2026-08-21 | 教育目的の要約。臨床判断では対象試験の原著・付録・プロトコルも確認してください。</p>
+    </div>
+  </footer>
+</body>
+</html>

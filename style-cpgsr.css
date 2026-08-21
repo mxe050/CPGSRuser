@@ -4337,3 +4337,60 @@ body.cpg-overview-open { overflow: hidden; }
     padding: 14px;
   }
 }
+
+/* ========================================================================
+   Ch13：非RCT・がんアウトカム詳細学習ページへの導線
+   ======================================================================== */
+.nrsi-path-launch {
+  margin: 22px 0;
+  padding: 20px;
+  border: 1px solid #8ab7c1;
+  border-left: 5px solid #167080;
+  border-radius: 8px;
+  background: #f0f8f9;
+}
+.nrsi-path-launch .nrsi-path-kicker {
+  display: block;
+  margin-bottom: 5px;
+  color: #146171;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.nrsi-path-launch h2 {
+  margin: 0;
+  color: #154b5b;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.nrsi-path-launch p { margin: 10px 0 0; line-height: 1.75; }
+.nrsi-path-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+.nrsi-path-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 9px 13px;
+  border: 1px solid #146171;
+  border-radius: 7px;
+  background: #fff;
+  color: #135264;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-decoration: none;
+}
+.nrsi-path-actions a:hover,
+.nrsi-path-actions a:focus {
+  background: #146171;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .nrsi-path-launch { padding: 16px; }
+  .nrsi-path-actions { display: grid; grid-template-columns: 1fr; }
+  .nrsi-path-actions a { justify-content: center; text-align: center; }
+}
