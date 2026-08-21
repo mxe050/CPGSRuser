@@ -69,7 +69,26 @@
       color: #fff;
       padding: 40px max(20px, env(safe-area-inset-right)) 28px max(20px, env(safe-area-inset-left));
     }
-    .hero-inner { max-width: var(--content-width); margin: 0 auto; }
+    .hero-inner { position: relative; max-width: var(--content-width); margin: 0 auto; }
+    .return-to-reader {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255,255,255,.56);
+      border-radius: 10px;
+      background: rgba(7,31,48,.35);
+      color: #fff;
+      font-size: .85rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .return-to-reader:hover { background: rgba(255,255,255,.15); }
+    .return-to-reader:focus-visible { outline: 3px solid #ffe28a; outline-offset: 3px; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -532,6 +551,7 @@
       .result-bar { flex-wrap: wrap; }
       .section, .card, .additional-section { scroll-margin-top: 16px; }
       .hero { padding-top: 28px; }
+      .return-to-reader { position: static; margin: 0 0 18px; }
       .hero-lead { font-size: .98rem; }
       .source-banner { align-items: stretch; }
       .source-banner a { width: 100%; justify-content: center; }
@@ -584,6 +604,7 @@
 
   <header class="hero">
     <div class="hero-inner">
+      <a class="return-to-reader" href="index.html#page-0">CPGSR Readerへ戻る</a>
       <p class="eyebrow">EBM実践編・全リンク収録版</p>
       <h1>Y先生のEBM・診療ガイドライン講座リンク集</h1>
       <p class="hero-lead">元noteのリンクを削らず、重複掲載も元の文脈ごと残し、説明文を一つにまとめて読みやすくした1ページ型の学習アプリです。</p>
