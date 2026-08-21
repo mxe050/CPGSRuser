@@ -654,61 +654,9 @@
       <section id="additional-links" class="additional-section" aria-labelledby="additional-title">
         <header class="additional-header">
           <h2 id="additional-title">2026年8月以降追加リンク</h2>
-          <p>今後の新しい資料は、元の分類を崩さず、この欄へ追加できます。</p>
+          <p>新しい資料は、この公開ページに順次掲載します。</p>
         </header>
-        <p class="local-note"><strong>保存範囲：</strong>この単一HTMLでは、追加内容は現在の端末・ブラウザ内に保存されます。公開サイト全体へ恒久反映する際は、CodexでデータJSONまたはバックエンドへ移してください。エクスポート機能で追加分を持ち出せます。</p>
         <div class="additional-body">
-          <div class="additional-actions">
-            <button class="action-button primary" id="toggleAddForm" type="button">＋ 新しいリンクを追加</button>
-            <button class="action-button" id="exportAdded" type="button">追加分をJSONで書き出す</button>
-            <label class="action-button" for="importAdded" role="button">JSONを読み込む</label>
-            <input id="importAdded" type="file" accept="application/json,.json" hidden>
-            <button class="action-button danger" id="clearAdded" type="button">追加分をすべて削除</button>
-          </div>
-
-          <form id="addForm" class="add-form" hidden>
-            <div class="form-grid">
-              <div class="field full">
-                <label for="addTitle">タイトル *</label>
-                <input id="addTitle" name="title" required maxlength="180" placeholder="例：Core GRADE 8の解説">
-              </div>
-              <div class="field full">
-                <label for="addUrl">URL *</label>
-                <input id="addUrl" name="url" type="url" required placeholder="https://...">
-              </div>
-              <div class="field">
-                <label for="addKind">資料形式</label>
-                <select id="addKind" name="kind">
-                  <option>動画</option>
-                  <option>スライド</option>
-                  <option>note</option>
-                  <option>アプリ</option>
-                  <option>論文</option>
-                  <option>画像</option>
-                  <option>その他</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="addDate">追加日</label>
-                <input id="addDate" name="date" type="date">
-              </div>
-              <div class="field full">
-                <label for="addExplanation">説明</label>
-                <textarea id="addExplanation" name="explanation" maxlength="1200" placeholder="何が学べるか、使用上の注意など"></textarea>
-              </div>
-              <div class="field full">
-                <label for="addTags">検索用タグ</label>
-                <input id="addTags" name="tags" maxlength="300" placeholder="例：GRADE, MID, がん">
-              </div>
-            </div>
-            <div class="additional-actions" style="margin-top:14px;margin-bottom:0">
-              <button class="action-button primary" type="submit">保存する</button>
-              <button class="action-button" id="cancelAdd" type="button">閉じる</button>
-            </div>
-            <p class="form-help">URLは http:// または https:// で始まるものだけ登録できます。入力した文章はHTMLとして実行されません。</p>
-            <p id="formStatus" class="form-status" role="status"></p>
-          </form>
-
           <div id="addedList" class="cards"></div>
         </div>
       </section>
@@ -731,29 +679,10 @@
     'use strict';
 
     const data = JSON.parse(document.getElementById('app-data').textContent);
-    const STORAGE_KEY = 'ysensei-ebm-additional-links-v1';
-    const FONT_KEY = 'ysensei-ebm-font-scale-v1';
-    const memoryStorage = new Map();
-    const storage = (() => {
-      try {
-        const probe = '__ysensei_storage_probe__';
-        window.localStorage.setItem(probe, '1');
-        window.localStorage.removeItem(probe);
-        return window.localStorage;
-      } catch (_) {
-        return {
-          getItem: key => memoryStorage.has(key) ? memoryStorage.get(key) : null,
-          setItem: (key, value) => memoryStorage.set(key, String(value)),
-          removeItem: key => memoryStorage.delete(key),
-          clear: () => memoryStorage.clear(),
-        };
-      }
-    })();
     const state = {
       query: '',
       kind: 'all',
       added: [],
-      editId: null,
     };
 
     const els = {
@@ -768,8 +697,6 @@
       sourceNoteLink: document.getElementById('sourceNoteLink'),
       addedList: document.getElementById('addedList'),
       statAdded: document.getElementById('statAdded'),
-      addForm: document.getElementById('addForm'),
-      formStatus: document.getElementById('formStatus'),
     };
 
     function normalize(value) {
@@ -998,7 +925,7 @@
       if (!list.length) {
         const msg = state.added.length
           ? '現在の検索条件に一致する追加リンクはありません。'
-          : 'まだ追加リンクはありません。「新しいリンクを追加」から登録できます。';
+          : '追加リンクは順次掲載します。';
         els.addedList.append(create('p', 'empty-additions', msg));
         return;
       }
@@ -1025,121 +952,20 @@
             String(entry.tags).split(/[,、]/).map(t => t.trim()).filter(Boolean).slice(0, 8).forEach(t => badges.append(create('span', 'badge', t)));
             card.append(badges);
           }
-          const controls = create('div', 'added-controls');
-          const edit = create('button', 'mini-button', '編集');
-          edit.type = 'button';
-          edit.addEventListener('click', () => beginEdit(entry.id));
-          const del = create('button', 'mini-button delete', '削除');
-          del.type = 'button';
-          del.addEventListener('click', () => deleteAdded(entry.id));
-          controls.append(edit, del);
-          card.append(controls);
           els.addedList.append(card);
         });
     }
-
     function loadAdded() {
-      let local = [];
-      try {
-        const parsed = JSON.parse(storage.getItem(STORAGE_KEY) || '[]');
-        if (Array.isArray(parsed)) local = parsed.filter(validateAddedEntry);
-      } catch (_) {}
       const permanent = Array.isArray(data.permanentAdditionalLinks) ? data.permanentAdditionalLinks.filter(validateAddedEntry) : [];
-      const byId = new Map([...permanent, ...local].map(x => [x.id, x]));
-      state.added = [...byId.values()];
+      state.added = permanent;
     }
 
     function validateAddedEntry(entry) {
       return entry && typeof entry === 'object' && typeof entry.title === 'string' && isSafeHttpUrl(entry.url);
     }
-
-    function saveAdded() {
-      storage.setItem(STORAGE_KEY, JSON.stringify(state.added));
-      renderAdded();
-      renderSections();
-    }
-
-    function resetForm() {
-      els.addForm.reset();
-      state.editId = null;
-      els.formStatus.textContent = '';
-      document.getElementById('addDate').value = new Date().toISOString().slice(0, 10);
-      els.addForm.querySelector('button[type="submit"]').textContent = '保存する';
-    }
-
-    function beginEdit(id) {
-      const entry = state.added.find(x => x.id === id);
-      if (!entry) return;
-      state.editId = id;
-      document.getElementById('addTitle').value = entry.title || '';
-      document.getElementById('addUrl').value = entry.url || '';
-      document.getElementById('addKind').value = entry.kind || 'その他';
-      document.getElementById('addDate').value = entry.date || '';
-      document.getElementById('addExplanation').value = entry.explanation || '';
-      document.getElementById('addTags').value = entry.tags || '';
-      els.addForm.hidden = false;
-      els.addForm.querySelector('button[type="submit"]').textContent = '更新する';
-      els.addForm.scrollIntoView({behavior: 'smooth', block: 'center'});
-    }
-
-    function deleteAdded(id) {
-      const entry = state.added.find(x => x.id === id);
-      if (!entry) return;
-      if (!confirm(`「${entry.title}」を削除しますか？`)) return;
-      state.added = state.added.filter(x => x.id !== id);
-      saveAdded();
-    }
-
-    function exportAdded() {
-      const payload = {
-        exportedAt: new Date().toISOString(),
-        section: '2026年8月以降追加リンク',
-        links: state.added,
-      };
-      const blob = new Blob([JSON.stringify(payload, null, 2)], {type: 'application/json'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `EBM追加リンク_${new Date().toISOString().slice(0,10)}.json`;
-      document.body.append(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    }
-
-    function importAdded(file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        try {
-          const parsed = JSON.parse(String(reader.result || ''));
-          const list = Array.isArray(parsed) ? parsed : parsed.links;
-          if (!Array.isArray(list)) throw new Error('links配列がありません');
-          const valid = list.filter(validateAddedEntry).map(entry => ({
-            id: entry.id || (crypto.randomUUID ? crypto.randomUUID() : `added-${Date.now()}-${Math.random()}`),
-            title: String(entry.title).slice(0, 180),
-            url: entry.url,
-            kind: entry.kind || 'その他',
-            date: entry.date || '',
-            explanation: String(entry.explanation || '').slice(0, 1200),
-            tags: String(entry.tags || '').slice(0, 300),
-          }));
-          if (!valid.length) throw new Error('有効なリンクがありません');
-          const map = new Map(state.added.map(x => [x.id, x]));
-          valid.forEach(x => map.set(x.id, x));
-          state.added = [...map.values()];
-          saveAdded();
-          alert(`${valid.length}件を読み込みました。`);
-        } catch (error) {
-          alert(`読み込みできませんでした：${error.message}`);
-        }
-      };
-      reader.readAsText(file, 'utf-8');
-    }
-
     function setFontScale(next) {
       const clamped = Math.max(.88, Math.min(1.22, next));
       document.documentElement.style.setProperty('--font-scale', String(clamped));
-      storage.setItem(FONT_KEY, String(clamped));
     }
 
     function initStats() {
@@ -1181,61 +1007,6 @@
       setFontScale(current + .06);
     });
 
-    document.getElementById('toggleAddForm').addEventListener('click', () => {
-      if (els.addForm.hidden) {
-        resetForm();
-        els.addForm.hidden = false;
-        document.getElementById('addTitle').focus();
-      } else {
-        els.addForm.hidden = true;
-      }
-    });
-    document.getElementById('cancelAdd').addEventListener('click', () => {
-      els.addForm.hidden = true;
-      resetForm();
-    });
-    els.addForm.addEventListener('submit', event => {
-      event.preventDefault();
-      const fd = new FormData(els.addForm);
-      const title = String(fd.get('title') || '').trim();
-      const url = String(fd.get('url') || '').trim();
-      if (!title || !isSafeHttpUrl(url)) {
-        els.formStatus.textContent = 'タイトルと、有効な http(s) URLを入力してください。';
-        return;
-      }
-      const entry = {
-        id: state.editId || (crypto.randomUUID ? crypto.randomUUID() : `added-${Date.now()}-${Math.random()}`),
-        title: title.slice(0, 180),
-        url,
-        kind: String(fd.get('kind') || 'その他'),
-        date: String(fd.get('date') || ''),
-        explanation: String(fd.get('explanation') || '').trim().slice(0, 1200),
-        tags: String(fd.get('tags') || '').trim().slice(0, 300),
-      };
-      if (state.editId) {
-        state.added = state.added.map(x => x.id === state.editId ? entry : x);
-      } else {
-        state.added.push(entry);
-      }
-      saveAdded();
-      els.formStatus.textContent = state.editId ? '更新しました。' : '追加しました。';
-      resetForm();
-      els.addForm.hidden = true;
-      document.getElementById('additional-links').scrollIntoView({behavior: 'smooth', block: 'start'});
-    });
-    document.getElementById('exportAdded').addEventListener('click', exportAdded);
-    document.getElementById('importAdded').addEventListener('change', event => {
-      const file = event.target.files && event.target.files[0];
-      if (file) importAdded(file);
-      event.target.value = '';
-    });
-    document.getElementById('clearAdded').addEventListener('click', () => {
-      if (!state.added.length) return;
-      if (!confirm('「2026年8月以降追加リンク」の追加分をすべて削除しますか？')) return;
-      state.added = [];
-      saveAdded();
-    });
-
     window.addEventListener('scroll', () => requestAnimationFrame(updateActiveToc), {passive: true});
     window.addEventListener('hashchange', () => {
       const id = location.hash.slice(1);
@@ -1243,14 +1014,11 @@
       if (target && target.tagName === 'DETAILS') target.open = true;
     });
 
-    const savedScale = parseFloat(storage.getItem(FONT_KEY) || '1');
-    if (Number.isFinite(savedScale)) setFontScale(savedScale);
     loadAdded();
     initStats();
     buildToc();
     renderSections();
     renderAdded();
-    resetForm();
     updateActiveToc();
   })();
   </script>
