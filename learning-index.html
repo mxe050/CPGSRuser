@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CPGSR Readerの教材を、論文を読む作業順と方法論トピックから探す学習索引。">
+  <title>索引：論文を読む順番／トピック・Guyattから探す | CPGSR Reader</title>
+  <link rel="stylesheet" href="site-shell.css?v=8.0">
+  <link rel="stylesheet" href="learning-index.css?v=8.0">
+</head>
+<body class="learning-index-body">
+  <a class="cpgsr-skip-link" href="#main-content">本文へ移動</a>
+
+  <header class="cpgsr-global-header">
+    <div class="cpgsr-header-inner">
+      <div class="cpgsr-header-context">
+        <a class="cpgsr-back-link" href="index.html#page-0">最初のページへ戻る</a>
+        <nav class="cpgsr-breadcrumb" aria-label="パンくず">
+          <a href="index.html#page-0">CPGSR Reader</a>
+          <span class="cpgsr-breadcrumb-separator" aria-hidden="true">/</span>
+          <span class="cpgsr-current-title" aria-current="page">学習索引</span>
+        </nav>
+      </div>
+      <a class="cpgsr-brand" href="index.html#page-0" aria-label="CPGSR Readerの最初のページへ戻る"><span class="cpgsr-brand-strong">CPGSR</span> Reader</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="learning-index-hero" aria-labelledby="index-title">
+      <div class="learning-index-wrap">
+        <div class="learning-index-hero-copy">
+          <p class="learning-index-kicker">読む順番とトピックから探す</p>
+          <h1 id="index-title">論文・SR・CPGを読むための学習索引</h1>
+          <p>章番号を覚えていなくても大丈夫です。いま行っている確認作業、または知りたい方法論から、本文・詳細解説・原著ガイドへ直接進めます。</p>
+        </div>
+        <figure class="learning-index-figure">
+          <img src="images/ebm-grade-reading-flow.png" alt="EBM、システマティックレビュー、GRADE、診療ガイドラインを読む流れの図" loading="lazy">
+          <figcaption>問いから患者への適用まで、必要な場所へ戻れるようにします。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="learning-index-wrap learning-index-purpose" aria-labelledby="index-purpose-title">
+      <div>
+        <p class="learning-index-eyebrow">二つの入口</p>
+        <h2 id="index-purpose-title">目的に合わせて入口を選ぶ</h2>
+      </div>
+      <div class="learning-index-purpose-grid">
+        <a class="learning-index-purpose-link" href="#workflow" data-index-view-link="workflow">
+          <strong>いま行っている作業から探す</strong>
+          <span>臨床疑問、RoB、効果、CI、推奨までの12段階</span>
+        </a>
+        <a class="learning-index-purpose-link" href="#topics" data-index-view-link="topics">
+          <strong>知りたいテーマから探す</strong>
+          <span>MID、NMA、観察研究、Guyattなどの横断入口</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="learning-index-wrap learning-index-controls" aria-labelledby="search-title">
+      <div class="learning-index-controls-heading">
+        <p class="learning-index-eyebrow">検索と絞り込み</p>
+        <h2 id="search-title">用語、文書種別、難易度から絞る</h2>
+      </div>
+      <form id="learning-index-form" class="learning-index-form" role="search">
+        <label class="learning-index-search-label" for="learning-index-search">キーワード</label>
+        <input id="learning-index-search" name="q" type="search" autocomplete="off" placeholder="例：MID、傾向スコア、RMST、PRISMA、Guyatt">
+        <div class="learning-index-filter-grid">
+          <label>文書種別
+            <select id="learning-index-type" name="type">
+              <option value="">すべて</option>
+              <option value="RCT">RCT</option>
+              <option value="NRSI">非RCT・観察研究</option>
+              <option value="diagnostic">診断</option>
+              <option value="prognostic">予後</option>
+              <option value="SR">SR</option>
+              <option value="MA">メタ分析</option>
+              <option value="NMA">ネットワークメタ分析</option>
+              <option value="CPG">診療ガイドライン</option>
+              <option value="qualitative">定性研究</option>
+            </select>
+          </label>
+          <label>難易度
+            <select id="learning-index-level" name="level">
+              <option value="">すべて</option>
+              <option value="entry">入口</option>
+              <option value="standard">標準</option>
+              <option value="advanced">発展</option>
+            </select>
+          </label>
+          <label>資料状態
+            <select id="learning-index-status" name="status">
+              <option value="">すべて</option>
+              <option value="official-guidance">公式ガイダンス</option>
+              <option value="peer-reviewed-methods">査読済み方法論</option>
+              <option value="reporting-guideline">報告ガイドライン</option>
+              <option value="appraisal-tool">評価ツール</option>
+              <option value="draft-guidance">ドラフト</option>
+              <option value="preprint">探索的・プレプリント</option>
+              <option value="lecture">教育講演</option>
+              <option value="educational">教育コンテンツ</option>
+            </select>
+          </label>
+          <label>Guyatt関連
+            <select id="learning-index-author" name="author">
+              <option value="">すべて</option>
+              <option value="Guyatt">Guyatt関連</option>
+              <option value="not-guyatt">Guyatt関連以外</option>
+            </select>
+          </label>
+          <label>読む作業
+            <select id="learning-index-stage" name="stage">
+              <option value="">すべて</option>
+            </select>
+          </label>
+          <label>トピック
+            <select id="learning-index-topic" name="topic">
+              <option value="">すべて</option>
+            </select>
+          </label>
+        </div>
+        <div class="learning-index-form-actions">
+          <button type="reset" class="learning-index-reset">条件をリセット</button>
+          <p id="learning-index-result-count" role="status" aria-live="polite">索引を読み込み中です。</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="learning-index-wrap learning-index-views" aria-labelledby="view-title">
+      <h2 id="view-title" class="visually-hidden">索引の表示方法</h2>
+      <div class="learning-index-view-tabs" role="tablist" aria-label="索引の表示方法">
+        <button id="workflow-tab" type="button" role="tab" aria-controls="workflow" aria-selected="true" data-index-view="workflow">読む作業順</button>
+        <button id="topics-tab" type="button" role="tab" aria-controls="topics" aria-selected="false" data-index-view="topics">トピック・Guyatt</button>
+      </div>
+
+      <section id="workflow" class="learning-index-panel" role="tabpanel" aria-labelledby="workflow-tab" data-index-panel="workflow">
+        <div class="learning-index-panel-heading">
+          <p class="learning-index-eyebrow">A. 論文・SR・CPGを読む作業順</p>
+          <h2>いま確認したい作業から進む</h2>
+          <p>各段階では、問いを一つ置いてから、初学者向けの入口と発展学習を同時に表示します。</p>
+        </div>
+        <div id="learning-index-workflow-results" class="learning-index-workflow-results"></div>
+      </section>
+
+      <section id="topics" class="learning-index-panel" role="tabpanel" aria-labelledby="topics-tab" data-index-panel="topics" hidden>
+        <div class="learning-index-panel-heading">
+          <p class="learning-index-eyebrow">B. トピック／Guyattの考え方</p>
+          <h2>知りたい概念から横断する</h2>
+          <p>同じ概念に本編と詳細解説があるときは、どちらも残して役割を分けています。</p>
+        </div>
+        <div id="learning-index-topic-results" class="learning-index-topic-results"></div>
+      </section>
+
+      <p id="learning-index-empty" class="learning-index-empty" hidden>一致する教材がありません。検索語を短くするか、条件をリセットしてください。</p>
+    </section>
+  </main>
+
+  <footer class="cpgsr-page-footer">
+    <a href="index.html#page-0">CPGSR Readerの最初のページへ戻る</a>
+  </footer>
+
+  <noscript>
+    <section class="learning-index-noscript">
+      <h2>主要な学習ページ</h2>
+      <ul>
+        <li><a href="index.html#page-25">EBM・SR・CPG 徹底解説</a></li>
+        <li><a href="advanced-statistics.html">統計学・因果推論</a></li>
+        <li><a href="non-rct-observational-studies.html">非RCT・観察研究</a></li>
+        <li><a href="oncology-outcomes.html">がんアウトカム</a></li>
+      </ul>
+    </section>
+  </noscript>
+  <script src="learning-index.js?v=8.0" defer></script>
+</body>
+</html>

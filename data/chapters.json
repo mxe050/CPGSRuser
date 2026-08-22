@@ -1,74 +1,438 @@
 {
-  "version": "1.0",
-  "totalChapters": 26,
+  "version": "2.0",
+  "updated": "2026-08-22",
+  "canonicalRegistry": "data/content-registry.json",
+  "primaryChapterCount": 25,
+  "notes": [
+    "表示番号は内容識別子ではない。",
+    "既存の index.html#page-N は content-registry.json の legacyTargets で保持する。",
+    "page-19 と page-27 は基準時点から実体のない旧ハッシュであり、未知URLとして明示的なnot-found画面へ案内する。"
+  ],
   "parts": [
     {
       "part": "I",
       "title": "EBM・GRADEの全体像",
-      "chapters": [0, 1, 2]
+      "contentIds": [
+        "ebm-cpg-sr-basics",
+        "grade-overview"
+      ]
     },
     {
       "part": "II",
       "title": "推奨の理解",
-      "chapters": [3, 4]
+      "contentIds": [
+        "certainty-levels",
+        "recommendation-strength"
+      ]
     },
     {
       "part": "III",
       "title": "SoF・効果・閾値",
-      "chapters": [5, 6, 7]
+      "contentIds": [
+        "summary-of-findings",
+        "effect-measures-absolute",
+        "thresholds-mid"
+      ]
     },
     {
       "part": "IV",
       "title": "確実性が下がる5要因",
-      "chapters": [8, 9, 10, 11, 12]
+      "contentIds": [
+        "risk-of-bias",
+        "inconsistency",
+        "indirectness",
+        "imprecision",
+        "dissemination-bias"
+      ]
     },
     {
       "part": "V",
       "title": "多様な研究デザインのSR",
-      "chapters": [13, 14, 15]
+      "contentIds": [
+        "nrsi-systematic-review",
+        "qualitative-cerqual",
+        "alternative-recommendations"
+      ]
     },
     {
       "part": "VI",
       "title": "CPG信頼性評価",
-      "chapters": [16, 17, 27, 18, 19]
+      "contentIds": [
+        "trustworthy-cpg",
+        "cpg-quality-examples",
+        "sr-reporting-and-appraisal"
+      ]
     },
     {
       "part": "VII",
       "title": "診療現場で活かす",
-      "chapters": [20, 21]
+      "contentIds": [
+        "clinical-applicability",
+        "values-shared-decision"
+      ]
     },
     {
       "part": "VIII",
+      "title": "JAMA Users Guidesの横断要約",
+      "contentIds": [
+        "jama-sr-ma",
+        "jama-network-meta-analysis"
+      ]
+    },
+    {
+      "part": "IX",
       "title": "付録",
-      "chapters": [22, 23, 24]
+      "contentIds": [
+        "glossary-qa",
+        "guyatt-lectures",
+        "references"
+      ]
     }
   ],
   "chapters": [
-    {"idx": 0, "num": "まずここからお読みください", "title": "まずここからお読みください", "en": "Start here"},
-    {"idx": 1, "num": "1", "title": "EBMと診療ガイドライン・SRの読み方", "en": "EBM and How to Read CPGs/SRs"},
-    {"idx": 2, "num": "2", "title": "GRADEアプローチの概要", "en": "Overview of the GRADE approach"},
-    {"idx": 3, "num": "3", "title": "エビデンスの確実性4段階の意味", "en": "Four Levels of Certainty of Evidence"},
-    {"idx": 4, "num": "4", "title": "強い推奨 vs 条件付き推奨＋GPS・推奨表現", "en": "Strong vs Conditional Recommendations, GPS, Wording"},
-    {"idx": 5, "num": "5", "title": "SoF表・Evidence Profileの読み方", "en": "Reading SoF Tables / Evidence Profiles"},
-    {"idx": 6, "num": "6", "title": "相対効果と絶対効果の違い", "en": "Relative vs Absolute Effects"},
-    {"idx": 7, "num": "7", "title": "閾値とMID — 臨床的に重要な差", "en": "Thresholds & MID"},
-    {"idx": 8, "num": "8", "title": "Risk of Bias（RCT＋観察研究ROBINS-E）", "en": "Risk of Bias (RCT + Observational)"},
-    {"idx": 9, "num": "9", "title": "不一致性（Inconsistency）", "en": "Inconsistency"},
-    {"idx": 10, "num": "10", "title": "非直接性（Indirectness）", "en": "Indirectness"},
-    {"idx": 11, "num": "11", "title": "不精確さ（Imprecision）", "en": "Imprecision"},
-    {"idx": 12, "num": "12", "title": "Dissemination bias", "en": "Dissemination bias"},
-    {"idx": 13, "num": "13", "title": "非RCT・観察研究のSR＋詳細学習（がんアウトカム）", "en": "NRSI / Oncology Deep Dive"},
-    {"idx": 14, "num": "14", "title": "定性的研究のSR — GRADE-CERQual", "en": "Qualitative SR - CERQual"},
-    {"idx": 15, "num": "15", "title": "単一推定値がない場合・GPS・ネットベネフィット", "en": "Alternative recommendation types"},
-    {"idx": 16, "num": "16", "title": "信頼できるCPGの6つの質問", "en": "Six Questions for Trustworthy CPG"},
-    {"idx": 17, "num": "17", "title": "CPG品質の実例 — NCCN／IOM／日本のCPG問題", "en": "CPG Quality Examples"},
-    {"idx": 27, "num": "特", "title": "本邦CPGトホホ集", "en": "Japanese CPG Pitfalls"},
-    {"idx": 18, "num": "18", "title": "AMSTAR 2（16項目）", "en": "AMSTAR 2"},
-    {"idx": 19, "num": "19", "title": "PRISMA 2020（27項目）", "en": "PRISMA 2020"},
-    {"idx": 20, "num": "20", "title": "推奨を目の前の患者にどう適用するか", "en": "Applicability"},
-    {"idx": 21, "num": "21", "title": "共同意思決定（SDM）と価値観・嗜好", "en": "SDM & Values"},
-    {"idx": 22, "num": "22", "title": "用語集 ＋ Q&A", "en": "Glossary & Q&A"},
-    {"idx": 23, "num": "23", "title": "最新情報＋Guyatt LinkedInピックアップ", "en": "Latest & LinkedIn Picks"},
-    {"idx": 24, "num": "24", "title": "参考文献一覧", "en": "References"}
+    {
+      "contentId": "ebm-cpg-sr-basics",
+      "num": "1",
+      "title": "EBMと診療ガイドライン・SRの読み方",
+      "en": "EBM and reading CPGs/SRs",
+      "href": "index.html#page-1",
+      "legacyPageId": "page-1",
+      "legacyIndex": "1",
+      "legacyHash": "#page-1"
+    },
+    {
+      "contentId": "grade-overview",
+      "num": "2",
+      "title": "GRADEアプローチの概要",
+      "en": "Overview of GRADE",
+      "href": "index.html#page-2",
+      "legacyPageId": "page-2",
+      "legacyIndex": "2",
+      "legacyHash": "#page-2"
+    },
+    {
+      "contentId": "certainty-levels",
+      "num": "3",
+      "title": "エビデンスの確実性4段階",
+      "en": "Four levels of certainty",
+      "href": "index.html#page-3",
+      "legacyPageId": "page-3",
+      "legacyIndex": "3",
+      "legacyHash": "#page-3"
+    },
+    {
+      "contentId": "recommendation-strength",
+      "num": "4",
+      "title": "強い推奨と条件付き推奨",
+      "en": "Strong and conditional recommendations",
+      "href": "index.html#page-4",
+      "legacyPageId": "page-4",
+      "legacyIndex": "4",
+      "legacyHash": "#page-4"
+    },
+    {
+      "contentId": "summary-of-findings",
+      "num": "5",
+      "title": "SoF表・Evidence Profileの読み方",
+      "en": "Reading SoF tables and evidence profiles",
+      "href": "index.html#page-5",
+      "legacyPageId": "page-5",
+      "legacyIndex": "5",
+      "legacyHash": "#page-5"
+    },
+    {
+      "contentId": "effect-measures-absolute",
+      "num": "6",
+      "title": "相対効果と絶対効果",
+      "en": "Relative and absolute effects",
+      "href": "index.html#page-6",
+      "legacyPageId": "page-6",
+      "legacyIndex": "6",
+      "legacyHash": "#page-6"
+    },
+    {
+      "contentId": "thresholds-mid",
+      "num": "7",
+      "title": "閾値とMID",
+      "en": "Thresholds and MID",
+      "href": "index.html#page-7",
+      "legacyPageId": "page-7",
+      "legacyIndex": "7",
+      "legacyHash": "#page-7"
+    },
+    {
+      "contentId": "risk-of-bias",
+      "num": "8",
+      "title": "Risk of Bias",
+      "en": "Risk of bias",
+      "href": "index.html#page-8",
+      "legacyPageId": "page-8",
+      "legacyIndex": "8",
+      "legacyHash": "#page-8"
+    },
+    {
+      "contentId": "inconsistency",
+      "num": "9",
+      "title": "不一致性",
+      "en": "Inconsistency",
+      "href": "index.html#page-9",
+      "legacyPageId": "page-9",
+      "legacyIndex": "9",
+      "legacyHash": "#page-9"
+    },
+    {
+      "contentId": "indirectness",
+      "num": "10",
+      "title": "非直接性",
+      "en": "Indirectness",
+      "href": "index.html#page-10",
+      "legacyPageId": "page-10",
+      "legacyIndex": "10",
+      "legacyHash": "#page-10"
+    },
+    {
+      "contentId": "imprecision",
+      "num": "11",
+      "title": "不精確さ",
+      "en": "Imprecision",
+      "href": "index.html#page-11",
+      "legacyPageId": "page-11",
+      "legacyIndex": "11",
+      "legacyHash": "#page-11"
+    },
+    {
+      "contentId": "dissemination-bias",
+      "num": "12",
+      "title": "Dissemination bias",
+      "en": "Dissemination bias",
+      "href": "index.html#page-12",
+      "legacyPageId": "page-12",
+      "legacyIndex": "12",
+      "legacyHash": "#page-12"
+    },
+    {
+      "contentId": "nrsi-systematic-review",
+      "num": "13",
+      "title": "非RCT・観察研究のSR",
+      "en": "Systematic reviews of NRSI",
+      "href": "index.html#page-13",
+      "legacyPageId": "page-13",
+      "legacyIndex": "13",
+      "legacyHash": "#page-13"
+    },
+    {
+      "contentId": "qualitative-cerqual",
+      "num": "14",
+      "title": "定性的研究のSRとGRADE-CERQual",
+      "en": "Qualitative SR and GRADE-CERQual",
+      "href": "index.html#page-14",
+      "legacyPageId": "page-14",
+      "legacyIndex": "14",
+      "legacyHash": "#page-14"
+    },
+    {
+      "contentId": "alternative-recommendations",
+      "num": "15",
+      "title": "単一推定値がない場合・GPS・ネットベネフィット",
+      "en": "Alternative recommendation types",
+      "href": "index.html#page-15",
+      "legacyPageId": "page-15",
+      "legacyIndex": "15",
+      "legacyHash": "#page-15"
+    },
+    {
+      "contentId": "trustworthy-cpg",
+      "num": "16",
+      "title": "信頼できるCPGの6つの質問",
+      "en": "Six questions for trustworthy CPG",
+      "href": "index.html#page-16",
+      "legacyPageId": "page-16",
+      "legacyIndex": "16",
+      "legacyHash": "#page-16"
+    },
+    {
+      "contentId": "cpg-quality-examples",
+      "num": "17",
+      "title": "CPG品質の実例",
+      "en": "CPG quality examples",
+      "href": "index.html#page-17",
+      "legacyPageId": "page-17",
+      "legacyIndex": "17",
+      "legacyHash": "#page-17"
+    },
+    {
+      "contentId": "sr-reporting-and-appraisal",
+      "num": "18",
+      "title": "AMSTAR 2とPRISMA 2020の使い分け",
+      "en": "AMSTAR 2 and PRISMA 2020",
+      "href": "index.html#page-18",
+      "legacyPageId": "page-18",
+      "legacyIndex": "18",
+      "legacyHash": "#page-18"
+    },
+    {
+      "contentId": "clinical-applicability",
+      "num": "19",
+      "title": "推奨を目の前の患者に適用する",
+      "en": "Clinical applicability",
+      "href": "index.html#page-20",
+      "legacyPageId": "page-20",
+      "legacyIndex": "19",
+      "legacyHash": "#page-20"
+    },
+    {
+      "contentId": "values-shared-decision",
+      "num": "20",
+      "title": "共同意思決定と価値観・嗜好",
+      "en": "Shared decision making and values",
+      "href": "index.html#page-21",
+      "legacyPageId": "page-21",
+      "legacyIndex": "20",
+      "legacyHash": "#page-21"
+    },
+    {
+      "contentId": "jama-sr-ma",
+      "num": null,
+      "title": "SR／MAの方法を監査する：JAMA Users' Guidesの質問",
+      "en": "JAMA Users' Guides: SR/MA process",
+      "href": "index.html#page-26",
+      "legacyPageId": "page-26",
+      "legacyIndex": "25",
+      "legacyHash": "#page-26"
+    },
+    {
+      "contentId": "jama-network-meta-analysis",
+      "num": null,
+      "title": "ネットワークメタアナリシス：JAMA Users' Guidesの質問",
+      "en": "JAMA Users' Guides: network meta-analysis",
+      "href": "index.html#page-28",
+      "legacyPageId": "page-28",
+      "legacyIndex": "26",
+      "legacyHash": "#page-28"
+    },
+    {
+      "contentId": "glossary-qa",
+      "num": "23",
+      "title": "用語集とQ&A",
+      "en": "Glossary and Q&A",
+      "href": "index.html#page-22",
+      "legacyPageId": "page-22",
+      "legacyIndex": "21",
+      "legacyHash": "#page-22"
+    },
+    {
+      "contentId": "guyatt-lectures",
+      "num": "24",
+      "title": "Guyatt先生講演",
+      "en": "Guyatt lectures",
+      "href": "index.html#page-23",
+      "legacyPageId": "page-23",
+      "legacyIndex": "22",
+      "legacyHash": "#page-23"
+    },
+    {
+      "contentId": "references",
+      "num": "25",
+      "title": "参考文献一覧",
+      "en": "References",
+      "href": "index.html#page-24",
+      "legacyPageId": "page-24",
+      "legacyIndex": "23",
+      "legacyHash": "#page-24"
+    }
+  ],
+  "specialContent": [
+    {
+      "contentId": "home",
+      "num": "0",
+      "title": "まずここからお読みください",
+      "en": "Start here",
+      "href": "index.html#page-0",
+      "legacyPageId": "page-0",
+      "legacyIndex": "0",
+      "legacyHash": "#page-0"
+    },
+    {
+      "contentId": "beginner-primer",
+      "num": null,
+      "title": "EBM・SR・CPG 徹底解説",
+      "en": "Beginner's primer",
+      "href": "index.html#page-25",
+      "legacyPageId": "page-25",
+      "legacyIndex": "24",
+      "legacyHash": "#page-25"
+    },
+    {
+      "contentId": "learning-index",
+      "num": null,
+      "title": "索引：論文を読む順番／トピック・Guyattから探す",
+      "en": "Learning index",
+      "href": "learning-index.html",
+      "legacyPageId": null,
+      "legacyIndex": null,
+      "legacyHash": null
+    },
+    {
+      "contentId": "legacy-japanese-cpg-pitfalls",
+      "num": null,
+      "title": "本邦CPGトホホ集（旧SPA版）",
+      "en": "Japanese CPG pitfalls legacy view",
+      "href": "index.html#page-29",
+      "legacyPageId": "page-29",
+      "legacyIndex": null,
+      "legacyHash": "#page-29"
+    }
+  ],
+  "deepDives": [
+    {
+      "contentId": "advanced-statistics",
+      "num": null,
+      "title": "統計学・因果推論のディープダイブ",
+      "en": "Statistics and causal inference deep dive",
+      "href": "advanced-statistics.html",
+      "legacyPageId": null,
+      "legacyIndex": null,
+      "legacyHash": null
+    },
+    {
+      "contentId": "nonrct-observational",
+      "num": null,
+      "title": "非RCT・観察研究を詳しく読む",
+      "en": "Reading non-randomized and observational studies",
+      "href": "non-rct-observational-studies.html",
+      "legacyPageId": null,
+      "legacyIndex": null,
+      "legacyHash": null
+    },
+    {
+      "contentId": "oncology-outcomes",
+      "num": null,
+      "title": "がんアウトカムを詳しく読む",
+      "en": "Reading oncology outcomes",
+      "href": "oncology-outcomes.html",
+      "legacyPageId": null,
+      "legacyIndex": null,
+      "legacyHash": null
+    },
+    {
+      "contentId": "meta-analysis-methods",
+      "num": null,
+      "title": "メタ分析の数理と現代的方法",
+      "en": "Meta-analysis methods",
+      "href": "meta-analysis-methods.html",
+      "legacyPageId": null,
+      "legacyIndex": null,
+      "legacyHash": null
+    },
+    {
+      "contentId": "guyatt-methodology-atlas",
+      "num": null,
+      "title": "Guyatt方法論アトラス",
+      "en": "Guyatt methodology atlas",
+      "href": "guyatt-methodology-atlas.html",
+      "legacyPageId": null,
+      "legacyIndex": null,
+      "legacyHash": null
+    }
   ]
 }
