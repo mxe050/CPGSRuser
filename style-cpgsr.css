@@ -401,6 +401,21 @@
   padding-bottom: 4px;
 }
 
+.ref-pending {
+  margin: 18px 0;
+  padding: 12px 14px;
+  border: 1px dashed #9a7a37;
+  border-radius: 6px;
+  background: #fffaf0;
+}
+.ref-pending summary {
+  cursor: pointer;
+  color: #64480a;
+  font-weight: 800;
+}
+.ref-pending .ref-list { margin-top: 12px; }
+.ref-pending .ref-list li { border-left-color: #9a7a37; }
+
 /* ====== ドキュメント構造マップ（CPG/SRナビゲーション学習システム） ====== */
 .doc-map-wrap {
   margin: 24px 0 30px;
@@ -4597,4 +4612,37 @@ body.cpg-overview-open { overflow: hidden; }
     justify-content: center;
     margin: 8px 0 0;
   }
+}
+.primer-index-callout {
+  margin-top: 18px;
+  padding: 17px;
+  border: 1px solid #83b3c1;
+  border-left: 5px solid #176878;
+  border-radius: 7px;
+  background: #f1fafb;
+  color: #173f4b;
+}
+
+.primer-index-callout strong { display: block; color: #145362; font-size: 1rem; }
+.primer-index-callout p { margin: 7px 0 12px; line-height: 1.7; }
+
+.primer-index-callout a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 9px 13px;
+  border: 1px solid #145d6d;
+  border-radius: 5px;
+  background: #176878;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.primer-index-callout a:hover { background: #104e5c; color: #ffffff; }
+
+@media (max-width: 600px) {
+  .primer-index-callout { padding: 15px; }
+  .primer-index-callout a { width: 100%; justify-content: center; text-align: center; }
 }

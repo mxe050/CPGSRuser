@@ -88,10 +88,10 @@
       <li class="toc-item"><button class="toc-btn" data-idx="19" data-content-id="clinical-applicability"><span class="toc-num">19</span><span class="toc-text">患者への適用<span class="en">Applicability</span></span></button></li>
       <li class="toc-item"><button class="toc-btn" data-idx="20" data-content-id="values-shared-decision"><span class="toc-num">20</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
 
-      <li class="toc-section toc-section-major">さらに深く勉強するために</li>
+      <li class="toc-section toc-section-major">Part VIIの関連詳細学習</li>
       <li class="toc-item toc-item-external"><a class="toc-external-link" href="advanced-statistics.html"><span class="toc-num" aria-hidden="true">↗</span><span class="toc-text">統計学・因果推論の詳細学習<span class="toc-detail">推定・CI・モデルを読む。非RCTの因果設計とアウトカムの患者重要性へもつなぐ</span><span class="en">Statistics / Causal Inference Deep Dive</span></span></a></li>
       <li class="toc-section">Part VIII — 📘 JAMA ユーザーズガイド（要約）</li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="25" data-content-id="jama-sr-ma"><span class="toc-num">21</span><span class="toc-text">JAMAでのSR/MA記載内容（重複）<span class="en">JAMA UG Ch22: SR/MA Process</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="25" data-content-id="jama-sr-ma"><span class="toc-num">21</span><span class="toc-text">SR／MAの方法を監査する：JAMA Users' Guidesの質問<span class="toc-detail">既存Ch1・Ch6・Ch8-12を横断する要約</span><span class="en">JAMA UG: SR/MA Questions</span></span></button></li>
       <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26" data-content-id="jama-network-meta-analysis"><span class="toc-num">22</span><span class="toc-text">ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
 
       <li class="toc-section">Part IX — 付録</li>
@@ -196,7 +196,7 @@
         ✅ 「強い推奨」と「条件付き推奨」を患者にどう提示するかが分かる<br>
         ✅ 目の前のCPGが<strong>信頼できるか</strong>を6つの質問で判定できる（Guyatt 2023）<br>
         ✅ 臨床的に重要な差（MID／閾値）の意味が分かる<br>
-        ✅ AMSTAR 2／PRISMA 2020でSRの質を評価できる
+        ✅ AMSTAR 2（批判的吟味）とPRISMA 2020（報告の透明性）の役割を分けてSRを読める
       </div>
     </div>
 
@@ -698,10 +698,10 @@
           <li><strong>研究デザインに過度に依存</strong> — 「RCTなら高、観察研究なら低」という単純な階層。しかし質の低いRCTと優れた観察研究ではどちらが信頼できるかは単純に決まりません。</li>
           <li><strong>エビデンスと推奨の混同</strong> — 「エビデンスの質」と「推奨の強さ」が区別されておらず、「強い推奨＝質の高いエビデンス」と誤解されがちでした。</li>
         </ul>
-        <p>GRADEはこれらの問題を解決するために誕生し、<strong>エビデンスの確実性</strong>と<strong>推奨の強さ</strong>を完全に分離し、5要因による透明な評価を導入しました。これは25年間のEBM進化の中核成果です [G1]。</p>
+        <p>GRADEはこれらの問題を解決するために誕生し、<strong>エビデンスの確実性</strong>と<strong>推奨の強さ</strong>を区別して示す透明な評価を導入しました。ただし両者は切り離された判定ではありません。certaintyはEtDで推奨を決める主要な判断要素の一つであり、利益と害、価値観、資源、公平性、実行可能性とともに読みます。これは25年間のEBM進化の中核成果です [G1]。</p>
 
-        <h2>GRADEの基本構造 — 2つの独立した判断</h2>
-        <p>GRADEの最も重要な考え方は、以下の<strong>2つの判断を絶対に混同しない</strong>ことです：</p>
+        <h2>GRADEの基本構造 — 区別するが、切り離さない2つの判断</h2>
+        <p>GRADEの最も重要な考え方は、以下の<strong>2つの判断を混同しない</strong>ことです。同時に、推奨を読むときはcertaintyがEtDのどこでどう使われたかを追います：</p>
         <ol>
           <li><span class="gloss" data-term="エビデンスの確実性">エビデンスの確実性（Certainty of Evidence）</span>（高／中／低／非常に低い、4段階） — <em>エビデンスそのものがどのくらい信頼できるかの評価</em>（Ch3で詳述）</li>
           <li><span class="gloss" data-term="推奨の強さ">推奨の強さ（Strength of Recommendation）</span>（強い／条件付き、2段階） — <em>推奨を出すかどうか・どの程度強く出すかの判断</em>（Ch4で詳述）</li>
@@ -711,7 +711,7 @@
           <strong>例1：高い確実性だが条件付き推奨</strong>：スクリーニング検査の有効性がRCTで確認され確実性は「高」。しかし「早期発見による延命」に対する患者の価値観は人により大きく異なり（偽陽性の負担を嫌う人、早期発見を最優先する人）、全員に推奨できない → <strong>条件付き推奨</strong>。<br><br>
           <strong>例2：低い確実性だが強い推奨</strong>：重篤な感染症の抗菌薬使用について観察研究のエビデンスしかなく確実性は「低」。しかし未治療で死亡率が高く、代替策もない → <strong>強い推奨</strong>（Ch4で詳述する例外条件に該当）。
         </div>
-        <p>この「エビデンスの確実性と推奨の強さが独立している」という点は、GRADE以前のシステムとの最大の違いであり、<strong>読み手として最も誤解しやすい</strong>部分です。</p>
+        <p>この「エビデンスの確実性と推奨の強さは別の判断だが、推奨の根拠の鎖の中で結び付いている」という点は、GRADE以前のシステムとの最大の違いであり、<strong>読み手として最も誤解しやすい</strong>部分です。低いcertaintyで強い推奨が正当化されるのは、重大な害の回避、明白な利益害の差、資源・実現可能性などを含む例外的状況で、理由がEtDから追えるときです。</p>
 
         <h2>エビデンスの確実性を決める5要因（下げる要因）</h2>
         <p>RCT（ランダム化比較試験）のエビデンスはGRADEでは「高（⊕⊕⊕⊕）」から出発します。そこから以下の5要因のそれぞれについて「深刻な問題がある」と判定されれば確実性を1段下げ、「非常に深刻」なら2段下げます：</p>
@@ -745,7 +745,7 @@
             </tr>
           </tbody>
         </table>
-        <p>この5要因は、<strong>CPGのEvidence Profile付録やSRの「Certainty Assessment」の列</strong>に必ず記載されています。例えば "serious imprecision due to wide CI"（CIが広く精度不足があるため1段下げ）といった文言。この章から先の Ch8-12 では、各要因について「どういう状況で下げるのか」「読み手として何をチェックすべきか」を個別に掘り下げます。</p>
+        <p>この5要因は、<strong>CPGのEvidence Profile付録やSRの「Certainty Assessment」の列</strong>で確認できることが望ましい情報です。ただしSoF表、Evidence Profile、推奨理由、EtDが常に同じ文書に並ぶとは限りません。どこに示されているかを追い、見当たらないときは透明性を慎重に評価します。例えば "serious imprecision due to wide CI"（CIが広く精度不足があるため1段下げ）といった文言。この章から先の Ch8-12 では、各要因について「どういう状況で下げるのか」「読み手として何をチェックすべきか」を個別に掘り下げます。</p>
 
         <h2>観察研究を格上げする3条件（上げる要因）</h2>
         <p>観察研究（コホート、症例対照）は交絡の問題があるため、GRADEでは「低（⊕⊕◯◯）」から出発します。しかし以下の条件を満たせば確実性を上げることができます：</p>
@@ -770,7 +770,7 @@
         <p>これらを<span class="gloss" data-term="EtD">Evidence to Decision（EtD）</span>フレームワークで構造化して検討します [U16]。CPGの付録に EtD テーブルが掲載されていれば、<strong>パネルが推奨の強さをどう決めたか</strong>を読み手も追跡できます。</p>
 
         <h2>GRADEの「成果物」 — CPG／SRにはこう現れる</h2>
-        <p>GRADEに基づくCPGやSRには、以下の3つの「成果物」が必ず含まれます。これらは <strong>Ch1 の文書構造マップの STEP 4-7（CPG）／STEP 10（SR）</strong> に該当します：</p>
+        <p>GRADEを十分に透明に実装したCPGやSRでは、以下の3つの「成果物」を追えることが望まれます。文書種別や公開方法によっては別冊、補遺、オンライン資料に分かれるため、同じ文書だけで見つからないことがあります。これらは <strong>Ch1 の文書構造マップの STEP 4-7（CPG）／STEP 10（SR）</strong> に該当します：</p>
         <table class="mid-table">
           <thead><tr><th>成果物</th><th>内容</th><th>詳細章</th></tr></thead>
           <tbody>
@@ -791,7 +791,7 @@
             </tr>
           </tbody>
         </table>
-        <p>CPG／SRを開いたとき、この3つを探す癖をつけてください。「SoF表がない／Evidence Profileが見当たらない／推奨の強さが明示されていない」CPGは、<strong>信頼性に疑問がある</strong>サインです（Ch5, Ch16で詳述）。</p>
+        <p>CPG／SRを開いたとき、この3つを探す癖をつけてください。「SoF表がない／Evidence Profileが見当たらない／推奨の強さが明示されていない」ことは、根拠の鎖を追いにくくする<strong>透明性の警告</strong>です。ただし、別冊や補遺へ案内されている場合もあるため、それだけで不信頼と確定せず、Ch5・Ch16の問いに沿って根拠を追跡します。</p>
 
         <h2>GRADEを採用しているCPGかを判別する方法</h2>
         <p>CPG本文を読むとき、以下のキーワードが出てくれば「GRADEベース」と判断できます：</p>
@@ -849,7 +849,7 @@
         <div class="key-message" style="margin-top:20px;">
           <strong>この章で覚えておくべき3つ：</strong><br>
           ① GRADE = CPG／SRの世界共通の「格付け」ルール（110+組織採用）<br>
-          ② <strong>エビデンスの確実性（4段階）</strong>と<strong>推奨の強さ（2段階）</strong>は独立した判断<br>
+          ② <strong>エビデンスの確実性（4段階）</strong>と<strong>推奨の強さ（2段階）</strong>は区別するが、certaintyは推奨判断の主要要素<br>
           ③ 確実性は5要因で下げる／3条件で上げる — 以降の章でそれぞれ詳細に学ぶ
         </div>
 
@@ -1085,7 +1085,7 @@
           <thead><tr><th></th><th><strong>強い推奨</strong></th><th><strong>条件付き推奨</strong></th></tr></thead>
           <tbody>
             <tr><td><strong>患者にとって</strong></td><td>ほとんどの人が選ぶ可能性が高い。ただし個別の状況や価値観による例外を確認する</td><td>多数派は選ぶが、価値観により選ばない人もいる</td></tr>
-            <tr><td><strong>臨床家にとって</strong></td><td>通常の出発点として勧める。ただし適用不能、患者の明確な選好、併存症などの例外を確認する</td><td>価値観を確認し、<span class="gloss" data-term="共同意思決定">共同意思決定（SDM）</span>が必要</td></tr>
+            <tr><td><strong>臨床家にとって</strong></td><td>通常の出発点として勧める。ただし適用不能、患者の明確な選好、併存症などの例外を確認する</td><td>価値観を確認し、<span class="gloss" data-term="共同意思決定">共同意思決定（SDM）</span>を特に重視する</td></tr>
             <tr><td><strong>政策担当者にとって</strong></td><td>標準ケアとして採用可能</td><td>議論を経て採用、アウトカム測定を</td></tr>
           </tbody>
         </table>
@@ -1279,7 +1279,7 @@
           <ol>
             <li><strong>アウトカムの重要度を確認</strong>：死亡・主要イベントが含まれているか。サロゲートのみなら要注意</li>
             <li><strong>絶対効果（Absolute）に注目</strong>：相対効果は印象を誇張しやすい（Ch6で詳述）</li>
-            <li><strong>絶対差の信頼区間が閾値を超えているか</strong>：MID（Ch7）未満なら「実質差なし」</li>
+            <li><strong>絶対差の信頼区間と閾値の関係</strong>：MIDまたは意思決定閾値の片側だけを見ず、CI全体で臨床判断が変わるかを確認する</li>
             <li><strong>確実性ラベル</strong>：高／中なら信じる、低／非常に低いなら他の情報と総合</li>
             <li><strong>平易な要約の動詞</strong>：「results in」→高、「likely」→中、「may」→低、「very uncertain」→非常に低い（[G5]）</li>
           </ol>
@@ -1394,7 +1394,7 @@
         </div>
 
         <h2>5. 絶対効果とベースラインリスク — 臨床で活かす算数</h2>
-        <p>SR／MA は多くの場合、相対効果（RR、OR、HR）を主要結果として示します。しかし臨床判断には、<strong>ベースラインリスク × 相対効果 = 絶対効果</strong>への変換が必須です。</p>
+        <p>SR／MA は多くの場合、相対効果（RR、OR、HR）を主要結果として示します。しかし臨床判断には、対象患者・時間軸に対応した<strong>絶対効果</strong>への翻訳が必要です。ここでRR、OR、HRを同じ式に入れてはいけません。RRでは <code>p1 = p0 × RR</code>、<code>RD = p1 − p0</code> と計算できます。ORでは <code>p1 = OR × p0 / {(1 − p0) + OR × p0}</code> が必要です。HRは時間ごとのhazardを要約した量なので、ベースライン生存曲線、追跡時点、比例ハザードの仮定なしに単純な絶対リスクへ変換できません。</p>
         <div class="jama-compare">
           <div class="jcmp-box jcmp-good">
             <span class="jcmp-title">✅ ベネフィット側：心筋梗塞</span>
@@ -1410,7 +1410,7 @@
         <h2>6. ここから従来のCh6本文：相対効果と絶対効果</h2>
 
         <div class="key-message">
-          <strong>要点：</strong>相対効果（RR, OR, HR）はベースラインリスクに依存せず比較的安定。<strong>絶対効果はベースラインリスクに依存し、患者への意味付けに直結</strong>。読み手は必ず両方を確認し、SoF表の「per 1000」表記に注目する [U12][M5]。
+          <strong>要点：</strong>RR、OR、HRは別の量です。相対効果が異なるベースラインリスクでも同じように当てはまるとは自動的には言えず、対象集団・時点・効果修飾を確認します。<strong>絶対効果はベースラインリスクと時間軸に依存し、患者への意味付けに直結</strong>します。読み手は必ず両方を確認し、SoF表の「per 1000」表記と脚注に注目します [U12]。
         </div>
 
         <h2>違いの数値例</h2>
@@ -1439,7 +1439,7 @@
         <p>最良のCPGは、読み手が自分の患者のベースラインリスクに合わせて絶対効果を計算できる情報を提供します（Guyatt LinkedIn post on baseline risk vs effect modification）。</p>
 
         <h2>絶対効果差のための方法論（2023）</h2>
-        <p>[M5]（絶対リスク差のための論文2023）は、観察研究メタ解析でオッズ比から絶対効果差を導出する標準的な手順を示しています。観察研究のSR（Ch13）を読む際は、絶対効果への変換が適切に行われているかを確認しましょう。</p>
+        <p>観察研究メタ解析でも、オッズ比から絶対効果差を示す場合は、対象集団のベースラインリスク、用いた変換式、時点、交絡調整済み推定値との整合を明示する必要があります。観察研究のSR（Ch13）を読む際は、絶対効果への変換が適切に行われているかを確認しましょう。数式と仮定はメタ分析の発展章で詳しく扱います。</p>
 
         <div class="chapter-nav">
           <button onclick="showPage(5)">← Ch5</button>
@@ -1486,33 +1486,33 @@
         </div>
 
         <div class="key-message">
-          <strong>要点：</strong><span class="gloss" data-term="MID">MID（Minimal Important Difference、最小重要差）</span>は、<strong>患者が「重要」と感じる最小の治療効果</strong>。Jaeschke-Singer-Guyatt (1989) [M1] が提唱した概念で、現在はMIDと統一。SoF表の解釈と<span class="gloss" data-term="不精確さ">不精確さ（Imprecision）</span>評価に直結する。
+          <strong>要点：</strong><span class="gloss" data-term="MID">MID（Minimal Important Difference）</span>、MCID、MICは近い文脈で使われますが、同義と決めつけません。<strong>群間の治療効果を解釈する閾値</strong>と、<strong>個人内の変化量</strong>も区別します。本章では、出典がMIDと呼ぶ閾値をMIDとして扱い、その対象集団・尺度・時点・推定法を確認します。SoF表の解釈と<span class="gloss" data-term="不精確さ">不精確さ（Imprecision）</span>には、事前に定めた意思決定閾値とCIの位置関係が重要です。
         </div>
 
         <h2>なぜMIDが必要か</h2>
         <p>統計的有意差（p&lt;0.05）は、<strong>臨床的に意味のある差</strong>とは限りません。1000人で0.5人が0.6人になる効果はp値が有意でも臨床的に無意味。逆に、p値が有意でなくても信頼区間の上限が十分大きければ臨床的に重要な可能性があります。<strong>MIDはこの臨床的重要性の基準線</strong>です。</p>
 
         <h2>些細・中・大の3段階閾値</h2>
-        <p>現代GRADEでは、効果量を以下4段階で分類します [M2][M6]：</p>
+        <p>GRADE Guidance 42では、患者にとっての利益・害を判断するための閾値を、問いと文脈に応じて明示します。以下の4段階は、その読み方を練習するための枠組みであり、すべてのアウトカムに固定的に当てはめる規則ではありません [M2]：</p>
 
         <!-- 閾値早見表：mid-explorer.js が描画 -->
         <div id="mid-explorer"></div>
 
-        <h2>MIDとImprecisionの関係</h2>
-        <p>信頼区間がMIDをどう含むかで、確実性を下げるかが決まります：</p>
+        <h2>MID・意思決定閾値とImprecisionの関係</h2>
+        <p>まず、何についてcertaintyを評価するか（ほとんど差がないか、少なくとも小さい重要差があるか、より大きい差か）と、その閾値を事前に明らかにします。信頼区間が一つのMIDをまたぐだけで自動的にdowngradeするのではなく、CIの両端で臨床判断が変わるか、どの程度またぐか、閾値自体の妥当性を総合して判断します：</p>
         <ul>
-          <li>信頼区間がMIDを超えていない（"no clinically important difference"）→ 「small」または「trivial」</li>
-          <li>信頼区間がMIDをまたぐ → 精度不足（Imprecision）で確実性を1段下げる</li>
-          <li>信頼区間が完全にMIDを超えている → 精度は十分（Ch11で詳述）</li>
+          <li>CI全体が、指定した閾値に対して同じ臨床判断を支持するかを確認する</li>
+          <li>CIが重要な利益、ほとんど差がない範囲、重要な害の複数の判断領域に広がるなら、不精確さの懸念が強くなる</li>
+          <li>CIが狭くても、MID・ベースラインリスク・アウトカムの直接性が不適切なら、単独では結論できない</li>
         </ul>
 
         <h2>MIDの推定方法</h2>
         <ol>
-          <li><strong>アンカーベース法</strong>：患者自身が「少し良くなった／変わらない」と評価したスコア差の中央値。最も信頼性が高い。</li>
+          <li><strong>アンカーベース法</strong>：患者自身が「少し良くなった／変わらない」と評価したスコア差を、解釈可能なアンカーと結び付けて推定する。アンカーが患者関連か、尺度と十分に関連するか、閾値と解析が妥当かを確認できるときに有用。</li>
           <li><strong>分布ベース法</strong>：0.5 SD、0.5 SEM など。二次的指標。</li>
           <li><strong>合意ベース法</strong>：パネル議論で決定。多くのGLで用いられる。</li>
         </ol>
-        <p>[M7]（BMJ 2025）は、アンカーベースMID推定値の信頼性を評価する新instrumentを提供しています。SoF表のMIDがどの方法で設定されたかを確認しましょう。</p>
+        <p>MIDの信頼性を評価するinstrumentでは、アンカーの患者関連性、尺度との関連、推定精度、選んだ閾値が「小さいが重要な差」を表すか、解析方法が確認対象になります。アンカー法という名称だけで最良と判断せず、SoF表のMIDがどの方法・対象集団・時点で設定されたかを確認しましょう。</p>
 
         <div class="warning-box">
           <strong>⚠ MIDはアウトカムごと／集団ごとに異なる</strong><br>
@@ -1547,7 +1547,7 @@
         </div>
 
         <div class="key-message">
-          <strong>要点：</strong>研究の方法論的欠陥により結果が歪む可能性を評価する。RCTは <strong>RoB 2</strong>（Cochrane）、観察研究は<strong>ROBINS-I（介入）</strong>または<strong>ROBINS-E（曝露）</strong>を用いる [G7]。読み手は「どのドメインに問題があり、結果がどちらに歪む可能性があるか」を把握する。
+          <strong>要点：</strong>研究の方法論的欠陥により結果が歪む可能性を評価する。RCTは <strong>RoB 2</strong>、観察研究の介入効果は<strong>ROBINS-I（介入）</strong>、曝露効果は<strong>ROBINS-E（曝露）</strong>のように、問いに合う別々のツールを用いる [R1][R2][R3]。読み手は「どのドメインに問題があり、結果がどちらに歪む可能性があるか」を把握する。
         </div>
 
         <div class="jama-note">
@@ -1623,7 +1623,7 @@
             <span class="yah-title">あなたが今学んでいる場所</span>
             <span class="yah-where">CPG：Evidence Profile「Inconsistency」判定（STEP 6）</span>
             <span class="yah-where">SR：結果の<strong>森林プロット</strong>・I²・異質性p値（STEP 9）</span>
-            <span class="yah-check">GRADE 5要因の<strong>第2要因</strong>。森林プロットで各研究の四角が左右にバラバラに並んでいる、I² が75%を超えている、サブグループ間で効果方向が逆転…こうした「研究間で話が食い違う」状況を読み解き、<strong>「serious inconsistency」</strong>の根拠を確認する章です。</span>
+            <span class="yah-check">GRADE 5要因の<strong>第2要因</strong>。森林プロットで各研究の推定値とCIがどのように異なるか、効果方向が変わるか、事前に考えた効果修飾で説明できるかを読みます。I²の固定閾値だけで決めず、<strong>「serious inconsistency」</strong>の根拠を確認する章です。</span>
             <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
           </div>
         </div>
@@ -1637,7 +1637,7 @@
           <div class="jn-title">異質性評価の 3 ステップ</div>
           <ol>
             <li><strong>視覚的評価</strong>：フォレストプロット上で点推定値と CI の重なりを目視。「一見して似ているか」が出発点。</li>
-            <li><strong>統計的検定</strong>：Q 検定（p 値）、I² 統計量（%）。I² 50% 以上は実質的異質性の候補。</li>
+            <li><strong>統計的な補助指標</strong>：Q検定、I²、τ²などを、研究数・精度・効果尺度の文脈で読む。どの一つにも、GRADEや統合の可否を決める固定カットオフはない。</li>
             <li><strong>事前仮説に基づくサブグループ解析</strong>：ばらつきの原因を「患者・介入量・追跡期間・研究の質」で説明。事後の探索は仮説生成に留める。</li>
           </ol>
           <p>詳細要約は <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6（JAMA UG Ch23統合）</a>。</p>
@@ -1647,12 +1647,12 @@
         <ul>
           <li><strong>点推定値のばらつき</strong>：研究ごとの効果が正負逆になっていないか（森林プロットで目視）</li>
           <li><strong>信頼区間の重なり</strong>：各研究の95% CIがどの程度重なっているか</li>
-          <li><strong>I² 統計量</strong>：0-25%低、25-50%中、50-75%高、&gt;75%顕著な異質性</li>
-          <li><strong>p値 for heterogeneity</strong>：&lt;0.10で異質性ありとみなすことが多い</li>
+          <li><strong>I² 統計量</strong>：観測されたばらつきのうち研究内偶然誤差だけでは説明しにくい割合の目安。値は研究数・精度に左右され、固定的な「低・中・高」判定には使わない</li>
+          <li><strong>Q検定とτ²</strong>：Qのp値は少数研究では検出力が低く、τ²は効果尺度の単位で研究間分散を示す。どちらもforest plotと臨床的な違いと併せて読む</li>
         </ul>
 
         <h2>異質性が説明できる場合は下げない</h2>
-        <p>サブグループ解析（疾患重症度・年齢・介入量など）で異質性が説明できれば、<strong>確実性は下げずに別々の推定値を提示</strong>するのが理想。説明できない場合のみ「Inconsistency」で確実性を下げます。</p>
+        <p>サブグループ解析（疾患重症度・年齢・介入量など）で、事前に想定した効果修飾により違いをもっともらしく説明できる場合は、別々の推定値を提示できます。ただし説明がもっともらしいだけで自動的にcertaintyを下げない・下げると決めず、各推定値の直接性・不精確さと、読者の意思決定への影響を評価します。</p>
 
         <h2>森林プロットの読み方</h2>
         <div class="reader-tips">
@@ -1754,7 +1754,7 @@
             <span class="yah-title">あなたが今学んでいる場所</span>
             <span class="yah-where">CPG：Evidence Profile「Imprecision」判定（STEP 6）</span>
             <span class="yah-where">SR：SoF表の<strong>95% CI</strong>・Certainty列・統合結果ダイヤモンドの幅（STEP 10）</span>
-            <span class="yah-check">GRADE 5要因の<strong>第4要因</strong>。SoF表の絶対効果の信頼区間（CI）が <strong>Ch7で学んだMID</strong> をまたいでいるか。両端が同じ臨床判断を支持するか。<strong>「serious imprecision」</strong>判定の根拠を、サンプルサイズ・イベント数・OIS（Optimal Information Size）と合わせて理解します。</span>
+            <span class="yah-check">GRADE 5要因の<strong>第4要因</strong>。SoF表の絶対効果の信頼区間（CI）が、事前に定めた判断閾値をどこまでまたぐか、両端で臨床判断が変わるかを確認します。<strong>「serious imprecision」</strong>の根拠を、サンプルサイズ・イベント数・OIS（Optimal Information Size）を補助情報として用いながら理解します。</span>
             <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
           </div>
         </div>
@@ -1767,7 +1767,7 @@
           <span class="jn-label">📘 JAMA UG の視点</span>
           <div class="jn-title">精度評価は「CI 両端の臨床判断」で決まる</div>
           <p>
-            CI の上限と下限の<strong>両方が同じ臨床判断</strong>を支持するなら精度は十分。どちらかが「効果ありなし」の閾値をまたぐなら確実性を 1 段下げ、<strong>両端ともまたぐ</strong>なら 2 段下げる候補になります。加えて、<strong>最適情報サイズ（OIS）</strong>に達していないメタアナリシスは、統計的有意でもランダム誤差の影響が残ります。
+            CI の上限と下限の<strong>両方が同じ臨床判断</strong>を支持するなら精度は十分である可能性が高まります。CIが一つ以上の判断閾値をまたぐときは、どの判断が変わるか、どの程度広くまたぐか、閾値の妥当性を検討してdowngradeの程度を決めます。固定的な「1段・2段」規則ではありません。<strong>最適情報サイズ（OIS）</strong>は補助材料であり、統計的有意かどうかだけで十分性を決めません。
           </p>
           <p>詳細は <a href="#" onclick="showPage(6);return false;" style="color:#1a5276;font-weight:700;">Ch6（JAMA UG Ch23統合）</a>（2 節「結果の精度を評価する」）。</p>
         </div>
@@ -1775,21 +1775,21 @@
         <h2>判定の基本原則</h2>
         <ol>
           <li>点推定値と95% CIを見る</li>
-          <li>CIの<strong>両端</strong>がMIDを超えているか（同じ判断になるか）を確認</li>
-          <li>どちらか一方でもMIDをまたいで反対側に行く → Imprecisionで確実性を下げる</li>
-          <li>サンプルサイズが小さい／イベント数が少ない → 追加要因</li>
+          <li>CIの<strong>両端</strong>が、事前に定めた閾値に対して同じ判断を支持するかを確認</li>
+          <li>CIが複数の重要な判断領域をまたぐなら、影響の大きさに応じてImprecisionを検討</li>
+          <li>サンプルサイズ・イベント数・OISは、CIの解釈を補助する情報として確認</li>
         </ol>
 
         <h2>パターン別判定</h2>
         <div class="example-box">
           <strong>MID閾値</strong>：絶対差 20/1000<br><br>
-          <strong>Pattern A</strong>：絶対差 30/1000 (95% CI 25-40) → CIの下限25&gt;MID → Imprecisionなし<br>
-          <strong>Pattern B</strong>：絶対差 30/1000 (95% CI 10-60) → 下限10&lt;MID → Imprecision（1段下げ）<br>
-          <strong>Pattern C</strong>：絶対差 10/1000 (95% CI -5〜+25) → 不利益側にもまたぐ → 重大なImprecision（2段下げの可能性）
+          <strong>Pattern A</strong>：絶対差 30/1000 (95% CI 25-40) → CI全体が小さい重要差20/1000を上回る。ほかの懸念がなければ、少なくとも小さい重要利益への判断は安定し得る<br>
+          <strong>Pattern B</strong>：絶対差 30/1000 (95% CI 10-60) → CIは「ほとんど差がない」からより大きな利益まで含む。判断が変わるなら不精確さを検討する<br>
+          <strong>Pattern C</strong>：絶対差 10/1000 (95% CI -5〜+25) → 不利益、ほとんど差がない、重要利益を含み得る。閾値と文脈に照らして、より深刻な不精確さを検討する
         </div>
 
-        <h2>サンプルサイズの目安（OIS）</h2>
-        <p>GRADEでは Optimal Information Size（OIS）という概念を用い、メタ解析の総参加者数が十分かを判定します。目安として、臨床試験のパワー計算に必要な数（通常400-2000人、イベント300前後）を下回るとImprecisionで下げることが多い。</p>
+        <h2>OISは質問ごとに計算する補助情報</h2>
+        <p>GRADEではOptimal Information Size（OIS）を、メタ解析の情報量が臨床判断に必要な水準に近いかを補助的に見るために用います。固定した総参加者数やイベント数は使いません。必要情報量は、ベースラインリスク、比較したい絶対差または相対効果、両側α、検出力、研究間異質性、クラスター化や脱落などを前提に質問ごとに計算します。まず絶対効果CIと意思決定閾値を読み、その解釈を補うためにOISを確認します。</p>
 
         <div class="chapter-nav">
           <button onclick="showPage(10)">← Ch10</button>
@@ -1819,22 +1819,22 @@
         </div>
 
         <div class="key-message">
-          <strong>要点：</strong>肯定的結果は発表されやすく、否定的／中立的結果は埋もれる傾向。従来は「出版バイアス」と呼ばれたが、SNS・プレスリリース・学会発表でも歪みが生じるため「情報発信バイアス」という広い概念に進化している。
+          <strong>要点：</strong>肯定的結果は発表・公表・強調されやすく、否定的／中立的結果は見つけにくくなる傾向があります。「出版バイアス」と「情報発信（dissemination）バイアス」は関連しますが、用語の範囲や定義は資料により異なり、一方が他方を普遍的に置き換えるわけではありません。読んでいるSR・CPGがどの偏りを評価したのかを確認します。
         </div>
 
         <h2>検出方法</h2>
         <ul>
-          <li><strong>ファネルプロット</strong>：点対称か（左右非対称なら疑わしい）</li>
-          <li><strong>Egger検定 / Begg検定</strong>：非対称性の統計検定</li>
+          <li><strong>ファネルプロット</strong>：非対称性があるかを探索する補助図。非対称性は出版・選択報告バイアスだけでなく、真の異質性、方法論差、偶然などでも起こる</li>
+          <li><strong>Egger検定 / Begg検定</strong>：非対称性の補助的な統計検定。研究数、効果尺度、異質性によって解釈が不安定になる</li>
           <li><strong>登録試験の未発表チェック</strong>：ClinicalTrials.govで該当研究の未発表を確認</li>
           <li><strong>研究数が少ない</strong>場合、検定そのものの信頼性が低い点に注意</li>
         </ul>
 
         <h2>読み手としての対応</h2>
         <ul>
-          <li>ファネルプロットが対称 → 一定の安心材料</li>
-          <li>非対称 → 効果は過大評価の可能性、確実性を1段下げる</li>
-          <li>業界資金の試験が多い → Dissemination biasの追加リスク</li>
+          <li>ファネルプロットが対称でも、重要な欠測エビデンスがないことは確認できない</li>
+          <li>非対称なら、出版・選択報告、真の異質性、方法論差、小規模研究効果を区別して調べる。確実性のdowngradeは自動ではない</li>
+          <li>登録試験、プロトコル、検索の範囲、資金・利益相反、未公表データへのアクセスをまとめて確認する</li>
         </ul>
 
         <div class="chapter-nav">
@@ -1883,6 +1883,8 @@
             <a href="advanced-statistics.html#causal-model-choice">1. 統計・CI・変数選択を詳しく学ぶ</a>
             <a href="non-rct-observational-studies.html#13a">2. 非RCT・観察研究の因果設計を詳しく学ぶ</a>
             <a href="oncology-outcomes.html#onc1">3. がんアウトカムを患者の意味まで詳しく学ぶ</a>
+            <a href="meta-analysis-methods.html#overview">4. メタ分析の仮定と統合方法を詳しく学ぶ</a>
+            <a href="guyatt-methodology-atlas.html#grade-framework">5. Guyatt方法論の原著・現行ガイダンスへ進む</a>
           </div>
         </section>
 
@@ -2256,7 +2258,7 @@
         </div>
 
         <h2>NCCN — GRADE非採用の代表例</h2>
-        <p>NCCN Clinical Practice Guidelines in Oncology（米国）は、<strong>GRADEを採用せず独自のEvidence Blocksを用いる</strong>ため、6質問で以下の問題点が指摘されます [C2]：</p>
+        <p>NCCN Clinical Practice Guidelines in Oncology（米国）は、<strong>GRADEを採用せず独自のEvidence Blocksを用いる</strong>ため、6質問で以下の問題点が指摘されます ：</p>
         <ul>
           <li><strong>Q4（最新のSR）</strong>：厳格なシステマティックレビューの実施が明記されず、「GOBSAT（good old boys sitting around a table）」型の可能性</li>
           <li><strong>Q5（推奨強度と確実性の整合）</strong>：Evidence Blocksは専門家経験に大きく依存し、再現性に限界</li>
@@ -2268,19 +2270,19 @@
         <h2>IOM（米国医学研究所、現NAM）8基準 — 2011</h2>
         <p>Institute of Medicine「Clinical Practice Guidelines We Can Trust」[C3]：</p>
         <ol>
-          <li>透明性の確保</li>
-          <li>COIの管理</li>
-          <li>多職種パネルとステークホルダー参加</li>
-          <li>システマティックレビューに基づく</li>
-          <li>推奨の根拠と強さの明記</li>
-          <li>外部レビュー</li>
-          <li>更新のメカニズム</li>
-          <li>実施支援資源の提供</li>
+          <li>透明性の確保（Establishing transparency）</li>
+          <li>利益相反の管理（Management of conflict of interest）</li>
+          <li>ガイドライン開発グループの構成（Guideline development group composition）</li>
+          <li>CPGとシステマティックレビューの接続（CPG–SR intersection）</li>
+          <li>エビデンス基盤の確立と推奨強度の評価（Establishing evidence foundations and rating strength of recommendations）</li>
+          <li>推奨の明確な記述（Articulation of recommendations）</li>
+          <li>外部レビュー（External review）</li>
+          <li>更新（Updating）</li>
         </ol>
-        <p>IOM基準はGuyatt 2023の6質問の土台となった歴史的文書です。</p>
+        <p>IOM基準は、信頼できるCPGを考えるための歴史的かつ有用な参照枠です。Guyatt 2023の6質問とは重なる観点がありますが、同じチェックリストではありません。個々のCPGについては、推奨とその根拠の鎖が実際に追えるかを確認します。</p>
 
         <h2>日本のCPG問題</h2>
-        <p>日本のCPGは一部で以下の課題が指摘されています [C4]：</p>
+        <p>日本のCPGは一部で以下の課題が指摘されています ：</p>
         <ul>
           <li>GRADE採用が徐々に進んでいるが未採用のCPGも多い</li>
           <li>COI管理ポリシーは明文化されているが、個別推奨への影響評価が弱いCPGがある</li>
@@ -2321,7 +2323,7 @@
         </div>
 
         <div class="key-message">
-          <strong>要点：</strong>AMSTAR 2（Shea 2017, BMJ）[T1] はSRの方法論的質を16項目で評価し、PRISMA 2020（Page 2021, BMJ）[T2] はSR報告の透明性を27項目で確認します。<strong>AMSTAR 2は「信頼できる方法で作られたか」、PRISMAは「読むために必要な情報が十分に報告されているか」</strong>を見る道具です。
+          <strong>要点：</strong>AMSTAR 2（Shea 2017, BMJ）[T1] はSRの批判的吟味ツールであり、PRISMA 2020（Page 2021, BMJ）[T2] はSR報告の透明性のためのガイドラインです。<strong>AMSTAR 2は「方法に重要な懸念があるか」、PRISMAは「読むために必要な情報が十分に報告されているか」</strong>を見る道具です。PRISMAに従った報告だけでは方法論的質やSR全体のRisk of Biasは保証されず、後者を評価したいときはROBISなど別の専用ツールを検討します。
         </div>
 
         <h2>インタラクティブ評価ツール</h2>
@@ -2702,7 +2704,7 @@
           <details>
             <summary><strong>8. 強い推奨と条件付き推奨：診察時間をどこに使うか</strong></summary>
             <p>Guyatt先生は、世界中の臨床家に「すべての患者に十分な時間をかけられますか」と尋ねると、ほぼ全員が「無理」と答えると言います。だからこそ、診察時間の使い方を考える必要があります。</p>
-            <p>もし信頼できるパネルが正しく強い推奨を出しているなら、ほとんどの患者は同じ選択をするはずです。その場合は、複雑な共同意思決定に長い時間を使う必要は少なく、「私はこれを勧めます。理由はこうです」と説明する形でよいことが多い。一方、条件付き推奨では、患者によって選択が変わるので、価値観を聞き、利益と害を一緒に比較する必要があります。</p>
+            <p>もし信頼できるパネルが正しく強い推奨を出しているなら、ほとんどの患者は同じ選択をするはずです。その場合は、複雑な共同意思決定に長い時間を使う必要は少なく、「私はこれを勧めます。理由はこうです」と説明する形でよいことが多い。一方、条件付き推奨では、患者によって選択が変わり得るため、価値観を聞き、利益と害を個別に比較することを特に重視します。</p>
           </details>
 
           <details>
@@ -2933,7 +2935,7 @@
       </div>
       <div class="page-body">
         <div class="key-message">
-          <strong>参考文献体系：</strong>本アプリは Users' Guides to the Medical Literature シリーズ（U1-U18）、閾値・MID関連（M1-M7）、GRADE方法論拡張（G1-G7）、SRツール（T1-T2）、CPG実例（C1-C4）、価値観関連（V1-V2）、LinkedIn（L1）を正式参照しています。本文中の <span class="ref-cite" style="color:var(--accent);font-weight:600;">[U17]</span> 等をクリックすると詳細が表示されます。
+          <strong>参考文献の読み方：</strong>本文でクリックできる引用キーは、書誌・URL・資料の状態を照合済みの資料だけを正式な根拠として扱います。Users' Guides（U1-U18）、閾値・MID（M1、M2、M7、M8）、GRADE方法論（G1-G6）、SR評価・報告（T1-T3）、研究別Risk of Bias（R1-R3）、CPG・価値観資料（C1、C3、V2）を分けて確認できます。下の「照合中の補助メモ」は正式引用ではなく、本文の根拠には用いません。本文中の <span class="ref-cite" style="color:var(--accent);font-weight:600;">[U17]</span> 等をクリックすると、状態・確認日を含む詳細が表示されます。
         </div>
 
         <div id="references-list">
@@ -2945,29 +2947,22 @@
             <li><span class="ref-id">U4</span> Barratt A, et al. (EBM Working Group). Users' guides XVII. Screening. JAMA 1999;281(21):2029-2034.</li>
             <li><span class="ref-id">U5</span> Guyatt GH, Sinclair J, Cook DJ, Glasziou P. Users' guides XVI. How to use a treatment recommendation. JAMA 1999;281(19):1836-1843.</li>
             <li><span class="ref-id">U6</span> McAlister FA, Straus SE, Guyatt GH, Haynes RB. Users' guides XX. Integrating research evidence with the care of the individual patient. JAMA 2000;283(21):2829-2836.</li>
-            <li><span class="ref-id">U7</span> Attia J, et al. (incl. Guyatt). How to use an article about genetic association: B & C. JAMA 2009;301(2):191-197 / 301(3):304-308.</li>
-            <li><span class="ref-id">U8</span> Fan E, Laupacis A, Pronovost PJ, Guyatt GH, Needham DM. How to use an article about quality improvement. JAMA 2010;304(20):2279-2287.</li>
-            <li><span class="ref-id">U9</span> Mills EJ, et al. (incl. Guyatt). How to use an article reporting a multiple treatment comparison meta-analysis. JAMA 2012;308(12):1246-1253.</li>
-            <li><span class="ref-id">U10</span> Mulla SM, Scott IA, Jackevicius CA, You JJ, Guyatt GH. How to use a noninferiority trial. JAMA 2012;308(24):2605-2611.</li>
             <li><span class="ref-id">U11</span> Andrews J, Guyatt G, Oxman AD, et al. GRADE guidelines: 14. Going from evidence to recommendations. J Clin Epidemiol 2013;66(7):719-725.</li>
-            <li><span class="ref-id">U12</span> Murad MH, Montori VM, Ioannidis JPA, et al. (incl. Guyatt). How to read a systematic review and meta-analysis and apply the results to patient care: users' guides. JAMA 2014;312(2):171-179. <a href="https://pubmed.ncbi.nlm.nih.gov/25005654/" target="_blank">PMID 25005654</a></li>
-            <li><span class="ref-id">U13</span> Neumann I, Santesso N, Akl EA, et al. (incl. Guyatt). A guide for health professionals to interpret and use recommendations in guidelines developed with the GRADE approach. J Clin Epidemiol 2016;72:45-55. <a href="https://pubmed.ncbi.nlm.nih.gov/26772609/" target="_blank">PMID 26772609</a></li>
+            <li><span class="ref-id">U12</span> Murad MH, Montori VM, Ioannidis JPA, et al. (incl. Guyatt). How to read a systematic review and meta-analysis and apply the results to patient care: users' guides. JAMA 2014;312(2):171-179. <a href="https://pubmed.ncbi.nlm.nih.gov/25005654/" target="_blank" rel="noopener noreferrer">PMID 25005654</a></li>
+            <li><span class="ref-id">U13</span> Neumann I, Santesso N, Akl EA, et al. (incl. Guyatt). A guide for health professionals to interpret and use recommendations in guidelines developed with the GRADE approach. J Clin Epidemiol 2016;72:45-55. <a href="https://pubmed.ncbi.nlm.nih.gov/26772609/" target="_blank" rel="noopener noreferrer">PMID 26772609</a></li>
             <li><span class="ref-id">U14</span> Agoritsas T, et al. (incl. Guyatt). UpToDate adherence to GRADE criteria for strong recommendations. BMJ Open 2017;7(11):e018593.</li>
             <li><span class="ref-id">U15</span> Liu Y, Chen PC, Krause J, Peng L. How to read articles that use machine learning. JAMA 2019;322(18):1806-1816.</li>
-            <li><span class="ref-id">U16</span> Brignardello-Petersen R, Carrasco-Labra A, Guyatt GH. How to Interpret and Use a Clinical Practice Guideline or Recommendation. JAMA 2021;326(15):1516-1523. <a href="https://pubmed.ncbi.nlm.nih.gov/34665198/" target="_blank">PMID 34665198</a></li>
-            <li><span class="ref-id">U17</span> Lima JP, Mirza RD, Guyatt GH. How to recognize a trustworthy clinical practice guideline. J Anesth Analg Crit Care 2023;3:9. <a href="https://doi.org/10.1186/s44158-023-00094-7" target="_blank">DOI</a></li>
+            <li><span class="ref-id">U16</span> Brignardello-Petersen R, Carrasco-Labra A, Guyatt GH. How to Interpret and Use a Clinical Practice Guideline or Recommendation. JAMA 2021;326(15):1516-1523. <a href="https://pubmed.ncbi.nlm.nih.gov/34665198/" target="_blank" rel="noopener noreferrer">PMID 34665198</a></li>
+            <li><span class="ref-id">U17</span> Lima JP, Mirza RD, Guyatt GH. How to recognize a trustworthy clinical practice guideline. J Anesth Analg Crit Care 2023;3:9. <a href="https://doi.org/10.1186/s44158-023-00094-7" target="_blank" rel="noopener noreferrer">DOI</a></li>
             <li><span class="ref-id">U18</span> Guyatt G, Rennie D, Meade MO, Cook DJ (eds.). Users' Guides to the Medical Literature: A Manual for Evidence-Based Clinical Practice, 3rd ed. McGraw-Hill Education; 2015.</li>
           </ul>
 
-          <div class="ref-category">B. 閾値・MID関連</div>
+          <div class="ref-category">B. 閾値・MID関連（照合済み）</div>
           <ul class="ref-list">
-            <li><span class="ref-id">M1</span> Jaeschke R, Singer J, Guyatt GH. Measurement of health status. Ascertaining the minimal clinically important difference. Control Clin Trials 1989;10(4):407-415. <em>（MCID原典）</em></li>
-            <li><span class="ref-id">M2</span> GRADE Guidance 42（閾値設定）. J Clin Epidemiol 2024.</li>
-            <li><span class="ref-id">M3</span> Yao X, et al. GRADE note 6. 2025.</li>
-            <li><span class="ref-id">M4</span> 2024閾値論文群. J Clin Epidemiol.</li>
-            <li><span class="ref-id">M5</span> 絶対リスク差のための論文. 2023.</li>
-            <li><span class="ref-id">M6</span> 些細・中・大の閾値を使っているCPG例. 2025.</li>
-            <li><span class="ref-id">M7</span> Evaluating the credibility of anchor based estimates of minimal important differences for patient reported outcomes. BMJ Medicine 2025.</li>
+            <li><span class="ref-id">M1</span> Jaeschke R, Singer J, Guyatt GH. Measurement of health status: Ascertaining the minimal clinically important difference. <em>Controlled Clinical Trials</em> 1989;10(4):407-415. <a href="https://doi.org/10.1016/0197-2456(89)90005-6" target="_blank" rel="noopener noreferrer">DOI</a> <em>（MCID原典）</em></li>
+            <li><span class="ref-id">M2</span> Wiercioch W, et al. GRADE Guidance: Using Thresholds for Judgments on Health Benefits and Harms in Decision Making (GRADE Guidance 42). <em>Ann Intern Med</em>. 2025;178(11):1644-1652. <a href="https://pubmed.ncbi.nlm.nih.gov/41052449/" target="_blank" rel="noopener noreferrer">PMID 41052449</a></li>
+            <li><span class="ref-id">M7</span> Devji T, Carrasco-Labra A, Qasim A, et al. Evaluating the credibility of anchor based estimates of minimal important differences for patient reported outcomes: instrument development and reliability study. <em>BMJ</em>. 2020;369:m1714. <a href="https://doi.org/10.1136/bmj.m1714" target="_blank" rel="noopener noreferrer">DOI</a></li>
+            <li><span class="ref-id">M8</span> Zeng L, Hultcrantz M, Brignardello-Petersen R, et al. Rating certainty of evidence when the target threshold is a value-based threshold and the point estimate is close to that threshold. <em>J Clin Epidemiol</em>. 2026;197:112344. <a href="https://pubmed.ncbi.nlm.nih.gov/42208821/" target="_blank" rel="noopener noreferrer">PMID 42208821</a></li>
           </ul>
 
           <div class="ref-category">C. GRADE方法論拡張</div>
@@ -2975,35 +2970,57 @@
             <li><span class="ref-id">G1</span> Djulbegovic B, Guyatt GH. Progress in evidence-based medicine: a quarter century on. Lancet 2017;390(10092):415-423.</li>
             <li><span class="ref-id">G2</span> Cuello-Garcia CA, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/41285282/" target="_blank" rel="noopener noreferrer">GRADE Guidance 44: Strategies to enhance the utilization of randomized and non-randomized studies in evidence syntheses of health interventions.</a> J Clin Epidemiol. 2026;190:112086.</li>
             <li><span class="ref-id">G3</span> Lewin S, et al. Applying GRADE-CERQual to qualitative evidence synthesis findings. Implement Sci 2018;13(Suppl 1):2.</li>
-            <li><span class="ref-id">G4</span> Guyatt GH, et al. Guideline panels should seldom make good practice statements. J Clin Epidemiol 2015.</li>
+            <li><span class="ref-id">G4</span> Guyatt GH, Schünemann HJ, Djulbegovic B, Akl EA. Guideline panels should seldom make good practice statements: guidance from the GRADE Working Group. <em>J Clin Epidemiol</em>. 2016;80:3-7. <a href="https://pubmed.ncbi.nlm.nih.gov/27452192/" target="_blank" rel="noopener noreferrer">PMID 27452192</a></li>
             <li><span class="ref-id">G5</span> Piggott T, et al. Standardized wording to improve efficiency and clarity of GRADE EtD frameworks in health guidelines. J Clin Epidemiol 2022;146:106-122.</li>
             <li><span class="ref-id">G6</span> Murad MH, et al. Rating the certainty in evidence in the absence of a single estimate of effect. Evid Based Med 2017;22(3):85-87.</li>
-            <li><span class="ref-id">G7</span> 観察研究ROB — ROBINS-E / ROBINS-I / ネットベネフィット 2019 / GRADE Guidance 45 NAM. 各種.</li>
           </ul>
 
           <div class="ref-category">D. SR品質ツール</div>
           <ul class="ref-list">
-            <li><span class="ref-id">T1</span> Shea BJ, Reeves BC, Wells G, et al. AMSTAR 2: a critical appraisal tool for systematic reviews. BMJ 2017;358:j4008. <a href="https://amstar.ca/" target="_blank">amstar.ca</a></li>
-            <li><span class="ref-id">T2</span> Page MJ, McKenzie JE, Bossuyt PM, et al. The PRISMA 2020 statement. BMJ 2021;372:n71. <a href="http://www.prisma-statement.org/" target="_blank">prisma-statement.org</a></li>
+            <li><span class="ref-id">T1</span> Shea BJ, Reeves BC, Wells G, et al. AMSTAR 2: a critical appraisal tool for systematic reviews. BMJ 2017;358:j4008. <a href="https://amstar.ca/" target="_blank" rel="noopener noreferrer">amstar.ca</a></li>
+            <li><span class="ref-id">T2</span> Page MJ, McKenzie JE, Bossuyt PM, et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. <em>BMJ</em>. 2021;372:n71. <a href="https://www.bmj.com/content/372/bmj.n71" target="_blank" rel="noopener noreferrer">一次資料</a></li>
+            <li><span class="ref-id">T3</span> Whiting P, Savović J, Higgins JPT, et al. ROBIS: A new tool to assess risk of bias in systematic reviews was developed. <em>J Clin Epidemiol</em>. 2016;69:225-234. <a href="https://doi.org/10.1016/j.jclinepi.2015.06.005" target="_blank" rel="noopener noreferrer">DOI</a></li>
           </ul>
 
-          <div class="ref-category">E. CPG品質の実例</div>
+          <div class="ref-category">E. 研究別Risk of Biasツール</div>
+          <ul class="ref-list">
+            <li><span class="ref-id">R1</span> Sterne JAC, Savović J, Page MJ, et al. RoB 2: a revised tool for assessing risk of bias in randomised trials. <em>BMJ</em>. 2019;366:l4898. <a href="https://www.bmj.com/content/366/bmj.l4898" target="_blank" rel="noopener noreferrer">一次資料</a></li>
+            <li><span class="ref-id">R2</span> Sterne JAC, Hernán MA, Reeves BC, et al. ROBINS-I: a tool for assessing risk of bias in non-randomised studies of interventions. <em>BMJ</em>. 2016;355:i4919. <a href="https://www.bmj.com/content/355/bmj.i4919" target="_blank" rel="noopener noreferrer">一次資料</a></li>
+            <li><span class="ref-id">R3</span> Higgins JPT, Morgan RL, Rooney AA, et al. A tool to assess risk of bias in non-randomized follow-up studies of exposure effects (ROBINS-E). <em>Environ Int</em>. 2024;186:108602. <a href="https://pubmed.ncbi.nlm.nih.gov/38555664/" target="_blank" rel="noopener noreferrer">PMID 38555664</a></li>
+          </ul>
+
+          <div class="ref-category">F. CPG品質の実例</div>
           <ul class="ref-list">
             <li><span class="ref-id">C1</span> ＝ U17 Lima-Mirza-Guyatt 2023（再掲）</li>
-            <li><span class="ref-id">C2</span> NCCNガイドラインの批判的吟味 — NCCNのEvidence Blocksに関する分析</li>
             <li><span class="ref-id">C3</span> Institute of Medicine. Clinical Practice Guidelines We Can Trust. National Academies Press; 2011.</li>
-            <li><span class="ref-id">C4</span> 日本のCPG問題 — 日本国内CPGの方法論的課題の分析</li>
           </ul>
 
-          <div class="ref-category">F. 価値観・共同意思決定</div>
+          <div class="ref-category">G. 価値観・共同意思決定</div>
           <ul class="ref-list">
-            <li><span class="ref-id">V1</span> 患者の価値観と嗜好を利用（日英両版） — EtDへの組込み方法</li>
-            <li><span class="ref-id">V2</span> Patient values and preferences in antithrombotic therapy: SR. ACCP Guidelines（LinkedIn #45で紹介）</li>
+            <li><span class="ref-id">V2</span> MacLean S, Mulla S, Akl EA, et al. Patient values and preferences in decision making for antithrombotic therapy: a systematic review. <em>Chest</em>. 2012;141(2 Suppl):e1S-e23S. <a href="https://pubmed.ncbi.nlm.nih.gov/22315262/" target="_blank" rel="noopener noreferrer">PMID 22315262</a></li>
           </ul>
 
-          <div class="ref-category">G. 継続更新ソース</div>
+          <details class="ref-pending">
+            <summary>照合中の補助メモ（正式引用ではありません）</summary>
+            <ul class="ref-list">
+              <li><span class="ref-id">U7</span> Attia J, et al. (incl. Guyatt). How to use an article about genetic association: B & C. JAMA 2009;301(2):191-197 / 301(3):304-308.</li>
+              <li><span class="ref-id">U8</span> Fan E, Laupacis A, Pronovost PJ, Guyatt GH, Needham DM. How to use an article about quality improvement. JAMA 2010;304(20):2279-2287.</li>
+              <li><span class="ref-id">U9</span> Mills EJ, et al. (incl. Guyatt). How to use an article reporting a multiple treatment comparison meta-analysis. JAMA 2012;308(12):1246-1253.</li>
+              <li><span class="ref-id">U10</span> Mulla SM, Scott IA, Jackevicius CA, You JJ, Guyatt GH. How to use a noninferiority trial. JAMA 2012;308(24):2605-2611.</li>
+              <li><span class="ref-id">M3</span> Yao X, et al. GRADE note 6. 2025. 個別の完全書誌を照合中。</li>
+              <li><span class="ref-id">M4</span> 2024閾値論文群。論文群という仮置きのため、個別文献へ分割・照合中。</li>
+              <li><span class="ref-id">M5</span> 絶対リスク差のための論文 2023。本文の仮置き引用キーは解除済み。</li>
+              <li><span class="ref-id">M6</span> 些細・中・大の閾値を使っているCPG例 2025。個別CPGを照合中。</li>
+              <li><span class="ref-id">G7</span> 観察研究RoB・ネットベネフィット・関連ガイダンスの旧まとめ。RoBツールはR1-R3へ分離済み。</li>
+              <li><span class="ref-id">C2</span> NCCNガイドラインの批判的吟味。対象の完全書誌を照合中。</li>
+              <li><span class="ref-id">C4</span> 日本のCPG問題。対象・著者・出典を個別に照合中。</li>
+              <li><span class="ref-id">V1</span> 患者の価値観と嗜好を利用（日英両版）。原著または公式ガイダンスを照合中。</li>
+            </ul>
+          </details>
+
+          <div class="ref-category">H. 継続更新の補助導線（正式引用ではない）</div>
           <ul class="ref-list">
-            <li><span class="ref-id">L1</span> Gordon Guyatt's LinkedIn activity. <a href="https://www.linkedin.com/in/guyattgh/recent-activity/all/" target="_blank">linkedin.com/in/guyattgh/recent-activity/all/</a></li>
+            <li><span class="ref-id">L1</span> Gordon Guyatt's LinkedIn activity. 査読論文と同列に扱わず、原著へ進む補助導線として用います。 <a href="https://www.linkedin.com/in/guyattgh/recent-activity/all/" target="_blank" rel="noopener noreferrer">LinkedInを開く</a></li>
           </ul>
         </div>
 
@@ -3058,6 +3075,11 @@
                 </a>
               </div>
             </div>
+          </div>
+          <div class="primer-index-callout">
+            <strong>途中で「次に何を読めばよいか」迷ったら</strong>
+            <p>章番号ではなく、いま確認したい作業や知りたいテーマから、必要な本文・詳細解説・原著ガイドへ進めます。</p>
+            <a href="learning-index.html">索引：論文を読む順番／トピック・Guyattから探す</a>
           </div>
         </div>
 
@@ -3856,7 +3878,7 @@
 
       <div class="jama-page-head">
         <span class="jph-badge">📘 Chapter 21 / 25 ｜ JAMA UG Ch22</span>
-        <div class="jph-title">JAMAでのSR/MA記載内容（重複）</div>
+        <div class="jph-title">SR／MAの方法を監査する：JAMA Users' Guidesの質問</div>
         <span class="jph-meta">⏱ 約 12 分</span>
       </div>
 
@@ -4508,7 +4530,7 @@
 <script src="coreGRADE_utils.js?v=7.2"></script>
 <script src="script.js?v=8.0"></script>
 <script src="js/glossary.js?v=7.2"></script>
-<script src="js/references.js?v=7.2"></script>
+<script src="js/references.js?v=8.0"></script>
 <script src="js/mid-explorer.js?v=7.2"></script>
 <script src="js/trustworthy-check.js?v=7.2"></script>
 <script src="js/amstar2.js?v=7.2"></script>
