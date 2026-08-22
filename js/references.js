@@ -28,7 +28,7 @@
           node.parentElement.tagName === 'STYLE' ||
           node.parentElement.classList.contains('ref-cite')
         )) return NodeFilter.FILTER_REJECT;
-        return /\[([UMGTCVL]\d+)\]/.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+        return /\[([UMGTCRVL]\d+)\]/.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
       }
     });
     const targets = [];
@@ -36,10 +36,11 @@
     while((n = walker.nextNode())) targets.push(n);
     targets.forEach(textNode => {
       const frag = document.createDocumentFragment();
-      const parts = textNode.nodeValue.split(/(\[[UMGTCVL]\d+\])/g);
+      const parts = textNode.nodeValue.split(/(\[[UMGTCRVL]\d+\])/g);
       parts.forEach(part => {
-        const m = part.match(/^\[([UMGTCVL]\d+)\]$/);
-        if (m){
+        const m = part.match(/^\[([UMGTCRVL]\d+)\]$/);
+        const ref = m && refsData && refsData.references ? refsData.references[m[1]] : null;
+        if (m && ref && ref.verificationStatus === 'verified'){
           const span = document.createElement('span');
           span.className = 'ref-cite';
           span.setAttribute('data-ref', m[1]);
@@ -59,7 +60,7 @@
     const id = e.currentTarget.getAttribute('data-ref');
     if (!refsData) return;
     const ref = refsData.references[id];
-    if (!ref) return;
+    if (!ref || ref.verificationStatus !== 'verified') return;
     showPopover(e.currentTarget, id, ref);
   }
 

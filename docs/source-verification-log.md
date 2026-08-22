@@ -65,3 +65,18 @@ The three linked learning pages were restructured on 2026-08-22 without removing
 3. Propensity-score balance is described as a diagnostic for measured covariates, not proof that unmeasured confounding disappeared.
 4. A surrogate endpoint, response rate, PFS result, within-group PRO change, or a narrow CI is not automatically translated into patient-important benefit.
 5. The target-trial methods paper is displayed separately from TARGET reporting guidance and ICH M14 final guidance, so their roles are not conflated.
+## 2026-08-22: Reader reorganization and new methodology pages
+
+| Topic | Primary or official source | Source status shown to readers | Last verified |
+| --- | --- | --- | --- |
+| Core GRADE 1-7 | BMJ Core GRADE series: https://www.bmj.com/content/389/bmj-2024-081903 through https://www.bmj.com/content/389/bmj-2024-083867 | Peer-reviewed methodology series | 2026-08-22 |
+| Thresholds and MID | Wiercioch et al., GRADE Guidance 42, Ann Intern Med 2025;178:1644-1652, DOI 10.7326/ANNALS-24-02013; Devji et al., BMJ 2020;369:m1714 | Peer-reviewed methods and appraisal tool | 2026-08-22 |
+| Value-based threshold near point estimate | Zeng et al., J Clin Epidemiol 2026;197:112344, DOI 10.1016/j.jclinepi.2026.112344, PMID 42208821 | Peer-reviewed emerging method | 2026-08-22 |
+| NMA conclusions | Brignardello-Petersen et al., BMJ 2020;371:m3900 | GRADE official guidance | 2026-08-22 |
+| NMA imprecision | Brignardello-Petersen et al., J Clin Epidemiol 2019;111:47-56, DOI 10.1016/j.jclinepi.2019.04.011 | Peer-reviewed methods | 2026-08-22 |
+| RevMan defaults | Cochrane RevMan documentation | Official software documentation | 2026-08-22 |
+| RCT plus NRSI synthesis | Cuello-Garcia et al., GRADE Guidance 44, J Clin Epidemiol 2026;190:112086, PMID 41285282 | Official GRADE guidance | 2026-08-22 |
+| Risk of bias | RoB 2 (BMJ 2019;366:l4898), ROBINS-I (BMJ 2016;355:i4919), ROBINS-E (Environ Int 2024;186:108602) | Peer-reviewed appraisal tools | 2026-08-22 |
+| SR reporting and appraisal | PRISMA 2020 (BMJ 2021;372:n71), AMSTAR 2 (BMJ 2017;358:j4008), ROBIS (J Clin Epidemiol 2016;69:225-234) | Reporting guidance and appraisal tools, deliberately distinguished | 2026-08-22 |
+
+Verified records are the only records made interactive by js/references.js. Records marked incomplete remain visible as non-formal supplementary notes until a complete source record is available.

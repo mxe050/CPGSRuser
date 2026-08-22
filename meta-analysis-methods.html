@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="メタ解析の数字・仮定・限界を、estimand、異質性、NMA、GRADEまで一続きに読むためのCPGSR Reader詳細学習ページ。">
+  <meta name="theme-color" content="#124b65">
+  <meta property="og:title" content="メタ解析の読み方：方法論とGRADE | CPGSR Reader">
+  <meta property="og:description" content="統合推定値を、数式、仮定、破綻点、読み手のチェック、GRADEとの接続から読む詳細ページです。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://mxe050.github.io/CPGSRuser/meta-analysis-methods.html">
+  <title>メタ解析の読み方：方法論とGRADE | CPGSR Reader</title>
+  <link rel="stylesheet" href="site-shell.css?v=8.0">
+  <link rel="stylesheet" href="methods-library.css?v=1.0">
+</head>
+<body class="methods-page">
+  <a class="cpgsr-skip-link" href="#main-content">本文へ移動</a>
+  <header class="cpgsr-global-header">
+    <div class="cpgsr-header-inner">
+      <div class="cpgsr-header-context">
+        <a class="cpgsr-back-link" href="index.html#page-0">学習目次へ戻る</a>
+        <nav class="cpgsr-breadcrumb" aria-label="パンくず">
+          <a href="index.html#page-0">CPGSR Reader</a>
+          <span class="cpgsr-breadcrumb-separator" aria-hidden="true">/</span>
+          <a href="learning-index.html?view=topics&amp;topic=meta-analysis#topics">学習索引</a>
+          <span class="cpgsr-breadcrumb-separator" aria-hidden="true">/</span>
+          <span class="cpgsr-current-title" aria-current="page">メタ解析の読み方</span>
+        </nav>
+      </div>
+      <a class="cpgsr-brand" href="index.html#page-0" aria-label="CPGSR Readerの最初のページへ戻る"><span class="cpgsr-brand-strong">CPGSR</span> Reader</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="methods-hero" aria-labelledby="meta-title">
+      <div class="methods-wrap">
+        <p class="methods-kicker">ADVANCED LEARNING / META-ANALYSIS</p>
+        <h1 id="meta-title">メタ解析の読み方：方法論とGRADE</h1>
+        <p class="methods-lead">メタ解析は、複数研究の結果を一つの数字に変えるだけの手法ではありません。<strong>同じ臨床質問・同じestimandを統合しているか、どの仮定に依存するか、臨床判断を変える不確かさが残るか</strong>を、統合推定値と同時に読みます。</p>
+        <div class="methods-status-row" aria-label="資料の扱い">
+          <span class="methods-chip">最終確認日：2026-08-22</span>
+          <span class="methods-chip">19モジュール</span>
+          <span class="methods-chip">公式資料・査読済み方法論を区別</span>
+        </div>
+        <div class="methods-crosslinks" aria-label="関連ページ">
+          <a href="learning-index.html?view=topics&amp;topic=meta-analysis#topics">学習索引のメタ分析入口へ</a>
+          <a href="advanced-statistics.html">統計学・因果推論を詳しく読む</a>
+          <a href="non-rct-observational-studies.html">非RCT・観察研究を読む</a>
+          <a href="oncology-outcomes.html">がんアウトカムを患者重要性から読む</a>
+          <a href="guyatt-methodology-atlas.html#study-claims">Guyatt方法論の原著を読む</a>
+          <a href="index.html#page-26">JAMA SRの要点へ</a>
+          <a href="index.html#page-28">JAMA NMAの要点へ</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="methods-wrap methods-orientation" aria-labelledby="meta-use-title">
+      <p class="methods-eyebrow">読み方の順序</p>
+      <h2 id="meta-use-title">モデル名より前に、比較可能な問いかを確認する</h2>
+      <p>forest plotのダイヤモンドやI<sup>2</sup>だけでは、統合結果を判断できません。まず対象、介入、比較、アウトカム、時間軸、intercurrent eventへの扱いを確認し、各研究が同じestimandに近いかを見ます。その後に重み、異質性、モデル、CI、予測区間、GRADEの順で検討します。</p>
+      <nav class="methods-jump" aria-label="モジュール一覧">
+        <h3>19のモジュール</h3>
+        <ul class="methods-jump-list">
+          <li><a href="#module-1">1. estimand</a></li><li><a href="#module-2">2. 逆分散重み</a></li><li><a href="#module-3">3. 固定・ランダム</a></li><li><a href="#module-4">4. 異質性</a></li><li><a href="#module-5">5. τ²推定</a></li><li><a href="#module-6">6. CIと推論</a></li><li><a href="#module-7">7. 予測区間</a></li><li><a href="#module-8">8. 少数研究</a></li><li><a href="#module-9">9. 稀なイベント</a></li><li><a href="#module-10">10. 依存効果量</a></li><li><a href="#module-11">11. 生存時間</a></li><li><a href="#module-12">12. IPD</a></li><li><a href="#module-13">13. 診断・用量</a></li><li><a href="#module-14">14. NMA</a></li><li><a href="#module-15">15. 成分NMA</a></li><li><a href="#module-16">16. estimand対応統合</a></li><li><a href="#module-17">17. RCTとNRSI</a></li><li><a href="#module-18">18. Living evidence</a></li><li><a href="#module-19">19. GRADE</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <div class="methods-wrap methods-content">
+      <section class="methods-section" aria-labelledby="foundation-title">
+        <header class="methods-section-heading">
+          <p class="methods-eyebrow">Part 1. 統合する問いを定める</p>
+          <h2 id="foundation-title" class="methods-section-title">推定値を足し合わせる前の確認</h2>
+          <p>統計モデルは、比較不可能な研究を比較可能にしてはくれません。メタ解析の質は、統合前の問い・選択・データ化の透明性から決まります。</p>
+        </header>
+        <div class="method-modules">
+          <article class="method-module" id="module-1">
+            <div class="method-module-header"><span class="method-number">MODULE 1</span><span class="methods-status final">公式ガイダンス</span></div>
+            <h3>estimand、効果指標、時間軸をそろえる</h3>
+            <p>アウトカム名が同じでも、追跡時点、治療中止・救済治療・死亡の扱い、解析集団が違えば、推定している効果は異なります。メタ解析の前に、各研究がどの臨床質問に答えているかを表にします。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>指定した集団で、比較する治療戦略の、指定アウトカム・時間点・intercurrent eventへの方針を伴う因果または記述的効果。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">estimand = population + treatment conditions + variable + intercurrent-event strategy + summary measure</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>統合対象が、臨床的にも統計的にも十分近い問いを扱い、同じ尺度または妥当な変換で比較できること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>ITTとper-protocol、異なる追跡時点、異なる複合アウトカムを、一つの「効果」として無説明に統合すること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>PICO、時点、欠測・中止の扱いが研究ごとに表で見えるか。効果量の定義は同一か。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>プロトコルにestimandと許容範囲、統合しない基準を記す。ずれは非直接性・不一致性、時にはRisk of Biasとして評価します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">ICH最終版</span><p>ICH E9(R1), Addendum on Estimands and Sensitivity Analysis in Clinical Trials. 2019.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf" target="_blank" rel="noopener">公式資料を開く</a><a href="advanced-statistics.html#estimand">本サイトのestimand解説</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-2">
+            <div class="method-module-header"><span class="method-number">MODULE 2</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>研究内の不確かさと逆分散重み</h3>
+            <p>多くの連続・二値・対数効果量の統合では、より精密な研究ほど大きな重みを持ちます。ただし、重みが大きいことは、Risk of Biasが小さいことや患者に重要であることを意味しません。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>各研究の効果量を、研究内の推定誤差を考慮して平均した統合効果。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">wᵢ = 1 / SE(θᵢ)²&#10;θ̂ = Σ(wᵢθᵢ) / Σwᵢ</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>効果量と標準誤差が妥当に推定され、各入力が独立で、研究内分散が意味を持つこと。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>同じ参加者を重複して数える、多群試験の共有対照を二重計上する、未調整と調整済み効果を混在させること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>forest plotの重みが、症例数、イベント数、SEと整合するか。大規模だが高RoBの研究が支配していないか。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>入力効果量、SE・CIからの導出、尺度変換、重複回避を示す。重みだけでcertaintyを決めず、RoBと不精確さを別途評価します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">Cochrane Handbook</span><p>Higgins JPT, Thomas J, Chandler J, et al, eds. <em>Cochrane Handbook for Systematic Reviews of Interventions</em>. 現行版。</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://training.cochrane.org/handbook/current" target="_blank" rel="noopener">公式ハンドブックを開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-3">
+            <div class="method-module-header"><span class="method-number">MODULE 3</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>固定効果とランダム効果は、正解の二択ではない</h3>
+            <p>固定効果モデルは共通の真の効果を、ランダム効果モデルは研究間に分布する効果を想定します。どちらを選んでも、臨床的に異なる研究を無条件に統合する根拠にはなりません。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>固定効果は共通効果、ランダム効果は分布の平均効果。読者は推定対象の違いを区別します。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">fixed: wᵢ = 1 / vᵢ&#10;random: wᵢ* = 1 / (vᵢ + τ²)</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>固定効果は共通効果、ランダム効果は効果分布とその推定可能性を仮定します。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>「random effectsだから異質性は解決した」「固定効果とランダム効果で有意なら採用」と読むこと。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>選んだモデル、事前理由、τ²推定法、少数研究でのCI法を確認する。臨床的な相違を探索しているか。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>モデル選択、効果量の分布、感度分析を報告。不一致性では研究間差の理由と、患者への影響を評価します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">公式・現行ソフトウェア資料</span><p>RevManでは新規のランダム効果分析でREMLがτ²の既定推定法です。モデル設定とCI法は解析ごとに確認します。</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://documentation.cochrane.org/revman-kb/pre-define-analyses-260702251.html" target="_blank" rel="noopener">RevMan公式文書を開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-4">
+            <div class="method-module-header"><span class="method-number">MODULE 4</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>Q、τ²、I<sup>2</sup>、H²を役割別に読む</h3>
+            <p>I<sup>2</sup>は異質性の唯一の判定器ではありません。研究数、研究内精度、効果尺度に依存し、固定の閾値でGRADEの不一致性や統合の可否を決めることはできません。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>研究間の観測差のうち、偶然誤差だけでは説明しにくい部分と、その絶対的なばらつき。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">Q = Σwᵢ(θᵢ − θ̂)²&#10;I² = max(0, (Q − df) / Q) × 100%&#10;H² = Q / df</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>Qの参照分布などの近似が妥当で、入力効果量の定義が比較可能であること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>「I<sup>2</sup> 50%を超えたから統合不能」「I<sup>2</sup>が低いから一貫」と固定カットオフだけで結論すること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>forest plot、効果の絶対差、方向、臨床・方法論的相違、τ²、予測区間を並べて見る。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>Q、df、I²、τ²と視覚化を報告。GRADEの不一致性は、差の大きさ・理由・意思決定への影響から判断します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status methods">査読済み方法論</span><p>Higgins JPT, Thompson SG. Quantifying heterogeneity in a meta-analysis. <em>Stat Med</em>. 2002;21:1539-1558. DOI: 10.1002/sim.1186.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://doi.org/10.1002/sim.1186" target="_blank" rel="noopener">一次資料を開く</a><a href="index.html#page-9">Ch9 不一致性へ</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-5">
+            <div class="method-module-header"><span class="method-number">MODULE 5</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>τ²の推定法は、ランダム効果の結論を変え得る</h3>
+            <p>DerSimonian-Laird、REML、Paule-Mandelなどのτ²推定法は同じ結果を保証しません。とくに研究数が少ないと、推定の不安定さが統合CIや予測区間に大きく影響します。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>ランダム効果モデルにおける、真の研究間分散τ²。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">Var(θᵢ) = vᵢ + τ²&#10;τ² estimator ∈ {DL, REML, Paule-Mandel, ...}</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>効果がある分布に従い、少数の研究からその分散を推定できるという近似。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>τ²の推定法を示さない、τ²=0を「異質性なし」と断定する、複数法での頑健性を確認しないこと。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>τ²推定法、ソフトウェア既定値、少数研究での感度分析、予測区間の変化を確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>τ²推定法とCI法を明記。推定法により臨床判断が変わるなら、不一致性・不精確さを慎重に扱います。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status methods">査読済み方法論</span><p>Veroniki AA, Jackson D, Viechtbauer W, et al. Methods to estimate the between-study variance and its uncertainty in meta-analysis. <em>Res Synth Methods</em>. 2016;7:55-79. DOI: 10.1002/jrsm.1164.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://doi.org/10.1002/jrsm.1164" target="_blank" rel="noopener">一次資料を開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-6">
+            <div class="method-module-header"><span class="method-number">MODULE 6</span><span class="methods-status final">公式資料</span></div>
+            <h3>Wald型CIとHKSJ型CIを、選択理由とともに読む</h3>
+            <p>ランダム効果のCIでは、τ²を既知とみなすWald型近似と、τ²推定の不確かさをより反映するHartung-Knapp-Sidik-Jonkman（HKSJ）型などがあります。どちらも万能ではありません。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>平均効果の不確かさ。研究間分散の推定誤差をどこまで取り込むかが焦点です。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">Wald CI: θ̂ ± z × SE(θ̂)&#10;HKSJ CI: θ̂ ± t(k−1) × adjusted SE(θ̂)</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>正規近似またはt分布近似が機能し、効果量・分散のモデル化が妥当であること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>研究数が少ないのに既定のWald CIだけで精密とみなすこと、HKSJを自動的に常に優越と扱うこと。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>CI法、研究数、τ²推定法、固定・ランダムの感度分析、閾値をまたぐかを確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>CI法を明記し、判断が変わる感度分析を示す。GRADEでは絶対効果CIと閾値の関係を見ます。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">RevMan公式文書</span><p>RevManの現行文書では、ランダム効果の要約CIはWald型が既定で、HKSJ型を選択できます。既定値を結果の正しさと同一視しません。</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://documentation.cochrane.org/revman-kb/pre-define-analyses-260702251.html" target="_blank" rel="noopener">RevMan公式文書を開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-7">
+            <div class="method-module-header"><span class="method-number">MODULE 7</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>予測区間：次の研究・場で起こり得る効果を見る</h3>
+            <p>統合平均のCIは平均効果の不確かさ、予測区間は新しい類似研究で予想される真の効果の範囲を表します。臨床的な異質性が重要なとき、予測区間は有用ですが、少数研究では非常に不安定です。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>新しい類似設定における真の効果の予測範囲。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">prediction interval ≈ θ̂ ± t(k−2) × √(SE(θ̂)² + τ²)</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>研究間効果の分布、τ²推定、将来の場が同じ分布に属すること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>予測区間を予後予測や個人のCIと誤解すること、τ²の不確かさを忘れること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>平均CIと予測区間の両方、絶対効果の尺度、利益・害の閾値をまたぐかを確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>計算法と尺度を報告。予測区間が重要な閾値をまたぐなら、不一致性評価を再検討します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status methods">査読済み方法論</span><p>IntHout J, Ioannidis JPA, Rovers MM, Goeman JJ. Plea for routinely presenting prediction intervals in meta-analysis. <em>BMJ Open</em>. 2016;6:e010247. DOI: 10.1136/bmjopen-2015-010247.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://bmjopen.bmj.com/content/6/7/e010247" target="_blank" rel="noopener">一次資料を開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-8">
+            <div class="method-module-header"><span class="method-number">MODULE 8</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>少数研究、小規模研究効果、影響診断</h3>
+            <p>研究が少ないと、異質性推定、funnel plot、メタ回帰、感度分析はいずれも不安定です。「検定で有意でない」ことは、問題がない証拠ではありません。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>特定の研究を除外しても結論が保たれるか、規模や選択に関連した差があり得るか。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">leave-one-out; influence diagnostics; contour-enhanced funnel plot&#10;small-study tests require adequate study count and compatible assumptions</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>研究数が十分で、規模以外の臨床・方法論的差を説明できること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>10研究未満のfunnel plotを「出版バイアスなし」と結論すること、除外後の有意性だけで感度分析を判定すること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>小規模研究が異なる患者・介入・時代を反映していないか。プロトコル、登録、未公表研究を探したか。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>欠測エビデンスの探索、分析の適用条件、影響の大きさを報告。GRADEの報告バイアスはfunnel plotだけで決めません。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">Cochrane Handbook</span><p>funnel plotの非対称性には、出版・選択報告バイアスだけでなく、真の異質性、方法論差、偶然など複数の説明があります。</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://training.cochrane.org/handbook/current/chapter-13" target="_blank" rel="noopener">Cochrane Handbookを開く</a><a href="index.html#page-12">Ch12 Dissemination biasへ</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-9">
+            <div class="method-module-header"><span class="method-number">MODULE 9</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>稀なイベントとゼロイベント：安易な補正を避ける</h3>
+            <p>片群または両群でイベントがゼロの研究では、OR/RRの計算や研究の扱いが方法により変わります。0.5の連続性補正、Peto法、Mantel-Haenszel、一般化線形混合モデルは、同じ状況で同じ答えを返しません。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>低頻度の二値アウトカムについての相対・絶対効果。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">2×2 table; continuity correction; MH / Peto / GLMM&#10;absolute risk requires event rate and follow-up context</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>選ぶモデルの希少性、群サイズ、効果の大きさ、ゼロ構造に関する条件が満たされること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>両群ゼロ研究を理由なく捨てる、同一の補正を全研究に当てる、稀な害を「差なし」と読むこと。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>ゼロイベント研究の扱い、補正、感度分析、絶対イベント数、追跡時間を確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>各セル、分析法、除外ルール、感度分析を報告。CIが重要な害を除外できるかで不精確さを評価します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status methods">査読済み方法論</span><p>Sweeting MJ, Sutton AJ, Lambert PC. What to add to nothing? Use and avoidance of continuity corrections in meta-analysis of sparse data. <em>Stat Med</em>. 2004;23:1351-1375. DOI: 10.1002/sim.1761.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://doi.org/10.1002/sim.1761" target="_blank" rel="noopener">一次資料を開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-10">
+            <div class="method-module-header"><span class="method-number">MODULE 10</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>多群試験、複数アウトカム、依存効果量を独立扱いしない</h3>
+            <p>共有対照を持つ多群試験、同じ参加者からの複数時点・複数アウトカム、クラスター研究では、効果量が相関します。独立とみなすと、同じ情報を複数回数えCIを過度に狭めます。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>相関した複数の比較・アウトカムを、情報の重複を避けながら統合した効果。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">Var(θ̂) uses covariance matrix Σ&#10;options: split shared control, multivariate model, multilevel model, RVE</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>相関構造を推定または保守的に扱えること。選んだ比較が臨床上意味を持つこと。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>同じ対照群を二重計上する、最も有利な時点・アウトカムだけを選ぶ、相関をゼロと仮定すること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>多群試験の扱い、時点選択、複数アウトカムの事前ルール、クラスター補正の有無を確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>依存構造の処理と感度分析を報告。選択的報告や過精密なCIはRoB・不精確さの評価に関わります。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">Cochrane Handbook</span><p>複数群試験や複数の比較を扱う際は、共有参加者の重複を避ける方法を事前に定めます。</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://training.cochrane.org/handbook/current/chapter-06" target="_blank" rel="noopener">Cochrane Handbookを開く</a></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="methods-section" aria-labelledby="advanced-title">
+        <header class="methods-section-heading">
+          <p class="methods-eyebrow">Part 2. 研究デザインに応じた統合</p>
+          <h2 id="advanced-title" class="methods-section-title">複雑なデータほど、問いと仮定を明示する</h2>
+          <p>生存時間、個票、診断・用量、ネットワーク、観察研究では、通常の二群比較をそのまま当てはめられないことがあります。</p>
+        </header>
+        <div class="method-modules">
+          <article class="method-module" id="module-11">
+            <div class="method-module-header"><span class="method-number">MODULE 11</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>生存時間・HR・非比例ハザードを読む</h3>
+            <p>HRは追跡中の瞬間的なhazardの比をモデルで要約したもので、リスク比や生存期間の比ではありません。比例ハザードが成り立たないとき、単一のHRは時間依存の効果を隠すことがあります。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>time-to-event効果。HR、指定時点の生存差、RMST差など、estimandに応じて異なります。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">HR(t) = h₁(t) / h₀(t)&#10;RMST(0,τ) = ∫₀^τ S(t) dt&#10;ΔRMST = RMST₁ − RMST₀</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>HR統合では比例ハザード・ログHRの近似など。RMSTでは指定τまでの追跡と打ち切りの仮定が重要です。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>HR 0.70を「死亡が30%減る」と翻訳する、曲線が交差しているのに単一HRだけで結論すること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>Kaplan-Meier曲線、リスク集合、追跡期間、PH検討、RMST・時点別絶対差の有無を確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>効果指標、時点、打ち切り、PHの検討を報告。患者重要アウトカムとしての生存・症状との非直接性も検討します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status methods">査読済み方法論</span><p>Tierney JF, Stewart LA, Ghersi D, Burdett S, Sydes MR. Practical methods for incorporating summary time-to-event data into meta-analysis. <em>Trials</em>. 2007;8:16. DOI: 10.1186/1745-6215-8-16.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://trialsjournal.biomedcentral.com/articles/10.1186/1745-6215-8-16" target="_blank" rel="noopener">一次資料を開く</a><a href="oncology-outcomes.html#onc2">がんアウトカムへ</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-12">
+            <div class="method-module-header"><span class="method-number">MODULE 12</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>IPDメタ解析：個票があっても、自動的に高品質ではない</h3>
+            <p>individual participant data（IPD）は、定義をそろえ、time-to-eventやサブグループを再解析できる強みがあります。一方で、得られない研究、データ品質、解析計画、研究間の差は依然として重要です。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>個票を用いて再定義・標準化した、参加者レベルまたは集団平均の効果。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">one-stage: hierarchical participant-level model&#10;two-stage: study-specific estimate → meta-analysis</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>IPDの受領・検証が適切で、提供されない研究による偏りを評価できること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>入手できた研究だけで結論する、データ清掃・再現性の説明がない、サブグループの生態学的バイアスを見落とすこと。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>招請研究と提供研究、データ検証、解析方式、欠けたIPDの扱い、集計データとの比較を確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>取得率、検証、解析計画、提供されない研究を報告。IPDという形式だけでRoBや報告バイアスを低くしません。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status reporting">報告ガイドライン</span><p>Stewart LA, Clarke M, Rovers M, et al. Preferred Reporting Items for Systematic Review and Meta-Analyses of individual participant data: the PRISMA-IPD Statement. <em>JAMA</em>. 2015;313:1657-1665. DOI: 10.1001/jama.2015.3656.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://doi.org/10.1001/jama.2015.3656" target="_blank" rel="noopener">一次資料を開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-13">
+            <div class="method-module-header"><span class="method-number">MODULE 13</span><span class="methods-status methods">査読済み方法論</span></div>
+            <h3>診断精度と用量反応は、通常のOR統合と別の問いを持つ</h3>
+            <p>診断研究では感度と特異度のトレードオフ、用量反応では曝露・用量の連続性と形状を扱います。一つの平均ORに変換すると、臨床で必要な閾値や曲線の情報を失うことがあります。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>診断では閾値ごとの感度・特異度、用量反応では用量と効果の関数。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">diagnostic: logit(Sensᵢ), logit(Specᵢ) with bivariate/HSROC model&#10;dose-response: f(dose), often spline/meta-regression</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>参照標準、対象スペクトラム、閾値・用量測定、形状のモデル化が妥当であること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>感度だけを高性能と読む、異なる判定閾値を一つに混ぜる、用量を線形と決め打ちすること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>閾値、参照標準、対象患者、曲線形状、推定範囲外への外挿を確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>閾値・参照標準・モデルを報告。診断は患者重要アウトカムへのつながり、用量は非直接性と不精確さを評価します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">Cochrane Handbook</span><p>Cochrane Handbookには診断精度レビューの統合方法が別に整理されています。通常の介入効果メタ解析の手順を流用しないでください。</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://training.cochrane.org/handbook-dta/current" target="_blank" rel="noopener">診断精度ハンドブックを開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-14">
+            <div class="method-module-header"><span class="method-number">MODULE 14</span><span class="methods-status final">GRADE公式ガイダンス</span></div>
+            <h3>ネットワークメタ解析：transitivity、consistency、順位の不確実性</h3>
+            <p>NMAは、直接比較と間接比較を結び、多数の介入を比較します。比較可能性（transitivity）と直接・間接の整合性（consistency/incoherence）が保たれなければ、ネットワーク全体の数字は臨床結論を支えません。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>共通のネットワーク内で、任意の二介入の相対効果とそのcertainty。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">d_AC = d_AB + d_BC (consistency relation)&#10;ranking (e.g., SUCRA) is not an effect estimate</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>effect modifierの分布が比較間で十分似ること、直接・間接証拠の整合性、ネットワーク連結性。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>順位だけで最良の治療を決める、直接比較と間接比較のずれを見ない、異なるdose・集団を混ぜること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>ネットワーク図、各比較の根拠、effect modifier、incoherence、絶対効果、certaintyを確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>transitivityの判断、consistency評価、各比較のcertaintyを報告。GRADEは直接・間接・ネットワーク推定を分けて評価します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">GRADE公式ガイダンス</span><p>Brignardello-Petersen R, Florez ID, Izcovich A, et al. GRADE approach to drawing conclusions from a network meta-analysis using a minimally contextualised framework. <em>BMJ</em>. 2020;371:m3900. DOI: 10.1136/bmj.m3900.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://www.bmj.com/content/371/bmj.m3900" target="_blank" rel="noopener">一次資料を開く</a><a href="index.html#page-28">JAMA NMAへ</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-15">
+            <div class="method-module-header"><span class="method-number">MODULE 15</span><span class="methods-status emerging">発展的手法</span></div>
+            <h3>成分ネットワークメタ解析：複合介入を成分に分ける前に</h3>
+            <p>component NMA（CNMA）は、複合介入の各成分の寄与を推定しようとする発展的手法です。加法性、交互作用、成分の定義、データの十分性への仮定が強く、通常NMAより慎重な解釈が必要です。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>複合介入を構成する成分の効果、または成分の組合せ効果。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">effect(combination) ≈ Σ component effects (+ interaction terms)</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>成分の定義が一貫し、加法性または指定した相互作用構造が妥当で、ネットワークに情報があること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>名前だけで成分が同じとみなす、複合介入の文脈を失う、データ不足を複雑なモデルで補うこと。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>成分表、交互作用の扱い、事前仮説、通常NMAとの整合性、予測の外挿を確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>成分の操作的定義、モデル、仮定、感度分析を報告。間接性・不精確さ・モデル依存性を明示します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status emerging">査読済み・発展的手法</span><p>Rücker G, Petropoulou M, Schwarzer G. Network meta-analysis of multicomponent interventions. <em>Biom J</em>. 2020;62:808-821. DOI: 10.1002/bimj.201800167.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://doi.org/10.1002/bimj.201800167" target="_blank" rel="noopener">一次資料を開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-16">
+            <div class="method-module-header"><span class="method-number">MODULE 16</span><span class="methods-status emerging">発展的手法</span></div>
+            <h3>estimand-aware synthesis：異なる治療後事象を隠さない</h3>
+            <p>近年の試験報告はestimandを明示する方向にあります。SRでは、intercurrent eventへの方針が違う結果を一つに統合する前に、それぞれがどの意思決定に答えるかを整理します。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>治療中止・救済治療・死亡などを明示した、意思決定に対応する統合効果。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">do not pool by outcome label alone;&#10;align intercurrent-event strategies before pooling</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>研究報告からestimandを復元でき、類似の方針をグループ化する根拠があること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>治療中止後を含む効果と、治療中のみの効果を「同じアウトカム」として平均すること。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>中止・救済・死亡・欠測を研究ごとにどう扱ったか。主解析と感度分析が同じ問いを保つか。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>estimand対応表、統合根拠、別統合・感度分析を報告。ずれは非直接性と不一致性の評価対象です。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">ICH最終版</span><p>ICH E9(R1)は試験のestimandを定義します。SRがその違いをどう扱うかは、明示的な方法論判断として示す必要があります。</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf" target="_blank" rel="noopener">公式資料を開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-17">
+            <div class="method-module-header"><span class="method-number">MODULE 17</span><span class="methods-status final">GRADE公式ガイダンス</span></div>
+            <h3>RCTと非RCT・観察研究を統合するとき</h3>
+            <p>観察研究を混ぜればエビデンスが増えるとは限りません。target trial、time zero、交絡制御、測定、選択、調整済み推定値の意味を検討し、RCTとNRSIを補完的に使う理由を先に定めます。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>同じ因果効果を狙うRCTとNRSIの証拠が、どの問いで補完し合うか。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">adjusted effect ≠ unadjusted event-count comparison&#10;target trial: eligibility + time zero + strategies + follow-up + causal contrast</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>比較可能性、未測定交絡の限界、各デザインのバイアス構造を評価できること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>生のイベント数を治療効果として統合する、単変量p値だけで調整因子を選ぶ、RCTとNRSIを同じRoBとみなすこと。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>因果質問、time zero、DAG/交絡因子、調整法、未測定交絡、RCTとの一致・不一致を確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>デザイン別の結果とRoB、統合の根拠を報告。GRADEではNRSIを機械的に格下げ・格上げしません。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">GRADE公式ガイダンス</span><p>Cuello-Garcia CA, et al. GRADE Guidance 44: Strategies to enhance the utilization of randomized and non-randomized studies in evidence syntheses of health interventions. <em>J Clin Epidemiol</em>. 2026;190:112086. DOI: 10.1016/j.jclinepi.2025.112086.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://pubmed.ncbi.nlm.nih.gov/41285282/" target="_blank" rel="noopener">PubMedを開く</a><a href="non-rct-observational-studies.html#13a">非RCTの詳細解説へ</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-18">
+            <div class="method-module-header"><span class="method-number">MODULE 18</span><span class="methods-status emerging">運用方法・継続更新</span></div>
+            <h3>Living SR/NMA：更新頻度ではなく、更新の判断規則を読む</h3>
+            <p>Living evidenceは「常に最新」と同義ではありません。監視する検索源、更新のきっかけ、データ抽出・RoB・統合・certaintyの再評価、いつ通常のSRへ戻すかを事前に示す必要があります。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>新しい重要な証拠が入った時点で更新される、現時点の統合効果とcertainty。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">living workflow = surveillance → screening → extraction/RoB → synthesis → certainty/update decision</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>継続的な監視資源、更新基準、重複・再版の管理、方法の安定性があること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>新規研究の追加だけを更新と呼ぶ、certaintyや推奨を再検討しない、検索停止の基準がないこと。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>最終検索日、更新履歴、変更が結論に与えた影響、次回更新条件を確認する。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>監視・更新ルール、版、変更履歴を報告。新規研究がthresholdやcertaintyを変えるかを再評価します。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status emerging">査読済み運用方法</span><p>Elliott JH, Synnot A, Turner T, et al. Living systematic review: 1. Introduction—the why, what, when, and how. <em>J Clin Epidemiol</em>. 2017;91:23-30. DOI: 10.1016/j.jclinepi.2017.08.010.</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://doi.org/10.1016/j.jclinepi.2017.08.010" target="_blank" rel="noopener">一次資料を開く</a></div></div>
+          </article>
+
+          <article class="method-module" id="module-19">
+            <div class="method-module-header"><span class="method-number">MODULE 19</span><span class="methods-status final">GRADE公式ガイダンス</span></div>
+            <h3>統合推定値からGRADE certaintyへ：5領域を一つのp値に畳まない</h3>
+            <p>メタ解析はGRADEの入力の一部です。Risk of Bias、不一致性、非直接性、不精確さ、報告バイアスをアウトカムごとに判断し、結果を推奨に進めるときはEtDの他の要素も追います。</p>
+            <div class="method-layout">
+              <section class="method-detail"><h4>何を推定するか</h4><p>指定したアウトカムと閾値に対する、効果の大きさへの確信。</p></section>
+              <section class="method-detail"><h4>指標・数式</h4><code class="method-formula">certainty target: effect relative to a threshold/range&#10;CI, absolute effect, thresholds, RoB, consistency, directness, missing evidence</code></section>
+              <section class="method-detail"><h4>仮定</h4><p>アウトカム、ベースラインリスク、臨床的閾値、各ドメインの判断根拠が明示されていること。</p></section>
+              <section class="method-detail"><h4>破綻ポイント</h4><p>I²、症例数、p値、研究デザインだけでoverall certaintyを決めること。certaintyと推奨強度を同じものと扱うこと。</p></section>
+              <section class="method-detail"><h4>読む側のチェック</h4><p>SoF表に絶対効果とCI、理由別のdowngrade/upgrade、target of certainty、EtDへの接続があるか。</p></section>
+              <section class="method-detail"><h4>最小報告・GRADEとの接続</h4><p>このモジュール自体がGRADEへの接続です。強い推奨を低certaintyで出すなら、例外の理由を追跡可能にします。</p></section>
+            </div>
+            <div class="methods-source-strip"><span class="methods-status final">Core GRADE</span><p>Core GRADE seriesは、効果の大きさ、閾値、certainty、推奨判断を一続きに扱います。最終版と訂正・更新を確認してください。</p><p class="methods-verified-date">最終確認日：2026-08-22</p><div class="methods-source-links"><a href="https://www.bmj.com/content/389/bmj-2024-081903" target="_blank" rel="noopener">Core GRADE 1</a><a href="https://www.bmj.com/content/389/bmj-2024-081904" target="_blank" rel="noopener">Core GRADE 2</a><a href="index.html#page-3">Ch3 certaintyへ</a><a href="index.html#page-4">Ch4 推奨へ</a></div></div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="methods-notice" aria-labelledby="meta-notice-title">
+        <h3 id="meta-notice-title">このページの限界と使い方</h3>
+        <p>ここで示す式は、推定対象と仮定を確認するための最小限の表現です。特定のレビューに適用するときは、プロトコル、解析計画、補遺、データ構造、ソフトウェアの実装と版を確認してください。高度な手法を使っていること自体は、より信頼できる結論の保証ではありません。</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="cpgsr-page-footer">
+    <a href="learning-index.html?view=topics&amp;topic=meta-analysis#topics">学習索引のメタ分析入口へ戻る</a>
+    <br>
+    <a href="index.html#page-0">CPGSR Readerの最初のページへ戻る</a>
+  </footer>
+</body>
+</html>
