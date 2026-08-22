@@ -1,177 +1,118 @@
-# CPGSR Reader — 診療ガイドライン／システマティックレビューの読み方
+# CPGSR Reader
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-success)](https://mxe050.github.io/CPGSRuser/)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-**臨床医・研修医・薬剤師・看護師・医学生のための、GRADE準拠の「診療ガイドライン／システマティックレビューの読み方」解説サイト**
+診療ガイドラインとシステマティックレビューを、作る側ではなく読む側の臨床家のために学ぶ静的サイトです。GRADEを土台に、論文・SR・CPGを患者の意思決定へつなげるときの確認順序を示します。
 
-📖 **公開URL**: https://mxe050.github.io/CPGSRuser/
+公開URL: https://mxe050.github.io/CPGSRuser/
 
----
+## この改訂の考え方
 
-## 対象と目的
+既存本文、図、表、動画、演習、外部リンク、旧ハッシュURLは保存します。改訂では、内容を短くする代わりに、安定したコンテンツID、索引、相互リンク、照合済み文献、詳細学習ページを追加します。
 
-本サイトは、診療ガイドライン（CPG）とシステマティックレビュー（SR）を**読んで診療に活かす側**の医療者を対象に、GRADEアプローチを土台とした「読み方・解釈・適用」を包括的に解説します。
+- 本編は、臨床家が最初に確認する入口です。
+- 独立した詳細ページは、因果仮定、数理、設計、例外、原著・現行方法論へ進む場所です。
+- 索引は、読む作業順とトピックの両方向から既存教材へ入るナビゲーション層です。
+- data/content-registry.json がコンテンツの正本です。表示番号、旧data-idx、旧page-N、安定contentId、hrefを分けて保持します。
 
-GRADEの「**作り手向け**」解説は、同じ作者の別アプリ [core-grade-guide-1](https://github.com/mxe050/core-grade-guide-1) にあります（本サイトはそれと独立・自己完結）。
+## 本編25章
 
----
+### Part I - EBM・GRADEの全体像
+- Ch1 EBMと診療ガイドライン・SRの読み方
+- Ch2 GRADEアプローチの概要
 
-## 全25章の構成
+### Part II - 推奨の理解
+- Ch3 エビデンスの確実性4段階の意味
+- Ch4 強い推奨と条件付き推奨、GPS、推奨表現
 
-### Part I — EBM・GRADEの全体像
-- Ch1: EBMと診療ガイドライン・SRの読み方
-- Ch2: GRADEアプローチの概要
+### Part III - SoF・効果・閾値
+- Ch5 SoF表・Evidence Profileの読み方
+- Ch6 相対効果と絶対効果
+- Ch7 閾値とMID
 
-### Part II — 推奨の理解
-- Ch3: エビデンスの確実性4段階の意味
-- Ch4: 強い推奨 vs 条件付き推奨 ＋ GPS・推奨表現
+### Part IV - 確実性が下がる5要因
+- Ch8 Risk of Bias
+- Ch9 不一致性
+- Ch10 非直接性
+- Ch11 不精確さ
+- Ch12 Dissemination bias
 
-### Part III — SoF・効果・閾値
-- Ch5: SoF表・Evidence Profileの読み方
-- Ch6: 相対効果と絶対効果
-- Ch7: **閾値とMID** — インタラクティブ早見表
+### Part V - 多様な研究デザインのSR
+- Ch13 非RCT・観察研究のSR
+- Ch14 定性的研究のSRとGRADE-CERQual
+- Ch15 単一推定値なし、GPS、ネットベネフィット
 
-### Part IV — 確実性が下がる5要因
-- Ch8: Risk of Bias（RCT＋観察研究ROBINS-E）
-- Ch9: 不一致性
-- Ch10: 非直接性
-- Ch11: 不精確さ（Imprecision）
-- Ch12: Dissemination bias
+### Part VI - CPG信頼性評価
+- Ch16 信頼できるCPGの6つの質問
+- Ch17 CPG品質の実例
+- Ch18 AMSTAR 2、PRISMA 2020、ROBIS
 
-### Part V — 多様な研究デザインのSR
-- Ch13: 非RCT・観察研究のSR＋詳細学習（観察研究・がんアウトカム）
-- Ch14: 定性的研究のSR — GRADE-CERQual
-- Ch15: 単一推定値なし／GPS／ネットベネフィット
+### Part VII - 診療現場で活かす
+- Ch19 推奨を目の前の患者にどう適用するか
+- Ch20 共同意思決定と価値観・選好
 
-### Part VI — CPG信頼性評価
-- Ch16: **⭐ 信頼できるCPGの6つの質問**（Guyatt 2023）— インタラクティブチェックリスト
-- Ch17: CPG品質の実例 — NCCN／IOM／日本のCPG問題
-- Ch18: **AMSTAR 2（16項目）** — インタラクティブチェッカー
-- Ch19: PRISMA 2020（27項目）
+### Part VIII - JAMA Users Guidesの横断要約
+- Ch21 SR／MAの方法を監査する：JAMA Users Guidesの質問
+- Ch22 ネットワークメタアナリシス
 
-### Part VII — 診療現場で活かす
-- Ch20: 推奨を目の前の患者にどう適用するか
-- Ch21: 共同意思決定（SDM）と価値観・嗜好
+### Part IX - 付録
+- Ch23 用語集とQ&A
+- Ch24 最新情報とGuyatt講演
+- Ch25 参考文献一覧
 
-### Part VIII — JAMA ユーザーズガイド（要約）
-- Ch21: JAMAでのSR/MA記載内容
-- Ch22: ネットワークメタアナリシス
+## 索引と詳細学習
 
-### Part IX — 付録
-- Ch23: 用語集 ＋ Q&A
-- Ch24: 最新情報 ＋ Guyatt先生 LinkedIn ピックアップ
-- Ch25: 参考文献一覧
+- learning-index.html: 12段階の読む作業順、17のトピック、検索・絞り込み。
+- advanced-statistics.html: estimand、CI、因果推論、設計、統合、GRADEを読む。
+- non-rct-observational-studies.html: 非RCTを因果効果として読めるかを確認する。
+- oncology-outcomes.html: 生存、PRO、サロゲート、有害事象を患者重要性から読む。
+- meta-analysis-methods.html: 19モジュールでメタ分析の数理・仮定・GRADEを読む。
+- guyatt-methodology-atlas.html: Guyatt関連の原著と現行方法論を、読む問い別にたどる。
+- japan-cpg-tohoho.html: 本邦CPGを読むための教育用事例集。
 
----
+## 文献の扱い
 
-## 独立した発展学習ページ
+data/references.json では、本文のクリック可能な正式引用を verificationStatus=verified に限定します。PRISMAは報告ガイドライン、AMSTAR 2は批判的吟味ツール、ROBISはSRのRisk of Bias評価と区別します。未照合の旧メモは保存しますが、正式文献として表示しません。
 
-- [統計学・因果推論のディープダイブ](advanced-statistics.html): 推定したい効果、効果指標、CI・閾値、時間・欠測、設計・モデル、統合とGRADEを4部構成・17モジュールで学ぶページです。変数選択と因果モデルの独立モジュールを含み、各モジュールに資料状態、一次・公式資料URL、最終確認日を表示します。
-- [非RCT・観察研究の読み方](non-rct-observational-studies.html): 因果質問と比較設計、バイアス、調整・感度分析、SR・GRADEへの接続を4段階で読みます。単変量の有意性だけで変数を選ばない理由、DAG、傾向スコア、time zeroを詳しく扱います。
-
----
-
-## インタラクティブ機能
-
-| 機能 | 章 | 説明 |
-|---|---|---|
-| 用語集ツールチップ | 全章 | 本文中の点線下線をクリックで用語解説 |
-| 引用ポップオーバー | 全章 | `[U17]` 等をクリックで論文詳細 |
-| MID閾値早見表 | Ch7 | アウトカム別の些細・中・大閾値 |
-| 信頼できるCPG 6質問チェックリスト | Ch16 | 目の前のCPGを評価 |
-| AMSTAR 2 16項目チェッカー | Ch18 | SRの方法論的質を評価 |
-| LinkedInピックアップ | Ch23 | Guyatt先生の最新投稿 |
-| 統計学・因果推論の絞り込み | 独立ページ | 本文検索、難易度・テーマによる学習モジュール絞り込み |
-
----
-
-## 参考文献体系
-
-本サイトは以下の分類で30以上の参考文献を正式参照しています：
-
-- **U1-U18**: Users' Guides to the Medical Literature シリーズ（Guyatt先生らによる"読み方"の体系）
-- **M1-M7**: 閾値・MID関連（Jaeschke-Singer-Guyatt 1989のMCID原典を含む）
-- **G1-G7**: GRADE方法論拡張（Guyatt 2017 EBM、GRADE Guidance 44（非RCT）、CERQual、GPS、推奨表現2022）
-- **T1-T2**: SR品質ツール（AMSTAR 2、PRISMA 2020）
-- **C1-C4**: CPG品質の実例（Guyatt 2023、NCCN、IOM 2011、日本のCPG問題）
-- **V1-V2**: 価値観・共同意思決定
-- **L1**: Guyatt先生 LinkedIn（継続更新）
-
-詳細は Ch24（参考文献一覧）を参照。
-
----
-
-## 主要参考文献（最重要3本）
-
-1. **Lima JP, Mirza RD, Guyatt GH. How to recognize a trustworthy clinical practice guideline.** J Anesth Analg Crit Care 2023;3:9.
-2. **Brignardello-Petersen R, Carrasco-Labra A, Guyatt GH. How to Interpret and Use a Clinical Practice Guideline or Recommendation.** JAMA 2021;326(15):1516-1523.
-3. **Murad MH, Montori VM, Ioannidis JPA, et al. (incl. Guyatt). How to read a systematic review and meta-analysis.** JAMA 2014;312(2):171-179.
-
----
-
-## 技術構成
-
-- 静的HTML/CSS/JavaScript（単一ページアプリケーション）
-- Tailwind CSS（CDN）、Lucide icons（CDN）
-- 純粋なvanilla JavaScript（フレームワーク非使用）
-- GitHub Pages公開
+主な更新: GRADE Guidance 42の誌名・年・巻頁、DevjiらのMID論文、GPS論文、RoB 2、ROBINS-I、ROBINS-E、ROBIS、MacLeanらの患者価値観SR、2026年の価値に基づく閾値論文を照合しました。
 
 ## ファイル構成
 
-```
-CPGSRuser/
-├── index.html              # 本体（SPA）
-├── advanced-statistics.html # 統計学・因果推論の独立学習ページ
-├── non-rct-observational-studies.html # 非RCT・観察研究の詳細学習
-├── oncology-outcomes.html  # がんアウトカムの詳細学習
-├── site-shell.css          # 独立ページ共通ヘッダー・パンくず・帰還導線
-├── advanced-statistics.css # 統計学ページのスタイル
-├── advanced-statistics.js  # 統計学ページの検索・絞り込み
-├── style.css               # 既存シェル流用＋テーマ
-├── style-cpgsr.css         # 本体の追加スタイル
-├── script.js               # 本体のSPAナビゲーション
-├── coreGRADE_utils.js      # 補助ユーティリティ
-├── data/
-│   ├── references.json     # 参考文献データ（U/M/G/T/C/V/L）
-│   ├── statistics-sources.json # 統計・非RCT・アウトカム深掘りの出典・状態・最終確認日
-│   ├── glossary.json       # 用語集
-│   ├── mid-thresholds.json # MID閾値例
-│   ├── linkedin-picks.json # LinkedInピックアップ
-│   └── chapters.json       # TOCメタ
-├── js/
-│   ├── glossary.js
-│   ├── references.js
-│   ├── mid-explorer.js
-│   ├── trustworthy-check.js
-│   ├── amstar2.js
-│   └── linkedin-feed.js
-└── docs/
-    ├── audit-statistics-grade-open-ui.md
-    ├── grade-open-integration-inventory.md
-    ├── grade-open-integration-inventory.json
-    ├── source-verification-log.md
-    ├── qa-statistics-grade-open-ui.md
-    ├── change-summary-statistics-grade-open-ui.md
-    └── linkedin-update-guide.md
-```
+- index.html: 本体の読み手向けアプリ
+- script.js: 旧page-N互換を保つ安定IDルーティング
+- data/content-registry.json: 検索・導線の正本
+- data/chapters.json: 本編25章、特別ページ、詳細ページの同期台帳
+- data/references.json: 照合状態を含む文献台帳
+- learning-index.html: 二本立て索引
+- meta-analysis-methods.html: メタ分析発展章
+- guyatt-methodology-atlas.html: 方法論アトラス
+- docs/: 基準時点台帳、ナビゲーション監査、出典照合、QA、内容保存報告
 
----
+## 検証方針
+
+検証では、重複ID、内部リンク、参照資産、旧ハッシュURL、コンテンツ台帳、引用キー、未照合文献の表示、見出し、アクセシビリティ、検索URL状態、本文保存を確認します。詳細は docs 配下の監査・QA文書を参照してください。
+
+## ローカル検査
+
+変更後は次を実行します。
+
+    node tools/verify-content-preservation.mjs
+    node tools/verify-cpgsr.mjs
+    node --check learning-index.js
+    node --check script.js
+    node --check js/references.js
 
 ## 更新履歴
 
-- **v1.1.1 (2026-08)**: 統計、非RCT、がんアウトカムの3ページを役割別に再編。因果変数選択、患者重要アウトカム、相互リンクを強化。
-- **v1.0.0 (2026-04)**: 初回公開。全24章、6つのインタラクティブ機能、30以上の参考文献を搭載。
-
----
+- 2026-08-22: 安定コンテンツ台帳、旧URL互換、学習索引、Guyatt方法論アトラス、メタ分析発展章、引用照合、本文保存検証を追加。
+- 2026-08: 統計・非RCT・がんアウトカムの詳細ページを役割別に再編し、相互リンクを強化。
+- 2026-04: 初回公開。
 
 ## ライセンス
 
-本サイトの構造とテキストは Creative Commons BY-NC-SA 4.0 で提供します。
-参考文献の元論文は各出版社の著作権に従います。外部リンクでのみ参照し、本文を複製していません。
+本サイトの構造とテキストは Creative Commons BY-NC-SA 4.0 で提供します。参考文献の元論文は各出版社の著作権に従い、外部リンクで参照します。
 
 ## 謝辞
 
-Gordon H. Guyatt先生（McMaster大学）の長年にわたるEBM・GRADE方法論への貢献と、LinkedInでの継続的な論文キュレーションに深く感謝します。
-
-本サイトは、診療ガイドライン作成者向けの姉妹サイト（core-grade-guide-1）の読者版として、臨床現場でCPG/SRを読む医療者の支援を目的に作成されました。
+Gordon H. Guyatt先生らのEBM・GRADE方法論への貢献に感謝します。本サイトは、作成者向け姉妹サイト core-grade-guide-1 の読者版として、臨床現場でCPGとSRを読む医療者を支援します。
