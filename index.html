@@ -46,65 +46,84 @@
       <span class="sidebar-learning-note">各章は学習の入口です。章内の詳細解説・関連資料・演習も開いてください。</span>
     </div>
     <ul class="toc-list" id="tocList">
-      <li class="toc-item"><button class="toc-btn active" data-idx="0"><span class="toc-num">0</span><span class="toc-text">まずここからお読みください<span class="en">Start here</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn active" data-idx="0" data-content-id="home"><span class="toc-num">0</span><span class="toc-text">まずここからお読みください<span class="en">Start here</span></span></button></li>
 
       <li class="toc-section toc-section-major">まずここから勉強しよう</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="24"><span class="toc-num">📚</span><span class="toc-text">EBM・SR・CPG 徹底解説<span class="en">Beginner's Primer</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="24" data-content-id="beginner-primer"><span class="toc-num">📚</span><span class="toc-text">EBM・SR・CPG 徹底解説<span class="en">Beginner's Primer</span></span></button></li>
+      <li class="toc-item"><a class="toc-btn toc-link" href="learning-index.html" data-content-id="learning-index"><span class="toc-num">⌕</span><span class="toc-text">索引：論文を読む順番／トピック・Guyattから探す<span class="en">Learning index</span></span></a></li>
 
       <li class="toc-section toc-section-major">CPG・SRポイント解説集</li>
       <li class="toc-section">Part I — EBM・GRADEの全体像</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="1"><span class="toc-num">1</span><span class="toc-text">EBMとCPG・SRの読み方<span class="en">EBM & Reading CPGs/SRs</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="2"><span class="toc-num">2</span><span class="toc-text">GRADEアプローチの概要<span class="en">Overview of GRADE</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="1" data-content-id="ebm-cpg-sr-basics"><span class="toc-num">1</span><span class="toc-text">EBMとCPG・SRの読み方<span class="en">EBM & Reading CPGs/SRs</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="2" data-content-id="grade-overview"><span class="toc-num">2</span><span class="toc-text">GRADEアプローチの概要<span class="en">Overview of GRADE</span></span></button></li>
 
       <li class="toc-section">Part II — 推奨の理解</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="3"><span class="toc-num">3</span><span class="toc-text">エビデンスの確実性4段階<span class="en">Four Levels of Certainty</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="4"><span class="toc-num">4</span><span class="toc-text">強い推奨 vs 条件付き推奨 ＋ GPS<span class="en">Strong vs Conditional + GPS</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="3" data-content-id="certainty-levels"><span class="toc-num">3</span><span class="toc-text">エビデンスの確実性4段階<span class="en">Four Levels of Certainty</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="4" data-content-id="recommendation-strength"><span class="toc-num">4</span><span class="toc-text">強い推奨 vs 条件付き推奨 ＋ GPS<span class="en">Strong vs Conditional + GPS</span></span></button></li>
 
       <li class="toc-section">Part III — SoF・効果・閾値</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="5"><span class="toc-num">5</span><span class="toc-text">SoF表・Evidence Profileの読み方<span class="en">Reading SoF Tables</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="6"><span class="toc-num">6</span><span class="toc-text">メタ分析・相対効果と絶対効果<span class="en">Meta-analysis / Relative vs Absolute</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="7"><span class="toc-num">7</span><span class="toc-text">閾値とMID<span class="en">Thresholds & MID</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="5" data-content-id="summary-of-findings"><span class="toc-num">5</span><span class="toc-text">SoF表・Evidence Profileの読み方<span class="en">Reading SoF Tables</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="6" data-content-id="effect-measures-absolute"><span class="toc-num">6</span><span class="toc-text">メタ分析・相対効果と絶対効果<span class="en">Meta-analysis / Relative vs Absolute</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="7" data-content-id="thresholds-mid"><span class="toc-num">7</span><span class="toc-text">閾値とMID<span class="en">Thresholds & MID</span></span></button></li>
 
       <li class="toc-section">Part IV — 確実性が下がる5要因</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="8"><span class="toc-num">8</span><span class="toc-text">Risk of Bias（RCT＋観察研究）<span class="en">Risk of Bias</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="9"><span class="toc-num">9</span><span class="toc-text">不一致性<span class="en">Inconsistency</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="10"><span class="toc-num">10</span><span class="toc-text">非直接性<span class="en">Indirectness</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="11"><span class="toc-num">11</span><span class="toc-text">不精確さ<span class="en">Imprecision</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="12"><span class="toc-num">12</span><span class="toc-text">Dissemination bias<span class="en">Dissemination bias</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="8" data-content-id="risk-of-bias"><span class="toc-num">8</span><span class="toc-text">Risk of Bias（RCT＋観察研究）<span class="en">Risk of Bias</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="9" data-content-id="inconsistency"><span class="toc-num">9</span><span class="toc-text">不一致性<span class="en">Inconsistency</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="10" data-content-id="indirectness"><span class="toc-num">10</span><span class="toc-text">非直接性<span class="en">Indirectness</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="11" data-content-id="imprecision"><span class="toc-num">11</span><span class="toc-text">不精確さ<span class="en">Imprecision</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="12" data-content-id="dissemination-bias"><span class="toc-num">12</span><span class="toc-text">Dissemination bias<span class="en">Dissemination bias</span></span></button></li>
 
       <li class="toc-section">Part V — 多様な研究デザインのSR</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="13"><span class="toc-num">13</span><span class="toc-text">非RCT・観察研究のSR＋詳細学習<span class="toc-detail">詳細：観察研究・がんアウトカム</span><span class="en">NRSI / Oncology Deep Dive</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="14"><span class="toc-num">14</span><span class="toc-text">定性的研究のSR — CERQual<span class="en">Qualitative SR</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="15"><span class="toc-num">15</span><span class="toc-text">単一推定値なし／GPS／ネットベネフィット<span class="en">Alternative recommendations</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="13" data-content-id="nrsi-systematic-review"><span class="toc-num">13</span><span class="toc-text">非RCT・観察研究のSR＋詳細学習<span class="toc-detail">詳細：観察研究・がんアウトカム</span><span class="en">NRSI / Oncology Deep Dive</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="14" data-content-id="qualitative-cerqual"><span class="toc-num">14</span><span class="toc-text">定性的研究のSR — CERQual<span class="en">Qualitative SR</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="15" data-content-id="alternative-recommendations"><span class="toc-num">15</span><span class="toc-text">単一推定値なし／GPS／ネットベネフィット<span class="en">Alternative recommendations</span></span></button></li>
 
       <li class="toc-section">Part VI — CPG信頼性評価</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="16"><span class="toc-num">16</span><span class="toc-text">⭐ 信頼できるCPGの6つの質問<span class="en">6 Questions for Trustworthy CPG</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="17"><span class="toc-num">17</span><span class="toc-text">CPG品質の実例（NCCN/IOM/日本）<span class="en">CPG Quality Examples</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="27"><span class="toc-num">特</span><span class="toc-text">本邦CPGトホホ集<span class="en">Japanese CPG Pitfalls</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="18"><span class="toc-num">18</span><span class="toc-text">AMSTAR 2（16項目）・PRISMA 2020（27項目）<span class="en">AMSTAR 2 / PRISMA 2020</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="16" data-content-id="trustworthy-cpg"><span class="toc-num">16</span><span class="toc-text">⭐ 信頼できるCPGの6つの質問<span class="en">6 Questions for Trustworthy CPG</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="17" data-content-id="cpg-quality-examples"><span class="toc-num">17</span><span class="toc-text">CPG品質の実例（NCCN/IOM/日本）<span class="en">CPG Quality Examples</span></span></button></li>
+      <li class="toc-item"><a class="toc-btn toc-link" href="japan-cpg-tohoho.html" data-content-id="japanese-cpg-pitfalls"><span class="toc-num">特</span><span class="toc-text">本邦CPGトホホ集<span class="en">Japanese CPG Pitfalls</span></span></a></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="18" data-content-id="sr-reporting-and-appraisal"><span class="toc-num">18</span><span class="toc-text">AMSTAR 2（16項目）・PRISMA 2020（27項目）<span class="en">AMSTAR 2 / PRISMA 2020</span></span></button></li>
 
       <li class="toc-section">Part VII — 診療現場で活かす</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="19"><span class="toc-num">19</span><span class="toc-text">患者への適用<span class="en">Applicability</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="20"><span class="toc-num">20</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="19" data-content-id="clinical-applicability"><span class="toc-num">19</span><span class="toc-text">患者への適用<span class="en">Applicability</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="20" data-content-id="values-shared-decision"><span class="toc-num">20</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
 
       <li class="toc-section toc-section-major">さらに深く勉強するために</li>
       <li class="toc-item toc-item-external"><a class="toc-external-link" href="advanced-statistics.html"><span class="toc-num" aria-hidden="true">↗</span><span class="toc-text">統計学・因果推論の詳細学習<span class="toc-detail">推定・CI・モデルを読む。非RCTの因果設計とアウトカムの患者重要性へもつなぐ</span><span class="en">Statistics / Causal Inference Deep Dive</span></span></a></li>
       <li class="toc-section">Part VIII — 📘 JAMA ユーザーズガイド（要約）</li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="25"><span class="toc-num">21</span><span class="toc-text">JAMAでのSR/MA記載内容（重複）<span class="en">JAMA UG Ch22: SR/MA Process</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26"><span class="toc-num">22</span><span class="toc-text">ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="25" data-content-id="jama-sr-ma"><span class="toc-num">21</span><span class="toc-text">JAMAでのSR/MA記載内容（重複）<span class="en">JAMA UG Ch22: SR/MA Process</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26" data-content-id="jama-network-meta-analysis"><span class="toc-num">22</span><span class="toc-text">ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
 
       <li class="toc-section">Part IX — 付録</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="21"><span class="toc-num">23</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary & Q&A</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="22"><span class="toc-num">24</span><span class="toc-text">Guyatt先生講演<span class="en">Guyatt Lectures</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="23"><span class="toc-num">25</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="21" data-content-id="glossary-qa"><span class="toc-num">23</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary & Q&A</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="22" data-content-id="guyatt-lectures"><span class="toc-num">24</span><span class="toc-text">Guyatt先生講演<span class="en">Guyatt Lectures</span></span></button></li>
+      <li class="toc-item"><button class="toc-btn" data-idx="23" data-content-id="references"><span class="toc-num">25</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
+
+      <li class="toc-section toc-section-major">さらに深く勉強するために</li>
+      <li class="toc-item"><a class="toc-btn toc-link" href="advanced-statistics.html" data-content-id="advanced-statistics"><span class="toc-num">数</span><span class="toc-text">統計学・因果推論<span class="toc-detail">推定対象・CI・設計・統合</span><span class="en">Statistics & Causal Inference</span></span></a></li>
+      <li class="toc-item"><a class="toc-btn toc-link" href="non-rct-observational-studies.html" data-content-id="nonrct-observational"><span class="toc-num">観</span><span class="toc-text">非RCT・観察研究<span class="toc-detail">因果質問・交絡・調整</span><span class="en">Non-randomized Studies</span></span></a></li>
+      <li class="toc-item"><a class="toc-btn toc-link" href="oncology-outcomes.html" data-content-id="oncology-outcomes"><span class="toc-num">癌</span><span class="toc-text">がんアウトカム<span class="toc-detail">生存・PRO・代替指標</span><span class="en">Oncology Outcomes</span></span></a></li>
+      <li class="toc-item"><a class="toc-btn toc-link" href="meta-analysis-methods.html" data-content-id="meta-analysis-methods"><span class="toc-num">MA</span><span class="toc-text">メタ分析の数理と現代的方法<span class="en">Meta-analysis Methods</span></span></a></li>
+      <li class="toc-item"><a class="toc-btn toc-link" href="guyatt-methodology-atlas.html" data-content-id="guyatt-methodology-atlas"><span class="toc-num">G</span><span class="toc-text">Guyatt方法論アトラス<span class="en">Methods Atlas</span></span></a></li>
     </ul>
   </nav>
 
   <!-- メインコンテンツ -->
+  <noscript>
+    <nav class="no-script-nav" aria-label="JavaScriptなしで使う主な導線">
+      <strong>主要な学習ページ：</strong>
+      <a href="learning-index.html">索引：論文を読む順番／トピック・Guyattから探す</a>
+      <a href="advanced-statistics.html">統計学・因果推論</a>
+      <a href="non-rct-observational-studies.html">非RCT・観察研究</a>
+      <a href="oncology-outcomes.html">がんアウトカム</a>
+      <a href="japan-cpg-tohoho.html">本邦CPGトホホ集</a>
+    </nav>
+  </noscript>
+
   <main class="main-content" id="mainContent">
 
     <!-- ============ Ch0: 表紙 ============ -->
-    <div class="page active" id="page-0">
+    <div class="page active" id="page-0" data-content-id="home" data-legacy-page-id="page-0" data-legacy-index="0">
       <div class="reader-cover">
         <h1>診療ガイドライン・システマティックレビュー <br>の<span style="color:#ffcc80;">読み方</span> ガイド</h1>
         <div class="sub">— すべての医療関係者のための、GRADE準拠の読み手向け解説 —</div>
@@ -182,7 +201,7 @@
     </div>
 
     <!-- ============ Ch1: EBM・CPG/SR入門 ============ -->
-    <div class="page" id="page-1">
+    <div class="page" id="page-1" data-content-id="ebm-cpg-sr-basics" data-legacy-page-id="page-1" data-legacy-index="1">
       <div class="page-header">
         <div class="chapter-badge">Chapter 1 / 25</div>
         <h1>EBMと診療ガイドライン・SRの読み方</h1>
@@ -601,7 +620,7 @@
     </div>
 
     <!-- ============ Ch2: GRADE概要 ============ -->
-    <div class="page" id="page-2">
+    <div class="page" id="page-2" data-content-id="grade-overview" data-legacy-page-id="page-2" data-legacy-index="2">
       <div class="page-header">
         <div class="chapter-badge">Chapter 2 / 25</div>
         <h1>GRADEアプローチの概要 — なぜ最初に学ぶのか</h1>
@@ -842,7 +861,7 @@
     </div>
 
     <!-- ============ Ch3: 確実性4段階 ============ -->
-    <div class="page" id="page-3">
+    <div class="page" id="page-3" data-content-id="certainty-levels" data-legacy-page-id="page-3" data-legacy-index="3">
       <div class="page-header">
         <div class="chapter-badge">Chapter 3 / 25</div>
         <h1>「エビデンスの確実性」4段階の意味</h1>
@@ -1038,7 +1057,7 @@
     </div>
 
     <!-- ============ Ch4: 強い vs 条件付き推奨 ============ -->
-    <div class="page" id="page-4">
+    <div class="page" id="page-4" data-content-id="recommendation-strength" data-legacy-page-id="page-4" data-legacy-index="4">
       <div class="page-header">
         <div class="chapter-badge">Chapter 4 / 25</div>
         <h1>強い推奨 vs 条件付き推奨 ＋ GPS・推奨表現</h1>
@@ -1114,7 +1133,7 @@
     </div>
 
     <!-- ============ Ch5: SoF表・EP ============ -->
-    <div class="page" id="page-5">
+    <div class="page" id="page-5" data-content-id="summary-of-findings" data-legacy-page-id="page-5" data-legacy-index="5">
       <div class="page-header">
         <div class="chapter-badge">Chapter 5 / 25</div>
         <h1>SoF表・Evidence Profileの読み方</h1>
@@ -1282,7 +1301,7 @@
     </div>
 
     <!-- ============ Ch6: 相対効果と絶対効果 ============ -->
-    <div class="page" id="page-6">
+    <div class="page" id="page-6" data-content-id="effect-measures-absolute" data-legacy-page-id="page-6" data-legacy-index="6">
       <div class="page-header">
         <div class="chapter-badge">Chapter 6 / 25</div>
         <h1>メタ分析・相対効果と絶対効果の違い</h1>
@@ -1430,7 +1449,7 @@
     </div>
 
     <!-- ============ Ch7: 閾値とMID ============ -->
-    <div class="page" id="page-7">
+    <div class="page" id="page-7" data-content-id="thresholds-mid" data-legacy-page-id="page-7" data-legacy-index="7">
       <div class="page-header">
         <div class="chapter-badge">Chapter 7 / 25 ⭐</div>
         <h1>閾値とMID — 臨床的に重要な差とは何か</h1>
@@ -1508,7 +1527,7 @@
     </div>
 
     <!-- ============ Ch8: Risk of Bias ============ -->
-    <div class="page" id="page-8">
+    <div class="page" id="page-8" data-content-id="risk-of-bias" data-legacy-page-id="page-8" data-legacy-index="8">
       <div class="page-header">
         <div class="chapter-badge">Chapter 8 / 25</div>
         <h1>Risk of Bias — RCT ＋ 観察研究（ROBINS-E/I）</h1>
@@ -1584,7 +1603,7 @@
     </div>
 
     <!-- ============ Ch9: 不一致性 ============ -->
-    <div class="page" id="page-9">
+    <div class="page" id="page-9" data-content-id="inconsistency" data-legacy-page-id="page-9" data-legacy-index="9">
       <div class="page-header">
         <div class="chapter-badge">Chapter 9 / 25</div>
         <h1>不一致性（Inconsistency）</h1>
@@ -1653,7 +1672,7 @@
     </div>
 
     <!-- ============ Ch10: 非直接性 ============ -->
-    <div class="page" id="page-10">
+    <div class="page" id="page-10" data-content-id="indirectness" data-legacy-page-id="page-10" data-legacy-index="10">
       <div class="page-header">
         <div class="chapter-badge">Chapter 10 / 25</div>
         <h1>非直接性（Indirectness）</h1>
@@ -1715,7 +1734,7 @@
     </div>
 
     <!-- ============ Ch11: 不精確さ ============ -->
-    <div class="page" id="page-11">
+    <div class="page" id="page-11" data-content-id="imprecision" data-legacy-page-id="page-11" data-legacy-index="11">
       <div class="page-header">
         <div class="chapter-badge">Chapter 11 / 25</div>
         <h1>不精確さ（Imprecision）</h1>
@@ -1780,7 +1799,7 @@
     </div>
 
     <!-- ============ Ch12: Dissemination bias ============ -->
-    <div class="page" id="page-12">
+    <div class="page" id="page-12" data-content-id="dissemination-bias" data-legacy-page-id="page-12" data-legacy-index="12">
       <div class="page-header">
         <div class="chapter-badge">Chapter 12 / 25</div>
         <h1>Dissemination bias（情報発信バイアス）</h1>
@@ -1826,7 +1845,7 @@
     </div>
 
     <!-- ============ Ch13: 非RCT・観察研究のSR ============ -->
-    <div class="page" id="page-13">
+    <div class="page" id="page-13" data-content-id="nrsi-systematic-review" data-legacy-page-id="page-13" data-legacy-index="13">
       <div class="page-header">
         <div class="chapter-badge">Chapter 13 / 25</div>
         <h1>非RCT・観察研究のSR＋詳細学習</h1>
@@ -1902,7 +1921,7 @@
     </div>
 
     <!-- ============ Ch14: 定性的研究のSR CERQual ============ -->
-    <div class="page" id="page-14">
+    <div class="page" id="page-14" data-content-id="qualitative-cerqual" data-legacy-page-id="page-14" data-legacy-index="14">
       <div class="page-header">
         <div class="chapter-badge">Chapter 14 / 25</div>
         <h1>定性的研究のSR — GRADE-CERQual</h1>
@@ -1944,7 +1963,7 @@
     </div>
 
     <!-- ============ Ch15: 単一推定値なし／GPS／ネットベネフィット ============ -->
-    <div class="page" id="page-15">
+    <div class="page" id="page-15" data-content-id="alternative-recommendations" data-legacy-page-id="page-15" data-legacy-index="15">
       <div class="page-header">
         <div class="chapter-badge">Chapter 15 / 25</div>
         <h1>単一推定値がない場合・GPS・ネットベネフィット</h1>
@@ -1996,7 +2015,7 @@
     </div>
 
     <!-- ============ Ch16: 信頼できるCPG 6質問 ============ -->
-    <div class="page" id="page-16">
+    <div class="page" id="page-16" data-content-id="trustworthy-cpg" data-legacy-page-id="page-16" data-legacy-index="16">
       <div class="page-header">
         <div class="chapter-badge">Chapter 16 / 25 ⭐ 中核章</div>
         <h1>信頼できるCPGの6つの質問</h1>
@@ -2057,7 +2076,7 @@
     </div>
 
     <!-- ============ Ch17: CPG品質の実例 ============ -->
-    <div class="page" id="page-17">
+    <div class="page" id="page-17" data-content-id="cpg-quality-examples" data-legacy-page-id="page-17" data-legacy-index="17">
       <div class="page-header">
         <div class="chapter-badge">Chapter 17 / 25</div>
         <h1>CPG品質の実例 — NCCN／IOM／日本のCPG問題</h1>
@@ -2282,7 +2301,7 @@
     </div>
 
     <!-- ============ Ch18: AMSTAR 2 ============ -->
-    <div class="page" id="page-18">
+    <div class="page" id="page-18" data-content-id="sr-reporting-and-appraisal" data-legacy-page-id="page-18" data-legacy-index="18">
       <div class="page-header">
         <div class="chapter-badge">Chapter 18 / 25</div>
         <h1>AMSTAR 2（16項目）・PRISMA 2020（27項目）</h1>
@@ -2379,7 +2398,7 @@
     </div>
 
     <!-- ============ Ch20: 適用可能性 ============ -->
-    <div class="page" id="page-20">
+    <div class="page" id="page-20" data-content-id="clinical-applicability" data-legacy-page-id="page-20" data-legacy-index="19">
       <div class="page-header">
         <div class="chapter-badge">Chapter 19 / 25</div>
         <h1>推奨を目の前の患者にどう適用するか</h1>
@@ -2455,7 +2474,7 @@
     </div>
 
     <!-- ============ Ch21: SDM ============ -->
-    <div class="page" id="page-21">
+    <div class="page" id="page-21" data-content-id="values-shared-decision" data-legacy-page-id="page-21" data-legacy-index="20">
       <div class="page-header">
         <div class="chapter-badge">Chapter 20 / 25</div>
         <h1>共同意思決定（SDM）と価値観・嗜好</h1>
@@ -2540,7 +2559,7 @@
     </div>
 
     <!-- ============ Ch25 (page-22): 用語集＋Q&A ============ -->
-    <div class="page" id="page-22">
+    <div class="page" id="page-22" data-content-id="glossary-qa" data-legacy-page-id="page-22" data-legacy-index="21">
       <div class="page-header">
         <div class="chapter-badge">Chapter 23 / 25</div>
         <h1>用語集 ＋ Q&A</h1>
@@ -2603,7 +2622,7 @@
     </div>
 
     <!-- ============ Ch26 (page-23): 最新情報＋LinkedIn ============ -->
-    <div class="page" id="page-23">
+    <div class="page" id="page-23" data-content-id="guyatt-lectures" data-legacy-page-id="page-23" data-legacy-index="22">
       <div class="page-header">
         <div class="chapter-badge">Chapter 24 / 25</div>
         <h1>Guyatt先生講演（EBMからGRADEへ）</h1>
@@ -2906,7 +2925,7 @@
     </div>
 
     <!-- ============ Ch27 (page-24): 参考文献一覧 ============ -->
-    <div class="page" id="page-24">
+    <div class="page" id="page-24" data-content-id="references" data-legacy-page-id="page-24" data-legacy-index="23">
       <div class="page-header">
         <div class="chapter-badge">Chapter 25 / 25</div>
         <h1>参考文献一覧</h1>
@@ -2996,7 +3015,7 @@
     </div>
 
     <!-- ============ 初学者向け徹底解説（特別ページ / v1.2追加） ============ -->
-    <div class="page" id="page-25">
+    <div class="page" id="page-25" data-content-id="beginner-primer" data-legacy-page-id="page-25" data-legacy-index="24">
       <div class="page-header primer-header">
         <div class="chapter-badge primer-badge">📚 まずここから勉強しよう</div>
         <h1>EBM・システマティックレビュー・診療ガイドラインの関係</h1>
@@ -3833,7 +3852,7 @@
     <!-- ==================================================== -->
     <!-- ========  page-26: JAMA UG Ch22 SR/MA プロセス  ==== -->
     <!-- ==================================================== -->
-    <div class="page" id="page-26">
+    <div class="page" id="page-26" data-content-id="jama-sr-ma" data-legacy-page-id="page-26" data-legacy-index="25">
 
       <div class="jama-page-head">
         <span class="jph-badge">📘 Chapter 21 / 25 ｜ JAMA UG Ch22</span>
@@ -4108,7 +4127,7 @@
     <!-- ==================================================== -->
     <!-- ========  page-28: JAMA UG Ch24 NMA               === -->
     <!-- ==================================================== -->
-    <div class="page" id="page-28">
+    <div class="page" id="page-28" data-content-id="jama-network-meta-analysis" data-legacy-page-id="page-28" data-legacy-index="26">
 
       <div class="jama-page-head">
         <span class="jph-badge">📘 Chapter 22 / 25 ｜ JAMA UG Ch24</span>
@@ -4249,7 +4268,7 @@
     <!-- ==================================================== -->
     <!-- ========  page-29: 本邦CPGトホホ集（教育用整理版） === -->
     <!-- ==================================================== -->
-    <div class="page" id="page-29">
+    <div class="page" id="page-29" data-content-id="legacy-japanese-cpg-pitfalls" data-legacy-page-id="page-29">
       <div class="page-header">
         <div class="chapter-badge">Special / 26</div>
         <h1>本邦CPGトホホ集</h1>
@@ -4475,13 +4494,19 @@
       </div>
     </div>
 
+    <section id="reader-route-not-found" class="reader-route-not-found" hidden tabindex="-1" aria-labelledby="reader-route-not-found-title">
+      <h1 id="reader-route-not-found-title">この教材内の場所を見つけられませんでした</h1>
+      <p>URLの末尾を確認するか、索引から目的のテーマを探してください。既存の章は削除されていません。</p>
+      <p><a href="learning-index.html">索引：論文を読む順番／トピック・Guyattから探す</a> <button type="button" data-home-route>最初のページへ戻る</button></p>
+    </section>
+
   </main>
 
 </div><!-- /.app-body -->
 
 <!-- スクリプト -->
 <script src="coreGRADE_utils.js?v=7.2"></script>
-<script src="script.js?v=7.2"></script>
+<script src="script.js?v=8.0"></script>
 <script src="js/glossary.js?v=7.2"></script>
 <script src="js/references.js?v=7.2"></script>
 <script src="js/mid-explorer.js?v=7.2"></script>
