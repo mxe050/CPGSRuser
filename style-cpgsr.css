@@ -1,5 +1,41 @@
 /* ===== CPGSR User版 追加スタイル ===== */
 
+/* 方法論の役割・現在地 */
+.method-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 12px;
+}
+.method-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 3px 8px;
+  border: 1px solid #aebbc4;
+  border-radius: 4px;
+  background: #f6f8f9;
+  color: #344b58;
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.method-status.current { border-color: #72a488; background: #edf8f1; color: #205f42; }
+.method-status.framework { border-color: #6e9fbe; background: #edf6fb; color: #1d5877; }
+.method-status.appraisal { border-color: #9a7db0; background: #f6effa; color: #624178; }
+.method-status.reporting { border-color: #bd9850; background: #fff8e8; color: #704e11; }
+.method-status.expert { border-color: #b48758; background: #fff4e9; color: #714313; }
+.method-status.historical { border-color: #a9afb5; background: #f3f5f6; color: #4c565e; }
+.method-status.clinical { border-color: #588d91; background: #edf7f7; color: #285e61; }
+.method-context {
+  margin: 10px 0 16px;
+  padding: 12px 14px;
+  border-left: 4px solid #78909c;
+  background: #f5f7f8;
+  color: #344650;
+  line-height: 1.75;
+}
+
 /* 参考文献ポップオーバー */
 .ref-cite {
   display: inline-block;

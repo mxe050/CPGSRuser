@@ -6,7 +6,7 @@
 
 ## プロジェクト概要
 
-- **何**: 診療ガイドライン／SR（CPG/SR）を**読む側**の医療者向け、GRADE準拠の独立解説アプリ（全24章）
+- **何**: 診療ガイドライン／SR（CPG/SR）を**読む側**の医療者向け、GRADE準拠の独立解説アプリ（全25章）
 - **対象**: すべての医療関係者
 - **公開URL**: https://mxe050.github.io/CPGSRuser/
 - **GitHub**: https://github.com/mxe050/CPGSRuser
@@ -284,7 +284,7 @@
 
 ```
 CPGSRuser/
-├── index.html                     # 全24章＋Primer（page-25）＋ナビ
+├── index.html                     # 本編25章＋Primer＋特別ページ＋ナビ
 ├── style.css                      # 既存テーマ（紺+オレンジ）
 ├── style-cpgsr.css                # 追加スタイル（v1.1ナビ系＋v1.2 Primer系）
 ├── script.js                      # showPage（data-idx照合に修正）
@@ -297,7 +297,7 @@ CPGSRuser/
 
 ---
 
-## 章構成（全24章）
+## 章構成（全25章）
 
 - **Ch0** 表紙 / **Ch1** EBMとCPG/SR読み方＋**文書構造マップ**
 - **Ch2** GRADE概要（v1.1で大幅リストラ）

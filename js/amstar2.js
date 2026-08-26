@@ -26,7 +26,7 @@
     if (!mount) return;
     let html = `
       <div class="am-intro">
-        <p>AMSTAR 2（Shea 2017）は、SRの方法論的質を評価する16項目ツール。★は<strong>重要（critical）項目</strong>で、ここに欠陥があると総合評価が大きく下がる。</p>
+        <p>AMSTAR 2（Shea 2017）は、SR結果への総合的な信頼性を評価する16項目ツール。★は<strong>重要（critical）項目</strong>で、ここに欠陥があると総合評価が大きく下がる。</p>
       </div>
       <div class="am-items">
     `;

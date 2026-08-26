@@ -11,7 +11,7 @@
 <meta property="og:title" content="CPGSR Reader — 診療ガイドライン・SRの読み方">
 <meta property="og:description" content="GRADEに基づき、診療ガイドラインとシステマティックレビューを読むための学習サイト。">
 <link rel="stylesheet" href="style.css?v=7.3">
-<link rel="stylesheet" href="style-cpgsr.css?v=9.0">
+<link rel="stylesheet" href="style-cpgsr.css?v=9.1">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -646,7 +646,7 @@
           <p style="margin:6px 0 8px;">"GRADE" という耳慣れない用語が急に出てきて混乱するかもしれません。でも大丈夫。<strong>この用語を避けて通ると、CPG／SRのほぼすべての内容が理解できなくなる</strong>からです。理由は3つあります：</p>
           <ol>
             <li><strong>現代のCPG／SRの「共通言語」だから</strong> — 世界110以上のガイドライン組織（WHO、NICE、Cochrane、Minds、米国内科学会…）がGRADEを採用 [U13]。「エビデンスの確実性：中」「条件付き推奨」「⊕⊕⊕◯」などの記号と用語はすべてGRADEの産物です。GRADEを知らずにCPGを読むのは、<strong>文法を知らずに外国語を読む</strong>のと同じです。</li>
-            <li><strong>本サイトの全24章の地図になるから</strong> — Ch3は「確実性4段階」、Ch4は「推奨の強さ」、Ch5-7はGRADEの具体的な表現、Ch8-12はGRADEの「確実性を下げる5要因」の詳細、Ch16-19は「GRADEが正しく適用されたかを評価する」ツール…すべての章が<strong>GRADEの一部分</strong>を掘り下げる形で構成されています。</li>
+            <li><strong>本サイトの全25章の地図になるから</strong> — Ch3は「確実性4段階」、Ch4は「推奨の強さ」、Ch5-7はGRADEの具体的な表現、Ch8-12はGRADEの「確実性を下げる5要因」の詳細、Ch16-19は「GRADEが正しく適用されたかを評価する」ツール…すべての章が<strong>GRADEの一部分</strong>を掘り下げる形で構成されています。</li>
             <li><strong>あなたの臨床判断を変えるから</strong> — GRADEは「何をどのくらい信じて、どのくらい患者に勧めるか」を構造化する道具です。<strong>「この治療は強く推奨されている」と「条件付きで推奨されている」で、実臨床でのあなたの行動は明確に変わるべき</strong>で、GRADEはその変え方を教えてくれます。</li>
           </ol>
           <p style="margin:10px 0 0;"><strong>この章のゴール</strong>：GRADEという用語の正体を知り、CPG／SRを読んだときに「いま自分はGRADEのどの部分を見ているのか」が分かるようになること。細部の理解はあとで大丈夫です。</p>
@@ -747,15 +747,18 @@
         </table>
         <p>この5要因は、<strong>CPGのEvidence Profile付録やSRの「Certainty Assessment」の列</strong>で確認できることが望ましい情報です。ただしSoF表、Evidence Profile、推奨理由、EtDが常に同じ文書に並ぶとは限りません。どこに示されているかを追い、見当たらないときは透明性を慎重に評価します。例えば "serious imprecision due to wide CI"（CIが広く精度不足があるため1段下げ）といった文言。この章から先の Ch8-12 では、各要因について「どういう状況で下げるのか」「読み手として何をチェックすべきか」を個別に掘り下げます。</p>
 
-        <h2>観察研究を格上げする3条件（上げる要因）</h2>
-        <p>観察研究（コホート、症例対照）は交絡の問題があるため、GRADEでは「低（⊕⊕◯◯）」から出発します。しかし以下の条件を満たせば確実性を上げることができます：</p>
+        <h2>観察研究の確実性を上げる2要因（Core GRADE）</h2>
+        <div class="method-status-row" aria-label="方法論の位置づけ">
+          <span class="method-status current">Current standard</span>
+          <span class="method-status framework">Core GRADE</span>
+        </div>
+        <p>観察研究（コホート、症例対照）は交絡の問題があるため、GRADEでは通常「低（⊕⊕◯◯）」から出発します。<a href="https://www.bmj.com/content/389/bmj-2024-081903" target="_blank" rel="noopener noreferrer">Core GRADE</a>で格上げを検討する要因は、次の2つです。該当しても自動的に上げるのではなく、他の確実性領域と併せて判断します。</p>
         <ul>
           <li><strong>大きな効果量</strong>（例：RR&gt;2 または &lt;0.5）→ +1段</li>
           <li><strong>非常に大きな効果量</strong>（RR&gt;5 または &lt;0.2）→ +2段</li>
           <li><strong>用量反応関係</strong>が明確 → +1段</li>
-          <li><strong>すべての残存交絡が観察効果を弱める方向</strong>（つまり真の効果はより大きいはず）→ +1段</li>
         </ul>
-        <p>古典例：<strong>喫煙と肺がん</strong>の関連はRR&gt;10で観察研究ベースでも確実性は「高」と評価されます。</p>
+        <p><strong>旧GRADEとの違い：</strong>「想定される残存交絡が観察効果を弱める方向に働く」という要因は従来のGRADE資料にありますが、Core GRADEでは適用が難しく、実際に用いられることが少ないため中核項目から除外されています。</p>
 
         <h2>推奨の強さを決める判断要素</h2>
         <p>推奨の強さは、エビデンスの確実性だけでは決まりません。以下の要素を総合的に検討します（EtDフレームワークで構造化）[U16]：</p>
@@ -1046,7 +1049,7 @@
         <p>詳細はCh8-12で扱いますが、概観：</p>
         <ul>
           <li><strong>下げる要因</strong>（-1 or -2）：バイアスリスク／不一致性／非直接性／不精確さ／Dissemination bias</li>
-          <li><strong>上げる要因</strong>（観察研究のみ、+1 or +2）：大きな効果量／用量反応関係／すべての交絡が逆方向</li>
+          <li><strong>上げる要因</strong>（観察研究のみ、+1 or +2）：大きな効果量／用量反応関係。旧GRADEにある「残存交絡の方向」はCore GRADEの中核項目には含まれません。</li>
         </ul>
 
         <div class="chapter-nav">
@@ -1955,7 +1958,7 @@
         </ol>
 
         <h2>なぜ読み手に重要か</h2>
-        <p>推奨を患者に適用するには、<strong>患者の価値観と嗜好</strong>（Ch21）を理解する必要があります。CERQualで評価された定性的SRは、その基礎情報を提供します。例：「抗凝固療法における患者の価値観のSR」は治療選択肢の提示方法を変えます（Guyatt LinkedIn #45）。</p>
+        <p>推奨を患者に適用するには、<strong>患者の価値観と嗜好</strong>（Ch20）を理解する必要があります。CERQualで評価された定性的SRは、その基礎情報を提供します。例：「抗凝固療法における患者の価値観のSR」は治療選択肢の提示方法を変えます（Guyatt LinkedIn #45）。</p>
 
         <div class="chapter-nav">
           <button onclick="showPage(13)">← Ch13</button>
@@ -2317,13 +2320,17 @@
             <span class="yah-title">あなたが今学んでいる場所</span>
             <span class="yah-where">SR：<strong>SR全体の総合評価</strong> — プロトコル〜検索〜RoB〜統合〜COI を横断</span>
             <span class="yah-where">CPG：CPGが参照しているSRの質評価にも使える</span>
-            <span class="yah-check">Ch16がCPG評価なら、<strong>Ch18はSR評価の中核</strong>。AMSTAR 2で方法論的な質を、PRISMA 2020で報告の透明性を確認します。Ch5-12で学んだGRADE 5要因やRoBの知識がすべて活かされる総合演習です。</span>
+            <span class="yah-check">Ch16がCPG評価なら、<strong>Ch18はSR評価の中核</strong>。AMSTAR 2でレビュー結果への総合的な信頼性を、PRISMA 2020で報告の透明性を確認します。Ch5-12で学んだGRADE 5要因やRoBの知識がすべて活かされる総合演習です。</span>
             <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
           </div>
         </div>
 
         <div class="key-message">
           <strong>要点：</strong>AMSTAR 2（Shea 2017, BMJ）[T1] はSRの批判的吟味ツールであり、PRISMA 2020（Page 2021, BMJ）[T2] はSR報告の透明性のためのガイドラインです。<strong>AMSTAR 2は「方法に重要な懸念があるか」、PRISMAは「読むために必要な情報が十分に報告されているか」</strong>を見る道具です。PRISMAに従った報告だけでは方法論的質やSR全体のRisk of Biasは保証されず、後者を評価したいときはROBISなど別の専用ツールを検討します。
+        </div>
+        <div class="method-status-row" aria-label="方法論の位置づけ">
+          <span class="method-status appraisal">Appraisal tool：AMSTAR 2</span>
+          <span class="method-status reporting">Reporting guideline：PRISMA 2020</span>
         </div>
 
         <h2>インタラクティブ評価ツール</h2>
@@ -2356,7 +2363,7 @@
           <span class="jn-label">📘 JAMA UG との対応</span>
           <div class="jn-title">3つのツールを読者がどう使い分けるか</div>
           <ul>
-            <li><strong>AMSTAR 2</strong>（16項目）：このSRの「方法論的な質」は信頼できるか？</li>
+            <li><strong>AMSTAR 2</strong>（16項目）：このSRの結果に対する総合的な信頼性はどの程度か？</li>
             <li><strong>PRISMA 2020</strong>（27項目）：このSRは「十分に報告されている」か？</li>
             <li><strong>JAMA UG Ch22チェックリスト</strong>：結果を信じてよい水準かを、臨床家の視点で短時間に判定する</li>
           </ul>
@@ -2367,7 +2374,7 @@
         <table class="mid-table">
           <thead><tr><th></th><th>AMSTAR 2</th><th>PRISMA 2020</th></tr></thead>
           <tbody>
-            <tr><td>目的</td><td>SRの方法論的<strong>質</strong>評価</td><td>SRの<strong>報告</strong>の透明性</td></tr>
+            <tr><td>目的</td><td>SR結果への総合的な<strong>信頼性</strong>の評価</td><td>SRの<strong>報告</strong>の透明性</td></tr>
             <tr><td>項目数</td><td>16</td><td>27</td></tr>
             <tr><td>使う場面</td><td>SRを<strong>使うとき</strong>の批判的吟味</td><td>SRを<strong>読む／書く／査読する</strong>とき</td></tr>
             <tr><td>読み手として</td><td>このSRは信頼できるか？</td><td>このSRは十分に報告されているか？</td></tr>
@@ -2375,12 +2382,14 @@
         </table>
 
         <h2>PRISMA 2020の主要セクション</h2>
+        <p><a href="https://www.prisma-statement.org/prisma-2020-checklist" target="_blank" rel="noopener noreferrer">公式チェックリスト</a>の項目番号に沿って確認します。</p>
         <ul>
-          <li><strong>タイトル・抄録</strong>（2項目）</li>
-          <li><strong>緒言</strong>（2項目：根拠、目的）</li>
-          <li><strong>方法</strong>（12項目：適格基準、情報源、検索、選択、データ抽出、アウトカム、個別研究RoB、効果量、統合、Dissemination bias、確実性）</li>
-          <li><strong>結果</strong>（7項目：選択、研究特性、個別研究RoB、効果、統合、Dissemination bias、確実性）</li>
-          <li><strong>考察</strong>（4項目：結果の解釈、限界、結論、資金源・COI）</li>
+          <li><strong>タイトル・抄録</strong>（項目1〜2）</li>
+          <li><strong>緒言</strong>（項目3〜4：根拠、目的）</li>
+          <li><strong>方法</strong>（項目5〜15：適格基準、情報源、検索、選択、データ抽出、アウトカム、個別研究RoB、効果量、統合、Dissemination bias、確実性）</li>
+          <li><strong>結果</strong>（項目16〜22：選択、研究特性、個別研究RoB、効果、統合、Dissemination bias、確実性）</li>
+          <li><strong>考察</strong>（項目23a〜d：他のエビデンスとの関連を含む結果の解釈、含まれたエビデンスの限界、レビュー過程の限界、実践・政策・今後の研究への示唆）</li>
+          <li><strong>その他の情報</strong>（項目24〜27：登録・プロトコル・修正、支援、競合する利益、データ・コード・資料の利用可能性）</li>
         </ul>
 
         <div class="reader-tips">
@@ -2575,7 +2584,7 @@
         <h2>主要用語</h2>
         <div id="glossary-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;">
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="GRADE">GRADE</strong>：エビデンス評価と推奨決定の国際標準</div>
-          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="エビデンスの確実性">確実性</strong>：真値が推定範囲にあるという確信度</div>
+          <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="エビデンスの確実性">確実性</strong>：真の効果が、意思決定上重要な閾値のどちら側または特定の範囲にあるかについての確信度</div>
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="推奨の強さ">推奨の強さ</strong>：強い or 条件付き</div>
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="SoF表">SoF表</strong>：アウトカムごとの効果と確実性の要約</div>
           <div class="gloss-card" style="padding:10px;background:#f9fbfd;border-left:3px solid var(--primary);border-radius:4px;"><strong class="gloss" data-term="MID">MID</strong>：最小重要差（患者が重要と感じる最小の効果）</div>
@@ -2890,6 +2899,9 @@
             </summary>
             <div class="qa-a">
               <strong>Guyatt先生の回答：</strong>
+              <div class="method-status-row" aria-label="方法論の位置づけ">
+                <span class="method-status expert">Expert interpretation</span>
+              </div>
               <p><strong>完全に除外</strong>すべき。理由：</p>
               <ul>
                 <li>低RoB研究だけで解析 → 高い確実性が得られる</li>
@@ -2897,6 +2909,7 @@
                 <li>高RoBと低RoBで結果が<strong>異なる</strong> → RoBが実際に影響している証拠 → 高RoBは除外</li>
                 <li>高RoBと低RoBで結果が<strong>似ている</strong> → RoBは実害なかったと推定 → 全て使って確実性をダウングレードしない</li>
               </ul>
+              <p class="method-context"><strong>位置づけ：</strong>これはGuyatt先生の実践的提案です。すべてのSRに共通する唯一の規則ではありません。<a href="https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-07" target="_blank" rel="noopener noreferrer">Cochrane Handbook</a>は、低RoB研究に主要解析を限定する方法のほか、全研究を含めた解析と感度分析など複数の戦略を示しており、採用する方法はプロトコルで事前に定めます。</p>
             </div>
           </details>
 
@@ -3885,6 +3898,11 @@
       <p style="font-size:1rem;line-height:1.85;color:#2c3e50;margin:0 0 14px;">
         JAMA <em>Users' Guides to the Medical Literature</em>（第3版）第22章の枠組みを、独立の解説として整理しました。内容は本サイトの各章と一部重複しますが、<strong>「SR／MAというプロセスが、私たちが結論を信じてよい水準で実施されたか」をJAMA流の質問として読み直す章</strong>です。本編の各章（Ch1, Ch8〜12, Ch18, Ch19）と補完的に読むと理解が深まります。
       </p>
+      <div class="method-status-row" aria-label="方法論の位置づけ">
+        <span class="method-status historical">Historical foundation</span>
+        <span class="method-status clinical">Clinical reading framework</span>
+      </div>
+      <p class="method-context"><strong>現在の位置づけ：</strong>JAMA Users' Guidesは批判的吟味の考え方を学ぶ歴史的基盤です。この章にあるデータベース数やκ統計量などは、旧版の実践例を現在の絶対基準として用いず、<a href="https://www.prisma-statement.org/prisma-2020-checklist" target="_blank" rel="noopener noreferrer">PRISMA 2020</a>、<a href="https://www.equator-network.org/reporting-guidelines/prisma-s/" target="_blank" rel="noopener noreferrer">PRISMA-S</a>、Cochrane Handbook、AMSTAR 2などの現行資料と併せて読みます。</p>
 
       <!-- 臨床シナリオ -->
       <div class="jama-scenario">
@@ -3927,8 +3945,8 @@
           <li><strong>疑問を定式化する</strong>（PICO／PECO）<span class="jc-sub-item">患者・介入・対照・アウトカムを明示的に定義</span></li>
           <li><strong>適格基準を決める</strong><span class="jc-sub-item">研究デザイン・対象集団・介入の範囲・アウトカム</span></li>
           <li><strong>異質性を説明する事前仮説</strong><span class="jc-sub-item">サブグループ解析の方向性を事前に明文化</span></li>
-          <li><strong>系統的な文献検索</strong><span class="jc-sub-item">MEDLINE / EMBASE / Cochrane Central を最低限カバーし、検索語・期間・言語制限を明記</span></li>
-          <li><strong>タイトル・抄録・全文のスクリーニング</strong><span class="jc-sub-item">独立した 2 名以上で行い、κ統計量で一致度を評価</span></li>
+          <li><strong>系統的な文献検索</strong><span class="jc-sub-item">問いに適した情報源を選び、検索式・検索日・期間・言語制限・補足的検索を再現可能に報告</span></li>
+          <li><strong>タイトル・抄録・全文のスクリーニング</strong><span class="jc-sub-item">複数のレビュー著者による選択手順と、不一致の解決方法を明記</span></li>
           <li><strong>バイアスのリスク評価とデータ抽出</strong><span class="jc-sub-item">これも独立した 2 名以上で実施</span></li>
           <li><strong>効果推定値の統合</strong>（MA を行う場合）<span class="jc-sub-item">固定効果／変量効果モデルを適切に選択</span></li>
           <li><strong>異質性の評価</strong><span class="jc-sub-item">I²・Q 検定・事前仮説に基づくサブグループ解析</span></li>
@@ -3945,8 +3963,8 @@
         <div class="jc-sub">見ているのは「結果」ではなく「どう作られたか」です</div>
         <ol>
           <li><strong>臨床的に意味のある疑問が明確に設定されているか</strong><span class="jc-sub-item">P・I・C・O が絞られていて、臨床現場で遭遇する問いと一致するか</span></li>
-          <li><strong>検索は徹底かつ系統的か</strong><span class="jc-sub-item">複数データベース（MEDLINE / EMBASE / Cochrane Central）に加え、未公表データ・試験登録・引用追跡・専門家照会まで確認したか</span></li>
-          <li><strong>研究の選択と評価は再現可能か</strong><span class="jc-sub-item">独立した 2 名によるスクリーニング、κ統計量による一致度の報告</span></li>
+          <li><strong>検索は徹底かつ系統的か</strong><span class="jc-sub-item">問いに適したデータベース、試験登録、引用追跡、灰色文献などを組み合わせ、検索全体を再現可能に報告したか</span></li>
+          <li><strong>研究の選択と評価は再現可能か</strong><span class="jc-sub-item">複数のレビュー著者による選択・評価手順と、不一致の解決方法が報告されているか</span></li>
           <li><strong>1 次研究のバイアスリスクが適切に評価されたか</strong><span class="jc-sub-item">ランダム化・隠蔽化・盲検化・追跡・ITT などの主要ドメインを、個別研究ごとに判定しているか</span></li>
           <li><strong>研究間の結果のばらつき（異質性）の理由が探られているか</strong><span class="jc-sub-item">I²・視覚的評価・事前仮説に基づくサブグループ解析／メタ回帰</span></li>
           <li><strong>効果推定値の確実性（エビデンスの質）が等級付けされているか</strong><span class="jc-sub-item">GRADE に沿った評価が提示され、アウトカムごとに理由が明記されているか</span></li>
@@ -3969,7 +3987,7 @@
       <details class="jama-apply">
         <summary>Q2 — 検索は徹底的か</summary>
         <div class="ja-body">
-          <p>単一データベースだけの検索は不十分。<strong>最低 3 つの国際データベース</strong>（MEDLINE / EMBASE / Cochrane Central）に加え、以下をチェック：</p>
+          <p>検索の十分性は、データベースの数だけでは決まりません。レビューの問いに適した情報源を選び、検索式と検索日を再現可能に報告したうえで、必要に応じて次を確認します：</p>
           <ul>
             <li>学会抄録・会議録</li>
             <li>試験登録（ClinicalTrials.gov, WHO ICTRP）</li>
@@ -3982,10 +4000,10 @@
       </details>
 
       <details class="jama-apply">
-        <summary>Q3 — 選択と評価は再現可能か（κ統計量）</summary>
+        <summary>Q3 — 選択と評価は再現可能か</summary>
         <div class="ja-body">
           <p>スクリーニングとバイアスリスク評価は、<strong>独立した 2 名以上</strong>で行う必要があります。食い違いが出るのは当たり前で、それをどう解決したか（3 人目の裁定、議論）まで報告されるのが望ましい形です。</p>
-          <p>一致度は<span class="jterm">κ統計量<span class="jt-en">kappa</span></span>で定量化され、0.6 以上（実質的一致）が目安。κの報告がない SR は、選択バイアスの懸念が残ります。</p>
+          <p>κ統計量は一致度を補足的に示す方法の一つですが、現在の必須報告項目ではありません。読み手はκの有無だけで信頼性を決めず、複数名で独立して行った範囲、不一致の解決方法、除外理由が追跡できるかを確認します。</p>
         </div>
       </details>
 
@@ -4031,9 +4049,9 @@
               <p>バイアスのリスク／非一貫性（inconsistency）／非直接性（indirectness）／不精確性（imprecision）／出版バイアス</p>
             </div>
             <div class="jama-rec-card jrc-strong-for">
-              <span class="jrc-tag">上げる 3 要因</span>
+              <span class="jrc-tag">Core GRADE：上げる2要因</span>
               <div class="jrc-title">確実性を上げる（観察研究）</div>
-              <p>大きな効果量／用量反応性／交絡要因が効果を減弱させる方向に働く</p>
+              <p>大きな効果量／用量反応性。残存交絡の方向は旧GRADE資料にある要因で、Core GRADEの中核項目には含まれません。</p>
             </div>
           </div>
           <p>結果は <strong>高・中・低・非常に低</strong> の 4 段階で示されます（<a href="#" onclick="showPage(3);return false;" style="color:#1a5276;font-weight:700;">Ch3</a>）。</p>
@@ -4131,7 +4149,7 @@
           <strong>Q8</strong>：あなたの目の前の患者のベースラインリスクに当てはめた NNT／NNH が提示されているか。
         </p>
         <p>
-          この 8 項目をクリアして初めて、「SR／MAの結果を信じてよい」水準に達します。信じられる SR が得られたら、結果の大きさ・精度・患者への適用可能性は <a href="#" onclick="showPage(6);return false;" style="color:#1b5d35;font-weight:700;">Ch6（JAMA UG Ch23統合）</a> で評価します。
+          この8項目は、SR／MAの信頼性を短時間で点検するための歴史的な質問枠組みです。機械的な合否判定には使わず、現在の報告指針・評価ツールで不足情報と重要な方法上の懸念を確認します。そのうえで、結果の大きさ・精度・患者への適用可能性は <a href="#" onclick="showPage(6);return false;" style="color:#1b5d35;font-weight:700;">Ch6（JAMA UG Ch23統合）</a> で評価します。
         </p>
       </div>
 
@@ -4533,7 +4551,7 @@
 <script src="js/references.js?v=8.0"></script>
 <script src="js/mid-explorer.js?v=7.2"></script>
 <script src="js/trustworthy-check.js?v=7.2"></script>
-<script src="js/amstar2.js?v=7.2"></script>
+<script src="js/amstar2.js?v=7.3"></script>
 <script src="js/linkedin-feed.js?v=7.2"></script>
 
 <!-- ページ切替後のインタラクティブ要素リフレッシュ＋文書構造マップタブ -->
