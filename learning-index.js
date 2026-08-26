@@ -34,6 +34,38 @@
     { id: 'new-methods', title: '新しい／発展中の方法', description: 'estimand-aware synthesis、living evidence、AI、transportabilityを区別して読む。', tags: ['estimand', 'statistics', 'causal-inference', 'meta-analysis'] }
   ];
 
+  const zones = [
+    { id: 'ebm-basic', title: 'EBM BASIC' },
+    { id: 'main-map', title: 'EBM → GRADE MAIN MAP' },
+    { id: 'topics', title: 'TOPICS' },
+    { id: 'resources', title: 'RESOURCES' }
+  ];
+
+  const mapStages = [
+    { id: 'question', title: 'PICO' },
+    { id: 'outcomes', title: '重要アウトカム' },
+    { id: 'synthesis', title: '批判的吟味→SR・メタ分析' },
+    { id: 'certainty', title: '確実性' },
+    { id: 'sof', title: 'SoF' },
+    { id: 'etd', title: 'EtD' },
+    { id: 'recommendation', title: '推奨' },
+    { id: 'apply-assess', title: 'Apply・Assess' },
+    { id: 'overview', title: '全体像' }
+  ];
+
+  const topicGroups = [
+    { id: 'T1', title: 'T1 Core GRADE' },
+    { id: 'T2', title: 'T2 非RCT・観察研究・因果推論' },
+    { id: 'T3', title: 'T3 定性研究・CERQual' },
+    { id: 'T4', title: 'T4 メタ分析・NMA' },
+    { id: 'T5', title: 'T5 がんアウトカム・生存時間' },
+    { id: 'T6', title: 'T6 CPG・SRの信頼性' },
+    { id: 'T7', title: 'T7 単一推定値なし・特殊な統合' },
+    { id: 'T8', title: 'T8 Guyatt方法論' },
+    { id: 'T9', title: 'T9 統計学・新しい方法' },
+    { id: 'T10', title: 'T10 日本のCPG事例' }
+  ];
+
   const synonymGroups = [
     ['mid', 'mcid', 'mic', '最小重要差', '最小臨床的重要差', 'minimal important difference'],
     ['imprecision', '不精確さ', 'precision', 'confidence interval', '信頼区間', 'ci'],
@@ -65,6 +97,9 @@
   const level = document.getElementById('learning-index-level');
   const status = document.getElementById('learning-index-status');
   const author = document.getElementById('learning-index-author');
+  const zone = document.getElementById('learning-index-zone');
+  const mapStage = document.getElementById('learning-index-map-stage');
+  const topicGroup = document.getElementById('learning-index-topic-group');
   const stage = document.getElementById('learning-index-stage');
   const topic = document.getElementById('learning-index-topic');
   const resultCount = document.getElementById('learning-index-result-count');
@@ -88,7 +123,7 @@
 
   function itemText(item) {
     return normalize([
-      item.titleJa, item.titleEn, item.summaryJa, ...(item.aliases || []), ...(item.topics || []), ...(item.documentTypes || []), ...(item.authors || [])
+      item.titleJa, item.titleEn, item.summaryJa, item.primaryPlacement, item.mapStage, item.navLabel, ...(item.aliases || []), ...(item.topics || []), ...(item.topicGroups || []), ...(item.documentTypes || []), ...(item.authors || [])
     ].join(' '));
   }
 
@@ -108,6 +143,9 @@
       level: level.value,
       status: status.value,
       author: author.value,
+      zone: zone.value,
+      mapStage: mapStage.value,
+      topicGroup: topicGroup.value,
       stage: stage.value,
       topic: topic.value
     };
@@ -121,6 +159,12 @@
     const hasGuyatt = (item.authors || []).some((name) => normalize(name).includes('guyatt'));
     if (selected.author === 'Guyatt' && !hasGuyatt) return false;
     if (selected.author === 'not-guyatt' && hasGuyatt) return false;
+    if (selected.zone) {
+      const placements = [item.primaryPlacement, ...(item.relatedPlacements || [])].filter(Boolean);
+      if (!placements.some((value) => value === selected.zone || value.startsWith(selected.zone + '.'))) return false;
+    }
+    if (selected.mapStage && item.mapStage !== selected.mapStage) return false;
+    if (selected.topicGroup && !(item.topicGroups || []).includes(selected.topicGroup)) return false;
     if (selected.stage) {
       const chosen = workflow.find((definition) => definition.id === selected.stage);
       if (chosen && !chosen.stages.some((stageName) => (item.workflowStages || []).includes(stageName))) return false;
@@ -240,11 +284,17 @@
     level.value = parameters.get('level') || '';
     status.value = parameters.get('status') || '';
     author.value = parameters.get('author') || '';
+    zone.value = parameters.get('zone') || '';
+    mapStage.value = parameters.get('mapStage') || '';
+    topicGroup.value = parameters.get('topicGroup') || '';
     stage.value = parameters.get('stage') || '';
     topic.value = parameters.get('topic') || '';
     setView(parameters.get('view') || (window.location.hash === '#topics' ? 'topics' : 'workflow'), false);
   }
 
+  populateSelect(zone, zones);
+  populateSelect(mapStage, mapStages);
+  populateSelect(topicGroup, topicGroups);
   populateSelect(stage, workflow);
   populateSelect(topic, topics);
   restoreQueryState();

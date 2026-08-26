@@ -12,6 +12,7 @@
 <meta property="og:description" content="GRADEに基づき、診療ガイドラインとシステマティックレビューを読むための学習サイト。">
 <link rel="stylesheet" href="style.css?v=7.3">
 <link rel="stylesheet" href="style-cpgsr.css?v=9.1">
+<link rel="stylesheet" href="ebm-grade-map.css?v=1.0">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -46,65 +47,99 @@
       <span class="sidebar-learning-note">各章は学習の入口です。章内の詳細解説・関連資料・演習も開いてください。</span>
     </div>
     <ul class="toc-list" id="tocList">
-      <li class="toc-item"><button class="toc-btn active" data-idx="0" data-content-id="home"><span class="toc-num">0</span><span class="toc-text">まずここからお読みください<span class="en">Start here</span></span></button></li>
+      <details class="nav-zone" open>
+        <summary><span><span class="nav-zone-label">START</span><span class="nav-zone-title">最初に全体像を見る</span></span></summary>
+        <ul>
+          <li class="toc-item"><button class="toc-btn active" data-idx="0" data-content-id="home"><span class="toc-num">0</span><span class="toc-text">EBMからGRADEへ：全体マップ<span class="en">Start here</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-idx="24" data-content-id="beginner-primer"><span class="toc-num">入</span><span class="toc-text">EBM・SR・CPG 徹底解説<span class="en">Beginner's Primer</span></span></button></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="learning-index.html" data-content-id="learning-index"><span class="toc-num">索</span><span class="toc-text">学習索引<span class="en">Learning index</span></span></a></li>
+        </ul>
+      </details>
 
-      <li class="toc-section toc-section-major">まずここから勉強しよう</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="24" data-content-id="beginner-primer"><span class="toc-num">📚</span><span class="toc-text">EBM・SR・CPG 徹底解説<span class="en">Beginner's Primer</span></span></button></li>
-      <li class="toc-item"><a class="toc-btn toc-link" href="learning-index.html" data-content-id="learning-index"><span class="toc-num">⌕</span><span class="toc-text">索引：論文を読む順番／トピック・Guyattから探す<span class="en">Learning index</span></span></a></li>
+      <details class="nav-zone" open>
+        <summary><span><span class="nav-zone-label">EBM BASIC</span><span class="nav-zone-title">GRADEへ進む前の土台</span></span></summary>
+        <ul>
+          <li class="toc-item"><button class="toc-btn" data-content-id="ebm-basics-hub"><span class="toc-num">E1</span><span class="toc-text">EBMの基本<span class="en">EBM basics</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="1" data-content-id="ebm-cpg-sr-basics"><span class="toc-num">旧1</span><span class="toc-text">EBMとCPG・SRの読み方<span class="en">EBM & Reading CPGs/SRs</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="ebm-critical-appraisal"><span class="toc-num">E2</span><span class="toc-text">批判的吟味<span class="en">Critical appraisal</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn jama-toc" data-idx="25" data-content-id="jama-sr-ma"><span class="toc-num">旧21</span><span class="toc-text">SR／MAの方法を監査する<span class="toc-detail">JAMA Users' Guidesの質問</span><span class="en">JAMA UG: SR/MA</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="map-ebm-crosswalk"><span class="toc-num">E3</span><span class="toc-text">EBM 5A × Core GRADE<span class="en">Crosswalk</span></span></button></li>
+        </ul>
+      </details>
 
-      <li class="toc-section toc-section-major">CPG・SRポイント解説集</li>
-      <li class="toc-section">Part I — EBM・GRADEの全体像</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="1" data-content-id="ebm-cpg-sr-basics"><span class="toc-num">1</span><span class="toc-text">EBMとCPG・SRの読み方<span class="en">EBM & Reading CPGs/SRs</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="2" data-content-id="grade-overview"><span class="toc-num">2</span><span class="toc-text">GRADEアプローチの概要<span class="en">Overview of GRADE</span></span></button></li>
+      <details class="nav-zone" open>
+        <summary><span><span class="nav-zone-label">MAIN MAP</span><span class="nav-zone-title">EBMからGRADEへ図の順に学ぶ</span></span></summary>
+        <ul>
+          <li class="toc-item"><button class="toc-btn" data-idx="2" data-content-id="grade-overview"><span class="toc-num">全</span><span class="toc-text">GRADEアプローチの概要<span class="en">Overview of GRADE</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="map-clinical-question"><span class="toc-num">1</span><span class="toc-text">Clinical Question（PICO）<span class="en">MAP 1</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="map-important-outcomes"><span class="toc-num">2</span><span class="toc-text">重要アウトカム<span class="en">MAP 2</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="map-evidence-synthesis"><span class="toc-num">橋</span><span class="toc-text">批判的吟味→SR・メタ分析<span class="en">BRIDGE</span></span></button></li>
 
-      <li class="toc-section">Part II — 推奨の理解</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="3" data-content-id="certainty-levels"><span class="toc-num">3</span><span class="toc-text">エビデンスの確実性4段階<span class="en">Four Levels of Certainty</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="4" data-content-id="recommendation-strength"><span class="toc-num">4</span><span class="toc-text">強い推奨 vs 条件付き推奨 ＋ GPS<span class="en">Strong vs Conditional + GPS</span></span></button></li>
+          <li class="toc-subgroup">MAP 3　エビデンスの確実性</li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="map-certainty"><span class="toc-num">3</span><span class="toc-text">確実性評価の全体像<span class="en">Certainty hub</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="3" data-content-id="certainty-levels"><span class="toc-num">旧3</span><span class="toc-text">確実性4段階と開始点<span class="en">Certainty levels</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="8" data-content-id="risk-of-bias"><span class="toc-num">旧8</span><span class="toc-text">Risk of Bias<span class="en">Risk of Bias</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="9" data-content-id="inconsistency"><span class="toc-num">旧9</span><span class="toc-text">不一致性<span class="en">Inconsistency</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="10" data-content-id="indirectness"><span class="toc-num">旧10</span><span class="toc-text">非直接性<span class="en">Indirectness</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="11" data-content-id="imprecision"><span class="toc-num">旧11</span><span class="toc-text">不精確さ<span class="en">Imprecision</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="12" data-content-id="dissemination-bias"><span class="toc-num">旧12</span><span class="toc-text">Dissemination bias<span class="en">Missing evidence</span></span></button></li>
 
-      <li class="toc-section">Part III — SoF・効果・閾値</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="5" data-content-id="summary-of-findings"><span class="toc-num">5</span><span class="toc-text">SoF表・Evidence Profileの読み方<span class="en">Reading SoF Tables</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="6" data-content-id="effect-measures-absolute"><span class="toc-num">6</span><span class="toc-text">メタ分析・相対効果と絶対効果<span class="en">Meta-analysis / Relative vs Absolute</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="7" data-content-id="thresholds-mid"><span class="toc-num">7</span><span class="toc-text">閾値とMID<span class="en">Thresholds & MID</span></span></button></li>
+          <li class="toc-subgroup">SoF　効果の大きさと確実性</li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="map-sof"><span class="toc-num">S</span><span class="toc-text">SoFの全体像<span class="en">Summary of findings</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="6" data-content-id="effect-measures-absolute"><span class="toc-num">旧6</span><span class="toc-text">相対効果と絶対効果<span class="en">Relative / Absolute</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="7" data-content-id="thresholds-mid"><span class="toc-num">旧7</span><span class="toc-text">閾値とMID<span class="en">Thresholds & MID</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="5" data-content-id="summary-of-findings"><span class="toc-num">旧5</span><span class="toc-text">SoF表・Evidence Profile<span class="en">SoF tables</span></span></button></li>
 
-      <li class="toc-section">Part IV — 確実性が下がる5要因</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="8" data-content-id="risk-of-bias"><span class="toc-num">8</span><span class="toc-text">Risk of Bias（RCT＋観察研究）<span class="en">Risk of Bias</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="9" data-content-id="inconsistency"><span class="toc-num">9</span><span class="toc-text">不一致性<span class="en">Inconsistency</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="10" data-content-id="indirectness"><span class="toc-num">10</span><span class="toc-text">非直接性<span class="en">Indirectness</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="11" data-content-id="imprecision"><span class="toc-num">11</span><span class="toc-text">不精確さ<span class="en">Imprecision</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="12" data-content-id="dissemination-bias"><span class="toc-num">12</span><span class="toc-text">Dissemination bias<span class="en">Dissemination bias</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="map-etd"><span class="toc-num">4</span><span class="toc-text">Evidence to Decision<span class="en">MAP 4 EtD</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="map-recommendation"><span class="toc-num">5</span><span class="toc-text">推奨の方向と強さ<span class="en">MAP 5</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="4" data-content-id="recommendation-strength"><span class="toc-num">旧4</span><span class="toc-text">強い推奨と条件付き推奨<span class="en">Recommendation strength</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-content-id="map-recommendation-patterns"><span class="toc-num">4型</span><span class="toc-text">4つの推奨パターン<span class="en">Four patterns</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="map-apply-assess"><span class="toc-num">6</span><span class="toc-text">Apply・Assess<span class="en">MAP 6</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="19" data-content-id="clinical-applicability"><span class="toc-num">旧19</span><span class="toc-text">患者への適用<span class="en">Applicability</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="20" data-content-id="values-shared-decision"><span class="toc-num">旧20</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
+        </ul>
+      </details>
 
-      <li class="toc-section">Part V — 多様な研究デザインのSR</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="13" data-content-id="nrsi-systematic-review"><span class="toc-num">13</span><span class="toc-text">非RCT・観察研究のSR＋詳細学習<span class="toc-detail">詳細：観察研究・がんアウトカム</span><span class="en">NRSI / Oncology Deep Dive</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="14" data-content-id="qualitative-cerqual"><span class="toc-num">14</span><span class="toc-text">定性的研究のSR — CERQual<span class="en">Qualitative SR</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="15" data-content-id="alternative-recommendations"><span class="toc-num">15</span><span class="toc-text">単一推定値なし／GPS／ネットベネフィット<span class="en">Alternative recommendations</span></span></button></li>
+      <details class="nav-zone">
+        <summary><span><span class="nav-zone-label">TOPICS</span><span class="nav-zone-title">図に無理に入れない詳細分野</span></span></summary>
+        <ul>
+          <li class="toc-item"><button class="toc-btn" data-content-id="topics-index"><span class="toc-num">T</span><span class="toc-text">TOPICS一覧<span class="en">Topics index</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-content-id="topic-core-grade"><span class="toc-num">T1</span><span class="toc-text">Core GRADEとは<span class="en">Working Group / GRADE Book</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-idx="13" data-content-id="nrsi-systematic-review"><span class="toc-num">T2</span><span class="toc-text">非RCT・観察研究・因果推論<span class="en">NRSI / Causal inference</span></span></button></li>
+          <li class="toc-item is-child"><a class="toc-btn toc-link" href="non-rct-observational-studies.html" data-content-id="nonrct-observational"><span class="toc-num">詳</span><span class="toc-text">非RCT・観察研究を詳しく読む<span class="en">Deep dive</span></span></a></li>
+          <li class="toc-item is-child"><a class="toc-btn toc-link" href="non-rct-observational-studies.html#13a-title" data-content-id="nonrct-target-trial"><span class="toc-num">TT</span><span class="toc-text">target trialとtime zero<span class="en">Target trial</span></span></a></li>
+          <li class="toc-item is-child"><a class="toc-btn toc-link" href="non-rct-observational-studies.html#13e-title" data-content-id="nonrct-propensity-score"><span class="toc-num">PS</span><span class="toc-text">傾向スコアと調整診断<span class="en">Propensity scores</span></span></a></li>
+          <li class="toc-item is-child"><a class="toc-btn toc-link" href="advanced-statistics.html#causal-variable-selection" data-content-id="advanced-causal-variables"><span class="toc-num">DAG</span><span class="toc-text">因果効果を読む変数選択<span class="en">Causal variables</span></span></a></li>
+          <li class="toc-item"><button class="toc-btn" data-idx="14" data-content-id="qualitative-cerqual"><span class="toc-num">T3</span><span class="toc-text">定性研究・CERQual<span class="en">Qualitative evidence</span></span></button></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="meta-analysis-methods.html" data-content-id="meta-analysis-methods"><span class="toc-num">T4</span><span class="toc-text">メタ分析・NMA<span class="en">Meta-analysis</span></span></a></li>
+          <li class="toc-item is-child"><button class="toc-btn jama-toc" data-idx="26" data-content-id="jama-network-meta-analysis"><span class="toc-num">NMA</span><span class="toc-text">ネットワークメタアナリシス<span class="en">JAMA UG</span></span></button></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="oncology-outcomes.html" data-content-id="oncology-outcomes"><span class="toc-num">T5</span><span class="toc-text">がんアウトカム・生存時間<span class="en">Oncology outcomes</span></span></a></li>
+          <li class="toc-item is-child"><a class="toc-btn toc-link" href="advanced-statistics.html#survival" data-content-id="advanced-survival"><span class="toc-num">HR</span><span class="toc-text">HR・非比例ハザード・RMST<span class="en">Survival methods</span></span></a></li>
+          <li class="toc-item"><button class="toc-btn" data-idx="16" data-content-id="trustworthy-cpg"><span class="toc-num">T6</span><span class="toc-text">CPG・SRの信頼性<span class="en">Trustworthiness</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="17" data-content-id="cpg-quality-examples"><span class="toc-num">旧17</span><span class="toc-text">CPG品質の実例<span class="en">CPG examples</span></span></button></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="18" data-content-id="sr-reporting-and-appraisal"><span class="toc-num">旧18</span><span class="toc-text">AMSTAR 2・PRISMA・ROBIS<span class="en">Appraisal / reporting / RoB</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-idx="15" data-content-id="alternative-recommendations"><span class="toc-num">T7</span><span class="toc-text">単一推定値なし・GPS・net benefit<span class="en">Alternative decisions</span></span></button></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="guyatt-methodology-atlas.html" data-content-id="guyatt-methodology-atlas"><span class="toc-num">T8</span><span class="toc-text">Guyatt方法論<span class="en">Methods atlas</span></span></a></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-idx="22" data-content-id="guyatt-lectures"><span class="toc-num">講</span><span class="toc-text">Guyatt先生講演<span class="en">Educational lectures</span></span></button></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="advanced-statistics.html" data-content-id="advanced-statistics"><span class="toc-num">T9</span><span class="toc-text">統計学・新しい方法<span class="en">Statistics / new methods</span></span></a></li>
+          <li class="toc-item is-child"><a class="toc-btn toc-link" href="advanced-statistics.html#estimand" data-content-id="advanced-estimand"><span class="toc-num">Est</span><span class="toc-text">estimand<span class="en">Estimand</span></span></a></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="japan-cpg-tohoho.html" data-content-id="japanese-cpg-pitfalls"><span class="toc-num">T10</span><span class="toc-text">日本のCPG事例<span class="en">Japanese CPG cases</span></span></a></li>
+          <li class="toc-item is-child"><button class="toc-btn" data-content-id="legacy-japanese-cpg-pitfalls"><span class="toc-num">旧</span><span class="toc-text">本邦CPGトホホ集（旧URL）<span class="en">Legacy route</span></span></button></li>
+        </ul>
+      </details>
 
-      <li class="toc-section">Part VI — CPG信頼性評価</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="16" data-content-id="trustworthy-cpg"><span class="toc-num">16</span><span class="toc-text">⭐ 信頼できるCPGの6つの質問<span class="en">6 Questions for Trustworthy CPG</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="17" data-content-id="cpg-quality-examples"><span class="toc-num">17</span><span class="toc-text">CPG品質の実例（NCCN/IOM/日本）<span class="en">CPG Quality Examples</span></span></button></li>
-      <li class="toc-item"><a class="toc-btn toc-link" href="japan-cpg-tohoho.html" data-content-id="japanese-cpg-pitfalls"><span class="toc-num">特</span><span class="toc-text">本邦CPGトホホ集<span class="en">Japanese CPG Pitfalls</span></span></a></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="18" data-content-id="sr-reporting-and-appraisal"><span class="toc-num">18</span><span class="toc-text">AMSTAR 2（16項目）・PRISMA 2020（27項目）<span class="en">AMSTAR 2 / PRISMA 2020</span></span></button></li>
-
-      <li class="toc-section">Part VII — 診療現場で活かす</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="19" data-content-id="clinical-applicability"><span class="toc-num">19</span><span class="toc-text">患者への適用<span class="en">Applicability</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="20" data-content-id="values-shared-decision"><span class="toc-num">20</span><span class="toc-text">共同意思決定と価値観<span class="en">SDM & Values</span></span></button></li>
-
-      <li class="toc-section toc-section-major">Part VIIの関連詳細学習</li>
-      <li class="toc-item toc-item-external"><a class="toc-external-link" href="advanced-statistics.html"><span class="toc-num" aria-hidden="true">↗</span><span class="toc-text">統計学・因果推論の詳細学習<span class="toc-detail">推定・CI・モデルを読む。非RCTの因果設計とアウトカムの患者重要性へもつなぐ</span><span class="en">Statistics / Causal Inference Deep Dive</span></span></a></li>
-      <li class="toc-section">Part VIII — 📘 JAMA ユーザーズガイド（要約）</li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="25" data-content-id="jama-sr-ma"><span class="toc-num">21</span><span class="toc-text">SR／MAの方法を監査する：JAMA Users' Guidesの質問<span class="toc-detail">既存Ch1・Ch6・Ch8-12を横断する要約</span><span class="en">JAMA UG: SR/MA Questions</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn jama-toc" data-idx="26" data-content-id="jama-network-meta-analysis"><span class="toc-num">22</span><span class="toc-text">ネットワークメタアナリシス<span class="en">JAMA UG Ch24: NMA</span></span></button></li>
-
-      <li class="toc-section">Part IX — 付録</li>
-      <li class="toc-item"><button class="toc-btn" data-idx="21" data-content-id="glossary-qa"><span class="toc-num">23</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary & Q&A</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="22" data-content-id="guyatt-lectures"><span class="toc-num">24</span><span class="toc-text">Guyatt先生講演<span class="en">Guyatt Lectures</span></span></button></li>
-      <li class="toc-item"><button class="toc-btn" data-idx="23" data-content-id="references"><span class="toc-num">25</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
-
-      <li class="toc-section toc-section-major">さらに深く勉強するために</li>
-      <li class="toc-item"><a class="toc-btn toc-link" href="advanced-statistics.html" data-content-id="advanced-statistics"><span class="toc-num">数</span><span class="toc-text">統計学・因果推論<span class="toc-detail">推定対象・CI・設計・統合</span><span class="en">Statistics & Causal Inference</span></span></a></li>
-      <li class="toc-item"><a class="toc-btn toc-link" href="non-rct-observational-studies.html" data-content-id="nonrct-observational"><span class="toc-num">観</span><span class="toc-text">非RCT・観察研究<span class="toc-detail">因果質問・交絡・調整</span><span class="en">Non-randomized Studies</span></span></a></li>
-      <li class="toc-item"><a class="toc-btn toc-link" href="oncology-outcomes.html" data-content-id="oncology-outcomes"><span class="toc-num">癌</span><span class="toc-text">がんアウトカム<span class="toc-detail">生存・PRO・代替指標</span><span class="en">Oncology Outcomes</span></span></a></li>
-      <li class="toc-item"><a class="toc-btn toc-link" href="meta-analysis-methods.html" data-content-id="meta-analysis-methods"><span class="toc-num">MA</span><span class="toc-text">メタ分析の数理と現代的方法<span class="en">Meta-analysis Methods</span></span></a></li>
-      <li class="toc-item"><a class="toc-btn toc-link" href="guyatt-methodology-atlas.html" data-content-id="guyatt-methodology-atlas"><span class="toc-num">G</span><span class="toc-text">Guyatt方法論アトラス<span class="en">Methods Atlas</span></span></a></li>
+      <details class="nav-zone">
+        <summary><span><span class="nav-zone-label">RESOURCES</span><span class="nav-zone-title">索引・用語集・文献・演習</span></span></summary>
+        <ul>
+          <li class="toc-item"><button class="toc-btn" data-content-id="resources-index"><span class="toc-num">R</span><span class="toc-text">RESOURCES一覧<span class="en">Resources index</span></span></button></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="learning-index.html" data-content-id="learning-index"><span class="toc-num">索</span><span class="toc-text">学習索引<span class="en">Learning index</span></span></a></li>
+          <li class="toc-item"><button class="toc-btn" data-idx="21" data-content-id="glossary-qa"><span class="toc-num">語</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary</span></span></button></li>
+          <li class="toc-item"><button class="toc-btn" data-idx="23" data-content-id="references"><span class="toc-num">文</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="y-sensei-ebm-practice-links.html"><span class="toc-num">Y</span><span class="toc-text">Y先生のEBM実践リンク集<span class="en">Practice links</span></span></a></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="https://mxe050.github.io/GRADE-tanken/" target="_blank" rel="noopener"><span class="toc-num">演</span><span class="toc-text">GRADE 探検<span class="en">Practice site</span></span></a></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="https://chatgpt.com/g/g-6a085bf7d5bc8191970e6c5eb8949a09-zhen-liao-kaitorainxin-lai-xing-tietukagpt" target="_blank" rel="noopener"><span class="toc-num">AI</span><span class="toc-text">既存CPGチェックGPT<span class="en">CPG checker</span></span></a></li>
+        </ul>
+      </details>
     </ul>
   </nav>
 
@@ -127,27 +162,53 @@
       <div class="reader-cover">
         <h1>診療ガイドライン・システマティックレビュー <br>の<span style="color:#ffcc80;">読み方</span> ガイド</h1>
         <div class="sub">— すべての医療関係者のための、GRADE準拠の読み手向け解説 —</div>
+        <section class="home-learning-map" aria-labelledby="ebm-grade-map-title">
+          <h2 id="ebm-grade-map-title">EBMからGRADEへ：全体学習マップ</h2>
+          <p class="home-learning-map-intro">EBMの批判的吟味と意思決定の流れが、GRADEの確実性評価、SoF、EtD、推奨へどうつながるかを示します。図の領域を押すと、対応する学習ハブへ進みます。</p>
+          <div class="ebm-grade-map-shell">
+            <img src="images/ebm-grade-map.png" width="941" height="1672" alt="EBMからGRADEへ進む学習の全体像。批判的吟味、システマティックレビュー、PICO、重要アウトカム、確実性評価、SoF、EtD、推奨、EBMの5ステップとの対応を示す。下に同じ項目のリンク一覧があります。">
+            <a class="ebm-grade-hotspot is-secondary" href="#ebm-basics-hub" data-map-target="ebm-basics-hub" data-mobile-overlay="false" style="--left:1.7%;--top:18.122%;--width:15.303%;--height:9.27%;" aria-label="EBM以前とEBMの歴史を開く"><span class="ebm-grade-hotspot-label">01 EBM以前／EBMの歴史</span></a>
+            <a class="ebm-grade-hotspot is-secondary" href="#ebm-critical-appraisal" data-map-target="ebm-critical-appraisal" data-mobile-overlay="false" style="--left:18.066%;--top:18.122%;--width:15.94%;--height:9.27%;" aria-label="批判的吟味を開く"><span class="ebm-grade-hotspot-label">02 批判的吟味</span></a>
+            <a class="ebm-grade-hotspot is-secondary" href="#map-evidence-synthesis" data-map-target="map-evidence-synthesis" data-mobile-overlay="false" style="--left:35.494%;--top:18.122%;--width:14.878%;--height:9.27%;" aria-label="システマティックレビューとメタアナリシスを開く"><span class="ebm-grade-hotspot-label">03 SR／メタ分析</span></a>
+            <a class="ebm-grade-hotspot is-secondary" href="#map-apply-assess" data-map-target="map-apply-assess" data-mobile-overlay="false" style="--left:52.285%;--top:18.122%;--width:13.177%;--height:9.27%;" aria-label="EBMの意思決定を開く"><span class="ebm-grade-hotspot-label">04 EBMの意思決定</span></a>
+            <a class="ebm-grade-hotspot is-secondary" href="#page-2" data-map-target="grade-overview" data-mobile-overlay="false" style="--left:66.738%;--top:18.122%;--width:14.134%;--height:9.27%;" aria-label="GRADEの概要を開く"><span class="ebm-grade-hotspot-label">05 GRADE</span></a>
+            <a class="ebm-grade-hotspot is-secondary" href="#topic-core-grade" data-map-target="topic-core-grade" data-mobile-overlay="false" style="--left:82.359%;--top:18.122%;--width:16.047%;--height:9.27%;" aria-label="Core GRADEとはを開く"><span class="ebm-grade-hotspot-label">06 Core GRADE</span></a>
+            <a class="ebm-grade-hotspot" href="#map-clinical-question" data-map-target="map-clinical-question" data-mobile-overlay="true" style="--left:0.85%;--top:29.964%;--width:30.074%;--height:16.089%;" aria-label="MAP 1 Clinical Question、PICOを開く"><span class="ebm-grade-hotspot-label">07 MAP 1 PICO</span></a>
+            <a class="ebm-grade-hotspot" href="#map-important-outcomes" data-map-target="map-important-outcomes" data-mobile-overlay="true" style="--left:31.562%;--top:29.964%;--width:22.742%;--height:16.089%;" aria-label="MAP 2 重要アウトカムを開く"><span class="ebm-grade-hotspot-label">08 MAP 2 重要アウトカム</span></a>
+            <a class="ebm-grade-hotspot" href="#map-certainty" data-map-target="map-certainty" data-mobile-overlay="true" style="--left:55.048%;--top:29.964%;--width:43.889%;--height:16.627%;" aria-label="MAP 3 エビデンスの確実性評価を開く"><span class="ebm-grade-hotspot-label">09 MAP 3 確実性</span></a>
+            <a class="ebm-grade-hotspot" href="#map-sof" data-map-target="map-sof" data-mobile-overlay="true" style="--left:0.85%;--top:46.591%;--width:30.181%;--height:17.703%;" aria-label="SoF、効果の大きさと確実性を開く"><span class="ebm-grade-hotspot-label">10 SoF</span></a>
+            <a class="ebm-grade-hotspot" href="#map-etd" data-map-target="map-etd" data-mobile-overlay="true" style="--left:31.456%;--top:46.651%;--width:67.481%;--height:17.644%;" aria-label="MAP 4 Evidence to Decisionを開く"><span class="ebm-grade-hotspot-label">11 MAP 4 EtD</span></a>
+            <a class="ebm-grade-hotspot" href="#map-recommendation" data-map-target="map-recommendation" data-mobile-overlay="true" style="--left:0.85%;--top:64.952%;--width:60.574%;--height:12.919%;" aria-label="MAP 5 推奨の方向と強さを開く"><span class="ebm-grade-hotspot-label">12 MAP 5 推奨</span></a>
+            <a class="ebm-grade-hotspot" href="#map-recommendation-patterns" data-map-target="map-recommendation-patterns" data-mobile-overlay="true" style="--left:62.168%;--top:64.952%;--width:36.769%;--height:13.098%;" aria-label="4つの推奨パターンを開く"><span class="ebm-grade-hotspot-label">13 4つの推奨パターン</span></a>
+            <a class="ebm-grade-hotspot" href="#map-ebm-crosswalk" data-map-target="map-ebm-crosswalk" data-mobile-overlay="true" style="--left:0.85%;--top:78.349%;--width:98.087%;--height:15.012%;" aria-label="MAP 6 EBM 5ステップとCore GRADEを開く"><span class="ebm-grade-hotspot-label">14 MAP 6 EBM 5A × Core GRADE</span></a>
+          </div>
+          <div class="ebm-grade-map-actions">
+            <button type="button" class="ebm-grade-map-zoom" onclick="openLearningMap(this)">図を拡大して読む</button>
+          </div>
+          <nav class="ebm-grade-map-links" aria-label="図と同じ学習項目">
+            <h3>図の文字が押しにくい場合はこちら</h3>
+            <ol>
+              <li><a href="#ebm-basics-hub" data-content-target="ebm-basics-hub"><span class="ebm-grade-map-link-no">01</span>EBM以前／EBMの歴史</a></li>
+              <li><a href="#ebm-critical-appraisal" data-content-target="ebm-critical-appraisal"><span class="ebm-grade-map-link-no">02</span>批判的吟味</a></li>
+              <li><a href="#map-evidence-synthesis" data-content-target="map-evidence-synthesis"><span class="ebm-grade-map-link-no">03</span>システマティックレビュー／メタアナリシス</a></li>
+              <li><a href="#map-apply-assess" data-content-target="map-apply-assess"><span class="ebm-grade-map-link-no">04</span>EBMの意思決定</a></li>
+              <li><a href="#page-2" data-content-target="grade-overview"><span class="ebm-grade-map-link-no">05</span>GRADE</a></li>
+              <li><a href="#topic-core-grade" data-content-target="topic-core-grade"><span class="ebm-grade-map-link-no">06</span>Core GRADEとは</a></li>
+              <li><a href="#map-clinical-question" data-content-target="map-clinical-question"><span class="ebm-grade-map-link-no">07</span>MAP 1 Clinical Question（PICO）</a></li>
+              <li><a href="#map-important-outcomes" data-content-target="map-important-outcomes"><span class="ebm-grade-map-link-no">08</span>MAP 2 重要アウトカム</a></li>
+              <li><a href="#map-certainty" data-content-target="map-certainty"><span class="ebm-grade-map-link-no">09</span>MAP 3 エビデンスの確実性評価</a></li>
+              <li><a href="#map-sof" data-content-target="map-sof"><span class="ebm-grade-map-link-no">10</span>SoF・効果の大きさ・確実性</a></li>
+              <li><a href="#map-etd" data-content-target="map-etd"><span class="ebm-grade-map-link-no">11</span>MAP 4 Evidence to Decision</a></li>
+              <li><a href="#map-recommendation" data-content-target="map-recommendation"><span class="ebm-grade-map-link-no">12</span>MAP 5 推奨の方向と強さ</a></li>
+              <li><a href="#map-recommendation-patterns" data-content-target="map-recommendation-patterns"><span class="ebm-grade-map-link-no">13</span>4つの推奨パターン</a></li>
+              <li><a href="#map-ebm-crosswalk" data-content-target="map-ebm-crosswalk"><span class="ebm-grade-map-link-no">14</span>MAP 6 EBM 5ステップ × Core GRADE</a></li>
+            </ol>
+          </nav>
+        </section>
         <div class="pitch">
           日々の診療で <strong>ガイドラインを読み、SRを参照し、推奨を目の前の患者に適用する</strong> ために必要な知識を、Gordon Guyatt先生らのUsers' Guidesシリーズ、GRADE最新方法論、閾値・MID、信頼できるCPGの6つの質問、AMSTAR 2／PRISMA 2020までを1つにまとめた読み手専用のサイトです。<br><br>
           <span class="cover-primer-read-note">次のページの「まずここから勉強しよう：EBM・SR・CPG 徹底解説」を学習した後は、実際のSR・CPGを読みながら、興味があるところ、わからないところをお読みください。</span>
         </div>
-        <!-- ===== 初学者向け導入ブロック（v1.2追加） ===== -->
-        <div class="beginner-intro-block">
-          <div class="beginner-intro-title">
-            <span class="beginner-intro-icon">🎓</span>
-            <span>この図が理解できるようになるまで、繰り返し勉強しましょう。</span>
-          </div>
-
-          <!-- ===== Core GRADE全体像サムネイル（v1.5追加・v1.8で小型化＋モバイルパン対応） ===== -->
-          <div class="cpg-overview-block">
-            <div class="cpg-overview-title">📊 診療ガイドライン（システマティックレビューに基づく）全体像</div>
-            <button type="button" class="cpg-overview-thumb-btn" onclick="openCPGOverview()" aria-label="全体像を拡大表示">
-              <img class="cpg-overview-thumb-img" src="images/core-grade-overview.png?v=7.2" alt="Core GRADEアプローチ — 診療ガイドライン：エビデンスから推奨へ1枚で理解" loading="lazy" />
-            </button>
-            <div class="cpg-overview-thumb-hint">🔍 タップで拡大 — スマホはスワイプで移動</div>
-          </div>
-        </div>
-
         <!-- ===== 姉妹サイト（GRADE-tanken）誘導ブロック（v1.7追加） ===== -->
         <div class="beginner-intro-block" style="background:linear-gradient(135deg,#fff4e6 0%,#fff8ed 100%);border-color:#f3d08a;margin-top:20px;">
           <div class="beginner-intro-title" style="color:#7a4b10;">
@@ -198,6 +259,232 @@
         ✅ 臨床的に重要な差（MID／閾値）の意味が分かる<br>
         ✅ AMSTAR 2（批判的吟味）とPRISMA 2020（報告の透明性）の役割を分けてSRを読める
       </div>
+    </div>
+
+    <!-- ============ Additive learning hubs: EBM BASIC / MAIN MAP / TOPICS / RESOURCES ============ -->
+    <div class="page map-hub-page map-zone-ebm" id="ebm-basics-hub" data-content-id="ebm-basics-hub">
+      <header class="map-hub-hero">
+        <p class="map-hub-kicker">EBM BASIC / E1</p>
+        <h2>EBM BASIC：GRADEへ進む前の土台</h2>
+        <p class="map-hub-lead">GRADEはEBMと別の流れではありません。最良の研究エビデンス、臨床専門性、患者の価値観・選好、臨床状況を統合して判断するEBMの延長上で、確実性評価と推奨作成を透明にします。</p>
+      </header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>いま読んでいるものは原著、SR、CPGのどれか。誰が、どの判断のために、どの種類のエビデンスを必要としているか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>EBMは論文の結果だけを機械的に適用する方法ではありません。Ask、Acquire、Appraise、Apply、Assessを通じて、研究の妥当性と結果を読み、目の前の患者の状況・価値観と統合します。SRは複数研究を体系的にまとめ、CPGはそのエビデンスを推奨へつなぎます。</p></section>
+      <section class="map-hub-section"><h3>詳しく学ぶ</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-1" data-content-target="ebm-cpg-sr-basics"><strong>EBMとCPG・SRの読み方</strong><span>原著、SR、CPGの役割と、読み手が最初に確認する問い。</span></a>
+        <a class="map-hub-card" href="#page-25" data-content-target="beginner-primer"><strong>初学者向け徹底解説</strong><span>EBM、SR、CPG、GRADEを順番に学び直す。</span></a>
+        <a class="map-hub-card" href="#ebm-critical-appraisal" data-content-target="ebm-critical-appraisal"><strong>批判的吟味</strong><span>妥当性、結果、適用可能性を分けて読む。</span></a>
+        <a class="map-hub-card" href="#map-ebm-crosswalk" data-content-target="map-ebm-crosswalk"><strong>EBM 5A × Core GRADE</strong><span>EBMの作業とGRADE工程の対応を確認する。</span></a>
+      </div></section>
+      <nav class="map-hub-flow" aria-label="前後の学習段階"><a href="#page-0" data-content-target="home">全体図</a><span class="map-hub-flow-separator">→</span><a href="#ebm-critical-appraisal" data-content-target="ebm-critical-appraisal">批判的吟味</a><span class="map-hub-flow-separator">→</span><a href="#map-clinical-question" data-content-target="map-clinical-question">MAP 1 PICO</a></nav>
+    </div>
+
+    <div class="page map-hub-page map-zone-ebm" id="ebm-critical-appraisal" data-content-id="ebm-critical-appraisal">
+      <header class="map-hub-hero"><p class="map-hub-kicker">EBM BASIC / E2</p><h2>批判的吟味：妥当性・結果・適用可能性</h2><p class="map-hub-lead">研究方法が妥当か、結果はどの程度か、その結果を自分の患者へ適用できるかを、順番を崩さずに確認します。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>結果を歪めるバイアスは何か。効果の大きさと不確かさは何か。対象患者・介入・比較・アウトカムは臨床疑問と合うか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>統計学的有意差から読み始めると、設計上の問題を見落とします。まずMethodsとプロトコルで妥当性を確認し、次に効果量と95%信頼区間を読み、最後にベースラインリスク、負担、価値観を含めて適用可能性を考えます。</p></section>
+      <section class="map-hub-section"><h3>詳しく学ぶ</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-26" data-content-target="jama-sr-ma"><strong>JAMA Users' Guides：SR／MAを監査する</strong><span>検索、選択、Risk of Bias、統合の妥当性を確認する。</span></a>
+        <a class="map-hub-card" href="#page-8" data-content-target="risk-of-bias"><strong>Risk of Bias</strong><span>結果が歪む経路を、研究とアウトカムごとに読む。</span></a>
+        <a class="map-hub-card" href="advanced-statistics.html"><strong>統計学・因果推論</strong><span>効果指標、CI、設計、モデルの仮定を深掘りする。</span></a>
+        <a class="map-hub-card" href="#page-20" data-content-target="clinical-applicability"><strong>患者への適用</strong><span>外的妥当性と個別判断を区別する。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page" id="map-clinical-question" data-content-id="map-clinical-question">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / MAP 1</p><h2>Clinical Question（PICO）</h2><p class="map-hub-lead">よい答えを探す前に、誰に、何を、何と比べ、何が起きるかを、時間軸と設定まで含めて定めます。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>Population、Intervention、Comparator、Outcomeは何か。追跡期間、診療設定、効果修飾、推定したい治療効果は明示されているか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>PICOは検索語を作るだけの枠ではありません。研究の選択、重要アウトカム、estimand、非直接性、推奨の対象範囲を決める出発点です。観察研究では、比較開始時点と治療方針をそろえるtarget trialの発想にもつながります。</p></section>
+      <section class="map-hub-section"><h3>詳しく学ぶ</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-1" data-content-target="ebm-cpg-sr-basics"><strong>臨床疑問と文書種別</strong><span>原著・SR・CPGのどれが問いに答えるか。</span></a>
+        <a class="map-hub-card" href="#page-2" data-content-target="grade-overview"><strong>GRADEの全体像</strong><span>PICOから確実性・推奨までを一続きに見る。</span></a>
+        <a class="map-hub-card" href="advanced-statistics.html#estimand"><strong>estimand</strong><span>何の効果を推定するのかを明示する。</span></a>
+        <a class="map-hub-card" href="non-rct-observational-studies.html#13a-title"><strong>target trialとtime zero</strong><span>非RCTで比較の出発点をそろえる。</span></a>
+      </div></section>
+      <nav class="map-hub-flow" aria-label="前後の学習段階"><a href="#ebm-critical-appraisal" data-content-target="ebm-critical-appraisal">批判的吟味</a><span class="map-hub-flow-separator">→</span><a href="#map-important-outcomes" data-content-target="map-important-outcomes">MAP 2 重要アウトカム</a></nav>
+    </div>
+
+    <div class="page map-hub-page map-zone-certainty" id="map-important-outcomes" data-content-id="map-important-outcomes">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / MAP 2</p><h2>重要アウトカムを決める</h2><p class="map-hub-lead">患者にとっての生存、症状、機能、生活の質、重大な害を先に置き、測りやすい代替指標と区別します。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>このアウトカムは患者に重要か。意思決定を変えるcritical outcomeか。利益と害の双方、時間軸、測定方法、欠測は扱われているか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>重要アウトカムは、結果を見た後で都合よく選びません。患者の価値観・選好を踏まえて事前に定め、surrogateしかない場合は患者重要アウトカムへのつながりと非直接性を明示します。</p></section>
+      <section class="map-hub-section"><h3>詳しく学ぶ</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-5" data-content-target="summary-of-findings"><strong>SoF表</strong><span>アウトカムごとの効果と確実性を読む。</span></a>
+        <a class="map-hub-card" href="oncology-outcomes.html"><strong>がんアウトカム</strong><span>OS、PFS、PRO、害、surrogateを患者重要性から読む。</span></a>
+        <a class="map-hub-card" href="#page-14" data-content-target="qualitative-cerqual"><strong>定性研究・CERQual</strong><span>患者・医療者の経験や受容性を扱う。</span></a>
+        <a class="map-hub-card" href="#page-21" data-content-target="values-shared-decision"><strong>価値観・選好</strong><span>アウトカムの重みづけを個別判断へつなぐ。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page" id="map-evidence-synthesis" data-content-id="map-evidence-synthesis">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / BRIDGE</p><h2>批判的吟味からSR・メタ分析へ</h2><p class="map-hub-lead">個別研究の結果を並べるだけではSRになりません。事前の問い、検索、選択、Risk of Bias、統合可能性を一つの方法として確認します。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>研究を再現可能に探し、選び、批判的に吟味したか。同じestimandを統合しているか。異質性と欠測エビデンスを説明できるか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>メタ分析はSRの一部であり、計算を行っただけではSRの信頼性は保証されません。統合しない判断も含め、プロトコル、適格基準、各研究の効果推定値、Risk of Bias、モデルと仮定を追います。</p></section>
+      <section class="map-hub-section"><h3>詳しく学ぶ</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-26" data-content-target="jama-sr-ma"><strong>SR／MAの方法を監査する</strong><span>JAMA Users' Guidesの問いで読む。</span></a>
+        <a class="map-hub-card" href="#page-18" data-content-target="sr-reporting-and-appraisal"><strong>PRISMA・AMSTAR 2・ROBIS</strong><span>報告、批判的吟味、Risk of Biasを区別する。</span></a>
+        <a class="map-hub-card" href="meta-analysis-methods.html"><strong>メタ分析の数理と現代的方法</strong><span>重み、異質性、稀なイベント、NMAを深掘りする。</span></a>
+        <a class="map-hub-card" href="#page-28" data-content-target="jama-network-meta-analysis"><strong>ネットワークメタアナリシス</strong><span>直接・間接比較とtransitivityを読む。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-certainty" id="map-certainty" data-content-id="map-certainty">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / MAP 3</p><h2>エビデンスの確実性評価</h2><p class="map-hub-lead">確実性は研究1本の格付けではなく、重要アウトカムごとの効果推定値について、真の効果が判断閾値のどちら側または範囲内にある確信です。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>どのアウトカム、どの効果指標、どの閾値を対象に確実性を評価したか。評価を下げた、または上げた理由は効果推定値と結びついているか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>RCTか非RCTかで開始点を確認し、Risk of Bias、不一致性、非直接性、不精確さ、publication/dissemination biasを明示的に判断します。非RCTで上げる場合はlarge effectとdose-responseを検討し、アウトカムごとに結論を残します。</p></section>
+      <section class="map-hub-section"><h3>6つの入口</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-3" data-content-target="certainty-levels"><strong>開始点と4段階</strong><span>High、Moderate、Low、Very lowの意味。</span></a>
+        <a class="map-hub-card" href="#page-8" data-content-target="risk-of-bias"><strong>Risk of Bias</strong><span>結果が歪む経路。</span></a>
+        <a class="map-hub-card" href="#page-9" data-content-target="inconsistency"><strong>不一致性</strong><span>研究間の効果の違い。</span></a>
+        <a class="map-hub-card" href="#page-10" data-content-target="indirectness"><strong>非直接性</strong><span>PICO・estimand・surrogateのずれ。</span></a>
+        <a class="map-hub-card" href="#page-11" data-content-target="imprecision"><strong>不精確さ</strong><span>CIと意思決定閾値。</span></a>
+        <a class="map-hub-card" href="#page-12" data-content-target="dissemination-bias"><strong>Dissemination bias</strong><span>欠けた研究・結果・解析。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-sof" id="map-sof" data-content-id="map-sof">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / SoF</p><h2>SoF：効果の大きさと確実性をまとめる</h2><p class="map-hub-lead">SoFは単なる結論表ではありません。重要アウトカムごとに、相対効果、絶対効果、95%信頼区間、確実性、脚注を結びます。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>効果量は患者に意味のある絶対差で示されているか。ベースラインリスク、時間軸、MID・閾値、確実性の理由を同じ行で追えるか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>相対効果だけでは患者への影響を読めません。適切なベースラインリスクから絶対効果へ変換し、CIが判断閾値をまたぐかを確認し、アウトカムごとのcertaintyと脚注を添えてEtDへ渡します。</p></section>
+      <section class="map-hub-section"><h3>詳しく学ぶ</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-6" data-content-target="effect-measures-absolute"><strong>相対効果と絶対効果</strong><span>RR、OR、HR、RD、NNTを区別する。</span></a>
+        <a class="map-hub-card" href="#page-7" data-content-target="thresholds-mid"><strong>MID・意思決定閾値・CI</strong><span>判断が変わる線を事前に置く。</span></a>
+        <a class="map-hub-card" href="#page-5" data-content-target="summary-of-findings"><strong>SoF表・Evidence Profile</strong><span>効果と確実性をアウトカムごとに読む。</span></a>
+        <a class="map-hub-card" href="#page-11" data-content-target="imprecision"><strong>不精確さ</strong><span>CIが残す臨床判断の不確実性。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-etd" id="map-etd" data-content-id="map-etd">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / MAP 4</p><h2>Evidence to Decision（EtD）</h2><p class="map-hub-lead">SRとSoFだけで推奨は決まりません。エビデンスを、患者と社会の意思決定に必要な判断基準へ接続します。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>利益と害、その確実性、患者の価値観・選好、資源利用をどう判断したか。必要に応じて受容性、実行可能性、公平性をどう扱ったか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>Core GRADEでは、利益・害・負担、certainty、価値観・選好、資源を中核として考えます。受容性、実行可能性、公平性などは意思決定の種類と文脈に応じて追加します。基準の名前を並べるだけでなく、各判断の根拠と推奨への影響を残します。</p></section>
+      <section class="map-hub-section"><h3>判断をつなぐ</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-4" data-content-target="recommendation-strength"><strong>利益・害から推奨へ</strong><span>方向と強さを決める判断を読む。</span></a>
+        <a class="map-hub-card" href="#page-21" data-content-target="values-shared-decision"><strong>価値観・選好</strong><span>患者間のばらつきとSDM。</span></a>
+        <a class="map-hub-card" href="#page-14" data-content-target="qualitative-cerqual"><strong>受容性・実行可能性のエビデンス</strong><span>定性的エビデンスを読む。</span></a>
+        <a class="map-hub-card" href="#page-15" data-content-target="alternative-recommendations" data-content-anchor="alternative-net-benefit"><strong>net benefit・特殊な意思決定</strong><span>単純な単一推定値で表せない場面。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-recommendation" id="map-recommendation" data-content-id="map-recommendation">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / MAP 5</p><h2>推奨の方向と強さ</h2><p class="map-hub-lead">「推奨する／しない」という方向と、「強い／条件付き」という強さは別の軸です。certaintyだけで強さを決めません。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>推奨の対象、介入、比較、方向、強さが明確か。EtDのどの判断が方向と強さを支え、どの患者では条件が変わるか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>方向は望ましい影響と望ましくない影響のバランスに関係し、強さは多くの患者に同じ選択を勧められる確信に関係します。条件付き推奨は「弱い研究」という意味ではなく、価値観や状況で最適選択が変わり得ることを示します。</p></section>
+      <section class="map-hub-section"><h3>詳しく学ぶ</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-4" data-content-target="recommendation-strength"><strong>強い推奨と条件付き推奨</strong><span>患者・臨床家・政策への含意を読む。</span></a>
+        <a class="map-hub-card" href="#map-recommendation-patterns" data-content-target="map-recommendation-patterns"><strong>4つの推奨パターン</strong><span>方向2通り × 強さ2通り。</span></a>
+        <a class="map-hub-card" href="#page-15" data-content-target="alternative-recommendations" data-content-anchor="alternative-gps"><strong>Good Practice Statement</strong><span>エビデンスがないからGPS、ではない。</span></a>
+        <a class="map-hub-card" href="guyatt-methodology-atlas.html"><strong>Guyatt方法論アトラス</strong><span>推奨に関する原著と現行資料をたどる。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-recommendation" id="map-recommendation-patterns" data-content-id="map-recommendation-patterns">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / MAP 5</p><h2>4つの推奨パターン</h2><p class="map-hub-lead">推奨の方向と強さを別々に定めることで、4つの基本パターンを読み分けます。</p></header>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>基本は、強く推奨する、条件付きで推奨する、条件付きで推奨しない、強く推奨しない、の4つです。文言だけでなく、対象集団、例外、代替選択肢、EtDの根拠を合わせて読みます。</p></section>
+      <section class="map-hub-section"><h3>4つを混同しない</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-4" data-content-target="recommendation-strength"><strong>強く推奨する</strong><span>ほとんどの患者に望ましい選択となる。</span></a>
+        <a class="map-hub-card" href="#page-4" data-content-target="recommendation-strength"><strong>条件付きで推奨する</strong><span>多くでは望ましいが、価値観や状況で選択が変わる。</span></a>
+        <a class="map-hub-card" href="#page-4" data-content-target="recommendation-strength"><strong>条件付きで推奨しない</strong><span>多くでは選ばないが、一部では合理的になり得る。</span></a>
+        <a class="map-hub-card" href="#page-4" data-content-target="recommendation-strength"><strong>強く推奨しない</strong><span>ほとんどの患者で望ましくない選択となる。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-ebm" id="map-ebm-crosswalk" data-content-id="map-ebm-crosswalk">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / MAP 6</p><h2>EBM 5A × Core GRADE</h2><p class="map-hub-lead">Ask、Acquire、Appraise、Apply、Assessの各作業が、PICO、重要アウトカム、確実性、SoF、EtD、推奨とどう対応するかを確認します。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>GRADEの表や推奨を読む作業が、EBMのどの段階を支えているか。推奨を患者へ適用した後、結果と判断をどう振り返るか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>AskはPICO、Acquireは重要アウトカムとSRの探索、Appraiseは批判的吟味とcertainty、ApplyはEtDと共同意思決定、Assessは実装後の評価と更新へ対応します。Core GRADEはEBM全体を置き換えるものではなく、比較エビデンスの要約と推奨判断を明確にする方法です。</p></section>
+      <section class="map-hub-section"><h3>対応を詳しく読む</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-1" data-content-target="ebm-cpg-sr-basics"><strong>Ask・Acquire</strong><span>臨床疑問と文書種別を定める。</span></a>
+        <a class="map-hub-card" href="#map-certainty" data-content-target="map-certainty"><strong>Appraise</strong><span>効果推定値とcertaintyを読む。</span></a>
+        <a class="map-hub-card" href="#page-20" data-content-target="clinical-applicability"><strong>Apply</strong><span>患者のリスク・負担・状況へ適用する。</span></a>
+        <a class="map-hub-card" href="#page-16" data-content-target="trustworthy-cpg"><strong>Assess</strong><span>推奨の根拠の鎖と更新可能性を監査する。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-ebm" id="map-apply-assess" data-content-id="map-apply-assess">
+      <header class="map-hub-hero"><p class="map-hub-kicker">MAIN MAP / MAP 6</p><h2>Apply・Assess：推奨を患者に使い、振り返る</h2><p class="map-hub-lead">集団への推奨と患者個別の最適選択は同じではありません。適用し、共同で決め、結果を振り返ります。</p></header>
+      <section class="map-hub-question"><h3>この段階で答える問い</h3><p>この患者のベースラインリスク、価値観、負担、併存症、実行可能性は研究集団とどう違うか。適用後に利益・害・負担をどう評価するか。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>Applyでは、絶対効果と患者の価値観を使って選択肢を説明します。Assessでは、実装できたか、期待した患者重要アウトカムが得られたか、新しいエビデンスで推奨を見直す必要があるかを確認します。</p></section>
+      <section class="map-hub-section"><h3>詳しく学ぶ</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#page-20" data-content-target="clinical-applicability"><strong>患者への適用</strong><span>ベースラインリスクと直接性を確認する。</span></a>
+        <a class="map-hub-card" href="#page-21" data-content-target="values-shared-decision"><strong>共同意思決定</strong><span>患者の価値観・選好と選択肢を共有する。</span></a>
+        <a class="map-hub-card" href="#page-16" data-content-target="trustworthy-cpg"><strong>信頼できるCPG</strong><span>判断の鎖を6つの問いで追う。</span></a>
+        <a class="map-hub-card" href="#page-17" data-content-target="cpg-quality-examples"><strong>CPG品質の実例</strong><span>形式と実質を事例で見分ける。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-topics" id="topics-index" data-content-id="topics-index">
+      <header class="map-hub-hero"><p class="map-hub-kicker">TOPICS</p><h2>図に入りきらない方法論を探す</h2><p class="map-hub-lead">研究デザインや専門領域をGRADE工程へ無理に押し込まず、独立した入口から深く学びます。</p></header>
+      <section class="map-hub-section"><h3>10のトピック</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="#topic-core-grade" data-content-target="topic-core-grade"><strong>T1 Core GRADEとは</strong><span>Working Group、GRADE Book、人物、資料状態。</span></a>
+        <a class="map-hub-card" href="#page-13" data-content-target="nrsi-systematic-review"><strong>T2 非RCT・観察研究・因果推論</strong><span>target trial、交絡、調整、GRADE。</span></a>
+        <a class="map-hub-card" href="#page-14" data-content-target="qualitative-cerqual"><strong>T3 定性研究・CERQual</strong><span>経験、受容性、実行可能性。</span></a>
+        <a class="map-hub-card" href="meta-analysis-methods.html"><strong>T4 メタ分析・NMA</strong><span>数理、仮定、発展的方法。</span></a>
+        <a class="map-hub-card" href="oncology-outcomes.html"><strong>T5 がんアウトカム・生存時間</strong><span>OS、PFS、PRO、害、surrogate。</span></a>
+        <a class="map-hub-card" href="#page-16" data-content-target="trustworthy-cpg"><strong>T6 CPG・SRの信頼性</strong><span>根拠の鎖、報告、批判的吟味、RoB。</span></a>
+        <a class="map-hub-card" href="#page-15" data-content-target="alternative-recommendations"><strong>T7 単一推定値なし・特殊な統合</strong><span>SWiM、GPS、net benefit。</span></a>
+        <a class="map-hub-card" href="guyatt-methodology-atlas.html"><strong>T8 Guyatt方法論</strong><span>原著、現行guidance、講演を区別する。</span></a>
+        <a class="map-hub-card" href="advanced-statistics.html"><strong>T9 統計学・新しい方法</strong><span>estimand、因果、Bayesian、AI、transportability。</span></a>
+        <a class="map-hub-card" href="japan-cpg-tohoho.html"><strong>T10 日本のCPG事例</strong><span>国内CPGを教育用事例で読む。</span></a>
+      </div></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-topics" id="topic-core-grade" data-content-id="topic-core-grade">
+      <header class="map-hub-hero"><p class="map-hub-kicker">TOPICS / T1</p><h2>Core GRADEとは：GRADE Working Group、GRADE Book、Schünemann、Guyattの関係</h2><p class="map-hub-lead">人物を権威ランキングや対立する流派として並べず、どの組織が公式方法を共同開発し、各資料がどの位置づけにあるかを整理します。</p></header>
+      <section class="map-hub-question"><h3>最初に押さえること</h3><p>GRADEは個人が所有する方法ではありません。2000年に始まった国際的なGRADE Working Groupが、certainty of evidenceとstrength of recommendationsを透明に評価する共通方法を共同で開発・更新しています。</p></section>
+      <section class="map-hub-summary"><h3>60秒要約</h3><p>GRADE Working Groupが共同開発の母体です。GRADE Guidance Group（G3）は運営・方向・説明責任を支え、GRADE Bookは公式のliving resourceとして現行資料を整理します。Core GRADEは2025年にBMJで公表された7論文シリーズで、比較介入のエビデンス要約と個人患者の推奨に必要な中核判断へ焦点を当てます。GuyattとSchünemannは、役割の異なる主要貢献者であり、対立する二つのGRADE流派ではありません。</p></section>
+      <section class="map-hub-section"><h3>資料と役割を区別する</h3><div class="source-status-grid">
+        <article class="source-status-item"><span class="source-status-badge">CURRENT OFFICIAL GUIDANCE</span><h4>GRADE Working Group / G3</h4><p>Working Groupが公式方法を共同開発します。G3は実行委員会として方針、説明責任、プロジェクト承認を支えます。</p></article>
+        <article class="source-status-item"><span class="source-status-badge">OFFICIAL LIVING RESOURCE</span><h4>GRADE Book</h4><p>GRADE Working Groupの公式living resourceです。現行・一部更新・旧版という資料状態を区別して使います。</p></article>
+        <article class="source-status-item"><span class="source-status-badge">PEER-REVIEWED METHODS</span><h4>Core GRADE 2025</h4><p>7論文でPICO、certainty、SoF、EtD、推奨の中核判断を実用的に整理します。GRADE Bookそのものではありません。</p></article>
+        <article class="source-status-item"><span class="source-status-badge">HISTORICAL FOUNDATION</span><h4>EBM / Users' Guides / 旧Handbook</h4><p>方法論の歴史的基盤です。発行時点を確認し、現行official guidanceと自動的に同一視しません。</p></article>
+        <article class="source-status-item"><span class="source-status-badge">EDUCATIONAL LECTURE</span><h4>Guyatt・Schünemannらの講演</h4><p>理解を助ける重要な教育資料ですが、個人講演だけでWorking Groupの現行公式guidanceとは断定しません。</p></article>
+        <article class="source-status-item"><span class="source-status-badge">SITE EDUCATIONAL FIGURE</span><h4>本サイトの教育用整理図</h4><p>複雑な関係を学習用に整理した図です。公式GRADE Book掲載図とは表示しません。</p></article>
+      </div></section>
+      <section class="map-hub-section"><h3>GuyattとSchünemannの位置づけ</h3><div class="map-hub-card-grid">
+        <article class="source-status-item"><h4>Gordon Guyatt</h4><p>EBMの主要な先駆者で、GRADE方法論の主要貢献者です。2025年Core GRADEシリーズの中心著者の一人です。論文・講演は重要ですが、個人発言が自動的にWorking Groupの現行公式guidanceになるわけではありません。</p></article>
+        <article class="source-status-item"><h4>Holger Schünemann</h4><p>GRADE方法論・運営・教育の主要貢献者で、GRADE Bookの編集・現行体系化、G3を通じた公式開発過程に関与しています。</p></article>
+      </div><div class="core-grade-relationship"><strong>関係：</strong>EBMとUsers' Guidesの発展 → Guyattを含む多数の方法論家 → GRADE Working Groupによる共同開発 → G3、GRADE Book、公式guidance papers、Core GRADE 2025という複数の資料形態。</div></section>
+      <section class="map-hub-section" aria-label="移動したCore GRADE教育用図">
+        <p><span class="source-status-badge">SITE EDUCATIONAL FIGURE</span> 以下は本サイトが学習用に整理した全体像です。公式GRADE Book掲載図としてではなく、既存教材の理解を助ける教育図として使用します。</p>
+        <!-- ===== 初学者向け導入ブロック（v1.2追加） ===== -->
+            <div class="beginner-intro-block">
+              <div class="beginner-intro-title">
+                <span class="beginner-intro-icon">🎓</span>
+                <span>この図が理解できるようになるまで、繰り返し勉強しましょう。</span>
+              </div>
+
+              <!-- ===== Core GRADE全体像サムネイル（v1.5追加・v1.8で小型化＋モバイルパン対応） ===== -->
+              <div class="cpg-overview-block">
+                <div class="cpg-overview-title">📊 診療ガイドライン（システマティックレビューに基づく）全体像</div>
+                <button type="button" class="cpg-overview-thumb-btn" onclick="openCPGOverview()" aria-label="全体像を拡大表示">
+                  <img class="cpg-overview-thumb-img" src="images/core-grade-overview.png?v=7.2" alt="Core GRADEアプローチ — 診療ガイドライン：エビデンスから推奨へ1枚で理解" loading="lazy" />
+                </button>
+                <div class="cpg-overview-thumb-hint">🔍 タップで拡大 — スマホはスワイプで移動</div>
+              </div>
+            </div>
+      </section>
+      <section class="map-hub-section"><h3>公式・一次資料</h3><p>最終確認日：2026-08-26</p><ul class="core-grade-sources">
+        <li><a href="https://www.gradeworkinggroup.org/" target="_blank" rel="noopener">GRADE Working Group official website</a> <span class="source-status-badge">CURRENT OFFICIAL GUIDANCE</span></li>
+        <li><a href="https://book.gradepro.org/about" target="_blank" rel="noopener">GRADE Book — About / How to use</a> <span class="source-status-badge">OFFICIAL LIVING RESOURCE</span></li>
+        <li><a href="https://book.gradepro.org/guideline/the-development-methods-of-grade" target="_blank" rel="noopener">GRADE Book — The development methods of GRADE</a> <span class="source-status-badge">OFFICIAL LIVING RESOURCE</span></li>
+        <li><a href="https://book.gradepro.org/guideline/the-history-and-evolution-of-grade" target="_blank" rel="noopener">GRADE Book — The history and evolution of GRADE</a> <span class="source-status-badge">OFFICIAL LIVING RESOURCE</span></li>
+        <li><a href="https://book.gradepro.org/map" target="_blank" rel="noopener">GRADE Living Map</a> <span class="source-status-badge">CURRENT OFFICIAL GUIDANCE</span></li>
+        <li><a href="https://www.bmj.com/content/389/bmj-2024-081903" target="_blank" rel="noopener">BMJ Core GRADE 1: overview</a> <span class="source-status-badge">PEER-REVIEWED METHODS</span></li>
+        <li><a href="https://www.bmj.com/content/389/bmj-2024-083867" target="_blank" rel="noopener">BMJ Core GRADE 7: moving from evidence to recommendations</a> <span class="source-status-badge">PEER-REVIEWED METHODS</span></li>
+      </ul></section>
+    </div>
+
+    <div class="page map-hub-page map-zone-topics" id="resources-index" data-content-id="resources-index">
+      <header class="map-hub-hero"><p class="map-hub-kicker">RESOURCES</p><h2>索引・用語集・文献・演習</h2><p class="map-hub-lead">章を順番に読む以外の入口をまとめます。用語から探す、一次資料へ戻る、実例で練習する、の目的で使い分けます。</p></header>
+      <section class="map-hub-section"><h3>常設リソース</h3><div class="map-hub-card-grid">
+        <a class="map-hub-card" href="learning-index.html"><strong>学習索引</strong><span>Zone、Map stage、Topic、文書種別、難易度から探す。</span></a>
+        <a class="map-hub-card" href="#page-22" data-content-target="glossary-qa"><strong>用語集・Q&A</strong><span>GRADE、SR、統計の用語を確認する。</span></a>
+        <a class="map-hub-card" href="#page-24" data-content-target="references"><strong>参考文献</strong><span>資料の種類と照合状態を確認する。</span></a>
+        <a class="map-hub-card" href="y-sensei-ebm-practice-links.html"><strong>Y先生のEBM実践リンク集</strong><span>講座と実践資料へ進む。</span></a>
+        <a class="map-hub-card" href="https://mxe050.github.io/GRADE-tanken/" target="_blank" rel="noopener"><strong>GRADE 探検</strong><span>実例を使って読み方を練習する。</span></a>
+        <a class="map-hub-card" href="https://chatgpt.com/g/g-6a085bf7d5bc8191970e6c5eb8949a09-zhen-liao-kaitorainxin-lai-xing-tietukagpt" target="_blank" rel="noopener"><strong>既存CPGチェックGPT</strong><span>CPGの問題点を自分の評価と比較する。</span></a>
+      </div></section>
     </div>
 
     <!-- ============ Ch1: EBM・CPG/SR入門 ============ -->
@@ -1103,7 +1390,7 @@
         </ol>
         <p>これらに該当しないのに低確実性＋強い推奨が出ているCPGは、<strong>信頼性に疑問</strong>があります。</p>
 
-        <h2>Good Practice Statement（GPS）</h2>
+        <h2 id="recommendation-gps">Good Practice Statement（GPS）</h2>
         <p>GPS [G4] は、<strong>形式的なエビデンスレビューなしに</strong>作られる推奨です。例：</p>
         <ul>
           <li>「患者に情報を十分に提供する」</li>
@@ -1991,7 +2278,7 @@
           <strong>要点：</strong>推奨は常に「SoF表＋GRADE」の形式とは限らない。<strong>Good Practice Statement（GPS）</strong>[G4]、<strong>単一推定値が統合できない場合</strong>[G6]、<strong>ネットベネフィット分析</strong>などのバリエーションを読み分ける。
         </div>
 
-        <h2>Good Practice Statement（GPS）</h2>
+        <h2 id="alternative-gps">Good Practice Statement（GPS）</h2>
         <p>GPS [G4] の適用条件：</p>
         <ul>
           <li>利益が明らかで、代替案が非倫理的・非合理</li>
@@ -2000,7 +2287,7 @@
         </ul>
         <p><strong>濫用の兆候</strong>：GPSが推奨の半数以上を占める／SRで容易に評価できる質問にGPSを使っている → GRADE評価の回避の可能性。</p>
 
-        <h2>単一推定値が統合できない場合（Murad 2017）</h2>
+        <h2 id="alternative-no-single-estimate">単一推定値が統合できない場合（Murad 2017）</h2>
         <p>[G6] はナラティブ統合でも確実性を評価する方法を示しています：</p>
         <ul>
           <li>効果の方向が一致するか</li>
@@ -2009,7 +2296,7 @@
           <li>結果の堅牢性</li>
         </ul>
 
-        <h2>ネットベネフィット分析</h2>
+        <h2 id="alternative-net-benefit">ネットベネフィット分析</h2>
         <p>ネットベネフィットの手順 2019 は、複数のアウトカムを統合した意思決定枠組み。利益の加重和と害の加重和を引き算する形式で、<strong>個別化された推奨</strong>を可能にします。Guyatt LinkedInでも推奨（"evidence-based decision-analytical approach"）。</p>
 
         <div class="chapter-nav">
@@ -4547,6 +4834,7 @@
 <!-- スクリプト -->
 <script src="coreGRADE_utils.js?v=7.2"></script>
 <script src="script.js?v=8.0"></script>
+<script src="ebm-grade-map.js?v=1.0"></script>
 <script src="js/glossary.js?v=7.2"></script>
 <script src="js/references.js?v=8.0"></script>
 <script src="js/mid-explorer.js?v=7.2"></script>
@@ -4630,6 +4918,19 @@ document.addEventListener('keydown', function(e){
 </script>
 
 <!-- ===== Core GRADE全体像 モーダル（v1.5追加） ===== -->
+<div id="learningMapModal" class="cpg-overview-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="learningMapModalTitle">
+  <div class="cpg-overview-modal-bar">
+    <span id="learningMapModalTitle" class="cpg-overview-modal-title">EBMからGRADEへ：全体学習マップ <span class="cpg-overview-modal-hint">— スワイプで移動・ピンチで拡大</span></span>
+    <div class="cpg-overview-modal-actions">
+      <button id="learningMapZoomBtn" type="button" class="cpg-overview-modal-btn" onclick="toggleLearningMapZoom()" aria-label="拡大または縮小">拡大</button>
+      <button type="button" class="cpg-overview-modal-btn" onclick="closeLearningMap()" aria-label="閉じる">閉じる</button>
+    </div>
+  </div>
+  <div class="cpg-overview-modal-body" onclick="closeLearningMap()">
+    <img id="learningMapModalImg" class="cpg-overview-modal-img learning-map-modal-img" src="images/ebm-grade-map.png" width="941" height="1672" alt="EBMからGRADEへの全体学習マップ" onclick="event.stopPropagation();toggleLearningMapZoom()">
+  </div>
+</div>
+
 <div id="cpgOverviewModal" class="cpg-overview-modal" role="dialog" aria-modal="true" aria-labelledby="cpgOverviewModalTitle">
   <div class="cpg-overview-modal-bar">
     <span id="cpgOverviewModalTitle" class="cpg-overview-modal-title">📊 全体像 <span class="cpg-overview-modal-hint">— スワイプで移動・ピンチで拡大</span></span>

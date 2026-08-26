@@ -78,8 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     tocButtons.forEach((button) => {
       const isCurrent = button.dataset.contentId === contentId;
       button.classList.toggle('active', isCurrent);
-      if (isCurrent) button.setAttribute('aria-current', 'page');
-      else button.removeAttribute('aria-current');
+      if (isCurrent) {
+        button.setAttribute('aria-current', 'page');
+        const zone = button.closest('.nav-zone');
+        if (zone) zone.open = true;
+      } else button.removeAttribute('aria-current');
     });
   }
 
