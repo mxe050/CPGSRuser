@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EBM→GRADE クリック可能マップ試作</title>
+<style>
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #102a43;
+  background: #f5f8fb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px; }
+main { max-width: 1080px; margin: 0 auto; }
+h1 { font-size: clamp(1.4rem, 3vw, 2.1rem); margin: 0 0 8px; }
+.lead { line-height: 1.8; margin: 0 0 18px; }
+.map-shell {
+  position: relative;
+  width: min(100%, 941px);
+  margin: 0 auto;
+  border: 1px solid #b7c7d8;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 30px rgba(16,42,67,.12);
+}
+.map-shell img { display: block; width: 100%; height: auto; }
+.map-hotspot {
+  position: absolute;
+  left: var(--left);
+  top: var(--top);
+  width: var(--width);
+  height: var(--height);
+  display: block;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: rgba(255,255,255,0);
+  text-decoration: none;
+  outline: none;
+}
+.map-hotspot:hover,
+.map-hotspot:focus-visible {
+  border-color: #005bbb;
+  background: rgba(0,91,187,.12);
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.85);
+  z-index: 10;
+}
+.map-hotspot.is-secondary:hover,
+.map-hotspot.is-secondary:focus-visible {
+  border-color: #d33;
+  background: rgba(211,51,51,.10);
+}
+.hotspot-badge {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 4px 7px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: .8rem;
+  color: white;
+  background: #005bbb;
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+.is-secondary .hotspot-badge { background: #c33; }
+.hotspot-tooltip {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: rgba(10,35,70,.92);
+  color: white;
+  font-size: clamp(.72rem, 1.4vw, .95rem);
+  font-weight: 700;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .15s ease, transform .15s ease;
+}
+.map-hotspot:hover .hotspot-badge,
+.map-hotspot:focus-visible .hotspot-badge,
+.map-hotspot:hover .hotspot-tooltip,
+.map-hotspot:focus-visible .hotspot-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+.map-links {
+  max-width: 941px;
+  margin: 18px auto 0;
+  padding: 16px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #ccd9e5;
+}
+.map-links h2 { font-size: 1.1rem; margin: 0 0 10px; }
+.map-links ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 8px;
+}
+.map-links a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 8px 10px;
+  border: 1px solid #d9e3ec;
+  border-radius: 10px;
+  color: #123a5a;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.map-links a:hover, .map-links a:focus-visible { border-color: #005bbb; background: #eef6ff; }
+.map-links a span {
+  flex: 0 0 auto;
+  width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: #123a5a; color: white;
+  font-size: .78rem;
+}
+.note { max-width: 941px; margin: 12px auto 0; font-size: .9rem; line-height: 1.7; color: #52677a; }
+@media (max-width: 720px) {
+  body { padding: 10px; }
+  .map-shell { border-radius: 10px; }
+  .map-hotspot[data-mobile-overlay="false"] { display: none; }
+  .hotspot-badge { min-width: 24px; min-height: 24px; font-size: .68rem; left: 3px; top: 3px; }
+  .hotspot-tooltip { display: none; }
+  .map-links ol { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>EBMからGRADEへ：クリック可能マップ試作</h1>
+  <p class="lead">画像上の領域にフォーカスまたはポインタを置くとリンク範囲が表示されます。モバイルでは小さな上段領域を画像上から外し、下の同等リンク一覧を主導線にします。</p>
+  <div class="map-shell" aria-label="EBMからGRADEへの学習マップ">
+    <img src="ebm-grade-map.png" width="941" height="1672"
+         alt="EBMの歴史、批判的吟味、システマティックレビュー、GRADE、Clinical Question、重要アウトカム、確実性評価、SoF、EtD、推奨、EBMの5ステップとCore GRADEの対応を示す学習図">
+      <a class="map-hotspot is-secondary" href="index.html#ebm-cpg-sr-basics" data-map-target="ebm-basics-hub" data-mobile-overlay="false"
+         style="--left:1.7%;--top:18.122%;--width:15.303%;--height:9.27%;" aria-label="EBM以前／EBMの歴史">
+        <span class="hotspot-badge">01</span>
+        <span class="hotspot-tooltip">EBM以前／EBMの歴史</span>
+      </a>
+      <a class="map-hotspot is-secondary" href="index.html#jama-sr-ma" data-map-target="ebm-critical-appraisal" data-mobile-overlay="false"
+         style="--left:18.066%;--top:18.122%;--width:15.94%;--height:9.27%;" aria-label="批判的吟味">
+        <span class="hotspot-badge">02</span>
+        <span class="hotspot-tooltip">批判的吟味</span>
+      </a>
+      <a class="map-hotspot is-secondary" href="meta-analysis-methods.html" data-map-target="map-evidence-synthesis" data-mobile-overlay="false"
+         style="--left:35.494%;--top:18.122%;--width:14.878%;--height:9.27%;" aria-label="システマティックレビュー／メタアナリシス">
+        <span class="hotspot-badge">03</span>
+        <span class="hotspot-tooltip">システマティックレビュー／メタアナリシス</span>
+      </a>
+      <a class="map-hotspot is-secondary" href="index.html#clinical-applicability" data-map-target="map-apply-assess" data-mobile-overlay="false"
+         style="--left:52.285%;--top:18.122%;--width:13.177%;--height:9.27%;" aria-label="EBMの意思決定">
+        <span class="hotspot-badge">04</span>
+        <span class="hotspot-tooltip">EBMの意思決定</span>
+      </a>
+      <a class="map-hotspot is-secondary" href="index.html#grade-overview" data-map-target="grade-overview" data-mobile-overlay="false"
+         style="--left:66.738%;--top:18.122%;--width:14.134%;--height:9.27%;" aria-label="GRADE">
+        <span class="hotspot-badge">05</span>
+        <span class="hotspot-tooltip">GRADE</span>
+      </a>
+      <a class="map-hotspot is-secondary" href="index.html#topic-core-grade" data-map-target="topic-core-grade" data-mobile-overlay="false"
+         style="--left:82.359%;--top:18.122%;--width:16.047%;--height:9.27%;" aria-label="Core GRADEとは">
+        <span class="hotspot-badge">06</span>
+        <span class="hotspot-tooltip">Core GRADEとは</span>
+      </a>
+      <a class="map-hotspot is-primary" href="index.html#map-clinical-question" data-map-target="map-clinical-question" data-mobile-overlay="true"
+         style="--left:0.85%;--top:29.964%;--width:30.074%;--height:16.089%;" aria-label="MAP 1 Clinical Question（PICO）">
+        <span class="hotspot-badge">07</span>
+        <span class="hotspot-tooltip">MAP 1 Clinical Question（PICO）</span>
+      </a>
+      <a class="map-hotspot is-primary" href="index.html#map-important-outcomes" data-map-target="map-important-outcomes" data-mobile-overlay="true"
+         style="--left:31.562%;--top:29.964%;--width:22.742%;--height:16.089%;" aria-label="MAP 2 重要アウトカム">
+        <span class="hotspot-badge">08</span>
+        <span class="hotspot-tooltip">MAP 2 重要アウトカム</span>
+      </a>
+      <a class="map-hotspot is-primary" href="index.html#certainty-levels" data-map-target="map-certainty" data-mobile-overlay="true"
+         style="--left:55.048%;--top:29.964%;--width:43.889%;--height:16.627%;" aria-label="MAP 3 エビデンスの確実性評価">
+        <span class="hotspot-badge">09</span>
+        <span class="hotspot-tooltip">MAP 3 エビデンスの確実性評価</span>
+      </a>
+      <a class="map-hotspot is-primary" href="index.html#summary-of-findings" data-map-target="map-sof" data-mobile-overlay="true"
+         style="--left:0.85%;--top:46.591%;--width:30.181%;--height:17.703%;" aria-label="SoF・効果の大きさ・確実性">
+        <span class="hotspot-badge">10</span>
+        <span class="hotspot-tooltip">SoF・効果の大きさ・確実性</span>
+      </a>
+      <a class="map-hotspot is-primary" href="index.html#map-etd" data-map-target="map-etd" data-mobile-overlay="true"
+         style="--left:31.456%;--top:46.651%;--width:67.481%;--height:17.644%;" aria-label="MAP 4 Evidence to Decision（EtD）">
+        <span class="hotspot-badge">11</span>
+        <span class="hotspot-tooltip">MAP 4 Evidence to Decision（EtD）</span>
+      </a>
+      <a class="map-hotspot is-primary" href="index.html#recommendation-strength" data-map-target="map-recommendation" data-mobile-overlay="true"
+         style="--left:0.85%;--top:64.952%;--width:60.574%;--height:12.919%;" aria-label="MAP 5 推奨の方向と強さ">
+        <span class="hotspot-badge">12</span>
+        <span class="hotspot-tooltip">MAP 5 推奨の方向と強さ</span>
+      </a>
+      <a class="map-hotspot is-primary" href="index.html#recommendation-strength" data-map-target="map-recommendation-patterns" data-mobile-overlay="true"
+         style="--left:62.168%;--top:64.952%;--width:36.769%;--height:13.098%;" aria-label="4つの推奨パターン">
+        <span class="hotspot-badge">13</span>
+        <span class="hotspot-tooltip">4つの推奨パターン</span>
+      </a>
+      <a class="map-hotspot is-primary" href="index.html#map-ebm-crosswalk" data-map-target="map-ebm-crosswalk" data-mobile-overlay="true"
+         style="--left:0.85%;--top:78.349%;--width:98.087%;--height:15.012%;" aria-label="MAP 6 EBM 5ステップ × Core GRADE">
+        <span class="hotspot-badge">14</span>
+        <span class="hotspot-tooltip">MAP 6 EBM 5ステップ × Core GRADE</span>
+      </a>
+  </div>
+  <nav class="map-links" aria-labelledby="map-links-title">
+    <h2 id="map-links-title">図の項目から開く</h2>
+    <ol>
+        <li><a href="index.html#ebm-cpg-sr-basics" data-map-target="ebm-basics-hub"><span>01</span>EBM以前／EBMの歴史</a></li>
+        <li><a href="index.html#jama-sr-ma" data-map-target="ebm-critical-appraisal"><span>02</span>批判的吟味</a></li>
+        <li><a href="meta-analysis-methods.html" data-map-target="map-evidence-synthesis"><span>03</span>システマティックレビュー／メタアナリシス</a></li>
+        <li><a href="index.html#clinical-applicability" data-map-target="map-apply-assess"><span>04</span>EBMの意思決定</a></li>
+        <li><a href="index.html#grade-overview" data-map-target="grade-overview"><span>05</span>GRADE</a></li>
+        <li><a href="index.html#topic-core-grade" data-map-target="topic-core-grade"><span>06</span>Core GRADEとは</a></li>
+        <li><a href="index.html#map-clinical-question" data-map-target="map-clinical-question"><span>07</span>MAP 1 Clinical Question（PICO）</a></li>
+        <li><a href="index.html#map-important-outcomes" data-map-target="map-important-outcomes"><span>08</span>MAP 2 重要アウトカム</a></li>
+        <li><a href="index.html#certainty-levels" data-map-target="map-certainty"><span>09</span>MAP 3 エビデンスの確実性評価</a></li>
+        <li><a href="index.html#summary-of-findings" data-map-target="map-sof"><span>10</span>SoF・効果の大きさ・確実性</a></li>
+        <li><a href="index.html#map-etd" data-map-target="map-etd"><span>11</span>MAP 4 Evidence to Decision（EtD）</a></li>
+        <li><a href="index.html#recommendation-strength" data-map-target="map-recommendation"><span>12</span>MAP 5 推奨の方向と強さ</a></li>
+        <li><a href="index.html#recommendation-strength" data-map-target="map-recommendation-patterns"><span>13</span>4つの推奨パターン</a></li>
+        <li><a href="index.html#map-ebm-crosswalk" data-map-target="map-ebm-crosswalk"><span>14</span>MAP 6 EBM 5ステップ × Core GRADE</a></li>
+    </ol>
+  </nav>
+  <p class="note">本番統合時は、同一HTML内の章には <code>window.showContent(contentId)</code> を使い、別HTMLページだけ通常リンクで開きます。画像だけに依存せず、下のリンク一覧を必ず残してください。</p>
+</main>
+<script>
+document.querySelectorAll('[data-map-target]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const target = link.dataset.mapTarget;
+    if (typeof window.showContent === 'function' && target) {
+      event.preventDefault();
+      window.showContent(target);
+    }
+  });
+});
+</script>
+</body>
+</html>

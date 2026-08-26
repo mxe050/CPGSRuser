@@ -9,6 +9,8 @@
 
 ## この改訂の考え方
 
+トップページの「EBMからGRADEへ」学習マップを中心に、教材への入口を `START`、`EBM BASIC`、`EBM → GRADE MAIN MAP`、`TOPICS`、`RESOURCES` の5区分へ再編しました。図中14領域と画像直下の同内容リンクから、既存25章と詳細ページへ移動できます。既存章は削除・短縮せず、本文の正本として維持しています。
+
 既存本文、図、表、動画、演習、外部リンク、旧ハッシュURLは保存します。改訂では、内容を短くする代わりに、安定したコンテンツID、索引、相互リンク、照合済み文献、詳細学習ページを追加します。
 
 - 本編は、臨床家が最初に確認する入口です。
@@ -97,6 +99,9 @@ data/references.json では、本文のクリック可能な正式引用を veri
 
 変更後は次を実行します。
 
+    node tools/verify-navigation-coverage.mjs
+    node tools/verify-link-preservation.mjs
+    node tools/verify-page-content.mjs
     node tools/verify-content-preservation.mjs
     node tools/verify-cpgsr.mjs
     node --check learning-index.js

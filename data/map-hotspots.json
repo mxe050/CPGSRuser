@@ -1,0 +1,225 @@
+{
+  "image": "ebm-grade-map.png",
+  "intrinsicSize": {
+    "width": 941,
+    "height": 1672
+  },
+  "implementation": "responsive-html-overlay",
+  "notes": [
+    "百分率座標。画像の表示幅に追随する。",
+    "primary はモバイルでも画像上に表示、secondary は狭い画面では下部リンク一覧を主導線にする。",
+    "統合時は targetContentId が存在すれば window.showContent(contentId) を使用し、未作成時だけ fallbackHref を使う。"
+  ],
+  "hotspots": [
+    {
+      "id": "flow-ebm-prior",
+      "number": "01",
+      "label": "EBM以前／EBMの歴史",
+      "targetContentId": "ebm-basics-hub",
+      "fallbackHref": "index.html#ebm-cpg-sr-basics",
+      "priority": "secondary",
+      "mobileOverlay": false,
+      "rectPct": {
+        "left": 1.7,
+        "top": 18.122,
+        "width": 15.303,
+        "height": 9.27
+      }
+    },
+    {
+      "id": "flow-critical-appraisal",
+      "number": "02",
+      "label": "批判的吟味",
+      "targetContentId": "ebm-critical-appraisal",
+      "fallbackHref": "index.html#jama-sr-ma",
+      "priority": "secondary",
+      "mobileOverlay": false,
+      "rectPct": {
+        "left": 18.066,
+        "top": 18.122,
+        "width": 15.94,
+        "height": 9.27
+      }
+    },
+    {
+      "id": "flow-sr-meta",
+      "number": "03",
+      "label": "システマティックレビュー／メタアナリシス",
+      "targetContentId": "map-evidence-synthesis",
+      "fallbackHref": "meta-analysis-methods.html",
+      "priority": "secondary",
+      "mobileOverlay": false,
+      "rectPct": {
+        "left": 35.494,
+        "top": 18.122,
+        "width": 14.878,
+        "height": 9.27
+      }
+    },
+    {
+      "id": "flow-ebm-decision",
+      "number": "04",
+      "label": "EBMの意思決定",
+      "targetContentId": "map-apply-assess",
+      "fallbackHref": "index.html#clinical-applicability",
+      "priority": "secondary",
+      "mobileOverlay": false,
+      "rectPct": {
+        "left": 52.285,
+        "top": 18.122,
+        "width": 13.177,
+        "height": 9.27
+      }
+    },
+    {
+      "id": "flow-grade",
+      "number": "05",
+      "label": "GRADE",
+      "targetContentId": "grade-overview",
+      "fallbackHref": "index.html#grade-overview",
+      "priority": "secondary",
+      "mobileOverlay": false,
+      "rectPct": {
+        "left": 66.738,
+        "top": 18.122,
+        "width": 14.134,
+        "height": 9.27
+      }
+    },
+    {
+      "id": "flow-core-grade",
+      "number": "06",
+      "label": "Core GRADEとは",
+      "targetContentId": "topic-core-grade",
+      "fallbackHref": "index.html#topic-core-grade",
+      "priority": "secondary",
+      "mobileOverlay": false,
+      "rectPct": {
+        "left": 82.359,
+        "top": 18.122,
+        "width": 16.047,
+        "height": 9.27
+      }
+    },
+    {
+      "id": "map-pico",
+      "number": "07",
+      "label": "MAP 1 Clinical Question（PICO）",
+      "targetContentId": "map-clinical-question",
+      "fallbackHref": "index.html#map-clinical-question",
+      "priority": "primary",
+      "mobileOverlay": true,
+      "rectPct": {
+        "left": 0.85,
+        "top": 29.964,
+        "width": 30.074,
+        "height": 16.089
+      }
+    },
+    {
+      "id": "map-outcomes",
+      "number": "08",
+      "label": "MAP 2 重要アウトカム",
+      "targetContentId": "map-important-outcomes",
+      "fallbackHref": "index.html#map-important-outcomes",
+      "priority": "primary",
+      "mobileOverlay": true,
+      "rectPct": {
+        "left": 31.562,
+        "top": 29.964,
+        "width": 22.742,
+        "height": 16.089
+      }
+    },
+    {
+      "id": "map-certainty",
+      "number": "09",
+      "label": "MAP 3 エビデンスの確実性評価",
+      "targetContentId": "map-certainty",
+      "fallbackHref": "index.html#certainty-levels",
+      "priority": "primary",
+      "mobileOverlay": true,
+      "rectPct": {
+        "left": 55.048,
+        "top": 29.964,
+        "width": 43.889,
+        "height": 16.627
+      }
+    },
+    {
+      "id": "map-sof",
+      "number": "10",
+      "label": "SoF・効果の大きさ・確実性",
+      "targetContentId": "map-sof",
+      "fallbackHref": "index.html#summary-of-findings",
+      "priority": "primary",
+      "mobileOverlay": true,
+      "rectPct": {
+        "left": 0.85,
+        "top": 46.591,
+        "width": 30.181,
+        "height": 17.703
+      }
+    },
+    {
+      "id": "map-etd",
+      "number": "11",
+      "label": "MAP 4 Evidence to Decision（EtD）",
+      "targetContentId": "map-etd",
+      "fallbackHref": "index.html#map-etd",
+      "priority": "primary",
+      "mobileOverlay": true,
+      "rectPct": {
+        "left": 31.456,
+        "top": 46.651,
+        "width": 67.481,
+        "height": 17.644
+      }
+    },
+    {
+      "id": "map-recommendation",
+      "number": "12",
+      "label": "MAP 5 推奨の方向と強さ",
+      "targetContentId": "map-recommendation",
+      "fallbackHref": "index.html#recommendation-strength",
+      "priority": "primary",
+      "mobileOverlay": true,
+      "rectPct": {
+        "left": 0.85,
+        "top": 64.952,
+        "width": 60.574,
+        "height": 12.919
+      }
+    },
+    {
+      "id": "map-four-patterns",
+      "number": "13",
+      "label": "4つの推奨パターン",
+      "targetContentId": "map-recommendation-patterns",
+      "fallbackHref": "index.html#recommendation-strength",
+      "priority": "primary",
+      "mobileOverlay": true,
+      "rectPct": {
+        "left": 62.168,
+        "top": 64.952,
+        "width": 36.769,
+        "height": 13.098
+      }
+    },
+    {
+      "id": "map-crosswalk",
+      "number": "14",
+      "label": "MAP 6 EBM 5ステップ × Core GRADE",
+      "targetContentId": "map-ebm-crosswalk",
+      "fallbackHref": "index.html#map-ebm-crosswalk",
+      "priority": "primary",
+      "mobileOverlay": true,
+      "rectPct": {
+        "left": 0.85,
+        "top": 78.349,
+        "width": 98.087,
+        "height": 15.012
+      }
+    }
+  ]
+}

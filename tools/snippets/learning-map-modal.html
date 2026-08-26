@@ -1,0 +1,12 @@
+<div id="learningMapModal" class="cpg-overview-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="learningMapModalTitle">
+  <div class="cpg-overview-modal-bar">
+    <span id="learningMapModalTitle" class="cpg-overview-modal-title">EBMからGRADEへ：全体学習マップ <span class="cpg-overview-modal-hint">— スワイプで移動・ピンチで拡大</span></span>
+    <div class="cpg-overview-modal-actions">
+      <button id="learningMapZoomBtn" type="button" class="cpg-overview-modal-btn" onclick="toggleLearningMapZoom()" aria-label="拡大または縮小">拡大</button>
+      <button type="button" class="cpg-overview-modal-btn" onclick="closeLearningMap()" aria-label="閉じる">閉じる</button>
+    </div>
+  </div>
+  <div class="cpg-overview-modal-body" onclick="closeLearningMap()">
+    <img id="learningMapModalImg" class="cpg-overview-modal-img learning-map-modal-img" src="images/ebm-grade-map.png" width="941" height="1672" alt="EBMからGRADEへの全体学習マップ" onclick="event.stopPropagation();toggleLearningMapZoom()">
+  </div>
+</div>

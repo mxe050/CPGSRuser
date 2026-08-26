@@ -14,6 +14,30 @@
 
 ---
 
+## 現在の状態 — EBM→GRADE学習マップ再設計（2026-08-26）
+
+- トップページの最初の主要学習要素として `images/ebm-grade-map.png` を配置。
+- ナビゲーションを `START`、`EBM BASIC`、`EBM → GRADE MAIN MAP`、`TOPICS`、`RESOURCES` の5区分に再編。
+- 既存25章と全独立HTMLを本文の正本として保存し、15個の案内ハブを追加。
+- 図上14領域と、同じ14項目のテキストリンクを実装。狭い画面ではテキストリンクを主導線にする。
+- `data/content-registry.json` は55項目。全項目に主配置、関連配置、図上段階、トピック群、表示名を設定。
+- `data/navigation-structure.json` と `data/map-hotspots.json` が新しい導線の構造化データ。
+- 旧 `#page-N`、既存ファイル名、内部アンカーを維持。
+- 移植用一式は `docs/codex-work-packages/CPGSR_EBM_GRADE_REDESIGN_PACK/` に保存。
+- 内容保存の基準コミットは `7b4b9107eedc88b3ef18eb55ec362158c0c0009b`。基準台帳は `docs/BASELINE_CONTENT_MANIFEST.json`。
+
+### 検証コマンド
+
+```text
+node tools/verify-navigation-coverage.mjs
+node tools/verify-link-preservation.mjs
+node tools/verify-page-content.mjs
+node tools/verify-content-preservation.mjs
+node tools/verify-cpgsr.mjs
+```
+
+---
+
 ## 現在の状態 — v1.16（2026-05-06）
 
 **JAMA UG Ch23 にフォレストプロット再解析シミュレータへの導線ボタン追加**。

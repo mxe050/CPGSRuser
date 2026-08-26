@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.1",
-  "updated": "2026-08-22",
+  "schemaVersion": "2.0",
+  "updated": "2026-08-26",
   "items": [
     {
       "contentId": "home",
@@ -50,7 +50,15 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "入口"
-      ]
+      ],
+      "primaryPlacement": "start.map",
+      "relatedPlacements": [],
+      "mapStage": "overview",
+      "topicGroups": [
+        "start"
+      ],
+      "navLabel": "EBMからGRADEへ：全体マップ",
+      "legacyDisplayNumber": "0"
     },
     {
       "contentId": "ebm-cpg-sr-basics",
@@ -113,7 +121,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "ebm-basic.foundations",
+      "relatedPlacements": [
+        "main-map.question"
+      ],
+      "mapStage": "question",
+      "topicGroups": [
+        "ebm-basic"
+      ],
+      "navLabel": "EBMとCPG・SRの読み方",
+      "legacyDisplayNumber": "1"
     },
     {
       "contentId": "grade-overview",
@@ -172,7 +190,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.overview",
+      "relatedPlacements": [
+        "topics.core-grade"
+      ],
+      "mapStage": "overview",
+      "topicGroups": [
+        "grade",
+        "T1"
+      ],
+      "navLabel": "GRADEアプローチの概要",
+      "legacyDisplayNumber": "2"
     },
     {
       "contentId": "certainty-levels",
@@ -227,7 +256,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.certainty",
+      "relatedPlacements": [
+        "main-map.sof"
+      ],
+      "mapStage": "certainty",
+      "topicGroups": [
+        "grade"
+      ],
+      "navLabel": "確実性4段階と開始点",
+      "legacyDisplayNumber": "3"
     },
     {
       "contentId": "recommendation-strength",
@@ -286,7 +325,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.recommendation",
+      "relatedPlacements": [
+        "main-map.etd"
+      ],
+      "mapStage": "recommendation",
+      "topicGroups": [
+        "grade"
+      ],
+      "navLabel": "推奨の方向と強さ",
+      "legacyDisplayNumber": "4"
     },
     {
       "contentId": "summary-of-findings",
@@ -345,7 +394,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.sof",
+      "relatedPlacements": [
+        "main-map.outcomes",
+        "main-map.etd"
+      ],
+      "mapStage": "sof",
+      "topicGroups": [
+        "grade"
+      ],
+      "navLabel": "SoF表・Evidence Profile",
+      "legacyDisplayNumber": "5"
     },
     {
       "contentId": "effect-measures-absolute",
@@ -410,7 +470,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.sof",
+      "relatedPlacements": [
+        "main-map.etd",
+        "topics.meta-analysis"
+      ],
+      "mapStage": "sof",
+      "topicGroups": [
+        "T4"
+      ],
+      "navLabel": "相対効果と絶対効果",
+      "legacyDisplayNumber": "6"
     },
     {
       "contentId": "thresholds-mid",
@@ -479,7 +550,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.sof",
+      "relatedPlacements": [
+        "main-map.certainty",
+        "main-map.etd"
+      ],
+      "mapStage": "sof",
+      "topicGroups": [
+        "T9"
+      ],
+      "navLabel": "閾値とMID",
+      "legacyDisplayNumber": "7"
     },
     {
       "contentId": "risk-of-bias",
@@ -539,7 +621,20 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.certainty",
+      "relatedPlacements": [
+        "topics.nonrct",
+        "topics.trustworthiness"
+      ],
+      "mapStage": "certainty",
+      "topicGroups": [
+        "grade",
+        "T2",
+        "T6"
+      ],
+      "navLabel": "Risk of Bias",
+      "legacyDisplayNumber": "8"
     },
     {
       "contentId": "inconsistency",
@@ -598,7 +693,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.certainty",
+      "relatedPlacements": [
+        "topics.meta-analysis"
+      ],
+      "mapStage": "certainty",
+      "topicGroups": [
+        "grade",
+        "T4"
+      ],
+      "navLabel": "不一致性",
+      "legacyDisplayNumber": "9"
     },
     {
       "contentId": "indirectness",
@@ -657,7 +763,19 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.certainty",
+      "relatedPlacements": [
+        "topics.oncology",
+        "main-map.apply-assess"
+      ],
+      "mapStage": "certainty",
+      "topicGroups": [
+        "grade",
+        "T5"
+      ],
+      "navLabel": "非直接性",
+      "legacyDisplayNumber": "10"
     },
     {
       "contentId": "imprecision",
@@ -722,7 +840,19 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.certainty",
+      "relatedPlacements": [
+        "main-map.sof",
+        "topics.statistics"
+      ],
+      "mapStage": "certainty",
+      "topicGroups": [
+        "grade",
+        "T9"
+      ],
+      "navLabel": "不精確さ",
+      "legacyDisplayNumber": "11"
     },
     {
       "contentId": "dissemination-bias",
@@ -779,7 +909,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.certainty",
+      "relatedPlacements": [
+        "topics.trustworthiness"
+      ],
+      "mapStage": "certainty",
+      "topicGroups": [
+        "grade",
+        "T6"
+      ],
+      "navLabel": "Dissemination bias",
+      "legacyDisplayNumber": "12"
     },
     {
       "contentId": "nrsi-systematic-review",
@@ -840,7 +981,18 @@
       "badges": [
         "本編",
         "詳細あり"
-      ]
+      ],
+      "primaryPlacement": "topics.nonrct",
+      "relatedPlacements": [
+        "main-map.certainty",
+        "main-map.synthesis"
+      ],
+      "mapStage": "certainty",
+      "topicGroups": [
+        "T2"
+      ],
+      "navLabel": "非RCT・観察研究・因果推論",
+      "legacyDisplayNumber": "13"
     },
     {
       "contentId": "qualitative-cerqual",
@@ -893,7 +1045,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "topics.cerqual",
+      "relatedPlacements": [
+        "main-map.outcomes",
+        "main-map.etd"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T3"
+      ],
+      "navLabel": "定性研究・GRADE-CERQual",
+      "legacyDisplayNumber": "14"
     },
     {
       "contentId": "alternative-recommendations",
@@ -950,7 +1113,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "topics.alternative",
+      "relatedPlacements": [
+        "main-map.etd",
+        "main-map.recommendation"
+      ],
+      "mapStage": "recommendation",
+      "topicGroups": [
+        "T7"
+      ],
+      "navLabel": "単一推定値なし・GPS・net benefit",
+      "legacyDisplayNumber": "15"
     },
     {
       "contentId": "trustworthy-cpg",
@@ -1008,7 +1182,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "中核章"
-      ]
+      ],
+      "primaryPlacement": "topics.trustworthiness",
+      "relatedPlacements": [
+        "main-map.apply-assess"
+      ],
+      "mapStage": "apply-assess",
+      "topicGroups": [
+        "T6"
+      ],
+      "navLabel": "信頼できるCPGの6つの質問",
+      "legacyDisplayNumber": "16"
     },
     {
       "contentId": "cpg-quality-examples",
@@ -1064,7 +1248,19 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "topics.trustworthiness",
+      "relatedPlacements": [
+        "topics.japan",
+        "main-map.apply-assess"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T6",
+        "T10"
+      ],
+      "navLabel": "CPG品質の実例",
+      "legacyDisplayNumber": "17"
     },
     {
       "contentId": "sr-reporting-and-appraisal",
@@ -1127,7 +1323,17 @@
       "badges": [
         "評価ツール",
         "報告ガイドライン"
-      ]
+      ],
+      "primaryPlacement": "topics.trustworthiness",
+      "relatedPlacements": [
+        "main-map.synthesis"
+      ],
+      "mapStage": "synthesis",
+      "topicGroups": [
+        "T6"
+      ],
+      "navLabel": "AMSTAR 2・PRISMA 2020・ROBIS",
+      "legacyDisplayNumber": "18"
     },
     {
       "contentId": "clinical-applicability",
@@ -1186,7 +1392,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.apply-assess",
+      "relatedPlacements": [
+        "main-map.etd"
+      ],
+      "mapStage": "apply-assess",
+      "topicGroups": [
+        "ebm-basic"
+      ],
+      "navLabel": "患者への適用",
+      "legacyDisplayNumber": "19"
     },
     {
       "contentId": "values-shared-decision",
@@ -1248,7 +1464,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "本編"
-      ]
+      ],
+      "primaryPlacement": "main-map.apply-assess",
+      "relatedPlacements": [
+        "main-map.outcomes",
+        "main-map.etd"
+      ],
+      "mapStage": "apply-assess",
+      "topicGroups": [
+        "ebm-basic"
+      ],
+      "navLabel": "共同意思決定と価値観",
+      "legacyDisplayNumber": "20"
     },
     {
       "contentId": "glossary-qa",
@@ -1296,7 +1523,15 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "付録"
-      ]
+      ],
+      "primaryPlacement": "resources.glossary",
+      "relatedPlacements": [],
+      "mapStage": "resource",
+      "topicGroups": [
+        "resources"
+      ],
+      "navLabel": "用語集・Q&A",
+      "legacyDisplayNumber": "23"
     },
     {
       "contentId": "guyatt-lectures",
@@ -1349,7 +1584,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "教育講演"
-      ]
+      ],
+      "primaryPlacement": "topics.guyatt",
+      "relatedPlacements": [
+        "topics.core-grade",
+        "resources.references"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T8"
+      ],
+      "navLabel": "Guyatt先生講演",
+      "legacyDisplayNumber": "24"
     },
     {
       "contentId": "references",
@@ -1397,7 +1643,15 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "付録"
-      ]
+      ],
+      "primaryPlacement": "resources.references",
+      "relatedPlacements": [],
+      "mapStage": "resource",
+      "topicGroups": [
+        "resources"
+      ],
+      "navLabel": "参考文献一覧",
+      "legacyDisplayNumber": "25"
     },
     {
       "contentId": "beginner-primer",
@@ -1455,7 +1709,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "初学者向け"
-      ]
+      ],
+      "primaryPlacement": "start.primer",
+      "relatedPlacements": [
+        "ebm-basic.foundations"
+      ],
+      "mapStage": "overview",
+      "topicGroups": [
+        "start",
+        "ebm-basic"
+      ],
+      "navLabel": "EBM・SR・CPG 徹底解説",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "jama-sr-ma",
@@ -1513,7 +1778,20 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "横断要約"
-      ]
+      ],
+      "primaryPlacement": "ebm-basic.critical-appraisal",
+      "relatedPlacements": [
+        "main-map.synthesis",
+        "topics.trustworthiness"
+      ],
+      "mapStage": "synthesis",
+      "topicGroups": [
+        "ebm-basic",
+        "T4",
+        "T6"
+      ],
+      "navLabel": "JAMA Users' Guides：SR／MAを監査する",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "jama-network-meta-analysis",
@@ -1571,7 +1849,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "横断要約"
-      ]
+      ],
+      "primaryPlacement": "topics.meta-analysis",
+      "relatedPlacements": [
+        "main-map.synthesis"
+      ],
+      "mapStage": "synthesis",
+      "topicGroups": [
+        "T4"
+      ],
+      "navLabel": "ネットワークメタアナリシス",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "legacy-japanese-cpg-pitfalls",
@@ -1621,7 +1909,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "旧URL互換"
-      ]
+      ],
+      "primaryPlacement": "topics.japan",
+      "relatedPlacements": [
+        "topics.trustworthiness"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T10"
+      ],
+      "navLabel": "本邦CPGトホホ集（旧URL）",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "japanese-cpg-pitfalls",
@@ -1669,7 +1967,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "事例集"
-      ]
+      ],
+      "primaryPlacement": "topics.japan",
+      "relatedPlacements": [
+        "topics.trustworthiness"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T10"
+      ],
+      "navLabel": "本邦CPGトホホ集",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "learning-index",
@@ -1720,7 +2028,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "索引"
-      ]
+      ],
+      "primaryPlacement": "resources.index",
+      "relatedPlacements": [
+        "start.index"
+      ],
+      "mapStage": "resource",
+      "topicGroups": [
+        "resources"
+      ],
+      "navLabel": "学習索引",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "advanced-statistics",
@@ -1773,7 +2091,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "詳細解説"
-      ]
+      ],
+      "primaryPlacement": "topics.statistics",
+      "relatedPlacements": [
+        "main-map.question",
+        "main-map.certainty"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T9"
+      ],
+      "navLabel": "統計学・因果推論",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "advanced-estimand",
@@ -1819,7 +2148,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "公式ガイダンス"
-      ]
+      ],
+      "primaryPlacement": "topics.statistics",
+      "relatedPlacements": [
+        "main-map.question"
+      ],
+      "mapStage": "question",
+      "topicGroups": [
+        "T9"
+      ],
+      "navLabel": "estimand",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "advanced-survival",
@@ -1867,7 +2206,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "詳細解説"
-      ]
+      ],
+      "primaryPlacement": "topics.oncology",
+      "relatedPlacements": [
+        "topics.statistics"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T5",
+        "T9"
+      ],
+      "navLabel": "HR・非比例ハザード・RMST",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "advanced-causal-variables",
@@ -1915,7 +2265,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "詳細解説"
-      ]
+      ],
+      "primaryPlacement": "topics.nonrct",
+      "relatedPlacements": [
+        "topics.statistics"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T2",
+        "T9"
+      ],
+      "navLabel": "因果効果を読むための変数選択",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "nonrct-observational",
@@ -1968,7 +2329,17 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "詳細解説"
-      ]
+      ],
+      "primaryPlacement": "topics.nonrct",
+      "relatedPlacements": [
+        "main-map.certainty"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T2"
+      ],
+      "navLabel": "非RCT・観察研究を詳しく読む",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "nonrct-target-trial",
@@ -2012,7 +2383,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "詳細解説"
-      ]
+      ],
+      "primaryPlacement": "topics.nonrct",
+      "relatedPlacements": [
+        "main-map.question"
+      ],
+      "mapStage": "question",
+      "topicGroups": [
+        "T2",
+        "T9"
+      ],
+      "navLabel": "target trialとtime zero",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "nonrct-propensity-score",
@@ -2058,7 +2440,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "詳細解説"
-      ]
+      ],
+      "primaryPlacement": "topics.nonrct",
+      "relatedPlacements": [
+        "topics.statistics"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T2",
+        "T9"
+      ],
+      "navLabel": "傾向スコアと調整診断",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "oncology-outcomes",
@@ -2111,7 +2504,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "詳細解説"
-      ]
+      ],
+      "primaryPlacement": "topics.oncology",
+      "relatedPlacements": [
+        "main-map.outcomes",
+        "main-map.certainty"
+      ],
+      "mapStage": "outcomes",
+      "topicGroups": [
+        "T5"
+      ],
+      "navLabel": "がんアウトカム・生存時間",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "meta-analysis-methods",
@@ -2170,7 +2574,18 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "数理・発展"
-      ]
+      ],
+      "primaryPlacement": "topics.meta-analysis",
+      "relatedPlacements": [
+        "main-map.synthesis",
+        "main-map.certainty"
+      ],
+      "mapStage": "synthesis",
+      "topicGroups": [
+        "T4"
+      ],
+      "navLabel": "メタ分析の数理と現代的方法",
+      "legacyDisplayNumber": null
     },
     {
       "contentId": "guyatt-methodology-atlas",
@@ -2236,7 +2651,709 @@
       "lastVerified": "2026-08-22",
       "badges": [
         "原著ガイド"
-      ]
+      ],
+      "primaryPlacement": "topics.guyatt",
+      "relatedPlacements": [
+        "topics.core-grade",
+        "resources.references"
+      ],
+      "mapStage": "topic",
+      "topicGroups": [
+        "T8"
+      ],
+      "navLabel": "Guyatt方法論アトラス",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "ebm-basics-hub",
+      "titleJa": "EBM BASIC：GRADEへ進む前の土台",
+      "titleEn": "EBM basics hub",
+      "summaryJa": "最良の研究エビデンス、臨床専門性、患者の価値観・選好、臨床状況を一つの判断へ統合するEBMの入口。",
+      "href": "index.html#ebm-basics-hub",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "EBM BASIC：GRADEへ進む前の土台",
+        "EBM basics hub",
+        "EBMの基本"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "overview"
+      ],
+      "topics": [
+        "ebm-basic"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "ebm-cpg-sr-basics",
+        "beginner-primer",
+        "jama-sr-ma"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "ebm-basic.overview",
+      "relatedPlacements": [],
+      "mapStage": "overview",
+      "topicGroups": [
+        "ebm-basic"
+      ],
+      "navLabel": "EBMの基本",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "ebm-critical-appraisal",
+      "titleJa": "批判的吟味：妥当性・結果・適用可能性",
+      "titleEn": "Critical appraisal",
+      "summaryJa": "研究方法と結果を分け、妥当性、効果の大きさ、患者への適用可能性を順に読む入口。",
+      "href": "index.html#ebm-critical-appraisal",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "批判的吟味：妥当性・結果・適用可能性",
+        "Critical appraisal",
+        "批判的吟味"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "synthesis"
+      ],
+      "topics": [
+        "ebm-basic"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "jama-sr-ma",
+        "risk-of-bias",
+        "clinical-applicability"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "ebm-basic.critical-appraisal",
+      "relatedPlacements": [],
+      "mapStage": "synthesis",
+      "topicGroups": [
+        "ebm-basic"
+      ],
+      "navLabel": "批判的吟味",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-clinical-question",
+      "titleJa": "MAP 1 Clinical Question（PICO）",
+      "titleEn": "Clinical question and PICO",
+      "summaryJa": "誰に、何を、何と比べ、どのアウトカムを、いつまで評価するかを定める入口。",
+      "href": "index.html#map-clinical-question",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "MAP 1 Clinical Question（PICO）",
+        "Clinical question and PICO",
+        "MAP 1 Clinical Question（PICO）"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "question"
+      ],
+      "topics": [
+        "main-map"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "ebm-cpg-sr-basics",
+        "grade-overview",
+        "beginner-primer",
+        "advanced-estimand",
+        "nonrct-target-trial"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.question",
+      "relatedPlacements": [],
+      "mapStage": "question",
+      "topicGroups": [
+        "main-map"
+      ],
+      "navLabel": "MAP 1 Clinical Question（PICO）",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-important-outcomes",
+      "titleJa": "MAP 2 重要アウトカム",
+      "titleEn": "Important outcomes",
+      "summaryJa": "患者に重要な利益と害を選び、代替アウトカムや測定可能性との違いを確認する入口。",
+      "href": "index.html#map-important-outcomes",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "MAP 2 重要アウトカム",
+        "Important outcomes",
+        "MAP 2 重要アウトカム"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "outcomes"
+      ],
+      "topics": [
+        "main-map"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "grade-overview",
+        "summary-of-findings",
+        "oncology-outcomes",
+        "qualitative-cerqual",
+        "values-shared-decision"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.outcomes",
+      "relatedPlacements": [],
+      "mapStage": "outcomes",
+      "topicGroups": [
+        "main-map"
+      ],
+      "navLabel": "MAP 2 重要アウトカム",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-evidence-synthesis",
+      "titleJa": "BRIDGE 批判的吟味からSR・メタ分析へ",
+      "titleEn": "From critical appraisal to evidence synthesis",
+      "summaryJa": "個別研究の批判的吟味から、検索、選択、統合、メタ分析へ進むときの問いを整理する入口。",
+      "href": "index.html#map-evidence-synthesis",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "BRIDGE 批判的吟味からSR・メタ分析へ",
+        "From critical appraisal to evidence synthesis",
+        "BRIDGE 批判的吟味→SR・メタ分析"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "synthesis"
+      ],
+      "topics": [
+        "main-map"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "jama-sr-ma",
+        "sr-reporting-and-appraisal",
+        "meta-analysis-methods",
+        "jama-network-meta-analysis",
+        "learning-index"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.synthesis",
+      "relatedPlacements": [],
+      "mapStage": "synthesis",
+      "topicGroups": [
+        "main-map"
+      ],
+      "navLabel": "BRIDGE 批判的吟味→SR・メタ分析",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-certainty",
+      "titleJa": "MAP 3 エビデンスの確実性評価",
+      "titleEn": "Certainty of evidence",
+      "summaryJa": "アウトカムごとの効果推定値について、真の効果が閾値のどちら側または範囲内にある確信を評価する入口。",
+      "href": "index.html#map-certainty",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "MAP 3 エビデンスの確実性評価",
+        "Certainty of evidence",
+        "MAP 3 エビデンスの確実性"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "certainty"
+      ],
+      "topics": [
+        "main-map"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "certainty-levels",
+        "risk-of-bias",
+        "inconsistency",
+        "indirectness",
+        "imprecision",
+        "dissemination-bias"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.certainty",
+      "relatedPlacements": [],
+      "mapStage": "certainty",
+      "topicGroups": [
+        "main-map"
+      ],
+      "navLabel": "MAP 3 エビデンスの確実性",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-sof",
+      "titleJa": "SoF：効果の大きさと確実性をまとめる",
+      "titleEn": "Summary of findings",
+      "summaryJa": "相対効果、絶対効果、MID・閾値、確実性をアウトカムごとに一つの表へまとめて読む入口。",
+      "href": "index.html#map-sof",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "SoF：効果の大きさと確実性をまとめる",
+        "Summary of findings",
+        "SoF 効果の大きさと確実性"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "sof"
+      ],
+      "topics": [
+        "main-map"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "effect-measures-absolute",
+        "thresholds-mid",
+        "summary-of-findings"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.sof",
+      "relatedPlacements": [],
+      "mapStage": "sof",
+      "topicGroups": [
+        "main-map"
+      ],
+      "navLabel": "SoF 効果の大きさと確実性",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-etd",
+      "titleJa": "MAP 4 Evidence to Decision（EtD）",
+      "titleEn": "Evidence to Decision",
+      "summaryJa": "利益と害、確実性、価値観、資源などを、推奨判断へ透明につなぐ入口。",
+      "href": "index.html#map-etd",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "MAP 4 Evidence to Decision（EtD）",
+        "Evidence to Decision",
+        "MAP 4 Evidence to Decision"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "etd"
+      ],
+      "topics": [
+        "main-map"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "recommendation-strength",
+        "values-shared-decision",
+        "clinical-applicability",
+        "qualitative-cerqual",
+        "alternative-recommendations"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.etd",
+      "relatedPlacements": [],
+      "mapStage": "etd",
+      "topicGroups": [
+        "main-map"
+      ],
+      "navLabel": "MAP 4 Evidence to Decision",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-recommendation",
+      "titleJa": "MAP 5 推奨の方向と強さ",
+      "titleEn": "Direction and strength of recommendations",
+      "summaryJa": "推奨する・しないという方向と、強い・条件付きという強さを分けて読む入口。",
+      "href": "index.html#map-recommendation",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "MAP 5 推奨の方向と強さ",
+        "Direction and strength of recommendations",
+        "MAP 5 推奨の方向と強さ"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "recommendation"
+      ],
+      "topics": [
+        "main-map"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "recommendation-strength",
+        "alternative-recommendations",
+        "guyatt-methodology-atlas"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.recommendation",
+      "relatedPlacements": [],
+      "mapStage": "recommendation",
+      "topicGroups": [
+        "main-map"
+      ],
+      "navLabel": "MAP 5 推奨の方向と強さ",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-recommendation-patterns",
+      "titleJa": "4つの推奨パターン",
+      "titleEn": "Four recommendation patterns",
+      "summaryJa": "方向2通りと強さ2通りを組み合わせた4つの推奨パターンを確認する入口。",
+      "href": "index.html#map-recommendation-patterns",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "4つの推奨パターン",
+        "Four recommendation patterns",
+        "4つの推奨パターン"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "recommendation"
+      ],
+      "topics": [
+        "main-map"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "recommendation-strength",
+        "values-shared-decision"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.recommendation",
+      "relatedPlacements": [],
+      "mapStage": "recommendation",
+      "topicGroups": [
+        "main-map"
+      ],
+      "navLabel": "4つの推奨パターン",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-ebm-crosswalk",
+      "titleJa": "MAP 6 EBM 5A × Core GRADE",
+      "titleEn": "EBM 5A and Core GRADE crosswalk",
+      "summaryJa": "Ask、Acquire、Appraise、Apply、Assessと、Core GRADEの判断工程の対応を確認する入口。",
+      "href": "index.html#map-ebm-crosswalk",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "MAP 6 EBM 5A × Core GRADE",
+        "EBM 5A and Core GRADE crosswalk",
+        "MAP 6 EBM 5A × Core GRADE"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "apply-assess"
+      ],
+      "topics": [
+        "main-map",
+        "ebm-basic"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "ebm-cpg-sr-basics",
+        "clinical-applicability",
+        "values-shared-decision",
+        "trustworthy-cpg"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.apply-assess",
+      "relatedPlacements": [],
+      "mapStage": "apply-assess",
+      "topicGroups": [
+        "main-map",
+        "ebm-basic"
+      ],
+      "navLabel": "MAP 6 EBM 5A × Core GRADE",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "map-apply-assess",
+      "titleJa": "Apply・Assess：推奨を患者に使い、振り返る",
+      "titleEn": "Apply and assess",
+      "summaryJa": "推奨を目の前の患者へ適用し、共同意思決定と実装後の評価へ進む入口。",
+      "href": "index.html#map-apply-assess",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "Apply・Assess：推奨を患者に使い、振り返る",
+        "Apply and assess",
+        "MAP 6 Apply・Assess"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "apply-assess"
+      ],
+      "topics": [
+        "main-map"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "clinical-applicability",
+        "values-shared-decision",
+        "trustworthy-cpg",
+        "cpg-quality-examples"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "main-map.apply-assess",
+      "relatedPlacements": [],
+      "mapStage": "apply-assess",
+      "topicGroups": [
+        "main-map"
+      ],
+      "navLabel": "MAP 6 Apply・Assess",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "topics-index",
+      "titleJa": "TOPICS：図に入りきらない方法論を探す",
+      "titleEn": "Topics index",
+      "summaryJa": "研究デザイン、統計、がんアウトカム、CPG信頼性などを、GRADE工程へ無理に押し込まず探す入口。",
+      "href": "index.html#topics-index",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "TOPICS：図に入りきらない方法論を探す",
+        "Topics index",
+        "TOPICS一覧"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "topic"
+      ],
+      "topics": [
+        "topics"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "topic-core-grade",
+        "nonrct-observational",
+        "meta-analysis-methods",
+        "oncology-outcomes",
+        "advanced-statistics"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "topics.index",
+      "relatedPlacements": [],
+      "mapStage": "topic",
+      "topicGroups": [
+        "topics"
+      ],
+      "navLabel": "TOPICS一覧",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "topic-core-grade",
+      "titleJa": "Core GRADEとは",
+      "titleEn": "What is Core GRADE?",
+      "summaryJa": "GRADE Working Group、G3、GRADE Book、Core GRADE 2025、Guyatt、Schünemannの関係を資料の種類と公式性から整理する。",
+      "href": "index.html#topic-core-grade",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "Core GRADEとは",
+        "What is Core GRADE?",
+        "T1 Core GRADEとは"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "overview"
+      ],
+      "topics": [
+        "T1"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "grade-overview",
+        "guyatt-methodology-atlas",
+        "guyatt-lectures"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "方法論トピック"
+      ],
+      "primaryPlacement": "topics.core-grade",
+      "relatedPlacements": [],
+      "mapStage": "overview",
+      "topicGroups": [
+        "T1"
+      ],
+      "navLabel": "T1 Core GRADEとは",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "resources-index",
+      "titleJa": "RESOURCES：索引・用語集・文献・演習",
+      "titleEn": "Resources index",
+      "summaryJa": "学習索引、用語集、参考文献、演習サイト、リンク集へ進む常設入口。",
+      "href": "index.html#resources-index",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "RESOURCES：索引・用語集・文献・演習",
+        "Resources index",
+        "RESOURCES一覧"
+      ],
+      "contentType": "hub",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "resource"
+      ],
+      "topics": [
+        "resources"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "learning-index",
+        "glossary-qa",
+        "references"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-26",
+      "badges": [
+        "学習ハブ"
+      ],
+      "primaryPlacement": "resources.index",
+      "relatedPlacements": [],
+      "mapStage": "resource",
+      "topicGroups": [
+        "resources"
+      ],
+      "navLabel": "RESOURCES一覧",
+      "legacyDisplayNumber": null
     }
   ]
 }

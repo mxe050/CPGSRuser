@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "1.0-proposal",
+  "purpose": "Proposed navigation for CPGSR Reader. Existing content IDs remain canonical; hub IDs are additive.",
+  "zones": [
+    {
+      "id": "start",
+      "label": "START",
+      "items": [
+        {
+          "contentId": "home",
+          "label": "EBMからGRADEへ：全体マップ"
+        },
+        {
+          "contentId": "beginner-primer",
+          "label": "EBM・SR・CPG 徹底解説"
+        },
+        {
+          "contentId": "learning-index",
+          "label": "学習索引"
+        }
+      ]
+    },
+    {
+      "id": "ebm-basic",
+      "label": "EBM BASIC",
+      "items": [
+        {
+          "contentId": "ebm-basics-hub",
+          "label": "EBMの基本",
+          "new": true
+        },
+        {
+          "contentId": "ebm-cpg-sr-basics",
+          "label": "EBMとCPG・SRの読み方"
+        },
+        {
+          "contentId": "ebm-critical-appraisal",
+          "label": "批判的吟味",
+          "new": true
+        },
+        {
+          "contentId": "jama-sr-ma",
+          "label": "JAMA Users' Guides：SR/MAを監査する"
+        },
+        {
+          "contentId": "map-ebm-crosswalk",
+          "label": "EBM 5ステップ × Core GRADE",
+          "new": true
+        }
+      ]
+    },
+    {
+      "id": "main-map",
+      "label": "EBM → GRADE MAIN MAP",
+      "items": [
+        {
+          "contentId": "map-clinical-question",
+          "label": "MAP 1 Clinical Question（PICO）",
+          "new": true
+        },
+        {
+          "contentId": "map-important-outcomes",
+          "label": "MAP 2 重要アウトカム",
+          "new": true
+        },
+        {
+          "contentId": "map-evidence-synthesis",
+          "label": "BRIDGE 批判的吟味→SR・メタ分析",
+          "new": true
+        },
+        {
+          "contentId": "map-certainty",
+          "label": "MAP 3 エビデンスの確実性",
+          "new": true,
+          "children": [
+            "certainty-levels",
+            "risk-of-bias",
+            "inconsistency",
+            "indirectness",
+            "imprecision",
+            "dissemination-bias"
+          ]
+        },
+        {
+          "contentId": "map-sof",
+          "label": "SoF 効果の大きさと確実性",
+          "new": true,
+          "children": [
+            "effect-measures-absolute",
+            "thresholds-mid",
+            "summary-of-findings"
+          ]
+        },
+        {
+          "contentId": "map-etd",
+          "label": "MAP 4 Evidence to Decision",
+          "new": true
+        },
+        {
+          "contentId": "map-recommendation",
+          "label": "MAP 5 推奨の方向と強さ",
+          "new": true,
+          "children": [
+            "recommendation-strength",
+            "map-recommendation-patterns"
+          ]
+        },
+        {
+          "contentId": "map-apply-assess",
+          "label": "MAP 6 Apply / Assess",
+          "new": true,
+          "children": [
+            "clinical-applicability",
+            "values-shared-decision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "topics",
+      "label": "TOPICS",
+      "items": [
+        {
+          "contentId": "topic-core-grade",
+          "label": "T1 Core GRADEとは",
+          "new": true
+        },
+        {
+          "contentId": "nrsi-systematic-review",
+          "label": "T2 非RCT・観察研究・因果推論",
+          "related": [
+            "nonrct-observational",
+            "advanced-estimand",
+            "advanced-causal-variables",
+            "nonrct-target-trial",
+            "nonrct-propensity-score"
+          ]
+        },
+        {
+          "contentId": "qualitative-cerqual",
+          "label": "T3 定性研究・CERQual"
+        },
+        {
+          "contentId": "meta-analysis-methods",
+          "label": "T4 メタ分析・NMA",
+          "related": [
+            "jama-network-meta-analysis"
+          ]
+        },
+        {
+          "contentId": "oncology-outcomes",
+          "label": "T5 がんアウトカム・生存時間",
+          "related": [
+            "advanced-survival"
+          ]
+        },
+        {
+          "contentId": "trustworthy-cpg",
+          "label": "T6 CPG・SRの信頼性",
+          "related": [
+            "cpg-quality-examples",
+            "sr-reporting-and-appraisal",
+            "japanese-cpg-pitfalls"
+          ]
+        },
+        {
+          "contentId": "alternative-recommendations",
+          "label": "T7 単一推定値なし・特殊な統合・net benefit"
+        },
+        {
+          "contentId": "guyatt-methodology-atlas",
+          "label": "T8 Guyatt方法論",
+          "related": [
+            "guyatt-lectures"
+          ]
+        },
+        {
+          "contentId": "advanced-statistics",
+          "label": "T9 統計学・新しい方法"
+        },
+        {
+          "contentId": "japanese-cpg-pitfalls",
+          "label": "T10 日本のCPG事例",
+          "related": [
+            "legacy-japanese-cpg-pitfalls",
+            "cpg-quality-examples"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "label": "RESOURCES",
+      "items": [
+        {
+          "contentId": "learning-index",
+          "label": "学習索引"
+        },
+        {
+          "contentId": "glossary-qa",
+          "label": "用語集＋Q&A"
+        },
+        {
+          "contentId": "references",
+          "label": "参考文献"
+        },
+        {
+          "href": "y-sensei-ebm-practice-links.html",
+          "label": "Y先生のEBM実践リンク集"
+        },
+        {
+          "href": "https://mxe050.github.io/GRADE-tanken/",
+          "label": "GRADE 探検",
+          "external": true
+        },
+        {
+          "href": "https://chatgpt.com/g/g-6a085bf7d5bc8191970e6c5eb8949a09-zhen-liao-kaitorainxin-lai-xing-tietukagpt",
+          "label": "既存CPGチェックGPT",
+          "external": true
+        }
+      ]
+    }
+  ]
+}

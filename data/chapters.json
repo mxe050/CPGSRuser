@@ -1,12 +1,13 @@
 {
-  "version": "2.0",
-  "updated": "2026-08-22",
+  "version": "2.1",
+  "updated": "2026-08-26",
   "canonicalRegistry": "data/content-registry.json",
   "primaryChapterCount": 25,
   "notes": [
     "表示番号は内容識別子ではない。",
     "既存の index.html#page-N は content-registry.json の legacyTargets で保持する。",
-    "page-19 と page-27 は基準時点から実体のない旧ハッシュであり、未知URLとして明示的なnot-found画面へ案内する。"
+    "page-19 と page-27 は基準時点から実体のない旧ハッシュであり、未知URLとして明示的なnot-found画面へ案内する。",
+    "旧25章を本文の正本として維持し、新しいハブと5分類から到達させる。"
   ],
   "parts": [
     {
@@ -434,5 +435,23 @@
       "legacyIndex": null,
       "legacyHash": null
     }
+  ],
+  "navigationStructure": "data/navigation-structure.json",
+  "hubContentIds": [
+    "ebm-basics-hub",
+    "ebm-critical-appraisal",
+    "map-clinical-question",
+    "map-important-outcomes",
+    "map-evidence-synthesis",
+    "map-certainty",
+    "map-sof",
+    "map-etd",
+    "map-recommendation",
+    "map-recommendation-patterns",
+    "map-ebm-crosswalk",
+    "map-apply-assess",
+    "topics-index",
+    "topic-core-grade",
+    "resources-index"
   ]
 }
