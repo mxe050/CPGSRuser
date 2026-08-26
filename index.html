@@ -47,7 +47,7 @@
       <span class="sidebar-learning-note">各章は学習の入口です。章内の詳細解説・関連資料・演習も開いてください。</span>
     </div>
     <ul class="toc-list" id="tocList">
-      <details class="nav-zone" open>
+      <details class="nav-zone" data-zone="start" open>
         <summary><span><span class="nav-zone-label">START</span><span class="nav-zone-title">最初に全体像を見る</span></span></summary>
         <ul>
           <li class="toc-item"><button class="toc-btn active" data-idx="0" data-content-id="home"><span class="toc-num">0</span><span class="toc-text">EBMからGRADEへ：全体マップ<span class="en">Start here</span></span></button></li>
@@ -56,7 +56,7 @@
         </ul>
       </details>
 
-      <details class="nav-zone" open>
+      <details class="nav-zone" data-zone="ebm-basic" open>
         <summary><span><span class="nav-zone-label">EBM BASIC</span><span class="nav-zone-title">GRADEへ進む前の土台</span></span></summary>
         <ul>
           <li class="toc-item"><button class="toc-btn" data-content-id="ebm-basics-hub"><span class="toc-num">E1</span><span class="toc-text">EBMの基本<span class="en">EBM basics</span></span></button></li>
@@ -67,7 +67,7 @@
         </ul>
       </details>
 
-      <details class="nav-zone" open>
+      <details class="nav-zone" data-zone="main-map" open>
         <summary><span><span class="nav-zone-label">MAIN MAP</span><span class="nav-zone-title">EBMからGRADEへ図の順に学ぶ</span></span></summary>
         <ul>
           <li class="toc-item"><button class="toc-btn" data-idx="2" data-content-id="grade-overview"><span class="toc-num">全</span><span class="toc-text">GRADEアプローチの概要<span class="en">Overview of GRADE</span></span></button></li>
@@ -100,7 +100,7 @@
         </ul>
       </details>
 
-      <details class="nav-zone">
+      <details class="nav-zone" data-zone="topics">
         <summary><span><span class="nav-zone-label">TOPICS</span><span class="nav-zone-title">図に無理に入れない詳細分野</span></span></summary>
         <ul>
           <li class="toc-item"><button class="toc-btn" data-content-id="topics-index"><span class="toc-num">T</span><span class="toc-text">TOPICS一覧<span class="en">Topics index</span></span></button></li>
@@ -128,7 +128,7 @@
         </ul>
       </details>
 
-      <details class="nav-zone">
+      <details class="nav-zone" data-zone="resources">
         <summary><span><span class="nav-zone-label">RESOURCES</span><span class="nav-zone-title">索引・用語集・文献・演習</span></span></summary>
         <ul>
           <li class="toc-item"><button class="toc-btn" data-content-id="resources-index"><span class="toc-num">R</span><span class="toc-text">RESOURCES一覧<span class="en">Resources index</span></span></button></li>
@@ -166,7 +166,7 @@
           <h2 id="ebm-grade-map-title">EBMからGRADEへ：全体学習マップ</h2>
           <p class="home-learning-map-intro">EBMの批判的吟味と意思決定の流れが、GRADEの確実性評価、SoF、EtD、推奨へどうつながるかを示します。図の領域を押すと、対応する学習ハブへ進みます。</p>
           <div class="ebm-grade-map-shell">
-            <img src="images/ebm-grade-map.png" width="941" height="1672" alt="EBMからGRADEへ進む学習の全体像。批判的吟味、システマティックレビュー、PICO、重要アウトカム、確実性評価、SoF、EtD、推奨、EBMの5ステップとの対応を示す。下に同じ項目のリンク一覧があります。">
+            <img class="ebm-grade-map-image" src="images/ebm-grade-map.png" width="941" height="1672" alt="EBMからGRADEへ進む学習の全体像。批判的吟味、システマティックレビュー、PICO、重要アウトカム、確実性評価、SoF、EtD、推奨、EBMの5ステップとの対応を示す。下に同じ項目のリンク一覧があります。">
             <a class="ebm-grade-hotspot is-secondary" href="#ebm-basics-hub" data-map-target="ebm-basics-hub" data-mobile-overlay="false" style="--left:1.7%;--top:18.122%;--width:15.303%;--height:9.27%;" aria-label="EBM以前とEBMの歴史を開く"><span class="ebm-grade-hotspot-label">01 EBM以前／EBMの歴史</span></a>
             <a class="ebm-grade-hotspot is-secondary" href="#ebm-critical-appraisal" data-map-target="ebm-critical-appraisal" data-mobile-overlay="false" style="--left:18.066%;--top:18.122%;--width:15.94%;--height:9.27%;" aria-label="批判的吟味を開く"><span class="ebm-grade-hotspot-label">02 批判的吟味</span></a>
             <a class="ebm-grade-hotspot is-secondary" href="#map-evidence-synthesis" data-map-target="map-evidence-synthesis" data-mobile-overlay="false" style="--left:35.494%;--top:18.122%;--width:14.878%;--height:9.27%;" aria-label="システマティックレビューとメタアナリシスを開く"><span class="ebm-grade-hotspot-label">03 SR／メタ分析</span></a>
