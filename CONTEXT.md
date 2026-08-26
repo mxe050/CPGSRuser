@@ -14,13 +14,16 @@
 
 ---
 
-## 現在の状態 — EBM→GRADE学習マップ再設計（2026-08-26）
+## 現在の状態 — EBM→GRADE学習マップ再設計（2026-08-27）
 
 - トップページの最初の主要学習要素として `images/ebm-grade-map.png` を配置。
 - ナビゲーションを `START`、`EBM BASIC`、`EBM → GRADE MAIN MAP`、`TOPICS`、`RESOURCES` の5区分に再編。
 - 既存25章と全独立HTMLを本文の正本として保存し、15個の案内ハブを追加。
 - 図上14領域と、同じ14項目のテキストリンクを実装。狭い画面ではテキストリンクを主導線にする。
-- `data/content-registry.json` は55項目。全項目に主配置、関連配置、図上段階、トピック群、表示名を設定。
+- `data/content-registry.json` は56項目。全項目に主配置、関連配置、図上段階、トピック群、表示名、学習番号を設定。全9個のルートHTMLを登録済み。
+- 画面上の番号は `ST`、`E`、`M`、`S`、`T`、`R` の役割別体系に統一。旧番号はURL互換の内部情報としてのみ保持。
+- `y-sensei-ebm-practice-links.html` は `R4` としてregistry、navigation、サイドメニューへ正式登録。
+- 360/390pxではサイドバーを画面幅内に収め、48px以上のメニュー高、可変幅の番号枠、長いラベルの折り返しを適用。
 - `data/navigation-structure.json` と `data/map-hotspots.json` が新しい導線の構造化データ。
 - 旧 `#page-N`、既存ファイル名、内部アンカーを維持。
 - 移植用一式は `docs/codex-work-packages/CPGSR_EBM_GRADE_REDESIGN_PACK/` に保存。

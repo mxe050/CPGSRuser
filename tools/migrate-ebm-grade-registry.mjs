@@ -5,7 +5,7 @@ const root = process.cwd();
 const registryPath = path.join(root, 'data', 'content-registry.json');
 const chaptersPath = path.join(root, 'data', 'chapters.json');
 const navigationPath = path.join(root, 'data', 'navigation-structure.json');
-const verifiedDate = '2026-08-26';
+const verifiedDate = '2026-08-27';
 
 function placement(primaryPlacement, relatedPlacements, mapStage, topicGroups, navLabel) {
   return { primaryPlacement, relatedPlacements, mapStage, topicGroups, navLabel };
@@ -49,9 +49,78 @@ const placements = {
   'advanced-statistics': placement('topics.statistics', ['main-map.question', 'main-map.certainty'], 'topic', ['T9'], '統計学・因果推論'),
   'advanced-estimand': placement('topics.statistics', ['main-map.question'], 'question', ['T9'], 'estimand'),
   'japanese-cpg-pitfalls': placement('topics.japan', ['topics.trustworthiness'], 'topic', ['T10'], '本邦CPGトホホ集'),
-  'legacy-japanese-cpg-pitfalls': placement('topics.japan', ['topics.trustworthiness'], 'topic', ['T10'], '本邦CPGトホホ集（旧URL）'),
+  'legacy-japanese-cpg-pitfalls': placement('topics.japan', ['topics.trustworthiness'], 'topic', ['T10'], '本邦CPGトホホ集（本体内資料）'),
   'glossary-qa': placement('resources.glossary', [], 'resource', ['resources'], '用語集・Q&A'),
   references: placement('resources.references', [], 'resource', ['resources'], '参考文献一覧')
+};
+
+
+const navigationCodes = {
+  home: 'ST1',
+  'beginner-primer': 'ST2',
+  'learning-index': 'R1',
+  'ebm-basics-hub': 'E1',
+  'ebm-cpg-sr-basics': 'E2',
+  'ebm-critical-appraisal': 'E3',
+  'jama-sr-ma': 'E4',
+  'map-ebm-crosswalk': 'E5',
+  'grade-overview': 'M0',
+  'map-clinical-question': 'M1',
+  'map-important-outcomes': 'M2',
+  'map-evidence-synthesis': 'M2a',
+  'map-certainty': 'M3',
+  'certainty-levels': 'M3a',
+  'risk-of-bias': 'M3b',
+  inconsistency: 'M3c',
+  indirectness: 'M3d',
+  imprecision: 'M3e',
+  'dissemination-bias': 'M3f',
+  'map-sof': 'S0',
+  'effect-measures-absolute': 'S1',
+  'thresholds-mid': 'S2',
+  'summary-of-findings': 'S3',
+  'map-etd': 'M4',
+  'map-recommendation': 'M5',
+  'recommendation-strength': 'M5a',
+  'map-recommendation-patterns': 'M5b',
+  'map-apply-assess': 'M6',
+  'clinical-applicability': 'M6a',
+  'values-shared-decision': 'M6b',
+  'topics-index': 'T0',
+  'topic-core-grade': 'T1',
+  'nrsi-systematic-review': 'T2',
+  'nonrct-observational': 'T2a',
+  'nonrct-target-trial': 'T2b',
+  'nonrct-propensity-score': 'T2c',
+  'advanced-causal-variables': 'T2d',
+  'qualitative-cerqual': 'T3',
+  'meta-analysis-methods': 'T4',
+  'jama-network-meta-analysis': 'T4a',
+  'oncology-outcomes': 'T5',
+  'advanced-survival': 'T5a',
+  'trustworthy-cpg': 'T6',
+  'cpg-quality-examples': 'T6a',
+  'sr-reporting-and-appraisal': 'T6b',
+  'alternative-recommendations': 'T7',
+  'guyatt-methodology-atlas': 'T8',
+  'guyatt-lectures': 'T8a',
+  'advanced-statistics': 'T9',
+  'advanced-estimand': 'T9a',
+  'japanese-cpg-pitfalls': 'T10',
+  'legacy-japanese-cpg-pitfalls': 'T10a',
+  'resources-index': 'R0',
+  'glossary-qa': 'R2',
+  references: 'R3',
+  'y-sensei-ebm-practice-links': 'R4'
+};
+
+const contentOverrides = {
+  'legacy-japanese-cpg-pitfalls': {
+    titleJa: '本邦CPGトホホ集（本体内資料）',
+    titleEn: 'Japanese CPG pitfalls in-reader page',
+    summaryJa: '本体アプリ内に保存した本邦CPG事例ページ。独立した詳説ページと併せて読む。',
+    badges: ['本体内資料']
+  }
 };
 
 function hub(contentId, titleJa, titleEn, summaryJa, primaryPlacement, mapStage, relatedContentIds, topicGroups, navLabel, badges = ['学習ハブ']) {
@@ -84,6 +153,37 @@ function hub(contentId, titleJa, titleEn, summaryJa, primaryPlacement, mapStage,
   };
 }
 
+
+function resourcePage(contentId, titleJa, titleEn, summaryJa, href, relatedContentIds, aliases = []) {
+  return {
+    contentId,
+    titleJa,
+    titleEn,
+    summaryJa,
+    href,
+    displayNumber: null,
+    legacyTargets: [],
+    aliases: [titleJa, titleEn, ...aliases],
+    contentType: 'resource',
+    documentTypes: ['mixed'],
+    workflowStages: ['orientation', 'appraisal'],
+    topics: ['ebm-basics', 'learning-route', 'resources'],
+    authors: [],
+    level: 'entry',
+    sourceStatus: 'educational',
+    relatedContentIds,
+    referenceIds: [],
+    lastVerified: verifiedDate,
+    badges: ['リンク集'],
+    primaryPlacement: 'resources.practice-links',
+    relatedPlacements: ['start.index', 'ebm-basic.critical-appraisal'],
+    mapStage: 'resource',
+    topicGroups: ['resources', 'ebm-basic'],
+    navLabel: 'Y先生のEBM実践リンク集',
+    legacyDisplayNumber: null
+  };
+}
+
 const newItems = [
   hub('ebm-basics-hub', 'EBM BASIC：GRADEへ進む前の土台', 'EBM basics hub', '最良の研究エビデンス、臨床専門性、患者の価値観・選好、臨床状況を一つの判断へ統合するEBMの入口。', 'ebm-basic.overview', 'overview', ['ebm-cpg-sr-basics', 'beginner-primer', 'jama-sr-ma'], ['ebm-basic'], 'EBMの基本'),
   hub('ebm-critical-appraisal', '批判的吟味：妥当性・結果・適用可能性', 'Critical appraisal', '研究方法と結果を分け、妥当性、効果の大きさ、患者への適用可能性を順に読む入口。', 'ebm-basic.critical-appraisal', 'synthesis', ['jama-sr-ma', 'risk-of-bias', 'clinical-applicability'], ['ebm-basic'], '批判的吟味'),
@@ -99,7 +199,16 @@ const newItems = [
   hub('map-apply-assess', 'Apply・Assess：推奨を患者に使い、振り返る', 'Apply and assess', '推奨を目の前の患者へ適用し、共同意思決定と実装後の評価へ進む入口。', 'main-map.apply-assess', 'apply-assess', ['clinical-applicability', 'values-shared-decision', 'trustworthy-cpg', 'cpg-quality-examples'], ['main-map'], 'MAP 6 Apply・Assess'),
   hub('topics-index', 'TOPICS：図に入りきらない方法論を探す', 'Topics index', '研究デザイン、統計、がんアウトカム、CPG信頼性などを、GRADE工程へ無理に押し込まず探す入口。', 'topics.index', 'topic', ['topic-core-grade', 'nonrct-observational', 'meta-analysis-methods', 'oncology-outcomes', 'advanced-statistics'], ['topics'], 'TOPICS一覧'),
   hub('topic-core-grade', 'Core GRADEとは', 'What is Core GRADE?', 'GRADE Working Group、G3、GRADE Book、Core GRADE 2025、Guyatt、Schünemannの関係を資料の種類と公式性から整理する。', 'topics.core-grade', 'overview', ['grade-overview', 'guyatt-methodology-atlas', 'guyatt-lectures'], ['T1'], 'T1 Core GRADEとは', ['方法論トピック']),
-  hub('resources-index', 'RESOURCES：索引・用語集・文献・演習', 'Resources index', '学習索引、用語集、参考文献、演習サイト、リンク集へ進む常設入口。', 'resources.index', 'resource', ['learning-index', 'glossary-qa', 'references'], ['resources'], 'RESOURCES一覧')
+  hub('resources-index', 'RESOURCES：索引・用語集・文献・演習', 'Resources index', '学習索引、用語集、参考文献、演習サイト、リンク集へ進む常設入口。', 'resources.index', 'resource', ['learning-index', 'glossary-qa', 'references', 'y-sensei-ebm-practice-links'], ['resources'], 'RESOURCES一覧'),
+  resourcePage(
+    'y-sensei-ebm-practice-links',
+    'Y先生のEBM・診療ガイドライン講座リンク先一覧：EBM実践編',
+    'Y-sensei EBM practice links',
+    'EBM実践と診療ガイドライン学習に使う公開資料へのリンクをまとめた独立ページ。',
+    'y-sensei-ebm-practice-links.html',
+    ['resources-index', 'learning-index', 'ebm-basics-hub'],
+    ['Y先生', 'EBM実践編', '診療ガイドライン講座']
+  )
 ];
 
 const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
@@ -111,9 +220,13 @@ if (unmapped.length) throw new Error(`Missing placement metadata: ${unmapped.joi
 registry.items = sourceItems.map((item) => ({
   ...item,
   ...placements[item.contentId],
+  ...(contentOverrides[item.contentId] || {}),
   legacyDisplayNumber: item.displayNumber ?? null
 }));
 for (const item of newItems) registry.items.push(item);
+const missingNavigationCodes = registry.items.filter((item) => !navigationCodes[item.contentId]).map((item) => item.contentId);
+if (missingNavigationCodes.length) throw new Error(`Missing navigation codes: ${missingNavigationCodes.join(', ')}`);
+registry.items = registry.items.map((item) => ({ ...item, navCode: navigationCodes[item.contentId] }));
 registry.schemaVersion = '2.0';
 registry.updated = verifiedDate;
 fs.writeFileSync(registryPath, `${JSON.stringify(registry, null, 2)}\n`, 'utf8');
@@ -165,7 +278,7 @@ const navigation = {
       { contentId: 'learning-index', label: '学習索引' },
       { contentId: 'glossary-qa', label: '用語集・Q&A' },
       { contentId: 'references', label: '参考文献' },
-      { href: 'y-sensei-ebm-practice-links.html', label: 'Y先生のEBM実践リンク集' },
+      { contentId: 'y-sensei-ebm-practice-links', href: 'y-sensei-ebm-practice-links.html', label: 'Y先生のEBM実践リンク集' },
       { href: 'https://mxe050.github.io/GRADE-tanken/', label: 'GRADE 探検', external: true },
       { href: 'https://chatgpt.com/g/g-6a085bf7d5bc8191970e6c5eb8949a09-zhen-liao-kaitorainxin-lai-xing-tietukagpt', label: '既存CPGチェックGPT', external: true }
     ] }
@@ -177,10 +290,27 @@ const chapters = JSON.parse(fs.readFileSync(chaptersPath, 'utf8'));
 chapters.version = '2.1';
 chapters.updated = verifiedDate;
 chapters.navigationStructure = 'data/navigation-structure.json';
-chapters.hubContentIds = newItems.map((item) => item.contentId);
+chapters.hubContentIds = newItems.filter((item) => item.contentType === 'hub').map((item) => item.contentId);
+const legacyJapanesePage = chapters.specialContent.find((item) => item.contentId === 'legacy-japanese-cpg-pitfalls');
+if (legacyJapanesePage) {
+  legacyJapanesePage.title = '本邦CPGトホホ集（本体内資料）';
+  legacyJapanesePage.en = 'Japanese CPG pitfalls in-reader page';
+}
+if (!chapters.specialContent.some((item) => item.contentId === 'y-sensei-ebm-practice-links')) {
+  chapters.specialContent.push({
+    contentId: 'y-sensei-ebm-practice-links',
+    num: null,
+    title: 'Y先生のEBM・診療ガイドライン講座リンク先一覧：EBM実践編',
+    en: 'Y-sensei EBM practice links',
+    href: 'y-sensei-ebm-practice-links.html',
+    legacyPageId: null,
+    legacyIndex: null,
+    legacyHash: null
+  });
+}
 if (!chapters.notes.includes('旧25章を本文の正本として維持し、新しいハブと5分類から到達させる。')) {
   chapters.notes.push('旧25章を本文の正本として維持し、新しいハブと5分類から到達させる。');
 }
 fs.writeFileSync(chaptersPath, `${JSON.stringify(chapters, null, 2)}\n`, 'utf8');
 
-console.log(`Registry enriched: ${registry.items.length} items; ${newItems.length} additive hubs.`);
+console.log(`Registry enriched: ${registry.items.length} items; ${newItems.filter((item) => item.contentType === 'hub').length} additive hubs; ${newItems.filter((item) => item.contentType === 'resource').length} standalone resources.`);

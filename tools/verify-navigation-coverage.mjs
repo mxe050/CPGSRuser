@@ -5,6 +5,8 @@ const root = process.cwd();
 const registry = JSON.parse(fs.readFileSync(path.join(root, 'data', 'content-registry.json'), 'utf8'));
 const navigation = JSON.parse(fs.readFileSync(path.join(root, 'data', 'navigation-structure.json'), 'utf8'));
 const hotspotData = JSON.parse(fs.readFileSync(path.join(root, 'data', 'map-hotspots.json'), 'utf8'));
+const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const sidebarHtml = fs.readFileSync(path.join(root, 'tools', 'snippets', 'ebm-grade-sidebar.html'), 'utf8');
 const failures = [];
 
 function check(condition, message) {
@@ -14,9 +16,13 @@ function check(condition, message) {
 const items = registry.items ?? [];
 const contentIds = items.map((item) => item.contentId);
 const knownIds = new Set(contentIds);
+const navCodes = items.map((item) => item.navCode);
 const zoneIds = new Set((navigation.zones ?? []).map((zone) => zone.id));
+const navigationIds = new Set();
 
 check(contentIds.length === knownIds.size, 'content-registry.json contains duplicate contentId values.');
+check(navCodes.every((code) => typeof code === 'string' && code.length > 0), 'Every registry item must have a navCode.');
+check(navCodes.length === new Set(navCodes).size, 'content-registry.json contains duplicate navCode values.');
 check(zoneIds.size === 5, `navigation must contain exactly five zones (found ${zoneIds.size}).`);
 for (const expected of ['start', 'ebm-basic', 'main-map', 'topics', 'resources']) {
   check(zoneIds.has(expected), `navigation is missing zone: ${expected}`);
@@ -39,17 +45,47 @@ for (const item of items) {
 function verifyNavigationEntry(entry, zoneId) {
   if (entry.contentId) {
     check(knownIds.has(entry.contentId), `${zoneId}: navigation references missing item ${entry.contentId}.`);
+    navigationIds.add(entry.contentId);
   } else {
     check(typeof entry.href === 'string' && entry.href.length > 0, `${zoneId}: navigation entry needs contentId or href.`);
   }
   for (const childId of entry.children ?? []) {
     check(knownIds.has(childId), `${zoneId}: navigation child references missing item ${childId}.`);
+    navigationIds.add(childId);
   }
 }
 
 for (const zone of navigation.zones ?? []) {
   for (const entry of zone.items ?? []) verifyNavigationEntry(entry, zone.id);
 }
+
+for (const contentId of knownIds) {
+  check(navigationIds.has(contentId), `navigation does not expose registry item ${contentId}.`);
+}
+
+const menuIds = new Set([...indexHtml.matchAll(/\bdata-content-id="([^"]+)"/g)].map((match) => match[1]));
+for (const contentId of knownIds) {
+  check(menuIds.has(contentId), `index sidebar does not expose registry item ${contentId}.`);
+}
+for (const contentId of menuIds) {
+  check(knownIds.has(contentId), `index sidebar references missing registry item ${contentId}.`);
+}
+
+const registeredRootHtml = new Set(
+  items
+    .map((item) => String(item.href ?? '').split(/[?#]/)[0])
+    .filter((href) => href.endsWith('.html') && !href.includes('/') && !href.includes('\\'))
+);
+const rootHtml = fs.readdirSync(root).filter((file) => file.endsWith('.html'));
+for (const file of rootHtml) {
+  check(registeredRootHtml.has(file), `root HTML is not registered: ${file}.`);
+}
+for (const file of registeredRootHtml) {
+  check(fs.existsSync(path.join(root, file)), `registered root HTML does not exist: ${file}.`);
+}
+
+check(!/<span class="toc-num">旧/.test(indexHtml), 'index.html still contains visible old numbering.');
+check(!/<span class="toc-num">旧/.test(sidebarHtml), 'sidebar snippet still contains visible old numbering.');
 
 const hotspots = hotspotData.hotspots ?? [];
 check(hotspots.length === 14, `clickable map must define 14 hotspots (found ${hotspots.length}).`);
@@ -71,5 +107,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Navigation coverage verification passed: ${items.length} registry items, ${zoneIds.size} zones, ${hotspots.length} hotspots.`);
-
+console.log(`Navigation coverage verification passed: ${items.length} registered items, ${navigationIds.size} navigable items, ${rootHtml.length} root HTML files, ${zoneIds.size} zones, ${hotspots.length} hotspots.`);

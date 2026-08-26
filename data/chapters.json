@@ -1,6 +1,6 @@
 {
   "version": "2.1",
-  "updated": "2026-08-26",
+  "updated": "2026-08-27",
   "canonicalRegistry": "data/content-registry.json",
   "primaryChapterCount": 25,
   "notes": [
@@ -376,12 +376,22 @@
     {
       "contentId": "legacy-japanese-cpg-pitfalls",
       "num": null,
-      "title": "本邦CPGトホホ集（旧SPA版）",
-      "en": "Japanese CPG pitfalls legacy view",
+      "title": "本邦CPGトホホ集（本体内資料）",
+      "en": "Japanese CPG pitfalls in-reader page",
       "href": "index.html#page-29",
       "legacyPageId": "page-29",
       "legacyIndex": null,
       "legacyHash": "#page-29"
+    },
+    {
+      "contentId": "y-sensei-ebm-practice-links",
+      "num": null,
+      "title": "Y先生のEBM・診療ガイドライン講座リンク先一覧：EBM実践編",
+      "en": "Y-sensei EBM practice links",
+      "href": "y-sensei-ebm-practice-links.html",
+      "legacyPageId": null,
+      "legacyIndex": null,
+      "legacyHash": null
     }
   ],
   "deepDives": [

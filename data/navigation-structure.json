@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0",
-  "updated": "2026-08-26",
+  "updated": "2026-08-27",
   "canonicalRegistry": "data/content-registry.json",
   "hotspots": "data/map-hotspots.json",
   "zones": [
@@ -212,6 +212,7 @@
           "label": "参考文献"
         },
         {
+          "contentId": "y-sensei-ebm-practice-links",
           "href": "y-sensei-ebm-practice-links.html",
           "label": "Y先生のEBM実践リンク集"
         },
