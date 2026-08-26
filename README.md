@@ -99,6 +99,9 @@ data/references.json では、本文のクリック可能な正式引用を veri
 
 変更後は次を実行します。
 
+    node tools/verify-navigation-coverage.mjs
+    node tools/verify-link-preservation.mjs
+    node tools/verify-page-content.mjs
     node tools/verify-content-preservation.mjs
     node tools/verify-cpgsr.mjs
     node --check learning-index.js
