@@ -58,7 +58,8 @@
         "start"
       ],
       "navLabel": "EBMからGRADEへ：全体マップ",
-      "legacyDisplayNumber": "0"
+      "legacyDisplayNumber": "0",
+      "navCode": "ST1"
     },
     {
       "contentId": "ebm-cpg-sr-basics",
@@ -131,7 +132,8 @@
         "ebm-basic"
       ],
       "navLabel": "EBMとCPG・SRの読み方",
-      "legacyDisplayNumber": "1"
+      "legacyDisplayNumber": "1",
+      "navCode": "E2"
     },
     {
       "contentId": "grade-overview",
@@ -201,7 +203,8 @@
         "T1"
       ],
       "navLabel": "GRADEアプローチの概要",
-      "legacyDisplayNumber": "2"
+      "legacyDisplayNumber": "2",
+      "navCode": "M0"
     },
     {
       "contentId": "certainty-levels",
@@ -266,7 +269,8 @@
         "grade"
       ],
       "navLabel": "確実性4段階と開始点",
-      "legacyDisplayNumber": "3"
+      "legacyDisplayNumber": "3",
+      "navCode": "M3a"
     },
     {
       "contentId": "recommendation-strength",
@@ -335,7 +339,8 @@
         "grade"
       ],
       "navLabel": "推奨の方向と強さ",
-      "legacyDisplayNumber": "4"
+      "legacyDisplayNumber": "4",
+      "navCode": "M5a"
     },
     {
       "contentId": "summary-of-findings",
@@ -405,7 +410,8 @@
         "grade"
       ],
       "navLabel": "SoF表・Evidence Profile",
-      "legacyDisplayNumber": "5"
+      "legacyDisplayNumber": "5",
+      "navCode": "S3"
     },
     {
       "contentId": "effect-measures-absolute",
@@ -481,7 +487,8 @@
         "T4"
       ],
       "navLabel": "相対効果と絶対効果",
-      "legacyDisplayNumber": "6"
+      "legacyDisplayNumber": "6",
+      "navCode": "S1"
     },
     {
       "contentId": "thresholds-mid",
@@ -561,7 +568,8 @@
         "T9"
       ],
       "navLabel": "閾値とMID",
-      "legacyDisplayNumber": "7"
+      "legacyDisplayNumber": "7",
+      "navCode": "S2"
     },
     {
       "contentId": "risk-of-bias",
@@ -634,7 +642,8 @@
         "T6"
       ],
       "navLabel": "Risk of Bias",
-      "legacyDisplayNumber": "8"
+      "legacyDisplayNumber": "8",
+      "navCode": "M3b"
     },
     {
       "contentId": "inconsistency",
@@ -704,7 +713,8 @@
         "T4"
       ],
       "navLabel": "不一致性",
-      "legacyDisplayNumber": "9"
+      "legacyDisplayNumber": "9",
+      "navCode": "M3c"
     },
     {
       "contentId": "indirectness",
@@ -775,7 +785,8 @@
         "T5"
       ],
       "navLabel": "非直接性",
-      "legacyDisplayNumber": "10"
+      "legacyDisplayNumber": "10",
+      "navCode": "M3d"
     },
     {
       "contentId": "imprecision",
@@ -852,7 +863,8 @@
         "T9"
       ],
       "navLabel": "不精確さ",
-      "legacyDisplayNumber": "11"
+      "legacyDisplayNumber": "11",
+      "navCode": "M3e"
     },
     {
       "contentId": "dissemination-bias",
@@ -920,7 +932,8 @@
         "T6"
       ],
       "navLabel": "Dissemination bias",
-      "legacyDisplayNumber": "12"
+      "legacyDisplayNumber": "12",
+      "navCode": "M3f"
     },
     {
       "contentId": "nrsi-systematic-review",
@@ -992,7 +1005,8 @@
         "T2"
       ],
       "navLabel": "非RCT・観察研究・因果推論",
-      "legacyDisplayNumber": "13"
+      "legacyDisplayNumber": "13",
+      "navCode": "T2"
     },
     {
       "contentId": "qualitative-cerqual",
@@ -1056,7 +1070,8 @@
         "T3"
       ],
       "navLabel": "定性研究・GRADE-CERQual",
-      "legacyDisplayNumber": "14"
+      "legacyDisplayNumber": "14",
+      "navCode": "T3"
     },
     {
       "contentId": "alternative-recommendations",
@@ -1124,7 +1139,8 @@
         "T7"
       ],
       "navLabel": "単一推定値なし・GPS・net benefit",
-      "legacyDisplayNumber": "15"
+      "legacyDisplayNumber": "15",
+      "navCode": "T7"
     },
     {
       "contentId": "trustworthy-cpg",
@@ -1192,7 +1208,8 @@
         "T6"
       ],
       "navLabel": "信頼できるCPGの6つの質問",
-      "legacyDisplayNumber": "16"
+      "legacyDisplayNumber": "16",
+      "navCode": "T6"
     },
     {
       "contentId": "cpg-quality-examples",
@@ -1260,7 +1277,8 @@
         "T10"
       ],
       "navLabel": "CPG品質の実例",
-      "legacyDisplayNumber": "17"
+      "legacyDisplayNumber": "17",
+      "navCode": "T6a"
     },
     {
       "contentId": "sr-reporting-and-appraisal",
@@ -1333,7 +1351,8 @@
         "T6"
       ],
       "navLabel": "AMSTAR 2・PRISMA 2020・ROBIS",
-      "legacyDisplayNumber": "18"
+      "legacyDisplayNumber": "18",
+      "navCode": "T6b"
     },
     {
       "contentId": "clinical-applicability",
@@ -1402,7 +1421,8 @@
         "ebm-basic"
       ],
       "navLabel": "患者への適用",
-      "legacyDisplayNumber": "19"
+      "legacyDisplayNumber": "19",
+      "navCode": "M6a"
     },
     {
       "contentId": "values-shared-decision",
@@ -1475,7 +1495,8 @@
         "ebm-basic"
       ],
       "navLabel": "共同意思決定と価値観",
-      "legacyDisplayNumber": "20"
+      "legacyDisplayNumber": "20",
+      "navCode": "M6b"
     },
     {
       "contentId": "glossary-qa",
@@ -1531,7 +1552,8 @@
         "resources"
       ],
       "navLabel": "用語集・Q&A",
-      "legacyDisplayNumber": "23"
+      "legacyDisplayNumber": "23",
+      "navCode": "R2"
     },
     {
       "contentId": "guyatt-lectures",
@@ -1595,7 +1617,8 @@
         "T8"
       ],
       "navLabel": "Guyatt先生講演",
-      "legacyDisplayNumber": "24"
+      "legacyDisplayNumber": "24",
+      "navCode": "T8a"
     },
     {
       "contentId": "references",
@@ -1651,7 +1674,8 @@
         "resources"
       ],
       "navLabel": "参考文献一覧",
-      "legacyDisplayNumber": "25"
+      "legacyDisplayNumber": "25",
+      "navCode": "R3"
     },
     {
       "contentId": "beginner-primer",
@@ -1720,7 +1744,8 @@
         "ebm-basic"
       ],
       "navLabel": "EBM・SR・CPG 徹底解説",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "ST2"
     },
     {
       "contentId": "jama-sr-ma",
@@ -1791,7 +1816,8 @@
         "T6"
       ],
       "navLabel": "JAMA Users' Guides：SR／MAを監査する",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "E4"
     },
     {
       "contentId": "jama-network-meta-analysis",
@@ -1859,13 +1885,14 @@
         "T4"
       ],
       "navLabel": "ネットワークメタアナリシス",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T4a"
     },
     {
       "contentId": "legacy-japanese-cpg-pitfalls",
-      "titleJa": "本邦CPGトホホ集（旧SPA版）",
-      "titleEn": "Japanese CPG pitfalls legacy view",
-      "summaryJa": "旧ハッシュURLを保持するためのSPA内の教育用ページ。",
+      "titleJa": "本邦CPGトホホ集（本体内資料）",
+      "titleEn": "Japanese CPG pitfalls in-reader page",
+      "summaryJa": "本体アプリ内に保存した本邦CPG事例ページ。独立した詳説ページと併せて読む。",
       "href": "index.html#page-29",
       "displayNumber": null,
       "legacyTargets": [
@@ -1908,7 +1935,7 @@
       ],
       "lastVerified": "2026-08-22",
       "badges": [
-        "旧URL互換"
+        "本体内資料"
       ],
       "primaryPlacement": "topics.japan",
       "relatedPlacements": [
@@ -1918,8 +1945,9 @@
       "topicGroups": [
         "T10"
       ],
-      "navLabel": "本邦CPGトホホ集（旧URL）",
-      "legacyDisplayNumber": null
+      "navLabel": "本邦CPGトホホ集（本体内資料）",
+      "legacyDisplayNumber": null,
+      "navCode": "T10a"
     },
     {
       "contentId": "japanese-cpg-pitfalls",
@@ -1977,7 +2005,8 @@
         "T10"
       ],
       "navLabel": "本邦CPGトホホ集",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T10"
     },
     {
       "contentId": "learning-index",
@@ -2038,7 +2067,8 @@
         "resources"
       ],
       "navLabel": "学習索引",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "R1"
     },
     {
       "contentId": "advanced-statistics",
@@ -2102,7 +2132,8 @@
         "T9"
       ],
       "navLabel": "統計学・因果推論",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T9"
     },
     {
       "contentId": "advanced-estimand",
@@ -2158,7 +2189,8 @@
         "T9"
       ],
       "navLabel": "estimand",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T9a"
     },
     {
       "contentId": "advanced-survival",
@@ -2217,7 +2249,8 @@
         "T9"
       ],
       "navLabel": "HR・非比例ハザード・RMST",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T5a"
     },
     {
       "contentId": "advanced-causal-variables",
@@ -2276,7 +2309,8 @@
         "T9"
       ],
       "navLabel": "因果効果を読むための変数選択",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T2d"
     },
     {
       "contentId": "nonrct-observational",
@@ -2339,7 +2373,8 @@
         "T2"
       ],
       "navLabel": "非RCT・観察研究を詳しく読む",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T2a"
     },
     {
       "contentId": "nonrct-target-trial",
@@ -2394,7 +2429,8 @@
         "T9"
       ],
       "navLabel": "target trialとtime zero",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T2b"
     },
     {
       "contentId": "nonrct-propensity-score",
@@ -2451,7 +2487,8 @@
         "T9"
       ],
       "navLabel": "傾向スコアと調整診断",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T2c"
     },
     {
       "contentId": "oncology-outcomes",
@@ -2515,7 +2552,8 @@
         "T5"
       ],
       "navLabel": "がんアウトカム・生存時間",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T5"
     },
     {
       "contentId": "meta-analysis-methods",
@@ -2585,7 +2623,8 @@
         "T4"
       ],
       "navLabel": "メタ分析の数理と現代的方法",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T4"
     },
     {
       "contentId": "guyatt-methodology-atlas",
@@ -2662,7 +2701,8 @@
         "T8"
       ],
       "navLabel": "Guyatt方法論アトラス",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T8"
     },
     {
       "contentId": "ebm-basics-hub",
@@ -2696,7 +2736,7 @@
         "jama-sr-ma"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -2707,7 +2747,8 @@
         "ebm-basic"
       ],
       "navLabel": "EBMの基本",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "E1"
     },
     {
       "contentId": "ebm-critical-appraisal",
@@ -2741,7 +2782,7 @@
         "clinical-applicability"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -2752,7 +2793,8 @@
         "ebm-basic"
       ],
       "navLabel": "批判的吟味",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "E3"
     },
     {
       "contentId": "map-clinical-question",
@@ -2788,7 +2830,7 @@
         "nonrct-target-trial"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -2799,7 +2841,8 @@
         "main-map"
       ],
       "navLabel": "MAP 1 Clinical Question（PICO）",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "M1"
     },
     {
       "contentId": "map-important-outcomes",
@@ -2835,7 +2878,7 @@
         "values-shared-decision"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -2846,7 +2889,8 @@
         "main-map"
       ],
       "navLabel": "MAP 2 重要アウトカム",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "M2"
     },
     {
       "contentId": "map-evidence-synthesis",
@@ -2882,7 +2926,7 @@
         "learning-index"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -2893,7 +2937,8 @@
         "main-map"
       ],
       "navLabel": "BRIDGE 批判的吟味→SR・メタ分析",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "M2a"
     },
     {
       "contentId": "map-certainty",
@@ -2930,7 +2975,7 @@
         "dissemination-bias"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -2941,7 +2986,8 @@
         "main-map"
       ],
       "navLabel": "MAP 3 エビデンスの確実性",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "M3"
     },
     {
       "contentId": "map-sof",
@@ -2975,7 +3021,7 @@
         "summary-of-findings"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -2986,7 +3032,8 @@
         "main-map"
       ],
       "navLabel": "SoF 効果の大きさと確実性",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "S0"
     },
     {
       "contentId": "map-etd",
@@ -3022,7 +3069,7 @@
         "alternative-recommendations"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -3033,7 +3080,8 @@
         "main-map"
       ],
       "navLabel": "MAP 4 Evidence to Decision",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "M4"
     },
     {
       "contentId": "map-recommendation",
@@ -3067,7 +3115,7 @@
         "guyatt-methodology-atlas"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -3078,7 +3126,8 @@
         "main-map"
       ],
       "navLabel": "MAP 5 推奨の方向と強さ",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "M5"
     },
     {
       "contentId": "map-recommendation-patterns",
@@ -3111,7 +3160,7 @@
         "values-shared-decision"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -3122,7 +3171,8 @@
         "main-map"
       ],
       "navLabel": "4つの推奨パターン",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "M5b"
     },
     {
       "contentId": "map-ebm-crosswalk",
@@ -3158,7 +3208,7 @@
         "trustworthy-cpg"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -3170,7 +3220,8 @@
         "ebm-basic"
       ],
       "navLabel": "MAP 6 EBM 5A × Core GRADE",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "E5"
     },
     {
       "contentId": "map-apply-assess",
@@ -3205,7 +3256,7 @@
         "cpg-quality-examples"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -3216,7 +3267,8 @@
         "main-map"
       ],
       "navLabel": "MAP 6 Apply・Assess",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "M6"
     },
     {
       "contentId": "topics-index",
@@ -3252,7 +3304,7 @@
         "advanced-statistics"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -3263,7 +3315,8 @@
         "topics"
       ],
       "navLabel": "TOPICS一覧",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T0"
     },
     {
       "contentId": "topic-core-grade",
@@ -3297,7 +3350,7 @@
         "guyatt-lectures"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "方法論トピック"
       ],
@@ -3308,7 +3361,8 @@
         "T1"
       ],
       "navLabel": "T1 Core GRADEとは",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "T1"
     },
     {
       "contentId": "resources-index",
@@ -3339,10 +3393,11 @@
       "relatedContentIds": [
         "learning-index",
         "glossary-qa",
-        "references"
+        "references",
+        "y-sensei-ebm-practice-links"
       ],
       "referenceIds": [],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "badges": [
         "学習ハブ"
       ],
@@ -3353,7 +3408,63 @@
         "resources"
       ],
       "navLabel": "RESOURCES一覧",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "R0"
+    },
+    {
+      "contentId": "y-sensei-ebm-practice-links",
+      "titleJa": "Y先生のEBM・診療ガイドライン講座リンク先一覧：EBM実践編",
+      "titleEn": "Y-sensei EBM practice links",
+      "summaryJa": "EBM実践と診療ガイドライン学習に使う公開資料へのリンクをまとめた独立ページ。",
+      "href": "y-sensei-ebm-practice-links.html",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "Y先生のEBM・診療ガイドライン講座リンク先一覧：EBM実践編",
+        "Y-sensei EBM practice links",
+        "Y先生",
+        "EBM実践編",
+        "診療ガイドライン講座"
+      ],
+      "contentType": "resource",
+      "documentTypes": [
+        "mixed"
+      ],
+      "workflowStages": [
+        "orientation",
+        "appraisal"
+      ],
+      "topics": [
+        "ebm-basics",
+        "learning-route",
+        "resources"
+      ],
+      "authors": [],
+      "level": "entry",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "resources-index",
+        "learning-index",
+        "ebm-basics-hub"
+      ],
+      "referenceIds": [],
+      "lastVerified": "2026-08-27",
+      "badges": [
+        "リンク集"
+      ],
+      "primaryPlacement": "resources.practice-links",
+      "relatedPlacements": [
+        "start.index",
+        "ebm-basic.critical-appraisal"
+      ],
+      "mapStage": "resource",
+      "topicGroups": [
+        "resources",
+        "ebm-basic"
+      ],
+      "navLabel": "Y先生のEBM実践リンク集",
+      "legacyDisplayNumber": null,
+      "navCode": "R4"
     },
     {
       "contentId": "methods-updates",
@@ -3415,7 +3526,8 @@
         "T6"
       ],
       "navLabel": "2026年9月19日 最新情報",
-      "legacyDisplayNumber": null
+      "legacyDisplayNumber": null,
+      "navCode": "R6"
     }
   ]
 }

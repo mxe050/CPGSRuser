@@ -8,7 +8,7 @@
 - 公開URL：https://mxe050.github.io/CPGSRuser/
 - リポジトリ：https://github.com/mxe050/CPGSRuser
 - ビルド不要。JSONをfetchするためローカルでもHTTP経由で開く。
-- 10個のHTML、43個の本文画面、56項目のコンテンツ台帳。
+- 10個のHTML、43個の本文画面、57項目のコンテンツ台帳。
 
 ## 実装
 
@@ -18,6 +18,8 @@
 - data/content-registry.jsonとnavigation-structure.jsonがナビゲーションの正本。新規教材はhrefだけでなく既存のworkflowStages・topicsに適切に登録する。
 - AMSTAR 2と6質問は学習補助。独自の総合得点で信頼性を認定しない。MID表の数値は仮想例。
 - 文献確認日は個別の確認範囲に対応させる。草案、抄録のみの確認、歴史的事例を区別する。
+
+公開済みの2026-08-27の学習番号（ST・E・M・S・T・R）、Y先生リンク集のR4登録、navigation-mobile.cssによる可変幅の番号枠とスマートフォン調整を継承しています。新しい更新ページはR6です。
 
 ## 保存と検証
 

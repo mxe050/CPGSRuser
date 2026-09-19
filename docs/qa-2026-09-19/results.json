@@ -1,6 +1,6 @@
 {
-  "origin": "http://127.0.0.1:4174",
-  "checkedAt": "2026-09-18T23:07:34.207Z",
+  "origin": "http://127.0.0.1:4173",
+  "checkedAt": "2026-09-19T05:30:29.950Z",
   "checks": [
     "All reader routes and per-page navigation targets",
     "Forward navigation opens standalone learning index",
