@@ -4,7 +4,7 @@
     "GRADE": {
       "term": "GRADE",
       "full": "Grading of Recommendations, Assessment, Development, and Evaluation",
-      "definition": "エビデンスの確実性を評価し、推奨の強さを決定するための国際標準の枠組み。110以上のガイドライン組織が採用。",
+      "definition": "アウトカムごとのエビデンスの確実性を評価し、利益・害、価値観、資源などを検討して推奨につなげる枠組み。確実性と推奨の強さは区別する。",
       "related": ["エビデンスの確実性", "推奨の強さ"]
     },
     "エビデンスの確実性": {
@@ -22,13 +22,13 @@
     "強い推奨": {
       "term": "強い推奨",
       "full": "Strong Recommendation",
-      "definition": "「ほぼ全ての患者が選ぶ」選択肢。臨床家は基本的に適用してよい。",
+      "definition": "十分な情報を持つほぼすべての人が推奨された選択を望むと考えられる場合の推奨。対象・例外・禁忌を確認し、患者の意向も尊重する。",
       "related": ["推奨の強さ", "条件付き推奨"]
     },
     "条件付き推奨": {
       "term": "条件付き推奨",
       "full": "Conditional / Weak Recommendation",
-      "definition": "「多くの患者は選ぶが、価値観により選ばない人もいる」選択肢。共同意思決定（SDM）が必要。",
+      "definition": "多くの人が推奨された選択を望む一方、価値観や状況によって別の選択も妥当となる推奨。利益・害・負担と患者の意向を話し合うことが特に重要。",
       "related": ["推奨の強さ", "強い推奨", "共同意思決定"]
     },
     "SoF表": {
@@ -52,7 +52,7 @@
     "閾値": {
       "term": "閾値",
       "full": "Threshold",
-      "definition": "「些細」「中」「大」の効果を区別する境界値。アウトカムの患者重要度が高いほど低い閾値が設定される（小さな効果でも重要になる）。",
+      "definition": "効果の解釈や意思決定が変わる境界。効果なしの値（null）、最小重要差（MID）など、何を基準にするかを明示する。値は対象・アウトカム・患者の価値観・判断の文脈による。",
       "related": ["MID", "絶対効果"]
     },
     "Risk of Bias": {
@@ -64,13 +64,13 @@
     "ROBINS-E": {
       "term": "ROBINS-E",
       "full": "Risk Of Bias In Non-randomized Studies - of Exposures",
-      "definition": "曝露要因を扱う観察研究のバイアスリスクを評価する最新ツール（2024年）。ROBINS-I（介入）の姉妹ツール。",
+      "definition": "観察研究の曝露効果に関する特定の結果を評価するバイアスリスクのツール。公式の2024年3月24日版は7ドメイン。介入用ROBINS-Iと区別する。",
       "related": ["Risk of Bias", "観察研究"]
     },
     "不一致性": {
       "term": "不一致性",
       "full": "Inconsistency",
-      "definition": "研究間で効果の推定値が一致しない程度。研究間異質性（heterogeneity）として統計的に評価し、説明できない場合に確実性を下げる。",
+      "definition": "研究間の効果の違いが、選んだ確実性評価の対象に対する確信を損なう程度。I²だけで判定せず、効果の方向・大きさ・閾値との関係や違いの説明を確認する。",
       "related": ["エビデンスの確実性"]
     },
     "非直接性": {
@@ -94,7 +94,7 @@
     "不精確さ": {
       "term": "不精確さ",
       "full": "Imprecision（不精確さ）",
-      "definition": "信頼区間が広く、結論が確定的に言えない状態。MIDに対する信頼区間の位置関係で評価する。",
+      "definition": "選んだ確実性評価の対象について、ランダム誤差による不確かさが残る程度。CIの幅だけでなくnullやMIDなどの閾値との位置関係、情報量、判断の文脈を確認する。",
       "related": ["エビデンスの確実性", "MID"]
     },
     "Dissemination bias": {
@@ -112,7 +112,7 @@
     "PRISMA 2020": {
       "term": "PRISMA 2020",
       "full": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses 2020",
-      "definition": "SRの報告透明性を確保する27項目チェックリスト（Page 2021）。方法と結果の完全報告を保証する。",
+      "definition": "SRを透明・完全に報告するための27項目の報告ガイドライン（Page 2021）。準拠の記載だけで報告の完全性、方法論的質、低バイアスリスクが保証されるわけではない。",
       "related": ["AMSTAR 2"]
     },
     "EtD": {
@@ -136,7 +136,7 @@
     "GPS": {
       "term": "GPS",
       "full": "Good Practice Statement（グッドプラクティス声明）",
-      "definition": "形式的なエビデンスレビューなしに作られる推奨（例：「患者に情報を提供する」）。明らかな利益があり、代替案が非倫理的・非合理な場合に限って用いる。",
+      "definition": "通常の推奨と同じ形式でエビデンスの確実性を評定しない実践声明。2026年の更新は倫理・人権、不可欠な原則や実践、確立した科学的根拠を区別し、必要性と実施の影響の検討を求める。",
       "related": ["推奨の強さ"]
     },
     "CERQual": {
@@ -172,13 +172,13 @@
     "信頼できるCPG": {
       "term": "信頼できるCPG",
       "full": "Trustworthy Clinical Practice Guideline",
-      "definition": "Lima-Mirza-Guyatt (2023) が提唱する、臨床家が確認すべき6つの質問を満たすCPG。",
+      "definition": "推奨の根拠と判断過程を透明に確認できるガイドライン。Lima・Mirza・Guyatt（2023）の6質問は確認のための枠組みであり、回答数だけで信頼性を認定する採点尺度ではない。",
       "related": ["IOM基準"]
     },
     "NCCN": {
       "term": "NCCN",
       "full": "National Comprehensive Cancer Network",
-      "definition": "米国のがん診療ネットワーク。独自の「Evidence Blocks」を用いGRADEを採用していないため、信頼できるCPG基準の観点で複数の問題点が指摘されている。",
+      "definition": "National Comprehensive Cancer Network。がん診療に関するガイドライン等を提供する組織。個々の版の根拠、推奨判断、COI管理を確認し、評価方式の名称だけで信頼性を決めない。",
       "related": ["信頼できるCPG"]
     }
   }

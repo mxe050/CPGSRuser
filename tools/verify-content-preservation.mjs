@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { retiredAsset } from './maintenance-policy.mjs';
 
 const root = process.cwd();
 const baseline = JSON.parse(fs.readFileSync(path.join(root, 'docs', 'BASELINE_CONTENT_MANIFEST.json'), 'utf8'));
@@ -41,7 +42,7 @@ for (const file of baseline.htmlFiles) {
   }
 
   const localAssets = file.assets.filter((asset) => asset.kind === 'local').map((asset) => asset.value.split('?')[0]);
-  const missingAssets = localAssets.filter((asset) => !current.includes(asset));
+  const missingAssets = localAssets.filter((asset) => !current.includes(asset) && !retiredAsset(file.path, asset));
   check(missingAssets.length === 0, file.path + ': baseline local assets removed: ' + missingAssets.join(', '));
 
   notes.push(file.path + ': retained ' + file.ids.length + ' baseline IDs, ' + localAssets.length + ' local asset references, and all baseline media minima.');

@@ -12,21 +12,22 @@
 <meta property="og:description" content="GRADEに基づき、診療ガイドラインとシステマティックレビューを読むための学習サイト。">
 <link rel="stylesheet" href="style.css?v=7.3">
 <link rel="stylesheet" href="style-cpgsr.css?v=9.1">
-<link rel="stylesheet" href="ebm-grade-map.css?v=1.0">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="ebm-grade-map.css?v=20260919">
+<link rel="stylesheet" href="reader-refresh.css?v=20260919">
+<script src="reader-ui.js?v=20260919" defer></script>
 </head>
 <body>
 <a class="app-skip-link" href="#mainContent">本文へ移動</a>
 
 <!-- ヘッダー -->
 <header class="app-header">
-  <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+  <button type="button" class="menu-toggle" id="menuToggle" aria-label="学習目次を開く" aria-controls="sidebar" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
   <button type="button" class="logo logo-home" onclick="showPage(0)" aria-label="ホーム：まずここからお読みくださいへ戻る">
     <span>CPGSR</span> Reader <span style="color:rgba(255,255,255,0.5);font-weight:400;font-size:0.85rem;">診療ガイドライン／SRの読み方</span>
   </button>
+  <a class="header-search-link" href="learning-index.html">教材を探す</a>
 </header>
 
 <!-- 進捗バー -->
@@ -41,12 +42,13 @@
 <div class="app-body">
 
   <!-- サイドバー（目次） -->
-  <nav class="sidebar" id="sidebar">
+  <nav class="sidebar" id="sidebar" aria-label="学習目次">
     <div class="sidebar-header">
       <span>学習目次 / Study Map</span>
       <span class="sidebar-learning-note">各章は学習の入口です。章内の詳細解説・関連資料・演習も開いてください。</span>
     </div>
-    <ul class="toc-list" id="tocList">
+    <a class="sidebar-search" href="learning-index.html">⌕ キーワードから教材を探す</a>
+    <div class="toc-list" id="tocList">
       <details class="nav-zone" data-zone="start" open>
         <summary><span><span class="nav-zone-label">START</span><span class="nav-zone-title">最初に全体像を見る</span></span></summary>
         <ul>
@@ -131,16 +133,17 @@
       <details class="nav-zone" data-zone="resources">
         <summary><span><span class="nav-zone-label">RESOURCES</span><span class="nav-zone-title">索引・用語集・文献・演習</span></span></summary>
         <ul>
+          <li class="toc-item"><a class="toc-btn toc-link" href="updates.html" data-content-id="methods-updates"><span class="toc-num">新</span><span class="toc-text">2026年9月19日 最新情報<span class="en">Methods update</span></span></a></li>
           <li class="toc-item"><button class="toc-btn" data-content-id="resources-index"><span class="toc-num">R</span><span class="toc-text">RESOURCES一覧<span class="en">Resources index</span></span></button></li>
           <li class="toc-item"><a class="toc-btn toc-link" href="learning-index.html" data-content-id="learning-index"><span class="toc-num">索</span><span class="toc-text">学習索引<span class="en">Learning index</span></span></a></li>
           <li class="toc-item"><button class="toc-btn" data-idx="21" data-content-id="glossary-qa"><span class="toc-num">語</span><span class="toc-text">用語集＋Q&A<span class="en">Glossary</span></span></button></li>
           <li class="toc-item"><button class="toc-btn" data-idx="23" data-content-id="references"><span class="toc-num">文</span><span class="toc-text">参考文献一覧<span class="en">References</span></span></button></li>
           <li class="toc-item"><a class="toc-btn toc-link" href="y-sensei-ebm-practice-links.html"><span class="toc-num">Y</span><span class="toc-text">Y先生のEBM実践リンク集<span class="en">Practice links</span></span></a></li>
           <li class="toc-item"><a class="toc-btn toc-link" href="https://mxe050.github.io/GRADE-tanken/" target="_blank" rel="noopener"><span class="toc-num">演</span><span class="toc-text">GRADE 探検<span class="en">Practice site</span></span></a></li>
-          <li class="toc-item"><a class="toc-btn toc-link" href="https://chatgpt.com/g/g-6a085bf7d5bc8191970e6c5eb8949a09-zhen-liao-kaitorainxin-lai-xing-tietukagpt" target="_blank" rel="noopener"><span class="toc-num">AI</span><span class="toc-text">既存CPGチェックGPT<span class="en">CPG checker</span></span></a></li>
+          <li class="toc-item"><a class="toc-btn toc-link" href="index.html#page-16"><span class="toc-num">AI</span><span class="toc-text">CPGの6質問で確認<span class="en">CPG checker</span></span></a></li>
         </ul>
       </details>
-    </ul>
+    </div>
   </nav>
 
   <!-- メインコンテンツ -->
@@ -160,8 +163,16 @@
     <!-- ============ Ch0: 表紙 ============ -->
     <div class="page active" id="page-0" data-content-id="home" data-legacy-page-id="page-0" data-legacy-index="0">
       <div class="reader-cover">
+        <p class="reader-eyebrow">EVIDENCE TO EVERYDAY PRACTICE</p>
         <h1>診療ガイドライン・システマティックレビュー <br>の<span style="color:#ffcc80;">読み方</span> ガイド</h1>
         <div class="sub">— すべての医療関係者のための、GRADE準拠の読み手向け解説 —</div>
+        <div class="reader-update-banner"><strong><time datetime="2026-09-19">2026年9月19日</time> 最新の情報を追加</strong><a href="updates.html">GPS・PRISMA-C 2026など、今回の更新を読む →</a></div>
+        <form class="reader-search" action="learning-index.html" method="get" role="search"><label for="home-search">知りたいことから、学び始める</label><div class="reader-search-row"><input id="home-search" name="q" type="search" placeholder="例：不精確さ、MID、観察研究" autocomplete="off"><button type="submit">検索</button></div></form>
+        <nav class="reader-start-paths" aria-label="目的別に学ぶ">
+          <a href="#page-25"><span class="path-number">01 / はじめての方へ</span><strong>EBM・SR・CPGの全体像</strong><small>用語と関係を、導入から順番に読む。</small></a>
+          <a href="#page-16"><span class="path-number">02 / ガイドラインを読む</span><strong>この推奨を信頼できるか</strong><small>6つの質問で、根拠と判断を確認する。</small></a>
+          <a href="#page-26"><span class="path-number">03 / SR・メタ分析を読む</span><strong>方法・結果・適用を吟味する</strong><small>Users’ Guidesの問いに沿って読み進める。</small></a>
+        </nav><a id="reader-resume" class="reader-resume" hidden></a>
         <section class="home-learning-map" aria-labelledby="ebm-grade-map-title">
           <h2 id="ebm-grade-map-title">EBMからGRADEへ：全体学習マップ</h2>
           <p class="home-learning-map-intro">EBMの批判的吟味と意思決定の流れが、GRADEの確実性評価、SoF、EtD、推奨へどうつながるかを示します。図の領域を押すと、対応する学習ハブへ進みます。</p>
@@ -227,12 +238,12 @@
                 <span class="btn-dsc" style="color:#5f3a09 !important;opacity:1;">本サイトの理論を、手を動かしながら実例演習で定着させる</span>
               </span>
             </a>
-            <a class="beginner-btn primer-btn" href="https://chatgpt.com/g/g-6a085bf7d5bc8191970e6c5eb8949a09-zhen-liao-kaitorainxin-lai-xing-tietukagpt" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#fff7ea 0%,#ffe4bd 100%);border-color:#d4941e;color:#4b2a05 !important;">
+            <a class="beginner-btn primer-btn" href="index.html#page-16" style="background:linear-gradient(135deg,#fff7ea 0%,#ffe4bd 100%);border-color:#d4941e;color:#4b2a05 !important;">
               <span class="primer-mark" style="background:#d4941e;color:white;">🧭</span>
               <span class="btn-body">
-                <span class="btn-label" style="color:#7a4b10;">姉妹サイト（別タブで開きます）</span>
-                <span class="btn-title" style="color:#4b2a05 !important;">既存のCPGをチェックしてみよう</span>
-                <span class="btn-dsc" style="color:#5f3a09 !important;opacity:1;">既存のCPGの問題点を自分でチェックしてAIの回答と比較して学習するサイト</span>
+                <span class="btn-label" style="color:#7a4b10;">このサイトの確認ツール</span>
+                <span class="btn-title" style="color:#4b2a05 !important;">CPGの根拠を6つの質問で確認</span>
+                <span class="btn-dsc" style="color:#5f3a09 !important;opacity:1;">既存のCPGの根拠を6つの質問に沿って確認する</span>
               </span>
             </a>
           </div>
@@ -483,7 +494,7 @@
         <a class="map-hub-card" href="#page-24" data-content-target="references"><strong>参考文献</strong><span>資料の種類と照合状態を確認する。</span></a>
         <a class="map-hub-card" href="y-sensei-ebm-practice-links.html"><strong>Y先生のEBM実践リンク集</strong><span>講座と実践資料へ進む。</span></a>
         <a class="map-hub-card" href="https://mxe050.github.io/GRADE-tanken/" target="_blank" rel="noopener"><strong>GRADE 探検</strong><span>実例を使って読み方を練習する。</span></a>
-        <a class="map-hub-card" href="https://chatgpt.com/g/g-6a085bf7d5bc8191970e6c5eb8949a09-zhen-liao-kaitorainxin-lai-xing-tietukagpt" target="_blank" rel="noopener"><strong>既存CPGチェックGPT</strong><span>CPGの問題点を自分の評価と比較する。</span></a>
+        <a class="map-hub-card" href="index.html#page-16"><strong>CPGの6質問で確認</strong><span>CPGの問題点を自分の評価と比較する。</span></a>
       </div></section>
     </div>
 
@@ -932,7 +943,7 @@
           <h4>🧭 なぜCPG／SRの読み方を学ぶ初心者が、まず「GRADE」から学ぶのか？</h4>
           <p style="margin:6px 0 8px;">"GRADE" という耳慣れない用語が急に出てきて混乱するかもしれません。でも大丈夫。<strong>この用語を避けて通ると、CPG／SRのほぼすべての内容が理解できなくなる</strong>からです。理由は3つあります：</p>
           <ol>
-            <li><strong>現代のCPG／SRの「共通言語」だから</strong> — 世界110以上のガイドライン組織（WHO、NICE、Cochrane、Minds、米国内科学会…）がGRADEを採用 [U13]。「エビデンスの確実性：中」「条件付き推奨」「⊕⊕⊕◯」などの記号と用語はすべてGRADEの産物です。GRADEを知らずにCPGを読むのは、<strong>文法を知らずに外国語を読む</strong>のと同じです。</li>
+            <li><strong>現代のCPG／SRの「共通言語」だから</strong> — GRADEはWHOやCochraneを含む多くの組織で使われています [U13]。「エビデンスの確実性：中」「条件付き推奨」「⊕⊕⊕◯」などの用語・記号を理解すると、結論と根拠のつながりが読みやすくなります。別の評価体系を使うCPGでは、その体系の定義も確認します。</li>
             <li><strong>本サイトの全25章の地図になるから</strong> — Ch3は「確実性4段階」、Ch4は「推奨の強さ」、Ch5-7はGRADEの具体的な表現、Ch8-12はGRADEの「確実性を下げる5要因」の詳細、Ch16-19は「GRADEが正しく適用されたかを評価する」ツール…すべての章が<strong>GRADEの一部分</strong>を掘り下げる形で構成されています。</li>
             <li><strong>あなたの臨床判断を変えるから</strong> — GRADEは「何をどのくらい信じて、どのくらい患者に勧めるか」を構造化する道具です。<strong>「この治療は強く推奨されている」と「条件付きで推奨されている」で、実臨床でのあなたの行動は明確に変わるべき</strong>で、GRADEはその変え方を教えてくれます。</li>
           </ol>
@@ -940,7 +951,7 @@
         </div>
 
         <div class="key-message">
-          <strong>要点：</strong><span class="gloss" data-term="GRADE">GRADE</span>（<strong>G</strong>rading of <strong>R</strong>ecommendations, <strong>A</strong>ssessment, <strong>D</strong>evelopment, and <strong>E</strong>valuation）は、<strong>エビデンスの確実性を4段階で評価</strong>し、<strong>推奨の強さを2段階</strong>（強い／条件付き）で提示する国際標準の枠組みです。2000年頃に国際ワーキンググループが開発し、現在110以上のガイドライン組織が採用しています [U13]。読み手としては「<strong>CPG／SRの結論を信じる度合いと、患者への勧め方を決める共通ルール</strong>」と理解してください。
+          <strong>要点：</strong><span class="gloss" data-term="GRADE">GRADE</span>（<strong>G</strong>rading of <strong>R</strong>ecommendations, <strong>A</strong>ssessment, <strong>D</strong>evelopment, and <strong>E</strong>valuation）は、<strong>エビデンスの確実性を4段階で評価</strong>し、<strong>推奨の強さを2段階</strong>（強い／条件付き）で提示する、国際的に使われる枠組みです。2000年に発足したGRADE Working Groupが発展させてきました [U13]。読み手としては「<strong>効果の確実性と、患者への勧め方を区別して検討する共通の枠組み</strong>」と理解してください。
         </div>
 
         <h2>GRADEという単語の意味を分解する</h2>
@@ -1138,7 +1149,7 @@
 
         <div class="key-message" style="margin-top:20px;">
           <strong>この章で覚えておくべき3つ：</strong><br>
-          ① GRADE = CPG／SRの世界共通の「格付け」ルール（110+組織採用）<br>
+          ① GRADE = エビデンスの確実性と推奨を検討する国際的な共通の枠組み<br>
           ② <strong>エビデンスの確実性（4段階）</strong>と<strong>推奨の強さ（2段階）</strong>は区別するが、certaintyは推奨判断の主要要素<br>
           ③ 確実性は5要因で下げる／3条件で上げる — 以降の章でそれぞれ詳細に学ぶ
         </div>
@@ -1285,28 +1296,28 @@
           <details class="source-slides">
             <summary>元スライド55-76を大きく確認する</summary>
             <div class="source-slide-grid">
-              <figure><img src="images/5youin/スライド55.JPG" alt="Evidence Profile作成と5要因の全体像"><figcaption><strong>55. まず全体像</strong><span>Evidence Profileは、アウトカムごとに「効果」と「確実性を下げる5要因」を同じ表で見るための作業表です。ここでは5要因の名前と位置関係をつかみます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド56.JPG" alt="Evidence Profileの列構成"><figcaption><strong>56. 表のどこに何を書くか</strong><span>左側に研究数・研究デザイン、中央に5要因、右側に効果・確実性・重要度が並びます。最初から右端の確実性だけを見ず、左から順に埋めていきます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド57.JPG" alt="架空例の空欄表"><figcaption><strong>57. 空欄表から始める</strong><span>この段階ではまだ判断していません。まず「癌治療が成功」という1つのアウトカムを決め、どの列を順番に埋めるかを確認します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド58.JPG" alt="研究一覧とバイアスリスク"><figcaption><strong>58. 元研究を確認する</strong><span>研究ごとのリスク、症例数、デザイン、バイアスリスクを見ます。Evidence Profileの判断は、メタ分析の数字だけではなく、元研究の特徴から始まります。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド59.JPG" alt="アウトカムの重要性"><figcaption><strong>59. アウトカム重要度</strong><span>まず、このアウトカムが患者にとって重要かを決めます。重要でないアウトカムなら、効果があっても推奨判断の中心にはなりにくい点に注意します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド60.JPG" alt="論文数の記入"><figcaption><strong>60. 論文数を入れる</strong><span>何本の研究に基づく評価なのかを入れます。研究数が少ないほど、あとで不精確さや一貫性の判断に注意が必要になります。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド61.JPG" alt="研究デザインの記入"><figcaption><strong>61. 研究デザインを見る</strong><span>RCTなら通常は高い確実性から開始します。ただし、これは出発点にすぎず、5要因に問題があれば下がります。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド62.JPG" alt="患者数の記入"><figcaption><strong>62. 患者数を確認する</strong><span>患者数は推定の安定性に関係します。人数が多くてもイベント数が少ない場合は、不精確さが残ることがあります。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド63.JPG" alt="メタ分析結果の記入"><figcaption><strong>63. 効果推定値を入れる</strong><span>ここでメタ分析の結果を入れます。ただし「効果が見えた」だけで終わらず、この推定値をどれくらい信じられるかを次に評価します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド64.JPG" alt="5要因の判定へ進む"><figcaption><strong>64. 5要因の判定に進む</strong><span>ここからがGRADEの中心です。効果推定値を見たあと、Risk of bias、不一致性、非直接性、不精確さ、出版バイアスを順番に確認します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド65.JPG" alt="バイアスリスクの判定"><figcaption><strong>65. Risk of bias</strong><span>研究方法に偏りがあると、効果が過大または過小に見える可能性があります。複数研究で深刻な偏りがあれば、確実性を下げます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド66.JPG" alt="不一致性の判定"><figcaption><strong>66. 不一致性</strong><span>研究間で結果の方向や大きさがそろっているかを見ます。結果がばらばらなら、「どれを信じればよいか」が不安定になります。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド67.JPG" alt="非直接性の判定"><figcaption><strong>67. 非直接性</strong><span>対象者、介入、比較、アウトカムが臨床疑問とずれていないかを見ます。この例では大きなずれがなければ「なし」と判断します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド68.JPG" alt="不精確さの判定"><figcaption><strong>68. 不精確さ</strong><span>信頼区間が広い、イベント数が少ない、閾値をまたぐなどの場合に問題になります。効果がありそうでも、結論が揺れるなら確実性を下げます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド69.JPG" alt="出版バイアスの判定"><figcaption><strong>69. 出版/発信バイアス</strong><span>都合のよい研究だけが見えていないかを考えます。小規模研究ばかり、未公表研究がありそう、スポンサーの偏りがある場合は注意します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド70.JPG" alt="5要因から確実性へ"><figcaption><strong>70. 5要因をまとめる</strong><span>5要因の判定を横並びで確認し、最終的な確実性を決めます。赤枠内の問題が、何段階下げるかの根拠になります。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド71.JPG" alt="初期確実性の確認"><figcaption><strong>71. 出発点は高い確実性</strong><span>RCTなので初期値は「高」です。ただし、この時点ではまだ最終判断ではありません。ここから深刻な問題の数と重さを反映します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド72.JPG" alt="深刻な問題の数を確認"><figcaption><strong>72. 何段階下げるか</strong><span>深刻な問題が複数あるため、高から中、低へと下がる流れを確認します。機械的な足し算ではなく、結論への影響を見ます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド73.JPG" alt="低い確実性の総合判断"><figcaption><strong>73. 最終判断を置く</strong><span>この例では総合的に「低い」と判断されます。読み手は、低い理由がRisk of bias、不一致性、不精確さにあることまで確認します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド74.JPG" alt="学習者向けの理解ポイント"><figcaption><strong>74. 読み手としての感覚</strong><span>この表が読めると、「結果はあるが信じきれない理由」が見えてきます。確実性は結果の大きさではなく、結果を信じる度合いです。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド75.JPG" alt="別アウトカムへの展開"><figcaption><strong>75. 別アウトカムにも同じ作業</strong><span>1つの推奨には複数アウトカムがあります。血圧低下、有害事象、QOLなど、それぞれ別々にEvidence Profileを作ります。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド76.JPG" alt="Evidence Profileを読めるようになる意義"><figcaption><strong>76. ここまで読めれば実践へ</strong><span>Evidence Profileを読めると、SoF表の確実性列や推奨文の根拠を追跡できます。次はCh5で、読者向けに要約されたSoF表へ進みます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド55.JPG" alt="Evidence Profile作成と5要因の全体像"><figcaption><strong>55. まず全体像</strong><span>Evidence Profileは、アウトカムごとに「効果」と「確実性を下げる5要因」を同じ表で見るための作業表です。ここでは5要因の名前と位置関係をつかみます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド56.JPG" alt="Evidence Profileの列構成"><figcaption><strong>56. 表のどこに何を書くか</strong><span>左側に研究数・研究デザイン、中央に5要因、右側に効果・確実性・重要度が並びます。最初から右端の確実性だけを見ず、左から順に埋めていきます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド57.JPG" alt="架空例の空欄表"><figcaption><strong>57. 空欄表から始める</strong><span>この段階ではまだ判断していません。まず「癌治療が成功」という1つのアウトカムを決め、どの列を順番に埋めるかを確認します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド58.JPG" alt="研究一覧とバイアスリスク"><figcaption><strong>58. 元研究を確認する</strong><span>研究ごとのリスク、症例数、デザイン、バイアスリスクを見ます。Evidence Profileの判断は、メタ分析の数字だけではなく、元研究の特徴から始まります。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド59.JPG" alt="アウトカムの重要性"><figcaption><strong>59. アウトカム重要度</strong><span>まず、このアウトカムが患者にとって重要かを決めます。重要でないアウトカムなら、効果があっても推奨判断の中心にはなりにくい点に注意します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド60.JPG" alt="論文数の記入"><figcaption><strong>60. 論文数を入れる</strong><span>何本の研究に基づく評価なのかを入れます。研究数が少ないほど、あとで不精確さや一貫性の判断に注意が必要になります。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド61.JPG" alt="研究デザインの記入"><figcaption><strong>61. 研究デザインを見る</strong><span>RCTなら通常は高い確実性から開始します。ただし、これは出発点にすぎず、5要因に問題があれば下がります。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド62.JPG" alt="患者数の記入"><figcaption><strong>62. 患者数を確認する</strong><span>患者数は推定の安定性に関係します。人数が多くてもイベント数が少ない場合は、不精確さが残ることがあります。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド63.JPG" alt="メタ分析結果の記入"><figcaption><strong>63. 効果推定値を入れる</strong><span>ここでメタ分析の結果を入れます。ただし「効果が見えた」だけで終わらず、この推定値をどれくらい信じられるかを次に評価します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド64.JPG" alt="5要因の判定へ進む"><figcaption><strong>64. 5要因の判定に進む</strong><span>ここからがGRADEの中心です。効果推定値を見たあと、Risk of bias、不一致性、非直接性、不精確さ、出版バイアスを順番に確認します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド65.JPG" alt="バイアスリスクの判定"><figcaption><strong>65. Risk of bias</strong><span>研究方法に偏りがあると、効果が過大または過小に見える可能性があります。複数研究で深刻な偏りがあれば、確実性を下げます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド66.JPG" alt="不一致性の判定"><figcaption><strong>66. 不一致性</strong><span>研究間で結果の方向や大きさがそろっているかを見ます。結果がばらばらなら、「どれを信じればよいか」が不安定になります。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド67.JPG" alt="非直接性の判定"><figcaption><strong>67. 非直接性</strong><span>対象者、介入、比較、アウトカムが臨床疑問とずれていないかを見ます。この例では大きなずれがなければ「なし」と判断します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド68.JPG" alt="不精確さの判定"><figcaption><strong>68. 不精確さ</strong><span>信頼区間が広い、イベント数が少ない、閾値をまたぐなどの場合に問題になります。効果がありそうでも、結論が揺れるなら確実性を下げます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド69.JPG" alt="出版バイアスの判定"><figcaption><strong>69. 出版/発信バイアス</strong><span>都合のよい研究だけが見えていないかを考えます。小規模研究ばかり、未公表研究がありそう、スポンサーの偏りがある場合は注意します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド70.JPG" alt="5要因から確実性へ"><figcaption><strong>70. 5要因をまとめる</strong><span>5要因の判定を横並びで確認し、最終的な確実性を決めます。赤枠内の問題が、何段階下げるかの根拠になります。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド71.JPG" alt="初期確実性の確認"><figcaption><strong>71. 出発点は高い確実性</strong><span>RCTなので初期値は「高」です。ただし、この時点ではまだ最終判断ではありません。ここから深刻な問題の数と重さを反映します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド72.JPG" alt="深刻な問題の数を確認"><figcaption><strong>72. 何段階下げるか</strong><span>深刻な問題が複数あるため、高から中、低へと下がる流れを確認します。機械的な足し算ではなく、結論への影響を見ます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド73.JPG" alt="低い確実性の総合判断"><figcaption><strong>73. 最終判断を置く</strong><span>この例では総合的に「低い」と判断されます。読み手は、低い理由がRisk of bias、不一致性、不精確さにあることまで確認します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド74.JPG" alt="学習者向けの理解ポイント"><figcaption><strong>74. 読み手としての感覚</strong><span>この表が読めると、「結果はあるが信じきれない理由」が見えてきます。確実性は結果の大きさではなく、結果を信じる度合いです。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド75.JPG" alt="別アウトカムへの展開"><figcaption><strong>75. 別アウトカムにも同じ作業</strong><span>1つの推奨には複数アウトカムがあります。血圧低下、有害事象、QOLなど、それぞれ別々にEvidence Profileを作ります。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド76.JPG" alt="Evidence Profileを読めるようになる意義"><figcaption><strong>76. ここまで読めれば実践へ</strong><span>Evidence Profileを読めると、SoF表の確実性列や推奨文の根拠を追跡できます。次はCh5で、読者向けに要約されたSoF表へ進みます。</span></figcaption></figure>
             </div>
           </details>
         </section>
@@ -1390,14 +1401,14 @@
         </ol>
         <p>これらに該当しないのに低確実性＋強い推奨が出ているCPGは、<strong>信頼性に疑問</strong>があります。</p>
 
-        <h2 id="recommendation-gps">Good Practice Statement（GPS）</h2>
-        <p>GPS [G4] は、<strong>形式的なエビデンスレビューなしに</strong>作られる推奨です。例：</p>
+        <h2 id="recommendation-gps">Good Practice Statement（GPS）</h2><aside class="reader-note"><time datetime="2026-09-19">2026年9月19日 最新の情報を追加</time>2026年のGRADEガイダンスは、GPSの根拠を倫理・人権、不可欠な原則・実践・手順、確立した科学的エビデンスに整理しています。[G8] <a href="updates.html#gps-2026">出典と更新の詳細 →</a></aside>
+        <p>GPSは、通常の推奨と同じ形式でエビデンスの確実性を評定しない実践声明です。[G4][G8] 必要性、根拠、実施の影響を説明することが求められます。次は内容のイメージであり、文言だけでGPSに該当すると決めることはできません：</p>
         <ul>
           <li>「患者に情報を十分に提供する」</li>
           <li>「手洗いをする」</li>
           <li>「患者の意向を確認する」</li>
         </ul>
-        <p>GPSは、利益が明らかで代替案が非倫理的・非合理な場合に限って使われます。<strong>頻繁にGPSを使うガイドラインは要注意</strong>（エビデンスを探す努力が足りない可能性）。</p>
+        <p>GPSを使う理由が説明されているかを確認します。「研究が少ない」という事情だけでGPSを選んだり、介入効果の評価を省略したりすることは適切ではありません。</p>
 
         <h2>推奨表現の標準化（Piggott 2022）</h2>
         <p>Piggott et al. [G5] は、EtDフレームワークと推奨の表現を標準化しました。確実性レベルと効果の大きさごとに使うべき動詞・副詞が決まっています：</p>
@@ -1518,20 +1529,20 @@
           <details class="source-slides">
             <summary>元スライド55・77-83・85-90を大きく確認する</summary>
             <div class="source-slide-grid">
-              <figure><img src="images/5youin/スライド55.JPG" alt="Evidence Profileの5要因"><figcaption><strong>55. Evidence Profileの役割</strong><span>SoF表を読む前に、確実性を下げた5要因がどこに記録されるかを確認します。SoF表の裏側にある作業表です。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド77.JPG" alt="SoF表はEvidence Profileを簡略化したもの"><figcaption><strong>77. SoF表は要約版</strong><span>Evidence Profileから、読者がまず知るべき効果・確実性・絶対効果を抜き出したものがSoF表です。詳細理由は脚注やEPに残ります。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド78.JPG" alt="SoF表の構造例"><figcaption><strong>78. SoF表の列を読む</strong><span>アウトカム、絶対効果、相対効果、参加者数、確実性、コメントが並びます。スマホでは1アウトカムずつ横に確認する感覚で読みます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド79.JPG" alt="SoF表の読み取りポイント"><figcaption><strong>79. 注目する列</strong><span>相対効果だけでなく、絶対効果と確実性を見ます。脚注には、なぜ確実性が下がったのかが書かれるので必ず確認します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド80.JPG" alt="EtD表の解説"><figcaption><strong>80. EtD表へつながる</strong><span>SoF表は効果と確実性の要約です。推奨の強さを決めるには、利益と害、価値観、資源、実行可能性などをEtD表で考えます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド81.JPG" alt="価値観、益と害、リソースの判断"><figcaption><strong>81. 推奨判断の材料</strong><span>価値観、益と害のバランス、リソース/コストなどが整理されます。SoF表だけでは推奨の強さまでは決まりません。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド82.JPG" alt="判定一覧表"><figcaption><strong>82. 判定を一覧で見る</strong><span>各判断項目を一覧化すると、推奨の方向と強さがどの根拠から来たかを追えます。透明性のための表です。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド83.JPG" alt="SoF、GRADE Evidence Profile、EtD表の関係"><figcaption><strong>83. 3種類の表を区別する</strong><span>SoF表は結論の入口、Evidence Profileは確実性の理由、EtD表は推奨への変換過程です。この3つを混同しないことが読み方の鍵です。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド85.JPG" alt="Mindsシートの見分け方"><figcaption><strong>85. Minds形式に注意</strong><span>Mindsの資料では、SoF、Evidence Profile、EtDに似た表が並びます。まず「何を判断する表なのか」を見分けます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド86.JPG" alt="MindsのEvidence Profileに似た表"><figcaption><strong>86. EPに似た表</strong><span>GRADE Evidence Profileに似ていても、分母分子のセルや構成が違う場合があります。見た目ではなく、列の意味で判断します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド87.JPG" alt="評価シート記載例の問題"><figcaption><strong>87. 記載の問題を見抜く</strong><span>確実性評価の理由が十分に説明されていないと、読み手は判断を検証できません。丸や記号だけでなく理由を探します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド88.JPG" alt="Minds評価シートの注意点"><figcaption><strong>88. 上げる項目の扱い</strong><span>評価シートの項目が現在のGRADEの考え方とずれることがあります。どのドメインが実際に使われているかを確認します。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド89.JPG" alt="Minds EtD表の項目"><figcaption><strong>89. EtD表の項目</strong><span>MindsにもEtDに相当する判断項目があります。効果の確実性だけでなく、価値観・コスト・受け入れ可能性などを読みます。</span></figcaption></figure>
-              <figure><img src="images/5youin/スライド90.JPG" alt="GRADEpro GDTとMinds表の対応"><figcaption><strong>90. GRADEproとの対応</strong><span>GRADEpro GDTでは個人視点と集団視点の推奨が分かれます。Minds表を読むときも、誰に対する推奨かを意識します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド55.JPG" alt="Evidence Profileの5要因"><figcaption><strong>55. Evidence Profileの役割</strong><span>SoF表を読む前に、確実性を下げた5要因がどこに記録されるかを確認します。SoF表の裏側にある作業表です。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド77.JPG" alt="SoF表はEvidence Profileを簡略化したもの"><figcaption><strong>77. SoF表は要約版</strong><span>Evidence Profileから、読者がまず知るべき効果・確実性・絶対効果を抜き出したものがSoF表です。詳細理由は脚注やEPに残ります。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド78.JPG" alt="SoF表の構造例"><figcaption><strong>78. SoF表の列を読む</strong><span>アウトカム、絶対効果、相対効果、参加者数、確実性、コメントが並びます。スマホでは1アウトカムずつ横に確認する感覚で読みます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド79.JPG" alt="SoF表の読み取りポイント"><figcaption><strong>79. 注目する列</strong><span>相対効果だけでなく、絶対効果と確実性を見ます。脚注には、なぜ確実性が下がったのかが書かれるので必ず確認します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド80.JPG" alt="EtD表の解説"><figcaption><strong>80. EtD表へつながる</strong><span>SoF表は効果と確実性の要約です。推奨の強さを決めるには、利益と害、価値観、資源、実行可能性などをEtD表で考えます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド81.JPG" alt="価値観、益と害、リソースの判断"><figcaption><strong>81. 推奨判断の材料</strong><span>価値観、益と害のバランス、リソース/コストなどが整理されます。SoF表だけでは推奨の強さまでは決まりません。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド82.JPG" alt="判定一覧表"><figcaption><strong>82. 判定を一覧で見る</strong><span>各判断項目を一覧化すると、推奨の方向と強さがどの根拠から来たかを追えます。透明性のための表です。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド83.JPG" alt="SoF、GRADE Evidence Profile、EtD表の関係"><figcaption><strong>83. 3種類の表を区別する</strong><span>SoF表は結論の入口、Evidence Profileは確実性の理由、EtD表は推奨への変換過程です。この3つを混同しないことが読み方の鍵です。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド85.JPG" alt="Mindsシートの見分け方"><figcaption><strong>85. Minds形式に注意</strong><span>Mindsの資料では、SoF、Evidence Profile、EtDに似た表が並びます。まず「何を判断する表なのか」を見分けます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド86.JPG" alt="MindsのEvidence Profileに似た表"><figcaption><strong>86. EPに似た表</strong><span>GRADE Evidence Profileに似ていても、分母分子のセルや構成が違う場合があります。見た目ではなく、列の意味で判断します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド87.JPG" alt="評価シート記載例の問題"><figcaption><strong>87. 記載の問題を見抜く</strong><span>確実性評価の理由が十分に説明されていないと、読み手は判断を検証できません。丸や記号だけでなく理由を探します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド88.JPG" alt="Minds評価シートの注意点"><figcaption><strong>88. 上げる項目の扱い</strong><span>評価シートの項目が現在のGRADEの考え方とずれることがあります。どのドメインが実際に使われているかを確認します。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド89.JPG" alt="Minds EtD表の項目"><figcaption><strong>89. EtD表の項目</strong><span>MindsにもEtDに相当する判断項目があります。効果の確実性だけでなく、価値観・コスト・受け入れ可能性などを読みます。</span></figcaption></figure>
+              <figure><img loading="lazy" decoding="async" src="images/5youin/スライド90.JPG" alt="GRADEpro GDTとMinds表の対応"><figcaption><strong>90. GRADEproとの対応</strong><span>GRADEpro GDTでは個人視点と集団視点の推奨が分かれます。Minds表を読むときも、誰に対する推奨かを意識します。</span></figcaption></figure>
             </div>
           </details>
         </section>
@@ -1780,7 +1791,7 @@
         </div>
 
         <h2>なぜMIDが必要か</h2>
-        <p>統計的有意差（p&lt;0.05）は、<strong>臨床的に意味のある差</strong>とは限りません。1000人で0.5人が0.6人になる効果はp値が有意でも臨床的に無意味。逆に、p値が有意でなくても信頼区間の上限が十分大きければ臨床的に重要な可能性があります。<strong>MIDはこの臨床的重要性の基準線</strong>です。</p>
+        <p>統計的有意差（p&lt;0.05）は、<strong>臨床的に意味のある差</strong>とは限りません。例えば、ある期間のリスクが1000人あたり0.5人から0.6人になる差は小さく見えますが、その重要性はアウトカム、期間、介入の負担、患者の価値観によって変わります。有意差がなくても、信頼区間に重要な利益や害が含まれることがあります。<strong>MIDや意思決定閾値を、点推定値とCIの両方に照らして読みます</strong>。</p>
 
         <h2>些細・中・大の3段階閾値</h2>
         <p>GRADE Guidance 42では、患者にとっての利益・害を判断するための閾値を、問いと文脈に応じて明示します。以下の4段階は、その読み方を練習するための枠組みであり、すべてのアウトカムに固定的に当てはめる規則ではありません [M2]：</p>
@@ -1831,7 +1842,7 @@
             <span class="yah-title">あなたが今学んでいる場所</span>
             <span class="yah-where">CPG：Evidence Profile「Risk of bias」判定（STEP 6, 9）</span>
             <span class="yah-where">SR：方法の「Risk of bias評価」・結果の<strong>RoB 2 traffic light図</strong>（STEP 5, 8）</span>
-            <span class="yah-check">GRADEで確実性を下げる5要因のうちの<strong>第1要因</strong>。SR本文やEvidence Profileで「<strong>serious risk of bias</strong>」「<strong>very serious risk of bias</strong>」と書かれている箇所の根拠を追跡できるようになります。RCTのRoB 2 の5ドメイン、観察研究のROBINS-I/E の7ドメインを理解します。</span>
+            <span class="yah-check">GRADEで確実性を下げる5要因のうちの<strong>第1要因</strong>。SR本文やEvidence Profileで「<strong>serious risk of bias</strong>」「<strong>very serious risk of bias</strong>」と書かれている箇所の根拠を追跡できるようになります。RoB 2、ROBINS-I、ROBINS-Eの対象と、使用版によるドメインの違いを理解します。</span>
             <button class="yah-map-link" onclick="showPage(1)">← 文書構造マップで全体を確認する</button>
           </div>
         </div>
@@ -1858,20 +1869,14 @@
           <li><strong>報告される結果の選択</strong>：事前登録との一致</li>
         </ol>
 
-        <h2>観察研究のROBINS-E（曝露）／ROBINS-I（介入） — 7ドメイン</h2>
-        <p>観察研究には<strong>交絡</strong>という固有の問題があるため、より厳密な評価が必要です：</p>
-        <ol>
-          <li>交絡（Confounding）</li>
-          <li>参加者選択</li>
-          <li>曝露／介入の測定</li>
-          <li>意図した曝露／介入からの逸脱</li>
-          <li>欠損データ</li>
-          <li>アウトカム測定</li>
-          <li>報告の選択</li>
-        </ol>
-        <p>観察研究は<strong>交絡の管理</strong>（多変量調整、傾向スコア、操作変数など）が十分かが最重要です [G2]。</p>
-
-        <h2>読み手としてのチェック</h2>
+        <h2 id="read-risk-of-bias-tools">観察研究のRoB評価 — 問いと使用版を区別する</h2>
+        <aside class="reader-note"><time datetime="2026-09-19">2026年9月19日 最新の情報を追加</time>ROBINS-I V2の2025年11月20日改訂版は、公式サイトで現在も草案とされています。2016年版やROBINS-Eと同じドメイン一覧にまとめないでください。 <a href="updates.html#robins-i-v2">出典と更新の詳細 →</a></aside>
+        <table><thead><tr><th>ツール</th><th>対象・版</th><th>読むときの要点</th></tr></thead><tbody>
+          <tr><td>ROBINS-I（2016）</td><td>非ランダム化研究の介入効果</td><td>7ドメイン。交絡、参加者選択、介入の分類、意図した介入からの逸脱、欠測、アウトカム測定、報告結果の選択。</td></tr>
+          <tr><td>ROBINS-I V2</td><td>追跡研究の介入効果。2025-11-20版・草案</td><td>6ドメイン。意図した介入からの逸脱のドメインを削除。対象効果に応じた交絡の評価を確認する。</td></tr>
+          <tr><td>ROBINS-E</td><td>曝露効果。2024-03-24版</td><td>7ドメイン。曝露の因果効果に特化した別ツール。介入用の一覧をそのまま転用しない。</td></tr>
+        </tbody></table><p>交絡への対処とともに、対象者の選択、測定、欠測、選択的報告を確認します。[R2][R3] バイアスリスクは特定の結果について、根拠・予測される方向・影響を検討します。</p>
+<h2>読み手としてのチェック</h2>
         <div class="reader-tips">
           <h4>📌 バイアスリスクを読むときのポイント</h4>
           <ul>
@@ -2279,15 +2284,8 @@
         </div>
 
         <h2 id="alternative-gps">Good Practice Statement（GPS）</h2>
-        <p>GPS [G4] の適用条件：</p>
-        <ul>
-          <li>利益が明らかで、代替案が非倫理的・非合理</li>
-          <li>正式なエビデンスレビューが不要と判断される</li>
-          <li>例：「手洗い」「患者の同意を得る」「情報提供する」</li>
-        </ul>
-        <p><strong>濫用の兆候</strong>：GPSが推奨の半数以上を占める／SRで容易に評価できる質問にGPSを使っている → GRADE評価の回避の可能性。</p>
-
-        <h2 id="alternative-no-single-estimate">単一推定値が統合できない場合（Murad 2017）</h2>
+        <aside class="reader-note"><time datetime="2026-09-19">2026年9月19日 最新の情報を追加</time>GPSの2026年更新ガイダンスでは、従来の確認質問を活用しながら、GPSの種類と実施後の影響を検討します。[G8] <a href="updates.html#gps-2026">出典と更新の詳細 →</a></aside><p>GPSを読むときの確認点：</p><ul><li>声明の根拠は何か（倫理・人権、不可欠な実践、確立した科学的根拠）</li><li>なぜ通常の推奨ではなくGPSとして扱うのか</li><li>実施による利益・害・負担と、その判断過程が説明されているか</li></ul><p>GPSの割合だけで濫用を判定できる妥当な閾値は示していません。各声明がGPSである理由を確認します。</p>
+<h2 id="alternative-no-single-estimate">単一推定値が統合できない場合（Murad 2017）</h2>
         <p>[G6] はナラティブ統合でも確実性を評価する方法を示しています：</p>
         <ul>
           <li>効果の方向が一致するか</li>
@@ -2621,7 +2619,7 @@
         </div>
 
         <h2>インタラクティブ評価ツール</h2>
-        <div id="amstar2-check"></div>
+        <div id="amstar2-check"></div><aside class="reader-note"><time datetime="2026-09-19">2026年9月19日 最新の情報を追加</time>小児・思春期の介入SRに対する報告拡張PRISMA-C 2026が公表されました。[T4] PRISMA 2020と併せて対象範囲を確認します。 <a href="updates.html#prisma-c-2026">出典と更新の詳細 →</a></aside>
 
         <h2>重要項目（★）の背景</h2>
         <ul>
@@ -3216,7 +3214,7 @@
         </section>
         <section id="guyatt-linkedin-picks" class="lecture-deep-dive linkedin-article-section">
           <h2>Guyatt先生LinkedIn記事</h2>
-          <div id="linkedin-feed"></div>
+          <p class="reader-note">以下は2026年5月時点の投稿紹介です。継続更新のニュース一覧ではありません。投稿コメントと、確認済みの原著・公式ガイダンスを区別して読んでください。<a href="updates.html">2026年9月19日の方法論更新はこちら</a>。</p><div id="linkedin-feed"></div>
         </section>
 
         <div class="chapter-nav">
@@ -3239,6 +3237,12 @@
         </div>
 
         <div id="references-list">
+          <div class="ref-category">2026年9月19日 追加・確認した資料</div>
+          <ul class="ref-list">
+            <li><span class="ref-id">G8</span> Dewidar O, et al. GRADE Guidance: Update on Developing Good Practice Statements in Guidelines. <em>Ann Intern Med.</em> 2026;179(3):430–439. <a href="https://pubmed.ncbi.nlm.nih.gov/41554128/" target="_blank" rel="noopener">PubMed</a>（書誌・抄録を確認）</li>
+            <li><span class="ref-id">T4</span> Baba A, et al. PRISMA-Children and Adolescents (PRISMA-C) 2026 extension statement and explanation. <em>BMJ.</em> 2026;393:e088561. <a href="https://www.prisma-statement.org/children" target="_blank" rel="noopener">公式資料</a></li>
+          </ul>
+          <p><a href="updates.html">ROBINS-I V2の草案状態・PRISMAの現状と、追加資料の読み方も確認する →</a></p>
           <div class="ref-category">A. Users' Guides to the Medical Literature シリーズ</div>
           <ul class="ref-list">
             <li><span class="ref-id">U1</span> Hayward RS, Wilson MC, Tunis SR, Bass EB, Guyatt G. Users' guides VIII. How to use clinical practice guidelines. A. Are the recommendations valid? JAMA 1995;274(7):570-574.</li>
@@ -3398,15 +3402,15 @@
           </div>
           <div class="trust-question-grid">
             <figure class="trust-slide">
-              <img src="images/5youin/スライド2.JPG" alt="教科書の記載だけでよいかを疑う場面">
+              <img loading="lazy" decoding="async" src="images/5youin/スライド2.JPG" alt="教科書の記載だけでよいかを疑う場面">
               <figcaption><strong>スライド2. 最初の違和感</strong><span>教科書に「A薬を投与」と書いてあっても、それが最新の診療ガイドラインと一致するとは限りません。ここでは、情報源をそのまま信じず、根拠の作られ方を確認する必要性を示します。</span></figcaption>
             </figure>
             <figure class="trust-slide">
-              <img src="images/5youin/スライド3.JPG" alt="診療ガイドラインそのものへの疑問">
+              <img loading="lazy" decoding="async" src="images/5youin/スライド3.JPG" alt="診療ガイドラインそのものへの疑問">
               <figcaption><strong>スライド3. ガイドラインも疑う</strong><span>「診療ガイドラインだから正しい」と考えるのではなく、そのガイドラインが信頼できる方法で作られたかを確認します。疑うとは否定ではなく、根拠を点検することです。</span></figcaption>
             </figure>
             <figure class="trust-slide">
-              <img src="images/5youin/スライド4.JPG" alt="教科書と診療ガイドラインの違いを見極める">
+              <img loading="lazy" decoding="async" src="images/5youin/スライド4.JPG" alt="教科書と診療ガイドラインの違いを見極める">
               <figcaption><strong>スライド4. 学習の目的</strong><span>教科書、SR、診療ガイドラインの役割を分けて理解します。最終的には「どの情報を患者に適用してよいか」を自分で見極める力を身につけます。</span></figcaption>
             </figure>
           </div>
@@ -3436,7 +3440,7 @@
         <h2 class="primer-h2" id="psec-1">1. 医学情報の信頼性 — あなたはどちらを信頼する？</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-01.jpg" alt="医学情報の信頼性：AIとPubMedどちらを信頼するか">
+          <img loading="lazy" decoding="async" src="images/beginner-01.jpg" alt="医学情報の信頼性：AIとPubMedどちらを信頼するか">
           <figcaption>スライド① 医学情報の信頼性：AIとPubMedの比較</figcaption>
         </figure>
 
@@ -3466,7 +3470,7 @@
         <h2 class="primer-h2" id="psec-2">2. 「知っている」「使っている」ではダメな理由</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-02.jpg" alt="EBM・SR・CPGの定義を理解していますか？">
+          <img loading="lazy" decoding="async" src="images/beginner-02.jpg" alt="EBM・SR・CPGの定義を理解していますか？">
           <figcaption>スライド② 基本知識：定義を理解しているか？</figcaption>
         </figure>
 
@@ -3486,7 +3490,7 @@
         <h2 class="primer-h2" id="psec-3">3. EBMの定義 — Sackett 1996</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-03.jpg" alt="EBMの定義：Sackett 1996">
+          <img loading="lazy" decoding="async" src="images/beginner-03.jpg" alt="EBMの定義：Sackett 1996">
           <figcaption>スライド③ EBMの定義（Sackett et al. BMJ 1996）</figcaption>
         </figure>
 
@@ -3506,7 +3510,7 @@
         <h2 class="primer-h2" id="psec-4">4. EBMの5ステップ（Evidence cycle: 5つのA）</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-04.jpg" alt="EBMの5Steps (5A cycle)">
+          <img loading="lazy" decoding="async" src="images/beginner-04.jpg" alt="EBMの5Steps (5A cycle)">
           <figcaption>スライド④ EBMの5ステップ（5つのA）</figcaption>
         </figure>
 
@@ -3529,7 +3533,7 @@
         <h2 class="primer-h2" id="psec-5">5. ⭐ EBMの3つの基本原則（意外に知られていない）</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-05.jpg" alt="EBMの3つの基本原則">
+          <img loading="lazy" decoding="async" src="images/beginner-05.jpg" alt="EBMの3つの基本原則">
           <figcaption>スライド⑤ EBMの3つの基本原則（Users' Guides 3rd ed. 2015）</figcaption>
         </figure>
 
@@ -3549,7 +3553,7 @@
         </div>
 
         <figure class="primer-fig">
-          <img src="images/beginner-06.jpg" alt="EBMの3つの基本原則 追加情報">
+          <img loading="lazy" decoding="async" src="images/beginner-06.jpg" alt="EBMの3つの基本原則 追加情報">
           <figcaption>スライド⑥ EBMの3つの基本原則：追加情報（検索の実践）</figcaption>
         </figure>
 
@@ -3579,7 +3583,7 @@
         <h2 class="primer-h2" id="psec-6">6. 診療ガイドライン（CPG）の世界的定義</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-07.jpg" alt="診療ガイドラインの定義 NAM">
+          <img loading="lazy" decoding="async" src="images/beginner-07.jpg" alt="診療ガイドラインの定義 NAM">
           <figcaption>スライド⑦ 診療ガイドラインの定義（Health and Medicine Division, National Academies / 旧IOM）</figcaption>
         </figure>
 
@@ -3599,7 +3603,7 @@
         <h2 class="primer-h2" id="psec-7">7. システマティックレビュー（SR）の定義</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-08.jpg" alt="システマティックレビューの定義">
+          <img loading="lazy" decoding="async" src="images/beginner-08.jpg" alt="システマティックレビューの定義">
           <figcaption>スライド⑧ SRの定義（Cochrane Handbook 2023）</figcaption>
         </figure>
 
@@ -3628,7 +3632,7 @@
         <h2 class="primer-h2" id="psec-8">8. ⭐⭐ エビデンスの確実性とは — 同じ"1.62"でも確実性は違う</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-09.jpg" alt="同じ1.62でも確実性が違う">
+          <img loading="lazy" decoding="async" src="images/beginner-09.jpg" alt="同じ1.62でも確実性が違う">
           <figcaption>スライド⑨ 2つのメタ分析：どちらの1.62が確実性が高い？</figcaption>
         </figure>
 
@@ -3651,7 +3655,7 @@
         </div>
 
         <figure class="primer-fig">
-          <img src="images/beginner-10.jpg" alt="エビデンスの確実性とは">
+          <img loading="lazy" decoding="async" src="images/beginner-10.jpg" alt="エビデンスの確実性とは">
           <figcaption>スライド⑩ エビデンスの確実性（certainty of the evidence）の定義</figcaption>
         </figure>
 
@@ -3666,7 +3670,7 @@
         <h2 class="primer-h2" id="psec-9">9. エビデンスの確実性を下げる5要因（GRADEアプローチ）</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-11.jpg" alt="確実性を下げる5要因">
+          <img loading="lazy" decoding="async" src="images/beginner-11.jpg" alt="確実性を下げる5要因">
           <figcaption>スライド⑪ 確実性を下げる5要因がまとめられた（GRADEアプローチ）</figcaption>
         </figure>
 
@@ -3686,7 +3690,7 @@
         </div>
 
         <figure class="primer-fig">
-          <img src="images/beginner-12.jpg" alt="確実性の用語変遷">
+          <img loading="lazy" decoding="async" src="images/beginner-12.jpg" alt="確実性の用語変遷">
           <figcaption>スライド⑫ エビデンスの確実性の用語の変遷</figcaption>
         </figure>
 
@@ -3697,7 +3701,7 @@
         <h2 class="primer-h2" id="psec-10">10. ⭐⭐⭐ 最重要：SRの質と、エビデンスの確実性は別物</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-13.jpg" alt="従来のSRと最新のSRの違い">
+          <img loading="lazy" decoding="async" src="images/beginner-13.jpg" alt="従来のSRと最新のSRの違い">
           <figcaption>スライド⑬ 従来のSR vs 最新のSR（エビデンスの確実性が必須）</figcaption>
         </figure>
 
@@ -3709,7 +3713,7 @@
         </p>
 
         <figure class="primer-fig">
-          <img src="images/beginner-14.jpg" alt="SRの質 vs エビデンスの確実性">
+          <img loading="lazy" decoding="async" src="images/beginner-14.jpg" alt="SRの質 vs エビデンスの確実性">
           <figcaption>スライド⑭ ⭐必ず理解して欲しいこと — SRの質と確実性の読み分け</figcaption>
         </figure>
 
@@ -3742,7 +3746,7 @@
         <h2 class="primer-h2" id="psec-11">11. 診療ガイドラインの解説文 — 批判的吟味の実例</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-15.jpg" alt="ガイドライン解説文の批判的吟味例">
+          <img loading="lazy" decoding="async" src="images/beginner-15.jpg" alt="ガイドライン解説文の批判的吟味例">
           <figcaption>スライド⑮ よくあるCPGの解説文の問題点</figcaption>
         </figure>
 
@@ -4133,7 +4137,7 @@
         <h2 class="primer-h2" id="psec-12">12. まとめ — 信頼できる医療情報を見極める目を養うために</h2>
 
         <figure class="primer-fig">
-          <img src="images/beginner-16.jpg" alt="医学情報の信頼性まとめ">
+          <img loading="lazy" decoding="async" src="images/beginner-16.jpg" alt="医学情報の信頼性まとめ">
           <figcaption>スライド⑯ 医学情報の信頼性：まとめ（Lima-Mirza-Guyatt 2023）</figcaption>
         </figure>
 
@@ -4827,95 +4831,22 @@
       <p><a href="learning-index.html">索引：論文を読む順番／トピック・Guyattから探す</a> <button type="button" data-home-route>最初のページへ戻る</button></p>
     </section>
 
+  <footer class="reader-site-footer"><p><a href="updates.html">2026年9月19日の最新情報</a><a href="learning-index.html">学習索引</a><a href="#page-24">参考文献</a></p><p>CPGSR Reader · 医療者のためのCPG・SR読解教材。各資料の出典・版・確認日を併せてご確認ください。</p></footer>
   </main>
 
 </div><!-- /.app-body -->
 
 <!-- スクリプト -->
-<script src="coreGRADE_utils.js?v=7.2"></script>
-<script src="script.js?v=8.0"></script>
-<script src="ebm-grade-map.js?v=1.0"></script>
-<script src="js/glossary.js?v=7.2"></script>
-<script src="js/references.js?v=8.0"></script>
-<script src="js/mid-explorer.js?v=7.2"></script>
-<script src="js/trustworthy-check.js?v=7.2"></script>
-<script src="js/amstar2.js?v=7.3"></script>
+<script src="script.js?v=20260919"></script>
+<script src="ebm-grade-map.js?v=20260919"></script>
+<script src="js/glossary.js?v=20260919"></script>
+<script src="js/references.js?v=20260919"></script>
+<script src="js/mid-explorer.js?v=20260919"></script>
+<script src="js/trustworthy-check.js?v=20260919"></script>
+<script src="js/amstar2.js?v=20260919"></script>
 <script src="js/linkedin-feed.js?v=7.2"></script>
 
-<!-- ページ切替後のインタラクティブ要素リフレッシュ＋文書構造マップタブ -->
-<script>
-(function(){
-  // ページ切替時にGlossaryとReferencesを再適用
-  function refreshInteractive(){
-    if (window.CPGSR_Glossary && window.CPGSR_Glossary.attach) window.CPGSR_Glossary.attach();
-    if (window.CPGSR_References && window.CPGSR_References.load) window.CPGSR_References.load();
-  }
 
-  // 文書構造マップのタブ切替
-  document.addEventListener('click', function(e){
-    const tab = e.target.closest('.doc-map-tab');
-    if (!tab) return;
-    const panel = tab.dataset.panel;
-    if (!panel) return;
-    const wrap = tab.closest('.doc-map-wrap');
-    if (!wrap) return;
-    wrap.querySelectorAll('.doc-map-tab').forEach(t => t.classList.remove('active'));
-    wrap.querySelectorAll('.doc-map-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    const target = wrap.querySelector('#' + panel);
-    if (target) target.classList.add('active');
-  });
-  // サイドバーのクリックを監視
-  document.addEventListener('DOMContentLoaded', function(){
-    const sidebar = document.getElementById('sidebar');
-    if (sidebar){
-      sidebar.addEventListener('click', function(e){
-        if (e.target.closest('.toc-btn')) setTimeout(refreshInteractive, 100);
-      });
-    }
-    // 章内ナビボタン（onclick）も監視
-    document.body.addEventListener('click', function(e){
-      if (e.target.closest('.chapter-nav button') || e.target.closest('.nav-btn')) {
-        setTimeout(refreshInteractive, 100);
-      }
-    });
-  });
-})();
-
-// ===== Core GRADE全体像モーダル制御（v1.5追加・v1.6で初期スクロール位置調整） =====
-function openCPGOverview() {
-  document.getElementById('cpgOverviewModal').classList.add('open');
-  document.body.classList.add('cpg-overview-open');
-  // モバイルで横スクロール領域の中央を初期表示（縦は上端から）
-  setTimeout(function(){
-    var body = document.querySelector('.cpg-overview-modal-body');
-    var img = document.getElementById('cpgOverviewImg');
-    if (body && img && img.offsetWidth > body.clientWidth) {
-      body.scrollLeft = (img.offsetWidth - body.clientWidth) / 2;
-    }
-    if (body) body.scrollTop = 0;
-  }, 60);
-}
-function closeCPGOverview() {
-  document.getElementById('cpgOverviewModal').classList.remove('open');
-  document.body.classList.remove('cpg-overview-open');
-  var img = document.getElementById('cpgOverviewImg');
-  if (img) img.classList.remove('zoomed');
-}
-function toggleCPGOverviewZoom() {
-  var img = document.getElementById('cpgOverviewImg');
-  if (!img) return;
-  img.classList.toggle('zoomed');
-  var btn = document.getElementById('cpgOverviewZoomBtn');
-  if (btn) btn.textContent = img.classList.contains('zoomed') ? '🔍 縮小' : '🔍 拡大';
-}
-document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape') {
-    var modal = document.getElementById('cpgOverviewModal');
-    if (modal && modal.classList.contains('open')) closeCPGOverview();
-  }
-});
-</script>
 
 <!-- ===== Core GRADE全体像 モーダル（v1.5追加） ===== -->
 <div id="learningMapModal" class="cpg-overview-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="learningMapModalTitle">
@@ -4927,11 +4858,11 @@ document.addEventListener('keydown', function(e){
     </div>
   </div>
   <div class="cpg-overview-modal-body" onclick="closeLearningMap()">
-    <img id="learningMapModalImg" class="cpg-overview-modal-img learning-map-modal-img" src="images/ebm-grade-map.png" width="941" height="1672" alt="EBMからGRADEへの全体学習マップ" onclick="event.stopPropagation();toggleLearningMapZoom()">
+    <img loading="lazy" decoding="async" id="learningMapModalImg" class="cpg-overview-modal-img learning-map-modal-img" src="images/ebm-grade-map.png" width="941" height="1672" alt="EBMからGRADEへの全体学習マップ" onclick="event.stopPropagation();toggleLearningMapZoom()">
   </div>
 </div>
 
-<div id="cpgOverviewModal" class="cpg-overview-modal" role="dialog" aria-modal="true" aria-labelledby="cpgOverviewModalTitle">
+<div id="cpgOverviewModal" class="cpg-overview-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cpgOverviewModalTitle">
   <div class="cpg-overview-modal-bar">
     <span id="cpgOverviewModalTitle" class="cpg-overview-modal-title">📊 全体像 <span class="cpg-overview-modal-hint">— スワイプで移動・ピンチで拡大</span></span>
     <div class="cpg-overview-modal-actions">
@@ -4940,7 +4871,7 @@ document.addEventListener('keydown', function(e){
     </div>
   </div>
   <div class="cpg-overview-modal-body" onclick="closeCPGOverview()">
-    <img id="cpgOverviewImg" class="cpg-overview-modal-img" src="images/core-grade-overview.png?v=7.2" alt="Core GRADEアプローチ全体像（クリックで拡大／縮小）" onclick="event.stopPropagation();toggleCPGOverviewZoom()" />
+    <img loading="lazy" decoding="async" id="cpgOverviewImg" class="cpg-overview-modal-img" src="images/core-grade-overview.png?v=7.2" alt="Core GRADEアプローチ全体像（クリックで拡大／縮小）" onclick="event.stopPropagation();toggleCPGOverviewZoom()" />
   </div>
 </div>
 

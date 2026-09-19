@@ -16,11 +16,18 @@
   }
 
   function attach(){
+    if (!glossData?.terms) return;
     document.querySelectorAll('.gloss').forEach(el => {
       if (el.dataset.glossAttached) return; // 二重バインド回避
       const term = el.getAttribute('data-term') || el.textContent.trim();
       if (glossData.terms[term]){
         el.addEventListener('click', e => onClick(e, term));
+        el.tabIndex = 0;
+        el.setAttribute('role', 'button');
+        el.setAttribute('aria-label', `${term}の説明`);
+        el.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(e, term); }
+        });
         el.style.cursor = 'help';
         el.style.borderBottom = '1px dotted #e67e22';
         el.dataset.glossAttached = '1';
@@ -39,7 +46,7 @@
       <div class="gloss-tip-header">
         <strong>${g.term}</strong>
         ${g.full ? `<span class="gloss-full">${g.full}</span>` : ''}
-        <button class="gloss-close">×</button>
+        <button type="button" class="gloss-close" aria-label="用語の説明を閉じる">×</button>
       </div>
       <div class="gloss-tip-body">${g.definition}</div>
       ${g.related && g.related.length ? `<div class="gloss-related">関連：${g.related.join('、')}</div>` : ''}
@@ -49,8 +56,8 @@
     tip.style.position = 'fixed';
     tip.style.top = (rect.bottom + 6) + 'px';
     tip.style.left = Math.max(10, Math.min(rect.left, window.innerWidth - 360)) + 'px';
+    tip.style.top = Math.max(10, Math.min(rect.bottom + 6, window.innerHeight - tip.offsetHeight - 12)) + 'px';
     tip.querySelector('.gloss-close').addEventListener('click', removeTip);
-    setTimeout(()=>document.addEventListener('click', onDocClick, { once:true }), 0);
   }
 
   function onDocClick(e){
@@ -61,12 +68,10 @@
     if (tip){ tip.remove(); tip = null; }
   }
 
-  // MutationObserverで動的追加にも対応
-  function observe(){
-    const obs = new MutationObserver(attach);
-    obs.observe(document.body, { childList: true, subtree: true });
-  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') removeTip(); });
+  document.addEventListener('reader:change', removeTip);
 
   window.CPGSR_Glossary = { load, attach };
+  document.addEventListener('click', onDocClick);
   document.addEventListener('DOMContentLoaded', load);
 })();

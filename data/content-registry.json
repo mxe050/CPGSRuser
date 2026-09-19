@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0",
-  "updated": "2026-08-26",
+  "updated": "2026-09-19",
   "items": [
     {
       "contentId": "home",
@@ -3353,6 +3353,68 @@
         "resources"
       ],
       "navLabel": "RESOURCES一覧",
+      "legacyDisplayNumber": null
+    },
+    {
+      "contentId": "methods-updates",
+      "titleJa": "2026年9月19日 最新の情報を追加",
+      "titleEn": "Methods update September 2026",
+      "summaryJa": "GPS更新ガイダンス、PRISMA-C 2026、ROBINS-I V2草案、PRISMAの現状を一次・公式資料で確認。",
+      "href": "updates.html",
+      "displayNumber": null,
+      "legacyTargets": [],
+      "aliases": [
+        "最新情報",
+        "更新情報",
+        "GPS",
+        "PRISMA-C",
+        "ROBINS-I V2"
+      ],
+      "contentType": "resource",
+      "documentTypes": [
+        "CPG",
+        "SR"
+      ],
+      "workflowStages": [
+        "source-check",
+        "risk-of-bias",
+        "recommendation"
+      ],
+      "topics": [
+        "good-practice-statement",
+        "reporting-guideline",
+        "risk-of-bias",
+        "resources"
+      ],
+      "authors": [
+        "GRADE Working Group",
+        "PRISMA Executive"
+      ],
+      "level": "standard",
+      "sourceStatus": "educational",
+      "relatedContentIds": [
+        "recommendation-strength",
+        "risk-of-bias",
+        "sr-reporting-and-appraisal"
+      ],
+      "referenceIds": [
+        "G8",
+        "T4"
+      ],
+      "lastVerified": "2026-09-19",
+      "badges": [
+        "2026年9月19日追加"
+      ],
+      "primaryPlacement": "resources.updates",
+      "relatedPlacements": [
+        "topics"
+      ],
+      "mapStage": "resource",
+      "topicGroups": [
+        "resources",
+        "T6"
+      ],
+      "navLabel": "2026年9月19日 最新情報",
       "legacyDisplayNumber": null
     }
   ]

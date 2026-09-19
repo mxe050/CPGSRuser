@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "updated": "2026-08-22",
+  "updated": "2026-09-19",
   "formalCitationPolicy": "verificationStatus=verified の項目だけを本文のクリック可能な正式引用として表示する。",
   "references": {
     "U1": {
@@ -1132,6 +1132,32 @@
       "vol": "",
       "usedIn": "guyatt-lectures",
       "note": "査読論文と同じ引用階層に置かず、原著へ進む補助導線として表示する。"
+    },
+    "G8": {
+      "id": "G8",
+      "authors": "Dewidar O, Akl EA, Morgano GP, et al.",
+      "year": 2026,
+      "title": "GRADE Guidance: Update on Developing Good Practice Statements in Guidelines",
+      "journal": "Ann Intern Med",
+      "vol": "179(3):430–439",
+      "doi": "10.7326/ANNALS-25-00431",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41554128/",
+      "verificationStatus": "verified",
+      "verifiedOn": "2026-09-19",
+      "note": "オンライン公表2026-01-20。書誌・抄録を確認。更新欄の要約は抄録の範囲。"
+    },
+    "T4": {
+      "id": "T4",
+      "authors": "Baba A, Farid-Kapadia M, Smith M, et al.",
+      "year": 2026,
+      "title": "PRISMA-Children and Adolescents (PRISMA-C) 2026 extension statement and explanation: enhancing the reporting and utility of systematic reviews of interventions in paediatrics",
+      "journal": "BMJ",
+      "vol": "393:e088561",
+      "doi": "10.1136/bmj-2025-088561",
+      "url": "https://www.prisma-statement.org/children",
+      "verificationStatus": "verified",
+      "verifiedOn": "2026-09-19",
+      "note": "公表2026-04-29。公式の対象範囲とPubMed書誌を確認。PRISMA 2020の小児・思春期向け拡張。"
     }
   }
 }

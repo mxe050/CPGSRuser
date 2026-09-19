@@ -35,7 +35,7 @@
       id: 'q5',
       title: '5. 推奨の強さはエビデンスの確実性と整合しているか？',
       detail: '低い確実性に対し「強い推奨」を出す場合、例外（生命を脅かす状況等）に該当するか。整合性は「強い推奨は全員が同じ選択」「条件付きは多数派が推奨選択、一部は異なる選択」と解釈される。',
-      good: '中等度確実性→条件付き、高い確実性→強い、が基本。低い確実性の強い推奨は明示的に正当化。',
+      good: '確実性の高さだけで推奨の強さを決めず、利益・害・負担と価値観を説明する。低い確実性で強く推奨するときは理由を明示する。',
       bad: 'POCUS小児GLで28/39推奨が中等度確実性と報告されるが、参照されるRCTは7件のみで評価不能。'
     },
     {
@@ -53,14 +53,14 @@
     let html = `
       <div class="tw-intro">
         <p>Lima-Mirza-Guyatt (2023) が提唱する<strong>信頼できるCPGを見分ける6つの質問</strong>。
-        評価したいガイドラインを思い浮かべ、各質問に回答してください。</p>
+        評価したいガイドラインを思い浮かべ、各質問に回答してください。例は2023年の論文を踏まえた教育用の説明で、現在の個別疾患の推奨を示すものではありません。</p>
       </div>
       <div class="tw-questions">
     `;
     questions.forEach(q => {
       html += `
-        <div class="tw-q" data-qid="${q.id}">
-          <div class="tw-q-title"><strong>${q.title}</strong></div>
+        <fieldset class="tw-q" data-qid="${q.id}">
+          <legend class="tw-q-title"><strong>${q.title}</strong></legend>
           <div class="tw-q-detail">${q.detail}</div>
           <details class="tw-q-examples">
             <summary>👁 良い例 / 問題例を見る</summary>
@@ -73,43 +73,46 @@
             <label><input type="radio" name="${q.id}" value="no"> いいえ</label>
             <label><input type="radio" name="${q.id}" value="unclear"> 不明</label>
           </div>
-        </div>
+        </fieldset>
       `;
     });
     html += `
       </div>
       <div class="tw-result-area">
-        <button class="tw-judge-btn" id="tw-judge">総合判定</button>
-        <div class="tw-result" id="tw-result" style="display:none;"></div>
+        <p>6つの質問は読者が根拠を確認する枠組みです。「はい」の数で信頼性を認定する採点尺度ではありません。</p>
+        <button type="button" class="tw-judge-btn" id="tw-judge">確認結果と次に読む箇所を整理</button>
+        <div class="tw-result" id="tw-result" role="status" aria-live="polite" style="display:none;"></div>
       </div>
     `;
     mount.innerHTML = html;
     document.getElementById('tw-judge').addEventListener('click', judge);
+    mount.addEventListener('change', () => { document.getElementById('tw-result').style.display = 'none'; });
   }
 
   function judge(){
     const out = document.getElementById('tw-result');
     const counts = { yes:0, partial:0, no:0, unclear:0 };
     const unanswered = [];
+    const followUp = [];
     questions.forEach(q => {
       const checked = document.querySelector(`input[name="${q.id}"]:checked`);
       if (!checked){ unanswered.push(q.title); return; }
       counts[checked.value]++;
+      if (checked.value !== 'yes') followUp.push(q.title);
     });
     let html = '';
     if (unanswered.length){
-      html += `<div class="tw-warn">未回答の質問があります：<br>${unanswered.join('<br>')}</div>`;
+      out.innerHTML = `<div class="tw-warn"><strong>確認は未完了です。</strong><br>${unanswered.join('<br>')}</div>`;
+      out.style.display = 'block';
+      return;
     }
     let verdict, color;
-    if (counts.no >= 2 || (counts.no >= 1 && counts.partial >= 2)){
-      verdict = '<strong>⚠ このガイドラインは"信頼できないCPG"に該当する可能性があります。</strong><br>推奨を臨床適用する前に、別の信頼できるCPG（GRADE採用・Minds等）と比較することを推奨します。';
-      color = '#c0392b';
-    } else if (counts.yes >= 5 && counts.no === 0){
-      verdict = '<strong>✅ このガイドラインは概ね信頼できるCPGです。</strong><br>次のステップ：目の前の患者・設定への適用可能性（Ch20）を検討してください。';
-      color = '#27ae60';
+    if (followUp.length) {
+      verdict = '<strong>追加確認が必要な箇所</strong><ul>' + followUp.map(title => `<li>${title}</li>`).join('') + '</ul><p>本文・SR・EtD・COI管理の付録を照合し、どの推奨の根拠に影響するかを確認します。</p>';
+      color = '#a45e16';
     } else {
-      verdict = '<strong>🔍 このガイドラインは部分的に信頼できますが、留意が必要です。</strong><br>「部分的に／不明」の項目について、原著や付録を精査してください。';
-      color = '#e67e22';
+      verdict = '<strong>6項目を確認できました。</strong><p>これは信頼性の認定ではありません。根拠の妥当性と更新状況を確認し、<a href="#page-20">目の前の患者への適用可能性</a>を検討してください。</p>';
+      color = '#246b60';
     }
     html += `
       <div class="tw-verdict" style="border-left:4px solid ${color};padding:12px 16px;background:${color}10;">

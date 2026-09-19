@@ -1,124 +1,78 @@
 # CPGSR Reader
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-success)](https://mxe050.github.io/CPGSRuser/)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+診療ガイドライン（CPG）とシステマティックレビュー（SR）を読む医療者のための教材です。GRADEを軸に、効果・確実性・推奨を区別して読み、患者との意思決定につなげます。
 
-診療ガイドラインとシステマティックレビューを、作る側ではなく読む側の臨床家のために学ぶ静的サイトです。GRADEを土台に、論文・SR・CPGを患者の意思決定へつなげるときの確認順序を示します。
+[公開サイト](https://mxe050.github.io/CPGSRuser/) · [2026年9月19日の更新](https://mxe050.github.io/CPGSRuser/updates.html) · [学習索引](https://mxe050.github.io/CPGSRuser/learning-index.html)
 
-公開URL: https://mxe050.github.io/CPGSRuser/
+## 2026年9月19日の改訂
 
-## この改訂の考え方
+- GPSの2026年ガイダンス、PRISMA-C 2026、ROBINS-I V2草案、PRISMA拡張の現状を一次資料・公式資料で確認し、公開日と確認日を分けて追加。
+- 目的別の入口、検索、章内目次、文字サイズ、章単位の印刷、前回の続きへの導線を整備。
+- 旧URLを保ち、独立ページへの前後移動、セクションリンク、戻る操作、スマートフォンとキーボード操作を修正。
+- 未回答のAMSTAR 2を判定保留に変更。CPGの6質問の独自得点判定を廃止。MIDの数値は仮想例として再構成。
+- 不要なCDN依存、未使用の計算・タブ処理、重複する画像モーダル処理を削除。
 
-トップページの「EBMからGRADEへ」学習マップを中心に、教材への入口を `START`、`EBM BASIC`、`EBM → GRADE MAIN MAP`、`TOPICS`、`RESOURCES` の5区分へ再編しました。図中14領域と画像直下の同内容リンクから、既存25章と詳細ページへ移動できます。既存章は削除・短縮せず、本文の正本として維持しています。
+詳細は [改訂・検証記録](docs/refresh-2026-09-19.md) を参照してください。文献全体を網羅的に再検索した更新ではありません。既存資料の確認日を一律に更新していません。
 
-既存本文、図、表、動画、演習、外部リンク、旧ハッシュURLは保存します。改訂では、内容を短くする代わりに、安定したコンテンツID、索引、相互リンク、照合済み文献、詳細学習ページを追加します。
+## 読み始める場所
 
-- 本編は、臨床家が最初に確認する入口です。
-- 独立した詳細ページは、因果仮定、数理、設計、例外、原著・現行方法論へ進む場所です。
-- 索引は、読む作業順とトピックの両方向から既存教材へ入るナビゲーション層です。
-- data/content-registry.json がコンテンツの正本です。表示番号、旧data-idx、旧page-N、安定contentId、hrefを分けて保持します。
+| 目的 | ページ |
+| --- | --- |
+| 全体を把握する | [学習マップ](index.html) |
+| 用語やテーマを探す | [学習索引](learning-index.html) |
+| 今回の情報更新を見る | [最新情報](updates.html) |
+| 統計とGRADEを深める | [統計の詳細](advanced-statistics.html) |
+| 非RCTの因果効果を読む | [観察研究](non-rct-observational-studies.html) |
+| がん領域のアウトカムを読む | [アウトカム](oncology-outcomes.html) |
+| メタ分析の仮定を確認する | [メタ分析](meta-analysis-methods.html) |
+| 原著・方法論に進む | [方法論アトラス](guyatt-methodology-atlas.html) |
 
-## 本編25章
+本編25章、入門・案内ハブ、独立した詳細ページを、5区分の目次と14領域の学習マップで結んでいます。コンテンツ台帳は56項目です。
 
-### Part I - EBM・GRADEの全体像
-- Ch1 EBMと診療ガイドライン・SRの読み方
-- Ch2 GRADEアプローチの概要
+## ローカルで開く
 
-### Part II - 推奨の理解
-- Ch3 エビデンスの確実性4段階の意味
-- Ch4 強い推奨と条件付き推奨、GPS、推奨表現
+ビルド不要のHTML・CSS・JavaScriptサイトです。JSONの読み込みを使うため、HTMLの直接起動ではなくHTTPサーバーで開きます。実行時にnpmパッケージは不要です。検証ツールにはNode.js 20以降を使います。
 
-### Part III - SoF・効果・閾値
-- Ch5 SoF表・Evidence Profileの読み方
-- Ch6 相対効果と絶対効果
-- Ch7 閾値とMID
+```sh
+node tools/serve.mjs
+```
 
-### Part IV - 確実性が下がる5要因
-- Ch8 Risk of Bias
-- Ch9 不一致性
-- Ch10 非直接性
-- Ch11 不精確さ
-- Ch12 Dissemination bias
+ブラウザーで http://127.0.0.1:4173 を開きます。サーバーはループバックだけで待ち受けます。別ポートを使う場合は環境変数PORTを設定します。
 
-### Part V - 多様な研究デザインのSR
-- Ch13 非RCT・観察研究のSR
-- Ch14 定性的研究のSRとGRADE-CERQual
-- Ch15 単一推定値なし、GPS、ネットベネフィット
+## 検証
 
-### Part VI - CPG信頼性評価
-- Ch16 信頼できるCPGの6つの質問
-- Ch17 CPG品質の実例
-- Ch18 AMSTAR 2、PRISMA 2020、ROBIS
+```sh
+node tools/verify-navigation-coverage.mjs
+node tools/verify-link-preservation.mjs
+node tools/verify-page-content.mjs
+node tools/verify-content-preservation.mjs
+node tools/verify-cpgsr.mjs
+node tools/audit-links.mjs
+```
 
-### Part VII - 診療現場で活かす
-- Ch19 推奨を目の前の患者にどう適用するか
-- Ch20 共同意思決定と価値観・選好
+外部HTTPの確認は `node tools/audit-links.mjs --online` です。403・999・タイムアウトはアクセス制限などを含むため、リンク切れとは判定しません。新規ページの公開URLは、公開前には404になります。
 
-### Part VIII - JAMA Users Guidesの横断要約
-- Ch21 SR／MAの方法を監査する：JAMA Users Guidesの質問
-- Ch22 ネットワークメタアナリシス
+ブラウザー検証にはPlaywrightが必要です。インストール済みのモジュールを `PLAYWRIGHT_MODULE` に、Edge使用時は `CPGSR_BROWSER_CHANNEL=msedge` を指定して、サーバー起動中に `node tools/browser-qa.mjs` を実行します。未指定なら通常のplaywrightモジュールとChromiumを使用します。サーバーURLは `CPGSR_BASE_URL`、記録先は `CPGSR_QA_OUTPUT` で変更できます。
 
-### Part IX - 付録
-- Ch23 用語集とQ&A
-- Ch24 最新情報とGuyatt講演
-- Ch25 参考文献一覧
+## 保守するファイル
 
-## 索引と詳細学習
+| ファイル | 役割 |
+| --- | --- |
+| index.html | 本編・入門・学習ハブ |
+| script.js | 旧page-N互換のルーティングと目次 |
+| reader-ui.js / reader-refresh.css | 共通の読書操作・画像拡大・表示調整 |
+| ebm-grade-map.js | 学習マップ・台帳を使う移動案内 |
+| data/content-registry.json | 索引・案内のコンテンツ台帳 |
+| data/navigation-structure.json / map-hotspots.json | 目次構造・マップ領域 |
+| data/references.json | 文献書誌・確認状態・確認日 |
+| js/ | 評価ツール・用語・引用・閾値の表示 |
+| tools/ | 静的検証・リンク点検・ブラウザーQA |
+| docs/ | 改訂記録・保存基準・出典照合・QA |
 
-- learning-index.html: 12段階の読む作業順、17のトピック、検索・絞り込み。
-- advanced-statistics.html: estimand、CI、因果推論、設計、統合、GRADEを読む。
-- non-rct-observational-studies.html: 非RCTを因果効果として読めるかを確認する。
-- oncology-outcomes.html: 生存、PRO、サロゲート、有害事象を患者重要性から読む。
-- meta-analysis-methods.html: 19モジュールでメタ分析の数理・仮定・GRADEを読む。
-- guyatt-methodology-atlas.html: Guyatt関連の原著と現行方法論を、読む問い別にたどる。
-- japan-cpg-tohoho.html: 本邦CPGを読むための教育用事例集。
+既存の章・図・旧URLは保ちます。誤りの訂正や不要な依存の削除は `docs/maintenance-changes-2026-09-19.json` に具体的な対象と理由を記録し、基準台帳自体は書き換えません。公開前には差分と検証結果を確認します。
 
-## 文献の扱い
-
-data/references.json では、本文のクリック可能な正式引用を verificationStatus=verified に限定します。PRISMAは報告ガイドライン、AMSTAR 2は批判的吟味ツール、ROBISはSRのRisk of Bias評価と区別します。未照合の旧メモは保存しますが、正式文献として表示しません。
-
-主な更新: GRADE Guidance 42の誌名・年・巻頁、DevjiらのMID論文、GPS論文、RoB 2、ROBINS-I、ROBINS-E、ROBIS、MacLeanらの患者価値観SR、2026年の価値に基づく閾値論文を照合しました。
-
-## ファイル構成
-
-- index.html: 本体の読み手向けアプリ
-- script.js: 旧page-N互換を保つ安定IDルーティング
-- data/content-registry.json: 検索・導線の正本
-- data/chapters.json: 本編25章、特別ページ、詳細ページの同期台帳
-- data/references.json: 照合状態を含む文献台帳
-- learning-index.html: 二本立て索引
-- meta-analysis-methods.html: メタ分析発展章
-- guyatt-methodology-atlas.html: 方法論アトラス
-- docs/: 基準時点台帳、ナビゲーション監査、出典照合、QA、内容保存報告
-
-## 検証方針
-
-検証では、重複ID、内部リンク、参照資産、旧ハッシュURL、コンテンツ台帳、引用キー、未照合文献の表示、見出し、アクセシビリティ、検索URL状態、本文保存を確認します。詳細は docs 配下の監査・QA文書を参照してください。
-
-## ローカル検査
-
-変更後は次を実行します。
-
-    node tools/verify-navigation-coverage.mjs
-    node tools/verify-link-preservation.mjs
-    node tools/verify-page-content.mjs
-    node tools/verify-content-preservation.mjs
-    node tools/verify-cpgsr.mjs
-    node --check learning-index.js
-    node --check script.js
-    node --check js/references.js
-
-## 更新履歴
-
-- 2026-08-26: Core GRADE、PRISMA 2020、AMSTAR 2の記述を現行資料に合わせ、JAMA Users' Guidesと専門家見解の位置づけを明示。
-- 2026-08-22: 安定コンテンツ台帳、旧URL互換、学習索引、Guyatt方法論アトラス、メタ分析発展章、引用照合、本文保存検証を追加。
-- 2026-08: 統計・非RCT・がんアウトカムの詳細ページを役割別に再編し、相互リンクを強化。
-- 2026-04: 初回公開。
+文献ポップアップは `verificationStatus=verified` の項目だけを正式引用として扱います。PRISMAは報告ガイドライン、AMSTAR 2は批判的吟味、ROBISはSRのバイアスリスク評価として区別します。旧資料・教育上の事例は、その時点と位置づけを明示します。
 
 ## ライセンス
 
-本サイトの構造とテキストは Creative Commons BY-NC-SA 4.0 で提供します。参考文献の元論文は各出版社の著作権に従い、外部リンクで参照します。
-
-## 謝辞
-
-Gordon H. Guyatt先生らのEBM・GRADE方法論への貢献に感謝します。本サイトは、作成者向け姉妹サイト core-grade-guide-1 の読者版として、臨床現場でCPGとSRを読む医療者を支援します。
+本サイトの構造とテキストは [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) で提供します。外部論文・図などの権利は各権利者に帰属します。

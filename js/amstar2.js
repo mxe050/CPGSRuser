@@ -26,34 +26,37 @@
     if (!mount) return;
     let html = `
       <div class="am-intro">
-        <p>AMSTAR 2（Shea 2017）は、SR結果への総合的な信頼性を評価する16項目ツール。★は<strong>重要（critical）項目</strong>で、ここに欠陥があると総合評価が大きく下がる。</p>
+        <p>AMSTAR 2の16項目を学ぶための簡易チェックです。★は原著が提案する<strong>重要項目</strong>。合計点による採点は行いません。実際の評価は<a href="https://amstar.ca/Amstar_Checklist.php" target="_blank" rel="noopener">公式の項目別基準</a>と<a href="https://amstar.ca/Amstar-2.php" target="_blank" rel="noopener">総合評価の指針</a>を確認してください。</p>
+        <p>Partial Yesは選択可能な項目だけに表示します。項目9のRCT・非RCT別の詳細判定は公式票で行ってください。重要項目の選択はレビューの文脈に応じて事前に検討します。</p>
       </div>
       <div class="am-items">
     `;
     items.forEach(it => {
       html += `
-        <div class="am-item ${it.critical ? 'critical' : ''}">
-          <div class="am-item-head">
+        <fieldset class="am-item ${it.critical ? 'critical' : ''}">
+          <legend class="am-item-head">
             <span class="am-num">${it.id}${it.critical ? ' ★' : ''}</span>
             <span class="am-text">${it.text}</span>
-          </div>
+          </legend>
           <div class="am-choices">
             <label><input type="radio" name="am${it.id}" value="yes"> Yes</label>
-            <label><input type="radio" name="am${it.id}" value="partial"> Partial Yes</label>
+            ${[2,4,7,8,9].includes(it.id) ? `<label><input type="radio" name="am${it.id}" value="partial"> Partial Yes</label>` : ''}
             <label><input type="radio" name="am${it.id}" value="no"> No</label>
+            ${[11,12,15].includes(it.id) ? `<label><input type="radio" name="am${it.id}" value="na"> メタ分析なし</label>` : ''}
           </div>
-        </div>
+        </fieldset>
       `;
     });
     html += `
       </div>
       <div class="am-result-area">
-        <button class="am-judge-btn" id="am-judge">総合評価</button>
-        <div class="am-result" id="am-result" style="display:none;"></div>
+        <button type="button" class="am-judge-btn" id="am-judge">回答を確認して評価の目安を見る</button>
+        <div class="am-result" id="am-result" role="status" aria-live="polite" style="display:none;"></div>
       </div>
     `;
     mount.innerHTML = html;
     document.getElementById('am-judge').addEventListener('click', judge);
+    mount.addEventListener('change', () => { document.getElementById('am-result').style.display = 'none'; });
   }
 
   function judge(){
@@ -61,21 +64,37 @@
     let criticalWeaknesses = 0;
     let nonCriticalWeaknesses = 0;
     const unanswered = [];
+    const partial = [];
+    const notApplicable = [];
     items.forEach(it => {
       const checked = document.querySelector(`input[name="am${it.id}"]:checked`);
       if (!checked){ unanswered.push(it.id); return; }
-      if (checked.value === 'no' || checked.value === 'partial'){
+      if (checked.value === 'partial') partial.push(it.id);
+      if (checked.value === 'na') notApplicable.push(it.id);
+      if (checked.value === 'no'){
         if (it.critical) criticalWeaknesses++;
         else nonCriticalWeaknesses++;
       }
     });
     let html = '';
     if (unanswered.length){
-      html += `<div class="am-warn">未回答の項目：${unanswered.join(', ')}</div>`;
+      out.innerHTML = `<div class="am-warn"><strong>評価は保留です。</strong>未回答の項目：${unanswered.join(', ')}。全項目を確認してください。</div>`;
+      out.style.display = 'block';
+      return;
+    }
+    if (partial.length){
+      out.innerHTML = `<div class="am-warn"><strong>総合評価は保留です。</strong>Partial Yesの項目：${partial.join(', ')}。部分的な充足を一律にNoとせず、欠けている要素が重要な欠陥に当たるか、公式基準とレビューの文脈から判断してください。</div>`;
+      out.style.display = 'block';
+      return;
+    }
+    if (notApplicable.length && notApplicable.length !== 3) {
+      out.innerHTML = '<div class="am-warn"><strong>回答を確認してください。</strong>「メタ分析なし」を選んだ場合は、項目11・12・15の適用範囲を揃えて確認してください。</div>';
+      out.style.display = 'block';
+      return;
     }
     let verdict, color;
     if (criticalWeaknesses > 1){
-      verdict = '<strong>Critically Low（批判的に低い）</strong>：重要項目に複数の欠陥あり。このSRは利用可能なSRの正確で包括的な要約を提供しない可能性が高い。';
+      verdict = '<strong>Critically low（極めて低い）</strong>：重要項目に複数の欠陥があります。';
       color = '#c0392b';
     } else if (criticalWeaknesses === 1){
       verdict = '<strong>Low（低い）</strong>：重要項目に1つの欠陥。このSRは正確で包括的な要約を提供しない可能性がある。';
@@ -89,8 +108,10 @@
     }
     html += `
       <div class="am-verdict" style="border-left:4px solid ${color};padding:12px 16px;background:${color}10;">
+        <p><strong>既定の重要項目に基づく暫定的な目安</strong></p>
         <div class="am-counts">重要項目の欠陥: ${criticalWeaknesses} / 非重要項目の欠陥: ${nonCriticalWeaknesses}</div>
         <div>${verdict}</div>
+        <p>複数の非重要項目の弱点が重大な場合は、ModerateからLowへ下げる判断もありえます。この表示だけで最終評価を確定しないでください。</p>
       </div>
     `;
     out.innerHTML = html;
