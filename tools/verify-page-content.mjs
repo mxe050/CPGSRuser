@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { headings as correctedHeadings } from './maintenance-policy.mjs';
 
 const root = process.cwd();
 const baseline = JSON.parse(fs.readFileSync(path.join(root, 'docs', 'BASELINE_CONTENT_MANIFEST.json'), 'utf8'));
@@ -44,7 +45,11 @@ for (const file of baseline.htmlFiles ?? []) {
   const missingHeadings = (file.headings ?? [])
     .map((heading) => typeof heading === 'string' ? heading : (heading.text ?? heading.value ?? ''))
     .filter(Boolean)
-    .filter((heading) => !headings.has(normalizedHeadingText(heading)));
+    .filter((heading) => {
+      if (headings.has(normalizedHeadingText(heading))) return false;
+      const correction = correctedHeadings.find(item => item.file === file.path && normalizedHeadingText(item.from) === normalizedHeadingText(heading) && item.reason);
+      return !(correction && headings.has(normalizedHeadingText(correction.to)));
+    });
   if (missingHeadings.length) failures.push(`${file.path}: baseline headings removed: ${missingHeadings.slice(0, 8).join(' / ')}`);
 
   const currentLength = stripHtml(html).length;

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0",
-  "updated": "2026-08-27",
+  "updated": "2026-09-19",
   "canonicalRegistry": "data/content-registry.json",
   "hotspots": "data/map-hotspots.json",
   "zones": [
@@ -196,6 +196,10 @@
       "titleJa": "索引・用語集・文献・演習",
       "items": [
         {
+          "contentId": "methods-updates",
+          "label": "2026年9月19日 最新情報"
+        },
+        {
           "contentId": "resources-index",
           "label": "RESOURCES一覧"
         },
@@ -219,11 +223,6 @@
         {
           "href": "https://mxe050.github.io/GRADE-tanken/",
           "label": "GRADE 探検",
-          "external": true
-        },
-        {
-          "href": "https://chatgpt.com/g/g-6a085bf7d5bc8191970e6c5eb8949a09-zhen-liao-kaitorainxin-lai-xing-tietukagpt",
-          "label": "既存CPGチェックGPT",
           "external": true
         }
       ]

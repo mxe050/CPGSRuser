@@ -41,10 +41,12 @@
         const m = part.match(/^\[([UMGTCRVL]\d+)\]$/);
         const ref = m && refsData && refsData.references ? refsData.references[m[1]] : null;
         if (m && ref && ref.verificationStatus === 'verified'){
-          const span = document.createElement('span');
+          const span = document.createElement('button');
+          span.type = 'button';
           span.className = 'ref-cite';
           span.setAttribute('data-ref', m[1]);
           span.textContent = part;
+          span.setAttribute('aria-label', `参考文献 ${m[1]} を開く`);
           span.addEventListener('click', onCiteClick);
           frag.appendChild(span);
         } else {
@@ -75,6 +77,7 @@
     const vol = ref.vol || '';
     const url = ref.url || '';
     const note = ref.note ? `<div class="ref-note">${ref.note}</div>` : '';
+    const verified = ref.verifiedOn ? `<div class="ref-note">資料確認日：${ref.verifiedOn}</div>` : '';
     popover.innerHTML = `
       <div class="ref-popover-header">
         <span class="ref-badge">${id}</span>
@@ -86,6 +89,7 @@
         <div class="ref-journal">${journal} ${vol}</div>
         ${url ? `<div><a href="${url}" target="_blank" rel="noopener">${url}</a></div>` : ''}
         ${note}
+        ${verified}
       </div>
     `;
     document.body.appendChild(popover);
@@ -93,8 +97,8 @@
     popover.style.position = 'fixed';
     popover.style.top = (rect.bottom + 6) + 'px';
     popover.style.left = Math.max(10, Math.min(rect.left, window.innerWidth - 420)) + 'px';
+    popover.style.top = Math.max(10, Math.min(rect.bottom + 6, window.innerHeight - popover.offsetHeight - 12)) + 'px';
     popover.querySelector('.ref-close').addEventListener('click', removePopover);
-    setTimeout(()=>document.addEventListener('click', onDocClick, { once:true }), 0);
   }
 
   function onDocClick(e){
@@ -106,5 +110,8 @@
   }
 
   window.CPGSR_References = { load: loadReferences };
+  document.addEventListener('click', onDocClick);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') removePopover(); });
+  document.addEventListener('reader:change', removePopover);
   document.addEventListener('DOMContentLoaded', loadReferences);
 })();

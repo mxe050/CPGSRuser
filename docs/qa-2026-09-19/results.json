@@ -1,0 +1,28 @@
+{
+  "origin": "http://127.0.0.1:4173",
+  "checkedAt": "2026-09-19T05:30:29.950Z",
+  "checks": [
+    "All reader routes and per-page navigation targets",
+    "Forward navigation opens standalone learning index",
+    "Legacy inline page controls all resolve to an existing reader page",
+    "Home search surfaces new guidance in the learning index",
+    "Empty search and reset",
+    "Skip link keeps current page and moves focus to main",
+    "Section links retain their hash through Back and reload",
+    "Malformed and unknown hashes are recoverable",
+    "AMSTAR: incomplete, partial, critical flaws, and no meta-analysis",
+    "CPG checklist does not certify trustworthiness by score",
+    "Reference and glossary controls work by keyboard",
+    "MID notes are keyboard accessible",
+    "Reading size persists and print contains only the current chapter",
+    "Desktop screenshots",
+    "Mobile menu and both image dialogs restore focus",
+    "All standalone pages and all reader chapters fit mobile width",
+    "Mobile screenshots",
+    "Small phone, tablet and laptop widths contain every chapter",
+    "No JavaScript errors or missing local resources"
+  ],
+  "failures": [],
+  "errors": [],
+  "missing": []
+}

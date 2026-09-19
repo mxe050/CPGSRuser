@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { replacements, retiredAsset } from './maintenance-policy.mjs';
 
 const root = process.cwd();
 const baseline = JSON.parse(fs.readFileSync(path.join(root, 'docs', 'BASELINE_CONTENT_MANIFEST.json'), 'utf8'));
@@ -28,7 +29,8 @@ for (const file of baseline.htmlFiles ?? []) {
 
   for (const link of file.links ?? []) {
     checked += 1;
-    if (!hrefs.has(link.href)) failures.push(`${file.path}: baseline href removed: ${link.href}`);
+    const replacement = replacements.find(item => item.file === file.path && item.from === link.href && item.reason);
+    if (!hrefs.has(link.href) && !(replacement && hrefs.has(replacement.to))) failures.push(`${file.path}: baseline href removed: ${link.href}`);
   }
 
   for (const asset of file.assets ?? []) {
@@ -37,7 +39,7 @@ for (const file of baseline.htmlFiles ?? []) {
     const retained = asset.kind === 'local'
       ? [...values].some((value) => withoutVersion(value) === withoutVersion(asset.value))
       : values.has(asset.value);
-    if (!retained) failures.push(`${file.path}: baseline ${asset.tag} asset removed: ${asset.value}`);
+    if (!retained && !retiredAsset(file.path, asset.value)) failures.push(`${file.path}: baseline ${asset.tag} asset removed: ${asset.value}`);
   }
 }
 
@@ -47,5 +49,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Link preservation verification passed: ${checked} baseline links and assets retained.`);
-
+console.log(`Link preservation verification passed: ${checked} baseline links/assets checked, including documented corrections.`);

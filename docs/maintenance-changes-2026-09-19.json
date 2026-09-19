@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-19",
+  "replacements": [
+    {
+      "file": "index.html",
+      "from": "https://chatgpt.com/g/g-6a085bf7d5bc8191970e6c5eb8949a09-zhen-liao-kaitorainxin-lai-xing-tietukagpt",
+      "to": "index.html#page-16",
+      "reason": "直接GETとWeb確認で404。認証依存の可能性を残し、一般公開の学習導線はサイト内6質問へ変更。"
+    }
+  ],
+  "removedAssets": [
+    {
+      "file": "index.html",
+      "value": "https://cdn.tailwindcss.com",
+      "reason": "No Tailwind utility classes in published page."
+    },
+    {
+      "file": "index.html",
+      "value": "https://unpkg.com/lucide@latest",
+      "reason": "No Lucide icon elements or calls."
+    },
+    {
+      "file": "index.html",
+      "value": "coreGRADE_utils.js",
+      "reason": "Duplicate calculator/tab helpers have no UI or callers."
+    }
+  ],
+  "headings": [
+    {
+      "file": "index.html",
+      "from": "観察研究のROBINS-E（曝露）／ROBINS-I（介入） — 7ドメイン",
+      "to": "観察研究のRoB評価 — 問いと使用版を区別する",
+      "reason": "Distinguish ROBINS-I 2016, ROBINS-I V2 draft, and ROBINS-E."
+    }
+  ]
+}

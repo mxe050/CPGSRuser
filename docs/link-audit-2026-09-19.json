@@ -1,0 +1,1655 @@
+{
+  "checkedAt": "2026-09-18T23:02:36.750Z",
+  "htmlFiles": 10,
+  "localCount": 650,
+  "brokenLocal": [],
+  "externalCount": 175,
+  "results": [
+    {
+      "url": "https://accessmedicine.mhmedical.com/book.aspx?bookid=847",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://accessmedicine.mhmedical.com/book.aspx?bookid=847",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://amstar.ca/",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://amstar.ca/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://bmjopen.bmj.com/content/6/7/e010247",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://bmjopen.bmj.com/content/6/7/e010247",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://book.gradepro.org/about",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://book.gradepro.org/about",
+      "state": "reachable"
+    },
+    {
+      "url": "https://book.gradepro.org/guideline/the-development-methods-of-grade",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://book.gradepro.org/guideline/the-development-methods-of-grade",
+      "state": "reachable"
+    },
+    {
+      "url": "https://book.gradepro.org/guideline/the-history-and-evolution-of-grade",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://book.gradepro.org/guideline/the-history-and-evolution-of-grade",
+      "state": "reachable"
+    },
+    {
+      "url": "https://book.gradepro.org/map",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://book.gradepro.org/map",
+      "state": "reachable"
+    },
+    {
+      "url": "https://core-grade-guide-1-mxe050s-projects.vercel.app/",
+      "sources": [
+        "non-rct-observational-studies.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://core-grade-guide-1-mxe050s-projects.vercel.app/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf",
+      "sources": [
+        "advanced-statistics.html",
+        "meta-analysis-methods.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf",
+      "state": "reachable"
+    },
+    {
+      "url": "https://documentation.cochrane.org/revman-kb/pre-define-analyses-260702251.html",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://documentation.cochrane.org/revman-kb/pre-define-analyses-260702251.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.1992.03490170092032",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 403,
+      "finalUrl": "http://jama.jamanetwork.com/article.aspx?doi=10.1001/jama.1992.03490170092032",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.2015.3656",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 403,
+      "finalUrl": "http://jama.jamanetwork.com/article.aspx?doi=10.1001/jama.2015.3656",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.2019.18058",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://jamanetwork.com/journals/jama/fullarticle/2756196",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.274.20.1630",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "http://jama.jamanetwork.com/article.aspx?doi=10.1001/jama.1995.03530200066040",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.279.7.545",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "http://jama.jamanetwork.com/article.aspx?doi=10.1001/jama.279.7.545",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.281.19.1836",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "http://jama.jamanetwork.com/article.aspx?doi=10.1001/jama.281.19.1836",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.281.21.2029",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "http://jama.jamanetwork.com/article.aspx?doi=10.1001/jama.281.21.2029",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.283.21.2829",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "http://jama.jamanetwork.com/article.aspx?doi=10.1001/jama.283.21.2829",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1002/bimj.201800167",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://onlinelibrary.wiley.com/doi/10.1002/bimj.201800167",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1002/jrsm.1164",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://onlinelibrary.wiley.com/doi/10.1002/jrsm.1164",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1002/sim.1186",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://onlinelibrary.wiley.com/doi/10.1002/sim.1186",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1002/sim.1761",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://onlinelibrary.wiley.com/doi/10.1002/sim.1761",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1016/0197-2456(89)90005-6",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/0197245689900056",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jclinepi.2010.04.026",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0895435610003306",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jclinepi.2010.09.012",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0895435610003318",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jclinepi.2015.06.005",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S089543561500308X",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jclinepi.2017.08.010",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0895435617306364",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jclinepi.2018.05.011",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0895435617310612",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jclinepi.2019.04.011",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0895435618309508",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jclinepi.2022.01.004",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0895435622000105",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jclinepi.2022.07.014",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0895435622001871",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1016/S0140-6736(16)31592-6",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0140673616315926",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1080/01621459.1999.10474144",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.tandfonline.com/doi/full/10.1080/01621459.1999.10474144",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1093/aje/kwj149",
+      "sources": [
+        "advanced-statistics.html",
+        "non-rct-observational-studies.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://academic.oup.com/aje/article/163/12/1149/97130/Variable-Selection-for-Propensity-Score-Models",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1136/bmj.m1714",
+      "sources": [
+        "index.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/lookup/doi/10.1136/bmj.m1714",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1136/bmjopen-2017-018593",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://bmjopen.bmj.com/lookup/doi/10.1136/bmjopen-2017-018593",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.1186/s44158-023-00094-7",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1186%2Fs44158-023-00094-7&code=cfcc8dd4-3aed-4e0e-9256-8355de0c4d4d",
+      "state": "reachable"
+    },
+    {
+      "url": "https://doi.org/10.1503/cmaj.200077",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.cmaj.ca/lookup/doi/10.1503/cmaj.200077",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://doi.org/10.7326/ANNALS-25-00431",
+      "sources": [
+        "updates.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.acpjournals.org/doi/10.7326/ANNALS-25-00431",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://grad-eslide.vercel.app/slide/N3",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://grad-eslide.vercel.app/slide/N3",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/e28aS9Vp",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/e28aS9Vp",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/eAnSvJNy",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/eAnSvJNy",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/ecFUNdtf",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/ecFUNdtf",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/eF3GFkiA",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/eF3GFkiA",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/eFRAgznG",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/eFRAgznG",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/eG4DXS3n",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/eG4DXS3n",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/enKJszUu",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/enKJszUu",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/eqwBx-H6",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/eqwBx-H6",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/eVA5TQJZ",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/eVA5TQJZ",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/eVcVB-FC",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/eVcVB-FC",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/evszybgw",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/evszybgw",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/g46w5uhw",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/g46w5uhw",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/g9VgnpUn",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/g9VgnpUn",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/gbDf2TV4",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/gbDf2TV4",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/gBZijJFt",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/gBZijJFt",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/gh2kgFe6",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/gh2kgFe6",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/giNCqvve",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/giNCqvve",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/gNxxBznD",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/gNxxBznD",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/gS85EZyx",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/gS85EZyx",
+      "state": "reachable"
+    },
+    {
+      "url": "https://lnkd.in/gtUGkN9A",
+      "sources": [
+        "data/linkedin-picks.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://lnkd.in/gtUGkN9A",
+      "state": "reachable"
+    },
+    {
+      "url": "https://minds.jcqhc.or.jp/docs/methods/cpg-development/minds-manual/template/chap4_SR_7_obs.pdf",
+      "sources": [
+        "japan-cpg-tohoho.html",
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://minds.jcqhc.or.jp/docs/methods/cpg-development/minds-manual/template/chap4_SR_7_obs.pdf",
+      "state": "reachable"
+    },
+    {
+      "url": "https://mxe050.github.io/CPGSRuser/advanced-statistics.html",
+      "sources": [
+        "advanced-statistics.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://mxe050.github.io/CPGSRuser/advanced-statistics.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://mxe050.github.io/CPGSRuser/guyatt-methodology-atlas.html",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://mxe050.github.io/CPGSRuser/guyatt-methodology-atlas.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://mxe050.github.io/CPGSRuser/index.html",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://mxe050.github.io/CPGSRuser/index.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://mxe050.github.io/CPGSRuser/japan-cpg-tohoho.html",
+      "sources": [
+        "japan-cpg-tohoho.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://mxe050.github.io/CPGSRuser/japan-cpg-tohoho.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://mxe050.github.io/CPGSRuser/meta-analysis-methods.html",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://mxe050.github.io/CPGSRuser/meta-analysis-methods.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://mxe050.github.io/CPGSRuser/non-rct-observational-studies.html",
+      "sources": [
+        "non-rct-observational-studies.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://mxe050.github.io/CPGSRuser/non-rct-observational-studies.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://mxe050.github.io/CPGSRuser/oncology-outcomes.html",
+      "sources": [
+        "oncology-outcomes.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://mxe050.github.io/CPGSRuser/oncology-outcomes.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://mxe050.github.io/CPGSRuser/updates.html",
+      "sources": [
+        "updates.html"
+      ],
+      "status": 404,
+      "finalUrl": "https://mxe050.github.io/CPGSRuser/updates.html",
+      "state": "missing-candidate"
+    },
+    {
+      "url": "https://mxe050.github.io/CPGSRuser/y-sensei-ebm-practice-links.html",
+      "sources": [
+        "y-sensei-ebm-practice-links.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://mxe050.github.io/CPGSRuser/y-sensei-ebm-practice-links.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://mxe050.github.io/GRADE-tanken/",
+      "sources": [
+        "index.html",
+        "data/navigation-structure.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://mxe050.github.io/GRADE-tanken/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://nap.nationalacademies.org/catalog/13058/clinical-practice-guidelines-we-can-trust",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.nationalacademies.org/projects/HCSX-H-08-09-A/publication/13058",
+      "state": "reachable"
+    },
+    {
+      "url": "https://note.com/mxe05064/n/n27c80eebd41d?app_launch=false",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://note.com/mxe05064/n/n27c80eebd41d?app_launch=false",
+      "state": "reachable"
+    },
+    {
+      "url": "https://note.com/mxe05064/n/n5db741f43efe?app_launch=false",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://note.com/mxe05064/n/n5db741f43efe?app_launch=false",
+      "state": "reachable"
+    },
+    {
+      "url": "https://note.com/mxe05064/n/n8a2026000cb5?app_launch=false",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://note.com/mxe05064/n/n8a2026000cb5?app_launch=false",
+      "state": "reachable"
+    },
+    {
+      "url": "https://note.com/mxe05064/n/n93fc1c6c455c?app_launch=false",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://note.com/mxe05064/n/n93fc1c6c455c?app_launch=false",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11162097/",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11162097/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4832051/",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4832051/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5502230/",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5502230/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5791040/",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5791040/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6447501/",
+      "sources": [
+        "advanced-statistics.html",
+        "non-rct-observational-studies.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6447501/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16264162/",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/16264162/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19097774/",
+      "sources": [
+        "oncology-outcomes.html"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/19097774/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22315262/",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/22315262/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23312392/",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/23312392/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25005654/",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/25005654/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26772609/",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/26772609/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26884584/",
+      "sources": [
+        "oncology-outcomes.html"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/26884584/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26994063/",
+      "sources": [
+        "non-rct-observational-studies.html"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/26994063/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27452192/",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/27452192/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30285081/",
+      "sources": [
+        "oncology-outcomes.html"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/30285081/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34665198/",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/34665198/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38555664/",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/38555664/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39299403/",
+      "sources": [
+        "non-rct-observational-studies.html"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/39299403/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40140629/",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/40140629/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40266689/",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/40266689/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40414366/",
+      "sources": [
+        "non-rct-observational-studies.html"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/40414366/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41052449/",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/41052449/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41285282/",
+      "sources": [
+        "advanced-statistics.html",
+        "meta-analysis-methods.html",
+        "non-rct-observational-studies.html",
+        "index.html",
+        "data/references.json",
+        "data/statistics-sources.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/41285282/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41308689/",
+      "sources": [
+        "oncology-outcomes.html"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/41308689/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41554128/",
+      "sources": [
+        "index.html",
+        "updates.html",
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/41554128/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42055583/",
+      "sources": [
+        "updates.html"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/42055583/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42208821/",
+      "sources": [
+        "guyatt-methodology-atlas.html",
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/42208821/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7629987/",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 203,
+      "finalUrl": "https://pubmed.ncbi.nlm.nih.gov/7629987/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://training.cochrane.org/handbook-dta/current",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current",
+      "state": "reachable"
+    },
+    {
+      "url": "https://training.cochrane.org/handbook/current",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current",
+      "state": "reachable"
+    },
+    {
+      "url": "https://training.cochrane.org/handbook/current/chapter-06",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-06",
+      "state": "reachable"
+    },
+    {
+      "url": "https://training.cochrane.org/handbook/current/chapter-13",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-13",
+      "state": "reachable"
+    },
+    {
+      "url": "https://training.cochrane.org/handbook/current/chapter-24",
+      "sources": [
+        "non-rct-observational-studies.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-24",
+      "state": "reachable"
+    },
+    {
+      "url": "https://training.cochrane.org/handbook/current/chapter-25",
+      "sources": [
+        "non-rct-observational-studies.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-25",
+      "state": "reachable"
+    },
+    {
+      "url": "https://trialsjournal.biomedcentral.com/articles/10.1186/1745-6215-8-16",
+      "sources": [
+        "meta-analysis-methods.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1186%2F1745-6215-8-16&code=4b102858-41a5-4f4a-ba5e-184f8fce15c9",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.bmj.com/content/336/7650/924",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/336/7650/924",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/340/bmj.c117",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/340/bmj.c117",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/344/bmj.e1553",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/344/bmj.e1553",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/355/bmj.i4919",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/355/bmj.i4919",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/358/bmj.j4008",
+      "sources": [
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/358/bmj.j4008",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/366/bmj.l4898",
+      "sources": [
+        "index.html",
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/366/bmj.l4898",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/368/bmj.l6890",
+      "sources": [
+        "non-rct-observational-studies.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/368/bmj.l6890",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/369/bmj.m1714",
+      "sources": [
+        "guyatt-methodology-atlas.html",
+        "data/references.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/369/bmj.m1714",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/371/bmj.m3900",
+      "sources": [
+        "guyatt-methodology-atlas.html",
+        "meta-analysis-methods.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/371/bmj.m3900",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/372/bmj.n71",
+      "sources": [
+        "advanced-statistics.html",
+        "index.html",
+        "data/references.json",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/372/bmj.n71",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/375/bmj-2021-066045",
+      "sources": [
+        "guyatt-methodology-atlas.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/375/bmj-2021-066045",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/384/bmj-2023-076316",
+      "sources": [
+        "advanced-statistics.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/384/bmj-2023-076316",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/385/bmj-2023-078378",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/385/bmj-2023-078378",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/388/bmj-2024-082505",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.bmj.com/content/388/bmj-2024-082505",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.bmj.com/content/389/bmj-2024-081123",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.bmj.com/content/389/bmj-2024-081123",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.bmj.com/content/389/bmj-2024-081477",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/389/bmj-2024-081477",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/389/bmj-2024-081903",
+      "sources": [
+        "advanced-statistics.html",
+        "guyatt-methodology-atlas.html",
+        "meta-analysis-methods.html",
+        "index.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/389/bmj-2024-081903",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/389/bmj-2024-081904",
+      "sources": [
+        "advanced-statistics.html",
+        "guyatt-methodology-atlas.html",
+        "meta-analysis-methods.html",
+        "oncology-outcomes.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/389/bmj-2024-081904",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/389/bmj-2024-081905",
+      "sources": [
+        "advanced-statistics.html",
+        "guyatt-methodology-atlas.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.bmj.com/content/389/bmj-2024-081905",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.bmj.com/content/389/bmj-2024-083864",
+      "sources": [
+        "guyatt-methodology-atlas.html",
+        "non-rct-observational-studies.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/389/bmj-2024-083864",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/389/bmj-2024-083865",
+      "sources": [
+        "advanced-statistics.html",
+        "guyatt-methodology-atlas.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/389/bmj-2024-083865",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/389/bmj-2024-083866",
+      "sources": [
+        "advanced-statistics.html",
+        "guyatt-methodology-atlas.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/389/bmj-2024-083866",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/389/bmj-2024-083867",
+      "sources": [
+        "guyatt-methodology-atlas.html",
+        "index.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/389/bmj-2024-083867",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/390/bmj-2025-087179",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/390/bmj-2025-087179",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.bmj.com/content/393/bmj-2025-089050",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.bmj.com/content/393/bmj-2025-089050",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.clarityresearch.ca/frequently-asked-questions",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.clarityresearch.ca/frequently-asked-questions",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-07",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-07",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-10",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-10",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-24",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-24",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.docswell.com/s/MXE05064/5RERRR-2025-11-30-175950",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.docswell.com/s/MXE05064/5RERRR-2025-11-30-175950",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.equator-network.org/reporting-guidelines/prisma-s/",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://resources.equator-network.org/reporting-guidelines/prisma-s/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.fda.gov/about-fda/oncology-center-excellence/patient-focused-drug-development",
+      "sources": [
+        "oncology-outcomes.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.fda.gov/about-fda/oncology-center-excellence/patient-focused-drug-development",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.fda.gov/media/71195/download",
+      "sources": [
+        "oncology-outcomes.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.fda.gov/media/71195/download",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/approaches-assessment-overall-survival-oncology-clinical-trials",
+      "sources": [
+        "oncology-outcomes.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/approaches-assessment-overall-survival-oncology-clinical-trials",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e20-adaptive-designs-clinical-trials",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e20-adaptive-designs-clinical-trials",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical",
+      "sources": [
+        "oncology-outcomes.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m14-general-principles-planning-designing-analyzing-and-reporting-non-interventional-studies-utilize",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m14-general-principles-planning-designing-analyzing-and-reporting-non-interventional-studies-utilize",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/use-bayesian-methodology-clinical-trials-drug-and-biological-products",
+      "sources": [
+        "advanced-statistics.html",
+        "data/statistics-sources.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/use-bayesian-methodology-clinical-trials-drug-and-biological-products",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.gradeworkinggroup.org/",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.gradeworkinggroup.org/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.jclinepi.com/article/S0895-4356(25)00295-1/fulltext",
+      "sources": [
+        "japan-cpg-tohoho.html",
+        "index.html"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.jclinepi.com/article/S0895-4356(25)00295-1/fulltext",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.linkedin.com/in/guyattgh/recent-activity/all/",
+      "sources": [
+        "index.html",
+        "data/linkedin-picks.json",
+        "data/references.json"
+      ],
+      "status": 999,
+      "finalUrl": "https://www.linkedin.com/in/guyattgh",
+      "state": "needs-review"
+    },
+    {
+      "url": "https://www.prisma-statement.org/",
+      "sources": [
+        "updates.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.prisma-statement.org/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.prisma-statement.org/children",
+      "sources": [
+        "index.html",
+        "updates.html",
+        "data/references.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.prisma-statement.org/children",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.prisma-statement.org/extensions",
+      "sources": [
+        "updates.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.prisma-statement.org/extensions",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.prisma-statement.org/lsr",
+      "sources": [
+        "updates.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.prisma-statement.org/lsr",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.prisma-statement.org/prisma-2020-checklist",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.prisma-statement.org/prisma-2020-checklist",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.riskofbias.info/welcome/robins-e-tool",
+      "sources": [
+        "updates.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.riskofbias.info/welcome/robins-e-tool",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.riskofbias.info/welcome/robins-i-v2",
+      "sources": [
+        "updates.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.riskofbias.info/welcome/robins-i-v2",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_SOQAFpTeSY",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=_SOQAFpTeSY",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4nd4uTrDAKM",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=4nd4uTrDAKM",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5cld0e6bNNA",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=5cld0e6bNNA",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=7UJZLG49ba8&t=1s",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=7UJZLG49ba8&t=1s",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=HgQ2OGESBaY",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=HgQ2OGESBaY",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=IkaUe15pb1c",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=IkaUe15pb1c",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mulV86JmzVA",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=mulV86JmzVA",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=oF30ixz4gEU",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=oF30ixz4gEU",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=pAr7upG01YA",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=pAr7upG01YA",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rAB58ORfCcs",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=rAB58ORfCcs",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RS03VY5DB1Y",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=RS03VY5DB1Y",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=W0p3ux9E07o",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=W0p3ux9E07o",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=XQ9X0f6ioqA",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=XQ9X0f6ioqA",
+      "state": "reachable"
+    },
+    {
+      "url": "https://x.com/05_mxe92273/status/2005482687184957865",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://x.com/05_mxe92273/status/2005482687184957865",
+      "state": "reachable"
+    },
+    {
+      "url": "https://youtu.be/-vX1KS126Jk",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=-vX1KS126Jk&feature=youtu.be",
+      "state": "reachable"
+    },
+    {
+      "url": "https://youtu.be/Kgk1BwadtgY",
+      "sources": [
+        "index.html"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=Kgk1BwadtgY&feature=youtu.be",
+      "state": "reachable"
+    }
+  ]
+}

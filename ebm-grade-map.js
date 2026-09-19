@@ -1,52 +1,10 @@
 (() => {
-  let learningMapReturnFocus = null;
-
-  function modalElements() {
-    return {
-      modal: document.getElementById('learningMapModal'),
-      image: document.getElementById('learningMapModalImg'),
-      zoom: document.getElementById('learningMapZoomBtn')
-    };
-  }
-
-  window.openLearningMap = (trigger) => {
-    const { modal, image, zoom } = modalElements();
-    if (!modal) return;
-    learningMapReturnFocus = trigger || document.activeElement;
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('cpg-overview-open');
-    if (image) image.classList.remove('zoomed');
-    if (zoom) {
-      zoom.textContent = '拡大';
-      zoom.focus({ preventScroll: true });
-    }
-  };
-
-  window.closeLearningMap = () => {
-    const { modal, image } = modalElements();
-    if (!modal) return;
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('cpg-overview-open');
-    if (image) image.classList.remove('zoomed');
-    if (learningMapReturnFocus && typeof learningMapReturnFocus.focus === 'function') {
-      learningMapReturnFocus.focus({ preventScroll: true });
-    }
-  };
-
-  window.toggleLearningMapZoom = () => {
-    const { image, zoom } = modalElements();
-    if (!image) return;
-    const isZoomed = image.classList.toggle('zoomed');
-    if (zoom) zoom.textContent = isZoomed ? '縮小' : '拡大';
-  };
-
   function contentTarget(element) {
     return element.dataset.mapTarget || element.dataset.contentTarget || '';
   }
 
   function navigateWithinReader(element, event) {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const target = contentTarget(element);
     if (!target || typeof window.showContent !== 'function') return;
     event.preventDefault();
@@ -85,11 +43,13 @@
     return { sequence, zoneByContentId };
   }
 
-  function makeRouteButton(label, contentId) {
-    const button = document.createElement('button');
-    button.type = 'button';
+  function makeRouteButton(label, contentId, itemsById) {
+    const button = document.createElement('a');
     button.textContent = label;
-    button.dataset.contentTarget = contentId;
+    const item = itemsById.get(contentId);
+    button.href = item?.href || 'learning-index.html';
+    // Standalone pages must use normal links, not the single-page router.
+    if (document.querySelector(`.page[data-content-id="${CSS.escape(contentId)}"]`)) button.dataset.contentTarget = contentId;
     return button;
   }
 
@@ -118,10 +78,10 @@
       spacer.setAttribute('aria-hidden', 'true');
       bar.appendChild(spacer);
 
-      if (position > 0) bar.appendChild(makeRouteButton('前へ', sequence[position - 1]));
-      bar.appendChild(makeRouteButton('全体図へ', 'home'));
+      if (position > 0) bar.appendChild(makeRouteButton('前へ', sequence[position - 1], itemsById));
+      bar.appendChild(makeRouteButton('全体図へ', 'home', itemsById));
       if (position >= 0 && position < sequence.length - 1) {
-        bar.appendChild(makeRouteButton('次へ', sequence[position + 1]));
+        bar.appendChild(makeRouteButton('次へ', sequence[position + 1], itemsById));
       }
 
       const menuBar = page.querySelector(':scope > .in-page-menu-bar');
@@ -134,13 +94,6 @@
     document.addEventListener('click', (event) => {
       const route = event.target.closest('[data-map-target], [data-content-target]');
       if (route) navigateWithinReader(route, event);
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        const { modal } = modalElements();
-        if (modal && modal.classList.contains('open')) window.closeLearningMap();
-      }
     });
 
     Promise.all([
